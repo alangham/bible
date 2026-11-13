@@ -27,7 +27,7 @@ When Arthur says "do the next task", start again at step 1.
 
 ## Hard rules
 
-- WARNING: Do not commit ESV text to the repository. The ESV licence permits a maximum of 500 verses in local storage. ESV text is fetched at read time only.
+- WARNING: Do not add ESV text or a request to the ESV API. The ESV is not in version 1. The translation is the Berean Standard Bible, which is bundled in the repository.
 - WARNING: Do not add a server. The site is deployed on GitHub Pages. All code runs in the browser or at build time.
 - Do not push to GitHub until Arthur approves. Local commits are permitted.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.

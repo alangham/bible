@@ -73,7 +73,7 @@ Steps:
 1. Ask Arthur for the repository name.
 2. Set the Vite `base` option to the repository name.
 3. Add a GitHub Actions workflow that builds the site and deploys `dist` to GitHub Pages.
-4. Pass `VITE_ESV_API_KEY` to the build from a repository secret. Arthur creates the secret.
+4. Make sure that the build does not read `VITE_ESV_API_KEY`. The site does not use an ESV key.
 5. After Arthur approves, push.
 6. Open the public address. Make sure that the table page loads.
 
@@ -141,27 +141,28 @@ Stop and report. Include screenshots of three categories.
 
 ---
 
-## Task 6. Live ESV text
+## Task 6. Sources page and translation label
 
 Status: TODO
 
-Goal: the spread shows ESV when it is available, as in section 5 of `docs/DESIGN.md`.
+Goal: the site names its translation and credits its data sources. This task replaces the earlier "Live ESV text" task. Arthur decided on 2026-11-13 that the ESV is not in version 1. Reason: the ESV terms forbid a published access key, and the site has no server to hold the key.
 
-WARNING: Do not write ESV text to a file in the repository.
+WARNING: Do not add ESV text or a request to the ESV API.
 
 Steps:
 
-1. Add a text service that requests one chapter from the ESV API at read time.
-2. Keep fetched ESV text in memory only. Do not keep more than 500 verses.
-3. If the request fails, show the bundled translation.
-4. Show the name of the translation that is on screen.
-5. Show the ESV copyright notice and a link to esv.org on each page that shows ESV text.
-6. Add a unit test for the fallback with a mock request.
+1. Search the code for `VITE_ESV_API_KEY` and for `api.esv.org`. Remove each use.
+2. Show the name "Berean Standard Bible" on each spread.
+3. Build a "Sources" page. Add a control to it on the table page.
+4. On the "Sources" page, name the Berean Standard Bible and say that it is in the public domain.
+5. On the "Sources" page, credit each data source as its licence requires. Read `docs/DATA-SOURCES.md` for the conditions. OpenBible.info requires a credit and a link to the CC BY 4.0 licence.
+6. In `docs/DATA-SOURCES.md`, add a line to the ESV section: "Not used in version 1. Decision by Arthur on 2026-11-13."
+7. Add a Playwright smoke test: the "Sources" page loads and has the OpenBible.info credit.
 
 Done when:
 
-- A chapter shows ESV text with the notice when the API answers.
-- A chapter shows the bundled text when the API does not answer.
+- The code has no use of the ESV key or the ESV API.
+- The test passes.
 
 Stop and report.
 
@@ -180,15 +181,19 @@ Steps:
 1. Build `public/data/links/` from the sources that passed the licence check in Task 1. Mark each link as a quotation link or an echo link.
 2. Show the marks in the text. Strong for quotation links. Light for echo links.
 3. Add a switch for echo links.
-4. Build the pop-up: reference, the text of the linked passage, one line of reason, "Go there", "Stay here". The reason line must say only what the two passages show. Record the source of each quotation link in `docs/CONTENT-SOURCES.md`.
-5. Build travel: the current book closes, the linked book comes onto the table, it opens at the linked passage.
-6. Build the trail. Each stop is a control that goes back to that stop.
-7. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back.
+4. Build the pop-up: reference, the text of the linked passage, "Go there", "Stay here".
+5. Write a reason line for each quotation link. Do not write a reason line for an echo link. The reason line must say only what the two passages show. Record the source of each quotation link in `docs/CONTENT-SOURCES.md`.
+6. Write a script in `scripts/` that checks each link: the two ends exist, no link to itself, no duplicate, the type is set. Add the script to the unit tests.
+7. Build travel: the current book closes, the linked book comes onto the table, it opens at the linked passage.
+8. Build the trail. Each stop is a control that goes back to that stop.
+9. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back.
 
 Done when:
 
 - The test passes.
 - Hebrews 9 has quotation links to the Old Testament passages that it quotes.
+- The link check script passes on each link.
+- The report gives the number of quotation links and the number of echo links.
 
 Stop and report.
 

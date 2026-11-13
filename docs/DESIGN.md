@@ -84,7 +84,8 @@ Hebrews is in General Letters, as on the wall image.
 
 - A passage with a link has a visible mark in the text.
 - Quotation links have a strong mark. Echo links have a light mark. The reader can switch echo links off.
-- Select a mark: a pop-up shows the reference, the text of the linked passage, and one line that says why it matters here.
+- Select a mark: a pop-up shows the reference and the text of the linked passage.
+- The pop-up for a quotation link also shows a reason line: one line that says why the linked passage matters here. The pop-up for an echo link has no reason line in version 1. Reason: the reason line is interpretation, and each reason line must be checked.
 - The pop-up has two actions: "Go there" and "Stay here".
 - "Go there" is travel. The current book closes, the linked book comes onto the table, and it opens at the linked passage. The move must show that the reader crossed the Bible.
 - The trail is always on screen after the first travel. Each stop is a control. Select a stop to go back to it in one step.
@@ -100,18 +101,17 @@ Hebrews is in General Letters, as on the wall image.
 
 ## 5. Bible text
 
-- Preferred translation: ESV.
-- ESV comes from the Crossway ESV API at read time. Limits from Crossway: non-commercial use only, a maximum of 500 verses in one query, 5,000 queries in one day, a maximum of 500 verses in local storage, the ESV copyright notice and a link to esv.org on each page that shows ESV text.
-- The ESV API key is in the client bundle. This is a known and accepted exposure.
-- A public-domain translation is bundled in the repository. The site uses it when ESV is not available. First choice: Berean Standard Bible. You must verify its licence in Task 1. Second choice: World English Bible.
-- The page must show which translation is on screen.
-- NOT VERIFIED: that the ESV API accepts requests from a browser on a different origin. Task 1 tests this. If the test fails, stop and tell Arthur. The alternative is a small proxy.
+- Translation in version 1: the Berean Standard Bible. It is in the public domain. The full text is bundled in the repository.
+- The page must show the name of the translation.
+- The ESV is not in version 1. Arthur decided this on 2026-11-13. The ESV is his preferred translation, but it is not a requirement.
+- Reason: the ESV is available only through the Crossway ESV API. The terms forbid a published access key, and the terms expect server-side code. A static site on GitHub Pages cannot hold the key.
+- To add the ESV later, the site needs a small proxy that holds the key. Keep the text service behind one interface so that a second translation can be added without a change to the pages.
 
 ## 6. Not in version 1
 
 - User accounts, notes, highlights.
 - Search.
 - Audio.
-- More translations.
+- The ESV and other translations.
 - Hand-designed scenes for specific chapters.
 - Guided routes.

@@ -149,10 +149,17 @@ The five rules. Apply them to each of the 66 introductions and to `docs/CONTENT-
 4. The strength word must match the source. If the source says "most scholars", write "most". Do not make a claim weaker or stronger than its source.
 5. No line that rests on one scholar. Remove a line such as "One scholar dates ..." or a line that names one scholar. A standard reference work, for example the Oxford Dictionary of the Christian Church, counts as a source.
 
+The plain-words rule. Arthur decided this on 2026-11-13. The reader is new to the Bible. Apply the rule to each fact, each detail, and each "What it is" text:
+
+1. Do not use a term of scholars without its meaning in the same sentence. Example: do not write "Most scholars regard the book as anonymous". Write "The book does not name its writer".
+2. Keep two statements apart: "the book does not name its writer" and "scholars doubt that the traditional author wrote it". The first is a fact about the text. The second is a view. Do not use one word for the two.
+3. For a period, give the years. Example: "the Persian period, 539 to 332 BC". Use the years that the source gives.
+4. Terms that need this rule include: anonymous, pseudonymous, Hellenistic, Persian period, the exile, the Dispersion, Deuteronomistic, redaction, oracle, Pentateuch, Septuagint, canon. This list is not complete.
+
 Steps:
 
 1. Change the data shape in `public/data/intros.json`. For the Author fact and the Written fact of each book, keep the traditional view in the fact. Move the view of critical scholars to a new detail with two parts: `critical` and `conservative`.
-2. Write the `critical` part from Wikipedia under the Task 4 conditions. Apply rules 4 and 5.
+2. Write the `critical` part from Wikipedia under the Task 4 conditions. Apply rules 4 and 5. Apply the plain-words rule. For Matthew, the `critical` part must say why critical scholars doubt the traditional author, not only that the book is "anonymous".
 3. Write the `conservative` part from the ESV Global Study Bible only. Use facts only, in your own words. If the ESV Global Study Bible page for the book does not answer the critical view, leave the `conservative` part out. Do not write one from memory.
 4. Start each Written fact with the traditional view. Correct Joshua, 1 Samuel, and 2 Samuel, which do not do this now.
 5. Apply rules 1, 2, and 3 to each fact.

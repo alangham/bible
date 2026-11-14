@@ -45,10 +45,11 @@ For each changed book:
 5. Make sure that the `conservative` part of a detail comes from the ESV Global Study Bible page for that book. Report a `conservative` part that the page does not support.
 6. Report a line that rests on one scholar.
 7. Report a place of writing that no approved source states.
-8. Make sure that the summary agrees with the content of the book. Read the first chapter and the last chapter in the bundled text as a minimum.
-9. Make sure that `review` is `"draft"` unless Arthur approved the book.
-10. Make sure that each source is in the approved list in `docs/CONTENT-SOURCES.md`.
-11. Compare each introduction with its sources. Report a sentence that is copied from a source that is under copyright.
+8. Plain words. Report a term of scholars that has no meaning in the same sentence, for example "anonymous" or "Hellenistic period". Report a period with no years. Report a sentence that uses one word for "the book does not name its writer" and "scholars doubt the traditional author".
+9. Make sure that the summary agrees with the content of the book. Read the first chapter and the last chapter in the bundled text as a minimum.
+10. Make sure that `review` is `"draft"` unless Arthur approved the book.
+11. Make sure that each source is in the approved list in `docs/CONTENT-SOURCES.md`.
+12. Compare each introduction with its sources. Report a sentence that is copied from a source that is under copyright.
 
 ## Check 3. Links
 

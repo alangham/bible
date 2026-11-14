@@ -62,7 +62,7 @@ Stop and report. Include a screenshot.
 
 ## Task 3. Deploy to GitHub Pages
 
-Status: TODO
+Status: DONE
 
 Goal: the site is public at a GitHub Pages address.
 

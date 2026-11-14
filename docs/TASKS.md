@@ -369,7 +369,7 @@ Stop and report. Include screenshots of the pop-up, of a chapter with marks, and
 
 ## Task 7b. Quotation links: the fit rule
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

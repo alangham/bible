@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 // @ts-expect-error: a plain JavaScript module of the build scripts, with no types.
 import { readOpenBible, readWithLists } from '../../scripts/links-common.mjs'
 import type { Book } from './books.ts'
-import type { BookLinks } from './links.ts'
+import { marksOf, type BookLinks } from './links.ts'
 
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
@@ -21,13 +21,37 @@ describe('links', () => {
     expect(summary.links).toBeGreaterThan(0)
   })
 
-  it('give Hebrews 9 the quotation links to Exodus 24:8 and Isaiah 53:12', () => {
+  it('give no link with the fit "close" or "weak" the strong mark or a reason line (Task 7b)', () => {
+    const fits = JSON.parse(readFileSync(join(root, 'content/quotation-reasons.json'), 'utf8')) as Record<string, { fit: string }>
+    const seen = new Map<string, BookLinks['links'][number]>()
+    for (const book of books) {
+      const data = JSON.parse(readFileSync(join(root, 'public/data/links', `${book.id}.json`), 'utf8')) as BookLinks
+      for (const l of data.links) if (l.source === 'Bible Quotation Database') seen.set(l.id, l)
+    }
+    let echo = 0
+    for (const l of seen.values()) {
+      const fit = fits[`${l.a.book}.${l.a.c}.${l.a.v}|${l.b.book}.${l.b.c}.${l.b.v}`]?.fit
+      expect(fit, l.id).toBeDefined()
+      if (fit === 'close' || fit === 'weak') {
+        echo++
+        expect(l.type, `${l.id}: fit ${fit}`).toBe('echo')
+        expect(l.reason, `${l.id}: fit ${fit}`).toBeUndefined()
+        // The mark of a verse is strong only if one of its links is a quotation link.
+        const marks = marksOf(JSON.parse(readFileSync(join(root, 'public/data/links', `${l.a.book}.json`), 'utf8')) as BookLinks, l.a.book, l.a.c)
+        const end = marks.verses.get(l.a.v)?.find((e) => e.link.id === l.id)
+        expect(end?.link.type, l.id).toBe('echo')
+      } else expect(l.type, `${l.id}: fit ${fit}`).toBe('quotation')
+    }
+    expect(echo).toBeGreaterThan(0)
+  })
+
+  it('give Hebrews 9 the quotation links to Exodus 24:8 and Isaiah 53:12, and no more (Task 7b)', () => {
     const data = JSON.parse(readFileSync(join(root, 'public/data/links/hebrews.json'), 'utf8')) as BookLinks
     const quoted = data.links
       .filter((l) => l.type === 'quotation' && l.a.book === 'hebrews' && l.a.c === 9)
       .map((l) => `${l.a.v} ${l.b.book} ${l.b.c}:${l.b.v}`)
       .sort()
-    expect(quoted).toEqual(['19 exodus 24:8', '20 exodus 24:8', '28 isaiah 53:12'])
+    expect(quoted).toEqual(['20 exodus 24:8', '28 isaiah 53:12'])
   })
 })
 

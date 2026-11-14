@@ -2,14 +2,17 @@
 // docs/DESIGN.md section 4.5, docs/TASKS.md Task 7 steps 2 and 2b.
 //
 // Links come only from the three approved sources. No person and no agent adds a link by hand.
-// 1. Bible Quotation Database (sources/quotations/quotations_range.csv): quotation links.
+// 1. Bible Quotation Database (sources/quotations/quotations_range.csv): a quotation link if the fit is
+//    "quote", an echo link if the fit is "close" or "weak" (the fit rule, Task 7b).
 // 2. Cross-reference lines of the Berean Standard Bible files (public/data/text/*.json, field xrefs):
 //    echo links, on their section heading.
 // 3. OpenBible.info cross-references (sources/openbible/cross_references.txt): echo links, with the
 //    limit that Arthur approved on 2026-11-14, and the read-with lists.
-// If two sources give the same pair of passages, the site keeps one link: a quotation link first,
-// then a cross-reference line of the Berean files, then an OpenBible.info link.
-// The reason line of each quotation link is in content/quotation-reasons.json.
+// If two sources give the same pair of passages, the site keeps one link: a link of the Bible Quotation
+// Database first, then a cross-reference line of the Berean files, then an OpenBible.info link.
+// An echo link that overlaps a quotation link at its two ends is hidden.
+// The fit and the reason line of each link of the Bible Quotation Database are in
+// content/quotation-reasons.json. Only quotation links take their reason line into public/.
 //
 // Usage: node scripts/build-links.mjs [--report]
 
@@ -106,14 +109,38 @@ for (const line of readFileSync(join(ROOT, 'sources/quotations/quotations_range.
 }
 /** The key of a quotation link in content/quotation-reasons.json: the quoting verse, then the quoted verse. */
 export const reasonKey = (a, b) => `${books[a.b].id}.${a.c}.${a.v}|${books[b.b].id}.${b.c}.${b.v}`
+// The fit rule (Arthur, 2026-11-14): a link with the fit "quote" is a quotation link, with a reason line.
+// A link with the fit "close" or "weak" is an echo link, with no reason line. No link is removed.
+// The reason lines of the echo links stay in content/quotation-reasons.json, outside public/.
 let missingReasons = 0
 for (const [k, q] of quotes) {
   const key = reasonKey(q.a, q.b)
-  const reason = reasons[key]?.reason
-  if (!reason) missingReasons++
-  links.push({ type: 'quotation', source: 'Bible Quotation Database', upstream: [...q.upstream].sort(), a: q.a, b: q.b, reason, key })
+  const entry = reasons[key]
+  if (!entry?.reason || !['quote', 'close', 'weak'].includes(entry.fit)) missingReasons++
+  const upstream = [...q.upstream].sort()
+  if (entry?.fit === 'quote') links.push({ type: 'quotation', source: 'Bible Quotation Database', upstream, a: q.a, b: q.b, reason: entry.reason, key })
+  else links.push({ type: 'echo', source: 'Bible Quotation Database', upstream, a: q.a, b: q.b, key })
   taken.add(k)
 }
+
+// An echo link that overlaps a quotation link at its two ends is hidden: the site shows only the quotation link.
+// docs/DESIGN.md section 4.5.
+const pos = (c, v) => c * 1000 + v
+const span = (p) => [p.b, pos(p.c, p.v), pos(p.c2 ?? p.c, p.v2 ?? p.v)]
+const meets = (p, q) => {
+  const [b1, s1, e1] = span(p)
+  const [b2, s2, e2] = span(q)
+  return b1 === b2 && s1 <= e2 && s2 <= e1
+}
+const quotationLinks = links.filter((l) => l.type === 'quotation')
+const overlapOf = (l) => quotationLinks.find((q) => (meets(l.a, q.a) && meets(l.b, q.b)) || (meets(l.a, q.b) && meets(l.b, q.a)))
+const hidden = []
+const hide = (l) => {
+  const q = overlapOf(l)
+  if (q) hidden.push({ source: l.source, link: `${label(l.a)} - ${label(l.b)}`, quotation: `${label(q.a)} - ${label(q.b)}` })
+  return !!q
+}
+for (let i = links.length - 1; i >= 0; i--) if (links[i].type === 'echo' && hide(links[i])) links.splice(i, 1)
 
 // ---- 2. Cross-reference lines of the Berean Standard Bible files: echo links on the section heading ----
 const parseUsfm = (s, display) => {
@@ -178,8 +205,8 @@ books.forEach((bk, b) => {
   }
 })
 for (const [k, l] of bsbLinks) {
-  links.push(l)
   taken.add(k)
+  if (!hide(l)) links.push(l)
 }
 
 // ---- 3. OpenBible.info: echo links with the approved limit ----
@@ -191,6 +218,11 @@ let echoKept = 0
 for (const l of [...ob.links.values()].sort((x, y) => y.votes - x.votes || (x.k < y.k ? -1 : 1))) {
   if (l.votes < LIMIT.minVotes) break
   if (taken.has(l.k)) continue
+  // A hidden link does not take a place in the limit.
+  if (hide({ source: 'OpenBible.info', a: l.a, b: l.b })) {
+    taken.add(l.k)
+    continue
+  }
   const ends = [
     [startKey(l.a), `${l.a.b}:${l.a.c}`],
     [startKey(l.b), `${l.b.b}:${l.b.c}`],
@@ -220,7 +252,9 @@ const readWith = readWithLists(ob.links)
 rmSync(OUT, { recursive: true, force: true })
 mkdirSync(OUT, { recursive: true })
 links.forEach((l, i) => {
-  l.id = `${l.type === 'quotation' ? 'q' : l.source === 'OpenBible.info' ? 'o' : 'h'}${i + 1}`
+  // q: quotation link. e: echo link of the Bible Quotation Database. h: Berean heading link. o: OpenBible.info.
+  const prefix = { 'Bible Quotation Database': l.type === 'quotation' ? 'q' : 'e', 'Berean Standard Bible': 'h', 'OpenBible.info': 'o' }
+  l.id = `${prefix[l.source]}${i + 1}`
 })
 books.forEach((bk, b) => {
   const mine = links
@@ -241,10 +275,17 @@ books.forEach((bk, b) => {
 })
 
 const count = (f) => links.filter(f).length
+const hiddenCount = (s) => hidden.filter((h) => h.source === s).length
 const summary = {
   quotation: count((l) => l.type === 'quotation'),
+  echoQuotationDatabase: count((l) => l.type === 'echo' && l.source === 'Bible Quotation Database'),
   echoBsb: count((l) => l.source === 'Berean Standard Bible'),
   echoOpenBible: echoKept,
+  hiddenOverlaps: {
+    'Bible Quotation Database': hiddenCount('Bible Quotation Database'),
+    'Berean Standard Bible': hiddenCount('Berean Standard Bible'),
+    'OpenBible.info': hiddenCount('OpenBible.info'),
+  },
   bsbLines,
   bsbRefs,
   openBibleLinks: ob.links.size,
@@ -253,9 +294,10 @@ const summary = {
   chaptersWithoutReadWith: [...chapterVerses.keys()].filter((k) => !readWith.has(k)).length,
   missingReasons,
   notVerified,
+  hidden,
 }
 writeFileSync(join(ROOT, 'content', 'links-summary.json'), JSON.stringify(summary, null, 1) + '\n')
-console.log(JSON.stringify({ ...summary, notVerified: notVerified.length, openBibleLeftOut: ob.leftOut.length }, null, 1))
+console.log(JSON.stringify({ ...summary, notVerified: notVerified.length, openBibleLeftOut: ob.leftOut.length, hidden: hidden.length }, null, 1))
 if (process.argv.includes('--report')) {
   for (const n of notVerified) console.log('not verified:', n)
   for (const r of ob.leftOut) console.log('left out:', r)

@@ -1,6 +1,23 @@
 # Task 7: the "Not verified" lists of the accuracy reviewers
 
-The five accuracy reviewers of 2026-11-14 wrote these lists. They are copied here without changes. The links stay in the data: Arthur decided that no person and no agent removes a link from a source. The list in `docs/CONTENT-SOURCES.md` has the same quotation links, with a short note for each.
+## Task 7b: this file is now a record
+
+This file is now a record of the links that changed type in Task 7b. It is not a list of decisions for Arthur.
+
+Arthur decided the fit rule on 2026-11-14 (`docs/DESIGN.md` section 4.5). A link of the Bible Quotation Database with the fit "close" or "weak" is now an echo link, with a light mark and no reason line. No link is removed. The quotation links that the reviewers named below are now echo links, with these exceptions:
+
+- `romans.11.34|isaiah.40.13` is a quotation link. The fit judgment of Task 7b found "of the Lord or" with "Who has" and "His counselor".
+- `romans.10.11|isaiah.28.16` and `romans.10.13|joel.2.28` are quotation links. The reviewers named them only as the neighbours of other links.
+
+Correction to items 4 and 5 of quarter 4: Mark 9:44 and Mark 15:28 have no words in the main text of the BSB. A BSB footnote at Mark 9:43 and at Mark 15:27 gives the words of each verse. The accuracy review of Task 7b found this.
+
+The "Not verified" lists of the Task 7b reviews are in `docs/reviews/task-7b-not-verified.md`.
+
+The decisions of the review of Check 3 Parts 1, 3, 4, and 5 are now in `docs/DESIGN.md` section 4.5. Item 8, the overlapping links, is settled by the overlap rule of Task 7b: the site hides an echo link that overlaps a quotation link at its two ends. The list of each link and its new type is in `docs/CONTENT-SOURCES.md`, in the section "Links that changed type in Task 7b".
+
+## The lists of Task 7
+
+The five accuracy reviewers of 2026-11-14 wrote these lists. They are copied here without changes. The links stay in the data: Arthur decided that no person and no agent removes a link from a source.
 
 ## Review of Check 3 Parts 1, 3, 4, and 5
 

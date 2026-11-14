@@ -6,7 +6,8 @@
  },
  "1-corinthians.11.7|genesis.1.26": {
   "reason": "1 Corinthians calls man “the image and glory of God”; in Genesis, God says, “Let Us make man in Our image.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.15.49|genesis.1.26": {
   "reason": "1 Corinthians speaks of bearing “the likeness of the earthly man”; in Genesis, God says, “Let Us make man in Our image, after Our likeness.”",
@@ -31,15 +32,18 @@
  },
  "james.3.9|genesis.1.26": {
   "reason": "James says men “have been made in God’s likeness”; in Genesis, God speaks of making man “after Our likeness.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.19.4|genesis.1.27": {
   "reason": "Matthew has Jesus say the Creator “made them male and female”; Genesis says “male and female He created them.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.10.6|genesis.1.27": {
   "reason": "Mark says that from the beginning God “made them male and female”; Genesis says “male and female He created them.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"male and female\" is common (16 BSB verses); the rest differs (\"God made them\" / \"He created them\")."
  },
  "hebrews.4.4|genesis.2.2": {
   "reason": "Hebrews repeats that on the seventh day “God rested from all His works”; Genesis tells how God finished and rested from “all His work.”",
@@ -47,7 +51,8 @@
  },
  "hebrews.4.10|genesis.2.2": {
   "reason": "Hebrews says whoever enters God’s rest rests from work, “just as God did”; Genesis says God rested on the seventh day.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.15.45|genesis.2.7": {
   "reason": "1 Corinthians repeats “became a living being” from Genesis, where the LORD God forms man from the dust and breathes life into him.",
@@ -55,7 +60,8 @@
  },
  "1-corinthians.15.47|genesis.2.7": {
   "reason": "1 Corinthians says the first man “was of the dust of the earth”; Genesis says God formed man “from the dust of the ground.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"the dust of the\" is common (13 verses); the rest differs (earth/ground, no \"formed\")."
  },
  "matthew.19.5|genesis.2.24": {
   "reason": "Matthew repeats the words of Genesis: “a man will leave his father and mother” and be united to his wife.",
@@ -80,15 +86,18 @@
  },
  "hebrews.6.8|genesis.3.18": {
   "reason": "Hebrews calls land that produces “thorns and thistles” worthless; Genesis says “thorns and thistles” will be yielded to you.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.19.4|genesis.5.2": {
   "reason": "Matthew has Jesus say the Creator “made them male and female”; Genesis says “Male and female He created them.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.10.6|genesis.5.2": {
   "reason": "Mark says God “made them male and female”; Genesis says “Male and female He created them” and that He blessed them.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"male and female\" is common (16 verses); the rest differs (\"God made them\" / \"He created them\")."
  },
  "james.3.9|genesis.5.2": {
   "reason": "James says men “have been made in God’s likeness”; Genesis says God created them male and female, blessed them, and called them “man.”",
@@ -102,7 +111,8 @@
  },
  "james.3.9|genesis.9.6": {
   "reason": "James says men “have been made in God’s likeness”; Genesis says “in His own image God has made mankind.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.3|genesis.12.1": {
   "reason": "Acts repeats the call “go to the land I will show you”; in Genesis, the LORD says it to Abram.",
@@ -118,15 +128,18 @@
  },
  "acts.7.5|genesis.13.15": {
   "reason": "Acts says God promised the land to Abraham’s descendants; Genesis says “all the land that you see” goes “to you and your offspring forever.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "galatians.3.16|genesis.13.15": {
   "reason": "Galatians says the promises were spoken to Abraham “and to your seed,” meaning One; Genesis says the land goes “to you and your offspring forever.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.7.1|genesis.14.17": {
   "reason": "Hebrews says Melchizedek met Abraham “returning from the slaughter of the kings”; Genesis tells of that return, when the king of Sodom met him.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.4.18|genesis.15.5": {
   "reason": "Romans repeats “So shall your offspring be”; in Genesis, the LORD says it to Abram after telling him to count the stars.",
@@ -158,7 +171,8 @@
  },
  "acts.7.7|genesis.15.14": {
   "reason": "Acts says God will “punish the nation that enslaves them”; Genesis says the LORD will judge the nation, and afterward they will depart.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 1: Acts gives the same statement in other words. Shared: \"But I will\", \"the nation\", \"and afterward they will\", common words only."
  },
  "romans.4.17|genesis.17.5": {
   "reason": "Romans repeats “I have made you a father of many nations”; Genesis gives these words with Abram’s new name, Abraham.",
@@ -166,11 +180,13 @@
  },
  "galatians.3.16|genesis.17.7": {
   "reason": "Galatians stresses “and to your seed” rather than seeds; Genesis speaks of a covenant between “Me and you and your descendants after you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.5|genesis.17.8": {
   "reason": "Acts says God promised the land to Abraham and his descendants; Genesis says “all the land of Canaan” will be “an eternal possession.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.9.9|genesis.18.10": {
   "reason": "Romans repeats the promise “Sarah will have a son”; in Genesis, the LORD says He will return at this time next year.",
@@ -178,7 +194,8 @@
  },
  "1-peter.3.6|genesis.18.12": {
   "reason": "1 Peter says Sarah “called him lord”; in Genesis she says to herself, “my master is old.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "galatians.4.30|genesis.21.10": {
   "reason": "Galatians repeats “Expel the slave woman and her son”; Genesis has these words spoken to Abraham, about the slave woman’s son and Isaac.",
@@ -200,7 +217,8 @@
  "matthew.17.5|genesis.22.2": {
   "reason": "Matthew has a voice from a cloud say “My beloved Son”; Genesis has God say “your only son Isaac, whom you love.”",
   "fit": "close",
-  "notVerified": "\"My beloved Son\" against \"your only son Isaac, whom you love\". The BSB wording shares only \"son\"."
+  "notVerified": "\"My beloved Son\" against \"your only son Isaac, whom you love\". The BSB wording shares only \"son\".",
+  "basis": "No run and no name; shared idea only (\"My beloved Son\" / \"your only son ... whom you love\")."
  },
  "mark.1.11|genesis.22.2": {
   "reason": "Mark has a voice from heaven say “You are My beloved Son”; Genesis has God say “your only son Isaac, whom you love.”",
@@ -229,11 +247,13 @@
  },
  "james.2.21|genesis.22.9": {
   "reason": "James says Abraham “offered his son Isaac on the altar”; Genesis tells how Abraham built the altar and placed his son Isaac on it.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.6.13|genesis.22.16": {
   "reason": "Hebrews says God had no one greater, so He “swore by Himself”; in Genesis, the LORD says, “By Myself I have sworn.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.6.14|genesis.22.17": {
   "reason": "Hebrews repeats the promise “I will surely bless you and multiply your descendants”; Genesis adds “like the stars in the sky.”",
@@ -257,7 +277,8 @@
  },
  "john.1.51|genesis.28.12": {
   "reason": "John speaks of “the angels of God ascending and descending”; Genesis tells of Jacob’s dream, where “God’s angels were going up and down.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.3.25|genesis.28.14": {
   "reason": "Acts repeats “all the families of the earth will be blessed”; Genesis says it will be “through you and your offspring.”",
@@ -277,19 +298,23 @@
  },
  "acts.7.14|genesis.46.27": {
   "reason": "Acts says Jacob and his relatives were “seventy-five in all”; Genesis counts Jacob’s family in Egypt as “seventy in all.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.11.21|genesis.47.31": {
   "reason": "Hebrews says Jacob “worshiped as he leaned on the top of his staff”; Genesis says Israel “bowed in worship at the head of his bed.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "galatians.3.8|genesis.22.18": {
   "reason": "Galatians says “All nations will be blessed through you”; Genesis says “through your offspring all nations of the earth will be blessed.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"will be blessed\" is common, but the rest follows: \"all nations ... through you(r)\"."
  },
  "galatians.3.8|genesis.26.4": {
   "reason": "Galatians says “All nations will be blessed through you”; Genesis says “through your offspring all nations of the earth will be blessed.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"will be blessed\" is common, but the rest follows: \"all nations ... through you(r)\"."
  },
  "galatians.3.8|genesis.28.14": {
   "reason": "Galatians says “All nations will be blessed through you”; Genesis says “All the families of the earth will be blessed through you.”",
@@ -301,15 +326,18 @@
  },
  "acts.7.14|exodus.1.5": {
   "reason": "Acts says Jacob and his relatives were “seventy-five in all”; Exodus says Jacob’s descendants “numbered seventy in all.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.18|exodus.1.8": {
   "reason": "Acts says a king “who knew nothing of Joseph” rose over Egypt; Exodus says a new king “who did not know Joseph” came to power.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.27|exodus.2.13": {
   "reason": "Acts says a man abusing his neighbor pushed Moses aside; Exodus says Moses saw two Hebrews fighting and asked, “Why are you attacking your companion?”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "No run; the words in Acts 7:27 are not in Exodus 2:13; same scene only."
  },
  "acts.7.28|exodus.2.14": {
   "reason": "Acts repeats “kill me as you killed the Egyptian”; Exodus has the man say it to Moses, who was then afraid.",
@@ -317,11 +345,13 @@
  },
  "acts.7.29|exodus.2.15": {
   "reason": "Acts says Moses “fled to the land of Midian”; Exodus says he fled from Pharaoh and settled “in the land of Midian.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Moses fled ... the land of Midian, where he\" (6 words in a row)."
  },
  "acts.7.34|exodus.2.24": {
   "reason": "Acts has God say “I have heard their groaning”; Exodus says God “heard their groaning” and remembered His covenant.",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"heard their groaning and\" (4 words; phrase in 3 BSB verses)."
  },
  "acts.7.33|exodus.3.5": {
   "reason": "Acts repeats “Take off your sandals” and “the place where you are standing is holy ground”; Exodus gives them as God’s words.",
@@ -357,11 +387,13 @@
  },
  "acts.7.34|exodus.3.10": {
   "reason": "Acts has “I will send you back to Egypt”; Exodus has “I am sending you to Pharaoh” to bring the Israelites out.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.7|exodus.3.12": {
   "reason": "Acts says they will “worship Me in this place”; Exodus says that after they leave Egypt, all of them “will worship God on this mountain.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.22.32|exodus.3.15": {
   "reason": "Matthew repeats “the God of Isaac, and the God of Jacob”; in Exodus, God tells Moses to say these words to the Israelites.",
@@ -389,23 +421,28 @@
  },
  "john.19.36|exodus.12.46": {
   "reason": "John says “Not one of His bones will be broken”; Exodus says of the meat, “you may not break any of the bones.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.2.23|exodus.13.2": {
   "reason": "Luke says “Every firstborn male shall be consecrated to the Lord”; Exodus has God say “Consecrate to Me every firstborn male.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"the Law of the Lord\" named; content of this verse. Test 1: \"every firstborn male\" (8 verses) + consecrate."
  },
  "luke.2.23|exodus.13.12": {
   "reason": "Luke says “Every firstborn male shall be consecrated to the Lord”; Exodus says to “present to the LORD the firstborn male of every womb.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: the named Law is quoted in Exodus 13:2. Test 1: only \"to the LORD\", \"firstborn male\"."
  },
  "luke.2.23|exodus.13.15": {
   "reason": "Luke says “Every firstborn male shall be consecrated”; Exodus says the LORD killed Egypt’s firstborn, so “I sacrifice to the LORD the firstborn male.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: the named Law is quoted in Exodus 13:2. Test 1: only \"to the LORD\", \"firstborn male\"."
  },
  "john.6.31|exodus.16.4": {
   "reason": "John says “He gave them bread from heaven to eat”; Exodus has the LORD say “I will rain down bread from heaven for you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-corinthians.8.15|exodus.16.18": {
   "reason": "2 Corinthians repeats “he who gathered much had no excess”; in Exodus, the people measured it by the omer.",
@@ -413,11 +450,13 @@
  },
  "1-peter.2.9|exodus.19.6": {
   "reason": "1 Peter says “you are a chosen people, a royal priesthood, a holy nation”; Exodus has “a kingdom of priests and a holy nation.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.12.20|exodus.19.13": {
   "reason": "Hebrews says “If even an animal touches the mountain, it must be stoned”; Exodus says “whether man or beast, he must not live.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.4.24|exodus.20.11": {
   "reason": "Acts says “You made the heaven and the earth and the sea”; Exodus says the LORD made “the heavens and the earth and the sea.”",
@@ -425,11 +464,13 @@
  },
  "acts.14.15|exodus.20.11": {
   "reason": "Acts says God “made heaven and earth and sea and everything in them”; Exodus says the LORD made them in six days.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"made (the) heaven(s) and (the) earth and (the) sea and\" (7 words, articles left out), \"in them\"."
  },
  "revelation.10.6|exodus.20.11": {
   "reason": "Revelation says He “created heaven and everything in it”; Exodus says the LORD made “the heavens and the earth and the sea.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Accuracy review quarter 1: the same statement in other words. Shared: \"and the sea and\", with \"heaven\" and \"earth\"."
  },
  "revelation.14.7|exodus.20.11": {
   "reason": "Revelation repeats “made the heavens and the earth and the sea”; Exodus says the LORD made them in six days.",
@@ -461,71 +502,88 @@
  },
  "ephesians.6.3|exodus.20.12": {
   "reason": "Ephesians says “that you may have a long life on the earth”; Exodus says “so that your days may be long in the land.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: the same sentence names \"the first commandment\"; content of this verse: long life in the land."
  },
  "matthew.5.21|exodus.20.13": {
   "reason": "Matthew says “Do not murder” was said to the ancients; Exodus has “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "matthew.19.18|exodus.20.13": {
   "reason": "Matthew has Jesus list “Do not murder”; Exodus says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "mark.10.19|exodus.20.13": {
   "reason": "Mark lists “Do not murder” among the commandments; Exodus says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"Do not murder\" is this commandment."
  },
  "luke.18.20|exodus.20.13": {
   "reason": "Luke lists “do not murder” among the commandments; Exodus says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not murder\" is this commandment."
  },
  "romans.13.9|exodus.20.13": {
   "reason": "Romans lists “Do not murder” among the commandments; Exodus says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not murder\" is this commandment."
  },
  "james.2.11|exodus.20.13": {
   "reason": "James says He who said “Do not commit adultery” also said “Do not murder”; Exodus says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "matthew.5.27|exodus.20.14": {
   "reason": "Matthew says “Do not commit adultery” was said before; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "matthew.19.18|exodus.20.14": {
   "reason": "Matthew has Jesus list “do not commit adultery”; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "mark.10.19|exodus.20.14": {
   "reason": "Mark lists “do not commit adultery” among the commandments; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not commit adultery\" is this commandment."
  },
  "luke.18.20|exodus.20.14": {
   "reason": "Luke lists “Do not commit adultery” among the commandments; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"Do not commit adultery\" is this commandment."
  },
  "romans.13.9|exodus.20.14": {
   "reason": "Romans lists “Do not commit adultery” among the commandments; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not commit adultery\" is this commandment."
  },
  "james.2.11|exodus.20.14": {
   "reason": "James says He who said “Do not commit adultery” also said “Do not murder”; Exodus says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "matthew.19.18|exodus.20.15": {
   "reason": "Matthew has Jesus list “do not steal”; Exodus says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not steal\" is the whole commandment (command form as a verb form; 10 verses)."
  },
  "mark.10.19|exodus.20.15": {
   "reason": "Mark lists “do not steal” among the commandments; Exodus says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not steal\" is this commandment."
  },
  "luke.18.20|exodus.20.15": {
   "reason": "Luke lists “do not steal” among the commandments; Exodus says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not steal\" is this commandment."
  },
  "romans.13.9|exodus.20.15": {
   "reason": "Romans lists “Do not steal” among the commandments; Exodus says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not steal\" is this commandment."
  },
  "matthew.19.18|exodus.20.16": {
   "reason": "Matthew has Jesus repeat “do not bear false witness”; Exodus adds “against your neighbor.”",
@@ -541,11 +599,13 @@
  },
  "romans.7.7|exodus.20.17": {
   "reason": "Romans says the law said “Do not covet”; Exodus says “You shall not covet your neighbor’s house.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"if the law had not said\"; \"Do not covet\" is this commandment."
  },
  "romans.13.9|exodus.20.17": {
   "reason": "Romans lists “Do not covet” among the commandments; Exodus says “You shall not covet your neighbor’s house.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not covet\" is this commandment."
  },
  "matthew.15.4|exodus.21.17": {
   "reason": "Matthew repeats “Anyone who curses his father or mother”; Exodus says such a person “must surely be put to death.”",
@@ -557,7 +617,8 @@
  },
  "matthew.5.38|exodus.21.24": {
   "reason": "Matthew repeats “Eye for eye and tooth for tooth”; Exodus has “eye for eye, tooth for tooth, hand for hand, foot for foot.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"eye for eye\" with \"tooth for tooth\" (the brief's example)."
  },
  "acts.23.5|exodus.22.28": {
   "reason": "Acts says it is written, “Do not speak evil about the ruler of your people”; Exodus has “curse the ruler of your people.”",
@@ -565,15 +626,18 @@
  },
  "matthew.11.10|exodus.23.20": {
   "reason": "Matthew says “I will send My messenger ahead of You”; Exodus says “I am sending an angel before you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.1.2|exodus.23.20": {
   "reason": "Mark says “I will send My messenger ahead of You”; Exodus says “I am sending an angel before you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: Isaiah is named, not Exodus. Test 1: \"Behold, I will send / am sending\" only (7 verses), messenger/angel."
  },
  "luke.7.27|exodus.23.20": {
   "reason": "Luke says “I will send My messenger ahead of You”; Exodus says “I am sending an angel before you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-peter.2.9|exodus.23.22": {
   "reason": "1 Peter says “you are a chosen people”; Exodus says if you listen carefully, “I will be an enemy to your enemies.”",
@@ -608,16 +672,19 @@
  "2-corinthians.3.7|exodus.34.34": {
   "reason": "2 Corinthians says the Israelites “could not gaze at the face of Moses”; Exodus says Moses would remove the veil to speak with the LORD.",
   "fit": "weak",
-  "note": "Exodus 34:34 does not mention the face or the glory. It speaks only of the veil, the LORD, and what Moses told the Israelites.",
-  "notVerified": "2 Corinthians names Moses' face, but Exodus 34:34 speaks only of the veil."
+  "note": "Exodus 34:34 is about the veil taken off before the LORD; 2 Corinthians 3:7 is about the glory on his face.",
+  "notVerified": "2 Corinthians names Moses' face, but Exodus 34:34 speaks only of the veil.",
+  "basis": "Only the names \"Moses\" and \"the Israelites\" are shared."
  },
  "2-corinthians.3.16|exodus.34.34": {
   "reason": "2 Corinthians says “whenever anyone turns to the Lord, the veil is taken away”; in Exodus, Moses would “remove the veil” before the LORD.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"But whenever\", \"the Lord\", \"the veil\" (2 words in a row); same pattern in other words."
  },
  "2-corinthians.3.13|exodus.34.35": {
   "reason": "2 Corinthians says Moses “would put a veil over his face”; Exodus says Moses would “put the veil back over his face.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Moses ... would put a/the veil ... over his face\"; \"over his face\" in 5 verses, rest follows."
  },
  "acts.7.27|exodus.2.14": {
   "reason": "Acts repeats the man’s question “Who made you ruler and judge over us?”; Exodus has the same words, and Moses is afraid.",
@@ -625,11 +692,13 @@
  },
  "2-corinthians.6.16|exodus.29.45": {
   "reason": "2 Corinthians says God will “dwell with them” and “be their God”; Exodus says He will “dwell among the Israelites and be their God.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: common \"I will dwell\" and \"be their God\", and the rest follows: \"dwell ... among ... be their God\"."
  },
  "hebrews.9.19|exodus.24.8": {
   "reason": "Hebrews says Moses “took the blood of calves and goats” and sprinkled the people; Exodus says Moses “took the blood, splattered it on the people.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Accuracy review quarter 1: Hebrews 9:19 tells the event again in other words. Shared: \"took the blood\", \"Moses\", \"the people\". The quotation is in Hebrews 9:20."
  },
  "luke.2.24|leviticus.12.8": {
   "reason": "Luke repeats “A pair of turtledoves or two young pigeons”; Leviticus names “two turtledoves or two young pigeons” for one who cannot afford a lamb.",
@@ -642,7 +711,8 @@
  },
  "hebrews.13.11|leviticus.16.27": {
   "reason": "Hebrews says the bodies of animals “are burned outside the camp”; Leviticus says the bull and the goat “must be taken outside the camp.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.10.5|leviticus.18.5": {
   "reason": "Romans says Moses writes “The man who does these things will live by them”; Leviticus has the same words.",
@@ -658,11 +728,13 @@
  },
  "matthew.5.33|leviticus.19.12": {
   "reason": "Matthew says “Do not break your oath”; Leviticus says “You must not swear falsely by My name.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.5.43|leviticus.19.18": {
   "reason": "Matthew says it was said, “Love your neighbor” and “Hate your enemy”; Leviticus says “love your neighbor as yourself.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.19.19|leviticus.19.18": {
   "reason": "Matthew repeats “love your neighbor as yourself”; Leviticus has the same words after “Do not seek revenge or bear a grudge.”",
@@ -698,7 +770,8 @@
  },
  "matthew.5.38|leviticus.24.20": {
   "reason": "Matthew repeats “Eye for eye and tooth for tooth”; Leviticus has “eye for eye, tooth for tooth” after “fracture for fracture.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"eye for eye\" with \"tooth for tooth\" (the brief's example)."
  },
  "2-corinthians.6.16|leviticus.26.12": {
   "reason": "2 Corinthians says “I will be their God, and they will be My people”; Leviticus says “be your God, and you will be My people.”",
@@ -714,23 +787,28 @@
  },
  "john.19.36|numbers.9.12": {
   "reason": "John says “Not one of His bones will be broken”; Numbers says of the Passover meal that they may not “break any of its bones.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.3.2|numbers.12.7": {
   "reason": "Hebrews says “Moses was faithful in all God’s house”; Numbers says of “My servant Moses,” “he is faithful in all My house.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Moses was/is faithful in all ... house\" (4 words in a row by tense)."
  },
  "hebrews.3.5|numbers.12.7": {
   "reason": "Hebrews says “Moses was faithful as a servant in all God’s house”; Numbers has “he is faithful in all My house.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Moses ... faithful ... servant ... in all ... house\"; the statement follows with \"as a servant\" moved."
  },
  "1-corinthians.10.5|numbers.14.16": {
   "reason": "1 Corinthians says most “were struck down in the wilderness”; Numbers has this saying about the LORD: “He has slaughtered them in the wilderness.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-timothy.2.19|numbers.16.5": {
   "reason": "2 Timothy says “The Lord knows those who are His”; Numbers says “the LORD will reveal who belongs to Him and who is holy.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.6.34|numbers.27.17": {
   "reason": "Mark says the crowd was “like sheep without a shepherd”; Numbers speaks of one who will lead the congregation so it is not like that.",
@@ -738,7 +816,8 @@
  },
  "matthew.5.33|numbers.30.2": {
   "reason": "Matthew says “Do not break your oath”; Numbers says a man who vows to the LORD “must not break his word.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.13.18|deuteronomy.1.31": {
   "reason": "Acts says “He endured their conduct for about forty years in the wilderness”; Deuteronomy says the LORD carried them “as a man carries his son.”",
@@ -752,7 +831,8 @@
  },
  "mark.12.32|deuteronomy.4.35": {
   "reason": "Mark says “God is One and there is no other but Him”; Deuteronomy says “the LORD is God; there is no other besides Him.”",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 1: the same statement in other words. Shared: the common phrase \"there is no other\" and \"Him\"."
  },
  "matthew.15.4|deuteronomy.5.16": {
   "reason": "Matthew repeats “Honor your father and mother” as God’s word; Deuteronomy says “Honor your father and your mother.”",
@@ -780,55 +860,68 @@
  },
  "matthew.5.21|deuteronomy.5.17": {
   "reason": "Matthew says “Do not murder” was said to the ancients; Deuteronomy has “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "matthew.19.18|deuteronomy.5.17": {
   "reason": "Matthew has Jesus list “Do not murder”; Deuteronomy says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "luke.18.20|deuteronomy.5.17": {
   "reason": "Luke lists “do not murder” among the commandments; Deuteronomy says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not murder\" is this commandment."
  },
  "romans.13.9|deuteronomy.5.17": {
   "reason": "Romans lists “Do not murder” among the commandments; Deuteronomy says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not murder\" is this commandment."
  },
  "james.2.11|deuteronomy.5.17": {
   "reason": "James says He who said “Do not commit adultery” also said “Do not murder”; Deuteronomy says “You shall not murder.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not murder\" is the whole commandment (command form as a verb form; 7 verses)."
  },
  "matthew.5.27|deuteronomy.5.18": {
   "reason": "Matthew says “Do not commit adultery” was said before; Deuteronomy says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "matthew.19.18|deuteronomy.5.18": {
   "reason": "Matthew has Jesus list “do not commit adultery”; Deuteronomy says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "luke.18.20|deuteronomy.5.18": {
   "reason": "Luke gives the command “Do not commit adultery”; Deuteronomy says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"Do not commit adultery\" is this commandment."
  },
  "romans.13.9|deuteronomy.5.18": {
   "reason": "Romans lists “Do not commit adultery” among the commandments; Deuteronomy says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not commit adultery\" is this commandment."
  },
  "james.2.11|deuteronomy.5.18": {
   "reason": "James recalls “Do not commit adultery” and adds “Do not murder”; Deuteronomy says “You shall not commit adultery.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"not commit adultery\" (3 words; 8 verses), the whole commandment."
  },
  "matthew.19.18|deuteronomy.5.19": {
   "reason": "Matthew has Jesus list “do not steal”; Deuteronomy says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"Do/shall not steal\" is the whole commandment (command form as a verb form; 10 verses)."
  },
  "luke.18.20|deuteronomy.5.19": {
   "reason": "Luke lists “do not steal” among the commandments; Deuteronomy says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"You know the commandments\"; \"do not steal\" is this commandment."
  },
  "romans.13.9|deuteronomy.5.19": {
   "reason": "Romans names “Do not steal” among the commandments; Deuteronomy says “You shall not steal.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not steal\" is this commandment."
  },
  "matthew.19.18|deuteronomy.5.20": {
   "reason": "Matthew repeats the command “do not bear false witness,” which Deuteronomy gives as “You shall not bear false witness against your neighbor.”",
@@ -840,11 +933,13 @@
  },
  "romans.7.7|deuteronomy.5.21": {
   "reason": "Romans shows the law saying “Do not covet”; Deuteronomy says “You shall not covet your neighbor’s wife.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"if the law had not said\"; \"Do not covet\" is this commandment."
  },
  "romans.13.9|deuteronomy.5.21": {
   "reason": "Romans lists “Do not covet” among the commandments; Deuteronomy says “You shall not covet your neighbor’s house or field.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"The commandments\"; \"Do not covet\" is this commandment."
  },
  "mark.12.29|deuteronomy.6.4": {
   "reason": "In Mark, Jesus names the most important command by repeating Deuteronomy: “Hear, O Israel” and “The LORD our God, the LORD is One.”",
@@ -901,9 +996,9 @@
  },
  "hebrews.12.21|deuteronomy.9.19": {
   "reason": "Hebrews says Moses said, “I am trembling with fear”; in Deuteronomy 9:19 the speaker says, “I was afraid of the anger and wrath.”",
-  "fit": "weak",
-  "note": "No words are shared except the idea of fear. The Deuteronomy verse does not name Moses or say he trembled.",
-  "notVerified": "Only the idea of fear is shared. Deuteronomy 9:19 does not name Moses."
+  "fit": "close",
+  "notVerified": "Only the idea of fear is shared. Deuteronomy 9:19 does not name Moses.",
+  "basis": "Test 3: no run; Moses says he is afraid (\"trembling with fear\" / \"I was afraid\"). Visible, so close, not weak."
  },
  "titus.2.14|deuteronomy.14.2": {
   "reason": "Titus uses the words “a people for His own possession”; Deuteronomy says “a people for His prized possession.”",
@@ -915,12 +1010,14 @@
  },
  "1-corinthians.5.13|deuteronomy.17.7": {
   "reason": "1 Corinthians says, “Expel the wicked man from among you”; Deuteronomy says, “you must purge the evil from among you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.17.5|deuteronomy.18.15": {
   "reason": "Matthew has a voice from the cloud say, “Listen to Him!”; Deuteronomy says the LORD will raise up a prophet: “You must listen to him.”",
   "fit": "close",
-  "notVerified": "Borderline: only \"Listen to Him\" is shared."
+  "notVerified": "Borderline: only \"Listen to Him\" is shared.",
+  "basis": "Test 1 fails: \"listen to him\" is common (12 verses); the rest (\"This is My beloved Son\") differs."
  },
  "mark.9.7|deuteronomy.18.15": {
   "reason": "Mark has a voice from the cloud say, “Listen to Him!”; Deuteronomy says the LORD will raise up a prophet: “You must listen to him.”",
@@ -943,8 +1040,9 @@
  "acts.3.22|deuteronomy.18.16": {
   "reason": "Acts has Moses say “listen to Him in everything”; in Deuteronomy 18:16 the people say “Let us not hear the voice of the LORD.”",
   "fit": "weak",
-  "note": "Deuteronomy 18:16 does not contain the words that Acts repeats. It gives the people’s request at Horeb, which comes before the promise of a prophet.",
-  "notVerified": "The words that Acts repeats are in Deuteronomy 18:15, not in 18:16."
+  "note": "Deuteronomy 18:16 is the people's request at Horeb; Acts 3:22 takes nothing from it except a common title.",
+  "notVerified": "The words that Acts repeats are in Deuteronomy 18:15, not in 18:16.",
+  "basis": "Test 2 fails: Moses is named, but the quoted words are Deuteronomy 18:15. Shared only \"the LORD your God\"."
  },
  "acts.3.23|deuteronomy.18.19": {
   "reason": "Acts warns that “Everyone who does not listen” will be cut off; Deuteronomy says, “I will hold accountable anyone who does not listen.”",
@@ -964,7 +1062,8 @@
  },
  "matthew.5.38|deuteronomy.19.21": {
   "reason": "Matthew recalls the saying “Eye for eye and tooth for tooth”; Deuteronomy gives it as “eye for eye, tooth for tooth, hand for hand.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"eye for eye\" with \"tooth for tooth\" (the brief's example)."
  },
  "galatians.3.13|deuteronomy.21.23": {
   "reason": "Galatians repeats “who is hung on a tree” and calls that person cursed; Deuteronomy says such a person “is under God’s curse.”",
@@ -984,7 +1083,8 @@
  },
  "james.5.4|deuteronomy.24.15": {
   "reason": "James says cries over withheld wages “reached the ears of the Lord of Hosts”; Deuteronomy says the poor may “cry out to the LORD.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.9.9|deuteronomy.25.4": {
   "reason": "1 Corinthians repeats “Do not muzzle an ox while it is treading out the grain”; the same words stand in Deuteronomy.",
@@ -996,23 +1096,28 @@
  },
  "matthew.22.24|deuteronomy.25.5": {
   "reason": "Matthew says Moses declared that a brother “is to marry the widow”; Deuteronomy says “Her husband’s brother is to take her as his wife.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"Moses declared\"; the brother marries the widow of a man who dies without a son."
  },
  "mark.12.19|deuteronomy.25.5": {
   "reason": "Mark says Moses wrote that the man “is to marry his brother’s widow”; Deuteronomy says “Her husband’s brother is to take her as his wife.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"Moses wrote for us\"; the brother marries the widow of a man who dies without a son."
  },
  "luke.20.28|deuteronomy.25.5": {
   "reason": "Luke says Moses wrote that the man “is to marry his brother’s widow”; Deuteronomy says “Her husband’s brother is to take her as his wife.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"Moses wrote for us\"; the brother marries the widow of a man who dies without a son."
  },
  "galatians.3.10|deuteronomy.27.26": {
   "reason": "Galatians and Deuteronomy both pronounce a curse on whoever does not keep the law: “Cursed is everyone,” in Galatians; “Cursed is he,” in Deuteronomy.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Cursed is everyone/he who does not\" (5 words, pronoun for pronoun)."
  },
  "romans.11.8|deuteronomy.29.4": {
   "reason": "Romans says God gave them “eyes that could not see”; Deuteronomy says the LORD has not given “eyes to see.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.12.15|deuteronomy.29.18": {
   "reason": "Hebrews warns that no “root of bitterness” should spring up; Deuteronomy warns that no “root among you” should bear “poisonous and bitter fruit.”",
@@ -1034,7 +1139,8 @@
  },
  "hebrews.13.5|deuteronomy.31.6": {
   "reason": "Hebrews says God said, “Never will I leave you, never will I forsake you”; Deuteronomy says the LORD “will never leave you nor forsake you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.10.20|deuteronomy.32.17": {
   "reason": "1 Corinthians repeats “to demons, not to God” for pagan sacrifices; Deuteronomy says “They sacrificed to demons, not to God.”",
@@ -1059,11 +1165,13 @@
  },
  "hebrews.10.30|deuteronomy.32.36": {
   "reason": "Hebrews says “The Lord will judge His people”; Deuteronomy 32:36 says “the LORD will vindicate His people.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"The Lord will ... His people\"; common phrase, rest follows with one verb changed (judge/vindicate)."
  },
  "romans.15.10|deuteronomy.32.43": {
   "reason": "Romans repeats “Rejoice, O Gentiles, with His people”; Deuteronomy says “Rejoice, O nations, with His people.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Rejoice, O ... with His people\" (\"with His people\" in 7 verses); Gentiles/nations the only change."
  },
  "hebrews.1.6|deuteronomy.32.43": {
   "reason": "Hebrews repeats “Let all God’s angels worship Him”; the same words stand in Deuteronomy.",
@@ -1120,11 +1228,13 @@
  },
  "hebrews.13.5|deuteronomy.31.8": {
   "reason": "Hebrews says God said, “Never will I leave you, never will I forsake you”; Deuteronomy says “He will never leave you nor forsake you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.13.5|joshua.1.5": {
   "reason": "Hebrews says God said, “Never will I leave you, never will I forsake you”; Joshua says “I will never leave you nor forsake you.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.2.23|judges.13.5": {
   "reason": "Matthew says what the prophets spoke: “He will be called a Nazarene”; Judges says a boy “will be a Nazirite to God from the womb.”",
@@ -1144,15 +1254,18 @@
  "romans.11.2|1-samuel.12.22": {
   "reason": "Romans says “God did not reject His people”; 1 Samuel says “the LORD will not abandon His people.”",
   "fit": "close",
-  "notVerified": "Borderline: \"did not reject His people\" against \"will not abandon His people\"."
+  "notVerified": "Borderline: \"did not reject His people\" against \"will not abandon His people\".",
+  "basis": "Elijah is named for another reason. Test 1: \"His people\" only; reject/abandon is other words."
  },
  "acts.13.22|1-samuel.13.14": {
   "reason": "Acts has God say “a man after My own heart”; 1 Samuel says the LORD sought “a man after His own heart.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"a man after My/His own heart\" (6 words, pronoun for pronoun)."
  },
  "matthew.2.6|2-samuel.5.2": {
   "reason": "Matthew says a ruler will be “the shepherd of My people Israel”; 2 Samuel says the LORD said, “You will shepherd My people Israel.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: common \"My people Israel\", but the rest follows: \"ruler ... will ... shepherd My people Israel\"."
  },
  "2-corinthians.6.18|2-samuel.7.8": {
   "reason": "2 Corinthians has “I will be a Father to you”; 2 Samuel 7:8 has the LORD speak of “ruler over My people Israel.”",
@@ -1163,16 +1276,19 @@
  "john.7.42|2-samuel.7.12": {
   "reason": "John says people expect the Christ “from the line of David”; 2 Samuel promises “I will raise up your descendant after you.”",
   "fit": "close",
-  "notVerified": "Borderline: John names \"the Scripture\", but only \"will come from\" is shared."
+  "notVerified": "Borderline: John names \"the Scripture\", but only \"will come from\" is shared.",
+  "basis": "\"the Scripture\" names no book. Test 1: \"will come from\" is common (14 verses); the rest differs."
  },
  "acts.2.30|2-samuel.7.12": {
   "reason": "Acts says God promised to “place one of his descendants on his throne”; 2 Samuel says “I will raise up your descendant after you.”",
   "fit": "close",
-  "notVerified": "Borderline: only \"descendant(s)\" is shared."
+  "notVerified": "Borderline: only \"descendant(s)\" is shared.",
+  "basis": "David is named as the receiver, not the writer. Same promise in other words; no run."
  },
  "2-corinthians.6.18|2-samuel.7.14": {
   "reason": "2 Corinthians says, “I will be a Father to you”; 2 Samuel says, “I will be his Father, and he will be My son.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"and you/he will be My son(s)\" (6 words); \"I will be ... Father\"."
  },
  "hebrews.1.5|2-samuel.7.14": {
   "reason": "Hebrews repeats “I will be His Father, and He will be My Son”; 2 Samuel has nearly the same words.",
@@ -1189,7 +1305,8 @@
  },
  "acts.13.36|1-kings.2.10": {
   "reason": "Acts says David “was buried with his fathers”; 1 Kings says “David rested with his fathers” and “was buried in the City of David.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"with his fathers and\" is common (33 verses); the rest differs (\"saw decay\")."
  },
  "romans.11.3|1-kings.19.10": {
   "reason": "Romans repeats the complaint “I am the only one left, and they are seeking my life”; 1 Kings 19:10 has the same words.",
@@ -1197,7 +1314,8 @@
  },
  "romans.11.4|1-kings.19.18": {
   "reason": "Romans says “seven thousand men who have not bowed the knee to Baal”; 1 Kings says “I have reserved seven thousand in Israel.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"I have reserved\" (2 verses), \"seven thousand\", \"not bowed ... to Baal\"."
  },
  "mark.6.34|1-kings.22.17": {
   "reason": "Mark says the crowd was “like sheep without a shepherd”; in 1 Kings Micaiah says Israel was scattered “like sheep without a shepherd.”",
@@ -1209,11 +1327,13 @@
  },
  "luke.9.54|2-kings.1.10": {
   "reason": "Luke has James and John ask to “call down fire from heaven”; Elijah in 2 Kings says “fire come down from heaven.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.9.54|2-kings.1.12": {
   "reason": "Luke has James and John ask to “call down fire from heaven”; Elijah in 2 Kings says “fire come down from heaven.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.3.19|job.5.13": {
   "reason": "1 Corinthians repeats “He catches the wise in their craftiness”; the same words stand in the book of Job.",
@@ -1227,7 +1347,8 @@
  },
  "romans.11.35|job.41.11": {
   "reason": "Romans asks “Who has first given to God”; Job has “Who has given to Me that I should repay him?”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Who has (first) given to ... should repay him\"; \"should repay him\" with the same question."
  },
  "acts.4.25|psalms.2.1": {
   "reason": "Acts repeats the question “Why do the nations rage and the peoples plot in vain?” from Psalms.",
@@ -1245,11 +1366,13 @@
  "matthew.17.5|psalms.2.7": {
   "reason": "Matthew has a voice from the cloud say “This is My beloved Son”; Psalms says “You are My Son; today I have become Your Father.”",
   "fit": "close",
-  "notVerified": "Borderline: only \"My … Son\" is shared."
+  "notVerified": "Borderline: only \"My … Son\" is shared.",
+  "basis": "Moses and Elijah are named for another reason. \"This is My beloved Son\" / \"You are My Son\": \"My ... Son\" only."
  },
  "mark.1.11|psalms.2.7": {
   "reason": "Mark has a voice from heaven say “You are My beloved Son”; Psalms says “You are My Son; today I have become Your Father.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"You are My (beloved) Son\" (phrase in 4 verses); one word added."
  },
  "mark.9.7|psalms.2.7": {
   "reason": "Mark has a voice from the cloud say “This is My beloved Son”; Psalms says “You are My Son; today I have become Your Father.”",
@@ -1258,7 +1381,8 @@
  },
  "luke.3.22|psalms.2.7": {
   "reason": "Luke has a voice from heaven say “You are My beloved Son”; Psalms says “You are My Son; today I have become Your Father.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"You are My (beloved) Son\" (phrase in 4 verses); one word added."
  },
  "luke.9.35|psalms.2.7": {
   "reason": "Luke has a voice from the cloud say “This is My Son, whom I have chosen”; Psalms says “You are My Son.”",
@@ -1301,7 +1425,8 @@
  },
  "matthew.7.23|psalms.6.8": {
   "reason": "Matthew says “depart from Me, you workers of lawlessness”; Psalms says “Depart from me, all you workers of iniquity.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"depart from me\" and \"you workers of\"; the statement follows (lawlessness/iniquity)."
  },
  "luke.13.27|psalms.6.8": {
   "reason": "Luke has “Depart from me, all you evildoers”; Psalms has “Depart from me, all you workers of iniquity.”",
@@ -1321,9 +1446,9 @@
  },
  "matthew.22.44|psalms.8.6": {
   "reason": "Matthew has “until I put Your enemies under Your feet”; Psalms says “You have placed everything under his feet.”",
-  "fit": "weak",
-  "note": "Only the words under and feet are shared. Matthew speaks of enemies and a seat at the right hand, not of everything.",
-  "notVerified": "Only \"under\" and \"feet\" are shared."
+  "fit": "close",
+  "notVerified": "Only \"under\" and \"feet\" are shared.",
+  "basis": "Test 3: \"under Your/his feet\" is common (15 verses), but the image is visible, so close, not weak."
  },
  "1-corinthians.15.27|psalms.8.6": {
   "reason": "1 Corinthians says “God has put everything under His feet”; Psalms says “You have placed everything under his feet.”",
@@ -1343,7 +1468,8 @@
  },
  "romans.3.14|psalms.10.7": {
   "reason": "Romans says “Their mouths are full of cursing and bitterness”; Psalms says “His mouth is full of cursing, deceit, and violence.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Their mouths are / His mouth is full of cursing\" (5 words by number and pronoun)."
  },
  "romans.3.10|psalms.14.1": {
   "reason": "Romans repeats “there is no one who does good”; Psalms 14:1 says of the corrupt, “There is no one who does good.”",
@@ -1351,7 +1477,8 @@
  },
  "romans.3.11|psalms.14.2": {
   "reason": "Romans says “no one who seeks God”; in Psalms the LORD looks down “to see if any understand, if any seek God.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.3.12|psalms.14.3": {
   "reason": "Romans repeats “All have turned away, they have together become” worthless; Psalms 14:3 has the same words but says “corrupt.”",
@@ -1371,7 +1498,8 @@
  },
  "acts.2.31|psalms.16.10": {
   "reason": "Acts says the Christ “was not abandoned to Hades, nor did His body see decay”; Psalms says “You will not abandon my soul.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"David spoke about\"; content of this verse: \"not abandon(ed) to Hades/Sheol, nor ... see decay\"."
  },
  "acts.13.35|psalms.16.10": {
   "reason": "Acts says “You will not let Your Holy One see decay”; Psalms 16:10 has “nor will You let Your Holy One see decay.”",
@@ -1399,15 +1527,18 @@
  },
  "matthew.27.35|psalms.22.18": {
   "reason": "Matthew says they “divided up His garments by casting lots”; Psalms says “They divide my garments among them and cast lots for my clothing.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.15.24|psalms.22.18": {
   "reason": "Mark says they “divided His garments by casting lots”; Psalms says “They divide my garments among them and cast lots for my clothing.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.23.34|psalms.22.18": {
   "reason": "Luke says they “divided up His garments by casting lots”; Psalms says “They divide my garments among them and cast lots for my clothing.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "john.19.24|psalms.22.18": {
   "reason": "John repeats “They divided My garments among them, and cast lots for My clothing”; Psalms 22:18 has the same words in the present tense.",
@@ -1459,11 +1590,13 @@
  },
  "john.19.36|psalms.34.20": {
   "reason": "John says “Not one of His bones will be broken”; Psalms says “He protects all his bones; not one of them will be broken.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"not one of ... will be broken\", \"his bones\"; the statement follows."
  },
  "john.15.25|psalms.35.19": {
   "reason": "John says “They hated Me without reason”; Psalms 35:19 speaks of “those who hate me without reason.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"hated/hate me without reason\" (4 words by tense). Test 2: \"their Law\" named."
  },
  "romans.3.18|psalms.36.1": {
   "reason": "Romans repeats “There is no fear of God before their eyes”; Psalms 36:1 says “There is no fear of God before his eyes.”",
@@ -1471,7 +1604,8 @@
  },
  "matthew.5.5|psalms.37.11": {
   "reason": "Matthew says the meek “will inherit the earth”; Psalms says “the meek will inherit the land.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.10.5|psalms.40.6": {
   "reason": "Hebrews repeats “Sacrifice and offering You did not desire” and has “a body You prepared for Me” where Psalms has “my ears You have opened.”",
@@ -1520,7 +1654,8 @@
  },
  "matthew.16.27|psalms.62.12": {
   "reason": "Matthew says He “will repay each one according to what he has done”; Psalms says “You will repay each man according to his deeds.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: distinctive \"will repay each\" (4 verses) + \"according to\"."
  },
  "romans.2.6|psalms.62.12": {
   "reason": "Romans says God “will repay each one according to his deeds”; Psalms 62:12 says “You will repay each man according to his deeds.”",
@@ -1537,11 +1672,13 @@
  },
  "ephesians.4.8|psalms.68.18": {
   "reason": "Ephesians says He “led captives away” and “gave gifts to men”; Psalms says “You have received gifts from men.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"(have) ascended on high\", \"(have) led captives away\", \"gifts ... men\"."
  },
  "john.15.25|psalms.69.4": {
   "reason": "John says “They hated Me without reason”; Psalms 69:4 says “Those who hate me without cause outnumber the hairs of my head.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"written in their Law\"; content of this verse. Test 1: \"hate(d) me without\" (3 verses) + reason/cause."
  },
  "john.2.17|psalms.69.9": {
   "reason": "John has “Zeal for Your house will consume Me”; Psalms 69:9 has “zeal for Your house has consumed me.”",
@@ -1554,12 +1691,14 @@
  "matthew.27.48|psalms.69.21": {
   "reason": "Matthew says a sponge of “sour wine” was held up for Jesus to drink; Psalms 69:21 says “gave me vinegar to quench my thirst.”",
   "fit": "close",
-  "notVerified": "The texts say \"sour wine\" and \"vinegar\", and no word is shared."
+  "notVerified": "The texts say \"sour wine\" and \"vinegar\", and no word is shared.",
+  "basis": "Elijah is named for another reason. Same act in other words (sour wine / vinegar to drink); no run."
  },
  "mark.15.36|psalms.69.21": {
   "reason": "Mark says a sponge of “sour wine” was held up for Jesus to drink; Psalms 69:21 says “gave me vinegar to quench my thirst.”",
   "fit": "close",
-  "notVerified": "The texts say \"sour wine\" and \"vinegar\", and no word is shared."
+  "notVerified": "The texts say \"sour wine\" and \"vinegar\", and no word is shared.",
+  "basis": "Elijah is named for another reason. Same act in other words (sour wine / vinegar to drink); no run."
  },
  "john.19.28|psalms.69.21": {
   "reason": "John has Jesus say “I am thirsty”; Psalms 69:21 says “gave me vinegar to quench my thirst.”",
@@ -1589,7 +1728,8 @@
  },
  "john.6.31|psalms.78.24": {
   "reason": "John says “He gave them bread from heaven to eat”; Psalms 78:24 says “He gave them grain from heaven.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"He gave them ... from heaven ... to eat\"; bread/grain the only change."
  },
  "2-thessalonians.1.8|psalms.79.6": {
   "reason": "2 Thessalonians speaks of vengeance on “those who do not know God”; Psalms 79:6 asks for wrath on “the nations that do not acknowledge You.”",
@@ -1603,21 +1743,25 @@
  "acts.2.30|psalms.89.3": {
   "reason": "Acts says God “had promised him on oath”; Psalms 89:3 says “I have sworn to David My servant.”",
   "fit": "close",
-  "notVerified": "Borderline: \"on oath\" against \"sworn\"."
+  "notVerified": "Borderline: \"on oath\" against \"sworn\".",
+  "basis": "No run; same statement in other words (\"promised him on oath\" / \"I have sworn to David\")."
  },
  "acts.2.30|psalms.89.4": {
   "reason": "Acts says God would “place one of his descendants on his throne”; Psalms 89:4 says “I will establish your offspring forever.”",
   "fit": "close",
-  "notVerified": "Borderline: only \"throne\" is shared, with \"descendants\" against \"offspring\"."
+  "notVerified": "Borderline: only \"throne\" is shared, with \"descendants\" against \"offspring\".",
+  "basis": "No run; same statement in other words (\"descendants on his throne\" / \"your offspring ... your throne\")."
  },
  "acts.13.22|psalms.89.20": {
   "reason": "Acts has God say “I have found David son of Jesse”; Psalms 89:20 says “I have found My servant David.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 1 fails: \"I have found\" is common (33 verses); the rest differs (\"son of Jesse\" / \"My servant\")."
  },
  "john.12.34|psalms.89.36": {
   "reason": "John says the Christ “will remain forever”; Psalms 89:36 says “his offspring shall endure forever.”",
   "fit": "close",
-  "notVerified": "Borderline: only \"forever\" is shared. John names \"the Law\"."
+  "notVerified": "Borderline: only \"forever\" is shared. John names \"the Law\".",
+  "basis": "Test 2 fails: the Law is named, but \"the Christ will remain forever\" is not clearly this verse; shared \"forever\" only."
  },
  "2-peter.3.8|psalms.90.4": {
   "reason": "2 Peter says “a thousand years are like a day”; Psalms 90:4 says “a thousand years are but a day that passes.”",
@@ -1641,12 +1785,14 @@
  },
  "1-corinthians.3.20|psalms.94.11": {
   "reason": "1 Corinthians quotes Psalms, but writes “the thoughts of the wise” where Psalms has “the thoughts of man”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"The Lord knows ... the thoughts of ... are futile\"."
  },
  "romans.11.2|psalms.94.14": {
   "reason": "Romans says God “did not reject His people”; Psalms says the LORD “will not forsake His people”.",
   "fit": "close",
-  "notVerified": "The same saying in other words: \"reject\" where Psalms has \"forsake\"."
+  "notVerified": "The same saying in other words: \"reject\" where Psalms has \"forsake\".",
+  "basis": "Elijah is named for another reason. Test 1: \"His people\" only; reject/forsake is other words."
  },
  "hebrews.3.7|psalms.95.7": {
   "reason": "Hebrews repeats the call in Psalms, “Today, if you hear His voice”, and the warning about fathers who tested Him in the wilderness.",
@@ -1686,7 +1832,8 @@
  },
  "hebrews.3.18|psalms.95.11": {
   "reason": "Hebrews asks to whom God swore that they would “never enter His rest”; Psalms gives the oath: “They shall never enter My rest”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"never enter His/My rest\" (4 words, pronoun for pronoun), with swear/swore."
  },
  "hebrews.4.3|psalms.95.11": {
   "reason": "Hebrews repeats the oath in Psalms, “They shall never enter My rest”, and says those who believed do enter that rest.",
@@ -1729,7 +1876,8 @@
  },
  "hebrews.1.7|psalms.104.4": {
   "reason": "Hebrews says He makes His angels winds and His servants “flames of fire”; Psalms says He makes the winds His messengers.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"He makes ... winds ... flames of fire ... His servants\" (\"flames of fire\" in 5 verses)."
  },
  "romans.1.23|psalms.106.20": {
   "reason": "Romans says they “exchanged the glory of the immortal God” for images; Psalms says they “exchanged their Glory” for the image of an ox.",
@@ -1820,7 +1968,8 @@
  },
  "hebrews.10.13|psalms.110.1": {
   "reason": "Hebrews repeats Psalms, changing “Your feet” to “His feet”: He waits for His enemies to be made a footstool.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"a footstool for His/Your feet\" (5 words, pronoun for pronoun), \"enemies\"."
  },
  "hebrews.12.2|psalms.110.1": {
   "reason": "Hebrews says Jesus “sat down at the right hand of the throne of God”; Psalms says “Sit at My right hand”.",
@@ -1886,8 +2035,9 @@
  "matthew.21.9|psalms.118.25": {
   "reason": "Matthew has the crowds shout “Hosanna to the Son of David”; Psalms asks, “O LORD, save us, we pray”.",
   "fit": "weak",
-  "note": "The word Hosanna is not in the BSB text of Psalms 118:25. The link rests on a meaning that neither text states.",
-  "notVerified": "The passages share no BSB words. \"Hosanna\" is not in Psalm 118:25."
+  "note": "In the BSB words nothing of Psalm 118:25 appears in Matthew 21:9; the \"Blessed is He\" line matches Psalm 118:26.",
+  "notVerified": "The passages share no BSB words. \"Hosanna\" is not in Psalm 118:25.",
+  "basis": "Shared only \"to\"; \"Hosanna\" and \"save us, we pray\" are different words."
  },
  "mark.11.9|psalms.118.25": {
   "reason": "Mark has the crowd shout “Hosanna!”; Psalms asks, “O LORD, save us, we pray”.",
@@ -1911,9 +2061,9 @@
  },
  "mark.11.10|psalms.118.26": {
   "reason": "Mark says “Blessed is the coming kingdom of our father David”; Psalms says “Blessed is he who comes in the name of the LORD”.",
-  "fit": "weak",
-  "note": "Mark 11:10 shares only the words Blessed is with Psalms 118:26. The words from the Psalm are in Mark 11:9.",
-  "notVerified": "Shares only \"Blessed is\"."
+  "fit": "close",
+  "notVerified": "Shares only \"Blessed is\".",
+  "basis": "Test 3: \"Blessed is ... coming / comes\" (2 words in a row); the pattern is visible, so close, not weak."
  },
  "luke.13.35|psalms.118.26": {
   "reason": "Luke repeats Psalms: “Blessed is He who comes in the name of the Lord”.",
@@ -1930,7 +2080,8 @@
  },
  "acts.2.30|psalms.132.11": {
   "reason": "Acts says God promised on oath to place “one of his descendants on his throne”; Psalms has “One of your descendants I will place”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"one of his/your descendants\" (4 words) + \"place ... on his/your throne\"."
  },
  "romans.3.13|psalms.140.3": {
   "reason": "Romans repeats Psalms: “The venom of vipers is on their lips”.",
@@ -1939,12 +2090,14 @@
  "romans.3.20|psalms.143.2": {
   "reason": "Romans says “no one will be justified in His sight” by works of the law; Psalms says “no one alive is righteous before You”.",
   "fit": "close",
-  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named."
+  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named.",
+  "basis": "\"the law\" is named as the means, not the source. Test 1: \"no one\" only; justified/righteous is other words."
  },
  "galatians.2.16|psalms.143.2": {
   "reason": "Galatians says “by works of the law no one will be justified”; Psalms says “no one alive is righteous before You”.",
   "fit": "close",
-  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named."
+  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named.",
+  "basis": "\"the law\" is named as the means, not the source. Test 1: \"no one\" only; justified/righteous is other words."
  },
  "acts.4.24|psalms.146.6": {
   "reason": "Acts has believers pray to God, who made “the sea and everything in them”; Psalms calls Him “the Maker of heaven and earth”.",
@@ -1960,7 +2113,8 @@
  },
  "revelation.14.7|psalms.146.6": {
   "reason": "Revelation names “the One who made the heavens and the earth and the sea”; Psalms calls God “the Maker of heaven and earth”.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 3: the same creation statement in other words. Shared: \"heaven(s)\", \"earth\", \"the sea\"."
  },
  "mark.11.9|psalms.118.26": {
   "reason": "Mark repeats Psalms: “Blessed is He who comes in the name of the Lord”.",
@@ -1988,10 +2142,11 @@
  },
  "romans.3.10|psalms.10.7": {
   "reason": "Romans has “Their mouths are full of cursing and bitterness”; Psalms says “His mouth is full of cursing, deceit, and violence”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Their mouths are / His mouth is full of cursing\" (5 words by number and pronoun)."
  },
  "romans.3.10|psalms.36.1": {
-  "reason": "Romans repeats Psalms: “There is no fear of God before their eyes”.",
+  "reason": "Romans repeats Psalms: “There is no fear of God before”, with “their eyes” where Psalms has “his eyes”.",
   "fit": "quote"
  },
  "1-corinthians.10.28|psalms.24.1": {
@@ -2023,7 +2178,8 @@
  "hebrews.13.6|psalms.27.1": {
   "reason": "Hebrews says “I will not be afraid”; Psalms says “The LORD is my light and my salvation” and asks whom to fear.",
   "fit": "close",
-  "notVerified": "Shares only \"The Lord is my\" and the idea of not fearing."
+  "notVerified": "Shares only \"The Lord is my\" and the idea of not fearing.",
+  "basis": "Test 1 fails: \"the Lord is my\" is common (13 verses); the rest differs (helper / light)."
  },
  "romans.12.17|proverbs.3.4": {
   "reason": "Romans says to consider what is right “in the eyes of everybody”; Proverbs speaks of favor “in the sight of God and man”.",
@@ -2058,7 +2214,8 @@
  },
  "hebrews.12.13|proverbs.4.26": {
   "reason": "Hebrews says “Make straight paths for your feet”; Proverbs says “Make a level path for your feet”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Make ... path(s) for your feet\" (4 words by plural); straight/level the only change."
  },
  "1-peter.4.8|proverbs.10.12": {
   "reason": "1 Peter says “love covers over a multitude of sins”; Proverbs says “love covers all transgressions”.",
@@ -2097,7 +2254,8 @@
  },
  "2-timothy.4.14|proverbs.24.12": {
   "reason": "2 Timothy says the Lord “will repay him according to his deeds”; Proverbs asks if He will “repay a man according to his deeds”.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 3: no named source, and the shared formula \"according to his deeds\" is in 6 BSB verses."
  },
  "romans.12.20|proverbs.25.21": {
   "reason": "Romans repeats Proverbs: “If your enemy is hungry” and “if he is thirsty, give him” something to drink.",
@@ -2117,7 +2275,8 @@
  },
  "romans.3.10|ecclesiastes.7.20": {
   "reason": "Romans says “There is no one righteous, not even one”; Ecclesiastes says “there is no righteous man on earth”.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 3: the same statement in other words. Shared: \"there is no\" and \"righteous\"."
  },
  "romans.9.29|isaiah.1.9": {
   "reason": "Romans repeats Isaiah: without those the Lord of Hosts left, “we would have become like Sodom, we would have resembled Gomorrah”.",
@@ -2126,7 +2285,8 @@
  "2-thessalonians.1.9|isaiah.2.19": {
   "reason": "2 Thessalonians says “separated from the presence of the Lord”; Isaiah says men flee “away from the terror of the LORD”.",
   "fit": "close",
-  "notVerified": "The same picture in other words. Fewer than 4 words in a run, and no book named."
+  "notVerified": "The same picture in other words. Fewer than 4 words in a run, and no book named.",
+  "basis": "Test 1 fails: \"of the Lord and\" is common (151 verses); the nouns differ (presence/terror, glory/splendor)."
  },
  "matthew.21.33|isaiah.5.1": {
   "reason": "Matthew has a landowner who “planted a vineyard”; Isaiah has a song: “My beloved had a vineyard on a very fertile hill”.",
@@ -2156,8 +2316,9 @@
  "james.5.4|isaiah.5.9": {
   "reason": "James says the harvesters’ cries reached “the Lord of Hosts”; Isaiah says “the LORD of Hosts” declared that houses will become desolate.",
   "fit": "weak",
-  "note": "The texts share only the title the Lord of Hosts. They do not show what James takes from Isaiah.",
-  "notVerified": "Shares only the title \"the Lord of Hosts\"."
+  "note": "Isaiah 5:9 is about empty houses; the wages and harvesters of James 5:4 have no match in it.",
+  "notVerified": "Shares only the title \"the Lord of Hosts\".",
+  "basis": "Shared only the title \"the Lord of Hosts\" (223 verses)."
  },
  "revelation.4.8|isaiah.6.3": {
   "reason": "Revelation repeats the cry “Holy, Holy, Holy” from Isaiah, but names “the Lord God Almighty” where Isaiah names “the LORD of Hosts”.",
@@ -2236,7 +2397,8 @@
  },
  "luke.1.79|isaiah.9.2": {
   "reason": "Luke repeats “in darkness” and “the shadow of death” from Isaiah, where Isaiah says “a light has dawned”.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 3: two stock phrases only, \"in darkness\" and \"the shadow of death\"."
  },
  "romans.9.27|isaiah.10.22": {
   "reason": "Romans repeats Isaiah: “like the sand of the sea”, then “only the remnant will be saved” where Isaiah has “only a remnant will return”.",
@@ -2244,7 +2406,8 @@
  },
  "romans.9.28|isaiah.10.23": {
   "reason": "Romans says “the Lord will carry out His sentence on the earth”; Isaiah says “will carry out the destruction decreed”.",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"Isaiah cries out\" opens the same quotation. Test 1: \"For the Lord ... will carry out\" (6 verses)."
  },
  "matthew.2.23|isaiah.11.1": {
   "reason": "Matthew says “He will be called a Nazarene”; Isaiah says “a Branch from his roots will bear fruit”.",
@@ -2334,7 +2497,9 @@
  },
  "1-corinthians.14.21|isaiah.28.12": {
   "reason": "1 Corinthians says “they will not listen to Me”; Isaiah says “But they would not listen”.",
-  "fit": "quote"
+  "fit": "weak",
+  "basis": "Accuracy review quarter 3: the only shared words are \"they ... not listen\". \"It is written in the Law\" does not name Isaiah. The quotation link for this verse is to Isaiah 28:11.",
+  "note": "Accuracy review quarter 3: the only shared words are \"they ... not listen\". \"It is written in the Law\" does not name Isaiah. The quotation link for this verse is to Isaiah 28:11."
  },
  "romans.9.33|isaiah.28.16": {
   "reason": "Romans repeats Isaiah: “the one who believes”, with “will never be put to shame” where Isaiah says “will never be shaken”.",
@@ -2342,10 +2507,11 @@
  },
  "romans.10.11|isaiah.28.16": {
   "reason": "Romans says “Anyone who believes in Him will never be put to shame”; Isaiah says “the one who believes will never be shaken”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"who believes ... will never be\"; the statement follows with one word changed (shame/shaken)."
  },
  "1-peter.2.6|isaiah.28.16": {
-  "reason": "1 Peter repeats Isaiah: “See, I lay in Zion a stone”, “precious cornerstone”, and “the one who believes”.",
+  "reason": "1 Peter repeats “precious cornerstone” and “the one who believes” from Isaiah, which has “See, I lay a stone in Zion”.",
   "fit": "quote"
  },
  "romans.11.8|isaiah.29.10": {
@@ -2359,7 +2525,8 @@
  },
  "matthew.15.9|isaiah.29.13": {
   "reason": "Matthew says “they teach as doctrine the precepts of men”; Isaiah says “Their worship of Me is but rules taught by men”.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.7.6|isaiah.29.13": {
   "reason": "Mark repeats Isaiah: “honor Me with their lips, but their hearts are far from Me”.",
@@ -2367,7 +2534,8 @@
  },
  "mark.7.7|isaiah.29.13": {
   "reason": "Mark says “they teach as doctrine the precepts of men”; Isaiah says “Their worship of Me is but rules taught by men”.",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"Isaiah prophesied\" opens the same quotation; content of this verse: worship of Me, taught by men."
  },
  "colossians.2.22|isaiah.29.13": {
   "reason": "Colossians says these things are “based on human commands and teachings”; Isaiah says “Their worship of Me is but rules taught by men”.",
@@ -2384,7 +2552,8 @@
  },
  "hebrews.12.12|isaiah.35.3": {
   "reason": "Hebrews says “strengthen your limp hands and weak knees”; Isaiah says “Strengthen the limp hands and steady the feeble knees”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"strengthen ... limp hands and ... knees\" (\"limp hands\" in 2 verses)."
  },
  "luke.7.22|isaiah.35.5": {
   "reason": "Luke says “The blind receive sight” and “the deaf hear”; Isaiah says “the eyes of the blind will be opened”.",
@@ -2402,7 +2571,8 @@
  },
  "mark.1.2|isaiah.40.3": {
   "reason": "Mark says “who will prepare Your way”; Isaiah says “Prepare the way for the LORD in the wilderness”.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: Isaiah is named, but \"who will prepare Your way\" matches Malachi 3:1. Shared \"prepare ... way\" only."
  },
  "luke.3.4|isaiah.40.3": {
   "reason": "Luke repeats Isaiah: “A voice of one calling” and “Prepare the way for the Lord”; Luke places “in the wilderness” after the voice.",
@@ -2418,11 +2588,13 @@
  },
  "luke.3.6|isaiah.40.5": {
   "reason": "Luke has “all humanity will see God’s salvation”; Isaiah has “all humanity together will see it”.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"And all humanity ... will see\" (\"all humanity\" in 2 verses)."
  },
  "james.1.10|isaiah.40.6": {
   "reason": "James says the rich “will pass away like a flower of the field”; Isaiah says the glory of all flesh is “like the flowers”.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 3: the two verses share \"like\" and \"flower(s) of the field\" and the theme that life does not last."
  },
  "1-peter.1.24|isaiah.40.6": {
   "reason": "1 Peter repeats Isaiah: “All flesh is like grass” and “all its glory like the flowers of the field”.",
@@ -2444,12 +2616,13 @@
  "john.12.15|isaiah.40.9": {
   "reason": "John has “Do not be afraid, O Daughter of Zion”; Isaiah tells Zion “do not be afraid” and says “Here is your God”.",
   "fit": "close",
-  "notVerified": "The two passages share only the common phrase \"do not be afraid\"."
+  "notVerified": "The two passages share only the common phrase \"do not be afraid\".",
+  "basis": "Test 1 fails: \"do not be afraid\" is common (93 verses); the rest differs (King on a colt / \"Here is your God\")."
  },
  "romans.11.34|isaiah.40.13": {
   "reason": "Romans asks who has known “the mind of the Lord” and been “His counselor”; Isaiah asks who has directed “the Spirit of the LORD”.",
-  "fit": "close",
-  "notVerified": "The same saying in other words: \"mind\" where Isaiah has \"Spirit\"."
+  "fit": "quote",
+  "basis": "Test 1: \"of the Lord or\" (4 words; only 7 verses), with \"Who has\" and \"His counselor\"."
  },
  "1-corinthians.2.16|isaiah.40.13": {
   "reason": "1 Corinthians asks “who has known the mind of the Lord”; Isaiah asks “Who has directed the Spirit of the LORD”.",
@@ -2484,7 +2657,8 @@
  "matthew.17.5|isaiah.42.1": {
   "reason": "Matthew has a voice from the cloud say “in whom I am well pleased”; Isaiah says “My Chosen One, in whom My soul delights”.",
   "fit": "close",
-  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named."
+  "notVerified": "The same saying in other words. Fewer than 4 words in a run, and no book named.",
+  "basis": "Moses and Elijah are named for another reason. Test 1: \"in whom\" only; \"well pleased\" / \"My soul delights\"."
  },
  "mark.1.11|isaiah.42.1": {
   "reason": "Mark has a voice from heaven say “in You I am well pleased”; Isaiah says “My Chosen One, in whom My soul delights”.",
@@ -2503,11 +2677,13 @@
  },
  "2-peter.1.17|isaiah.42.1": {
   "reason": "2 Peter reports a voice saying “in whom I am well pleased”; Isaiah speaks of a Servant “in whom My soul delights.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.12.19|isaiah.42.2": {
   "reason": "Matthew repeats Isaiah’s words about one who will not cry out, whose voice is not heard “in the streets.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"He will not ... cry out\", \"His voice\", \"hear(d) ... in the streets\"; the statement follows."
  },
  "matthew.12.20|isaiah.42.3": {
   "reason": "Matthew repeats Isaiah’s words: “A bruised reed He will not break,” and a smoldering wick He will not put out.",
@@ -2519,27 +2695,31 @@
  },
  "2-corinthians.6.18|isaiah.43.6": {
   "reason": "2 Corinthians says “you will be My sons and daughters”; Isaiah says “Bring My sons from afar, and My daughters.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-peter.2.9|isaiah.43.21": {
   "reason": "1 Peter calls its readers “a people for God’s own possession” who proclaim His virtues; Isaiah says the people He formed “will declare My praise.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.13.22|isaiah.44.28": {
   "reason": "Acts says of David, “he will carry out My will in its entirety”; Isaiah says Cyrus, “My shepherd,” will do “all that I desire.”",
-  "fit": "weak",
-  "note": "Acts is about David and Isaiah is about Cyrus. They share only the idea of a chosen man who does what God wants.",
-  "notVerified": "Acts is about David and Isaiah is about Cyrus. The two verses share no wording."
+  "fit": "close",
+  "notVerified": "Acts is about David and Isaiah is about Cyrus. The two verses share no wording.",
+  "basis": "Test 3: no run, but the idea is visible (\"carry out My will\" / \"fulfill all that I desire\"), so close, not weak."
  },
  "romans.9.20|isaiah.45.9": {
   "reason": "Romans asks whether what is formed may say to its maker “Why did You make me like this”; Isaiah shows clay asking the potter.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.15.17|isaiah.45.21": {
   "reason": "Acts speaks of Gentiles “called by My name” who seek the Lord; Isaiah has the words “There is no other God but Me.”",
   "fit": "weak",
-  "note": "No wording is shared. Acts 15:17 is about the remnant and the Gentiles seeking the Lord; Isaiah 45:21 is about the LORD as the only God.",
-  "notVerified": "The verses share no wording. The words in Acts match Amos 9:12, which has its own link."
+  "note": "Acts 15:17 is about Gentiles called by the Lord's name; Isaiah 45:21 is about who foretold events. No shared words or statement.",
+  "notVerified": "The verses share no wording. The words in Acts match Amos 9:12, which has its own link.",
+  "basis": "Shared only \"the Lord\"; nothing else."
  },
  "acts.15.18|isaiah.45.21": {
   "reason": "Acts says these things “have been known for ages”; Isaiah asks who foretold and announced them “long ago” and “from ancient times.”",
@@ -2552,15 +2732,18 @@
  },
  "philippians.2.10|isaiah.45.23": {
   "reason": "Philippians repeats Isaiah’s words that every knee will bow and every tongue speak, now at “the name of Jesus.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"every knee should/will bow\", \"every tongue\" (\"every knee\" in 5 verses)."
  },
  "philippians.2.11|isaiah.45.23": {
   "reason": "Philippians has every tongue “confess that Jesus Christ is Lord”; Isaiah has every tongue “swear allegiance.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "galatians.1.15|isaiah.49.1": {
   "reason": "Galatians says God “set me apart from my mother’s womb”; Isaiah says “The LORD called Me from the womb.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "ephesians.6.17|isaiah.49.2": {
   "reason": "Ephesians calls “the sword of the Spirit” the word of God; Isaiah has a speaker whose mouth is made “like a sharp sword.”",
@@ -2577,11 +2760,13 @@
  },
  "romans.14.11|isaiah.49.18": {
   "reason": "Romans and Isaiah both have the oath “As surely as I live,” but the words after the oath differ.",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Test 1 fails: \"as surely as I live\" is common (28 verses); the rest (\"every knee will bow\") is not in Isaiah 49:18."
  },
  "romans.2.24|isaiah.52.5": {
   "reason": "Romans says “God’s name is blasphemed among the Gentiles”; Isaiah has the LORD say “My name is blasphemed continually all day long.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: distinctive \"name is blasphemed\" (2 BSB verses), God's/My name."
  },
  "romans.10.15|isaiah.52.7": {
   "reason": "Romans repeats Isaiah’s words about messengers: “How beautiful” are “the feet of those who bring good news.”",
@@ -2589,7 +2774,8 @@
  },
  "ephesians.6.15|isaiah.52.7": {
   "reason": "Ephesians speaks of feet fitted with “the gospel of peace”; Isaiah praises the feet of those who bring good news and “proclaim peace.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-corinthians.6.17|isaiah.52.11": {
   "reason": "2 Corinthians repeats Isaiah’s command “Touch no unclean thing,” and both passages call people to come out.",
@@ -2597,7 +2783,8 @@
  },
  "romans.15.21|isaiah.52.15": {
   "reason": "Romans says those not told about Him “will see”; Isaiah says kings “will see what they have not been told.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"will see\", \"not ... told\", \"have not heard will understand\"; the statement follows."
  },
  "1-corinthians.2.9|isaiah.52.15": {
   "reason": "1 Corinthians says no eye has seen and no ear has heard; Isaiah says kings “will understand what they have not heard.”",
@@ -2619,15 +2806,18 @@
  },
  "1-peter.2.24|isaiah.53.4": {
   "reason": "1 Peter says “bore our sins in His body”; Isaiah says “took up our infirmities and carried our sorrows.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-peter.2.24|isaiah.53.5": {
   "reason": "1 Peter repeats Isaiah’s words that by “His stripes” people “are healed,” saying you where Isaiah says we.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"By His stripes ... are healed\" (\"by his stripes\" in 2 verses)."
  },
  "1-peter.2.25|isaiah.53.6": {
   "reason": "1 Peter says “you were like sheep going astray”; Isaiah says “We all like sheep have gone astray.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.8.32|isaiah.53.7": {
   "reason": "Acts repeats Isaiah’s words about one led “to the slaughter” who “did not open His mouth,” like a silent lamb or sheep.",
@@ -2639,7 +2829,8 @@
  },
  "1-peter.2.22|isaiah.53.9": {
   "reason": "1 Peter repeats Isaiah’s words that no “deceit” was in “His mouth,” and adds that He committed no sin.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"no deceit ... in His mouth\"; common \"in his mouth\", rest follows (\"deceit\")."
  },
  "luke.22.37|isaiah.53.12": {
   "reason": "Luke repeats Isaiah’s words “He was numbered with the transgressors” as something that must happen “in Me.”",
@@ -2647,7 +2838,8 @@
  },
  "hebrews.9.28|isaiah.53.12": {
   "reason": "Hebrews says Christ was offered once to bear the sins of many; Isaiah says “He bore the sin of many.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"bear/bore the sin(s) of many\" (5 words by tense and plural)."
  },
  "galatians.4.27|isaiah.54.1": {
   "reason": "Galatians repeats Isaiah’s call to “O barren woman, who bears no children,” and to break forth and cry aloud.",
@@ -2655,11 +2847,13 @@
  },
  "john.6.45|isaiah.54.13": {
   "reason": "John repeats Isaiah’s words that people “will be taught by” God; Isaiah says it of “all your sons.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"all ... will be taught by\" (4 words; \"taught by\" in 5 verses)."
  },
  "acts.13.34|isaiah.55.3": {
   "reason": "Acts has “I will give you the holy and sure blessings promised to David”; Isaiah has an everlasting covenant, “My loving devotion promised to David.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: distinctive \"promised to David\" (2 BSB verses), with \"I will give/make ... you\"."
  },
  "matthew.21.13|isaiah.56.7": {
   "reason": "Matthew repeats Isaiah’s words “My house will be called a house of prayer.”",
@@ -2675,11 +2869,13 @@
  },
  "ephesians.2.17|isaiah.57.19": {
   "reason": "Ephesians says peace was preached to those “far away” and “near”; Isaiah says “Peace, peace to those far and near.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.4.18|isaiah.58.6": {
-  "reason": "Luke says “to release the oppressed”; Isaiah’s fast is “to set the oppressed free and tear off every yoke.”",
-  "fit": "close"
+  "reason": "In Luke, Jesus reads “to release the oppressed” from Isaiah’s scroll; Isaiah 58:6 says “to set the oppressed free.”",
+  "fit": "close",
+  "basis": "Accuracy review quarter 4: the two passages share only \"the oppressed\". Luke 4:17 names the book, but the rest of Luke 4:18 repeats Isaiah 61:1."
  },
  "romans.3.15|isaiah.59.7": {
   "reason": "Romans repeats Isaiah’s words about people whose feet are “swift to shed” blood.",
@@ -2695,7 +2891,8 @@
  },
  "ephesians.6.14|isaiah.59.17": {
   "reason": "Ephesians has “the breastplate of righteousness”; Isaiah says “He put on righteousness like a breastplate.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "ephesians.6.17|isaiah.59.17": {
   "reason": "Ephesians says “take the helmet of salvation”; Isaiah says He put on “the helmet of salvation on His head.”",
@@ -2703,11 +2900,13 @@
  },
  "1-thessalonians.5.8|isaiah.59.17": {
   "reason": "1 Thessalonians speaks of “the breastplate of faith and love”; in Isaiah, He puts on “righteousness like a breastplate” and “the helmet of salvation.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Accuracy review quarter 4: the same picture in other words. Shared: \"breastplate\", \"and the helmet of\", \"salvation\"."
  },
  "romans.11.26|isaiah.59.20": {
   "reason": "Romans says “The Deliverer will come from Zion”; Isaiah says “The Redeemer will come to Zion,” with “Jacob” in both.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"The [Deliverer/Redeemer] will come from/to Zion\", \"Jacob\"; one word changed."
  },
  "romans.11.27|isaiah.59.21": {
   "reason": "Romans repeats Isaiah’s words “this is My covenant with them” and adds that God takes away their sins.",
@@ -2715,7 +2914,8 @@
  },
  "matthew.11.5|isaiah.61.1": {
   "reason": "Matthew lists healings, then “the good news is preached to the poor”; Isaiah says “to preach good news to the poor.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.4.18|isaiah.61.1": {
   "reason": "Luke repeats Isaiah’s words “to preach good news to the poor” and “to proclaim liberty to the captives.”",
@@ -2723,7 +2923,8 @@
  },
  "luke.7.22|isaiah.61.1": {
   "reason": "Luke gives a reply that ends “the good news is preached to the poor”; Isaiah says “to preach good news to the poor.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.4.19|isaiah.61.2": {
   "reason": "Luke repeats Isaiah’s words about proclaiming “the year of the” Lord’s favor; Isaiah then adds “the day of our God’s vengeance.”",
@@ -2731,7 +2932,8 @@
  },
  "matthew.21.5|isaiah.62.11": {
   "reason": "Matthew says “your King comes to you”; Isaiah says “your Savior comes,” in the same call to say to the Daughter of Zion.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Say to (the) Daughter (of) Zion ... See, your ... comes\"; King/Savior the only change."
  },
  "1-corinthians.2.9|isaiah.64.4": {
   "reason": "1 Corinthians repeats “no eye has seen” from Isaiah, and both passages speak of God acting for those who love or wait for Him.",
@@ -2751,11 +2953,13 @@
  },
  "matthew.5.34|isaiah.66.1": {
   "reason": "Matthew says not to swear by heaven, “for it is God’s throne”; Isaiah says “Heaven is My throne, and earth is My footstool.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.5.35|isaiah.66.1": {
   "reason": "Matthew says not to swear “by the earth, for it is His footstool”; Isaiah says “earth is My footstool.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "acts.7.49|isaiah.66.1": {
   "reason": "Acts repeats Isaiah’s words “Heaven is My throne” and “What kind of house will you build for Me?”",
@@ -2767,11 +2971,13 @@
  },
  "2-thessalonians.1.8|isaiah.66.15": {
   "reason": "2 Thessalonians speaks of “blazing fire” and vengeance; Isaiah says the LORD “will come with fire” to execute His anger.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.9.48|isaiah.66.24": {
   "reason": "Mark repeats Isaiah’s words about “their worm” that never dies and a fire never “quenched.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"their worm (will) never die(s)\", \"fire ... never ... quenched\"."
  },
  "mark.1.3|isaiah.40.3": {
   "reason": "Mark repeats Isaiah’s words “A voice of one calling” and “Prepare the way for the” Lord, with the voice in the wilderness.",
@@ -2779,23 +2985,25 @@
  },
  "john.12.40|isaiah.6.9": {
   "reason": "John says people “cannot see with their eyes, and understand with their hearts”; Isaiah says “be ever seeing, but never perceiving.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: Isaiah is named, but the quoted words are Isaiah 6:10. Shared idea only (see, understand)."
  },
  "mark.9.44|isaiah.66.24": {
-  "reason": "Mark 9:44 has no words in the Berean Standard Bible; Isaiah says “their worm will never die, their fire will never be quenched.”",
+  "reason": "Mark 9:44 is only in a BSB footnote, not in the main text; Isaiah says “their worm will never die, their fire will never be quenched.”",
   "fit": "weak",
-  "note": "The Mark verse is empty in the work file, so no wording can be compared.",
-  "notVerified": "Mark 9:44 has no words in the BSB, so the two verses cannot be compared."
+  "note": "Mark 9:44 is not in the main text of the BSB. A BSB footnote at Mark 9:43 gives its words, from the texts that the footnote calls BYZ and TR. Task 7b applied the fit rule to the main text only.",
+  "basis": "Mark 9:44 is not in the main text of the BSB. A BSB footnote at Mark 9:43 gives its words, from the texts that the footnote calls BYZ and TR. Task 7b applied the fit rule to the main text only."
  },
  "mark.15.28|isaiah.53.12": {
-  "reason": "Mark 15:28 has no words in the Berean Standard Bible; Isaiah says “He was numbered with the transgressors.”",
+  "reason": "Mark 15:28 is only in a BSB footnote, not in the main text; Isaiah says “He was numbered with the transgressors.”",
   "fit": "weak",
-  "note": "The Mark verse is empty in the work file, so no wording can be compared.",
-  "notVerified": "Mark 15:28 has no words in the BSB, so the two verses cannot be compared."
+  "note": "Mark 15:28 is not in the main text of the BSB. A BSB footnote at Mark 15:27 gives its words, from the texts that the footnote calls BYZ and TR. Task 7b applied the fit rule to the main text only.",
+  "basis": "Mark 15:28 is not in the main text of the BSB. A BSB footnote at Mark 15:27 gives its words, from the texts that the footnote calls BYZ and TR. Task 7b applied the fit rule to the main text only."
  },
  "acts.13.47|isaiah.42.6": {
   "reason": "Acts has “a light for the Gentiles”; Isaiah has the LORD say “a light to the nations.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.3.10|isaiah.59.7": {
   "reason": "Romans strings together sayings and includes “Their feet are swift to shed blood”; Isaiah says “they are swift to shed innocent blood.”",
@@ -2821,7 +3029,8 @@
  },
  "ephesians.5.14|isaiah.60.1": {
   "reason": "Ephesians says “Christ will shine on you”; Isaiah says “Arise, shine, for your light has come.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "revelation.1.17|isaiah.41.4": {
   "reason": "Revelation has “I am the First and the Last”; Isaiah has the LORD say “the first and the last.”",
@@ -2833,15 +3042,18 @@
  },
  "revelation.7.16|isaiah.49.10": {
   "reason": "Revelation repeats Isaiah’s promise that people will not hunger or thirst, and that no “scorching heat” or sun will beat down on them.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"hunger\", \"thirst\", \"nor will ... sun beat down on/upon them\", \"scorching heat\"."
  },
  "revelation.21.23|isaiah.60.20": {
   "reason": "Revelation says the city needs no “sun or moon” because God’s glory lights it; Isaiah says “the LORD will be your everlasting light.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "galatians.1.15|jeremiah.1.5": {
   "reason": "Galatians says God “set me apart from my mother’s womb”; Jeremiah says “before you were born I set you apart.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "1-corinthians.2.9|jeremiah.3.16": {
   "reason": "1 Corinthians says “no heart has imagined” what God prepared; Jeremiah says the ark of the covenant “will never come to mind.”",
@@ -2851,7 +3063,8 @@
  },
  "mark.8.18|jeremiah.5.21": {
   "reason": "Mark repeats Jeremiah’s words about people who have “eyes” and “ears” but “do not see” and “do not hear.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"have/having eyes ... do not see ... ears ... do not hear\"; the statement follows."
  },
  "matthew.11.29|jeremiah.6.16": {
   "reason": "Matthew repeats Jeremiah’s promise “you will find rest for your souls.”",
@@ -2879,19 +3092,23 @@
  },
  "2-thessalonians.1.8|jeremiah.10.25": {
   "reason": "2 Thessalonians speaks of vengeance on “those who do not know God”; Jeremiah asks for wrath on “nations that do not acknowledge You.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.9.21|jeremiah.18.6": {
   "reason": "Romans asks if the potter may make vessels from “the same lump of clay”; Jeremiah says Israel is “like clay in the potter’s hand.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.23.38|jeremiah.22.5": {
   "reason": "Matthew says “your house is left to you desolate”; Jeremiah says “this house will become a pile of rubble” if the words are not obeyed.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 1 word in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.13.35|jeremiah.22.5": {
   "reason": "Luke says “your house is left to you desolate”; Jeremiah says “this house will become a pile of rubble” if the words are not obeyed.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.2.18|jeremiah.31.15": {
   "reason": "Matthew repeats Jeremiah’s words “A voice is heard in Ramah” and “Rachel weeping for her children and refusing to be comforted.”",
@@ -2913,7 +3130,8 @@
  },
  "romans.11.27|jeremiah.31.33": {
   "reason": "Romans says “this is My covenant with them when I take away their sins”; Jeremiah says “this is the covenant I will make.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.8.10|jeremiah.31.33": {
   "reason": "Hebrews repeats Jeremiah’s promise “I will be their God, and they will be My people,” with laws put in minds and written on hearts.",
@@ -2925,11 +3143,13 @@
  },
  "john.6.45|jeremiah.31.34": {
   "reason": "John says “they will all be taught by God”; Jeremiah says no man will teach his neighbor, because “they will all know Me.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "romans.11.27|jeremiah.31.34": {
   "reason": "Romans says the covenant comes “when I take away their sins”; Jeremiah says “I will forgive their iniquities and will remember their sins no more.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "hebrews.8.11|jeremiah.31.34": {
   "reason": "Hebrews repeats Jeremiah: no one will “teach his neighbor or his brother,” because “they will all know Me.”",
@@ -2941,11 +3161,13 @@
  },
  "hebrews.10.17|jeremiah.31.34": {
   "reason": "Hebrews repeats Jeremiah’s promise to “remember” sins “no more,” and adds “lawless acts” to the sins.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"their sins ... I will remember ... no more\"; \"lawless acts\" added."
  },
  "2-corinthians.6.17|jeremiah.51.45": {
   "reason": "2 Corinthians says “come out from among them and be separate”; Jeremiah says “Come out of her, My people!”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-corinthians.6.16|jeremiah.30.22": {
   "reason": "2 Corinthians says “I will be their God”; Jeremiah says “you will be My people, and I will be your God.”",
@@ -2971,27 +3193,33 @@
  },
  "revelation.2.23|jeremiah.17.10": {
   "reason": "Revelation says “I am the One who searches minds and hearts”; Jeremiah says “I, the LORD, search the heart; I examine the mind.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.8.18|ezekiel.12.2": {
   "reason": "Mark asks, “Having eyes, do you not see”; Ezekiel says a rebellious house has “eyes to see but do not see.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"eyes ... do not see ... ears ... do not hear\"; the statement follows."
  },
  "2-corinthians.6.17|ezekiel.20.34": {
   "reason": "2 Corinthians says “come out from among them”; Ezekiel says “I will bring you out from the peoples.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-thessalonians.2.4|ezekiel.28.2": {
   "reason": "2 Thessalonians speaks of one “proclaiming himself to be God”; Ezekiel tells the ruler of Tyre, “Yet you are a man and not a god.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "mark.6.34|ezekiel.34.5": {
   "reason": "Mark says the crowd was “like sheep without a shepherd”; Ezekiel says “They were scattered for lack of a shepherd.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "titus.2.14|ezekiel.37.23": {
   "reason": "Titus says He gave Himself “to purify for Himself a people”; Ezekiel says “I will cleanse them” and “they will be My people.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "2-corinthians.6.16|ezekiel.37.27": {
   "reason": "2 Corinthians repeats Ezekiel’s promise “I will be their God, and they will be My people.”",
@@ -3039,7 +3267,8 @@
  },
  "2-thessalonians.2.4|daniel.11.36": {
   "reason": "2 Thessalonians says one will “exalt himself above every so-called god”; Daniel says the king will “exalt and magnify himself above every god.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"exalt ... himself above every ... god\" (\"himself above every\" in 2 verses)."
  },
  "matthew.24.15|daniel.12.11": {
   "reason": "Matthew repeats “the abomination of desolation” from Daniel; Daniel gives “1,290 days” from the time the daily sacrifice is abolished.",
@@ -3059,11 +3288,13 @@
  },
  "romans.9.25|hosea.2.23": {
   "reason": "Romans says God will call His own those “who are not My people”; Hosea says to those called “Not My People,” “You are My people.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 2: \"As He says in Hosea\"; content of this verse: \"Not My People\" called \"My people\"."
  },
  "1-peter.2.10|hosea.2.23": {
   "reason": "1 Peter says “you were not a people” but now “the people of God”; Hosea has “Not My People” and “You are My people.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "ephesians.6.17|hosea.6.5": {
   "reason": "Ephesians calls the sword of the Spirit “the word of God”; Hosea says “I have slain them by the words of My mouth.”",
@@ -3084,7 +3315,8 @@
  },
  "revelation.6.16|hosea.10.8": {
   "reason": "Revelation repeats Hosea’s cry “Fall on us,” said “to the mountains,” and adds “hide us” where Hosea has “Cover us!”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"they said / will say to the mountains\" (5 words by tense) + \"Fall on us\"."
  },
  "matthew.2.15|hosea.11.1": {
   "reason": "Matthew repeats Hosea’s words “out of Egypt I called My” son, which in Hosea speak of Israel as a child.",
@@ -3092,11 +3324,13 @@
  },
  "1-corinthians.15.55|hosea.13.14": {
   "reason": "1 Corinthians repeats Hosea’s taunt “Where, O Death,” and asks about “your sting”; Hosea also asks about “your plagues.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Where, O Death\" (2 verses) + \"is your sting\"."
  },
  "romans.9.25|hosea.1.10": {
   "reason": "Romans says those “who are not My people” become His own; Hosea says they will be called “sons of the living God.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"are not My people\" (4 words; 4 verses)."
  },
  "acts.2.17|joel.2.28": {
   "reason": "Acts repeats Joel’s words “I will pour out My Spirit on all people,” with sons and daughters prophesying.",
@@ -3128,7 +3362,8 @@
  },
  "mark.4.29|joel.3.13": {
   "reason": "Mark says the man “swings the sickle, because the harvest has come”; Joel says “Swing the sickle, for the harvest is ripe.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"swing(s) the sickle\" (1 verse), \"the harvest\", \"is ripe\"."
  },
  "romans.10.13|joel.2.28": {
   "reason": "Romans repeats Joel’s words “who calls on the name of the” Lord “will be saved,” from a longer passage about the Spirit poured out.",
@@ -3152,7 +3387,8 @@
  },
  "acts.15.17|amos.9.12": {
   "reason": "Acts has “the remnant of men” and “called by My name”; Amos has “the remnant of Edom” and nations “that bear My name.”",
-  "fit": "quote"
+  "fit": "close",
+  "basis": "Accuracy review quarter 4: the same sentence form with different nouns and verbs. Shared: \"the remnant of\", in 56 BSB verses."
  },
  "acts.15.18|amos.9.12": {
   "reason": "Acts says these things “have been known for ages”; Amos says the LORD is the one “who will do this.”",
@@ -3170,7 +3406,8 @@
  },
  "john.7.42|micah.5.2": {
   "reason": "John says the Christ will “come from” Bethlehem; Micah says out of “Bethlehem Ephrathah” will “come forth” One to be ruler over Israel.",
-  "fit": "close"
+  "fit": "close",
+  "basis": "\"the Scripture\" names no book. Test 1: \"will come (forth)\" and \"Bethlehem\" only; same idea in other words."
  },
  "matthew.10.35|micah.7.6": {
   "reason": "Matthew repeats Micah’s words “a daughter-in-law against her mother-in-law,” and both passages set a daughter against her mother.",
@@ -3182,11 +3419,13 @@
  },
  "luke.12.53|micah.7.6": {
   "reason": "Luke says family members “will be divided,” including mother against daughter; Micah says “a daughter rises against her mother.”",
-  "fit": "close"
+  "fit": "quote",
+  "basis": "Test 1: \"daughter-in-law against (her) mother-in-law\" (5 words), with daughter against mother."
  },
  "romans.10.15|nahum.1.15": {
   "reason": "Romans says “the feet of those who bring good news”; Nahum says “the feet of one who brings good news, who proclaims peace.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"the feet of those/one who bring(s) good news\" (7 words by number and pronoun)."
  },
  "acts.13.41|habakkuk.1.5": {
   "reason": "Acts repeats Habakkuk’s words “a work in your days that you would never believe.”",
@@ -3217,20 +3456,24 @@
  "galatians.3.11|habakkuk.2.3": {
   "reason": "Galatians says “The righteous will live by faith”; Habakkuk says the vision “will surely come and will not delay.”",
   "fit": "weak",
-  "note": "No wording is shared. The words that Galatians takes are in Habakkuk 2:4, not in this verse.",
-  "notVerified": "The matching words are in Habakkuk 2:4, which has its own link."
+  "note": "Galatians 3:11 quotes \"The righteous will live by faith\"; Habakkuk 2:3 is about the vision that will not delay.",
+  "notVerified": "The matching words are in Habakkuk 2:4, which has its own link.",
+  "basis": "Shared only \"it\"; the quoted words are not in this verse."
  },
  "hebrews.12.26|haggai.2.6": {
   "reason": "Hebrews repeats Haggai’s words “Once more” and “I will shake,” saying the earth and heaven; Haggai says “the heavens and the earth.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"Once more ... I will shake\" (\"I will shake\" in 4 verses), heaven and earth."
  },
  "jude.1.9|zechariah.3.2": {
   "reason": "Jude has Michael say “The Lord rebuke you!”; Zechariah has the LORD say to Satan, “The LORD rebukes you, Satan!”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"The Lord rebuke(s) you\" (4 words by word form; 1 other verse)."
  },
  "ephesians.4.25|zechariah.8.16": {
   "reason": "Ephesians says to “speak truthfully to his neighbor”; Zechariah says “Speak truth to one another.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.21.5|zechariah.9.9": {
   "reason": "Matthew repeats Zechariah’s words “your King comes to you” and “riding on a donkey, on a colt, the foal of a donkey.”",
@@ -3254,7 +3497,8 @@
  },
  "matthew.27.10|zechariah.11.13": {
   "reason": "Matthew says “they gave them for the potter’s field”; Zechariah says “I took the thirty pieces of silver” and threw them “to the potter.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Test 2 fails: Jeremiah is named, not Zechariah. Test 1 in 27:10: \"potter\", \"the Lord ... me\" only."
  },
  "john.19.37|zechariah.12.10": {
   "reason": "John repeats Zechariah’s words “will look on” and “the One they have pierced.”",
@@ -3262,7 +3506,8 @@
  },
  "revelation.1.7|zechariah.12.10": {
   "reason": "Revelation says “those who pierced Him” and tribes “will mourn”; Zechariah says “the One they have pierced” and “will mourn for Him.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 2 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "matthew.26.31|zechariah.13.7": {
   "reason": "Matthew says “I will strike the Shepherd”; Zechariah says “Strike the Shepherd, and the sheep will be scattered.”",
@@ -3278,11 +3523,13 @@
  },
  "romans.9.13|malachi.1.2": {
   "reason": "Romans says “Jacob I loved”; Malachi says “Jacob I have loved,” in a line that also names Esau.",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: distinctive \"Jacob I (have) loved\" (3 words by tense)."
  },
  "romans.9.13|malachi.1.3": {
   "reason": "Romans says “Esau I hated”; Malachi says “Esau I have hated” and “I have made his mountains a wasteland.”",
-  "fit": "quote"
+  "fit": "quote",
+  "basis": "Test 1: \"but Esau I (have) hated\" (4 words by tense)."
  },
  "matthew.11.10|malachi.3.1": {
   "reason": "Matthew repeats Malachi’s words “Behold, I will send My messenger” and “who will prepare,” saying “before You” where Malachi says “before Me.”",
@@ -3294,7 +3541,8 @@
  },
  "luke.1.76|malachi.3.1": {
   "reason": "Luke says the child will go before the Lord to “prepare the way for Him”; Malachi has “who will prepare the way before Me.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "The two passages share at most 3 words in a row in the Berean Standard Bible, and the later passage does not name the earlier passage."
  },
  "luke.7.27|malachi.3.1": {
   "reason": "Luke repeats Malachi’s words “Behold, I will send My messenger” and “who will prepare,” changing “before Me” to “before You.”",
@@ -3308,7 +3556,8 @@
  },
  "luke.1.17|malachi.4.5": {
   "reason": "Luke says he will go before the Lord “in the spirit and power of Elijah”; Malachi says “I will send you Elijah the prophet.”",
-  "fit": "close"
+  "fit": "close",
+  "basis": "Elijah is named as a person, not as a source. Test 1: \"before the\", \"Lord\", \"Elijah\" only."
  },
  "luke.1.17|malachi.4.6": {
   "reason": "Luke repeats Malachi’s words “turn the hearts of the fathers to their children.”",

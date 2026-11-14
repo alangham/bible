@@ -26,6 +26,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      # package-lock.json was written by npm 11.6.1. The npm 10 of Node 22
+      # rejects it ("Missing: @emnapi/core@2.0.0-beta.2 from lock file").
+      - run: npm install -g npm@11.6.1
       - run: npm ci
       - run: npm test
       - run: npm run build

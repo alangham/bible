@@ -432,6 +432,34 @@ Stop and report. Include screenshots of the page, of a selected book, and of the
 
 ---
 
+## Task 8b. Timeline: two corrections
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: apply Arthur's decisions of 2026-11-14 on the open points of Task 8. They are in section 4.6 of `docs/DESIGN.md`. Read that section again.
+
+Arthur accepted these as built, with no change: the rules that turn the words of a fact into years, the flat spines in stacks, the page height, the three steps of arc thickness, and the books in "Date not known". Do not add a period for the time of Moses, of Joshua, or of Solomon.
+
+Steps:
+
+1. Change the line between the bands. Count from the end of the last range in band 1 to the start of the first range in band 2. Name no book. The words are: "About N years or more between the last Old Testament book and the first New Testament book".
+2. Add the rule: where the words of a Written fact give a year and a century, the year leads. Apply it to Obadiah. Check each of the other books for the same case.
+3. Record the two changes in the date rules of `docs/CONTENT-SOURCES.md`. Record that Arthur accepted the other rules on 2026-11-14.
+4. Update the tests.
+5. Run the `accuracy-reviewer` agent on `dates.json` after your last correction.
+6. Take the wide screenshot again.
+
+Done when:
+
+- The tests pass.
+- The report gives the new line between the bands, and each book whose date changed.
+
+Stop and report. This task is small. Arthur can tell you to continue with Task 9 in the same session.
+
+---
+
 ## Task 9. Phone layout and performance
 
 Status: TODO

@@ -171,12 +171,15 @@ Arthur decided the two bands on 2026-11-14.
   - Band 1: the 39 books of the Old Testament.
   - Band 2: the 27 books of the New Testament.
   - Reason: by the traditional dates, the Old Testament books cover about 1,000 years and the New Testament books cover about 50 years. On one scale, the New Testament is one thin line.
-- Between the bands, a short line says how many years are between the last book of band 1 and the first book of band 2. Compute the number from the dates. Do not write it by hand.
+- Between the bands, a short line says how many years are between the two bands. Count from the end of the last range in band 1 to the start of the first range in band 2. Name no book in the line. The words are: "About N years or more between the last Old Testament book and the first New Testament book". Compute N from the dates. Do not write it by hand.
 - Each book is a spine in its category colors, as on the table page. It stands at its date of writing.
 - The date of a book comes from the Written fact of its cover in `public/data/intros.json`. The timeline uses the traditional view only. It needs no new research.
   - A fact that gives one year: the spine stands at that year.
   - A fact that gives a range or a century: the spine stands at the middle, and a thin bar under it shows the range.
   - A fact that gives no date: the book goes in a group named "Date not known" at the end of its band.
+  - Rules for the words of a fact, as built and accepted on 2026-11-14: "early" and "late" are the halves of a century or a decade. "Mid" is the middle part. A decade is a range of 10 years. Two parts of the words make one range. "Soon after" a dated event gives the year of that event.
+  - Where the words give a year and a century, the year leads. Example: Obadiah stands at 586 BC, as Lamentations does.
+  - The time of a person is not a period, unless `public/data/periods.json` has an entry for it. Arthur decided on 2026-11-14 that the table gets no entry for the time of Moses, of Joshua, or of Solomon. So Genesis to Joshua, Psalms, and Ecclesiastes stay in "Date not known". Reason: the date of Moses is disputed, and the site does not choose years for it.
 - Books with the same date stack, so that no spine covers a different spine.
 - A book whose Written fact has a "Scholars differ" detail shows a small sign. The sign has a text label for screen readers. The detail itself stays on the cover.
 - Arcs join two books that have one quotation link or more between them. Echo links give no arc. An arc is thicker when the two books have more quotation links: three steps of thickness.

@@ -122,3 +122,14 @@ Page: travel. Seen in `docs/screenshots/task-7/travel-mid.png` on 2026-11-14.
 Problem: travel shows a row of 66 colored bars on empty linen. It does show that the reader crossed the Bible, but it does not look like the table of books, and most of the page is empty.
 
 Correction: make the move look like the books of the table page: real spines with names, light, and shadow. The timeline page from Task 8 is a second option for the map of the move.
+
+## 12. The timeline page is very tall
+
+Status: PROPOSED
+
+Page: timeline. Seen in `docs/screenshots/task-8/timeline-wide.png` on 2026-11-14.
+
+Problem: each spine is 44 px thick, and the stacks have up to 14 rows. The page is about 2,150 px tall at 1440 px wide. The reader cannot see the two bands and the arcs in one view. The arcs also cross in one dense area between the bands.
+
+Correction: options to examine. Thinner spines in the wide layout, with the same exception to the 44 px size that the table page has. Or stacks that open when the reader selects them. The two bands and the arcs must fit in one view at 1440 by 900 px.
+

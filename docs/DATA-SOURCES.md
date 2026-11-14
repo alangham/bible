@@ -110,6 +110,17 @@ These are findings. Arthur must decide on them. They do not change the design.
 - Limit: I did not download the zip file. I did not check the file format or the meaning of the votes. Task 7 does this.
 - Limit: the data does not separate quotations from echoes. All links from this source are echo links unless a quotation source confirms them.
 
+### Use in Task 7: echo links and read-with lists
+
+- Download: `https://a.openbible.info/data/cross-references.zip`, on 2026-11-14. 1,984,024 bytes. SHA-256 `d31c71a7b124227769a0bc8a24f048f53b327294e47033e64b5d2ae4aaf12b87`. The zip file is not committed.
+- The zip file holds one file, `cross_references.txt`, with the header line "From Verse, To Verse, Votes, #www.openbible.info CC-BY 2026-11-09". It is committed as `sources/openbible/cross_references.txt`: 8,303,274 bytes, SHA-256 `3916a74371a83fb1d461574a970e631957c84879f695c7e67951d078b6ecc315`, 344,799 rows.
+- Strength: each row has a vote count, from −86 to 1,318.
+- The site counts a row and its reverse as one link, with the higher votes. It leaves out 64 rows: 18 that cross two books, 1 with a verse that the Bible text does not have (3 John 1:15), and 45 that link a verse to a passage that starts at the same verse. 301,528 links remain.
+- Marks: the limit that Arthur approved on 2026-11-14 (docs/DESIGN.md section 4.5) keeps 2,076 echo links. Links that another source gives for the same pair are not counted twice.
+- Read-with lists: the sum of the votes between two chapters, by the rule in docs/DESIGN.md section 4.5.
+- Changes to the data, for the CC BY 4.0 credit: the site uses a part of the links, and adds their votes between chapters. The "Sources" page says so.
+- Script: `scripts/build-links.mjs`.
+
 ---
 
 ## 4. Bible Quotation Database (Luke Plant)
@@ -125,6 +136,7 @@ These are findings. Arthur must decide on them. They do not change the design.
 
 - Result: PASS. The licence permits all uses.
 - Limit: the licence is the claim of the database author. I did not read the terms of the two upstream web pages. The database author states that the list of references is not a creative work.
+- Use in Task 7: `quotations_range.csv` from `https://raw.githubusercontent.com/spookylukey/bible-quotation-database/refs/heads/main/quotations_range.csv`, downloaded on 2026-11-13 in Task 1. 48,175 bytes. SHA-256 `5a96d76a9ec85961acd2d6ea251d45eb4884d9e6da87441a551060012f6dddc0`. Committed as `sources/quotations/quotations_range.csv`. The 1,046 rows give 782 quotation links, because the two upstream lists give some pairs twice.
 - Hebrews 9: the file has three rows. Hebrews 9:20 quotes Exodus 24:8. Hebrews 9:19 quotes Exodus 24:8. Hebrews 9:28 quotes Isaiah 53:12. The file has no row for Leviticus 16 or Numbers 19. DESIGN.md section 4.5 names these two passages for Hebrews 9. With this source, those two passages are echo links, not quotation links.
 
 ---

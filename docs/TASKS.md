@@ -325,7 +325,7 @@ Stop and report.
 
 ## Task 7. Links, travel, and trail
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

@@ -33,7 +33,9 @@ export function SourcesPage() {
         <h2 id="sources-links">Links between passages</h2>
         <p className="credit-openbible">
           Cross-references: <a href="https://www.openbible.info/labs/cross-references/">OpenBible.info</a>, under the{' '}
-          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence (CC BY 4.0)</a>.
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence (CC BY 4.0)</a>. The
+          site shows a part of these links, the ones with the most votes, and adds their votes between chapters for the read-with list of each
+          chapter.
         </p>
         <p>
           Cross-reference lines under the section headings: the USFM files of the Berean Standard Bible, in the public domain.

@@ -19,7 +19,11 @@ import type { ScreenLayout } from '../screenLayout.ts'
 import { SceneBoundary } from '../table/SceneBoundary.tsx'
 import { hasWebGL } from '../table/webgl.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
+import { loadBookLinks, marksOf, type BookLinks, type LinkEnd } from '../data/links.ts'
+import { setEchoLinks, startTravel, useEchoLinks } from '../travel/travel.ts'
 import { ChapterBody } from './ChapterBody.tsx'
+import { LinkPopup } from './LinkPopup.tsx'
+import { ReadWith } from './ReadWith.tsx'
 import { plainClick } from './links.ts'
 import { autoTarget, clampTarget, cornerPoint, turnProgress, type Corner } from './turn/curl.ts'
 import { pageImage } from './turn/pageImage.ts'
@@ -28,7 +32,10 @@ import { PageTurn, TURN_MARGIN, type TurnDrive } from './turn/PageTurn.tsx'
 interface SpreadPageProps {
   book: Book
   chapter: number
+  /** The verse that travel opened the spread at. */
+  verse?: number
   layout: ScreenLayout
+  books: Book[]
 }
 
 interface Turn {
@@ -46,8 +53,12 @@ const TURN_S = 0.9
 /** Duration of each half of the cross-fade, in ms. */
 const FADE_MS = 180
 
-export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
+export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPageProps) {
   const [text, setText] = useState<BookText | null>(null)
+  const [links, setLinks] = useState<BookLinks | null>(null)
+  // The pop-up of a mark. It belongs to its chapter: after a turn it does not show.
+  const [popupState, setPopup] = useState<{ ends: LinkEnd[]; title: string; anchor: HTMLElement; chapter: number } | null>(null)
+  const echoOn = useEchoLinks()
   const [error, setError] = useState<string | null>(null)
   // The chapter on each page. They differ only while a page turns.
   const [view, setView] = useState({ left: chapter, right: chapter })
@@ -103,6 +114,11 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
       (t) => live && setText(t),
       (e: unknown) => live && setError(String(e)),
     )
+    // Without the links, the text shows with no marks.
+    loadBookLinks(book.id).then(
+      (l) => live && setLinks(l),
+      () => undefined,
+    )
     return () => {
       live = false
     }
@@ -126,6 +142,8 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
   const rightValues = useMemo(() => sceneValues(book, view.right), [book, view.right])
   const rightChapter = text?.chapters[view.right - 1]
   const ghostChapter = ghost ? text?.chapters[ghost - 1] : undefined
+  const marks = useMemo(() => (links ? marksOf(links, book.id, view.right) : undefined), [links, book.id, view.right])
+  const ghostMarks = useMemo(() => (links && ghost ? marksOf(links, book.id, ghost) : undefined), [links, book.id, ghost])
 
   // The text starts at the top for each chapter. The scene follows the scroll.
   const applyParallax = useCallback(() => {
@@ -153,6 +171,31 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
     return () => window.removeEventListener('resize', applyParallax)
   }, [applyParallax])
 
+  // Travel opens the spread at a verse: the verse comes into view and shows for a moment.
+  useEffect(() => {
+    const el = textRef.current
+    if (!verse || !el || !text || view.right !== chapter) return
+    const target = el.querySelector<HTMLElement>(`.chapter-body .vn[data-verse="${verse}"]`)
+    if (!target) return
+    el.scrollTop = Math.max(0, target.offsetTop - el.clientHeight / 3)
+    applyParallax()
+    target.classList.add('vn-target')
+    const t = window.setTimeout(() => target.classList.remove('vn-target'), 2400)
+    return () => window.clearTimeout(t)
+  }, [verse, text, view.right, chapter, applyParallax])
+
+  const travelTo = useCallback(
+    (from: { v?: number }, to: { book: string; c: number; v?: number }) => {
+      setPopup(null)
+      startTravel({ book: book.id, c: view.right, ...(from.v ? { v: from.v } : {}) }, to)
+    },
+    [book.id, view.right],
+  )
+  const onGo = useCallback((end: LinkEnd) => travelTo({ v: end.here.v }, { book: end.there.book, c: end.there.c, v: end.there.v }), [travelTo])
+  const onMark = useCallback((ends: LinkEnd[], title: string, anchor: HTMLElement) => setPopup({ ends, title, anchor, chapter: view.right }), [view.right])
+  const popup = popupState && popupState.chapter === view.right ? popupState : null
+  const closePopup = useCallback(() => setPopup(null), [])
+
   const curlAllowed = webgl && !reducedMotion && layout === 'wide'
 
   /**
@@ -174,6 +217,7 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
       busy.current = false
       const show = outside ? chapterRef.current : (to ?? from)
       setView({ left: show, right: show })
+      setPopup(null)
       if (!outside && to !== null) window.location.hash = chapterHref(book.id, to)
     },
     [book.id],
@@ -287,6 +331,7 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
     if (!t) return
     shown.current = true
     setView(t.dir === 1 ? { left: t.from, right: t.to } : { left: t.to, right: t.from })
+    setPopup(null)
   }, [])
 
   // Arrow keys turn the page.
@@ -380,6 +425,9 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
       <nav className="spread-bar" aria-label="Pages">
         <a href={bookHref(book.id)}>Close the book</a>
         <span className="spread-bar-turns">
+          <button type="button" className="echo-switch" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
+            Echo links <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>
+          </button>
           {/* At the first and the last chapter the link stays, without a target, so that focus is not lost. */}
           <a
             href={hasPrev ? chapterHref(book.id, view.right - 1) : undefined}
@@ -435,10 +483,11 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
                 {text && <p className="spread-translation">{text.translation}</p>}
               </header>
               {error && <p role="alert">The text did not load. {error}</p>}
-              {rightChapter && <ChapterBody chapter={rightChapter} />}
+              {links?.readWith[view.right] && <ReadWith books={books} list={links.readWith[view.right]} onTravel={(r) => travelTo({}, { book: r.book, c: r.c })} />}
+              {rightChapter && <ChapterBody chapter={rightChapter} marks={marks} echoOn={echoOn} onMark={onMark} bookName={book.name} />}
             </article>
             {ghostChapter && ghost && (
-              <article className="spread-text spread-ghost" ref={ghostRef} style={textStyle(sceneValues(book, ghost))} aria-hidden="true">
+              <article className="spread-text spread-ghost" ref={ghostRef} style={textStyle(sceneValues(book, ghost))} aria-hidden="true" inert>
                 <header className="spread-header">
                   <p className="spread-title-ghost">
                     <span className="spread-book-name">{book.name}</span> <span className="spread-chapter">Chapter {ghost}</span>
@@ -448,7 +497,8 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
                   </p>
                   {text && <p className="spread-translation">{text.translation}</p>}
                 </header>
-                <ChapterBody chapter={ghostChapter} />
+                {ghost && links?.readWith[ghost] && <ReadWith books={books} list={links.readWith[ghost]} onTravel={() => undefined} titleId="read-with-title-ghost" />}
+                <ChapterBody chapter={ghostChapter} marks={ghostMarks} echoOn={echoOn} bookName={book.name} />
               </article>
             )}
           </div>
@@ -479,6 +529,7 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
           )}
         </div>
       </div>
+      {popup && <LinkPopup books={books} title={popup.title} ends={popup.ends} anchor={popup.anchor} onGo={onGo} onClose={closePopup} />}
     </main>
   )
 }

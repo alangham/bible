@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { GROUPS, groupOf, spineThickness, type Book } from './books.ts'
+import { contrastRatio } from './contrast.ts'
 
 const books = JSON.parse(
   readFileSync(new URL('../../public/data/books.json', import.meta.url), 'utf8'),
@@ -45,5 +46,21 @@ describe('spineThickness', () => {
     expect(spineThickness(1)).toBe(40)
     expect(spineThickness(20)).toBeCloseTo(26 + 3.2 * Math.sqrt(20))
     expect(spineThickness(150)).toBeCloseTo(26 + 3.2 * Math.sqrt(150))
+  })
+})
+
+describe('the group colors of the redesign (docs/DESIGN.md section 7.3)', () => {
+  it('give ten groups ten colors, each with a contrast of 4.5 to 1 or more against white', () => {
+    expect(GROUPS).toHaveLength(10)
+    expect(new Set(GROUPS.map((g) => g.color)).size).toBe(10)
+    for (const g of GROUPS) {
+      expect(g.color, g.name).toMatch(/^#[0-9A-F]{6}$/)
+      expect(contrastRatio(g.color, '#FFFFFF'), g.name).toBeGreaterThanOrEqual(4.5)
+    }
+  })
+
+  it('fails a color below the limit', () => {
+    // The Gospels cloth of the first build is near white. It must fail the check.
+    expect(contrastRatio('#FBF6EA', '#FFFFFF')).toBeLessThan(4.5)
   })
 })

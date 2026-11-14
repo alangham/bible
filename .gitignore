@@ -7,3 +7,6 @@ test-results
 playwright-report
 blob-report
 playwright/.cache
+
+# Prototype data, made by docs/prototype/make-data.mjs
+docs/prototype/data

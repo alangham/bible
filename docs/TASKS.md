@@ -557,7 +557,7 @@ Three things help you in each of these tasks:
 
 ## Task 11. Redesign: setup, colors, and fonts
 
-Status: TODO
+Status: DONE
 
 Goal: the project is ready for the redesign. No page changes in this task.
 

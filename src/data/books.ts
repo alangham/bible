@@ -33,20 +33,25 @@ export interface Group {
   cloth: string
   /** Text color on the cloth. */
   text: string
+  /**
+   * Group color of the redesign, docs/DESIGN.md section 7.3. The book names and the band
+   * of the group use it, on white. The label in a band is white.
+   */
+  color: string
 }
 
 /** The ten groups in Bible order. */
 export const GROUPS: readonly Group[] = [
-  { name: 'Law', cloth: '#A3214F', text: '#F7ECD3' },
-  { name: 'History', cloth: '#7E1F26', text: '#F7ECD3' },
-  { name: 'Poetry & Wisdom', cloth: '#A44A22', text: '#F7ECD3' },
-  { name: 'Major Prophets', cloth: '#C89A2B', text: '#2A1E0A' },
-  { name: 'Minor Prophets', cloth: '#566829', text: '#F7ECD3' },
-  { name: 'Gospels', cloth: '#FBF6EA', text: '#2A1E0A' },
-  { name: 'History (Acts)', cloth: '#5C6063', text: '#F7ECD3' },
-  { name: 'Letters of Paul', cloth: '#1F3350', text: '#F7ECD3' },
-  { name: 'General Letters', cloth: '#4B2E63', text: '#F7ECD3' },
-  { name: 'Prophecy', cloth: '#8A5579', text: '#F7ECD3' },
+  { name: 'Law', cloth: '#A3214F', text: '#F7ECD3', color: '#C2255C' },
+  { name: 'History', cloth: '#7E1F26', text: '#F7ECD3', color: '#B01E35' },
+  { name: 'Poetry & Wisdom', cloth: '#A44A22', text: '#F7ECD3', color: '#CD4C26' },
+  { name: 'Major Prophets', cloth: '#C89A2B', text: '#2A1E0A', color: '#9D6E00' },
+  { name: 'Minor Prophets', cloth: '#566829', text: '#F7ECD3', color: '#667F19' },
+  { name: 'Gospels', cloth: '#FBF6EA', text: '#2A1E0A', color: '#26828B' },
+  { name: 'History (Acts)', cloth: '#5C6063', text: '#F7ECD3', color: '#6E6A66' },
+  { name: 'Letters of Paul', cloth: '#1F3350', text: '#F7ECD3', color: '#1B2A41' },
+  { name: 'General Letters', cloth: '#4B2E63', text: '#F7ECD3', color: '#4B2E57' },
+  { name: 'Prophecy', cloth: '#8A5579', text: '#F7ECD3', color: '#986694' },
 ]
 
 export function groupOf(book: Book): Group {

@@ -72,3 +72,33 @@ Problem: item 4 says the smallest spine link is 23 px. The two reviews measured 
 The camera fits the five stacks to the width and to the height of the window. The code in `FitAndProject` in `src/table/TableScene.tsx` uses both. So the spine link size changes with the window height, not only with the width. A link size without the window size cannot be compared.
 
 Correction: for item 4 and item 5, state each measurement with the window width and height. Measure at least at 1440 × 1000, 1440 × 800, and 768 × 1024. Add a Playwright check that records the smallest spine link height at each of these sizes.
+
+## 7. The Gospels scene has no water color
+
+Status: PROPOSED
+
+Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png` on 2026-11-14.
+
+Problem: the Gospels cloth is cream, so the lake scene is beige and brown. The lake looks like sand. The accuracy reviewer reports that the same scene is a neutral gray at night.
+
+Correction: permit an exception to "colors near the cloth color" for the Gospels scene. Give the water a blue tone at each time of day. Keep the cream cloth color for the sky and the shore.
+
+## 8. The sun is behind the fold and the corner of the text panel
+
+Status: PROPOSED
+
+Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png` and `acts-14.png` on 2026-11-14.
+
+Problem: in most day scenes the sun is at the fold of the book, and the text panel covers part of it.
+
+Correction: keep the sun and the moon on the left page, away from the fold and the text panel. Genesis 50 already has the moon in a good position.
+
+## 9. A scene shape shows in front of the chapter text
+
+Status: PROPOSED
+
+Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png`, Psalm 75, on 2026-11-14.
+
+Problem: a small tree of the scene is at the right edge of the text panel, next to the word "Selah".
+
+Correction: keep the large shapes of the front layers out of the text panel area, or make sure that the panel covers them.

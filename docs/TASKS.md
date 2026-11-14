@@ -399,7 +399,7 @@ Stop and report.
 
 ## Task 8. Timeline
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

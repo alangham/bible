@@ -14,6 +14,9 @@
 // The fit and the reason line of each link of the Bible Quotation Database are in
 // content/quotation-reasons.json. Only quotation links take their reason line into public/.
 //
+// It also builds public/data/quotation-pairs.json: the number of quotation links for each pair of books, for
+// the arcs of the timeline (docs/DESIGN.md section 4.6, docs/TASKS.md Task 8 step 6).
+//
 // Usage: node scripts/build-links.mjs [--report]
 
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
@@ -273,6 +276,23 @@ books.forEach((bk, b) => {
   }
   writeFileSync(join(OUT, `${bk.id}.json`), JSON.stringify({ id: bk.id, links: mine, readWith: rw }))
 })
+
+// ---- The quotation links between two books, for the arcs of the timeline ----
+// from: the book that quotes. to: the book that is quoted. n: the number of quotation links.
+const pairCounts = new Map()
+for (const l of links) {
+  if (l.type !== 'quotation' || l.a.b === l.b.b) continue
+  const k = `${l.a.b}|${l.b.b}`
+  pairCounts.set(k, (pairCounts.get(k) ?? 0) + 1)
+}
+const pairs = [...pairCounts]
+  .map(([k, n]) => {
+    const [a, b] = k.split('|').map(Number)
+    return { a, b, n }
+  })
+  .sort((x, y) => x.a - y.a || x.b - y.b)
+  .map(({ a, b, n }) => ({ from: books[a].id, to: books[b].id, n }))
+writeFileSync(join(ROOT, 'public', 'data', 'quotation-pairs.json'), '[\n' + pairs.map((p) => ' ' + JSON.stringify(p)).join(',\n') + '\n]\n')
 
 const count = (f) => links.filter(f).length
 const hiddenCount = (s) => hidden.filter((h) => h.source === s).length

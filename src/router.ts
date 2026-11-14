@@ -7,9 +7,11 @@ export type Route =
   | { page: 'book'; id: string }
   | { page: 'spread'; id: string; chapter: number; verse?: number }
   | { page: 'sources' }
+  | { page: 'timeline' }
 
 export function parseRoute(hash: string): Route {
   if (/^#\/sources\/?$/.test(hash)) return { page: 'sources' }
+  if (/^#\/timeline\/?$/.test(hash)) return { page: 'timeline' }
   const book = /^#\/book\/([a-z0-9-]+)\/?$/.exec(hash)
   if (book) return { page: 'book', id: book[1] }
   const spread = /^#\/book\/([a-z0-9-]+)\/([1-9][0-9]*)(?:\/([1-9][0-9]*))?\/?$/.exec(hash)
@@ -38,6 +40,11 @@ export function useRoute(): Route {
 /** The Sources page. docs/TASKS.md Task 6. */
 export function sourcesHref(): string {
   return '#/sources'
+}
+
+/** The timeline. docs/DESIGN.md section 4.6. */
+export function timelineHref(): string {
+  return '#/timeline'
 }
 
 /** The cover of a book. */

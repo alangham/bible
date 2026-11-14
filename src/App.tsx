@@ -12,6 +12,7 @@ import { loadIntros, type Intro } from './data/intros.ts'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
 import { TablePage } from './table/TablePage.tsx'
+import { TimelinePage } from './timeline/TimelinePage.tsx'
 
 function App() {
   const route = useRoute()
@@ -50,6 +51,8 @@ function App() {
     page = book ? <CoverPage key={book.id} book={book} intro={intro} /> : <BookNotFound />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
+  } else if (route.page === 'timeline') {
+    page = <TimelinePage books={books} intros={intros} layout={layout} />
   } else if (route.page === 'spread') {
     const book = books.find((b) => b.id === route.id)
     // The key keeps one spread page while the chapter changes, so that a page can turn.

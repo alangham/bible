@@ -2535,11 +2535,113 @@ Number of links: 259.
 258. Luke 3:10 and Malachi 3:7. Fit: weak. The verses share only the form of a question from the people.
 259. Luke 1:17 and Malachi 4:5. Fit: close. Elijah is named as a person, not as a source. Test 1: "before the", "Lord", "Elijah" only.
 
+## Dates of the timeline
+
+Task 8. The timeline gives the date of each book from the Written fact of its cover in `public/data/intros.json`. It needs no new source: the source of each Written fact is in "Book introductions" above. `public/data/dates.json` holds the dates. The timeline uses the traditional view only. It does not use a "Scholars differ" detail, or a sentence of the fact that starts "An older view".
+
+How the words give the years:
+
+1. A year in the words is the year. "about 970 BC" is 970 BC.
+2. Two years in the words are a range. "539 to 332 BC" is 539 BC to 332 BC.
+3. A century is a range of 100 years. "the 6th century BC" is 600 BC to 501 BC. "the 1st century AD" is AD 1 to AD 100.
+4. "early" is the first half of a century or a decade, and "late" or "the second half of" is the second half. "the late 8th century BC" is 750 BC to 701 BC. "mid" with a decade is the years 3 to 6 of the decade: "the mid 60s AD" is AD 63 to AD 66, with its middle at AD 64.5, the middle of the decade. No Written fact uses "mid" with a century.
+5. A decade is a range of 10 years. "the 60s AD" is AD 60 to AD 69.
+6. Two parts in the words give one range, from the first year to the last year. "the late 8th and early 7th centuries BC" is 750 BC to 651 BC.
+7. A period of `public/data/periods.json` gives its years.
+8. The time of a person gives no years, unless the table of periods has an entry for it. Arthur's decision 2 under "Periods" says this.
+9. Words that give only the latest time, or only the earliest time, give no date: "before AD 70", "no later than the 90s AD", "by the time of King David", "some time after David became king", "no earlier than about AD 62", "from about 520 BC". The book goes in the group "Date not known" and on the "Not verified" list. Task 8 step 2 says this.
+10. Words that place the writing soon after a dated event give the year of the event: "soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, and "soon after the end of David's reign, about 970 BC" is 970 BC.
+11. The spine stands at the year, or at the middle of the range. The years between the two bands are counted between the spine of the last book of the Old Testament band and the spine of the first book of the New Testament band, with no year 0, and rounded to 10 years.
+
+| Book | Kind | First year | Last year | Words of the Written fact |
+|---|---|---|---|---|
+| Genesis | unknown |  |  | "in the time of Moses" |
+| Exodus | unknown |  |  | "in the lifetime of Moses" |
+| Leviticus | unknown |  |  | "in the lifetime of Moses" |
+| Numbers | unknown |  |  | "in the lifetime of Moses" |
+| Deuteronomy | unknown |  |  | "near the end of the 40 years in the wilderness, shortly before Moses died" |
+| Joshua | unknown |  |  | "in the lifetime of Joshua" |
+| Judges | unknown |  |  | "by the time of King David, 1010 to 970 BC" |
+| Ruth | unknown |  |  | "Some time after David became king, about 1010 BC" |
+| 1 Samuel | year | 970 BC | 970 BC | "about 970 BC" |
+| 2 Samuel | year | 970 BC | 970 BC | "about 970 BC" |
+| 1 Kings | range | 600 BC | 501 BC | "in the 6th century BC" |
+| 2 Kings | range | 600 BC | 501 BC | "the 6th century BC" |
+| 1 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |
+| 2 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |
+| Ezra | unknown |  |  | "The date of writing is not known" |
+| Nehemiah | range | 500 BC | 401 BC | "the 5th century BC" |
+| Esther | range | 500 BC | 401 BC | "probably the 5th century BC" |
+| Job | unknown |  |  | "The date is not certain" |
+| Psalms | unknown |  |  | "over many centuries, from the time of Moses to the time of Ezra" |
+| Proverbs | range | 1000 BC | 700 BC | "Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC" |
+| Ecclesiastes | unknown |  |  | "in the time of Solomon" |
+| Song of Solomon | range | 1000 BC | 901 BC | "in the 10th century BC" |
+| Isaiah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |
+| Jeremiah | range | 650 BC | 551 BC | "the late 7th and early 6th centuries BC" |
+| Lamentations | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |
+| Ezekiel | range | 600 BC | 551 BC | "the early 6th century BC" |
+| Daniel | range | 600 BC | 501 BC | "the 6th century BC" |
+| Hosea | range | 750 BC | 701 BC | "the late 8th century BC" |
+| Joel | year | 500 BC | 500 BC | "perhaps about 500 BC" |
+| Amos | range | 800 BC | 701 BC | "the 8th century BC" |
+| Obadiah | range | 600 BC | 501 BC | "Probably the 6th century BC" |
+| Jonah | range | 800 BC | 701 BC | "the 8th century BC" |
+| Micah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |
+| Nahum | range | 700 BC | 601 BC | "the 7th century BC" |
+| Habakkuk | range | 650 BC | 601 BC | "late in the 7th century BC" |
+| Zephaniah | range | 700 BC | 601 BC | "in the 7th century BC" |
+| Haggai | year | 520 BC | 520 BC | "about 520 BC" |
+| Zechariah | unknown |  |  | "from about 520 BC" |
+| Malachi | year | 460 BC | 460 BC | "about 460 BC" |
+| Matthew | year | AD 60 | AD 60 | "about AD 60" |
+| Mark | range | AD 55 | AD 59 | "the second half of the 50s AD" |
+| Luke | unknown |  |  | "no earlier than about AD 62, just after the last events in Acts" |
+| John | range | AD 51 | AD 100 | "late in the 1st century AD" |
+| Acts | year | AD 62 | AD 62 | "about AD 62" |
+| Romans | year | AD 57 | AD 57 | "about AD 57" |
+| 1 Corinthians | year | AD 54 | AD 54 | "about AD 54" |
+| 2 Corinthians | range | AD 55 | AD 56 | "about AD 55 to 56" |
+| Galatians | year | AD 48 | AD 48 | "about AD 48" |
+| Ephesians | year | AD 62 | AD 62 | "about AD 62" |
+| Philippians | year | AD 62 | AD 62 | "about AD 62" |
+| Colossians | year | AD 62 | AD 62 | "about AD 62" |
+| 1 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |
+| 2 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |
+| 1 Timothy | range | AD 60 | AD 69 | "the 60s AD" |
+| 2 Timothy | year | AD 65 | AD 65 | "about AD 65" |
+| Titus | range | AD 60 | AD 69 | "the 60s AD" |
+| Philemon | year | AD 62 | AD 62 | "about AD 62" |
+| Hebrews | unknown |  |  | "before AD 70" |
+| James | range | AD 40 | AD 44 | "the early 40s AD" |
+| 1 Peter | range | AD 60 | AD 64 | "the early 60s AD" |
+| 2 Peter | range | AD 63 | AD 66 | "the mid 60s AD" |
+| 1 John | year | AD 85 | AD 85 | "about AD 85" |
+| 2 John | unknown |  |  | "no later than the 90s AD" |
+| 3 John | unknown |  |  | "no later than the 90s AD" |
+| Jude | range | AD 63 | AD 66 | "the mid 60s AD" |
+| Revelation | range | AD 93 | AD 96 | "the mid 90s AD" |
+
 ## Not verified
 
-Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, and 7b and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 4.
+Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, 7b, and 8 and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 19.
 
 1. Period, the time of the judges: no approved source gives the year when the time of the judges began. The site gives only the end, before about 1050 BC.
 2. Period, Greek rule: no approved source gives the year when Greek rule ended, or states 332 BC as its start. The site uses the end of Persian rule as the start of Greek rule.
 3. Echo link from a cross-reference line of the Berean Standard Bible files: Ephesians 5, the line (Song of Solomon 1:1–17; 1 Peter 3:1–7) under "Wives and Husbands": the target of "Song of Solomon 1:1–17" in the USFM file is "1:1-17", with no book code, so it has no link (Arthur, 2026-11-14). The line of Song of Solomon 1 links the same two passages from the other end.
 4. Echo link from a cross-reference line of the Berean Standard Bible files: 1 Peter 3, the line (Song of Solomon 1:1–17; Ephesians 5:22–33) under "Wives and Husbands": the target of "Song of Solomon 1:1–17" in the USFM file is "1:1-17", with no book code, so it has no link (Arthur, 2026-11-14). The line of Song of Solomon 1 links the same two passages from the other end.
+5. Date of Genesis, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the time of Moses". Placed: in the group "Date not known".
+6. Date of Exodus, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
+7. Date of Leviticus, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
+8. Date of Numbers, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
+9. Date of Deuteronomy, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "near the end of the 40 years in the wilderness, shortly before Moses died". Placed: in the group "Date not known".
+10. Date of Joshua, Task 8: The fact names the lifetime of Joshua but gives no year, and public/data/periods.json has no period for Joshua. Words: "in the lifetime of Joshua". Placed: in the group "Date not known".
+11. Date of Judges, Task 8: The fact gives only the latest time of writing: by the time of King David. It gives no earliest year. Words: "by the time of King David, 1010 to 970 BC". Placed: in the group "Date not known".
+12. Date of Ruth, Task 8: The fact gives only the earliest time of writing: some time after about 1010 BC. It gives no latest year. Words: "Some time after David became king, about 1010 BC". Placed: in the group "Date not known".
+13. Date of Psalms, Task 8: The fact names the times of Moses and of Ezra but gives no year, and public/data/periods.json has no period for them. Words: "over many centuries, from the time of Moses to the time of Ezra". Placed: in the group "Date not known".
+14. Date of Ecclesiastes, Task 8: The fact names the time of Solomon but gives no year, and public/data/periods.json has no period for Solomon. Words: "in the time of Solomon". Placed: in the group "Date not known".
+15. Date of Zechariah, Task 8: The fact gives only the earliest time of writing: from about 520 BC. It gives no latest year. Words: "from about 520 BC". Placed: in the group "Date not known".
+16. Date of Luke, Task 8: The fact gives the earliest year, about AD 62, and says "just after". It gives no latest year. Words: "no earlier than about AD 62, just after the last events in Acts". Placed: in the group "Date not known".
+17. Date of Hebrews, Task 8: The fact gives only the latest year: before AD 70. It gives no earliest year. Words: "before AD 70". Placed: in the group "Date not known".
+18. Date of 2 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".
+19. Date of 3 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".

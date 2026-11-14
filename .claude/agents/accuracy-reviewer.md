@@ -102,9 +102,13 @@ Applies when a reason line changed. Coverage: each reason line that changed.
 
 Applies when `public/data/dates.json` changed.
 
-1. Find the source of each date in `docs/CONTENT-SOURCES.md`. Open the source. Make sure that the source states the date.
-2. Make sure that a disputed date has a range.
-3. Make sure that the date of each book agrees with the "Written" fact in `public/data/intros.json`.
+The dates of the timeline come from the Written fact of each book in `public/data/intros.json`. They need no new source.
+
+1. Make sure that each of the 66 books is in `dates.json`.
+2. For each book, read the Written fact. Make sure that the first year, the last year, and the kind in `dates.json` follow from the words of the fact. A century is a range of 100 years. A period uses the years in `public/data/periods.json`.
+3. Report a book that has a year when its Written fact gives no date. Such a book must have the kind `unknown`.
+4. Report a date that comes from the "Scholars differ" detail and not from the fact. The timeline uses the traditional view only.
+5. Make sure that the number of years between the two bands on the page is the result of the dates.
 
 ## Check 6. Scene subjects
 

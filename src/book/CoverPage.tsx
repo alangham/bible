@@ -7,7 +7,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
-import { chapterHref } from '../router.ts'
+import { chapterHref, timelineHref } from '../router.ts'
 import { SceneBoundary } from '../table/SceneBoundary.tsx'
 import { hasWebGL } from '../table/webgl.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
@@ -118,6 +118,7 @@ export function CoverPage({ book, intro }: CoverPageProps) {
       <div className="cover-inner">
         <nav className="cover-bar" aria-label="Pages">
           <a href="#/">Back to the table</a>
+          <a href={timelineHref()}>Timeline</a>
         </nav>
 
         <div className="cover-stage" ref={stageRef}>

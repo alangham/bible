@@ -10,7 +10,7 @@ import gsap from 'gsap'
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
 import { groupOf, type Book } from '../data/books.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
-import { bookHref, chapterHref } from '../router.ts'
+import { bookHref, chapterHref, timelineHref } from '../router.ts'
 import { PARALLAX_DEPTH } from '../scene/sceneSvg.ts'
 import { SceneView, type SceneHandle } from '../scene/SceneView.tsx'
 import { SCENE_W } from '../scene/shapes.ts'
@@ -423,7 +423,10 @@ export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPagePr
   return (
     <main className="spread-page" data-fade={fade ?? undefined} data-turning={turn ? 'true' : 'false'} data-chapter={view.right}>
       <nav className="spread-bar" aria-label="Pages">
-        <a href={bookHref(book.id)}>Close the book</a>
+        <span className="spread-bar-pages">
+          <a href={bookHref(book.id)}>Close the book</a>
+          <a href={timelineHref()}>Timeline</a>
+        </span>
         <span className="spread-bar-turns">
           <button type="button" className="echo-switch" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
             Echo links <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>

@@ -518,18 +518,25 @@ Stop and report.
 
 Status: TODO
 
-Goal: correct the design problems in `docs/POLISH.md`.
+Goal: correct the design problems in `docs/POLISH.md` that Arthur approved.
+
+Arthur approved nine items on 2026-11-14: items 1, 2, 3, 5, 7, 8, 9, 10, and 13. Each item in `docs/POLISH.md` has his decision under its status. Items 11 and 12 wait for a design. Items 4 and 6 are closed.
 
 Steps:
 
 1. Read `docs/POLISH.md`.
-2. Do only the items that have the status `APPROVED`. Arthur sets this status.
-3. For each item, make the change, then take a screenshot.
-4. Set the status of each completed item to `DONE`.
+2. Do only the items that have the status `APPROVED`. Do not do an item with a different status.
+3. Do item 5 first. It moves the limit between the two layouts to 900 px, and it changes what the other items must check.
+4. Do items 13, 3, 1, and 2 together. They are all about the spines of the wide table. Take one screenshot of the table at 1440 by 900 px before the changes and one after.
+5. Do items 7, 8, and 9 together. They are about the scenes. Take the nine-scene screenshot again. Take the Gospels scene at dawn, day, dusk, and night. The contrast test for the chapter text must still pass.
+6. Do item 10. Take a screenshot of Hebrews 9 with the new marks at 1440 px and at 390 px.
+7. For each item, measure the result where the item gives a measure. Give the numbers in the report.
+8. Set the status of each completed item to `DONE`, with the date and the commit.
+9. If an item needs a decision that `docs/POLISH.md` does not give, do not decide it. Leave the item `APPROVED`, and ask Arthur in the report.
 
 Done when:
 
-- Each `APPROVED` item is `DONE`.
-- The tests pass.
+- Each `APPROVED` item is `DONE`, or is named in the report with a question.
+- The tests pass, with axe-core. The entry for the wide table spines is not in `KNOWN`.
 
-Stop and report. Include the screenshots.
+Stop and report. Include the screenshots, saved in `docs/screenshots/task-10/`.

@@ -53,9 +53,9 @@ Hebrews is in General Letters, as on the wall image.
 - Each spine has a small sideways offset so that the stack looks real.
 - A legend below the stacks lists the ten groups. Select a group to light its spines and dim the others. Select it again to clear.
 - Select a spine: the book slides out of the stack and lands on the table as the cover page.
-- Two layouts, selected by screen width. The limit is 768 px.
-  - Wide layout, 768 px or more: five stacks in one view, as in mockup D1. The spines can be thinner than 44 px. This is the one permitted exception to the 44 px size.
-  - Narrow layout, below 768 px: one stack at a time with spines of 44 px or more. Move between stacks by swipe. Task 9 builds this layout.
+- Two layouts, selected by screen width. The limit is 900 px. Arthur moved it from 768 px on 2026-11-14, because the spine names were hard to read between 768 and 900 px.
+  - Wide layout, 900 px or more: five stacks in one view, as in mockup D1. The spines can be thinner than 44 px, but each spine is 24 px or more on screen at 1440 by 900 px. This is the one permitted exception to the 44 px size.
+  - Narrow layout, below 900 px: one stack at a time with spines of 44 px or more. Move between stacks by swipe. Task 9 builds this layout.
   - In the narrow layout, the table page has flat spines and no 3D scene. A legend group moves the view to the first stack that has a book of that group.
 - One function in the code decides which layout applies. No other code tests the screen width. Reason: design fixes will follow, and the rule can change, for example to a test of the input type. A wide touch screen gets the wide layout with thin spines for now. This is a known limit.
 
@@ -191,7 +191,7 @@ Arthur decided the two bands on 2026-11-14.
 - A second action on the selected book opens its cover.
 - The legend of the ten groups is on the page, with the same select and clear behavior as on the table page.
 - Each book is a real `a` or `button` with keyboard access. Obey the reduced-motion rule.
-- Narrow layout, below 768 px: the books are a list in date order, in two parts, with no arcs. The list of quoted books still shows for a selected book. Task 9 can improve it.
+- Narrow layout, below 900 px: the books are a list in date order, in two parts, with no arcs. The list of quoted books still shows for a selected book. Task 9 can improve it.
 - Travel can use the timeline as its map in a later version. This is not in version 1.
 
 ## 5. Bible text

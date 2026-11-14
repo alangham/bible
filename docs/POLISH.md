@@ -8,7 +8,9 @@ Status values: `PROPOSED`, `APPROVED`, `DONE`, `REJECTED`.
 
 ## 1. Text on the gold and cream spines looks weak
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: table. Seen in `docs/screenshots/task-2-table.png` on 2026-11-13.
 
@@ -18,7 +20,9 @@ Correction: measure the contrast from the rendered pixels. Change the light or t
 
 ## 2. The shadows have hard edges
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: table. Seen in `docs/screenshots/task-2-table.png` on 2026-11-13.
 
@@ -28,7 +32,9 @@ Correction: make the shadows soft, with more blur at a larger distance from the 
 
 ## 3. The smallest spine names are very small
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: table. Seen in `docs/screenshots/task-2-table.png` on 2026-11-13.
 
@@ -38,7 +44,9 @@ Correction: set a minimum text size for a spine name. If the name does not fit, 
 
 ## 4. Spine links below 24 px with a mouse
 
-Status: PROPOSED
+Status: REJECTED
+
+Closed on 2026-11-14. Item 13 covers it.
 
 Page: table. From the Task 2 report on 2026-11-13.
 
@@ -48,7 +56,9 @@ Correction: change the camera or the minimum spine thickness so that each spine 
 
 ## 5. Spine names are hard to read between 768 and 900 px wide
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14. Decision: correction 3. The limit between the two layouts moves from 768 px to 900 px. `docs/DESIGN.md` sections 4.1 and 4.6 now say 900 px. Change the one layout function and its tests. The narrow layout then covers 768 to 899 px, so check the narrow table, cover, spread, and timeline at 834 px wide.
 
 Page: table. From the second Task 2 review on 2026-11-13.
 
@@ -61,7 +71,9 @@ Correction: take screenshots at 768, 834, and 900 px wide, with a stated window 
 
 ## 6. State the window size for each spine link measurement
 
-Status: PROPOSED
+Status: REJECTED
+
+Closed on 2026-11-14. Item 13 gives the window size, 1440 by 900 px, and axe-core makes the measurement.
 
 Page: table. Note on item 4, from the two Task 2 reviews on 2026-11-13.
 
@@ -75,7 +87,9 @@ Correction: for item 4 and item 5, state each measurement with the window width 
 
 ## 7. The Gospels scene has no water color
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png` on 2026-11-14.
 
@@ -85,7 +99,9 @@ Correction: permit an exception to "colors near the cloth color" for the Gospels
 
 ## 8. The sun is behind the fold and the corner of the text panel
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png` and `acts-14.png` on 2026-11-14.
 
@@ -95,7 +111,9 @@ Correction: keep the sun and the moon on the left page, away from the fold and t
 
 ## 9. A scene shape shows in front of the chapter text
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14.
 
 Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png`, Psalm 75, on 2026-11-14.
 
@@ -105,7 +123,9 @@ Correction: keep the large shapes of the front layers out of the text panel area
 
 ## 10. The marks for links are very small
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14. This item matters most: the marks are the way to travel. Keep the strong mark and the light mark different. The touch area of each mark must be 44 px or larger.
 
 Page: spread. Seen in `docs/screenshots/task-7/hebrews-9-task-7b.png` on 2026-11-14.
 
@@ -117,6 +137,8 @@ Correction: make the marks easier to see and to select. The touch area of a mark
 
 Status: PROPOSED
 
+Waits. Arthur decided on 2026-11-14 that this item needs a design from the designer first.
+
 Page: travel. Seen in `docs/screenshots/task-7/travel-mid.png` on 2026-11-14.
 
 Problem: travel shows a row of 66 colored bars on empty linen. It does show that the reader crossed the Bible, but it does not look like the table of books, and most of the page is empty.
@@ -127,6 +149,8 @@ Correction: make the move look like the books of the table page: real spines wit
 
 Status: PROPOSED
 
+Waits. Arthur decided on 2026-11-14 that this item needs a design from the designer first.
+
 Page: timeline. Seen in `docs/screenshots/task-8/timeline-wide.png` on 2026-11-14.
 
 Problem: each spine is 44 px thick, and the stacks have up to 14 rows. The page is about 2,150 px tall at 1440 px wide. The reader cannot see the two bands and the arcs in one view. The arcs also cross in one dense area between the bands.
@@ -136,7 +160,9 @@ Correction: options to examine. Thinner spines in the wide layout, with the same
 
 ## 13. The spines of the wide table are below the WCAG size
 
-Status: PROPOSED
+Status: APPROVED
+
+Approved by Arthur on 2026-11-14. Decision: each spine of the wide layout is 24 px or more on screen at 1440 by 900 px. Change the thickness rule or the camera. Keep the five stacks in one view. Remove the entry from `KNOWN` in `e2e/a11y.spec.ts`.
 
 Page: table, wide layout. Found by axe-core 4.14.0 in Task 9b on 2026-11-14, rule `target-size` (WCAG 2.2, 2.5.8, level AA).
 

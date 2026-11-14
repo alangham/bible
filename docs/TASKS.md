@@ -367,6 +367,36 @@ Stop and report. Include screenshots of the pop-up, of a chapter with marks, and
 
 ---
 
+## Task 7b. Quotation links: the fit rule
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: a link has the strong mark only when the reader can see the quotation in the text. Arthur decided the fit rule on 2026-11-14. It is in section 4.5 of `docs/DESIGN.md`. Read that section again. It also records the details of the limit and the lists that Arthur accepted.
+
+Steps:
+
+1. Use one rule for the fit label in all four quarters: rule B from your Task 7 report. A link is "quote" only if the later passage repeats the words of the earlier passage in the Berean Standard Bible, or names it clearly. A short phrase of 2 or 3 common words, one word, a theme, or the same statement in other words is "close" or "weak".
+2. Change the build: a link from the Bible Quotation Database with the fit "close" or "weak" is an echo link. It has the light mark and no reason line. Do not remove a link.
+3. Remove the reason lines of these links from the site data. Keep them in a file outside `public/`, so that the work is not lost.
+4. Hide an echo link that overlaps a quotation link at its two ends.
+5. The two links that end at verses outside the main text, Mark 9:44 and Mark 15:28, follow the same fit rule.
+6. Update `docs/reviews/task-7-not-verified.md` and the list in `docs/CONTENT-SOURCES.md`. The list is now a record of the links that changed type. It is not a list of decisions for Arthur. Say so at the top of each.
+7. Update the link check script and the tests. Add a test: no link with the fit "close" or "weak" has the strong mark or a reason line.
+8. Save the Task 7 screenshots and one new screenshot of Hebrews 9 in `docs/screenshots/task-7/`.
+9. Run the `accuracy-reviewer` agent on the links that are still quotation links, after your last correction.
+
+Done when:
+
+- The tests pass.
+- The report gives the number of quotation links and the number of echo links, for each source, before and after this task.
+- The report says which quotation links Hebrews 9 still has.
+
+Stop and report.
+
+---
+
 ## Task 8. Timeline
 
 Status: TODO

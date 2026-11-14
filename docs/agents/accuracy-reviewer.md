@@ -69,7 +69,7 @@ Part 2. Quotation links. Coverage: each quotation link on the first run. On a la
 1. Find the link in the source list.
 2. Read the two passages in the bundled text.
 3. The later passage must quote the words of the earlier passage or name it clearly.
-4. A link that is only a theme or a similar word must be an echo link. Report it.
+4. A link that shares only a short phrase of 2 or 3 common words, one word, a theme, or the same statement in other words must be an echo link. Report it if it has the strong mark or a reason line. Use this one rule for each link.
 
 Part 3. Echo links. Coverage: a sample.
 

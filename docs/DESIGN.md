@@ -120,11 +120,22 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 
 | Source | Gives | Type of link |
 |---|---|---|
-| Bible Quotation Database, public domain | Places where one passage quotes a different passage | Quotation link |
+| Bible Quotation Database, public domain | Places where one passage quotes a different passage, or comes close to it | Quotation link if the fit is "quote". Echo link if the fit is "close" or "weak". See the fit rule below. |
 | OpenBible.info cross-references, CC BY 4.0 | Passages that share a theme, an event, a person, or wording | Echo link |
 | Cross-reference lines in the Berean Standard Bible files, public domain | Passages that the publisher lists under a section heading | Echo link, on the section heading |
 
-- If two sources give the same pair of passages, the link is one link. A quotation link takes priority over an echo link.
+- The fit rule. Arthur decided this on 2026-11-14. Each link from the Bible Quotation Database has a fit label.
+  - Fit "quote": the later passage repeats the words of the earlier passage in the Berean Standard Bible, or names it clearly. The link is a quotation link: strong mark, with a reason line.
+  - Fit "close" or "weak": the two passages share a short phrase, one word, a theme, or the same statement in other words. The link is an echo link: light mark, no reason line.
+  - No link is removed. Only the type changes. Reason: the strong mark tells the reader "this passage quotes that passage". The reader must be able to see the quotation in the text.
+- If two sources give the same pair of passages, the link is one link. A quotation link takes priority over an echo link. If an echo link overlaps a quotation link at its two ends, the site shows only the quotation link.
+- Details of the limit and the lists, as built and approved on 2026-11-14:
+  - "1 marked verse for each 5 verses" rounds up.
+  - The limit counts only OpenBible.info links. Quotation links and links from the Berean files do not count.
+  - An OpenBible.info row and its reverse count as one link.
+  - An OpenBible.info row where a verse links to a passage that starts at the same verse is not used.
+  - A cross-reference line that names whole books links to the start of the first book.
+  - In the read-with list, on a tie, the chapter with more links comes first, then Bible order. A link counts in the chapter of its first verse.
 - A link shows at its two ends. Example: Hebrews 9:20 shows the link to Exodus 24:8, and Exodus 24:8 shows the link to Hebrews 9:20.
 - The OpenBible.info set is very large: 301,574 links. The site shows only its strongest links as marks in the text, so that the text is not full of marks. Arthur approved this limit on 2026-11-14:
   - a link needs 20 votes or more;
@@ -136,7 +147,7 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
   - What it is: a short list at the top of each chapter, with the heading "Read with". It names the chapters in other books that share the most cross-references with this chapter. Each entry is a control for travel to that chapter.
   - How it is made: by arithmetic from the OpenBible.info set. For this chapter and each chapter in a different book, add the votes of all links between the two chapters. Use only links with 1 vote or more. Take the 5 chapters with the highest sums. A chapter needs 3 links or more to be in the list. No person and no agent chooses an entry.
   - A small line under the list names OpenBible.info as the source of the list.
-  - Reason: the votes measure one verse against one verse. The data has 48 links between Hebrews 9 and Leviticus 16 or Numbers 19, each with 2 to 21 votes. The limit for marks removes all of them. The tie is between the chapters, and the read-with list shows it.
+  - Reason: the votes measure one verse against one verse. The data has 47 links between Hebrews 9 and Leviticus 16 or Numbers 19, each with 2 to 21 votes. The limit for marks removes all of them. The tie is between the chapters, and the read-with list shows it.
   - A chapter with no entry has no list.
 - Quotation links have a strong mark. Echo links have a light mark. The reader can switch echo links off.
 - Select a mark: a pop-up shows the reference and the text of the linked passage.

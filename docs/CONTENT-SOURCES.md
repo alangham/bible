@@ -45,6 +45,7 @@ Each period that the introductions name has one set of years. `public/data/perio
 | Period | Years | Source |
 |---|---|---|
 | the time of the judges | before about 1050 BC | ESV Global Study Bible, introduction to Ruth, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ruth/: after the conquest of Canaan and before about 1050 BC. |
+| the time of King David | 1010 to 970 BC | ESV Global Study Bible, introduction to Judges, Author and Date, https://www.esv.org/resources/esv-global-study-bible/introduction-to-judges/: David's time, 1010 to 970 BC. Added at Arthur's request on 2026-11-14. Two other ESV pages end the reign in 971 BC: the introduction to 1 and 2 Samuel, and the map "The Extent of David's Kingdom", 1010 to 971 BC, in the introduction to 1 and 2 Chronicles. |
 | the captivity in Babylon | 586 to 538 BC | ESV Global Study Bible, introduction to 1 and 2 Chronicles, timeline, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/. |
 | Persian rule | 539 to 332 BC | ESV Global Study Bible, introduction to 1 and 2 Chronicles, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/: the Persian period, 539 to 332 BC. |
 | Greek rule | from 332 BC | The year when Persian rule ended in the ESV Global Study Bible, introduction to 1 and 2 Chronicles. |
@@ -334,10 +335,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Books_of_Chronicles&oldid=1385511143, section "Composition: Origins". States: These critics put the writing probably between 400 and 250 BC, and most likely between 350 and 300 BC. The article cites: Steven L. McKenzie, 1 and 2 Chronicles (2004).
 - Written, conservative scholars: Conservative scholars hold that the writer served in the temple under Persian rule, 539 to 332 BC. He wrote for the Jews who had come back from Babylon and rebuilt the temple.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/, section "Author and Date; Purpose, Occasion, and Background". States: The writer was a priest or Levite in temple service in the Persian period, 539 to 332 BC. He wrote for the returned Jews to renew them.
-- What it is: Family lists from Adam to the tribes of Israel, then a history of the reign of King David. It was written for the Jews who came back from captivity in Babylon, 586 to 538 BC.
+- What it is: Family lists from Adam to Israel's tribes, then the reign of King David, 1010 to 970 BC. It was written for the Jews who came back from captivity in Babylon, 586 to 538 BC.
   - Berean Standard Bible. States: 1 Chronicles 1:1 starts the family lists with Adam. Chapter 10 starts with the death of Saul. 1 Chronicles 29:28 tells of David's death and Solomon's reign.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FChronicles%2C_Books_of&oldid=734537. States: Chapters 1 to 9 of the first book are mostly genealogies down to David. The rest of the first book is the history of David's reign.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/. States: The Chronicler wrote for Judah and Benjamin after they had come back from Babylon. The captivity in Babylon lasted from 586 to 538 BC.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-judges/, section "Author and Date". States: The years of David's time, 1010 to 970 BC, as public/data/periods.json gives them from the introduction to Judges.
 - Accepted by Arthur on 2026-11-13, so not on the Not verified list:
   - 1 and 2 Chronicles, author: the Wikipedia article also says that many scholars still support Ezra as author, but it marks that sentence citation needed. The sentence has no citation, so the critical part does not report it.
 

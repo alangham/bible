@@ -8,6 +8,14 @@
     "to": -1050
   },
   {
+    "id": "david",
+    "name": "the time of King David",
+    "names": ["the time of King David", "the reign of King David"],
+    "years": "1010 to 970 BC",
+    "from": -1010,
+    "to": -970
+  },
+  {
     "id": "captivity",
     "name": "the captivity in Babylon",
     "names": ["captivity in Babylon"],

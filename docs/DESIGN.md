@@ -126,7 +126,18 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 
 - If two sources give the same pair of passages, the link is one link. A quotation link takes priority over an echo link.
 - A link shows at its two ends. Example: Hebrews 9:20 shows the link to Exodus 24:8, and Exodus 24:8 shows the link to Hebrews 9:20.
-- The OpenBible.info set is very large. The site shows only its strongest links, so that the text is not full of marks. Arthur approves the limit in Task 7.
+- The OpenBible.info set is very large: 301,574 links. The site shows only its strongest links as marks in the text, so that the text is not full of marks. Arthur approved this limit on 2026-11-14:
+  - a link needs 20 votes or more;
+  - a chapter has 1 marked verse for each 5 verses, and 2 as a minimum;
+  - a verse has 2 links as a maximum;
+  - the strongest links come first.
+- A link with zero votes or fewer is not used for a mark or for the read-with list.
+- The read-with list. Arthur approved it on 2026-11-14.
+  - What it is: a short list at the top of each chapter, with the heading "Read with". It names the chapters in other books that share the most cross-references with this chapter. Each entry is a control for travel to that chapter.
+  - How it is made: by arithmetic from the OpenBible.info set. For this chapter and each chapter in a different book, add the votes of all links between the two chapters. Use only links with 1 vote or more. Take the 5 chapters with the highest sums. A chapter needs 3 links or more to be in the list. No person and no agent chooses an entry.
+  - A small line under the list names OpenBible.info as the source of the list.
+  - Reason: the votes measure one verse against one verse. The data has 48 links between Hebrews 9 and Leviticus 16 or Numbers 19, each with 2 to 21 votes. The limit for marks removes all of them. The tie is between the chapters, and the read-with list shows it.
+  - A chapter with no entry has no list.
 - Quotation links have a strong mark. Echo links have a light mark. The reader can switch echo links off.
 - Select a mark: a pop-up shows the reference and the text of the linked passage.
 - The pop-up for a quotation link also shows a reason line: one line that says why the linked passage matters here. The pop-up for an echo link has no reason line in version 1. Reason: the reason line is interpretation, and each reason line must be checked.

@@ -56,7 +56,7 @@ For each changed book:
 
 Applies when a file in `public/data/links/` changed.
 
-Do the four parts in this order.
+Do the five parts in this order.
 
 Part 1. All links, by machine. Coverage: each link.
 
@@ -82,6 +82,13 @@ Part 3. Echo links. Coverage: a sample.
 Part 4. Echo links have no reason line.
 
 1. Search the link files for an echo link that has a reason line. Report each one.
+
+Part 5. The read-with list. Coverage: a sample.
+
+1. Take 20 chapters at random. Use a new random seed for each run. Record the seed in the report.
+2. For each chapter, compute the list again from the OpenBible.info file by the rule in section 4.5 of `docs/DESIGN.md`. Report a list that differs.
+3. Report an entry that is in the same book as its chapter.
+4. Report an entry that a person or an agent added or removed.
 
 ## Check 4. Reason lines
 

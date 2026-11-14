@@ -333,24 +333,27 @@ Goal: section 4.5 of `docs/DESIGN.md`. Read that section first. It has the sourc
 
 Steps:
 
-1. Read the three sources. Do not build yet. Report to Arthur:
-   - the number of links in each source;
-   - what the cross-reference lines of the Berean Standard Bible files contain, with three examples;
-   - for the OpenBible.info set: the measure of strength that the data has, and how many links each verse has, as a minimum, a median, and a maximum;
-   - a proposal for the limit: which OpenBible.info links the site shows. Give the number of links that remain, and the number of marks on a typical chapter. Give Genesis 1, Psalm 23, John 3, and Hebrews 9 as examples;
-   - the links of Hebrews 9 in each source, with the limit and without it. Say if a link to Leviticus 16 or to Numbers 19 exists.
-   Stop. Wait for Arthur's approval of the limit.
+1. Complete. Arthur approved these decisions on 2026-11-14. They are in section 4.5 of `docs/DESIGN.md`. Read that section again.
+   - The limit for marks is your limit (a): 20 votes or more, 1 marked verse for each 5 verses of a chapter with 2 as a minimum, 2 links for each verse as a maximum, strongest first.
+   - A link with zero votes or fewer is not used.
+   - New: the read-with list for each chapter.
+   - A cross-reference line of the Berean Standard Bible files that names whole chapters links to the start of the first chapter. The 2 lines with no book name get no link. Put them on the "Not verified" list.
+   - Leave out the 18 OpenBible.info rows that cross two books and the 1 row with a verse that the Bible text does not have. List them in the report.
+1b. Compute the read-with list for Genesis 1, Psalm 23, John 3, and Hebrews 9 before you build. Give the four lists in your next message. If the list for Hebrews 9 has Leviticus 16 or Numbers 19, continue with no stop. If it has neither, stop and tell Arthur, with the rank and the vote sum of each of the two chapters.
 2. Build `public/data/links/` from the three sources, with the approved limit. Each link records its source and its type. If two sources give the same pair, keep one link. A quotation link takes priority over an echo link.
+2b. Build the read-with list for each of the 1,189 chapters, by the rule in section 4.5 of `docs/DESIGN.md`. Record the OpenBible.info download in `docs/DATA-SOURCES.md`: the address, the date, the size, and the SHA-256.
 3. Do not add a link that is not in a source. Do not remove a link because you disagree with it. If a link looks wrong, put it on the "Not verified" list.
 4. Show the marks in the text at the two ends of each link. Strong for quotation links. Light for echo links. An echo link from the cross-reference lines of the Berean Standard Bible files is on its section heading.
 5. Add a switch for echo links.
 6. Build the pop-up: reference, the text of the linked passage, "Go there", "Stay here". If a passage has more than one link, the pop-up lists them, quotation links first.
+6b. Show the read-with list at the top of each chapter that has one, under the heading "Read with". Each entry is a real `a` or `button`, 44 px or larger, and it starts travel to that chapter. Add the small line that names OpenBible.info as the source.
 7. Write a reason line for each quotation link. Do not write a reason line for an echo link. The reason line must say only what the two passages show. Obey the plain-words rule from Task 4b. Record the source of each quotation link in `docs/CONTENT-SOURCES.md`.
 8. Write a script in `scripts/` that checks each link: the two ends exist, no link to itself, no duplicate, the type is set, and the source is one of the three approved sources. Add the script to the unit tests.
 9. Build travel: the current book closes, the linked book comes onto the table, it opens at the linked passage.
 10. Build the trail. Each stop is a control that goes back to that stop.
 11. Credit OpenBible.info as its licence requires. If the "Sources" page from Task 6 already has the credit, make sure that it is correct.
-12. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back.
+12. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back. Add a second test: an entry of the read-with list starts travel.
+13. Add a unit test: the read-with list of a chapter is the same as the result of the rule on the source data, for 20 chapters.
 
 Done when:
 
@@ -358,6 +361,7 @@ Done when:
 - Hebrews 9 has quotation links to the Old Testament passages that it quotes.
 - The link check script passes on each link.
 - The report gives the number of quotation links and the number of echo links, for each source.
+- The report gives the read-with list of Genesis 1, Psalm 23, John 3, and Hebrews 9, and the number of chapters with no list.
 
 Stop and report. Include screenshots of the pop-up, of a chapter with marks, and of the trail.
 

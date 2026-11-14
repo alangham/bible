@@ -66,4 +66,5 @@ Use these names in code, comments, and reports. One name for each thing.
 | echo link | A link by theme or wording. Weaker than a quotation link. |
 | travel | The move from one passage to a linked passage. |
 | trail | The list of passages that the reader visited by travel. |
+| read-with list | The list at the top of a chapter that names the chapters in other books with the most cross-references to it. |
 | timeline | The overview page. Books on a time axis with arcs for quotation links. |

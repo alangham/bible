@@ -139,9 +139,9 @@ describe('dates.json (docs/TASKS.md Task 8 steps 1 to 3)', () => {
     }
   })
 
-  it('puts each book with a note in "Not verified" or with no date, and gives each unclear date a note', () => {
+  it('gives each book with no date a reason, unless the fact says that the date is not known', () => {
     for (const d of dates) {
-      if (d.kind === 'unknown' && !/not known|not certain/.test(d.words)) expect(d.notVerified, d.id).toBeTruthy()
+      if (d.kind === 'unknown' && !/not known|not certain/.test(d.words)) expect(d.reason, d.id).toBeTruthy()
     }
   })
 })

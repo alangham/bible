@@ -25,8 +25,8 @@ export interface BookDate {
   after?: DateLimit
   /** A dated event that the writing came before. The range ends no later than its year. */
   before?: DateLimit
-  /** Why the date is not clear from the fact. Such a book is on the "Not verified" list. */
-  notVerified?: string
+  /** Why the fact gives no date. Arthur accepted each reason on 2026-11-14 (docs/CONTENT-SOURCES.md). */
+  reason?: string
 }
 
 /** One pair of books with quotation links. `from` quotes `to`. */

@@ -2549,14 +2549,14 @@ How the words give the years:
 6. Two parts in the words give one range, from the first year to the last year. "the late 8th and early 7th centuries BC" is 750 BC to 651 BC.
 7. A period of `public/data/periods.json` gives its years.
 8. The time of a person gives no years, unless the table of periods has an entry for it. Arthur's decision 2 under "Periods" says this.
-9. Words that give only the latest time, or only the earliest time, give no date: "before AD 70", "no later than the 90s AD", "by the time of King David", "some time after David became king", "no earlier than about AD 62", "from about 520 BC". The book goes in the group "Date not known" and on the "Not verified" list. Task 8 step 2 says this.
+9. Words that give only the latest time, or only the earliest time, give no date: "before AD 70", "no later than the 90s AD", "by the time of King David", "some time after David became king", "no earlier than about AD 62", "from about 520 BC". The book goes in the group "Date not known". Task 8 step 2 says this.
 10. Words that place the writing soon after a dated event give the year of the event: "soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, and "soon after the end of David's reign, about 970 BC" is 970 BC.
 11. Where the words give a year and a century for the time of writing, the year leads (Task 8b). Obadiah: "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, as Lamentations is. A year that is only a limit, or the year of an event in the book, does not lead. 2 Kings: "the 6th century BC", and "before Cyrus let the captives in Babylon go home in 538 BC" is a limit. Daniel: "the 6th century BC", and 605 BC to 536 BC are the years of Daniel's life in the book. Isaiah: "the late 8th and early 7th centuries BC", and 740 BC is the year when Isaiah was called. These three books keep their century as the base of the range. Rules 14 and 15 then cut the range at the limit. Proverbs: "Begun under Solomon in the 10th century BC" is the start and "about 700 BC" is the end, so rule 6 makes one range, 1000 BC to 700 BC. A script found no other Written fact with a year and a century, outside the sentences that start "An older view".
 12. The spine stands at the year, or at the middle of the range.
 13. The line between the bands counts from the end of the last range in the Old Testament band to the start of the first range in the New Testament band (Task 8b). A book with one year is a range of one year. Books with no date do not count. The count has no year 0, and is rounded down to 10 years, because the line says "or more". With the dates below: 332 BC, the end of 1 and 2 Chronicles, to AD 40, the start of James, is 371 years. The line says "About 370 years or more between the last Old Testament book and the first New Testament book".
 
 14. A limit in the words limits the range (Task 9b). "Before" a dated event cuts the end of the range at that year. 2 Kings: "before Cyrus let the captives in Babylon go home in 538 BC" ends the 6th century at 538 BC, so the range is 600 BC to 538 BC.
-15. A book is not written before the last event that its Written fact names (Task 9b). The range starts at the year of that event. Daniel: "The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC", so the range is 536 BC to 501 BC. Isaiah: the last event that the fact names is that Isaiah outlived Sennacherib, and the fact gives no year for it, so the range stays 750 BC to 651 BC. The fact also names the call of Isaiah, about 740 BC. That year is not used, and it is on the "Not verified" list. Haggai and Joel name an event in 538 BC, which is before their year, so their date does not change.
+15. A book is not written before the last event that its Written fact names (Task 9b). The range starts at the year of that event. Daniel: "The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC", so the range is 536 BC to 501 BC. Isaiah: the last event that the fact names is that Isaiah outlived Sennacherib, and the fact gives no year for it, so the range stays 750 BC to 651 BC. The fact also names the call of Isaiah, about 740 BC. That year is not used. Arthur decided on 2026-11-14 that Isaiah keeps 750 BC to 651 BC. Haggai and Joel name an event in 538 BC, which is before their year, so their date does not change.
 16. Where a fact gives one date and says that a second date is "also possible", the first date leads (Task 9b). Mark: "the second half of the 50s AD" leads, and "the middle or late 60s AD" is not used.
 
 Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6). Rules 11, 13, 14, and 15 are his decisions of the same day. He accepted rule 16, the date of Mark as built, on the same day. A unit test checks that each year in the traditional sentences of a dated Written fact is in the words of the date or in a limit. The one exception is the call of Isaiah, about 740 BC.
@@ -2630,27 +2630,31 @@ Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6
 | Jude | range | AD 63 | AD 66 | "the mid 60s AD" |  |
 | Revelation | range | AD 93 | AD 96 | "the mid 90s AD" |  |
 
+### Books in "Date not known", accepted
+
+Arthur accepted these on 2026-11-14 and closed them. They were items 5 to 19 of the "Not verified" list. Each book stays in the group "Date not known" for the reason given. `public/data/dates.json` holds the same reason in the field `reason`.
+
+1. Genesis: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the time of Moses".
+2. Exodus: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
+3. Leviticus: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
+4. Numbers: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
+5. Deuteronomy: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "near the end of the 40 years in the wilderness, shortly before Moses died".
+6. Joshua: The fact names the lifetime of Joshua but gives no year, and public/data/periods.json has no period for Joshua. Words: "in the lifetime of Joshua".
+7. Judges: The fact gives only the latest time of writing: by the time of King David. It gives no earliest year. Words: "by the time of King David, 1010 to 970 BC".
+8. Ruth: The fact gives only the earliest time of writing: some time after about 1010 BC. It gives no latest year. Words: "Some time after David became king, about 1010 BC".
+9. Psalms: The fact names the times of Moses and of Ezra but gives no year, and public/data/periods.json has no period for them. Words: "over many centuries, from the time of Moses to the time of Ezra".
+10. Ecclesiastes: The fact names the time of Solomon but gives no year, and public/data/periods.json has no period for Solomon. Words: "in the time of Solomon".
+11. Zechariah: The fact gives only the earliest time of writing: from about 520 BC. It gives no latest year. Words: "from about 520 BC".
+12. Luke: The fact gives the earliest year, about AD 62, and says "just after". It gives no latest year. Words: "no earlier than about AD 62, just after the last events in Acts".
+13. Hebrews: The fact gives only the latest year: before AD 70. It gives no earliest year. Words: "before AD 70".
+14. 2 John: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD".
+15. 3 John: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD".
+
 ## Not verified
 
-Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, 7b, and 8 and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 20.
+Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, and 7b and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 4.
 
 1. Period, the time of the judges: no approved source gives the year when the time of the judges began. The site gives only the end, before about 1050 BC.
 2. Period, Greek rule: no approved source gives the year when Greek rule ended, or states 332 BC as its start. The site uses the end of Persian rule as the start of Greek rule.
 3. Echo link from a cross-reference line of the Berean Standard Bible files: Ephesians 5, the line (Song of Solomon 1:1–17; 1 Peter 3:1–7) under "Wives and Husbands": the target of "Song of Solomon 1:1–17" in the USFM file is "1:1-17", with no book code, so it has no link (Arthur, 2026-11-14). The line of Song of Solomon 1 links the same two passages from the other end.
 4. Echo link from a cross-reference line of the Berean Standard Bible files: 1 Peter 3, the line (Song of Solomon 1:1–17; Ephesians 5:22–33) under "Wives and Husbands": the target of "Song of Solomon 1:1–17" in the USFM file is "1:1-17", with no book code, so it has no link (Arthur, 2026-11-14). The line of Song of Solomon 1 links the same two passages from the other end.
-5. Date of Genesis, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the time of Moses". Placed: in the group "Date not known".
-6. Date of Exodus, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
-7. Date of Leviticus, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
-8. Date of Numbers, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses". Placed: in the group "Date not known".
-9. Date of Deuteronomy, Task 8: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "near the end of the 40 years in the wilderness, shortly before Moses died". Placed: in the group "Date not known".
-10. Date of Joshua, Task 8: The fact names the lifetime of Joshua but gives no year, and public/data/periods.json has no period for Joshua. Words: "in the lifetime of Joshua". Placed: in the group "Date not known".
-11. Date of Judges, Task 8: The fact gives only the latest time of writing: by the time of King David. It gives no earliest year. Words: "by the time of King David, 1010 to 970 BC". Placed: in the group "Date not known".
-12. Date of Ruth, Task 8: The fact gives only the earliest time of writing: some time after about 1010 BC. It gives no latest year. Words: "Some time after David became king, about 1010 BC". Placed: in the group "Date not known".
-13. Date of Psalms, Task 8: The fact names the times of Moses and of Ezra but gives no year, and public/data/periods.json has no period for them. Words: "over many centuries, from the time of Moses to the time of Ezra". Placed: in the group "Date not known".
-14. Date of Ecclesiastes, Task 8: The fact names the time of Solomon but gives no year, and public/data/periods.json has no period for Solomon. Words: "in the time of Solomon". Placed: in the group "Date not known".
-15. Date of Zechariah, Task 8: The fact gives only the earliest time of writing: from about 520 BC. It gives no latest year. Words: "from about 520 BC". Placed: in the group "Date not known".
-16. Date of Luke, Task 8: The fact gives the earliest year, about AD 62, and says "just after". It gives no latest year. Words: "no earlier than about AD 62, just after the last events in Acts". Placed: in the group "Date not known".
-17. Date of Hebrews, Task 8: The fact gives only the latest year: before AD 70. It gives no earliest year. Words: "before AD 70". Placed: in the group "Date not known".
-18. Date of 2 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".
-19. Date of 3 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".
-20. Date of Isaiah, Task 9b, rule 15: the last event that the Written fact names is that Isaiah outlived Sennacherib, with no year. The fact also says "Isaiah was called about 740 BC". If the call counts as a limit, the range starts at 740 BC instead of 750 BC. Placed: 750 BC to 651 BC.

@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
-import { coverInk } from '../book/coverTexture.ts'
+import { coverInk } from '../book/coverInk.ts'
 import { GROUPS, spineThickness, type Book } from '../data/books.ts'
 import { contrastRatio } from '../data/contrast.ts'
 import { layoutTable, PX, STACK_GAP, STACK_WIDTH } from './layout.ts'

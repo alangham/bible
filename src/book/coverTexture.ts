@@ -3,19 +3,7 @@
 
 import { CanvasTexture, SRGBColorSpace } from 'three'
 import type { Group } from '../data/books.ts'
-import { contrastRatio } from '../data/contrast.ts'
-
-export const GOLD = '#F3DDA0'
-export const COVER_TITLE_FONT = '"Cormorant Garamond", Georgia, serif'
-export const COVER_LABEL_FONT = '"Newsreader", Georgia, serif'
-
-/**
- * Mockup D2 shows gold on the Law cloth. Gold is too light on a pale cloth,
- * for example the Gospels cream. There the text color of the group is used.
- */
-export function coverInk(group: Group): string {
-  return contrastRatio(GOLD, group.cloth) >= 4.5 ? GOLD : group.text
-}
+import { COVER_LABEL_FONT, COVER_TITLE_FONT, coverInk } from './coverInk.ts'
 
 /** Texture pixels for each mockup px. */
 const SCALE = 3

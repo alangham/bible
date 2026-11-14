@@ -38,8 +38,6 @@ export interface PageTurnProps {
 
 const SEG_U = 36
 const SEG_V = 28
-/** The canvas reaches past the book by this part of the page height, above and below. */
-export const TURN_MARGIN = 0.15
 const FOV = 30
 
 export function PageTurn(props: PageTurnProps) {

@@ -48,7 +48,7 @@ function App() {
     const book = books.find((b) => b.id === route.id)
     const intro = intros === undefined || intros === null ? intros : (intros.find((i) => i.id === route.id) ?? null)
     // The key gives each book a new cover page, so that the landing runs again.
-    page = book ? <CoverPage key={book.id} book={book} intro={intro} /> : <BookNotFound />
+    page = book ? <CoverPage key={book.id} book={book} intro={intro} layout={layout} /> : <BookNotFound />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
   } else if (route.page === 'timeline') {
@@ -58,7 +58,7 @@ function App() {
     // The key keeps one spread page while the chapter changes, so that a page can turn.
     page = book ? <SpreadPage key={book.id} book={book} chapter={route.chapter} verse={route.verse} layout={layout} books={books} /> : <BookNotFound />
   } else {
-    page = <TablePage books={books} />
+    page = <TablePage books={books} layout={layout} />
   }
 
   return (

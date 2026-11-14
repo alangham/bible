@@ -462,7 +462,7 @@ Stop and report. This task is small. Arthur can tell you to continue with Task 9
 
 ## Task 9. Phone layout and performance
 
-Status: TODO
+Status: DONE
 
 Goal: the site is good on a phone.
 

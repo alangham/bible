@@ -1003,8 +1003,8 @@ a {
 /*
   Narrow layout: src/screenLayout.ts decides it and App sets data-layout.
   Do not add a width media query. docs/DESIGN.md section 4.1.
-  For now the header stacks and the padding is smaller. Task 9 builds the
-  narrow table: one stack at a time, spines of 44 px or more.
+  The header stacks and the padding is smaller. The narrow table, one stack
+  at a time, is at the end of this file.
 */
 .app[data-layout='narrow'] .table-page,
 .app[data-layout='narrow'] .message,
@@ -1055,7 +1055,7 @@ a {
   gap: 18px;
 }
 
-/* The spread in the narrow layout: the right page only, with the text. Task 9 builds the phone layout. */
+/* The spread in the narrow layout: the right page only, with the text. More rules for the phone are at the end of this file. */
 .app[data-layout='narrow'] .spread-page {
   padding: 4px 8px 16px;
 }
@@ -1886,4 +1886,122 @@ a {
 
 .app[data-layout='narrow'] .timeline-header h1 {
   font-size: 52px;
+}
+
+/* ---- Table, narrow layout: one stack at a time. docs/DESIGN.md section 4.1, Task 9. ---- */
+
+.app[data-layout='narrow'] .table-scene {
+  min-height: 0;
+}
+
+/* The track: the five stacks side by side. A swipe moves to the next stack, and each stack snaps into place. */
+.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine-links {
+  position: relative;
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine-links::-webkit-scrollbar {
+  display: none;
+}
+
+.app[data-layout='narrow'] .table-scene[data-mode='flat'] .stack {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 8px 36px 28px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  gap: 3px;
+}
+
+.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine {
+  letter-spacing: 1.5px;
+}
+
+.stack-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.stack-pager p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.stack-pager button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--ink);
+  border-radius: 22px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stack-pager button[aria-disabled='true'] {
+  border-color: var(--rule);
+  color: var(--ink-secondary);
+  cursor: default;
+}
+
+/* ---- Spread, narrow layout: one page in view. Task 9. ---- */
+
+.app[data-layout='narrow'] .spread-bar {
+  flex-wrap: wrap;
+  column-gap: 8px;
+}
+
+.app[data-layout='narrow'] .spread-bar a,
+.app[data-layout='narrow'] .echo-switch {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.app[data-layout='narrow'] .spread-bar-turns {
+  flex: 1 1 100%;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+/* The page fills the window under the bar. */
+.app[data-layout='narrow'] .spread-stage {
+  padding: 4px 0 8px;
+}
+
+.app[data-layout='narrow'] .spread-book {
+  aspect-ratio: auto;
+  height: calc(100svh - 128px);
+  min-height: 440px;
+}
+
+/* A swipe sideways turns the page. The browser keeps the scroll up and down. */
+.app[data-layout='narrow'] .spread-text {
+  touch-action: pan-y;
+}
+
+/* A long address or file name in the text breaks, so that the page does not scroll sideways on a phone. */
+.sources-page {
+  overflow-wrap: anywhere;
+}
+
+/*
+  Narrow layout: the paper-cut layers have no drop shadow. A drop shadow on three layers that move
+  in parallax costs too many frames on a phone. Task 9 step 4.
+*/
+.app[data-layout='narrow'] .scene-layer-1,
+.app[data-layout='narrow'] .scene-layer-2,
+.app[data-layout='narrow'] .scene-layer-3 {
+  filter: none;
 }

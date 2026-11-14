@@ -4,16 +4,19 @@
 // the group, the name (the page heading), and the number of chapters. Screen
 // readers read that text. Without WebGL, that text shows as a flat book.
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
+import type { ScreenLayout } from '../screenLayout.ts'
 import { chapterHref, timelineHref } from '../router.ts'
 import { SceneBoundary } from '../table/SceneBoundary.tsx'
 import { hasWebGL } from '../table/webgl.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { CoverFact } from './CoverFact.tsx'
-import { COVER_LABEL_FONT, COVER_TITLE_FONT, coverInk } from './coverTexture.ts'
-import { CoverScene } from './CoverScene.tsx'
+import { COVER_LABEL_FONT, COVER_TITLE_FONT, coverInk } from './coverInk.ts'
+
+// The 3D code loads as a separate chunk, so that the first load does not wait for it. Task 9 step 5.
+const CoverScene = lazy(() => import('./CoverScene.tsx').then((m) => ({ default: m.CoverScene })))
 import { clearHandoff, peekHandoff } from './handoff.ts'
 import { plainClick } from './links.ts'
 
@@ -21,9 +24,10 @@ interface CoverPageProps {
   book: Book
   /** Undefined while the introductions load. Null if they did not load. */
   intro: Intro | null | undefined
+  layout: ScreenLayout
 }
 
-export function CoverPage({ book, intro }: CoverPageProps) {
+export function CoverPage({ book, intro, layout }: CoverPageProps) {
   const group = groupOf(book)
   const reducedMotion = useReducedMotion()
   const [webgl, setWebgl] = useState(hasWebGL)
@@ -104,15 +108,18 @@ export function CoverPage({ book, intro }: CoverPageProps) {
     <main className="cover-page" data-mode={mode} data-landed={landed} data-opening={opening}>
       {webgl && fontsReady && stage && (
         <SceneBoundary onError={onSceneError}>
-          <CoverScene
-            book={book}
-            center={stage.center}
-            coverPx={stage.coverPx}
-            start={start}
-            onLanded={onLanded}
-            opening={opening}
-            onOpened={onOpened}
-          />
+          <Suspense fallback={null}>
+            <CoverScene
+              book={book}
+              center={stage.center}
+              coverPx={stage.coverPx}
+              start={start}
+              onLanded={onLanded}
+              opening={opening}
+              onOpened={onOpened}
+              detail={layout === 'narrow' ? 'low' : 'full'}
+            />
+          </Suspense>
         </SceneBoundary>
       )}
       <div className="cover-inner">

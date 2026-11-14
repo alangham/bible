@@ -7,7 +7,7 @@
 // chapters change by a cross-fade.
 
 import gsap from 'gsap'
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type TouchEvent as ReactTouchEvent } from 'react'
 import { groupOf, type Book } from '../data/books.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
 import { bookHref, chapterHref, timelineHref } from '../router.ts'
@@ -27,7 +27,11 @@ import { ReadWith } from './ReadWith.tsx'
 import { plainClick } from './links.ts'
 import { autoTarget, clampTarget, cornerPoint, turnProgress, type Corner } from './turn/curl.ts'
 import { pageImage } from './turn/pageImage.ts'
-import { PageTurn, TURN_MARGIN, type TurnDrive } from './turn/PageTurn.tsx'
+import { TURN_MARGIN } from './turn/curl.ts'
+import type { TurnDrive } from './turn/PageTurn.tsx'
+
+// The 3D code loads as a separate chunk, when a page turns for the first time. Task 9 step 5.
+const PageTurn = lazy(() => import('./turn/PageTurn.tsx').then((m) => ({ default: m.PageTurn })))
 
 interface SpreadPageProps {
   book: Book
@@ -52,6 +56,9 @@ interface Turn {
 const TURN_S = 0.9
 /** Duration of each half of the cross-fade, in ms. */
 const FADE_MS = 180
+/** A swipe that turns the page in the narrow layout: this distance sideways or more, in less than this time. */
+const SWIPE_MIN_PX = 60
+const SWIPE_MAX_MS = 800
 
 export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPageProps) {
   const [text, setText] = useState<BookText | null>(null)
@@ -198,6 +205,11 @@ export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPagePr
 
   const curlAllowed = webgl && !reducedMotion && layout === 'wide'
 
+  // Load the 3D code of the turn before the first turn, when the page can curl.
+  useEffect(() => {
+    if (curlAllowed) void import('./turn/PageTurn.tsx').catch(() => undefined)
+  }, [curlAllowed])
+
   /**
    * Ends a turn or a cross-fade from `from`. `to` is null for a cancelled turn. If the address
    * changed during the turn, for example by the back button, the page shows that chapter instead.
@@ -324,6 +336,27 @@ export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPagePr
     },
     [view.right, text, book.chapters, curlAllowed, startTurn, crossFade],
   )
+
+  // The narrow layout: a swipe sideways on the page turns it. Task 9 step 2.
+  // A swipe to the left goes to the next chapter, as a page turns from right to left.
+  const swipe = useRef<{ x: number; y: number; t: number } | null>(null)
+  const onTouchStart = (e: ReactTouchEvent) => {
+    if (e.touches.length !== 1) {
+      swipe.current = null
+      return
+    }
+    const t = e.touches[0]
+    swipe.current = { x: t.clientX, y: t.clientY, t: performance.now() }
+  }
+  const onTouchEnd = (e: ReactTouchEvent) => {
+    const s = swipe.current
+    swipe.current = null
+    if (!s || e.changedTouches.length !== 1) return
+    const t = e.changedTouches[0]
+    const dx = t.clientX - s.x
+    const dy = t.clientY - s.y
+    if (Math.abs(dx) >= SWIPE_MIN_PX && Math.abs(dx) > 1.5 * Math.abs(dy) && performance.now() - s.t < SWIPE_MAX_MS) go(dx < 0 ? 1 : -1)
+  }
 
   // The leaf is on screen: change the pages under it.
   const onShown = useCallback(() => {
@@ -468,7 +501,13 @@ export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPagePr
       </p>
 
       <div className="spread-stage">
-        <div className="spread-book" ref={bookRef} style={{ '--board': groupOf(book).cloth } as CSSProperties}>
+        <div
+          className="spread-book"
+          ref={bookRef}
+          style={{ '--board': groupOf(book).cloth } as CSSProperties}
+          onTouchStart={layout === 'narrow' ? onTouchStart : undefined}
+          onTouchEnd={layout === 'narrow' ? onTouchEnd : undefined}
+        >
           <div className="page page-left" ref={leftPage}>
             <SceneView ref={leftScene} values={leftValues} half="left" />
           </div>
@@ -526,7 +565,9 @@ export function SpreadPage({ book, chapter, verse, layout, books }: SpreadPagePr
                   finish(turn.from, turn.to)
                 }}
               >
-                <PageTurn width={turn.width} height={turn.height} dir={turn.dir} front={turn.front} back={turn.back} drive={drive} onShown={onShown} />
+                <Suspense fallback={null}>
+                  <PageTurn width={turn.width} height={turn.height} dir={turn.dir} front={turn.front} back={turn.back} drive={drive} onShown={onShown} />
+                </Suspense>
               </SceneBoundary>
             </div>
           )}

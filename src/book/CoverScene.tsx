@@ -61,15 +61,21 @@ export interface CoverSceneProps {
   opening?: boolean
   /** Called when the book is open. */
   onOpened?: () => void
+  /**
+   * "low" for the narrow layout: fewer pixels and a smaller shadow map, so that a
+   * phone keeps its frame rate. docs/TASKS.md Task 9 step 4.
+   */
+  detail?: 'full' | 'low'
 }
 
-export function CoverScene(props: CoverSceneProps) {
+export function CoverScene({ detail = 'full', ...props }: CoverSceneProps) {
+  const low = detail === 'low'
   return (
     <Canvas
       className="cover-canvas"
       shadows
       flat
-      dpr={[1, 2]}
+      dpr={low ? 1 : [1, 2]}
       gl={{ alpha: true, antialias: true }}
       camera={{ fov: 26, near: 0.1, far: 200 }}
       aria-hidden="true"
@@ -80,7 +86,7 @@ export function CoverScene(props: CoverSceneProps) {
         castShadow
         position={[-5, 16, -3]}
         intensity={1}
-        shadow-mapSize={[2048, 2048]}
+        shadow-mapSize={low ? [512, 512] : [2048, 2048]}
         shadow-camera-left={-8}
         shadow-camera-right={8}
         shadow-camera-top={8}

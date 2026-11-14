@@ -7,6 +7,9 @@
 // the axis roll over the cylinder, and points past the half turn lie flat on top, face down.
 // With a cylinder of radius 0 the fold is a crease, and the corner lands exactly on D.
 
+/** The canvas of the turn reaches past the book by this part of the page height, above and below. */
+export const TURN_MARGIN = 0.15
+
 export type Corner = 'bottom' | 'top'
 
 export interface Curl {

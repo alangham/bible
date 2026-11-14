@@ -3,25 +3,37 @@
 // The spines are drawn in 3D. Each spine is also a real `a` element that lies
 // over the spine on screen, so that keyboard and screen reader users can use it.
 // Without WebGL, the `a` elements show as flat spines.
+//
+// The narrow layout, below 768 px, shows one stack at a time with flat spines of 44 px or more.
+// The reader moves between stacks by swipe, or with the two stack buttons. docs/DESIGN.md section 4.1.
 
 import gsap from 'gsap'
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import type { ScreenLayout } from '../screenLayout.ts'
 import { clearHandoff, setHandoff } from '../book/handoff.ts'
 import { groupOf, spineThickness, type Book, type GroupName } from '../data/books.ts'
 import { bookHref, sourcesHref, timelineHref } from '../router.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { layoutTable, spineOffsetPx } from './layout.ts'
 import { Legend } from './Legend.tsx'
-import { SPINE_FONT_FAMILY } from './spineTexture.ts'
+import { SPINE_FONT_FAMILY } from './spineFont.ts'
 import { SceneBoundary } from './SceneBoundary.tsx'
-import { TableScene, type SpineRect } from './TableScene.tsx'
+import type { SpineRect } from './TableScene.tsx'
+
+// The 3D code loads as a separate chunk, so that the first load does not wait for it. Task 9 step 5.
+const TableScene = lazy(() => import('./TableScene.tsx').then((m) => ({ default: m.TableScene })))
 import { hasWebGL } from './webgl.ts'
 
 const STACKS = [1, 2, 3, 4, 5]
+/** The least thickness of a spine in the narrow layout: the touch size of docs/DESIGN.md section 3. */
+const NARROW_SPINE_MIN_PX = 44
 /** Duration of the move of the selected spine before the cover page opens. */
 const LEAVE_S = 0.35
 
-export function TablePage({ books }: { books: Book[] }) {
+export function TablePage({ books, layout: screen }: { books: Book[]; layout: ScreenLayout }) {
+  const narrow = screen === 'narrow'
+  const trackRef = useRef<HTMLElement>(null)
+  const [shownStack, setShownStack] = useState(1)
   const [picked, setPicked] = useState<GroupName | null>(null)
   const [hoveredId, setHoveredId] = useState<string | null>(null)
   const [leavingId, setLeavingId] = useState<string | null>(null)
@@ -55,6 +67,13 @@ export function TablePage({ books }: { books: Book[] }) {
     [],
   )
 
+  // In the narrow layout, a selected group brings the first stack that holds it into view.
+  const onPick = (group: GroupName | null) => {
+    setPicked(group)
+    const first = group && books.find((b) => b.group === group)
+    if (narrow && first && first.stack !== shownStack) showStack(trackRef.current, first.stack, reducedMotion)
+  }
+
   const dimmedIds = useMemo(
     () => new Set(books.filter((b) => picked !== null && b.group !== picked).map((b) => b.id)),
     [books, picked],
@@ -62,8 +81,8 @@ export function TablePage({ books }: { books: Book[] }) {
   const onRects = useCallback((list: SpineRect[]) => setRects(new Map(list.map((r) => [r.id, r]))), [])
   const onSceneError = useCallback(() => setWebgl(false), [])
 
-  const mode = webgl ? '3d' : 'flat'
-  const ready = !webgl || rects !== null
+  const mode = webgl && !narrow ? '3d' : 'flat'
+  const ready = mode === 'flat' || rects !== null
 
   // docs/TASKS.md Task 4 step 7: the selected spine slides out, then the cover
   // page opens and the book lands there. Without 3D or with reduced motion,
@@ -104,20 +123,47 @@ export function TablePage({ books }: { books: Book[] }) {
         </div>
       </header>
 
+      {narrow && (
+        <div className="stack-pager">
+          {/* aria-disabled, not disabled, so that the button keeps the focus at the first and the last stack. */}
+          <button type="button" aria-disabled={shownStack === 1} onClick={() => shownStack > 1 && showStack(trackRef.current, shownStack - 1, reducedMotion)}>
+            Previous stack
+          </button>
+          <p aria-live="polite">
+            Stack {shownStack} of {STACKS.length}
+          </p>
+          <button
+            type="button"
+            aria-disabled={shownStack === STACKS.length}
+            onClick={() => shownStack < STACKS.length && showStack(trackRef.current, shownStack + 1, reducedMotion)}
+          >
+            Next stack
+          </button>
+        </div>
+      )}
+
       <div className="table-scene" data-mode={mode} data-reduced-motion={reducedMotion}>
-        {webgl && fontsReady && (
+        {mode === '3d' && fontsReady && (
           <SceneBoundary onError={onSceneError}>
-            <TableScene
-              layout={layout}
-              hoveredId={hoveredId}
-              leavingId={leavingId}
-              dimmedIds={dimmedIds}
-              reducedMotion={reducedMotion}
-              onRects={onRects}
-            />
+            <Suspense fallback={null}>
+              <TableScene
+                layout={layout}
+                hoveredId={hoveredId}
+                leavingId={leavingId}
+                dimmedIds={dimmedIds}
+                reducedMotion={reducedMotion}
+                onRects={onRects}
+              />
+            </Suspense>
           </SceneBoundary>
         )}
-        <nav className="spine-links" aria-label="Books" data-ready={ready}>
+        <nav
+          className="spine-links"
+          aria-label="Books"
+          data-ready={ready}
+          ref={trackRef}
+          onScroll={narrow ? () => setShownStack(stackInView(trackRef.current)) : undefined}
+        >
           {STACKS.map((stack) => (
             <ul key={stack} className="stack" aria-label={`Stack ${stack}`}>
               {books
@@ -130,7 +176,7 @@ export function TablePage({ books }: { books: Book[] }) {
                       href={bookHref(book.id)}
                       data-group={book.group}
                       data-dimmed={dimmedIds.has(book.id)}
-                      style={spineStyle(book, books.indexOf(book), mode, rects?.get(book.id), hoveredId === book.id && !reducedMotion)}
+                      style={spineStyle(book, books.indexOf(book), mode, rects?.get(book.id), hoveredId === book.id && !reducedMotion, narrow)}
                       onClick={(event) => onSpineClick(event, book)}
                       onMouseEnter={() => setHoveredId(book.id)}
                       onMouseLeave={() => setHoveredId((id) => (id === book.id ? null : id))}
@@ -146,9 +192,20 @@ export function TablePage({ books }: { books: Book[] }) {
         </nav>
       </div>
 
-      <Legend picked={picked} onPick={setPicked} />
+      <Legend picked={picked} onPick={onPick} />
     </main>
   )
+}
+
+/** The stack that fills most of the narrow track. Stacks are numbered from 1. */
+function stackInView(track: HTMLElement | null): number {
+  if (!track || track.clientWidth === 0) return 1
+  return Math.min(STACKS.length, Math.max(1, Math.round(track.scrollLeft / track.clientWidth) + 1))
+}
+
+/** Scrolls the narrow track to a stack. */
+function showStack(track: HTMLElement | null, stack: number, reducedMotion: boolean) {
+  track?.scrollTo({ left: (stack - 1) * track.clientWidth, behavior: reducedMotion ? 'auto' : 'smooth' })
 }
 
 /**
@@ -161,6 +218,7 @@ function spineStyle(
   mode: '3d' | 'flat',
   rect: SpineRect | undefined,
   slidOut: boolean,
+  narrow: boolean,
 ): CSSProperties {
   if (mode === '3d') {
     if (!rect) return {}
@@ -180,7 +238,7 @@ function spineStyle(
     } as CSSProperties
   }
   const group = groupOf(book)
-  const thickness = spineThickness(book.chapters)
+  const thickness = narrow ? Math.max(NARROW_SPINE_MIN_PX, spineThickness(book.chapters)) : spineThickness(book.chapters)
   return {
     height: thickness,
     background: group.cloth,

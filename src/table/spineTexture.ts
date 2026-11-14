@@ -6,7 +6,9 @@ import type { Group } from '../data/books.ts'
 /** Texture pixels for each mockup px. */
 const SCALE = 4
 
-export const SPINE_FONT_FAMILY = '"Cormorant Garamond", Georgia, serif'
+import { SPINE_FONT_FAMILY } from './spineFont.ts'
+
+export { SPINE_FONT_FAMILY }
 
 export function makeSpineTexture(name: string, group: Group, widthPx: number, thicknessPx: number) {
   const canvas = document.createElement('canvas')

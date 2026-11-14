@@ -484,6 +484,36 @@ Stop and report.
 
 ---
 
+## Task 9b. Standard accessibility check and two date limits
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: apply Arthur's decisions of 2026-11-14 on the open points of Task 8b and Task 9.
+
+Steps:
+
+1. Arthur approves the install of axe-core. Install `@axe-core/playwright` as a development dependency, with an exact version and no range. Record the version in the report. Do not add it to the site bundle.
+2. Add axe-core to the accessibility tests for each page type at 1440 px and at 390 px. Keep your own checks also. Add the pages that the check did not cover: the travel overlay, the link pop-up, and the list of a selected book on the timeline.
+3. Correct each failure that axe-core reports. If a failure needs a design decision, do not decide it. Put it in `docs/POLISH.md` with the status `PROPOSED`, and name it in the report.
+4. Add two rules for the dates of the timeline. They are in section 4.6 of `docs/DESIGN.md`:
+   - "Before" a dated event cuts the end of the range at that year. 2 Kings ends at 538 BC.
+   - A book is not written before the last event that its Written fact names. Daniel starts at 536 BC.
+5. Check each of the other books for the two cases. Give each book that changes in the report.
+6. Mark stays as built. Record that Arthur accepted it.
+7. Update the tests and `docs/CONTENT-SOURCES.md`.
+8. Run the `accuracy-reviewer` agent on `dates.json` after your last correction.
+
+Done when:
+
+- The tests pass, with axe-core.
+- The report gives the axe-core version, the number of failures that it found, and each book whose date changed.
+
+Stop and report.
+
+---
+
 ## Task 10. Design fixes
 
 Status: TODO

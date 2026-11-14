@@ -56,6 +56,7 @@ Hebrews is in General Letters, as on the wall image.
 - Two layouts, selected by screen width. The limit is 768 px.
   - Wide layout, 768 px or more: five stacks in one view, as in mockup D1. The spines can be thinner than 44 px. This is the one permitted exception to the 44 px size.
   - Narrow layout, below 768 px: one stack at a time with spines of 44 px or more. Move between stacks by swipe. Task 9 builds this layout.
+  - In the narrow layout, the table page has flat spines and no 3D scene. A legend group moves the view to the first stack that has a book of that group.
 - One function in the code decides which layout applies. No other code tests the screen width. Reason: design fixes will follow, and the rule can change, for example to a test of the input type. A wide touch screen gets the wide layout with thin spines for now. This is a known limit.
 
 ### 4.2 Cover (book page, mockup D2)
@@ -179,6 +180,9 @@ Arthur decided the two bands on 2026-11-14.
   - A fact that gives no date: the book goes in a group named "Date not known" at the end of its band.
   - Rules for the words of a fact, as built and accepted on 2026-11-14: "early" and "late" are the halves of a century or a decade. "Mid" is the middle part. A decade is a range of 10 years. Two parts of the words make one range. "Soon after" a dated event gives the year of that event.
   - Where the words give a year and a century, the year leads. Example: Obadiah stands at 586 BC, as Lamentations does.
+  - A limit in the words limits the range. "Before" a dated event cuts the end of the range at that year. Example: 2 Kings ends at 538 BC. Arthur decided this on 2026-11-14.
+  - A book is not written before the last event that its Written fact names. The range starts at the year of that event. Example: Daniel starts at 536 BC. Arthur decided this on 2026-11-14.
+  - Where a fact gives one date and says that a second date is "also possible", the first date leads. Example: Mark.
   - The time of a person is not a period, unless `public/data/periods.json` has an entry for it. Arthur decided on 2026-11-14 that the table gets no entry for the time of Moses, of Joshua, or of Solomon. So Genesis to Joshua, Psalms, and Ecclesiastes stay in "Date not known". Reason: the date of Moses is disputed, and the site does not choose years for it.
 - Books with the same date stack, so that no spine covers a different spine.
 - A book whose Written fact has a "Scholars differ" detail shows a small sign. The sign has a text label for screen readers. The detail itself stays on the cover.

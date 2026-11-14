@@ -152,8 +152,9 @@ function useFontReady() {
 }
 
 /**
- * The name of a spine for a screen reader: the name, the date, the sign, and for the selected book
- * the second action. It starts with the visible name.
+ * The name of a spine in the wide layout, for a screen reader: the name, the date, the sign, and for
+ * the selected book the second action. It starts with the visible name. The rows of the narrow layout
+ * take their name from their visible text and screen-reader text instead.
  */
 function spineLabel(book: Book, date: BookDate, differ: boolean, selected: boolean): string {
   return `${book.name}, ${dateLabel(date)}${differ ? ', scholars differ on the date' : ''}${selected ? '. Select again to open its cover' : ''}`
@@ -366,13 +367,16 @@ function DateList({ books, data, differ, selected, picked, onActivate }: ViewPro
                 data-differ={differ.has(b.id)}
                 data-dimmed={picked !== null && b.group !== picked}
                 aria-pressed={selected === b.id}
-                aria-label={spineLabel(b, date, differ.has(b.id), selected === b.id)}
                 style={{ background: group.cloth, color: group.text }}
                 onClick={() => onActivate(b.id)}
               >
+                {/* The name comes from the visible text, so that it holds each visible word (WCAG 2.5.3). */}
                 <span className="tl-spine-name">{b.name}</span>
-                <span className="tl-row-date" aria-hidden="true">
+                <span className="tl-row-date">
+                  <span className="sr-only">, </span>
                   {dateLabel(date)}
+                  {differ.has(b.id) && <span className="sr-only">, scholars differ on the date</span>}
+                  {selected === b.id && <span className="sr-only">. Select again to open its cover</span>}
                 </span>
               </button>
               {selected === b.id && <QuotedList book={b} books={books} data={data} differ={differ} level={3} />}

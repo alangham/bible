@@ -56,7 +56,7 @@ test.describe('timeline page', () => {
     await page.goto('./#/timeline')
     await expect(page.locator('button.tl-row')).toHaveCount(66)
     await expect(page.locator('path.tl-arc')).toHaveCount(0)
-    await page.getByRole('button', { name: /^Romans,/ }).click()
+    await page.getByRole('button', { name: /^Romans\b/ }).click()
     await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
   })
 

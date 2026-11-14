@@ -79,11 +79,49 @@ describe('dates.json (docs/TASKS.md Task 8 steps 1 to 3)', () => {
     }
   })
 
-  it('has years that are in the words, or follow from a century, a decade, or a period', () => {
+  it('has years that are in the words, or follow from a century, a decade, or a period, cut by a limit (Task 9b)', () => {
     for (const d of dates) {
       if (d.kind === 'unknown') continue
-      expect([d.from, d.to], `${d.id}: "${d.words}"`).toEqual(yearsFromWords(d.words))
+      const [from, to] = yearsFromWords(d.words)!
+      const expected = [Math.max(from, d.after?.year ?? -Infinity), Math.min(to, d.before?.year ?? Infinity)]
+      expect([d.from, d.to], `${d.id}: "${d.words}"`).toEqual(expected)
     }
+  })
+
+  it('takes the year of each limit from its words in the Written fact (Task 9b)', () => {
+    for (const d of dates) {
+      const fact = intros.find((i) => i.id === d.id)!.written
+      for (const limit of [d.after, d.before]) {
+        if (!limit) continue
+        expect(fact, d.id).toContain(limit.words)
+        const years = [...limit.words.matchAll(/(\d{2,4}) BC|AD (\d{2,4})/g)].map((m) => (m[1] ? -Number(m[1]) : Number(m[2])))
+        expect(years.at(-1), d.id).toBe(limit.year)
+      }
+    }
+  })
+
+  it('accounts for each year of a dated Written fact: in the words of the date, or in a limit (Task 9b step 5)', () => {
+    // A year that no rule uses, with the reason. Arthur decides these.
+    const open: Record<string, string> = {
+      // The call of Isaiah is not the last event that the fact names: Isaiah outlived Sennacherib, with no year.
+      isaiah: '740 BC',
+    }
+    for (const d of dates) {
+      if (d.kind === 'unknown') continue
+      const fact = intros.find((i) => i.id === d.id)!.written
+      const traditional = fact
+        .split(/(?<=\.)\s+/)
+        .filter((s) => !/^An older view/.test(s))
+        .join(' ')
+      const used = [d.words, d.after?.words ?? '', d.before?.words ?? '', open[d.id] ?? ''].join(' | ')
+      for (const m of traditional.matchAll(/\d{2,4} BC|AD \d{2,4}/g)) expect(used, `${d.id}: "${m[0]}"`).toContain(m[0])
+    }
+  })
+
+  it('cuts 2 Kings at 538 BC and starts Daniel at 536 BC (docs/DESIGN.md section 4.6)', () => {
+    const find = (id: string) => dates.find((x) => x.id === id)!
+    expect([find('2-kings').from, find('2-kings').to]).toEqual([-600, -538])
+    expect([find('daniel').from, find('daniel').to]).toEqual([-536, -501])
   })
 
   it('gives the kind that the years show', () => {

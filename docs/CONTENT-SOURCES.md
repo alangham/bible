@@ -2551,84 +2551,88 @@ How the words give the years:
 8. The time of a person gives no years, unless the table of periods has an entry for it. Arthur's decision 2 under "Periods" says this.
 9. Words that give only the latest time, or only the earliest time, give no date: "before AD 70", "no later than the 90s AD", "by the time of King David", "some time after David became king", "no earlier than about AD 62", "from about 520 BC". The book goes in the group "Date not known" and on the "Not verified" list. Task 8 step 2 says this.
 10. Words that place the writing soon after a dated event give the year of the event: "soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, and "soon after the end of David's reign, about 970 BC" is 970 BC.
-11. Where the words give a year and a century for the time of writing, the year leads (Task 8b). Obadiah: "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, as Lamentations is. A year that is only a limit, or the year of an event in the book, does not lead. 2 Kings: "the 6th century BC", and "before Cyrus let the captives in Babylon go home in 538 BC" is a limit. Daniel: "the 6th century BC", and 605 BC to 536 BC are the years of Daniel's life in the book. Isaiah: "the late 8th and early 7th centuries BC", and 740 BC is the year when Isaiah was called. These three books keep their century. Proverbs: "Begun under Solomon in the 10th century BC" is the start and "about 700 BC" is the end, so rule 6 makes one range, 1000 BC to 700 BC. A script found no other Written fact with a year and a century, outside the sentences that start "An older view".
+11. Where the words give a year and a century for the time of writing, the year leads (Task 8b). Obadiah: "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, as Lamentations is. A year that is only a limit, or the year of an event in the book, does not lead. 2 Kings: "the 6th century BC", and "before Cyrus let the captives in Babylon go home in 538 BC" is a limit. Daniel: "the 6th century BC", and 605 BC to 536 BC are the years of Daniel's life in the book. Isaiah: "the late 8th and early 7th centuries BC", and 740 BC is the year when Isaiah was called. These three books keep their century as the base of the range. Rules 14 and 15 then cut the range at the limit. Proverbs: "Begun under Solomon in the 10th century BC" is the start and "about 700 BC" is the end, so rule 6 makes one range, 1000 BC to 700 BC. A script found no other Written fact with a year and a century, outside the sentences that start "An older view".
 12. The spine stands at the year, or at the middle of the range.
 13. The line between the bands counts from the end of the last range in the Old Testament band to the start of the first range in the New Testament band (Task 8b). A book with one year is a range of one year. Books with no date do not count. The count has no year 0, and is rounded down to 10 years, because the line says "or more". With the dates below: 332 BC, the end of 1 and 2 Chronicles, to AD 40, the start of James, is 371 years. The line says "About 370 years or more between the last Old Testament book and the first New Testament book".
 
-Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6). Rules 11 and 13 are his decisions of the same day.
+14. A limit in the words limits the range (Task 9b). "Before" a dated event cuts the end of the range at that year. 2 Kings: "before Cyrus let the captives in Babylon go home in 538 BC" ends the 6th century at 538 BC, so the range is 600 BC to 538 BC.
+15. A book is not written before the last event that its Written fact names (Task 9b). The range starts at the year of that event. Daniel: "The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC", so the range is 536 BC to 501 BC. Isaiah: the last event that the fact names is that Isaiah outlived Sennacherib, and the fact gives no year for it, so the range stays 750 BC to 651 BC. The fact also names the call of Isaiah, about 740 BC. That year is not used, and it is on the "Not verified" list. Haggai and Joel name an event in 538 BC, which is before their year, so their date does not change.
+16. Where a fact gives one date and says that a second date is "also possible", the first date leads (Task 9b). Mark: "the second half of the 50s AD" leads, and "the middle or late 60s AD" is not used.
 
-| Book | Kind | First year | Last year | Words of the Written fact |
-|---|---|---|---|---|
-| Genesis | unknown |  |  | "in the time of Moses" |
-| Exodus | unknown |  |  | "in the lifetime of Moses" |
-| Leviticus | unknown |  |  | "in the lifetime of Moses" |
-| Numbers | unknown |  |  | "in the lifetime of Moses" |
-| Deuteronomy | unknown |  |  | "near the end of the 40 years in the wilderness, shortly before Moses died" |
-| Joshua | unknown |  |  | "in the lifetime of Joshua" |
-| Judges | unknown |  |  | "by the time of King David, 1010 to 970 BC" |
-| Ruth | unknown |  |  | "Some time after David became king, about 1010 BC" |
-| 1 Samuel | year | 970 BC | 970 BC | "about 970 BC" |
-| 2 Samuel | year | 970 BC | 970 BC | "about 970 BC" |
-| 1 Kings | range | 600 BC | 501 BC | "in the 6th century BC" |
-| 2 Kings | range | 600 BC | 501 BC | "the 6th century BC" |
-| 1 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |
-| 2 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |
-| Ezra | unknown |  |  | "The date of writing is not known" |
-| Nehemiah | range | 500 BC | 401 BC | "the 5th century BC" |
-| Esther | range | 500 BC | 401 BC | "probably the 5th century BC" |
-| Job | unknown |  |  | "The date is not certain" |
-| Psalms | unknown |  |  | "over many centuries, from the time of Moses to the time of Ezra" |
-| Proverbs | range | 1000 BC | 700 BC | "Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC" |
-| Ecclesiastes | unknown |  |  | "in the time of Solomon" |
-| Song of Solomon | range | 1000 BC | 901 BC | "in the 10th century BC" |
-| Isaiah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |
-| Jeremiah | range | 650 BC | 551 BC | "the late 7th and early 6th centuries BC" |
-| Lamentations | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |
-| Ezekiel | range | 600 BC | 551 BC | "the early 6th century BC" |
-| Daniel | range | 600 BC | 501 BC | "the 6th century BC" |
-| Hosea | range | 750 BC | 701 BC | "the late 8th century BC" |
-| Joel | year | 500 BC | 500 BC | "perhaps about 500 BC" |
-| Amos | range | 800 BC | 701 BC | "the 8th century BC" |
-| Obadiah | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |
-| Jonah | range | 800 BC | 701 BC | "the 8th century BC" |
-| Micah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |
-| Nahum | range | 700 BC | 601 BC | "the 7th century BC" |
-| Habakkuk | range | 650 BC | 601 BC | "late in the 7th century BC" |
-| Zephaniah | range | 700 BC | 601 BC | "in the 7th century BC" |
-| Haggai | year | 520 BC | 520 BC | "about 520 BC" |
-| Zechariah | unknown |  |  | "from about 520 BC" |
-| Malachi | year | 460 BC | 460 BC | "about 460 BC" |
-| Matthew | year | AD 60 | AD 60 | "about AD 60" |
-| Mark | range | AD 55 | AD 59 | "the second half of the 50s AD" |
-| Luke | unknown |  |  | "no earlier than about AD 62, just after the last events in Acts" |
-| John | range | AD 51 | AD 100 | "late in the 1st century AD" |
-| Acts | year | AD 62 | AD 62 | "about AD 62" |
-| Romans | year | AD 57 | AD 57 | "about AD 57" |
-| 1 Corinthians | year | AD 54 | AD 54 | "about AD 54" |
-| 2 Corinthians | range | AD 55 | AD 56 | "about AD 55 to 56" |
-| Galatians | year | AD 48 | AD 48 | "about AD 48" |
-| Ephesians | year | AD 62 | AD 62 | "about AD 62" |
-| Philippians | year | AD 62 | AD 62 | "about AD 62" |
-| Colossians | year | AD 62 | AD 62 | "about AD 62" |
-| 1 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |
-| 2 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |
-| 1 Timothy | range | AD 60 | AD 69 | "the 60s AD" |
-| 2 Timothy | year | AD 65 | AD 65 | "about AD 65" |
-| Titus | range | AD 60 | AD 69 | "the 60s AD" |
-| Philemon | year | AD 62 | AD 62 | "about AD 62" |
-| Hebrews | unknown |  |  | "before AD 70" |
-| James | range | AD 40 | AD 44 | "the early 40s AD" |
-| 1 Peter | range | AD 60 | AD 64 | "the early 60s AD" |
-| 2 Peter | range | AD 63 | AD 66 | "the mid 60s AD" |
-| 1 John | year | AD 85 | AD 85 | "about AD 85" |
-| 2 John | unknown |  |  | "no later than the 90s AD" |
-| 3 John | unknown |  |  | "no later than the 90s AD" |
-| Jude | range | AD 63 | AD 66 | "the mid 60s AD" |
-| Revelation | range | AD 93 | AD 96 | "the mid 90s AD" |
+Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6). Rules 11, 13, 14, and 15 are his decisions of the same day. He accepted rule 16, the date of Mark as built, on the same day. A unit test checks that each year in the traditional sentences of a dated Written fact is in the words of the date or in a limit. The one exception is the call of Isaiah, about 740 BC.
+
+| Book | Kind | First year | Last year | Words of the Written fact | Limit |
+|---|---|---|---|---|---|
+| Genesis | unknown |  |  | "in the time of Moses" |  |
+| Exodus | unknown |  |  | "in the lifetime of Moses" |  |
+| Leviticus | unknown |  |  | "in the lifetime of Moses" |  |
+| Numbers | unknown |  |  | "in the lifetime of Moses" |  |
+| Deuteronomy | unknown |  |  | "near the end of the 40 years in the wilderness, shortly before Moses died" |  |
+| Joshua | unknown |  |  | "in the lifetime of Joshua" |  |
+| Judges | unknown |  |  | "by the time of King David, 1010 to 970 BC" |  |
+| Ruth | unknown |  |  | "Some time after David became king, about 1010 BC" |  |
+| 1 Samuel | year | 970 BC | 970 BC | "about 970 BC" |  |
+| 2 Samuel | year | 970 BC | 970 BC | "about 970 BC" |  |
+| 1 Kings | range | 600 BC | 501 BC | "in the 6th century BC" |  |
+| 2 Kings | range | 600 BC | 538 BC | "the 6th century BC" | before 538 BC: "before Cyrus let the captives in Babylon go home in 538 BC" |
+| 1 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |  |
+| 2 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |  |
+| Ezra | unknown |  |  | "The date of writing is not known" |  |
+| Nehemiah | range | 500 BC | 401 BC | "the 5th century BC" |  |
+| Esther | range | 500 BC | 401 BC | "probably the 5th century BC" |  |
+| Job | unknown |  |  | "The date is not certain" |  |
+| Psalms | unknown |  |  | "over many centuries, from the time of Moses to the time of Ezra" |  |
+| Proverbs | range | 1000 BC | 700 BC | "Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC" |  |
+| Ecclesiastes | unknown |  |  | "in the time of Solomon" |  |
+| Song of Solomon | range | 1000 BC | 901 BC | "in the 10th century BC" |  |
+| Isaiah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |  |
+| Jeremiah | range | 650 BC | 551 BC | "the late 7th and early 6th centuries BC" |  |
+| Lamentations | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |  |
+| Ezekiel | range | 600 BC | 551 BC | "the early 6th century BC" |  |
+| Daniel | range | 536 BC | 501 BC | "the 6th century BC" | after 536 BC: "The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC" |
+| Hosea | range | 750 BC | 701 BC | "the late 8th century BC" |  |
+| Joel | year | 500 BC | 500 BC | "perhaps about 500 BC" | after 538 BC: "after Judah's people came home from the captivity in Babylon, 586 to 538 BC" |
+| Amos | range | 800 BC | 701 BC | "the 8th century BC" |  |
+| Obadiah | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |  |
+| Jonah | range | 800 BC | 701 BC | "the 8th century BC" |  |
+| Micah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |  |
+| Nahum | range | 700 BC | 601 BC | "the 7th century BC" |  |
+| Habakkuk | range | 650 BC | 601 BC | "late in the 7th century BC" |  |
+| Zephaniah | range | 700 BC | 601 BC | "in the 7th century BC" |  |
+| Haggai | year | 520 BC | 520 BC | "about 520 BC" | after 538 BC: "after the Jews returned from Babylon in 538 BC" |
+| Zechariah | unknown |  |  | "from about 520 BC" |  |
+| Malachi | year | 460 BC | 460 BC | "about 460 BC" |  |
+| Matthew | year | AD 60 | AD 60 | "about AD 60" |  |
+| Mark | range | AD 55 | AD 59 | "the second half of the 50s AD" |  |
+| Luke | unknown |  |  | "no earlier than about AD 62, just after the last events in Acts" |  |
+| John | range | AD 51 | AD 100 | "late in the 1st century AD" |  |
+| Acts | year | AD 62 | AD 62 | "about AD 62" |  |
+| Romans | year | AD 57 | AD 57 | "about AD 57" |  |
+| 1 Corinthians | year | AD 54 | AD 54 | "about AD 54" |  |
+| 2 Corinthians | range | AD 55 | AD 56 | "about AD 55 to 56" |  |
+| Galatians | year | AD 48 | AD 48 | "about AD 48" |  |
+| Ephesians | year | AD 62 | AD 62 | "about AD 62" |  |
+| Philippians | year | AD 62 | AD 62 | "about AD 62" |  |
+| Colossians | year | AD 62 | AD 62 | "about AD 62" |  |
+| 1 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |  |
+| 2 Thessalonians | year | AD 50 | AD 50 | "about AD 50" |  |
+| 1 Timothy | range | AD 60 | AD 69 | "the 60s AD" |  |
+| 2 Timothy | year | AD 65 | AD 65 | "about AD 65" |  |
+| Titus | range | AD 60 | AD 69 | "the 60s AD" |  |
+| Philemon | year | AD 62 | AD 62 | "about AD 62" |  |
+| Hebrews | unknown |  |  | "before AD 70" |  |
+| James | range | AD 40 | AD 44 | "the early 40s AD" |  |
+| 1 Peter | range | AD 60 | AD 64 | "the early 60s AD" |  |
+| 2 Peter | range | AD 63 | AD 66 | "the mid 60s AD" |  |
+| 1 John | year | AD 85 | AD 85 | "about AD 85" |  |
+| 2 John | unknown |  |  | "no later than the 90s AD" |  |
+| 3 John | unknown |  |  | "no later than the 90s AD" |  |
+| Jude | range | AD 63 | AD 66 | "the mid 60s AD" |  |
+| Revelation | range | AD 93 | AD 96 | "the mid 90s AD" |  |
 
 ## Not verified
 
-Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, 7b, and 8 and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 19.
+Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7, 7b, and 8 and Arthur's decisions do not settle. The links that changed type in Task 7b are in the section before this list. Number of items: 20.
 
 1. Period, the time of the judges: no approved source gives the year when the time of the judges began. The site gives only the end, before about 1050 BC.
 2. Period, Greek rule: no approved source gives the year when Greek rule ended, or states 332 BC as its start. The site uses the end of Persian rule as the start of Greek rule.
@@ -2649,3 +2653,4 @@ Arthur reads this list. It has only the items that the rules of Tasks 4b, 4c, 7,
 17. Date of Hebrews, Task 8: The fact gives only the latest year: before AD 70. It gives no earliest year. Words: "before AD 70". Placed: in the group "Date not known".
 18. Date of 2 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".
 19. Date of 3 John, Task 8: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD". Placed: in the group "Date not known".
+20. Date of Isaiah, Task 9b, rule 15: the last event that the Written fact names is that Isaiah outlived Sennacherib, with no year. The fact also says "Isaiah was called about 740 BC". If the call counts as a limit, the range starts at 740 BC instead of 750 BC. Placed: 750 BC to 651 BC.

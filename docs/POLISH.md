@@ -133,3 +133,13 @@ Problem: each spine is 44 px thick, and the stacks have up to 14 rows. The page 
 
 Correction: options to examine. Thinner spines in the wide layout, with the same exception to the 44 px size that the table page has. Or stacks that open when the reader selects them. The two bands and the arcs must fit in one view at 1440 by 900 px.
 
+
+## 13. The spines of the wide table are below the WCAG size
+
+Status: PROPOSED
+
+Page: table, wide layout. Found by axe-core 4.14.0 in Task 9b on 2026-11-14, rule `target-size` (WCAG 2.2, 2.5.8, level AA).
+
+Problem: on screen, 26 of the 66 spines are 19 to 23.6 px thick at 1440 by 900 px. WCAG 2.2 asks for a target of 24 by 24 px or more, or space around a smaller target. The spines lie on each other in a stack, so there is no space. Section 4.1 of `docs/DESIGN.md` permits spines thinner than 44 px in the wide layout. It does not name the 24 px of WCAG.
+
+Correction: options to examine. A thickness of 24 px or more on screen for each spine in the wide layout. Or a second way to reach each book that meets the size, for example the legend or a list. The test `e2e/a11y.spec.ts` holds this failure in its list `KNOWN` until Arthur decides.

@@ -486,7 +486,7 @@ Stop and report.
 
 ## Task 9b. Standard accessibility check and two date limits
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

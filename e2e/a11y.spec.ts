@@ -1,7 +1,8 @@
 /// <reference lib="dom" />
 // An accessibility check of each page type, at the wide and the narrow layout. docs/TASKS.md Task 9 step 6.
 //
-// The checks run in the page, with no extra package:
+// axe-core checks the WCAG 2.0, 2.1, and 2.2 rules of level A and AA. Task 9b step 2.
+// The checks below also run in the page. Task 9 step 6:
 // 1. The page has a language, one h1, and no skipped heading level.
 // 2. Each visible link and button has an accessible name and can take focus.
 // 3. Each visible control is 44 px or more in each direction (docs/DESIGN.md section 3). An inline
@@ -12,7 +13,38 @@
 //    canvas, text with an opacity below 1, and text in a dimmed state.
 // 5. The page does not scroll sideways.
 
+import AxeBuilder from '@axe-core/playwright'
 import { expect, test, type Page } from '@playwright/test'
+
+/** The WCAG rules that axe-core checks: WCAG 2.0, 2.1, and 2.2, levels A and AA. Task 9b step 2. */
+const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22aa']
+
+/**
+ * Known failures that wait for a design decision of Arthur, with their item in docs/POLISH.md.
+ * Task 9b step 3: the test does not fail on them, but each one must stay on this list and in POLISH.md.
+ */
+const KNOWN = [
+  // POLISH.md item 13: the spines of the table page in the wide layout are thinner than 24 px on screen.
+  // docs/DESIGN.md section 4.1 permits thin spines there. WCAG 2.2 rule 2.5.8 asks for 24 px.
+  { rule: 'target-size', layout: 'wide', page: 'table', selector: /^a\[href\$="#\/book\/[a-z0-9-]+"\]$/ },
+]
+
+/** The axe-core failures on the page, as text, without the known failures. An empty list is a pass. */
+async function axe(page: Page, where?: { layout: string; page: string }): Promise<string[]> {
+  const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+  return result.violations.flatMap((v) =>
+    v.nodes
+      .filter((n) => !KNOWN.some((k) => k.rule === v.id && k.layout === where?.layout && k.page === where?.page && k.selector.test(n.target.join(' '))))
+      .map((n) => `${v.id} (${v.impact}): ${n.target.join(' ')}: ${n.failureSummary?.split('\n')[1]?.trim() ?? ''}`),
+  )
+}
+
+/** Waits until the fonts, the data, and the fades of the page finish. */
+async function settled(page: Page) {
+  await page.waitForLoadState('networkidle')
+  await page.evaluate(() => document.fonts.ready)
+  await page.waitForTimeout(800)
+}
 
 const PAGES = [
   { name: 'table', path: './' },
@@ -195,17 +227,62 @@ test('the accessibility check finds a planted problem', async ({ page }) => {
   expect(problems.some((x) => /^page is \d+ px wide in a 390 px window$/.test(x))).toBe(true)
 })
 
+test('each known failure is still there, so that a stale entry of KNOWN fails the test', async ({ page }) => {
+  // When POLISH.md item 13 is done, this test fails: delete the entry from KNOWN and this test.
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.goto('./')
+  await settled(page)
+  const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+  const nodes = result.violations.filter((v) => v.id === 'target-size').flatMap((v) => v.nodes.map((n) => n.target.join(' ')))
+  expect(nodes.length).toBeGreaterThan(0)
+  expect(nodes.every((n) => KNOWN[0].selector.test(n))).toBe(true)
+})
+
 for (const layout of LAYOUTS) {
   for (const p of PAGES) {
     test(`accessibility: ${p.name}, ${layout.name} layout`, async ({ page }) => {
       await page.setViewportSize(layout.viewport)
       await page.goto(p.path)
       await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-      // Let the fonts, the data, and the fades of the page finish.
-      await page.waitForLoadState('networkidle')
-      await page.evaluate(() => document.fonts.ready)
-      await page.waitForTimeout(800)
+      await settled(page)
       expect(await audit(page, layout.name)).toEqual([])
+      expect(await axe(page, { layout: layout.name, page: p.name })).toEqual([])
     })
   }
+
+  // The states that a page load does not show. Task 9b step 2.
+  test(`accessibility: the link pop-up, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/book/hebrews/9')
+    await settled(page)
+    await page.getByRole('button', { name: /^Links of Hebrews 9:20/ }).click()
+    await expect(page.getByRole('dialog', { name: 'Links of Hebrews 9:20' })).toBeVisible()
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the list of a selected book on the timeline, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/timeline')
+    await settled(page)
+    await page.getByRole('button', { name: /^Romans\b/ }).click()
+    await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the travel overlay, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    // A fake clock holds the move of travel in its middle while axe-core runs.
+    await page.clock.install()
+    await page.goto('./#/book/hebrews/9')
+    await page.clock.runFor(3000)
+    await expect(page.getByRole('navigation', { name: 'Read with' })).toBeVisible()
+    await page.getByRole('navigation', { name: 'Read with' }).getByRole('link', { name: 'Leviticus 16' }).click()
+    await page.clock.runFor(900)
+    await expect(page.locator('.travel')).toBeVisible()
+    expect(await axe(page)).toEqual([])
+  })
 }

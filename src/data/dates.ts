@@ -4,6 +4,13 @@
 
 export type DateKind = 'year' | 'range' | 'unknown'
 
+/** A dated event in the Written fact that limits the range. docs/DESIGN.md section 4.6, Task 9b. */
+export interface DateLimit {
+  year: number
+  /** The words of the Written fact that name the event and its year. */
+  words: string
+}
+
 export interface BookDate {
   /** Book id, the same as in books.json. */
   id: string
@@ -14,6 +21,10 @@ export interface BookDate {
   to: number | null
   /** The words of the Written fact that give the date. */
   words: string
+  /** The last dated event that the fact names. The range starts no earlier than its year. */
+  after?: DateLimit
+  /** A dated event that the writing came before. The range ends no later than its year. */
+  before?: DateLimit
   /** Why the date is not clear from the fact. Such a book is on the "Not verified" list. */
   notVerified?: string
 }

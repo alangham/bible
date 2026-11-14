@@ -2,6 +2,8 @@
 
 Agreed with Arthur on 2026-11-13. Mockups D1, D2, and D3 are in the Claude design canvas "Bible App: landing page options". Arthur accepted them as "fine for now". Expect small changes later.
 
+WARNING: Section 7 is a redesign that Arthur decided on 2026-11-14. Section 7 replaces sections 1, 3, and 4.1 to 4.4 for the first page and the reading page. Tasks 11 to 18 in `docs/TASKS.md` build section 7. Claude Code builds a part of section 7 only when its task says so.
+
 ## 1. Goal
 
 The reader feels that they are inside the Bible. The reference is "The Long Light" template from scrolltide.co: a real 3D book on a sunlit linen table, pages that curl when you drag them, and a layered paper-cut scene on each spread. Use the idea. Do not copy the template's code, text, or art.
@@ -210,3 +212,160 @@ Arthur decided the two bands on 2026-11-14.
 - The ESV and other translations.
 - Hand-designed scenes for specific chapters.
 - Guided routes.
+
+## 7. Redesign of 2026-11-14
+
+Arthur decided each item in this section on 2026-11-14, in a design chat. The section covers two pages only: the first page and the reading page. Arthur said that the other pages and conventions come later.
+
+### 7.1 Reason
+
+- On the built spread at 1440 px, the text column is approximately 505 px wide. This is 35% of the screen width.
+- On a phone, the reader must zoom, select, and zoom out on the stacks before the reader can read a chapter.
+- Arthur's rule: the reader travels through the Bible, but there is no friction when the reader reads the Word.
+- The rule that governs each choice: the text is the interface. The wall is how the reader moves. All other parts stay out of the way.
+
+### 7.2 What goes and what stays
+
+- These parts go: the 3D book, the page turn, the paper-cut scenes, the stacks of books, the linen table, and the cover as a page of its own.
+- These parts stay, with no change to their content:
+  - The ten groups in nine categories of section 2. The colors change. See section 7.3.
+  - The Bible text rules of sections 4.3 and 5: headings, paragraphs, poetry lines, verse numbers, and only the manuscript footnotes.
+  - The two-layer authorship rule of section 4.2 and the three facts of each introduction.
+  - The rules for links, the read-with list, and the timeline in sections 4.5 and 4.6.
+- Section 7.7 gives the look of the links, travel, the trail, and the read-with list on the reading page.
+- Section 7.8 gives the look of the timeline, the quotation diagram, and the Sources page.
+
+### 7.3 Colors and fonts
+
+- Background: white, `#FFFFFF`. Ink: `#1D1D1F`. Secondary ink: `#6E6E73`.
+- Each group has one color. The book names and the band of the group use it. The label in a band is white for all groups.
+
+| Group | Color | Contrast with white |
+|---|---|---|
+| Law | `#C2255C` | 5.66 to 1 |
+| History | `#B01E35` | 6.81 to 1 |
+| Poetry & Wisdom | `#CD4C26` | 4.51 to 1 |
+| Major Prophets | `#9D6E00` | 4.50 to 1 |
+| Minor Prophets | `#667F19` | 4.55 to 1 |
+| Gospels | `#26828B` | 4.52 to 1 |
+| History (Acts) | `#6E6A66` | 5.36 to 1 |
+| Letters of Paul | `#1B2A41` | 14.44 to 1 |
+| General Letters | `#4B2E57` | 11.49 to 1 |
+| Prophecy | `#986694` | 4.50 to 1 |
+
+- The colors start from the wall photo. The Gospels are white on the photo. They are teal here, because the background is white.
+- Each color has a contrast of 4.5 to 1 or more against white. This is the limit of section 3. Arthur decided this on 2026-11-14. The designer measured the contrast with the WCAG formula. Six colors are darker than the photo for this reason: Poetry & Wisdom, Major Prophets, Minor Prophets, Gospels, History (Acts), and Prophecy. Major Prophets is a bronze, not the yellow of the photo.
+- NOT VERIFIED: the axe-core check was not run on these colors.
+- Size of a control. Arthur decided this on 2026-11-14. Each control is 24 by 24 px or more, on all screens. This is the target size of WCAG 2.2. The 44 px size of section 3 does not apply to the book names on the wall, the marks, the margin labels, and the controls inside a line of text. The numbers of the chapter grid are 44 px high or more. On 2026-11-14, 43 of the 66 book names on a phone were below 44 px high in the prototype.
+- Fonts:
+  - Inter ExtraBold, weight 800, capitals: the book names on the wall and the book name in a chapter heading.
+  - Inter: the bands, the controls, the section headings, and the verse numbers.
+  - Lora: the Bible text.
+
+### 7.4 The wall (first page)
+
+"Wall" is the new name for the first page. It replaces the table.
+
+- The wall shows the 66 book names in Bible order. A book name is the only control for a book. It has no box and no picture.
+- Poster form: each name fills the width of its column, as on the wall photo. The length of the name sets its size. The space between letters has a limit, so that a short name such as "JOB" grows in size and does not spread too far.
+- A band starts each group. The band is a solid bar in the group color with the group name in white capitals. There is no legend.
+- Two layouts, selected by screen width. One function in the code decides, as built. The limit stays at 900 px.
+- Wide layout, 900 px or more: five columns with the book counts of section 4.1. All 66 names and the bottom line fit in one view at 1440 by 900 px.
+- Narrow layout, below 900 px: each group is a block. A band is at the top of the block, and the names are in two columns below it. The wall is 520 px wide at most, in the center. NOT VERIFIED: the designer tested the narrow layout at 390 px wide only. The prototype has its limit at 700 px.
+- Each book name is 24 px high or more.
+- A line at the bottom of the wall has the name of the translation and the links to the pages of the Reference section.
+- On a phone, the names of a block are divided so that the two columns have almost the same height. A group with one book fills the full width. Arthur decided this on 2026-11-14.
+- The wall has no title.
+
+### 7.5 The reading page
+
+"Reading page" is the new name for the page with the chapter text. It replaces the spread.
+
+- A tap on a book name opens the text. There is no page between the wall and the text. The text opens at chapter 1 on the first visit to a book, and at the last-read chapter of that book after that.
+- One column, on desktop and on a phone. On desktop the column is 700 px wide, which is approximately 70 characters in a line. The reader scrolls.
+- The heading of a book: the band of the group, then the book name in Inter ExtraBold capitals, then the chapter number in a light weight. All three are in the group color.
+- The heading of a later chapter in the same scroll: the book name and the chapter number at a smaller size, with no band.
+- The verse numbers are in the group color.
+- The introduction: one control below the book heading, "About this book". It opens the three facts: What it is, Author, Written. "Scholars differ" opens the detail of section 4.2. The "Draft" label shows there until Arthur approves the introduction.
+- The cross-reference line of the Berean Standard Bible files shows as a small line below its section heading.
+- A thin bar stays at the top. It has two controls:
+  - "Books" goes back to the wall.
+  - The book name and chapter number open a grid of the chapter numbers of that book. A tap on a number opens that chapter.
+
+### 7.6 Movement
+
+- Continuous scroll: the next chapter follows the current chapter on the same page. At the end of a book, the next book starts with its band, its name, and its color.
+- The bar at the top and the page address change to the chapter in view.
+- A small link above the first heading opens the chapter before.
+- The book name moves from the wall into the heading, and back, in browsers that support this move. Other browsers get a cross-fade. Obey `prefers-reduced-motion`.
+
+- The addresses of the pages. The designer selected them on 2026-11-14. They keep the built addresses where a built page has a new page.
+
+| Address | Page |
+|---|---|
+| `#/` | The wall. |
+| `#/book/<id>` | The reading page at the last-read chapter of the book, or at chapter 1. |
+| `#/book/<id>/<chapter>` | The reading page at that chapter. |
+| `#/book/<id>/<chapter>/<verse>` | The reading page at that verse. Travel uses this address. |
+| `#/timeline` | The timeline. |
+| `#/quotations` | The quotation diagram. |
+| `#/sources` | The Sources page. |
+
+- When the reader scrolls to a different chapter, the address changes to that chapter. The change adds no entry to the browser history.
+
+### 7.7 Links on the reading page
+
+Arthur decided on 2026-11-14 to design the links before the build. The rules of section 4.5 have no change: the sources, the fit rule, the limit for marks, and how the read-with list is made. This section gives only the look.
+
+- One rule for all link controls: a control has the color of the group that it goes to. Example: a link from Hebrews to Exodus is in the Law color.
+- Marks. A quotation link is a solid dot. An echo link is a ring. A mark stays on the line of its verse number.
+- Where the links are. Arthur decided this on 2026-11-14.
+  - Wide screen: the text has no marks. The right margin shows each link as a label, on the line of its verse: the verse number, the dot or ring, and the reference of the linked passage. Where two labels meet, the lower label moves down.
+  - Narrow screen: the marks are in the text, after the verse number.
+  - The margin labels start at a width of 1180 px. Below that width, the marks are in the text. The limit is a value of the designer.
+- The cross-reference line below a section heading is a set of controls, one for each linked passage.
+- Pop-up. A tap on a mark, a label, or a section control opens it. It shows: the band of the linked group, the reference in capitals, the type of link and the passage that it comes from, the text of the linked passage, the reason line for a quotation link, the source, and the actions "Go there" and "Stay here". On a wide screen, it opens near the control. On a narrow screen, it opens from the bottom of the screen.
+- Travel. "Go there" opens the linked chapter at the linked verse. The change is direct, with no move between the two pages. The paragraph of the linked verse has a light background for a short time. Arthur decided this on 2026-11-14.
+  - The line in section 4.5 that says "The move must show that the reader crossed the Bible" does not apply to the redesign. Arthur said that he did not miss this move.
+  - Arthur's rule: after "Go there", the reader must have a way to get back.
+- Trail. After the first travel, a thin line below the top bar lists the stops. Each stop is a control in the color of its group. The current stop has an underline.
+  - The way back: when the reader is not on the first stop, the trail starts with the control "Back". "Back" opens the stop before the current stop, at its verse.
+- Read-with list. One line below the chapter heading, with the label "Read with". Each entry is a control for travel to that chapter. The source line "From OpenBible.info" is at the end.
+- Echo links. A control at the right of the top bar switches the echo links on and off.
+
+### 7.8 Reference section
+
+Arthur decided the three items of this section on 2026-11-14. The design of the pages is not complete.
+
+- The timeline, the quotation diagram, and the Sources page are one section. The working name of the section is "Reference". The working names of the pages are "Timeline", "Quotations", and "Sources".
+- The timeline and the quotation links are two pages.
+  - The timeline shows only when each book was written. It has no arcs.
+  - The quotation diagram shows which books quote which books. Arthur gave the hierarchical edge bundling diagram of D3 as the model: the 66 books are around a circle, in their groups, and curved lines join the books that have quotation links.
+- The timeline has no "Date not known" group. This replaces the decision of 2026-11-14 in section 4.6. A book with no exact date stands at an estimate and has a mark for the estimate. Arthur said on 2026-11-14 that the mark is an asterisk only if an asterisk is the best option.
+  - The mark that the designer selected: the name is in light letters, weight 500, where the other names have weight 800. Its range bar is a dashed line, or its dot is an open dot. On a narrow screen, the date text ends with the word "estimate". A line on the page says that a name in light letters has an estimated date. For a screen reader, the name has the words "estimated date".
+  - 17 books are in "Date not known" in `public/data/dates.json`.
+  - For 8 of them, the Written fact has a year: Judges, Ruth, Ezra, Zechariah, Luke, Hebrews, 2 John, and 3 John. The estimate can use that year by a rule. It needs no new fact. In the prototype, the estimate is the one year that the fact gives. This rule is a value of the designer.
+  - For 9 of them, the Written fact has no year: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Job, Psalms, and Ecclesiastes. The estimate needs years for the time of Moses, of Joshua, of Solomon, and of Ezra. These years must come from an approved source, and Arthur must approve them. NOT VERIFIED: the designer's sketches use years from memory for these 9 books.
+- The form of the timeline on a wide screen. Arthur decided this on 2026-11-14. One line with a break. The Old Testament books have one scale. A mark on the line shows approximately 400 years with no books. The New Testament books have a larger scale. Each book name is a control that opens the book. A thin bar under a name shows a range of years.
+- The timeline on a narrow screen: a list in date order. The break is one line in the list.
+- The quotation diagram in the prototype. These details are values of the designer, without a decision by Arthur:
+  - The color of a line goes from the color of the book that quotes to the color of the book that it quotes. Three steps of thickness show the number of quotation links.
+  - A tap on a book name lights its lines, dims the other lines, and shows a list: the books that it quotes and the books that quote it, with the number of quotation links for each. The list is the text form of the lines. A control in the list opens the book.
+  - On a narrow screen, a list control selects the book, because the names around the circle are small.
+- The links to the section in the prototype: a line at the bottom of the wall has the name of the translation and the links "Timeline", "Quotations", and "Sources". The top bar of each Reference page has "Books" and the three page names. This is a value of the designer.
+- The timeline shows no ring where scholars differ on the date. Arthur decided this on 2026-11-14. This replaces the sign of section 4.6. Reason: 47 of the 66 books have a "Scholars differ" detail for the date, so the sign tells the reader very little. One line below the timeline says that scholars differ on many dates, and that "About this book" gives the detail.
+- The fonts section of the Sources page credits Inter and Lora, with their copyright lines and their licences. Task 17 changes it when it removes the fonts of the first build.
+
+### 7.9 Prototype
+
+- A working prototype of sections 7.3 to 7.8 is the Claude artifact "Bible wall prototype". A copy is in `docs/prototype/`. Read `docs/prototype/README.md` first. It uses the real text, links, and introductions from `public/data/`.
+- Screenshots of the prototype are in `docs/screenshots/redesign/`.
+- The prototype is plain HTML and JavaScript in one file. It is a reference for the look and the movement. It is not code for the site.
+- Selected by the designer for the prototype, without a decision by Arthur: the chapter grid, the link to the chapter before, the move of the book name, the size values, and the details of section 7.7 that have no date.
+
+### 7.10 Open items
+
+1. The estimates for the 17 books on the timeline. Task 16 in `docs/TASKS.md` proposes them, and Arthur approves them.
+2. The narrow layout between 520 and 900 px wide. The designer did not test it. Task 12 reports on it.
+3. The bookmark and last-read idea is item 4 of `docs/BACKLOG.md`. The last-read chapter of each book is part of section 7.5 and is not a backlog idea.
+4. A check on a real phone.

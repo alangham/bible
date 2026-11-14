@@ -58,3 +58,29 @@ Open questions:
 
 1. How does a footnote look on the spread? A mark in the text that opens a note is one option. The pop-up for links in section 4.5 of `docs/DESIGN.md` is a similar control. The two must not be confused.
 2. Can the reader switch the footnote marks off?
+
+---
+
+## 4. A bookmark and the last-read chapter
+
+Added: 2026-11-14, by Arthur.
+
+Idea: the site remembers the place of the reader. The reader goes back to that place with one tap.
+
+What the feature can include. These are options, not decisions:
+
+- The last-read chapter. The site records the chapter in view when the reader leaves.
+- A bookmark. The reader marks a place, and the site keeps it.
+- A "Continue" control on the first page that opens the last-read place.
+
+Connection to the redesign of 2026-11-14:
+
+- Arthur decided that a tap on a book name opens chapter 1 on the first visit, and the last-read chapter of that book after that. That decision needs the last-read chapter of each book.
+- Arthur decided that the chapters follow each other in one continuous scroll. A chapter has no hard stop, so a record of the place is more useful.
+
+Open questions:
+
+1. Where does the site keep the place? The site has no server. Storage in the browser keeps the place on one device only.
+2. Is the place a chapter or a verse?
+3. Does the reader have one bookmark or many?
+4. Does the first page show the last-read place?

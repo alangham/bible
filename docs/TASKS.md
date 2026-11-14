@@ -540,3 +540,335 @@ Done when:
 - The tests pass, with axe-core. The entry for the wide table spines is not in `KNOWN`.
 
 Stop and report. Include the screenshots, saved in `docs/screenshots/task-10/`.
+
+---
+
+# The redesign: Tasks 11 to 18
+
+Arthur decided a redesign on 2026-11-14. It is in section 7 of `docs/DESIGN.md`. Tasks 11 to 18 build it. The site must build and its tests must pass at the end of each task.
+
+Three things help you in each of these tasks:
+
+- `docs/prototype/` has a prototype of all pages. Read `docs/prototype/README.md` before you use it.
+- `docs/screenshots/redesign/` has screenshots of the prototype at 1440 by 900 px and at 390 by 844 px.
+- If the prototype and `docs/DESIGN.md` differ, `docs/DESIGN.md` is correct.
+
+---
+
+## Task 11. Redesign: setup, colors, and fonts
+
+Status: TODO
+
+Goal: the project is ready for the redesign. No page changes in this task.
+
+Steps:
+
+1. Read `CLAUDE.md` again. It changed on 2026-11-14.
+2. Read section 7 of `docs/DESIGN.md`.
+3. Copy `docs/agents/reviewer.md` to `.claude/agents/reviewer.md`. The file changed on 2026-11-14.
+4. Add the line `docs/prototype/data` to `.gitignore`.
+5. Run `node docs/prototype/make-data.mjs`.
+6. Open `docs/prototype/index.html` in a browser at 1440 by 900 px and at 390 by 844 px. Use the wall, the reading page, a link, the trail, and the three Reference pages.
+7. Add the ten group colors of section 7.3 of `docs/DESIGN.md` to the book data code. One place in the code gives these colors. Do not remove the cloth colors in this task. The built pages use them.
+8. Add a unit test: each of the ten group colors has a contrast of 4.5 to 1 or more against `#FFFFFF`.
+9. Add the fonts Inter and Lora as bundled packages, in the same way as the built fonts. The site must not get a font from a different server. Inter needs the weights 300, 400, 500, 600, 700, and 800. Lora needs weight 400, regular and italic.
+10. Read the licence of each of the two fonts. Record each font and its licence in `docs/DATA-SOURCES.md`. Put the licence text of each font in `public/licenses/`.
+11. Make a list for the report: for each folder in `src/`, the files that the redesign keeps, the files that it changes, and the files that it removes. Do not remove a file in this task.
+
+Done when:
+
+- `npm run build` has no errors, and the tests pass.
+- The color test of step 8 passes.
+- `docs/DATA-SOURCES.md` has the two fonts, and `public/licenses/` has their licence texts.
+- The report has the list of step 11.
+
+Stop and report.
+
+---
+
+## Task 12. The wall
+
+Status: TODO
+
+Goal: the wall replaces the table as the first page.
+
+Steps:
+
+1. Read sections 7.3 and 7.4 of `docs/DESIGN.md`.
+2. Look at `docs/screenshots/redesign/wall-desktop.png` and `docs/screenshots/redesign/wall-phone.png`.
+3. Build the wall at the address `#/`. It has a white background.
+4. Show the 66 book names in Bible order. Each name is an `a` element in Inter, weight 800, in capitals, in the color of its group. The address of a name is `#/book/<id>`. Until Task 13 is done, that address opens the built cover.
+5. Use the fit rule for each name: the name fills the width of its column. The function `fit` in `docs/prototype/index.html` has the rule and its two limits. Each name link is 24 px high or more.
+6. Start each group with its band: a bar in the group color with the group name in white capitals, Inter, weight 700. The band of the group "History (Acts)" has the text "History".
+7. Keep one function that decides the layout from the screen width, as built. The limit stays at 900 px.
+   - Wide layout, 900 px or more: five columns with 13, 14, 12, 14, and 13 books. At 1440 by 900 px, all 66 names and the bottom line are in one view with no scroll.
+   - Narrow layout, below 900 px: one block for each group, with its band at the top and its names in two columns. Divide the names so that the two columns have almost the same height. A group with one book fills the full width. The wall is 520 px wide at most, in the center of the screen.
+8. Add the bottom line: the text "Berean Standard Bible", then the links "Timeline" and "Sources". Task 15 adds the link "Quotations".
+9. Remove the code of the table page: the stacks, the spines, the legend, and the 3D scene of the table. Do not remove a file that the cover, the spread, or the timeline still uses.
+10. Replace the tests of the table page with tests of the wall:
+    - The wall has 66 book links.
+    - At 1440 by 900 px, the page is not higher than the screen.
+    - At 390 by 844 px, the page is not wider than the screen.
+    - Each book link is 24 px high or more, at the two sizes.
+    - The axe-core check passes at the two sizes.
+11. Take screenshots of the wall at 1440 by 900 px, at 834 by 1112 px, and at 390 by 844 px. Save them in `docs/screenshots/task-12/`.
+
+Done when:
+
+- The address `#/` shows the wall, and each book name opens its book.
+- The tests of step 10 pass, with the other tests.
+- The screenshots of step 11 are saved.
+
+Stop and report. In the report, say how the wall looks at 834 px wide. The designer did not test that width.
+
+---
+
+## Task 13. Reading page: text and movement
+
+Status: TODO
+
+Goal: the reading page replaces the cover and the spread. In this task it has no links between passages. Task 14 adds them.
+
+Steps:
+
+1. Read sections 7.5 and 7.6 of `docs/DESIGN.md`.
+2. Look at these screenshots in `docs/screenshots/redesign/`, each with `-desktop.png` and `-phone.png`: `reading-john-1`, `reading-psalm-23`, `book-change`, `chapter-grid`, `about-this-book`.
+3. Build the reading page at these addresses:
+   - `#/book/<id>/<chapter>` opens that chapter.
+   - `#/book/<id>/<chapter>/<verse>` opens that chapter at that verse.
+   - `#/book/<id>` opens the last-read chapter of that book, or chapter 1 if the reader did not read the book.
+4. Show the text in one column on a white background. The column is 700 px wide at most. The Bible text is in Lora: 21 px with a line height of 1.65 in the wide layout, and 18 px with a line height of 1.62 in the narrow layout.
+5. Keep the built rules for the chapter text with no change: the section headings, the paragraphs, the poetry lines, the verse numbers, and the manuscript footnotes. Change only the look. The verse numbers are in the color of the group.
+6. Show the heading of the book above its first chapter in view: the band of the group, the book name in Inter, weight 800, in capitals, and the chapter number in Inter, weight 300. All three are in the color of the group.
+7. Add the control "About this book" below the heading of the book. It opens the three facts of the introduction: What it is, Author, and Written. Keep the built rules for the control "Scholars differ" and for the "Draft" label. Do not change the words of an introduction.
+8. Add the top bar. It stays at the top of the screen. It has two controls in this task:
+   - "Books" goes to the wall.
+   - The book name and the chapter number open the chapter grid. The chapter grid shows the chapter numbers of the book. Each number is 44 px high or more, and it opens that chapter.
+9. Build the continuous scroll:
+   - When the reader comes near the end of the loaded text, add the next chapter below it.
+   - A later chapter of the same book has a heading with the book name and the chapter number at a smaller size, and no band.
+   - After the last chapter of a book, add the first chapter of the next book, with the full heading of step 6.
+   - After Revelation 22, show the line "End of Revelation".
+10. Make the top bar and the address follow the chapter in view. Replace the address. Do not add an entry to the browser history when the reader scrolls.
+11. Add a small link above the first heading. It opens the chapter before the first chapter in view. Genesis 1 has no such link.
+12. Record the last-read chapter of each book in the storage of the browser. The site must work when the storage is not available.
+13. Move the book name from the wall into the heading, and back, with the View Transitions function of the browser. A browser without that function gets a direct change. With `prefers-reduced-motion`, use a direct change.
+14. Remove the cover, the spread, the scenes, and the page turn. Remove the packages `three`, `@react-three/fiber`, `@types/three`, and `gsap`. Keep the code for the link data, the pop-up, the read-with list, travel, and the trail. Task 14 uses it. If the timeline page needs a file that this step removes, keep that file and name it in the report.
+15. Replace the tests of the cover and the spread with tests of the reading page:
+    - A tap on "John" on the wall shows the text of John 1.
+    - At 1440 by 900 px, the text column is 700 px wide.
+    - A scroll from John 21 goes into Acts 1, and the top bar then shows Acts.
+    - The chapter grid opens John 20.
+    - "Books" goes to the wall, and "John" on the wall then opens the last-read chapter.
+    - At 390 by 844 px, the page is not wider than the screen.
+    - The test for the 31,086 verses still passes.
+    - The axe-core check passes at 1440 by 900 px and at 390 by 844 px.
+16. Take screenshots of John 1, Psalm 23, Psalm 119, 1 Chronicles 1, and the change from John to Acts, at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-13/`.
+
+Done when:
+
+- A book name on the wall opens the text with no page between them.
+- The tests of step 15 pass, with the other tests.
+- `package.json` does not have the four packages of step 14.
+- The screenshots of step 16 are saved.
+
+Stop and report.
+
+---
+
+## Task 14. Links on the reading page
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the reading page shows the links, and the reader can travel and get back.
+
+The rules for links in section 4.5 of `docs/DESIGN.md` do not change: the sources, the fit rule, the limit for marks, and the read-with list. Do not change a file in `public/data/links/`. This task changes only the look and the movement.
+
+Steps:
+
+1. Read section 7.7 of `docs/DESIGN.md`.
+2. Look at these screenshots in `docs/screenshots/redesign/`, each with `-desktop.png` and `-phone.png`: `links`, `link-popup`, `travel-arrive-trail`, `read-with`.
+3. Give each link control the color of the group that it goes to.
+4. Below 1180 px wide, show the links as marks in the text, after the verse number: a solid dot for a quotation link and a ring for an echo link. A mark stays on the line of its verse number. Each mark is 24 by 24 px or more.
+5. From 1180 px wide, show no marks in the text. Show each link as a label in the right margin, on the line of its verse: the verse number, the dot or ring, and the reference of the linked passage. Where two labels meet, move the lower label down. Each label is 24 px high or more.
+6. Make the cross-reference line below a section heading a set of controls, one for each linked passage.
+7. Open the pop-up from a mark, a label, or a section control. It shows the band of the linked group, the reference in capitals, the type of link and the passage that it comes from, the text of the linked passage, the reason line of a quotation link, the source, and the actions "Go there" and "Stay here". Keep the built rule for the text of the linked passage. In the wide layout, the pop-up opens near the control. In the narrow layout, it opens from the bottom of the screen.
+8. Make "Go there" a direct change to `#/book/<id>/<chapter>/<verse>`. Put the paragraph of the linked verse in view below the bars, with a light background for a short time. Remove the built move of travel.
+9. Show the trail below the top bar after the first travel. Each stop is a control in the color of its group. The current stop has an underline. When the reader is not on the first stop, the trail starts with the control "Back". "Back" opens the stop before the current stop, at its verse.
+10. Show the read-with list as one line below the chapter heading, with the label "Read with". Each entry is a control for travel to that chapter. Put the line "From OpenBible.info" at the end.
+11. Add a control at the right of the top bar that switches the echo links on and off. Record the selection in the storage of the browser.
+12. Make each control a `button` or an `a` element with keyboard access. The Escape key closes the pop-up.
+13. Add tests:
+    - In Hebrews 9, the number of link controls at verses is the number of links in `public/data/links/hebrews.json` that have an end at a verse of Hebrews 9.
+    - The quotation link at Hebrews 9:20 opens a pop-up with the reference Exodus 24:8 and the text of that verse.
+    - "Go there" opens `#/book/exodus/24/8`, and the trail has the stops Hebrews 9:20 and Exodus 24:8.
+    - "Back" opens Hebrews 9 with verse 20 in view.
+    - A read-with entry opens its chapter and adds a stop to the trail.
+    - With the echo links off, no echo link control is visible.
+    - At 1440 by 900 px, the text has no marks and the margin has labels. At 390 by 844 px, the text has marks.
+    - The axe-core check passes at the two sizes, with the pop-up closed and with the pop-up open.
+14. Take screenshots of Hebrews 9 with its links, the pop-up, and Exodus 24 with the trail, at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-14/`.
+
+Done when:
+
+- The reader can open a link, go there, and get back with "Back".
+- The tests of step 13 pass, with the other tests.
+- No file in `public/data/links/` changed.
+- The screenshots of step 14 are saved.
+
+Stop and report.
+
+---
+
+## Task 15. Reference section: Quotations and Sources
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the Reference section has its top bar, the quotation diagram, and the Sources page in the new look. The timeline keeps its built look until Task 17.
+
+Steps:
+
+1. Read section 7.8 of `docs/DESIGN.md`.
+2. Look at these screenshots in `docs/screenshots/redesign/`, each with `-desktop.png` and `-phone.png`: `quotations`, `quotations-selected`, `sources`.
+3. Build the top bar of the Reference pages: the control "Books", then the links "Timeline", "Quotations", and "Sources". The link of the current page has an underline.
+4. Build the quotation diagram at the address `#/quotations`:
+   - The 66 book names are around a circle in Bible order, in their groups, each in the color of its group. An arc in the group color is behind each group.
+   - A curved line joins two books that have one quotation link or more. Read the pairs and their counts from `public/data/quotation-pairs.json`. Do not write a count by hand.
+   - A line has three steps of thickness: 1 or 2 links, 3 to 9 links, and 10 links or more.
+   - The color of a line goes from the color of the book that quotes to the color of the book that it quotes.
+   - The function `renderQuotes` in `docs/prototype/index.html` shows one way to draw the diagram.
+5. Make each book name in the diagram a control with keyboard access. A book that is selected has its lines bright and the other lines dim. Select it again to clear.
+6. Show a list for the selected book: the books that it quotes and the books that quote it, with the number of quotation links for each. The list is the text form of the lines. A book in the list selects that book. A control in the list opens the selected book.
+7. In the narrow layout, add a list control above the diagram that selects a book.
+8. Put the line "From the Bible Quotation Database. A thicker line has more quotation links." below the diagram.
+9. Give the Sources page at `#/sources` the new look: Inter for the headings, a column of 700 px at most. Do not change its words in this task.
+10. Add the link "Quotations" to the bottom line of the wall, between "Timeline" and "Sources".
+11. Add tests:
+    - The three links in the bottom line of the wall open the three pages.
+    - The diagram has 66 book controls.
+    - With Romans selected, the list has the same books and counts as `public/data/quotation-pairs.json` gives for Romans.
+    - The control in the list opens the book.
+    - The axe-core check passes for the two pages at 1440 by 900 px and at 390 by 844 px.
+12. Take screenshots of the two pages, and of the diagram with Hebrews selected, at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-15/`.
+
+Done when:
+
+- The addresses `#/quotations` and `#/sources` show the pages in the new look.
+- The tests of step 11 pass, with the other tests.
+- The screenshots of step 12 are saved.
+
+Stop and report.
+
+---
+
+## Task 16. Timeline dates: estimates for 17 books
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: a proposal for the estimated date of each book that is in "Date not known". Arthur approves the proposal before a page or a data file changes.
+
+Arthur decided on 2026-11-14 that the timeline has no "Date not known" group. A book with no exact date stands at an estimate, and the page marks it as an estimate.
+
+WARNING: Do not write a year from memory. Each year must come from an approved source. The approved sources are Easton's Bible Dictionary, the ESV Global Study Bible for facts only, and Wikipedia as a pointer to cited scholars.
+
+WARNING: Do not change a file in `public/data/` or in `src/` in this task.
+
+Steps:
+
+1. Read section 7.8 of `docs/DESIGN.md` and the rules for dates in section 4.6.
+2. Find the 17 books that have `kind: "unknown"` in `public/data/dates.json`. On 2026-11-14 they were: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, Ezra, Job, Psalms, Ecclesiastes, Zechariah, Luke, Hebrews, 2 John, and 3 John.
+3. Create the file `docs/TIMELINE-ESTIMATES.md`. Give it one row for each of the 17 books, with these columns: the book, the Written fact from `public/data/intros.json`, the proposed estimate as a first year and a last year, the rule or the source of the estimate, and the status. Set each status to `PROPOSED`.
+4. For a book whose Written fact gives a year or a century, propose an estimate from the words of the fact, by a rule. State the rule in the row. Example: the fact of Hebrews says "before AD 70". Do not use a new fact for these books.
+5. For a book whose Written fact gives the time of a person and no year, find the years of that time in the approved sources. The times are the time of Moses, the lifetime of Joshua, the time of Solomon, and the time of Ezra. In the row, name the source and the place in the source.
+6. Where the approved sources give two views of a time, write the two views in the row. Recommend the view of the ESV Global Study Bible, as in section 4.2 of `docs/DESIGN.md`. Do not choose for Arthur.
+7. Where the approved sources give no year for a book, write that in the row. Do not propose a year for that book.
+8. Run the `accuracy-reviewer` agent on `docs/TIMELINE-ESTIMATES.md`.
+
+Done when:
+
+- `docs/TIMELINE-ESTIMATES.md` has 17 rows, and each proposed year has a rule or a source.
+- No file in `public/data/` or in `src/` changed.
+
+Stop and report. Ask Arthur to approve the rows. He can approve them as one group. Do not start Task 17 before he approves them.
+
+---
+
+## Task 17. Timeline page
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the timeline has the new look, with no arcs and no "Date not known" group.
+
+WARNING: Do this task only after Arthur approved the rows of `docs/TIMELINE-ESTIMATES.md`. If a row does not have the status `APPROVED`, stop and ask Arthur.
+
+Steps:
+
+1. Read section 7.8 of `docs/DESIGN.md`.
+2. Look at `docs/screenshots/redesign/timeline-desktop.png` and `docs/screenshots/redesign/timeline-phone.png`.
+3. Write the approved estimates into the date data. Each of these books has a first year, a last year, and a sign that the date is an estimate. Change the tests of the dates to agree. Record the source of each estimate in `docs/CONTENT-SOURCES.md`.
+4. Build the timeline at `#/timeline` with the top bar of the Reference pages.
+5. Wide layout, 900 px or more: one line with a break.
+   - The Old Testament books have one scale.
+   - A mark on the line shows the years with no books. A text below the mark gives the number of years. Compute the number from the dates, by the rule in section 4.6 of `docs/DESIGN.md`. Do not write it by hand.
+   - The New Testament books have a larger scale.
+   - Each book name is above the line at its date, in Inter, in capitals, in the color of its group. Names with dates that are near stack, so that no name covers a different name.
+   - A book with a range of years has a thin bar under its name. A book with one year has a dot on the line.
+6. Narrow layout, below 900 px: a list in date order. Each row has the date text and the book name. The break is one row in the list.
+7. Mark each estimate: the name has weight 500, where the other names have weight 800. Its bar is a dashed line, or its dot is an open dot. In the narrow layout, the date text ends with the word "estimate". For a screen reader, the name has the words "estimated date".
+8. Put two lines below the timeline: "A name in light letters has an estimated date." and "Scholars differ on many dates. "About this book" gives the detail."
+9. Make each book name a link that opens the book.
+10. Do not show arcs, the list of quoted books, the legend, or a ring for "Scholars differ". Remove their code. The quotation diagram of Task 15 shows the quotation links.
+11. Remove the fonts Cormorant Garamond and Newsreader and the styles of the old pages, if no page uses them. Change the fonts section of the Sources page to Inter and Lora, with their copyright lines and their licences.
+12. Change the tests of the timeline:
+    - The timeline has 66 book links, and no "Date not known" group.
+    - Each book with an estimate has the mark of step 7.
+    - The number of years in the break is the number that the dates give.
+    - At 390 by 844 px, the page is not wider than the screen.
+    - The axe-core check passes at 1440 by 900 px and at 390 by 844 px.
+13. Take screenshots of the timeline at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-17/`.
+
+Done when:
+
+- The address `#/timeline` shows the timeline in the new look.
+- The tests of step 12 pass, with the other tests.
+- The Sources page names the fonts that the site uses.
+- The screenshots of step 13 are saved.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes.
+
+---
+
+## Task 18. Checks on all pages, and removal of old code
+
+Status: TODO
+
+Goal: the redesign is complete, measured, and has no code of the old pages.
+
+Steps:
+
+1. Run the axe-core check on each page at 1440 by 900 px and at 390 by 844 px: the wall, the reading page, the reading page with the pop-up open, the timeline, the quotation diagram, and the Sources page. Correct each problem.
+2. Measure each kind of control on each page. Each control is 24 by 24 px or more. Give the smallest control of each page in the report.
+3. Go through each page with the keyboard only. Each control gets the focus, shows the focus, and operates. Give the result in the report.
+4. Set `prefers-reduced-motion` and use each page. No element moves.
+5. Search `src/` and `package.json` for code and packages of the old pages: the table, the stacks, the spines, the cover, the spread, the scenes, the page turn, the linen colors, and the old fonts. Remove what no page uses.
+6. Measure the size of the built JavaScript and the built styles. Give the sizes in the report, with the sizes before Task 12 from the git history.
+7. Make sure that the names in the code agree with the table of names in `CLAUDE.md`.
+8. Take one screenshot of each page at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-18/`.
+9. Items 11, 12, and 14 of `docs/POLISH.md` are about pages that the redesign replaced. Do not change their status. Ask Arthur in the report if he closes them.
+
+Done when:
+
+- The axe-core check passes on each page at the two sizes.
+- No control is smaller than 24 by 24 px.
+- `npm run build` has no errors, and the tests pass.
+- The report has the measurements of steps 2, 3, and 6.
+
+Stop and report. A check on a real phone is still open. Only Arthur can do it.

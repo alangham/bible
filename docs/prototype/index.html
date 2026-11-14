@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bible wall prototype</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1D1D1F;--mute:#6E6E73;--line:rgba(0,0,0,.09);--bg:#fff;--c:#1D1D1F}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-anchor:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+
+#wall{margin:0 auto}
+.n{display:block;overflow:hidden;font-weight:800;text-transform:uppercase;white-space:nowrap;line-height:1.03;-webkit-tap-highlight-color:transparent}
+@media(hover:hover){.n{transition:opacity .15s}.n:hover{opacity:.62}}
+.n:focus-visible,.back:focus-visible,.where:focus-visible,.lnk:focus-visible,#panel a:focus-visible,.prev:focus-visible{outline:2px solid currentColor;outline-offset:2px;border-radius:2px}
+.band{color:#fff;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
+#meas{position:absolute;left:0;top:0;font-size:100px;pointer-events:none}
+
+.bar{position:fixed;top:0;left:0;right:0;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(255,255,255,.9);-webkit-backdrop-filter:saturate(180%) blur(14px);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line);z-index:10;font-size:15px;font-weight:500;color:var(--mute)}
+.back{padding:12px 10px;margin-left:-10px;min-width:84px}
+.where{background:none;border:0;color:var(--mute);padding:10px 12px;border-radius:8px;cursor:pointer;font-weight:500}
+.where b{color:var(--ink);font-weight:600;margin-right:6px}
+.where i{font-style:normal;font-size:11px;margin-left:5px;display:inline-block;transition:transform .2s}
+.where[aria-expanded=true] i{transform:rotate(180deg)}
+.sp{min-width:84px}
+#panel{position:fixed;top:52px;left:0;right:0;max-height:calc(100vh - 52px);overflow:auto;background:#fff;border-bottom:1px solid var(--line);z-index:9;padding:18px 20px 24px;box-shadow:0 14px 30px rgba(0,0,0,.08)}
+#panel .grid{max-width:700px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(48px,1fr));gap:8px}
+#panel a{display:flex;align-items:center;justify-content:center;height:44px;border-radius:8px;font-weight:600;font-size:16px;color:var(--c)}
+@media(hover:hover){#panel a:hover{background:rgba(0,0,0,.05)}}
+#panel a.cur{background:var(--c);color:#fff}
+#shade{position:fixed;inset:52px 0 0 0;background:rgba(0,0,0,.18);z-index:8}
+
+#col{max-width:748px;margin:0 auto;padding:100px 24px 45vh;font-family:Lora,Georgia,"Times New Roman",serif;font-size:21px;line-height:1.65}
+.prev{display:inline-block;font:500 15px Inter,system-ui,sans-serif;color:var(--mute);padding:8px 0;margin:0 0 26px}
+section+section{margin-top:84px}
+section.newbook{margin-top:132px}
+.bk{display:inline-block;background:var(--c);font:700 12px/1.2 Inter,system-ui,sans-serif;padding:5px 8px;margin-bottom:8px}
+.head{display:flex;align-items:flex-end;gap:.24em;margin:0 0 30px;font-family:Inter,system-ui,sans-serif;font-size:52px;line-height:.9;color:var(--c)}
+.head.full{font-size:76px}
+.head .name{font-weight:800;text-transform:uppercase;letter-spacing:.01em}
+.head .num{font-weight:300}
+.about{font:400 15px/1.5 Inter,system-ui,sans-serif;margin:-12px 0 30px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+.lnk{background:none;border:0;padding:8px 0;font-weight:600;font-size:15px;color:var(--c);cursor:pointer}
+.lnk i{font-style:normal;display:inline-block;margin-left:4px;transition:transform .2s}
+.lnk[aria-expanded=true] i{transform:rotate(90deg)}
+.about dl{display:grid;grid-template-columns:96px 1fr;gap:8px 16px;margin:8px 0 6px}
+.about dt{color:var(--mute)}.about dd{margin:0}
+.about .sd{margin:6px 0 4px;padding:12px 14px;background:#F5F5F7;border-radius:10px}
+.about .sd h5{margin:0 0 2px;font-size:13px;font-weight:600;color:var(--mute)}
+.about .sd p{margin:0 0 10px}.about .sd p:last-child{margin:0}
+.draft{font:600 11px Inter,system-ui,sans-serif;letter-spacing:.06em;color:var(--mute);border:1px solid rgba(0,0,0,.15);border-radius:4px;padding:2px 6px;margin-left:10px;vertical-align:1px}
+h3,h4{font-family:Inter,system-ui,sans-serif;color:var(--ink)}
+h3{font-size:17px;line-height:1.3;font-weight:600;margin:34px 0 10px}
+h4{font-size:15px;line-height:1.3;font-weight:600;color:var(--mute);margin:26px 0 8px}
+.ms{font:700 13px Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-align:center;color:var(--c);margin:10px 0 4px}
+.hd{font:500 14px Inter,system-ui,sans-serif;text-align:center;color:var(--mute);margin:0 0 20px}
+.qa{font-size:1.25em;text-align:center;color:var(--c);margin:28px 0 8px}
+.head+h3,.about+h3,.meta+h3,.head+.ms,.meta+.ms{margin-top:0}
+p{margin:0 0 .9em}
+p.q1,p.q2,p.li1,p.li2,p.qr,p.qd{margin:0}
+p.q1{padding-left:2.4em;text-indent:-1em}
+p.q2{padding-left:3.8em;text-indent:-1em}
+p.li1{padding-left:1.4em}p.li2{padding-left:2.8em}
+p.qr{text-align:right}
+p.d,p.qd{font-style:italic;color:#3a3a3c}
+p.pc{text-align:center}
+p.pe{margin-bottom:.9em}
+.gap{height:.9em}
+sup.v{font:600 .6em Inter,system-ui,sans-serif;color:var(--c);margin-right:.28em;vertical-align:.6em;line-height:0;text-indent:0}
+.vn{white-space:nowrap}
+sup.o{color:var(--mute)}
+p.q1>.vn:first-child>sup.v,p.q2>.vn:first-child>sup.v,p.li1>.vn:first-child>sup.v,p.li2>.vn:first-child>sup.v{display:inline-block;box-sizing:border-box;width:2.3em;margin-left:-2.3em;margin-right:0;padding-right:.5em;text-align:right}
+.x{font:400 13px/1.45 Inter,system-ui,sans-serif;color:var(--mute);margin:-4px 0 10px}
+.note{font:400 13px/1.5 Inter,system-ui,sans-serif;color:var(--mute);border-left:2px solid var(--line);padding:2px 0 2px 12px;margin:0 0 1.1em}
+.end{font:500 14px Inter,system-ui,sans-serif;color:var(--mute);text-align:center;margin-top:90px}
+section{position:relative}
+.mk{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;margin:0 0 0 -6px;padding:0;border:0;background:none;vertical-align:.12em;cursor:pointer;text-indent:0;-webkit-tap-highlight-color:transparent}
+.mk::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--d);box-sizing:border-box}
+.mk.e::before{background:none;border:1.75px solid var(--d)}
+@media(hover:hover){.mk:hover::before{transform:scale(1.35)}}
+.mk:focus-visible,.xl:focus-visible,.rwc:focus-visible,.ml:focus-visible,#trail button:focus-visible,.echo:focus-visible,#pop button:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:4px}
+body.noecho .mk.e,body.noecho .ml.e{display:none}
+.xl{background:none;border:0;padding:4px 0;font:600 13px Inter,system-ui,sans-serif;cursor:pointer}
+.meta{margin:-12px 0 30px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+.meta.small{margin:-16px 0 22px;padding:0;border:0}
+.meta .about{margin:0;padding:0;border:0}
+.rw{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-family:Inter,system-ui,sans-serif;margin-top:6px}
+.meta.small .rw{margin-top:0}
+.rwl{font-size:13px;font-weight:600;color:var(--mute);margin-right:2px}
+.rwc{background:#F5F5F7;border:0;border-radius:999px;padding:7px 12px;font:600 14px Inter,system-ui,sans-serif;cursor:pointer}
+@media(hover:hover){.rwc:hover{background:#EBEBEF}}
+.rws{font-size:12px;color:var(--mute);margin-left:2px}
+p.hit{background:rgba(0,0,0,.06);box-shadow:0 0 0 8px rgba(0,0,0,.06);border-radius:3px}
+p{transition:background .9s,box-shadow .9s}
+#col.mg .mk{display:none}
+.mgc{position:absolute;left:calc(100% + 36px);top:0;width:260px}
+.ml{position:absolute;left:0;display:flex;align-items:center;gap:7px;min-height:24px;background:none;border:0;padding:3px 0;font:600 13px Inter,system-ui,sans-serif;color:var(--d);cursor:pointer;white-space:nowrap}
+.ml.e{font-weight:500}
+.ml i{width:9px;height:9px;border-radius:50%;background:var(--d);box-sizing:border-box;flex:none}
+.ml.e i{background:none;border:1.75px solid var(--d)}
+.ml span{font:600 11px Inter,system-ui,sans-serif;color:var(--mute);min-width:14px;text-align:right}
+.echo{min-width:84px;text-align:right;background:none;border:0;color:var(--mute);font-weight:500;padding:12px 0;cursor:pointer;white-space:nowrap}
+.echo .ph{display:none}
+#trail{position:fixed;top:52px;left:0;right:0;height:40px;display:flex;align-items:center;gap:6px;padding:0 20px;background:#F5F5F7;border-bottom:1px solid var(--line);z-index:7;font:500 13px Inter,system-ui,sans-serif;color:var(--mute);overflow-x:auto;white-space:nowrap}
+#trail button{background:none;border:0;padding:10px 2px;font:600 13px/20px Inter,system-ui,sans-serif;cursor:pointer;display:inline-flex;align-items:center;height:40px}
+#trail>span{line-height:20px}
+#trail .tback{color:var(--ink);padding-right:6px}
+#trail .sep{width:1px;height:18px;background:rgba(0,0,0,.14);margin:0 6px 0 2px;flex:none}
+#trail button.cur{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+body.hastrail #col{padding-top:140px}
+body.hastrail #panel{top:92px;max-height:calc(100vh - 92px)}
+body.hastrail #shade{top:92px}
+#pop{position:absolute;z-index:20;width:430px;max-width:calc(100vw - 32px);background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px rgba(0,0,0,.16);padding:18px 20px 16px;font-family:Inter,system-ui,sans-serif;--c:var(--d)}
+#pop .pb{display:inline-block;background:var(--d);font-size:11px;padding:4px 7px}
+#pop .pr{font-weight:800;font-size:26px;line-height:1.05;text-transform:uppercase;color:var(--d);margin:8px 0 4px}
+#pop .pt{font-size:13px;font-weight:500;color:var(--mute);margin-bottom:12px}
+#pop .phd{font-size:14px;font-weight:600;margin-bottom:4px}
+#pop .pp{font:400 17px/1.55 Lora,Georgia,serif;color:var(--ink);max-height:36vh;overflow:auto}
+#pop .pq{font:italic 400 15px/1.5 Lora,Georgia,serif;color:#3a3a3c;margin-top:10px;padding-left:12px;border-left:2px solid var(--d)}
+#pop .ps{font-size:12px;color:var(--mute);margin-top:10px}
+#pop .pa{display:flex;gap:10px;margin-top:14px}
+#pop .pa button{height:44px;padding:0 18px;border-radius:999px;font:600 15px Inter,system-ui,sans-serif;cursor:pointer}
+#pop .go{background:var(--d);color:#fff;border:0}
+#pop .stay{background:none;border:1px solid rgba(0,0,0,.18);color:var(--ink)}
+#popshade{position:fixed;inset:0;background:rgba(0,0,0,.22);z-index:19}
+.wfoot{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;margin-top:24px;padding-top:10px;border-top:1px solid var(--line);font-size:14px;font-weight:500;color:var(--mute)}
+.wfoot a{color:var(--ink);font-weight:600;padding:6px 0}
+.wfoot .tr{margin-right:auto}
+.rbar{justify-content:flex-start;gap:20px;position:sticky}
+.rbar .tabs{margin-left:auto;display:flex;gap:22px;height:100%}
+.rbar .tabs a{display:flex;align-items:center;height:100%;box-sizing:border-box;border-bottom:2px solid transparent;border-top:2px solid transparent}
+.rbar .tabs a.on{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+#refc{max-width:1320px;margin:0 auto;padding:44px 60px 80px}
+#refc h1{font-weight:800;font-size:44px;line-height:1;text-transform:uppercase;letter-spacing:.01em;margin:0 0 10px}
+#refc .lead{font-size:16px;line-height:1.5;color:var(--mute);max-width:640px;margin:0 0 28px}
+#refc svg text{font-family:Inter,system-ui,sans-serif}
+#refc svg a{cursor:pointer}
+#refc .foot{font-size:13px;line-height:1.6;color:var(--mute);margin-top:18px}
+.trow{display:grid;grid-template-columns:136px 1fr;align-items:baseline;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.trow .y{font-size:13px;font-weight:500;color:var(--mute)}
+.trow .nm{font-weight:800;font-size:17px;line-height:1.1;text-transform:uppercase}
+.tgap{font-size:13px;font-weight:500;color:var(--mute);padding:14px 0;text-align:center;border-bottom:1px solid rgba(0,0,0,.05);background:#F5F5F7}
+.qlay{display:flex;flex-wrap:wrap;gap:20px 56px;align-items:flex-start}
+.qlay svg{flex:none;max-width:100%;height:auto}
+.qp{flex:1;min-width:260px;max-width:400px;padding-top:60px;font-size:15px;line-height:1.5}
+.qp h3{font-weight:800;font-size:28px;line-height:1;text-transform:uppercase;margin:8px 0 4px}
+.qp h4{font-size:13px;font-weight:600;color:var(--mute);margin:16px 0 4px}
+.qp ul{margin:0;padding:0}
+.qp li{list-style:none;display:flex;justify-content:space-between;border-bottom:1px solid rgba(0,0,0,.05)}
+.qp li button{background:none;border:0;padding:5px 0;font:600 15px Inter,system-ui,sans-serif;cursor:pointer}
+.qp .open{display:inline-block;margin-top:18px;font-weight:600;padding:6px 0}
+.qsel{display:none;width:100%;height:44px;margin:0 0 14px;font:500 16px Inter,system-ui,sans-serif;border:1px solid rgba(0,0,0,.2);border-radius:10px;padding:0 10px;background:#fff;color:var(--ink)}
+.src{max-width:700px;font-size:17px;line-height:1.6}
+.src h2{font-size:17px;font-weight:600;margin:34px 0 8px}
+.src a{text-decoration:underline;text-underline-offset:3px}
+.src ul{padding-left:20px}
+#map{position:fixed;inset:0;background:#fff;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;overflow:hidden;opacity:0;transition:opacity .2s}
+#mapbox{position:relative;flex:none}
+#map.on{opacity:1}
+#mapin{position:absolute;left:0;top:0;transform-origin:0 0}
+#mapin .n{opacity:.13;transition:opacity .3s}
+#mapin .band{opacity:.2}
+#mapin .n.lit{opacity:1}
+#mapsvg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+#mapsvg line{stroke-linecap:round;transition:stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)}
+#map .cap{text-align:center;font:600 17px Inter,system-ui,sans-serif;color:var(--mute);padding:0 16px}
+#map .cap b{font-weight:700}
+
+@media(max-width:700px){
+ #col{font-size:18px;line-height:1.62;padding-top:84px}
+ .bar{padding:0 16px}
+ .head{font-size:40px}.head.full{font-size:56px}
+ section+section{margin-top:60px}section.newbook{margin-top:96px}
+ .about dl{grid-template-columns:74px 1fr}
+ .back,.sp{min-width:70px}
+ #refc{padding:28px 20px 60px}#refc h1{font-size:36px}
+ .rbar{gap:10px}.rbar .tabs{gap:14px;font-size:14px}
+ .qp{padding-top:0;max-width:none}.qsel{display:block}
+ .wfoot{margin-top:30px}.wfoot .tr{width:100%;margin-right:0}
+ .echo{min-width:70px}.echo .dk{display:none}.echo .ph{display:inline}
+ body.hastrail #col{padding-top:124px}
+ #trail{padding:0 16px}
+ #pop{position:fixed;left:0!important;right:0;bottom:0;top:auto!important;width:auto;max-width:none;border-radius:18px 18px 0 0;border-bottom:0;padding:20px 20px 26px}
+}
+@media(min-width:701px){#popshade{display:none!important}}
+::view-transition-group(bookname){animation-duration:.5s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.32s}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+</style>
+</head>
+<body>
+<main id="wall" aria-label="Books of the Bible"></main>
+<div id="read" hidden>
+  <header class="bar">
+    <a class="back" href="#" id="back">&#8249; Books</a>
+    <button class="where" id="where" aria-expanded="false" aria-controls="panel"></button>
+    <button class="echo" id="echo" type="button" aria-pressed="true"></button>
+  </header>
+  <nav id="trail" aria-label="Trail" hidden></nav>
+  <div id="shade" hidden></div>
+  <div id="panel" hidden></div>
+  <article id="col"></article>
+</div>
+<div style="position:absolute;left:0;top:0;width:0;height:0;overflow:hidden" aria-hidden="true"><span id="meas" class="n"></span></div>
+<div id="ref" hidden>
+  <header class="bar rbar">
+    <a class="back" href="#" id="rback">&#8249; Books</a>
+    <nav class="tabs" aria-label="Reference"><a href="#timeline" data-t="timeline">Timeline</a><a href="#quotations" data-t="quotations">Quotations</a><a href="#sources" data-t="sources">Sources</a></nav>
+  </header>
+  <main id="refc"></main>
+</div>
+<div id="map" hidden aria-hidden="true"></div>
+<div id="popshade" hidden></div>
+<div id="pop" role="dialog" aria-label="Linked passage" hidden></div>
+<script>
+const BOOKS=[{"id":"genesis","name":"Genesis","group":"Law","chapters":50},{"id":"exodus","name":"Exodus","group":"Law","chapters":40},{"id":"leviticus","name":"Leviticus","group":"Law","chapters":27},{"id":"numbers","name":"Numbers","group":"Law","chapters":36},{"id":"deuteronomy","name":"Deuteronomy","group":"Law","chapters":34},{"id":"joshua","name":"Joshua","group":"History","chapters":24},{"id":"judges","name":"Judges","group":"History","chapters":21},{"id":"ruth","name":"Ruth","group":"History","chapters":4},{"id":"1-samuel","name":"1 Samuel","group":"History","chapters":31},{"id":"2-samuel","name":"2 Samuel","group":"History","chapters":24},{"id":"1-kings","name":"1 Kings","group":"History","chapters":22},{"id":"2-kings","name":"2 Kings","group":"History","chapters":25},{"id":"1-chronicles","name":"1 Chronicles","group":"History","chapters":29},{"id":"2-chronicles","name":"2 Chronicles","group":"History","chapters":36},{"id":"ezra","name":"Ezra","group":"History","chapters":10},{"id":"nehemiah","name":"Nehemiah","group":"History","chapters":13},{"id":"esther","name":"Esther","group":"History","chapters":10},{"id":"job","name":"Job","group":"Poetry & Wisdom","chapters":42},{"id":"psalms","name":"Psalms","group":"Poetry & Wisdom","chapters":150},{"id":"proverbs","name":"Proverbs","group":"Poetry & Wisdom","chapters":31},{"id":"ecclesiastes","name":"Ecclesiastes","group":"Poetry & Wisdom","chapters":12},{"id":"song-of-solomon","name":"Song of Solomon","group":"Poetry & Wisdom","chapters":8},{"id":"isaiah","name":"Isaiah","group":"Major Prophets","chapters":66},{"id":"jeremiah","name":"Jeremiah","group":"Major Prophets","chapters":52},{"id":"lamentations","name":"Lamentations","group":"Major Prophets","chapters":5},{"id":"ezekiel","name":"Ezekiel","group":"Major Prophets","chapters":48},{"id":"daniel","name":"Daniel","group":"Major Prophets","chapters":12},{"id":"hosea","name":"Hosea","group":"Minor Prophets","chapters":14},{"id":"joel","name":"Joel","group":"Minor Prophets","chapters":3},{"id":"amos","name":"Amos","group":"Minor Prophets","chapters":9},{"id":"obadiah","name":"Obadiah","group":"Minor Prophets","chapters":1},{"id":"jonah","name":"Jonah","group":"Minor Prophets","chapters":4},{"id":"micah","name":"Micah","group":"Minor Prophets","chapters":7},{"id":"nahum","name":"Nahum","group":"Minor Prophets","chapters":3},{"id":"habakkuk","name":"Habakkuk","group":"Minor Prophets","chapters":3},{"id":"zephaniah","name":"Zephaniah","group":"Minor Prophets","chapters":3},{"id":"haggai","name":"Haggai","group":"Minor Prophets","chapters":2},{"id":"zechariah","name":"Zechariah","group":"Minor Prophets","chapters":14},{"id":"malachi","name":"Malachi","group":"Minor Prophets","chapters":4},{"id":"matthew","name":"Matthew","group":"Gospels","chapters":28},{"id":"mark","name":"Mark","group":"Gospels","chapters":16},{"id":"luke","name":"Luke","group":"Gospels","chapters":24},{"id":"john","name":"John","group":"Gospels","chapters":21},{"id":"acts","name":"Acts","group":"History (Acts)","chapters":28},{"id":"romans","name":"Romans","group":"Letters of Paul","chapters":16},{"id":"1-corinthians","name":"1 Corinthians","group":"Letters of Paul","chapters":16},{"id":"2-corinthians","name":"2 Corinthians","group":"Letters of Paul","chapters":13},{"id":"galatians","name":"Galatians","group":"Letters of Paul","chapters":6},{"id":"ephesians","name":"Ephesians","group":"Letters of Paul","chapters":6},{"id":"philippians","name":"Philippians","group":"Letters of Paul","chapters":4},{"id":"colossians","name":"Colossians","group":"Letters of Paul","chapters":4},{"id":"1-thessalonians","name":"1 Thessalonians","group":"Letters of Paul","chapters":5},{"id":"2-thessalonians","name":"2 Thessalonians","group":"Letters of Paul","chapters":3},{"id":"1-timothy","name":"1 Timothy","group":"Letters of Paul","chapters":6},{"id":"2-timothy","name":"2 Timothy","group":"Letters of Paul","chapters":4},{"id":"titus","name":"Titus","group":"Letters of Paul","chapters":3},{"id":"philemon","name":"Philemon","group":"Letters of Paul","chapters":1},{"id":"hebrews","name":"Hebrews","group":"General Letters","chapters":13},{"id":"james","name":"James","group":"General Letters","chapters":5},{"id":"1-peter","name":"1 Peter","group":"General Letters","chapters":5},{"id":"2-peter","name":"2 Peter","group":"General Letters","chapters":3},{"id":"1-john","name":"1 John","group":"General Letters","chapters":5},{"id":"2-john","name":"2 John","group":"General Letters","chapters":1},{"id":"3-john","name":"3 John","group":"General Letters","chapters":1},{"id":"jude","name":"Jude","group":"General Letters","chapters":1},{"id":"revelation","name":"Revelation","group":"Prophecy","chapters":22}];
+const DATES={"genesis":{"f":-1446,"t":-1406,"e":1,"p":1,"d":1},"exodus":{"f":-1446,"t":-1406,"e":1,"p":1,"d":1},"leviticus":{"f":-1446,"t":-1406,"e":1,"p":1,"d":1},"numbers":{"f":-1446,"t":-1406,"e":1,"p":1,"d":1},"deuteronomy":{"f":-1406,"t":-1406,"e":1,"p":1,"d":1},"joshua":{"f":-1400,"t":-1375,"e":1,"p":1,"d":1},"judges":{"f":-1010,"t":-1010,"e":1,"p":0,"d":0},"ruth":{"f":-1010,"t":-1010,"e":1,"p":0,"d":1},"1-samuel":{"f":-970,"t":-970,"e":0,"p":0,"d":1},"2-samuel":{"f":-970,"t":-970,"e":0,"p":0,"d":1},"1-kings":{"f":-600,"t":-501,"e":0,"p":0,"d":1},"2-kings":{"f":-600,"t":-538,"e":0,"p":0,"d":1},"1-chronicles":{"f":-539,"t":-332,"e":0,"p":0,"d":1},"2-chronicles":{"f":-539,"t":-332,"e":0,"p":0,"d":1},"ezra":{"f":-401,"t":-401,"e":1,"p":0,"d":0},"nehemiah":{"f":-500,"t":-401,"e":0,"p":0,"d":1},"esther":{"f":-500,"t":-401,"e":0,"p":0,"d":1},"job":{"f":-1446,"t":-1406,"e":1,"p":1,"d":1},"psalms":{"f":-1446,"t":-450,"e":1,"p":1,"d":1},"proverbs":{"f":-1000,"t":-700,"e":0,"p":0,"d":1},"ecclesiastes":{"f":-970,"t":-930,"e":1,"p":1,"d":1},"song-of-solomon":{"f":-1000,"t":-901,"e":0,"p":0,"d":1},"isaiah":{"f":-750,"t":-651,"e":0,"p":0,"d":1},"jeremiah":{"f":-650,"t":-551,"e":0,"p":0,"d":0},"lamentations":{"f":-586,"t":-586,"e":0,"p":0,"d":0},"ezekiel":{"f":-600,"t":-551,"e":0,"p":0,"d":0},"daniel":{"f":-536,"t":-501,"e":0,"p":0,"d":1},"hosea":{"f":-750,"t":-701,"e":0,"p":0,"d":0},"joel":{"f":-500,"t":-500,"e":0,"p":0,"d":1},"amos":{"f":-800,"t":-701,"e":0,"p":0,"d":1},"obadiah":{"f":-586,"t":-586,"e":0,"p":0,"d":1},"jonah":{"f":-800,"t":-701,"e":0,"p":0,"d":1},"micah":{"f":-750,"t":-651,"e":0,"p":0,"d":1},"nahum":{"f":-700,"t":-601,"e":0,"p":0,"d":1},"habakkuk":{"f":-650,"t":-601,"e":0,"p":0,"d":0},"zephaniah":{"f":-700,"t":-601,"e":0,"p":0,"d":1},"haggai":{"f":-520,"t":-520,"e":0,"p":0,"d":0},"zechariah":{"f":-520,"t":-520,"e":1,"p":0,"d":1},"malachi":{"f":-460,"t":-460,"e":0,"p":0,"d":1},"matthew":{"f":60,"t":60,"e":0,"p":0,"d":1},"mark":{"f":55,"t":59,"e":0,"p":0,"d":1},"luke":{"f":62,"t":62,"e":1,"p":0,"d":1},"john":{"f":51,"t":100,"e":0,"p":0,"d":0},"acts":{"f":62,"t":62,"e":0,"p":0,"d":1},"romans":{"f":57,"t":57,"e":0,"p":0,"d":0},"1-corinthians":{"f":54,"t":54,"e":0,"p":0,"d":0},"2-corinthians":{"f":55,"t":56,"e":0,"p":0,"d":0},"galatians":{"f":48,"t":48,"e":0,"p":0,"d":0},"ephesians":{"f":62,"t":62,"e":0,"p":0,"d":1},"philippians":{"f":62,"t":62,"e":0,"p":0,"d":0},"colossians":{"f":62,"t":62,"e":0,"p":0,"d":1},"1-thessalonians":{"f":50,"t":50,"e":0,"p":0,"d":0},"2-thessalonians":{"f":50,"t":50,"e":0,"p":0,"d":1},"1-timothy":{"f":60,"t":69,"e":0,"p":0,"d":1},"2-timothy":{"f":65,"t":65,"e":0,"p":0,"d":1},"titus":{"f":60,"t":69,"e":0,"p":0,"d":1},"philemon":{"f":62,"t":62,"e":0,"p":0,"d":0},"hebrews":{"f":69,"t":69,"e":1,"p":0,"d":1},"james":{"f":40,"t":44,"e":0,"p":0,"d":1},"1-peter":{"f":60,"t":64,"e":0,"p":0,"d":1},"2-peter":{"f":63,"t":66,"e":0,"p":0,"d":1},"1-john":{"f":85,"t":85,"e":0,"p":0,"d":1},"2-john":{"f":90,"t":90,"e":1,"p":0,"d":0},"3-john":{"f":90,"t":90,"e":1,"p":0,"d":0},"jude":{"f":63,"t":66,"e":0,"p":0,"d":1},"revelation":{"f":93,"t":96,"e":0,"p":0,"d":0}};
+const PAIRS=[{"from":"matthew","to":"genesis","n":2},{"from":"matthew","to":"exodus","n":12},{"from":"matthew","to":"leviticus","n":3},{"from":"matthew","to":"deuteronomy","n":19},{"from":"matthew","to":"2-samuel","n":1},{"from":"matthew","to":"psalms","n":13},{"from":"matthew","to":"isaiah","n":15},{"from":"matthew","to":"jeremiah","n":3},{"from":"matthew","to":"daniel","n":4},{"from":"matthew","to":"hosea","n":3},{"from":"matthew","to":"jonah","n":1},{"from":"matthew","to":"micah","n":3},{"from":"matthew","to":"zechariah","n":5},{"from":"matthew","to":"malachi","n":1},{"from":"mark","to":"genesis","n":2},{"from":"mark","to":"exodus","n":9},{"from":"mark","to":"leviticus","n":2},{"from":"mark","to":"numbers","n":1},{"from":"mark","to":"deuteronomy","n":8},{"from":"mark","to":"1-kings","n":1},{"from":"mark","to":"psalms","n":6},{"from":"mark","to":"isaiah","n":6},{"from":"mark","to":"jeremiah","n":2},{"from":"mark","to":"ezekiel","n":1},{"from":"mark","to":"daniel","n":4},{"from":"mark","to":"joel","n":1},{"from":"mark","to":"zechariah","n":1},{"from":"mark","to":"malachi","n":1},{"from":"luke","to":"genesis","n":1},{"from":"luke","to":"exodus","n":8},{"from":"luke","to":"leviticus","n":2},{"from":"luke","to":"deuteronomy","n":12},{"from":"luke","to":"1-samuel","n":1},{"from":"luke","to":"psalms","n":11},{"from":"luke","to":"isaiah","n":8},{"from":"luke","to":"jeremiah","n":1},{"from":"luke","to":"daniel","n":1},{"from":"luke","to":"hosea","n":1},{"from":"luke","to":"micah","n":1},{"from":"luke","to":"malachi","n":2},{"from":"john","to":"psalms","n":9},{"from":"john","to":"isaiah","n":4},{"from":"john","to":"zechariah","n":2},{"from":"acts","to":"genesis","n":6},{"from":"acts","to":"exodus","n":16},{"from":"acts","to":"deuteronomy","n":5},{"from":"acts","to":"1-samuel","n":1},{"from":"acts","to":"psalms","n":19},{"from":"acts","to":"isaiah","n":8},{"from":"acts","to":"joel","n":4},{"from":"acts","to":"amos","n":4},{"from":"acts","to":"habakkuk","n":1},{"from":"romans","to":"genesis","n":9},{"from":"romans","to":"exodus","n":7},{"from":"romans","to":"leviticus","n":2},{"from":"romans","to":"deuteronomy","n":11},{"from":"romans","to":"2-samuel","n":1},{"from":"romans","to":"1-kings","n":3},{"from":"romans","to":"job","n":1},{"from":"romans","to":"psalms","n":22},{"from":"romans","to":"proverbs","n":4},{"from":"romans","to":"isaiah","n":22},{"from":"romans","to":"hosea","n":4},{"from":"romans","to":"joel","n":1},{"from":"romans","to":"nahum","n":1},{"from":"romans","to":"habakkuk","n":1},{"from":"romans","to":"malachi","n":2},{"from":"1-corinthians","to":"genesis","n":2},{"from":"1-corinthians","to":"exodus","n":1},{"from":"1-corinthians","to":"deuteronomy","n":2},{"from":"1-corinthians","to":"job","n":1},{"from":"1-corinthians","to":"psalms","n":4},{"from":"1-corinthians","to":"isaiah","n":4},{"from":"1-corinthians","to":"jeremiah","n":1},{"from":"1-corinthians","to":"hosea","n":1},{"from":"2-corinthians","to":"exodus","n":3},{"from":"2-corinthians","to":"leviticus","n":1},{"from":"2-corinthians","to":"deuteronomy","n":1},{"from":"2-corinthians","to":"2-samuel","n":1},{"from":"2-corinthians","to":"psalms","n":2},{"from":"2-corinthians","to":"isaiah","n":2},{"from":"2-corinthians","to":"jeremiah","n":4},{"from":"2-corinthians","to":"ezekiel","n":1},{"from":"2-corinthians","to":"zechariah","n":1},{"from":"galatians","to":"genesis","n":6},{"from":"galatians","to":"leviticus","n":2},{"from":"galatians","to":"deuteronomy","n":2},{"from":"galatians","to":"isaiah","n":1},{"from":"galatians","to":"habakkuk","n":1},{"from":"ephesians","to":"genesis","n":1},{"from":"ephesians","to":"exodus","n":2},{"from":"ephesians","to":"deuteronomy","n":2},{"from":"ephesians","to":"psalms","n":3},{"from":"ephesians","to":"isaiah","n":1},{"from":"philippians","to":"isaiah","n":1},{"from":"2-thessalonians","to":"isaiah","n":1},{"from":"2-thessalonians","to":"daniel","n":1},{"from":"1-timothy","to":"deuteronomy","n":2},{"from":"2-timothy","to":"psalms","n":1},{"from":"titus","to":"deuteronomy","n":1},{"from":"hebrews","to":"genesis","n":5},{"from":"hebrews","to":"exodus","n":2},{"from":"hebrews","to":"numbers","n":2},{"from":"hebrews","to":"deuteronomy","n":5},{"from":"hebrews","to":"2-samuel","n":1},{"from":"hebrews","to":"psalms","n":38},{"from":"hebrews","to":"proverbs","n":3},{"from":"hebrews","to":"isaiah","n":4},{"from":"hebrews","to":"jeremiah","n":8},{"from":"hebrews","to":"habakkuk","n":2},{"from":"hebrews","to":"haggai","n":1},{"from":"james","to":"genesis","n":1},{"from":"james","to":"exodus","n":2},{"from":"james","to":"leviticus","n":1},{"from":"james","to":"deuteronomy","n":2},{"from":"james","to":"proverbs","n":1},{"from":"1-peter","to":"leviticus","n":3},{"from":"1-peter","to":"psalms","n":7},{"from":"1-peter","to":"proverbs","n":2},{"from":"1-peter","to":"isaiah","n":8},{"from":"2-peter","to":"psalms","n":1},{"from":"2-peter","to":"proverbs","n":1},{"from":"2-peter","to":"isaiah","n":1},{"from":"jude","to":"zechariah","n":1},{"from":"revelation","to":"exodus","n":1},{"from":"revelation","to":"psalms","n":2},{"from":"revelation","to":"isaiah","n":5},{"from":"revelation","to":"daniel","n":3},{"from":"revelation","to":"hosea","n":1}];
+const INTROS={"genesis":{"author":"Moses, by tradition, who probably brought together accounts handed down from earlier times.","authorDetail":{"critical":"Modern scholars think that several writers and editors produced it, much later than Moses.","conservative":"Conservative scholars cite verses on Moses writing, such as Numbers 33:2, Deuteronomy 31:24, and John 5:46. Moses could have gathered older accounts of events long before his time."},"written":"By tradition, in the time of Moses, for the Israelites he led through the wilderness.","writtenDetail":{"critical":"Most scholars date its final form after the captivity in Babylon, 586 to 538 BC, possibly the 5th century BC.","conservative":"Conservative scholars hold that Moses wrote it, citing Numbers 33:2, Deuteronomy 31:24, and John 5:46. He wrote for the Israelites he led, and he probably gathered stories passed down from earlier times."},"whatItIs":"A narrative that begins with creation, then tells of the flood and the families of Abraham, Isaac, Jacob, and Joseph. It ends with Joseph's death in Egypt, where Jacob's family now lives.","review":"draft"},"exodus":{"author":"Moses, by tradition, wrote most of it. Some details were added later, and some wording appears to have been updated.","authorDetail":{"critical":"By the end of the 1800s, scholars had given up the view that Moses wrote it. Contradictions and repeated passages in the first five books of the Bible led them to this.","conservative":"Conservative scholars hold that Moses is best seen as the main writer, as with the other four books of Moses. They accept that some details were clearly added later."},"written":"By tradition, in the lifetime of Moses.","writtenDetail":{"critical":"Modern scholars think it was first composed in the captivity in Babylon, 586 to 538 BC. They date its final revisions to the 5th century BC.","conservative":"Conservative scholars hold that Moses wrote most of it, in his lifetime. A common view dates Israel's exit from Egypt to about 1446 BC, but some prefer about 1260 BC."},"whatItIs":"A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.","review":"draft"},"leviticus":{"author":"Moses, by tradition, as its source and main author.","authorDetail":{"critical":"Most scholars think two related schools of priestly writers produced chapters 1 to 16 and chapters 17 to 26.","conservative":"Conservative scholars hold that Moses is best seen as its source and main writer, as with each book of Moses. Leviticus carries on the story of Exodus."},"written":"By tradition, in the lifetime of Moses. The laws were given at Mount Sinai within one month, in the second year after Israel left Egypt.","writtenDetail":{"critical":"Most scholars place the final form of the five books of Moses under Persian rule, 539 to 332 BC. Leviticus grew over a long time before that.","conservative":"Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. The Lord gave its laws at Mount Sinai, which a common view dates to about 1446 BC."},"whatItIs":"A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.","review":"draft"},"numbers":{"author":"Moses, by tradition, as its source and main author.","authorDetail":{"critical":"Scholars often trace the first five books of the Bible to four sources. They generally see each source as the work of a school of writers, not one person.","conservative":"Conservative scholars keep the traditional view that Moses is the source and main writer of Numbers."},"written":"By tradition, in the lifetime of Moses.","writtenDetail":{"critical":"Most modern scholars think the first five books of the Bible reached their present form after about 520 BC.","conservative":"Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. It tells of about 40 years, from Mount Sinai to the Jordan River."},"whatItIs":"A narrative with laws, following Israel through the wilderness from Mount Sinai to the plains of Moab. It takes its name from two counts of the people.","review":"draft"},"deuteronomy":{"author":"Moses, by tradition, apart from the account of his death at the end.","authorDetail":{"critical":"Nearly all secular scholars reject the view that Moses wrote it. So do most scholars who are Christian or Jewish.","conservative":"Conservative scholars hold that the book is mainly sermons that Moses preached to Israel shortly before he died."},"written":"By tradition, near the end of the 40 years in the wilderness, shortly before Moses died.","writtenDetail":{"critical":"Nearly all secular scholars date it from the 7th to 5th century BC, as do most Christian and Jewish scholars. Most scholars place its core of laws, chapters 12 to 26, in the 7th century BC.","conservative":"Conservative scholars hold that Moses gave these sermons on the plains of Moab, about 1406 BC. That was shortly before he died, as Israel waited to enter Canaan."},"whatItIs":"Speeches of Moses that retell Israel's journey and restate the law before the people enter Canaan. It ends with the death of Moses.","review":"draft"},"joshua":{"author":"The book does not name its author, though it mentions Joshua writing. An older view, from Jewish tradition, names Joshua, except for the last verses.","written":"By tradition, in the lifetime of Joshua, except the last verses.","writtenDetail":{"critical":"Scholars now generally agree it was part of a history from Deuteronomy to Kings, first written under King Josiah. They date that first form near the end of the 7th century BC and a heavy revision to the 6th.","conservative":"Conservative scholars hold that the writing probably began long before the captivity in Babylon, 586 to 538 BC. Notes on what remains to this day suggest it was finished long after the events, perhaps in the captivity."},"whatItIs":"A narrative of how Israel, led by Joshua, takes Canaan and divides the land among the tribes. It ends with Joshua's farewell and death.","review":"draft"},"judges":{"author":"Scripture names no author. An older view names Samuel.","authorDetail":{"critical":"Since about 1950, most scholars see Judges as part of one history from Deuteronomy to Kings. Scholars agree that the editors of that history shaped its repeated pattern of sin, oppression, and rescue.","conservative":"Conservative scholars note that Scripture names no writer. They hold that the book was probably mostly complete by the reign of King David, 1010 to 970 BC."},"written":"Most of it was probably written by the time of King David, 1010 to 970 BC.","whatItIs":"A narrative of Israel after the death of Joshua, when leaders called judges rescued the tribes from enemies. It ends in civil war, in days when Israel had no king.","review":"draft"},"ruth":{"author":"The book names no author. An older view, from Jewish tradition, names Samuel.","written":"Some time after David became king, about 1010 BC, since it names David and his family line.","writtenDetail":{"critical":"A substantial number of scholars place it under Persian rule, 539 to 332 BC. Its open attitude to foreigners suggests the 5th century BC, when marriage to foreigners was disputed.","conservative":"Conservative scholars hold that it was written some time after David became king, about 1010 BC. The book names David and his family line in 4:17 to 22."},"whatItIs":"A narrative about the widow Naomi, Ruth from Moab, and Boaz of Bethlehem. It is set when the judges ruled, before about 1050 BC, and ends with the family line of David.","review":"draft"},"1-samuel":{"author":"The author is not known. An older view names Samuel, Gad, and Nathan.","written":"Probably soon after the end of David's reign, about 970 BC.","writtenDetail":{"critical":"Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.","conservative":"Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended, about 970 BC."},"whatItIs":"A narrative of Israel's move from judges to kings, told through Samuel, Saul, and the young David. It runs from the birth of Samuel to the death of Saul.","review":"draft"},"2-samuel":{"author":"The author is not known. An older view names Gad and Nathan.","written":"Probably soon after the end of David's reign, about 970 BC.","writtenDetail":{"critical":"Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.","conservative":"Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended, about 970 BC."},"whatItIs":"A narrative of the reign of King David, 1010 to 970 BC, over Judah and then all Israel. It opens with David's lament for Saul and Jonathan and closes as a plague on Israel ends.","review":"draft"},"1-kings":{"author":"The book does not name its writer. An older view names Ezra as the compiler, and a tradition names Jeremiah.","authorDetail":{"critical":"The most common view today sees Kings as the close of one long history. Its language and ideas reflect Deuteronomy, and scholars tend to find at least two editions.","conservative":"Conservative scholars hold that no one knows who wrote 1 and 2 Kings, or how many writers there were."},"written":"By tradition, in the 6th century BC, after Babylon took Jerusalem.","writtenDetail":{"critical":"Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC.","conservative":"Conservative scholars see 1 and 2 Kings as written to answer questions raised when Babylon took Jerusalem in 586 BC."},"whatItIs":"A narrative of Israel and Judah under their kings, from Solomon's anointing to the reign of Ahab's son Ahaziah. It tells of the temple, the split into two kingdoms, and the prophet Elijah.","review":"draft"},"2-kings":{"author":"The book does not name its writer. An older view names Ezra as the compiler, and a tradition names Jeremiah.","authorDetail":{"critical":"The most common view today sees Kings as the close of one long history. Its language and ideas reflect Deuteronomy, and scholars tend to find at least two editions.","conservative":"Conservative scholars hold that no one knows who wrote 1 and 2 Kings, or how many writers there were."},"written":"By tradition, the 6th century BC. That is after King Jehoiachin was freed and before Cyrus let the captives in Babylon go home in 538 BC.","writtenDetail":{"critical":"Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC.","conservative":"Conservative scholars see 1 and 2 Kings as written to answer questions raised when Babylon took Jerusalem in 586 BC."},"whatItIs":"A history of the kings who ruled Israel and Judah after Ahab died, up to the fall of Jerusalem. It ends with King Jehoiachin freed from prison in Babylon.","review":"draft"},"1-chronicles":{"author":"The book does not name its writer, a priest or Levite, a helper of the priests in the temple. An older view names Ezra.","authorDetail":{"critical":"Many now think it unlikely that the writer of Chronicles also wrote the story parts of Ezra and Nehemiah.","conservative":"Conservative scholars hold that the writer was a priest or a Levite, a helper of the priests in the temple. Known as the Chronicler, he was a trained scribe who could use the temple records."},"written":"In the Persian period, 539 to 332 BC, after the Jews came back from Babylon. An older view gives the 5th century BC.","writtenDetail":{"critical":"Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely.","conservative":"Conservative scholars hold that the writer served in the temple under Persian rule, 539 to 332 BC. He wrote for the Jews who had come back from Babylon and rebuilt the temple."},"whatItIs":"Family lists from Adam to Israel's tribes, then the reign of King David, 1010 to 970 BC. It was written for the Jews who came back from captivity in Babylon, 586 to 538 BC.","review":"draft"},"2-chronicles":{"author":"The book does not name its writer, a priest or Levite, a helper of the priests in the temple. An older view names Ezra.","authorDetail":{"critical":"Many now think it unlikely that the writer of Chronicles also wrote the story parts of Ezra and Nehemiah.","conservative":"Conservative scholars hold that the writer was a priest or a Levite, a helper of the priests in the temple. Known as the Chronicler, he was a trained scribe who could use the temple records."},"written":"In the Persian period, 539 to 332 BC, after the Jews came back from Babylon. An older view gives the 5th century BC.","writtenDetail":{"critical":"Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely.","conservative":"Conservative scholars hold that the writer served in the temple under Persian rule, 539 to 332 BC. He wrote for the Jews who had come back from Babylon and rebuilt the temple."},"whatItIs":"A history of King Solomon and the kings of Judah, up to the fall of Jerusalem. It ends as Cyrus king of Persia lets the captives in Babylon go back to build the temple.","review":"draft"},"ezra":{"author":"The book does not name its writer, but Ezra wrote the part told in the first person. Either Ezra or a later writer may have put the parts together.","authorDetail":{"critical":"Most scholars are now wary of treating Ezra, Nehemiah, and Chronicles as one unified work with a single viewpoint. Each is increasingly seen as the result of many stages of editing.","conservative":"The first person part, 7:27 to 9:15, comes from Ezra himself. Many scholars hold that one writer produced Ezra, Nehemiah, and 1 and 2 Chronicles."},"written":"The date of writing is not known. The events in the book end in the 5th century BC.","whatItIs":"A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.","review":"draft"},"nehemiah":{"author":"The book uses Nehemiah's own records, but he did not write all of it. An older view names Nehemiah as the author of nearly all of it.","authorDetail":{"critical":"Whether Nehemiah's account in his own voice is genuine is now very controversial. Minimalists, scholars who accept little of the story as history, doubt that he existed.","conservative":"Conservative scholars hold that the book uses some of Nehemiah's own records, but he did not write all of it. The same writer probably wrote parts of Ezra also."},"written":"By tradition, the 5th century BC, probably after Nehemiah's second visit to Jerusalem.","writtenDetail":{"critical":"Ezra and Nehemiah as one book may have had a first edition early in the 4th century BC."},"whatItIs":"Much of the book is in Nehemiah's own voice. He rebuilds the wall of Jerusalem after he arrives in 445 BC, then reforms the temple, the Sabbath, and marriage.","review":"draft"},"esther":{"author":"The book does not name its writer. The writer may have been someone like Mordecai, able to use court records.","written":"By tradition, probably the 5th century BC, after the death of King Xerxes.","writtenDetail":{"critical":"The usual date for the book is the 4th century BC."},"whatItIs":"A story set at Susa in the reign of King Xerxes of Persia. Esther, a Jewish queen, stops a plan by Haman to destroy the Jews, and the feast of Purim begins.","review":"draft"},"job":{"author":"The book does not name its writer, who was an Israelite. An older view names Moses as perhaps the most likely writer.","authorDetail":{"critical":"It is widely held that a different writer added the speeches of Elihu later, because their style differs. Recent work leans more toward reading the book as one edited whole.","conservative":"Conservative scholars hold that the writer was an Israelite whose name is not known. In the book, Job knows the LORD, fears God, and lives as the wisdom books of Israel teach."},"written":"The date is not certain, and the story seems set in the age of Abraham, Isaac, and Jacob. An older view gives the time of Moses or of David and Solomon.","writtenDetail":{"critical":"Its Hebrew is from after the captivity in Babylon, 586 to 538 BC, with words and forms from Aramaic. Aramaic grew into a main language under Persian rule, 539 to 332 BC, which points to that time."},"whatItIs":"A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.","review":"draft"},"psalms":{"author":"The psalms have many writers. David wrote about half, and others are linked to Asaph, the sons of Korah, Solomon, and Moses.","authorDetail":{"critical":"Modern scholars do not accept as history that David wrote the psalms. They see the names as a way to tie the writings to famous figures.","conservative":"Conservative scholars hold that about half of the psalms come from David himself. They also link psalms to Asaph, the sons of Korah, Solomon, and Moses."},"written":"By tradition, over many centuries, from the time of Moses to the time of Ezra.","writtenDetail":{"critical":"The psalms were written over at least five centuries, from the 10th to the 5th century BC or later. Scholars of the Septuagint, the early Greek translation, argue that the collection stayed open until the 1st century AD.","conservative":"Conservative scholars hold that the psalms come from many periods of Israel's history. The heading of Psalm 90 names Moses, long before David."},"whatItIs":"A collection of 150 songs and prayers in five books, with praise, laments, and thanks. Israel sang them in worship.","review":"draft"},"proverbs":{"author":"Solomon wrote or collected much of it, by the book's own account. It also has sayings of the wise and of Agur and Lemuel.","authorDetail":{"critical":"The heading Proverbs of Solomon comes at 1:1, 10:1, and 25:1. It sorts the material into groups rather than naming an author.","conservative":"The book itself names Solomon as author or collector at 1:1 and 10:1. At 25:1 it says that the men of Hezekiah copied more of his proverbs."},"written":"Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC.","writtenDetail":{"critical":"Some argue that the sections differ in date, and chapters 1 to 9 and 30 to 31 are the latest. They put the final editing late in Persian rule, 539 to 332 BC, or under Greek rule, from 332 BC.","conservative":"Conservative scholars hold that Proverbs was begun under Solomon, about 971 to 931 BC, as the book itself says. It probably reached its present form under Hezekiah, whose men copied more proverbs."},"whatItIs":"Short wise sayings and longer poems that teach the way of wisdom. Much is addressed to a son, and it ends with a poem about a wife of noble character.","review":"draft"},"ecclesiastes":{"author":"The writer calls himself the Teacher, son of David and king in Jerusalem, but gives no name. Tradition names Solomon.","authorDetail":{"critical":"Critical scholars have long rejected any date before the captivity in Babylon, 586 to 538 BC. Words borrowed from Persian and Aramaic point to no earlier than about 450 BC, long after Solomon."},"written":"By tradition, in the time of Solomon.","writtenDetail":{"critical":"Critical scholars date it between about 450 BC and 180 BC, the year Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC."},"whatItIs":"A book in which the Teacher, a king in Jerusalem, searches for meaning and finds everything futile. It closes by telling the reader to fear God and obey his commands.","review":"draft"},"song-of-solomon":{"author":"Solomon was probably not the writer, and the song may have been made in his honor. An older view names Solomon as the author.","written":"Probably in the time of Solomon, perhaps under his oversight, in the 10th century BC.","writtenDetail":{"critical":"Most scholars since the 1800s place the song in the 3rd century BC, chiefly because of its language. Others doubt that the language requires a date after the return from Babylon, late in the 6th century BC.","conservative":"Conservative scholars think that the song was probably written while Solomon was king, and he may have overseen it. These scholars give about 960 to 931 BC as the probable years of the writing."},"whatItIs":"Love poems, spoken in turn by a young woman and the man she loves. The daughters of Jerusalem listen, and she warns them not to stir up love too soon.","review":"draft"},"isaiah":{"author":"Isaiah son of Amoz, by tradition.","authorDetail":{"critical":"Scholars widely accept that the prophet Isaiah did not write the whole book. Few scholars today credit one person with all of it, or even most of it.","conservative":"Conservative scholars treat the prophet Isaiah as the writer, from about 740 BC until after 681 BC. They read chapters 40 to 55 as his prophecies for the captivity in Babylon, 586 to 538 BC."},"written":"By tradition, the late 8th and early 7th centuries BC. Isaiah was called about 740 BC and outlived the Assyrian king Sennacherib.","writtenDetail":{"critical":"Much of the book shows signs of writing after Babylon took Judah's leaders captive in 586 BC, or later still. For most of the 20th century, scholars agreed that chapters 40 to 55 date from that captivity.","conservative":"Conservative scholars read chapters 40 to 55 as prophecies for the 500s BC, when God's people were captives in Babylon."},"whatItIs":"Prophecy about judgment and comfort for Judah and Jerusalem. It speaks of the Assyrian threat, the people taken captive to Babylon, and their return home.","review":"draft"},"jeremiah":{"author":"Jeremiah son of Hilkiah, a priest of Anathoth, by tradition, with his scribe Baruch.","authorDetail":{"critical":"Scholars generally agree that the book mixes material from different groups of writers. His own messages are probably the poems in chapters 1 to 25, and followers and later editors added much.","conservative":"Conservative scholars hold that Jeremiah and his scribe Baruch left the record. The book names Baruch as his scribe in several places."},"written":"By tradition, the late 7th and early 6th centuries BC. Jeremiah is thought to have added some chapters later, in Egypt.","whatItIs":"Prophecies of judgment and hope that Jeremiah spoke to Judah and the nations, with stories from his life. Its last chapter tells how Babylon burned Jerusalem and took its people captive.","review":"draft"},"lamentations":{"author":"The author is not known. An older view names Jeremiah.","written":"Probably soon after Babylon destroyed Jerusalem about 586 BC, by an eyewitness. An old tradition places the writing in a cave outside Jerusalem.","whatItIs":"Five poems that mourn the fall of Jerusalem and its temple and confess the sin of its people. The last poem is a prayer that God will restore his people.","review":"draft"},"ezekiel":{"author":"Ezekiel the priest, son of Buzi, by tradition. He was among the people of Judah taken captive to Babylon.","authorDetail":{"critical":"The book took shape through a long, complex process and may not keep the prophet's exact words. Scholars do agree that Ezekiel himself wrote the prophecy down.","conservative":"The book dates its messages over about 22 years, from about 593 BC. Ezekiel wrote down what he saw and heard while he lived as a captive near Babylon."},"written":"By tradition, the early 6th century BC, near Babylon, where Ezekiel lived as a captive.","whatItIs":"Prophecy and visions given to the people of Judah held captive in Babylonia. The book moves from judgment on Jerusalem and the nations to a vision of a new temple and land.","review":"draft"},"daniel":{"author":"Daniel, a young man of Judah taken captive to serve at the court in Babylon, by tradition.","authorDetail":{"critical":"The stories in chapters 1 to 6 began as legends. Unnamed writers of the 2nd century BC produced the visions in chapters 7 to 12.","conservative":"Conservative scholars hold that Daniel himself wrote the book in the 500s BC. It covers his life and visions from his capture in 605 BC to 536 BC."},"written":"By tradition, the 6th century BC. The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC.","writtenDetail":{"critical":"A consensus of modern scholars dates the book to about 165 BC, under the Greek king Antiochus IV. They read its predictions as written after the events.","conservative":"Conservative scholars read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple."},"whatItIs":"Stories of Daniel at the court in Babylon, then visions of kingdoms to come and the time of the end. The stories are set under Babylonian and Persian kings.","review":"draft"},"hosea":{"author":"Hosea son of Beeri, by tradition.","written":"By tradition, the late 8th century BC, just before the northern kingdom of Israel fell.","whatItIs":"Prophecy that compares the unfaithfulness of Israel to God with the marriage of Hosea to an unfaithful wife. It closes with a call to return to God.","review":"draft"},"joel":{"author":"Joel son of Pethuel, a prophet from Judah, by tradition. Little is known about him.","authorDetail":{"critical":"The book shows signs of growth over time, with material added at later stages. Some influential scholars hold that it is one piece of work.","conservative":"Conservative scholars treat Joel, a prophet from Judah, as the writer of the book. Little is known about him, and he may have come from Jerusalem."},"written":"Probably after Judah's people came home from the captivity in Babylon, 586 to 538 BC, perhaps about 500 BC. An older view places Joel about 800 BC, when Uzziah was king.","writtenDetail":{"critical":"Its many echoes of earlier scripture point to a late origin. Some scholars think parts were added as late as the 3rd century BC.","conservative":"Conservative scholars agree with most scholars that the book is later than 586 BC, when Babylon took Judah captive."},"whatItIs":"Prophecy about a plague of locusts and a call to turn back to God. It looks ahead to a coming day of the LORD and to judgment on the nations.","review":"draft"},"amos":{"author":"Amos, a herdsman from Tekoa, by tradition. He was not a prophet by trade.","authorDetail":{"critical":"Scholars have lately grown more doubtful about the book's account of the life of Amos. Prophetic books are more and more seen as made by trained writers, so the prophet may not be the author.","conservative":"Conservative scholars accept the book's own account of Amos at 1:1 and 7:14 to 15. He was not a prophet by trade, but the Lord sent him with a message."},"written":"By tradition, the 8th century BC, when Uzziah ruled Judah and Jeroboam II ruled Israel. Amos took his message to the northern kingdom.","writtenDetail":{"critical":"The heading and the story of Amos and the priest Amaziah are increasingly seen as written after his time. The vision reports may belong to a later phase as well.","conservative":"Conservative scholars date the preaching of Amos between 793 and 739 BC, probably late in that span. He preached to Israel, the northern kingdom."},"whatItIs":"Prophecy of judgment on the nations around Israel and on Israel itself. It ends with a promise that God will restore his people to their land.","review":"draft"},"obadiah":{"author":"Obadiah, by tradition. Only his name is known.","written":"Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC.","writtenDetail":{"critical":"The majority of scholars date it soon after Jerusalem fell to Babylon, in the 6th century BC. Some scholars think it took shape over time, amid conflicts with Edom in the 5th and 4th centuries BC.","conservative":"Conservative scholars place it early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC."},"whatItIs":"A short prophecy against Edom, which sided with the enemies of Jerusalem. It ends with a promise of rescue on Mount Zion and of a kingdom that belongs to the LORD.","review":"draft"},"jonah":{"author":"Jonah son of Amittai, by tradition.","written":"By tradition, the 8th century BC, when Jeroboam II ruled Israel.","writtenDetail":{"critical":"Most scholars think it was written long after the events, since it uses words known only from much later writings. Mainstream scholars generally read the story as fiction.","conservative":"Conservative scholars place the prophet Jonah in the reign of Jeroboam II over Israel, 782 to 753 BC. They point to 2 Kings 14:23 to 28."},"whatItIs":"A story about the prophet Jonah, who flees when God sends him to warn Nineveh. When the city repents and God spares it, Jonah is angry.","review":"draft"},"micah":{"author":"Micah the Moreshite, by tradition.","authorDetail":{"critical":"Some scholars, though not all, hold that only chapters 1 to 3 go back to Micah himself.","conservative":"Conservative scholars hold that the prophet Micah wrote the book. They credit passages from chapters 1 to 7 to him."},"written":"By tradition, the late 8th and early 7th centuries BC, while Jotham, Ahaz, and Hezekiah ruled Judah.","writtenDetail":{"critical":"Scholars agree its last stage came under Persian rule, 539 to 332 BC, or even Greek rule, from 332 BC. They dispute how much took shape then, and date the latest parts after the temple's rebuilding in 515 BC.","conservative":"Conservative scholars place Micah's work under three kings of Judah, Jotham, Ahaz, and Hezekiah, from 750 to 687 BC. His public work may have lasted about 20 to 25 years."},"whatItIs":"Prophecy against the sins of Samaria and Jerusalem, with promises of hope. It ends with trust that God will pardon sin and keep faith with Jacob and Abraham.","review":"draft"},"nahum":{"author":"The prophet Nahum, by tradition. The book names him as Nahum the Elkoshite.","written":"By tradition, the 7th century BC, after Thebes in Egypt fell and before Nineveh fell. An older view dates it to the 8th century BC, probably in Jerusalem.","writtenDetail":{"critical":"Scholars debate when the book took shape. Proposals run from soon after 663 BC to about 175 to 165 BC.","conservative":"Conservative scholars note that the book treats the fall of Thebes as past and the fall of Nineveh as future. So it dates from the 7th century BC."},"whatItIs":"A prophecy that Nineveh, the chief city of Assyria, will fall. It tells Judah that this enemy will not invade again.","review":"draft"},"habakkuk":{"author":"The prophet Habakkuk, by tradition. The book names him in its first verse and at the head of chapter 3.","authorDetail":{"critical":"Scholars debate whether chapter 3 has the same author as chapters 1 and 2, or was added later. Every copy of the Septuagint, the Greek translation finished by 132 BC, includes it.","conservative":"Conservative scholars treat the prophet Habakkuk as the writer of all three chapters. They read the closing prayer of praise as his own response to God."},"written":"By tradition, late in the 7th century BC, shortly before Babylon invaded Judah. An older view dates it a little earlier, in the mid 7th century BC.","whatItIs":"A dialogue in which the prophet questions the Lord about injustice and hears his answers. It ends with a prayer set for stringed instruments.","review":"draft"},"zephaniah":{"author":"The prophet Zephaniah, son of Cushi, by tradition.","written":"By tradition, while Josiah was king of Judah, in the 7th century BC.","writtenDetail":{"critical":"Some scholars keep the time of Josiah. Others think editors expanded an early core of messages after Judah fell in 586 BC, or later still.","conservative":"Conservative scholars place the prophet Zephaniah in the reign of Josiah over Judah, 640 to 609 BC."},"whatItIs":"A prophecy about the day of the Lord, when he will judge Judah and other nations. It ends with a promise to gather and restore the people.","review":"draft"},"haggai":{"author":"The prophet Haggai, by tradition.","written":"By tradition, about 520 BC, after the Jews returned from Babylon in 538 BC.","whatItIs":"Dated messages from the second year of King Darius that urge the people to rebuild the house of the Lord. They speak to Zerubbabel the governor, Joshua the high priest, and the people.","review":"draft"},"zechariah":{"author":"The prophet Zechariah, a priest, by tradition.","authorDetail":{"critical":"Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet wrote or edited chapters 9 to 14.","conservative":"Conservative scholars treat the prophet Zechariah, who was also a priest, as the writer of the book."},"written":"By tradition, from about 520 BC, after the people of Judah returned from Babylon in 538 BC.","writtenDetail":{"critical":"Most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated.","conservative":"Conservative scholars date the start of his work to 520 BC, soon after Haggai began to prophesy. Judah's people had come home from Babylon in 538 BC."},"whatItIs":"Night visions and messages that call the people back to the Lord, then two prophecies about Jerusalem and the nations. The book opens in the second year of King Darius.","review":"draft"},"malachi":{"author":"The prophet Malachi, by tradition. His name means my messenger.","authorDetail":{"critical":"Some scholars think the writer is unknown and that Malachi, meaning my messenger, is a title rather than a name. Others argue from the grammar that it is a name.","conservative":"Conservative scholars treat Malachi as the name of the prophet behind the book. The name means my messenger."},"written":"By tradition, about 460 BC, when Ezra and Nehemiah lived.","writtenDetail":{"critical":"Most scholars think editors added to the book in several stages. Its oldest parts date to about 500 BC, and it was almost complete by about 180 BC.","conservative":"Conservative scholars date Malachi probably to about 460 BC, when Ezra and Nehemiah lived. He worked decades after the exiles came home from Babylon and rebuilt the temple."},"whatItIs":"A set of disputes between the Lord and Israel about worship, marriage, and offerings. It ends with a call to remember the law of Moses and a promise of Elijah.","review":"draft"},"matthew":{"author":"The apostle Matthew, also called Levi, a former tax collector, by tradition.","authorDetail":{"critical":"Most scholars doubt the apostle wrote it, and see it as the work of the next generation of Christians. It also draws on the Gospel of Mark, and some scholars still defend the apostle.","conservative":"Conservative scholars keep the traditional view that Matthew wrote this Gospel. He was the tax collector, also called Levi, who became a disciple of Jesus."},"written":"By tradition, about AD 60, before the fall of Jerusalem.","writtenDetail":{"critical":"Most scholars date it after AD 70, because it seems to know of the fall of Jerusalem. Other scholars argue for the 40s or 50s AD.","conservative":"Conservative scholars place the writing of this Gospel probably near AD 60, in the late 50s or the early 60s."},"whatItIs":"A Gospel account of Jesus from his birth to his death, resurrection, and command to make disciples of all nations. Its writer had Jewish Christians in mind.","review":"draft"},"mark":{"author":"John Mark, by tradition. He recorded the reports about Jesus that the apostle Peter passed on to him.","authorDetail":{"critical":"The book does not name its writer, and scholars debate who wrote it. Some deny that anyone named Mark wrote it, and others accept John Mark.","conservative":"Conservative scholars hold that John Mark wrote this Gospel. He wrote down Peter's witness to what Jesus said and did."},"written":"By tradition, the second half of the 50s AD, likely in Rome. A date in the middle or late 60s AD is also possible.","writtenDetail":{"critical":"Scholars usually date it just before or just after AD 70. Chapter 13 seems to reflect the Jewish war with Rome, AD 66 to 74.","conservative":"Conservative scholars think Mark was likely written in Rome in the middle or late 50s AD. They also allow a date in the middle or late 60s AD."},"whatItIs":"A Gospel account that begins when John baptizes Jesus and ends with his death and resurrection. It explains Jewish customs for readers who did not know them.","review":"draft"},"luke":{"author":"Luke, a physician and travel companion of Paul, by tradition.","authorDetail":{"critical":"Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most now hold that the writer did travel with Paul, but some point to differences with his letters.","conservative":"Conservative scholars keep the traditional view that Luke wrote this Gospel and the book of Acts. Luke was a doctor who traveled with Paul."},"written":"By tradition, no earlier than about AD 62, just after the last events in Acts. An older view dates it to about AD 60 to 63, a little before Acts.","writtenDetail":{"critical":"Most scholars date it to about AD 80 to 90, after Mark and after the fall of Jerusalem.","conservative":"Conservative scholars keep the traditional view that the earliest date is about AD 62. That date comes just after the last events that Acts tells, in chapter 28."},"whatItIs":"A Gospel account of Jesus from his birth to his resurrection and his going up to heaven. The writer addresses it to a man named Theophilus.","review":"draft"},"john":{"author":"The apostle John, son of Zebedee, by tradition.","authorDetail":{"critical":"Most scholars now prefer another writer, such as John the Elder, with the disciple Jesus loved as a main source. Many still hold that the apostle wrote it.","conservative":"Conservative scholars identify the apostle John with the disciple whom Jesus loved, and hold that he wrote it."},"written":"By tradition, late in the 1st century AD, likely in Ephesus.","whatItIs":"A Gospel account of the miracles of Jesus, which it calls signs, and of his talks, death, and resurrection. Its stated witness is the disciple whom Jesus loved.","review":"draft"},"acts":{"author":"Luke, a physician and travel companion of Paul, by tradition.","authorDetail":{"critical":"Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most still hold that the writer travelled with Paul, but others note tensions with his letters.","conservative":"Conservative scholars keep the traditional view that Luke wrote Acts. He was a doctor and a companion of Paul on his travels, and he also wrote the Gospel of Luke."},"written":"By tradition, about AD 62, when the story in Acts ends. An older view adds that it was probably written in Rome.","writtenDetail":{"critical":"Most scholars date it to about AD 80 to 90, after the fall of Jerusalem.","conservative":"Acts ends about AD 62 with Paul still awaiting trial. Since it does not tell of his defence or release, many scholars hold that it was written then."},"whatItIs":"A history of the early church, from when Jesus went up to heaven to the time of Paul in Rome. It continues Luke and also addresses Theophilus.","review":"draft"},"romans":{"author":"Paul, by tradition.","written":"By tradition, about AD 57, probably in Corinth.","whatItIs":"A letter that explains the gospel for Jews and non-Jews, then turns to daily Christian life. Paul wrote it to the believers in Rome before he had visited them.","review":"draft"},"1-corinthians":{"author":"Paul, by tradition.","written":"By tradition, about AD 54, in Ephesus, near the end of Paul's three years there.","whatItIs":"A letter to the church in Corinth about divisions, sexual conduct, worship, and the resurrection of the dead. Paul answers news he had heard and a letter the church had sent him.","review":"draft"},"2-corinthians":{"author":"Paul, by tradition.","written":"By tradition, about AD 55 to 56, in Macedonia, about a year after 1 Corinthians.","whatItIs":"A letter in which Paul defends his work as an apostle and asks for money for poor believers in Judea. He sent it to the Corinthian church and to the believers across Achaia.","review":"draft"},"galatians":{"author":"Paul, by tradition.","written":"By tradition, about AD 48, probably from Antioch in Syria. An older view places it in Corinth in the late 50s AD.","whatItIs":"A letter in which Paul argues that non-Jewish believers do not need circumcision or the law of Moses. He wrote it to the churches of Galatia.","review":"draft"},"ephesians":{"author":"Paul, by tradition.","authorDetail":{"critical":"Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A survey in 2011 found 39 of 109 scholars for Paul, 42 against, and 28 unsure.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, about AD 62, while Paul was in prison in Rome.","writtenDetail":{"critical":"Many scholars who doubt that Paul wrote it date it to about AD 70 to 100.","conservative":"Conservative scholars keep the traditional date of about AD 62. They place it during the house arrest of Paul in Rome, told in Acts 28."},"whatItIs":"A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.","review":"draft"},"philippians":{"author":"Paul, by tradition.","written":"By tradition, about AD 62, while Paul was in prison, probably in Rome.","whatItIs":"A letter that thanks the church for its gifts and urges unity and joy in the Lord. Paul wrote it to the believers at Philippi while he was in chains.","review":"draft"},"colossians":{"author":"Paul, by tradition.","authorDetail":{"critical":"Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A survey in 2011 found 56 of 109 scholars for Paul, 17 against, and 36 unsure.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, about AD 62, during Paul's imprisonment, probably in Rome.","writtenDetail":{"critical":"A standard Bible commentary holds that Paul did not write it. It dates the letter after his lifetime, between AD 70 and 80.","conservative":"Conservative scholars keep the view that it was probably written about AD 62. Paul was then in prison, probably in Rome, when he also wrote Ephesians and Philemon."},"whatItIs":"A letter that sets Christ above all creation and warns the church against false teaching. It names Paul and Timothy as senders and greets the believers at Colossae.","review":"draft"},"1-thessalonians":{"author":"Paul, by tradition.","written":"By tradition, about AD 50, probably in Corinth.","whatItIs":"A letter of thanks and encouragement, with teaching on holy living and the coming Day of the Lord. It comes from Paul, Silvanus, and Timothy to the church of the Thessalonians.","review":"draft"},"2-thessalonians":{"author":"Paul, by tradition.","authorDetail":{"critical":"Critical commentators are about evenly split on whether Paul wrote it. A wider survey of 111 scholars in 2011 found 63 for Paul, 13 against, and 35 unsure.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, about AD 50, soon after 1 Thessalonians. Paul was probably in Corinth.","writtenDetail":{"critical":"Scholars who think a later writer wrote it date it to about AD 80 to 115.","conservative":"Conservative scholars date it to AD 49 to 51, soon after 1 Thessalonians, with Paul probably in Corinth. Paul wrote after he heard that the church believed the day of the Lord was already here."},"whatItIs":"A letter that corrects a mistaken view about the Lord's return and warns against idle living. It names Paul, Silvanus, and Timothy as senders and goes to the church of the Thessalonians.","review":"draft"},"1-timothy":{"author":"Paul, by tradition.","authorDetail":{"critical":"Most scholars think a later Christian wrote it in Paul's name, in words and a style unlike his. A small and shrinking number of scholars still hold that Paul wrote it.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, the 60s AD, between Paul's first and last imprisonments in Rome. The place is not known, but an older view names Macedonia.","writtenDetail":{"critical":"Most scholars date it after Paul's death, between the late 1st century and the middle of the 2nd century AD.","conservative":"Conservative scholars keep the view that Paul probably wrote it in the 60s AD. He wrote on a journey after the events in Acts, between his two imprisonments in Rome."},"whatItIs":"A letter of instruction on worship, church leaders, and false teaching. It names Paul as its writer and Timothy, at Ephesus, as its reader.","review":"draft"},"2-timothy":{"author":"Paul, by tradition.","authorDetail":{"critical":"Since the early 1800s, more and more scholars think an unknown follower of Paul wrote it in his name. A number of scholars still hold that Paul wrote it.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, about AD 65, in Rome, while Paul was in prison for the second time, shortly before his death.","writtenDetail":{"critical":"Some critical scholars date it to about AD 90 to 140.","conservative":"Conservative scholars date it to the second prison term of Paul in Rome, probably AD 64 or 65. In chapter 4, Paul says that he expects to die soon."},"whatItIs":"A personal letter that urges Timothy to endure hardship and asks him to come quickly. It names Paul as its writer, a prisoner who expects to die soon.","review":"draft"},"titus":{"author":"The apostle Paul, by tradition.","authorDetail":{"critical":"Most scholars think all three letters to Timothy and Titus were written after Paul's death, by someone using his name.","conservative":"Conservative scholars keep the traditional view that Paul wrote it."},"written":"By tradition, the 60s AD, after the first imprisonment of Paul in Rome. The place is not known, but an older view names Nicopolis in Epirus.","writtenDetail":{"critical":"Scholars who doubt Paul wrote it date it from the 80s AD to the late 2nd century AD. Most of them place it between about AD 80 and 100.","conservative":"Conservative scholars keep the view that Paul probably wrote it in the 60s AD. That was after his first imprisonment in Rome, told in Acts 28, and before his second."},"whatItIs":"A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.","review":"draft"},"philemon":{"author":"The apostle Paul, by tradition.","written":"By tradition, about AD 62, while Paul was a prisoner, probably in Rome.","whatItIs":"A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to receive Onesimus back as a dear brother, not as a slave.","review":"draft"},"hebrews":{"author":"The letter does not name its writer, and who wrote it is not known. An older view names Paul.","written":"By tradition, before AD 70, probably in Rome.","writtenDetail":{"critical":"Some scholars date it later, between AD 70 and 100.","conservative":"Conservative scholars keep the view that it was probably written before AD 70."},"whatItIs":"A long letter of encouragement that presents Jesus as greater than the angels, Moses, and the old priesthood of Israel. By tradition, its first readers were Christians who knew the Jewish faith.","review":"draft"},"james":{"author":"By tradition, James, the brother of Jesus, who led the church in Jerusalem. An older view also counts him among the twelve apostles.","authorDetail":{"critical":"A widely held view among scholars is that another writer used the name of James.","conservative":"Conservative scholars keep the traditional view that Jesus's brother James wrote it. James led the church in Jerusalem, as Acts 15 shows."},"written":"By tradition, the early 40s AD. An older view places it in Jerusalem in the early 60s AD.","writtenDetail":{"critical":"Scholars who doubt James wrote it usually date it from the late 1st to the mid 2nd century AD. But the debate now seems to lean toward an earlier date than that.","conservative":"Conservative scholars keep the view that it was probably written about AD 40 to 45."},"whatItIs":"A letter of practical teaching on trials, wisdom, speech, wealth, and faith shown by deeds. It is addressed to the twelve tribes of the Dispersion, meaning Jewish believers who lived outside Palestine.","review":"draft"},"1-peter":{"author":"The apostle Peter, by tradition.","authorDetail":{"critical":"Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, rhetoric, and philosophy, unlike a fisherman from Galilee.","conservative":"Conservative scholars keep the traditional view that the apostle Peter wrote it. The letter names Peter as its writer, and the writer calls himself a witness of Christ's sufferings."},"written":"By tradition, the early 60s AD, probably in Rome. An older view places it in Babylon on the Euphrates.","writtenDetail":{"critical":"Most scholars think it was written after the death of Peter and the other apostles.","conservative":"Conservative scholars date it to about AD 62 or 63, under the emperor Nero, probably in Rome. In 1 Peter 5:13, they read the name Babylon as almost certainly meaning Rome."},"whatItIs":"A letter that encourages Christians to stay hopeful and faithful while they suffer. It is sent to exiles scattered through five regions of Asia Minor, in what is now Turkey.","review":"draft"},"2-peter":{"author":"The apostle Peter, by tradition.","authorDetail":{"critical":"Most critical scholars think one or more followers of Peter wrote it in his name. They cite its differences from 1 Peter, its use of Jude, and little support from early church writers.","conservative":"The letter names Peter as an apostle. The writer says he was with Jesus on the mountain and saw him in glory, at 1:16 to 18."},"written":"By tradition, the mid 60s AD, shortly before Peter died, probably from a prison in Rome.","writtenDetail":{"critical":"Scholars give dates from about AD 60 to 150. Critical scholars generally place it in the 2nd century AD.","conservative":"The writer says his death is near, so the letter comes from late in the life of Peter."},"whatItIs":"A farewell letter that warns against false teachers and answers those who mock the promise of the Lord's coming. It calls itself the second letter to its readers.","review":"draft"},"1-john":{"author":"The letter does not name its writer. By tradition, the apostle John, the son of Zebedee.","authorDetail":{"critical":"Most critical scholars hold that the apostle John wrote none of the five books that tradition credits to him.","conservative":"Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."},"written":"By tradition, about AD 85, in Ephesus, late in the life of John.","writtenDetail":{"critical":"A standard textbook dates it between about AD 95 and 110, probably in Ephesus.","conservative":"Conservative scholars date it to about AD 85, and no later than the 90s AD. John likely wrote it from Ephesus, where he had apparently moved about AD 70."},"whatItIs":"A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.","review":"draft"},"2-john":{"author":"By tradition, the apostle John, the son of Zebedee. The writer calls himself the elder.","authorDetail":{"critical":"Most critical scholars hold that the apostle John wrote none of the five books credited to him. This letter is one of the five.","conservative":"Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."},"written":"By tradition, in Ephesus, no later than the 90s AD.","whatItIs":"A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.","review":"draft"},"3-john":{"author":"By tradition, the apostle John, the son of Zebedee. The writer calls himself the elder.","authorDetail":{"critical":"Most critical scholars hold that the apostle John wrote none of the five books credited to him. This letter is one of the five.","conservative":"Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."},"written":"By tradition, in Ephesus, no later than the 90s AD.","whatItIs":"A short personal letter from the elder to Gaius. It praises his help for traveling believers and warns about Diotrephes, who refuses to welcome them.","review":"draft"},"jude":{"author":"By tradition, Jude, a brother of both James and Jesus. An older view counts him among the twelve apostles, as Judas, also called Lebbaeus and Thaddaeus.","authorDetail":{"critical":"Scholars still debate who the writer was. One view is that a later writer used the name of Jude to make the letter carry more weight.","conservative":"Conservative scholars keep the traditional view that Jude, a brother of James and of Jesus, wrote it. In Matthew 13:55, Jesus has a brother Judas, and in Greek Judas and Jude are one name."},"written":"By tradition, the mid 60s AD, apparently in Palestine.","writtenDetail":{"critical":"The date is not known, and proposals run from about AD 50 to 110. Scholars who doubt that Jude wrote it generally prefer the later dates, about AD 90 to 110 or after.","conservative":"Conservative scholars keep the view that it probably dates from the mid 60s AD. Jude and 2 Peter share material, so they are dated close together."},"whatItIs":"A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved, and kept.","review":"draft"},"revelation":{"author":"By tradition, the apostle John, the son of Zebedee. The writer calls himself John.","authorDetail":{"critical":"Modern scholarship generally does not identify the writer with the apostle John. Many hold that nothing is known of him beyond his work as a Christian prophet.","conservative":"Conservative scholars keep the traditional view that the writer was John, the son of Zebedee. They hold that he also wrote the Gospel of John and the three letters of John."},"written":"By tradition, the mid 90s AD, on the island of Patmos.","whatItIs":"A book of prophetic visions, opened by letters to seven churches in Asia, a Roman province, now western Turkey. It describes the conflict between God and evil and ends with a new heaven and earth.","review":"draft"}};
+</script>
+<script>
+(function(){
+'use strict';
+var COLORS={'Law':'#C2255C','History':'#B01E35','Poetry & Wisdom':'#CD4C26','Major Prophets':'#9D6E00','Minor Prophets':'#667F19','Gospels':'#26828B','History (Acts)':'#6E6A66','Letters of Paul':'#1B2A41','General Letters':'#4B2E57','Prophecy':'#986694'};
+var byId={},GROUPS=[];
+BOOKS.forEach(function(b,i){b.i=i;b.color=COLORS[b.group]||'#1D1D1F';b.label=b.group.replace(' (Acts)','');byId[b.id]=b;
+  var g=GROUPS[GROUPS.length-1];if(!g||g.group!==b.group){g={group:b.group,label:b.label,color:b.color,books:[]};GROUPS.push(g);}g.books.push(b);});
+var $=function(id){return document.getElementById(id);};
+var wall=$('wall'),read=$('read'),col=$('col'),panel=$('panel'),shade=$('shade'),whereBtn=$('where'),meas=$('meas');
+function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!==undefined)e.innerHTML=html;return e;}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var store={get:function(k){try{return JSON.parse(localStorage.getItem('biblewall.'+k));}catch(e){return null;}},set:function(k,v){try{localStorage.setItem('biblewall.'+k,JSON.stringify(v));}catch(e){}}};
+var last=store.get('last')||{};
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- wall ---------- */
+var wallW=0,wallY=0,WALLMODE=+((location.search.match(/wall=(\d)/)||[])[1]||3);
+function hrefFor(b){return '#'+b.id+'-'+(last[b.id]||1);}
+function fit(a,W){
+  meas.textContent=a.textContent;var w=meas.getBoundingClientRect().width||1,n=a.textContent.length;
+  var fs=100*W/w,ls=0,cap=W/3.7;
+  if(fs>cap){fs=cap;ls=(W-w*cap/100)/(n-1);if(ls>0.3*fs){fs=W/(w/100+(n-1)*0.3);ls=0.3*fs;}}
+  a.style.fontSize=fs.toFixed(2)+'px';a.style.letterSpacing=ls.toFixed(2)+'px';a.style.lineHeight=Math.max(fs*1.03,24).toFixed(2)+'px';
+}
+function nameLink(b,W){var a=el('a','n');a.textContent=b.name;a.href=hrefFor(b);a.dataset.book=b.id;a.style.color=b.color;a.setAttribute('aria-label',b.name);fit(a,W);return a;}
+function band(g,W,first,ph){var d=el('div','band');d.textContent=g.label;d.style.cssText='background:'+g.color+';font-size:'+(ph?12:13)+'px;padding:5px 8px;margin:'+(first?0:(ph?22:14))+'px 0 6px';return d;}
+function wallFoot(){var f=el('div','wfoot','<span class="tr">Berean Standard Bible</span><a href="#timeline">Timeline</a><a href="#quotations">Quotations</a><a href="#sources">Sources</a>');return f;}
+function renderWall(){
+  var vw=document.documentElement.clientWidth,ph=vw<700;wallW=vw;wall.innerHTML='';
+  if(!ph){
+    var pad=Math.max(24,Math.min(64,vw*0.045)),gap=Math.max(16,Math.min(30,vw*0.021)),inner=Math.min(vw,1320)-pad*2,W=(inner-gap*4)/5,br=[0,13,27,39,53,66];
+    wall.style.cssText='width:'+(inner+pad*2)+'px;padding:24px '+pad+'px 20px';
+    var row=el('div');row.style.cssText='display:flex;gap:'+gap+'px;align-items:stretch';var lastG=null;
+    for(var c=0;c<5;c++){var cl=el('div');cl.style.cssText='width:'+W+'px;display:flex;flex-direction:column;justify-content:space-between';
+      for(var i=br[c];i<br[c+1];i++){var b=BOOKS[i];if(b.group!==lastG){cl.appendChild(band({label:b.label,color:b.color},W,i===br[c],false));lastG=b.group;}cl.appendChild(nameLink(b,W));}
+      row.appendChild(cl);}
+    wall.appendChild(row);wall.appendChild(wallFoot());
+  }else{
+    var p=20,g2=14,W2=(vw-p*2-g2)/2;wall.style.cssText='padding:28px '+p+'px 48px';
+    GROUPS.forEach(function(g,gi){wall.appendChild(band(g,vw-p*2,gi===0,true));
+      var r=el('div');r.style.cssText='display:flex;gap:'+g2+'px;align-items:flex-start';var h=Math.ceil(g.books.length/2);
+      if(WALLMODE>=3&&g.books.length===1){wall.appendChild(nameLink(g.books[0],vw-p*2));return;}
+      var links=g.books.map(function(b){return nameLink(b,W2);});
+      if(WALLMODE>=2){var hs=links.map(function(a){return Math.max(parseFloat(a.style.fontSize)*1.03,24);}),tot=hs.reduce(function(x,y){return x+y;},0),acc=0,best=1e9;h=1;
+        for(var k=1;k<=links.length;k++){acc+=hs[k-1];var d=Math.abs(acc-(tot-acc));if(d<best){best=d;h=k;}}}
+      [links.slice(0,h),links.slice(h)].forEach(function(part){var cl=el('div');cl.style.width=W2+'px';part.forEach(function(a){cl.appendChild(a);});r.appendChild(cl);});
+      wall.appendChild(r);});
+    wall.appendChild(wallFoot());
+  }
+}
+var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){if(document.documentElement.clientWidth!==wallW){if(!wall.hidden)renderWall();else wallW=0;}},150);});
+
+/* ---------- book data ---------- */
+var cache={},waiting={};
+window.__BK=function(id,chapters){cache[id]=chapters;(waiting[id]||[]).forEach(function(f){f(chapters);});delete waiting[id];};
+var LIDX={},LMAP={},RW={},lwait={},MARGIN=!/links=inline/.test(location.search);
+window.__LK=function(id,d){
+  var ix={},mp={};
+  (d.links||[]).forEach(function(l){mp[l.id]=l;['a','b'].forEach(function(s){var me=l[s],ot=l[s==='a'?'b':'a'];if(me.book!==id||!byId[ot.book])return;
+    var c=ix[me.c]=ix[me.c]||{};(c[me.v]=c[me.v]||[]).push({l:l,me:me,other:ot,side:s});});});
+  Object.keys(ix).forEach(function(c){Object.keys(ix[c]).forEach(function(v){ix[c][v].sort(function(x,y){return ((x.l.type==='quotation'?0:1)-(y.l.type==='quotation'?0:1))||((y.l.votes||0)-(x.l.votes||0));});});});
+  LIDX[id]=ix;LMAP[id]=mp;RW[id]=d.readWith||{};(lwait[id]||[]).forEach(function(f){f();});delete lwait[id];
+};
+function loadLinks(id){
+  if(LIDX[id])return Promise.resolve();
+  return new Promise(function(res){
+    if(lwait[id]){lwait[id].push(res);return;}
+    lwait[id]=[res];var s=document.createElement('script');s.src='data/links/'+id+'.js';
+    s.onerror=function(){LIDX[id]={};LMAP[id]={};RW[id]={};(lwait[id]||[]).forEach(function(f){f();});delete lwait[id];};document.head.appendChild(s);});
+}
+function loadAll(id){return Promise.all([loadBook(id),loadLinks(id)]);}
+function linksAt(b,n,v){var ix=LIDX[b.id];return (ix&&ix[n]&&ix[n][v])||[];}
+function refLabel(e){return byId[e.book].name+' '+e.c+':'+e.v+(e.v2?'\u2013'+e.v2:'');}
+function marks(b,n,v){
+  return linksAt(b,n,v).filter(function(x){return !x.me.heading;}).map(function(x){var q=x.l.type==='quotation';
+    return '<button type="button" class="mk '+(q?'q':'e')+'" style="--d:'+byId[x.other.book].color+'" data-l="'+x.l.id+'" data-s="'+x.side+'" aria-label="'+(q?'Quotation':'Echo')+' link to '+esc(refLabel(x.other))+'"></button>';}).join('');
+}
+function loadBook(id){
+  if(cache[id])return Promise.resolve(cache[id]);
+  return new Promise(function(res,rej){
+    if(waiting[id]){waiting[id].push(res);return;}
+    waiting[id]=[res];var s=document.createElement('script');s.src='data/text/'+id+'.js';s.onerror=function(){delete waiting[id];rej(new Error('load '+id));};document.head.appendChild(s);});
+}
+
+/* ---------- chapter rendering ---------- */
+var POETRY={q1:1,q2:1,li1:1,li2:1,qr:1,qd:1};
+function noteText(parts){return (parts||[]).map(function(p){return esc(p.t||'');}).join('');}
+function buildAbout(b){
+  var I=INTROS[b.id];if(!I)return null;
+  var box=el('div','about'),btn=el('button','lnk','About this book <i>&#8250;</i>'),body=el('div');body.hidden=true;
+  btn.type='button';btn.setAttribute('aria-expanded','false');
+  var h='<dl><dt>What it is</dt><dd>'+esc(I.whatItIs)+'</dd><dt>Author</dt><dd>'+esc(I.author)+'</dd><dt>Written</dt><dd>'+esc(I.written)+'</dd></dl>';
+  body.innerHTML=h;
+  if(I.authorDetail||I.writtenDetail){
+    var sb=el('button','lnk','Scholars differ <i>&#8250;</i>'),sd=el('div','sd');sb.type='button';sb.setAttribute('aria-expanded','false');sd.hidden=true;var t='';
+    [['Author',I.authorDetail],['Written',I.writtenDetail]].forEach(function(x){if(!x[1])return;
+      if(x[1].critical)t+='<h5>'+x[0]+': what critical scholars say</h5><p>'+esc(x[1].critical)+'</p>';
+      if(x[1].conservative)t+='<h5>'+x[0]+': what conservative scholars answer</h5><p>'+esc(x[1].conservative)+'</p>';});
+    sd.innerHTML=t;sb.addEventListener('click',function(){var o=sd.hidden;sd.hidden=!o;sb.setAttribute('aria-expanded',o?'true':'false');});
+    body.appendChild(sb);if(I.review==='draft')body.appendChild(el('span','draft','DRAFT'));body.appendChild(sd);
+  }else if(I.review==='draft'){body.appendChild(el('span','draft','DRAFT'));}
+  btn.addEventListener('click',function(){var o=body.hidden;body.hidden=!o;btn.setAttribute('aria-expanded',o?'true':'false');});
+  box.appendChild(btn);box.appendChild(body);return box;
+}
+function buildSection(b,n,full,newbook){
+  var ch=cache[b.id][n-1],s=el('section',newbook?'newbook':'');s.dataset.book=b.id;s.dataset.n=n;s.style.setProperty('--c',b.color);
+  if(full){var bk=el('div','bk band');bk.textContent=b.label;s.appendChild(bk);}
+  var hd=el('div','head'+(full?' full':''));var nm=el('div','name');nm.textContent=b.name;var nu=el('div','num');nu.textContent=n;hd.appendChild(nm);hd.appendChild(nu);
+  hd.setAttribute('role','heading');hd.setAttribute('aria-level','2');s.appendChild(hd);
+  var meta=el('div','meta'+(full?'':' small')),ab=full?buildAbout(b):null;if(ab)meta.appendChild(ab);
+  var rw=(RW[b.id]||{})[n];
+  if(rw&&rw.length){var rr=el('div','rw');rr.appendChild(el('span','rwl','Read with'));
+    rw.forEach(function(e){var d=byId[e.book];if(!d)return;var bt=el('button','rwc');bt.type='button';bt.textContent=d.name+' '+e.c;bt.style.color=d.color;bt.dataset.book=e.book;bt.dataset.c=e.c;rr.appendChild(bt);});
+    rr.appendChild(el('span','rws','From OpenBible.info'));meta.appendChild(rr);}
+  if(meta.firstChild)s.appendChild(meta);
+  var xr={};(ch.xrefs||[]).forEach(function(x){xr[x.v]=String(x.t).replace(/^\(|\)$/g,'');});
+  var pend=false,blocks=ch.blocks;
+  for(var i=0;i<blocks.length;i++){var bl=blocks[i];
+    if(bl.k==='h'){
+      if(bl.s==='ms')s.appendChild(el('div','ms',esc(bl.t)));
+      else if(bl.s==='d')s.appendChild(el('div','hd',esc(bl.t)));
+      else if(bl.s==='qa')s.appendChild(el('div','qa',esc(bl.t)));
+      else if(bl.s==='s2')s.appendChild(el('h4','',esc(bl.t)));
+      else{s.appendChild(el('h3','',esc(bl.t)));pend=true;}
+    }else if(bl.k==='p'){
+      var h='',v0=null,notes=[];
+      (bl.c||[]).forEach(function(c){
+        if(typeof c==='string')h+=esc(c);
+        else if(c.v!==undefined){h+='<span class="vn"><sup class="v" data-v="'+c.v+'">'+c.v+'</sup>'+marks(b,n,c.v)+'</span>';if(v0===null)v0=c.v;}
+        else if(c.note){if(c.o!==undefined)h+='<sup class="v o">'+esc(c.o)+'</sup>';notes.push(noteText(c.note));}
+      });
+      if(pend){
+        var hl=v0!==null?linksAt(b,n,v0).filter(function(x){return !!x.me.heading;}):[];
+        if(hl.length){var xd=el('div','x');hl.forEach(function(k,i){if(i)xd.appendChild(document.createTextNode(' \u00b7 '));var bt=el('button','xl');bt.type='button';bt.textContent=refLabel(k.other);bt.style.color=byId[k.other.book].color;bt.dataset.l=k.l.id;bt.dataset.s=k.side;xd.appendChild(bt);});s.appendChild(xd);}
+        else if(v0!==null&&xr[v0])s.appendChild(el('div','x',esc(xr[v0])));
+        pend=false;}
+      var cls=(bl.s&&bl.s!=='p'&&bl.s!=='pmo')?bl.s:'';
+      var nx=blocks[i+1];if(POETRY[bl.s]&&!(nx&&nx.k==='p'&&POETRY[nx.s]))cls+=' pe';
+      s.appendChild(el('p',cls,h));
+      notes.forEach(function(t){s.appendChild(el('div','note',t));});
+    }else if(bl.k==='b'){s.appendChild(el('div','gap'));}
+    else if(bl.k==='n'){s.appendChild(el('div','note',noteText(bl.note)));}
+  }
+  return s;
+}
+
+/* ---------- reading view ---------- */
+var cur=null,busy=false,ended=false,sentinel=null,io=null,shownKey=null;
+function prevOf(b,n){if(n>1)return {b:b,n:n-1};var p=BOOKS[b.i-1];return p?{b:p,n:p.chapters}:null;}
+function nextOf(b,n){if(n<b.chapters)return {b:b,n:n+1};var x=BOOKS[b.i+1];return x?{b:x,n:1}:null;}
+function setBar(b,n){
+  cur={b:b,n:n};whereBtn.innerHTML='<b>'+esc(b.name)+'</b>Chapter '+n+'<i>&#9662;</i>';read.style.setProperty('--c',b.color);
+  document.title=b.name+' '+n+' · Bible wall prototype';
+  last[b.id]=n;store.set('last',last);store.set('place',{book:b.id,n:n});
+  var key='#'+b.id+'-'+n;shownKey=key;try{if(location.hash!==key)history.replaceState(null,'',key);}catch(e){}
+  var nx=nextOf(b,n);if(nx&&nx.b!==b&&!cache[nx.b.id])loadAll(nx.b.id).catch(function(){});
+}
+function appendNext(){
+  if(busy||ended||read.hidden)return;
+  var secs=col.querySelectorAll('section'),ls=secs[secs.length-1];if(!ls)return;
+  var b=byId[ls.dataset.book],n=+ls.dataset.n,nx=nextOf(b,n);
+  if(!nx){ended=true;col.insertBefore(el('div','end','End of Revelation'),sentinel);return;}
+  busy=true;
+  loadAll(nx.b.id).then(function(){
+    var nb=nx.b!==b,ns=buildSection(nx.b,nx.n,nb,nb);col.insertBefore(ns,sentinel);layoutMargin(ns);busy=false;pump();
+  }).catch(function(){busy=false;});
+}
+function pump(){if(!sentinel||read.hidden)return;if(sentinel.getBoundingClientRect().top<window.innerHeight+1600)appendNext();}
+function track(){
+  if(read.hidden)return;
+  var secs=col.querySelectorAll('section'),hit=null;
+  for(var i=0;i<secs.length;i++){if(secs[i].getBoundingClientRect().top<=130)hit=secs[i];else break;}
+  if(!hit)hit=secs[0];if(!hit)return;
+  var b=byId[hit.dataset.book],n=+hit.dataset.n;if(!cur||cur.b!==b||cur.n!==n)setBar(b,n);
+}
+var ticking=false;window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){ticking=false;if(!read.hidden){track();pump();}});},{passive:true});
+function showRead(b,n){
+  return loadAll(b.id).then(function(){
+    closePanel();closePop();col.innerHTML='';ended=false;busy=false;
+    var pv=prevOf(b,n);if(pv){var a=el('a','prev');a.href='#'+pv.b.id+'-'+pv.n;a.innerHTML='&#8249; '+esc(pv.b.name)+' '+pv.n;col.appendChild(a);}
+    var fs0=buildSection(b,n,true,false);col.appendChild(fs0);col.classList.toggle('mg',MARGIN&&window.innerWidth>=1180);
+    sentinel=el('div');sentinel.style.height='1px';col.appendChild(sentinel);
+    wall.hidden=true;refEl.hidden=true;read.hidden=false;window.scrollTo(0,0);setBar(b,n);layoutMargin(fs0);renderTrail();
+    if(io)io.disconnect();
+    if('IntersectionObserver' in window){io=new IntersectionObserver(function(es){if(es[0].isIntersecting)appendNext();},{rootMargin:'0px 0px 1600px 0px'});io.observe(sentinel);}
+    pump();
+  });
+}
+function showWall(focusId){
+  closePanel();closePop();read.hidden=true;refEl.hidden=true;wall.hidden=false;document.title='Bible wall prototype';
+  if(!wallW||document.documentElement.clientWidth!==wallW)renderWall();
+  else wall.querySelectorAll('a.n').forEach(function(a){a.href=hrefFor(byId[a.dataset.book]);});
+  window.scrollTo(0,wallY||0);
+  if(focusId){var a=wall.querySelector('a.n[data-book="'+focusId+'"]');if(a){var r=a.getBoundingClientRect();if(r.top<0||r.bottom>window.innerHeight)a.scrollIntoView({block:'center'});return a;}}
+  return null;
+}
+
+/* ---------- chapter panel ---------- */
+function openPanel(){
+  if(!cur)return;var b=cur.b,g=el('div','grid');panel.innerHTML='';panel.style.setProperty('--c',b.color);
+  for(var i=1;i<=b.chapters;i++){var a=el('a',i===cur.n?'cur':'');a.textContent=i;a.href='#'+b.id+'-'+i;if(i===cur.n)a.setAttribute('aria-current','true');g.appendChild(a);}
+  panel.appendChild(g);panel.hidden=false;shade.hidden=false;whereBtn.setAttribute('aria-expanded','true');
+  var c=panel.querySelector('.cur');if(c&&c.scrollIntoView)c.scrollIntoView({block:'center'});
+}
+function closePanel(){panel.hidden=true;shade.hidden=true;whereBtn.setAttribute('aria-expanded','false');}
+whereBtn.addEventListener('click',function(){if(panel.hidden)openPanel();else closePanel();});
+shade.addEventListener('click',closePanel);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePanel();});
+panel.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;e.preventDefault();closePanel();location.hash=a.getAttribute('href');route(true);});
+
+/* ---------- links: margin labels, pop-up, travel, trail ---------- */
+var pop=$('pop'),popshade=$('popshade'),trailEl=$('trail'),echoBtn=$('echo'),trail=[],tpos=-1,popState=null;
+function layoutMargin(sec){
+  if(!MARGIN||window.innerWidth<1180||!sec)return;
+  var old=sec.querySelector('.mgc');if(old)old.remove();
+  var box=el('div','mgc'),sr=sec.getBoundingClientRect(),lastB=-1e9,b=byId[sec.dataset.book];
+  sec.querySelectorAll('.mk').forEach(function(mk){
+    var sup=mk.previousElementSibling;while(sup&&!(sup.tagName==='SUP'))sup=sup.previousElementSibling;if(!sup)return;
+    var l=LMAP[b.id][mk.dataset.l],ot=l[mk.dataset.s==='a'?'b':'a'],top=sup.getBoundingClientRect().top-sr.top-2;
+    if(top<lastB+2)top=lastB+2;
+    var a=el('button','ml '+(mk.classList.contains('q')?'q':'e'),'<span>'+esc(sup.textContent)+'</span><i></i>'+esc(refLabel(ot)));
+    a.type='button';a.style.top=top+'px';a.style.setProperty('--d',byId[ot.book].color);a.dataset.l=mk.dataset.l;a.dataset.s=mk.dataset.s;box.appendChild(a);lastB=top+25;});
+  sec.appendChild(box);
+}
+function passageHTML(e){
+  var ch=cache[e.book][e.c-1],from=e.v,to=e.v2||e.v;if(e.heading&&!e.v2)to=from+2;if(to>from+5)to=from+5;
+  var cur=0,h='',more=(e.v2&&e.v2>to);
+  ch.blocks.forEach(function(bl){if(bl.k!=='p')return;(bl.c||[]).forEach(function(c){
+    if(typeof c==='string'){if(cur>=from&&cur<=to)h+=esc(c)+' ';}
+    else if(c.v!==undefined){cur=c.v;if(cur>=from&&cur<=to)h+='<sup class="v">'+cur+'</sup>';}});});
+  return h+(more?'\u2026':'');
+}
+var SRC={'Bible Quotation Database':'From the Bible Quotation Database.','OpenBible.info':'From OpenBible.info.','Berean Standard Bible':'From the cross-reference lines of the Berean Standard Bible.'};
+function openPop(btn){
+  var sec=btn.closest('section');if(!sec)return;var b=byId[sec.dataset.book],l=LMAP[b.id][btn.dataset.l];if(!l)return;
+  var side=btn.dataset.s,me=l[side],ot=l[side==='a'?'b':'a'],d=byId[ot.book],q=l.type==='quotation';
+  popState={from:{book:me.book,c:me.c,v:me.v},to:{book:ot.book,c:ot.c,v:ot.v}};
+  pop.style.setProperty('--d',d.color);
+  pop.innerHTML='<div class="pb band">'+esc(d.label)+'</div><div class="pr">'+esc(refLabel(ot))+'</div><div class="pt">'+(q?'Quotation link':'Echo link')+' from '+esc(refLabel(me))+'</div>'+
+    (ot.heading?'<div class="phd">'+esc(ot.heading)+'</div>':'')+'<div class="pp">\u2026</div>'+(l.reason?'<div class="pq">'+esc(l.reason)+'</div>':'')+
+    '<div class="ps">'+(SRC[l.source]||'')+'</div><div class="pa"><button type="button" class="go">Go there</button><button type="button" class="stay">Stay here</button></div>';
+  pop.hidden=false;popshade.hidden=false;
+  if(window.innerWidth>700){var r=btn.getBoundingClientRect(),w=Math.min(430,window.innerWidth-32),left=Math.max(16,Math.min(r.left-24,window.innerWidth-w-16));
+    pop.style.left=left+'px';pop.style.top=(r.bottom+window.scrollY+8)+'px';}
+  loadBook(ot.book).then(function(){var pp=pop.querySelector('.pp');if(pp&&popState&&popState.to.book===ot.book)pp.innerHTML=passageHTML(ot);
+    if(window.innerWidth>700){var pr=pop.getBoundingClientRect(),br=btn.getBoundingClientRect();if(pr.bottom>window.innerHeight-12&&br.top-pr.height-8>60)pop.style.top=(br.top+window.scrollY-pr.height-8)+'px';}});
+  var g=pop.querySelector('.go');if(g)g.focus({preventScroll:true});
+}
+function closePop(){if(pop){pop.hidden=true;popshade.hidden=true;}popState=null;}
+function same(x,y){return x&&y&&x.book===y.book&&x.c===y.c&&(x.v||0)===(y.v||0);}
+function stopLabel(s){return byId[s.book].name+' '+s.c+(s.v?':'+s.v:'');}
+function renderTrail(){
+  if(!trail.length){trailEl.hidden=true;document.body.classList.remove('hastrail');return;}
+  trailEl.innerHTML='';
+  if(tpos>0){var bk=el('button','tback','\u2039 Back');bk.type='button';bk.dataset.i=tpos-1;bk.setAttribute('aria-label','Back to '+stopLabel(trail[tpos-1]));trailEl.appendChild(bk);trailEl.appendChild(el('span','sep',''));}
+  else trailEl.appendChild(el('span','','Trail'));
+  trail.forEach(function(s,i){if(i)trailEl.appendChild(el('span','','\u203a'));var bt=el('button',i===tpos?'cur stop':'stop');bt.type='button';bt.textContent=stopLabel(s);bt.style.color=byId[s.book].color;bt.dataset.i=i;if(i===tpos)bt.setAttribute('aria-current','true');trailEl.appendChild(bt);});
+  trailEl.hidden=false;document.body.classList.add('hastrail');
+  var c=trailEl.querySelector('.cur');if(c)trailEl.scrollLeft=Math.max(0,c.offsetLeft-140);
+}
+function goStop(s){
+  var b=byId[s.book],key='#'+s.book+'-'+s.c;shownKey=key;try{history.pushState(null,'',key);}catch(e){location.hash=key;}
+  return showRead(b,s.c).then(function(){
+    if(!s.v)return;var sup=col.querySelector('section sup.v[data-v="'+s.v+'"]');if(!sup)return;
+    var bars=document.body.classList.contains('hastrail')?92:52,p=sup.closest('p'),st=sup.getBoundingClientRect().top+window.scrollY,y=st-bars-90;
+    if(p){var pt=p.getBoundingClientRect().top+window.scrollY;if(st-pt<window.innerHeight*0.5)y=pt-bars-28;}
+    window.scrollTo(0,Math.max(0,y));if(p){p.classList.add('hit');setTimeout(function(){p.classList.remove('hit');},3400);}
+  });
+}
+var mapEl=$('map'),mapIn=null,mapSvg=null,mapCap=null,mapBox=null;
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function buildMap(){
+  if(mapIn)return;mapIn=el('div');mapIn.id='mapin';var inner=1100,gap=22,W=(inner-gap*4)/5,br=[0,13,27,39,53,66];mapIn.style.width=inner+'px';
+  var row=el('div');row.style.cssText='display:flex;gap:'+gap+'px;align-items:stretch';var lastG=null;
+  for(var c=0;c<5;c++){var cl=el('div');cl.style.cssText='width:'+W+'px;display:flex;flex-direction:column;justify-content:space-between';
+    for(var i=br[c];i<br[c+1];i++){var b=BOOKS[i];if(b.group!==lastG){cl.appendChild(band({label:b.label,color:b.color},W,i===br[c],false));lastG=b.group;}
+      var s=el('span','n');s.textContent=b.name;s.dataset.book=b.id;s.style.color=b.color;fit(s,W);cl.appendChild(s);}
+    row.appendChild(cl);}
+  mapIn.appendChild(row);
+  mapSvg=document.createElementNS('http://www.w3.org/2000/svg','svg');mapSvg.id='mapsvg';mapIn.appendChild(mapSvg);
+  mapCap=el('div','cap');mapBox=el('div');mapBox.id='mapbox';mapBox.appendChild(mapIn);mapEl.appendChild(mapBox);mapEl.appendChild(mapCap);
+}
+var MAPMOVE=false;
+function travelMove(from,to,swap){
+  if(reduce||!MAPMOVE)return swap();
+  buildMap();mapEl.hidden=false;
+  var sc=Math.min((window.innerWidth-32)/1100,(window.innerHeight-150)/mapIn.offsetHeight,1);mapIn.style.transform='scale('+sc+')';mapBox.style.width=(1100*sc)+'px';mapBox.style.height=(mapIn.offsetHeight*sc)+'px';
+  mapIn.querySelectorAll('.n.lit').forEach(function(x){x.classList.remove('lit');});mapSvg.innerHTML='';
+  var A=mapIn.querySelector('.n[data-book="'+from.book+'"]'),B=mapIn.querySelector('.n[data-book="'+to.book+'"]'),fb=byId[from.book],tb=byId[to.book];
+  A.classList.add('lit');
+  mapCap.innerHTML='<b style="color:'+fb.color+'">'+esc(stopLabel(from))+'</b> &nbsp;\u2192&nbsp; <b style="color:'+tb.color+'">'+esc(stopLabel(to))+'</b>';
+  void mapEl.offsetWidth;mapEl.classList.add('on');
+  return wait(220).then(function(){
+    var p=swap(),mr=mapIn.getBoundingClientRect(),ar=A.getBoundingClientRect(),br2=B.getBoundingClientRect();
+    var pad=9/sc,ltr=(br2.left+br2.width/2)>=(ar.left+ar.width/2),sameCol=Math.abs((br2.left+br2.width/2)-(ar.left+ar.width/2))<4;
+    var x1=((sameCol||!ltr?ar.left:ar.right)-mr.left)/sc+((sameCol||!ltr)?-pad:pad),y1=(ar.top+ar.height/2-mr.top)/sc,x2=((sameCol||ltr?br2.left:br2.right)-mr.left)/sc+((sameCol||ltr)?-pad:pad),y2=(br2.top+br2.height/2-mr.top)/sc,L=Math.max(1,Math.hypot(x2-x1,y2-y1));
+    var NS='http://www.w3.org/2000/svg',ln=document.createElementNS(NS,'line');
+    ln.setAttribute('x1',x1);ln.setAttribute('y1',y1);ln.setAttribute('x2',x2);ln.setAttribute('y2',y2);ln.setAttribute('stroke',tb.color);ln.setAttribute('stroke-width',(3/sc).toFixed(2));
+    ln.style.strokeDasharray=L;ln.style.strokeDashoffset=L;mapSvg.appendChild(ln);
+    [[x1,y1,fb.color],[x2,y2,tb.color]].forEach(function(d){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',d[0]);c.setAttribute('cy',d[1]);c.setAttribute('r',(4.5/sc).toFixed(2));c.setAttribute('fill',d[2]);mapSvg.appendChild(c);});
+    void mapSvg.getBoundingClientRect();ln.style.strokeDashoffset=0;B.classList.add('lit');
+    return Promise.all([p,wait(820)]);
+  }).then(function(){
+    if(window.__mapHold)return;mapEl.classList.remove('on');return wait(220).then(function(){mapEl.hidden=true;});
+  });
+}
+function travel(from,to){
+  closePop();trail=trail.slice(0,tpos+1);
+  var lastS=trail[trail.length-1];if(!lastS||lastS.book!==from.book||lastS.c!==from.c)trail.push(from);
+  trail.push(to);tpos=trail.length-1;return travelMove(from,to,function(){return goStop(to);});
+}
+col.addEventListener('click',function(e){
+  var t=e.target.closest&&e.target.closest('.mk,.xl,.ml');if(t){e.preventDefault();openPop(t);return;}
+  var r=e.target.closest&&e.target.closest('.rwc');if(r&&cur){var sec=r.closest('section');travel({book:sec.dataset.book,c:+sec.dataset.n},{book:r.dataset.book,c:+r.dataset.c});}
+});
+pop.addEventListener('click',function(e){
+  if(e.target.closest('.go')&&popState){travel(popState.from,popState.to);}
+  else if(e.target.closest('.stay')){closePop();}
+});
+popshade.addEventListener('click',closePop);
+document.addEventListener('mousedown',function(e){if(!pop.hidden&&window.innerWidth>700&&!pop.contains(e.target)&&!(e.target.closest&&e.target.closest('.mk,.xl,.ml')))closePop();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePop();});
+trailEl.addEventListener('click',function(e){var bt=e.target.closest&&e.target.closest('button');if(!bt)return;var o=trail[tpos],i=+bt.dataset.i;if(i===tpos){goStop(trail[i]);return;}tpos=i;travelMove(o,trail[i],function(){return goStop(trail[i]);});});
+var echoOn=store.get('echo')!==false;
+function setEcho(on){echoOn=on;store.set('echo',on);document.body.classList.toggle('noecho',!on);echoBtn.setAttribute('aria-pressed',on?'true':'false');echoBtn.innerHTML='<span class="dk">Echo links '+(on?'on':'off')+'</span><span class="ph">Echo '+(on?'on':'off')+'</span>';}
+echoBtn.addEventListener('click',function(){setEcho(!echoOn);});setEcho(echoOn);
+
+/* ---------- reference pages ---------- */
+var refEl=$('ref'),refc=$('refc'),NS='http://www.w3.org/2000/svg',RINGS=/rings=1/.test(location.search),EST=/est=star/.test(location.search)?'star':'light',QSEL=null,refName=null;
+function S(tag,a){var e=document.createElementNS(NS,tag);for(var k in a)e.setAttribute(k,a[k]);return e;}
+function yr(y){return y<0?(-y)+' BC':'AD '+y;}
+function dateText(d){return (d.f===d.t?'about '+yr(d.f):(d.f<0&&d.t<0?(-d.f)+' to '+(-d.t)+' BC':yr(d.f)+' to '+(d.t<0?yr(d.t):d.t)))+(d.e?(EST==='star'?' *':', estimate'):'');}
+function showRef(name){
+  closePanel();closePop();wall.hidden=true;read.hidden=true;refEl.hidden=false;refName=name;
+  refEl.querySelectorAll('.tabs a').forEach(function(a){var on=a.dataset.t===name;a.classList.toggle('on',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+  document.title=name.charAt(0).toUpperCase()+name.slice(1)+' \u00b7 Bible wall prototype';
+  if(name==='timeline')renderTimeline();else if(name==='quotations')renderQuotes();else renderSources();
+  window.scrollTo(0,0);
+}
+function refHead(title,lead){refc.innerHTML='';refc.appendChild(el('h1','',title));if(lead)refc.appendChild(el('p','lead',lead));}
+function renderTimeline(){
+  refHead('Timeline','When each book was written, by the traditional view.');
+  var sorted=BOOKS.slice().sort(function(a,b){var x=DATES[a.id],y=DATES[b.id];return ((x.f+x.t)/2-(y.f+y.t)/2)||a.i-b.i;});
+  var note=(EST==='star'?'* The date is an estimate.':'A name in light letters has an estimated date.')+(RINGS?' &nbsp; &#9675; Scholars differ on the date. "About this book" gives the detail.':' Scholars differ on many dates. "About this book" gives the detail.')+'<br>Prototype: the years of Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Job, Psalms, and Ecclesiastes are not verified.';
+  if(window.innerWidth<700){var gap=false;
+    sorted.forEach(function(b){var d=DATES[b.id];if(!gap&&d.f>0){gap=true;refc.appendChild(el('div','tgap','About 400 years with no books'));}
+      var r=el('a','trow');r.href=hrefFor(b);r.appendChild(el('span','y',dateText(d)));var n=el('span','nm',esc(b.name)+(RINGS&&d.d?' <span style="font-size:11px;font-weight:500;vertical-align:.5em">&#9675;</span>':''));n.style.color=b.color;if(d.e&&EST!=='star')n.style.fontWeight=500;r.appendChild(n);refc.appendChild(r);});
+    refc.appendChild(el('p','foot',note));return;}
+  var W=1200,W1=700,BR=70,W2=430,X=function(y){return y<0?(y+1500)/1100*W1:W1+BR+(y-40)/60*W2;},rows=[];
+  var items=sorted.map(function(b){var d=DATES[b.id],x=X((d.f+d.t)/2),w=b.name.length*9.3+(d.e&&EST==='star'?9:0)+(RINGS&&d.d?10:0)+10,x1=X(d.f),x2=X(d.t),l=Math.min(x-w/2,x1-3),r=Math.max(x+w/2,x2+3),tx=x;
+    if(l<0){tx-=l;r-=l;l=0;}if(r>W){tx-=(r-W);l-=(r-W);r=W;}
+    for(var k=0;;k++){rows[k]=rows[k]||[];if(!rows[k].some(function(iv){return !(r<=iv[0]||l>=iv[1]);})){rows[k].push([l,r]);break;}}
+    return {b:b,d:d,x:tx,x1:x1,x2:x2,k:k};});
+  var RH=27,H=rows.length*RH+70,ay=rows.length*RH+18,svg=S('svg',{viewBox:'-10 0 '+(W+50)+' '+H,width:'100%',role:'img','aria-label':'Timeline of the 66 books'});
+  svg.appendChild(S('line',{x1:0,y1:ay,x2:W1,y2:ay,stroke:'#1D1D1F','stroke-width':1.5}));svg.appendChild(S('line',{x1:W1+BR,y1:ay,x2:W,y2:ay,stroke:'#1D1D1F','stroke-width':1.5}));
+  svg.appendChild(S('path',{d:'M'+W1+' '+ay+' l8 -7 l10 14 l10 -14 l10 14 l10 -14 l10 14 l12 -7',fill:'none',stroke:'#6E6E73','stroke-width':1.5}));
+  var bt=S('text',{x:W1+BR/2,y:ay+40,'text-anchor':'middle','font-size':12,'font-weight':500,fill:'#6E6E73'});bt.textContent='about 400 years';svg.appendChild(bt);
+  function tick(y,lab){var x=X(y);svg.appendChild(S('line',{x1:x,y1:ay,x2:x,y2:ay+6,stroke:'#1D1D1F'}));var t=S('text',{x:x,y:ay+22,'text-anchor':'middle','font-size':12,'font-weight':500,fill:'#6E6E73'});t.textContent=lab;svg.appendChild(t);}
+  for(var y=-1400;y<=-400;y+=100)tick(y,(-y)+' BC');for(y=40;y<=100;y+=10)tick(y,'AD '+y);
+  items.forEach(function(it){var yy=ay-14-it.k*RH,b=it.b;
+    svg.appendChild(S('line',{x1:(it.x1+it.x2)/2,y1:yy+6,x2:(it.x1+it.x2)/2,y2:ay,stroke:b.color,'stroke-opacity':.18,'pointer-events':'none'}));
+    var soft=it.d.e&&EST!=='star';
+    if(it.x2-it.x1>2){if(soft)svg.appendChild(S('line',{x1:it.x1,y1:yy+4.5,x2:it.x2,y2:yy+4.5,stroke:b.color,'stroke-width':2,'stroke-dasharray':'5 4','stroke-opacity':.75,'pointer-events':'none'}));else svg.appendChild(S('rect',{x:it.x1,y:yy+3,width:it.x2-it.x1,height:3,rx:1.5,fill:b.color,'fill-opacity':.55,'pointer-events':'none'}));}
+    else svg.appendChild(S('circle',soft?{cx:it.x1,cy:ay,r:3.4,fill:'#fff',stroke:b.color,'stroke-width':1.6,'pointer-events':'none'}:{cx:it.x1,cy:ay,r:3,fill:b.color,'pointer-events':'none'}));});
+  items.forEach(function(it){var yy=ay-14-it.k*RH,b=it.b;
+    var a=S('a',{href:hrefFor(b)}),t=S('text',{x:it.x,y:yy,'text-anchor':'middle','font-size':14,'font-weight':(it.d.e&&EST!=='star')?500:800,fill:b.color,stroke:'#fff','stroke-width':5,'paint-order':'stroke','stroke-linejoin':'round'});
+    if(it.d.e)a.setAttribute('aria-label',b.name+', estimated date');t.textContent=b.name.toUpperCase()+(it.d.e&&EST==='star'?' *':'')+(RINGS&&it.d.d?' \u25CB':'');a.appendChild(t);svg.appendChild(a);});
+  refc.appendChild(svg);refc.appendChild(el('p','foot',note));
+}
+function renderQuotes(){
+  refHead('Quotations','Which books quote which books. A line joins two books that have one quotation link or more. The color of a line goes from the book that quotes to the book that it quotes. Select a book to see its lines.');
+  var ph=window.innerWidth<700,R=ph?112:250,LAB=ph?64:120,SZ=(R+LAB)*2+10,cx=SZ/2,cy=SZ/2,svg=S('svg',{viewBox:'0 0 '+SZ+' '+SZ,width:ph?'100%':SZ,role:'img','aria-label':'Diagram of the quotation links between books'});
+  var defs=S('defs',{});svg.appendChild(defs);
+  var GAP=0.035,unit=(Math.PI*2-GAP*GROUPS.length)/66,a=-Math.PI/2+GAP/2,pos={},gm={};
+  function P(ang,r){return [cx+Math.cos(ang)*r,cy+Math.sin(ang)*r];}
+  GROUPS.forEach(function(g){var a0=a;g.books.forEach(function(b){pos[b.id]=a+unit/2;a+=unit;});var a1=a;g.books.forEach(function(b){gm[b.id]=(a0+a1)/2;});a+=GAP;
+    var s=P(a0,R+4),e=P(a1,R+4);svg.appendChild(S('path',{d:'M'+s[0]+' '+s[1]+' A '+(R+4)+' '+(R+4)+' 0 '+(a1-a0>Math.PI?1:0)+' 1 '+e[0]+' '+e[1],fill:'none',stroke:g.color,'stroke-width':ph?4:6}));});
+  var sb=QSEL?byId[QSEL]:null,linked={};
+  PAIRS.forEach(function(pr,i){var A=byId[pr.from],Bk=byId[pr.to];if(!A||!Bk)return;if(sb){if(pr.from===sb.id)linked[pr.to]=1;if(pr.to===sb.id)linked[pr.from]=1;}
+    var p1=P(pos[A.id],R),p2=P(pos[Bk.id],R),c1=P(gm[A.id],R*0.45),c2=P(gm[Bk.id],R*0.45),on=!sb||A===sb||Bk===sb,w=pr.n>9?(ph?2.4:3.6):pr.n>2?(ph?1.4:2.1):(ph?.8:1.1),stroke='#1D1D1F';
+    if(on){var g=S('linearGradient',{id:'qg'+i,gradientUnits:'userSpaceOnUse',x1:p1[0],y1:p1[1],x2:p2[0],y2:p2[1]});g.appendChild(S('stop',{offset:'0','stop-color':A.color}));g.appendChild(S('stop',{offset:'1','stop-color':Bk.color}));defs.appendChild(g);stroke='url(#qg'+i+')';}
+    svg.appendChild(S('path',{d:'M'+p1[0]+' '+p1[1]+' C '+c1[0]+' '+c1[1]+' '+c2[0]+' '+c2[1]+' '+p2[0]+' '+p2[1],fill:'none',stroke:stroke,'stroke-width':w,'stroke-opacity':sb?(on?.9:.04):.4,'stroke-linecap':'round'}));});
+  BOOKS.forEach(function(b){var ang=pos[b.id],deg=ang*180/Math.PI,flip=Math.cos(ang)<0,p=P(ang,R+(ph?9:13));
+    var t=S('text',{x:p[0],y:p[1],'font-size':ph?8.5:12.5,'font-weight':sb&&b===sb?800:600,fill:b.color,'fill-opacity':sb?(b===sb||linked[b.id]?1:.25):1,'dominant-baseline':'central','text-anchor':flip?'end':'start',transform:'rotate('+(flip?deg+180:deg)+' '+p[0]+' '+p[1]+')',tabindex:0,role:'button','data-book':b.id,style:'cursor:pointer'});
+    t.textContent=b.name;svg.appendChild(t);});
+  function pick(id){QSEL=(QSEL===id)?null:id;var y=window.scrollY;renderQuotes();window.scrollTo(0,y);}
+  svg.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('text[data-book]');if(t)pick(t.getAttribute('data-book'));});
+  svg.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){var t=e.target.closest&&e.target.closest('text[data-book]');if(t){e.preventDefault();pick(t.getAttribute('data-book'));}}});
+  var sel=el('select','qsel');sel.setAttribute('aria-label','Select a book');sel.appendChild(new Option('Select a book',''));BOOKS.forEach(function(b){sel.appendChild(new Option(b.name,b.id));});sel.value=QSEL||'';
+  sel.addEventListener('change',function(){QSEL=sel.value||null;var y=window.scrollY;renderQuotes();window.scrollTo(0,y);});refc.appendChild(sel);
+  var lay=el('div','qlay');lay.appendChild(svg);
+  if(sb){var pn=el('div','qp'),q1=PAIRS.filter(function(p){return p.from===sb.id;}).sort(function(x,y){return y.n-x.n;}),q2=PAIRS.filter(function(p){return p.to===sb.id;}).sort(function(x,y){return y.n-x.n;});
+    function li(arr,k){return arr.length?'<ul>'+arr.map(function(p){var o=byId[p[k]];return '<li><button type="button" data-book="'+o.id+'" style="color:'+o.color+'">'+esc(o.name)+'</button><span>'+p.n+'</span></li>';}).join('')+'</ul>':'<div>None.</div>';}
+    pn.innerHTML='<span class="band" style="display:inline-block;background:'+sb.color+';font-size:11px;padding:4px 7px">'+esc(sb.label)+'</span><h3 style="color:'+sb.color+'">'+esc(sb.name)+'</h3><h4>Books that it quotes</h4>'+li(q1,'to')+'<h4>Books that quote it</h4>'+li(q2,'from')+'<a class="open" href="'+hrefFor(sb)+'" style="color:'+sb.color+'">Open '+esc(sb.name)+' &#8250;</a>';
+    pn.addEventListener('click',function(e){var bt=e.target.closest&&e.target.closest('button[data-book]');if(bt)pick(bt.dataset.book);});lay.appendChild(pn);}
+  refc.appendChild(lay);
+  refc.appendChild(el('p','foot','From the Bible Quotation Database. A thicker line has more quotation links.'));
+}
+function renderSources(){
+  refHead('Sources','');
+  var d=el('div','src');
+  d.innerHTML='<h2>The Bible text</h2><p>The text on this site is the <a href="https://berean.bible/">Berean Standard Bible</a> (BSB). The Berean Standard Bible is in the public domain. The publisher placed it in the public domain on April 30, 2023, with the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> dedication. The site shows the words without change.</p>'+
+   '<p>The section headings, the paragraphs, the poetry lines, and the notes about manuscripts come from the USFM files of the same publisher.</p>'+
+   '<p>The Holy Bible, Berean Standard Bible, BSB is produced in cooperation with Bible Hub, Discovery Bible, unfoldingWord, Bible Aquifer, OpenBible.com, and the Berean Bible Translation Committee.</p>'+
+   '<h2>Links between passages</h2><p>Cross-references: <a href="https://www.openbible.info/labs/cross-references/">OpenBible.info</a>, under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence (CC BY 4.0)</a>. The site shows a part of these links, the ones with the most votes, and adds their votes between chapters for the read-with list of each chapter.</p>'+
+   '<p>Cross-reference lines under the section headings: the USFM files of the Berean Standard Bible, in the public domain.</p>'+
+   '<p>Quotations of the Old Testament in the New Testament: the <a href="https://lukeplant.me.uk/bible-quotation-database/">Bible Quotation Database</a> by Luke Plant, in the public domain.</p>'+
+   '<h2>Book introductions</h2><p>The introductions use facts from these sources. The text of each introduction is written for this site.</p>'+
+   '<ul><li><a href="https://en.wikisource.org/wiki/Easton%27s_Bible_Dictionary_(1897)">Easton\u2019s Bible Dictionary</a>, 1897, on Wikisource. In the public domain.</li>'+
+   '<li>The <a href="https://www.esv.org/resources/esv-global-study-bible/introduction-a-users-guide-to-the-global-study-bible/">ESV Global Study Bible</a>, by Crossway: the introduction to each book, on esv.org.</li>'+
+   '<li><a href="https://en.wikipedia.org/">Wikipedia</a>, the article on each book, under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0)</a>.</li></ul>'+
+   '<p>The source of each fact is in the file <a href="https://github.com/alangham/bible/blob/main/docs/CONTENT-SOURCES.md">CONTENT-SOURCES.md</a> of this site.</p>'+
+   '<h2>Fonts</h2><p>Prototype: the redesign uses Inter and Lora. The copyright line and the licence of each font are not yet written here.</p>';
+  refc.appendChild(d);
+}
+$('rback').addEventListener('click',function(e){e.preventDefault();shownKey='';try{history.pushState(null,'','#');}catch(er){location.hash='';}showWall(cur?cur.b.id:null);});
+window.addEventListener('resize',function(){if(!refEl.hidden&&refName&&refName!=='sources'){clearTimeout(window.__rz2);window.__rz2=setTimeout(function(){if(refName==='timeline')renderTimeline();else renderQuotes();},200);}});
+
+/* ---------- routing and transitions ---------- */
+var REFS={timeline:1,quotations:1,sources:1};
+function parse(){var h=location.hash.replace(/^#/,''),m=h.match(/^(.+)-(\d+)$/);if(REFS[h])return {ref:h};if(m&&byId[m[1]]){var b=byId[m[1]];return {b:b,n:Math.min(Math.max(1,+m[2]),b.chapters)};}return null;}
+function route(force){
+  var r=parse(),key=r?(r.ref?'#'+r.ref:'#'+r.b.id+'-'+r.n):'';
+  if(!force&&key===shownKey)return Promise.resolve();
+  shownKey=key;
+  if(r&&r.ref){showRef(r.ref);return Promise.resolve();}
+  if(r)return showRead(r.b,r.n);
+  showWall(cur?cur.b.id:null);return Promise.resolve();
+}
+function transition(fn,after){
+  if(!document.startViewTransition||reduce){var p=fn();if(after)Promise.resolve(p).then(after);return;}
+  var t=document.startViewTransition(function(){return fn();});
+  t.finished.then(function(){if(after)after();},function(){if(after)after();});
+}
+function clearVT(){document.querySelectorAll('[data-vt]').forEach(function(e){e.style.viewTransitionName='';e.removeAttribute('data-vt');});}
+function markVT(e){if(e){clearVT();e.style.viewTransitionName='bookname';e.setAttribute('data-vt','1');}}
+wall.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a.n');if(!a||e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();
+  var b=byId[a.dataset.book],n=last[b.id]||1;wallY=window.scrollY;markVT(a);
+  transition(function(){location.hash='#'+b.id+'-'+n;shownKey='#'+b.id+'-'+n;
+    return showRead(b,n).then(function(){markVT(col.querySelector('.head .name'));});},clearVT);
+});
+$('back').addEventListener('click',function(e){
+  e.preventDefault();var id=cur?cur.b.id:null,vis=null;
+  col.querySelectorAll('.head .name').forEach(function(x){var r=x.getBoundingClientRect();if(!vis&&r.bottom>52&&r.top<window.innerHeight)vis=x;});
+  if(vis)markVT(vis);
+  transition(function(){shownKey='';try{history.pushState(null,'','#');}catch(er){location.hash='';}var a=showWall(id);if(vis&&a)markVT(a);else clearVT();},clearVT);
+});
+window.addEventListener('hashchange',function(){route(false);});
+window.addEventListener('popstate',function(){route(false);});
+
+/* ---------- start ---------- */
+function start(){renderWall();route(true);}
+var started=false;function once(){if(started)return;started=true;start();}
+if(document.fonts&&document.fonts.load){
+  Promise.all([document.fonts.load("800 100px Inter"),document.fonts.load("700 13px Inter")]).then(once,once);
+  setTimeout(once,2500);
+  document.fonts.ready.then(function(){if(started&&!wall.hidden)renderWall();else wallW=0;});
+}else once();
+})();
+</script>
+</body>
+</html>

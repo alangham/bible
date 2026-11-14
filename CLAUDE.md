@@ -2,14 +2,17 @@
 
 ## What this project is
 
-A static website for reading the Bible. The reader must feel that they are inside a physical book, not in a flat mobile app. The owner is Arthur. The design was agreed with Arthur before this file was written.
+A static website for reading the Bible. The owner is Arthur.
+
+Arthur decided a redesign on 2026-11-14. The rule of the redesign: the text is the interface. The reader moves through the Bible with no friction when the reader reads. The first build had a 3D book on a table. The redesign removes it.
 
 ## Files you must read before you do work
 
-1. `docs/DESIGN.md`. The agreed design. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order.
-3. `docs/DATA-SOURCES.md`. You create this file in Task 1. It records each data source and its licence.
-4. `docs/CONTENT-SOURCES.md`. You create this file in Task 4. It records the source of each fact that you write about the Bible.
+1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Do not change a design decision without Arthur's approval.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign.
+3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
+4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
+5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.
 
 ## How to work
 
@@ -29,23 +32,26 @@ When Arthur says "do the next task", start again at step 1.
 
 - WARNING: Do not add ESV text or a request to the ESV API. The ESV is not in version 1. The translation is the Berean Standard Bible, which is bundled in the repository.
 - WARNING: Do not add a server. The site is deployed on GitHub Pages. All code runs in the browser or at build time.
+- WARNING: The redesign changes how the site looks and moves. It does not change what the site says. Do not change the Bible text, an introduction, a link, or a date, unless a task tells you to.
 - Do not push to GitHub until Arthur approves. Local commits are permitted.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
 - Do not change the words of a Bible text.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
 - Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
+- Do not add or remove a link between passages. Links come only from the three approved sources, by the rules in section 4.5 of `docs/DESIGN.md`.
 - The accuracy reviewer does not approve content. Only Arthur changes `review: "draft"` to `review: "approved"`.
+- Do not copy the structure of the prototype into `src/`. Use its values: sizes, spacing, colors, and timing.
 - If a task is not clear, or a check in a task fails, stop and ask Arthur. Do not guess.
 
 ## Stack
 
 - Vite, React, TypeScript.
-- Three.js through `@react-three/fiber` for the table, the books, and the page turn.
-- GSAP for scroll and transition timing.
-- Hash routes, because GitHub Pages has no rewrite rules.
+- No 3D library and no animation library. Task 13 removes Three.js, `@react-three/fiber`, and GSAP. Use CSS, SVG, and the functions of the browser.
+- Hash routes, because GitHub Pages has no rewrite rules. The addresses are in section 7.6 of `docs/DESIGN.md`.
 - Data as static JSON files in `public/data/`.
-- Vitest for unit tests. Playwright for one smoke test per page.
+- Fonts as bundled packages: Inter and Lora. The site gets no font from a different server.
+- Vitest for unit tests. Playwright for the browser tests, with axe-core.
 - GitHub Actions for build and deploy to GitHub Pages.
 
 ## Names
@@ -54,17 +60,27 @@ Use these names in code, comments, and reports. One name for each thing.
 
 | Name | Meaning |
 |---|---|
-| table | The landing page. Five stacks of books on a linen table. |
-| stack | One of the five groups of spines on the table. |
-| spine | One book in a stack. |
-| cover | The book page. A closed book with its introduction. |
-| spread | One open chapter. Two pages with a scene and the text. |
-| scene | The paper-cut picture behind a spread. |
+| wall | The first page. The 66 book names in the colors of their groups. |
+| book name | One book on the wall. It is the control that opens the book. |
+| group | One of the ten sets of books on the wall. "History" occurs two times. |
 | category | One of the nine kinds of writing. |
+| band | The bar in the group color that starts a group, with the group name in white. |
+| reading page | The page with the chapter text, in one column. |
+| top bar | The bar that stays at the top of the reading page and of the Reference pages. |
+| chapter grid | The grid of chapter numbers that opens from the top bar. |
 | link | A connection from one passage to a different passage. |
 | quotation link | A link where one passage quotes a different passage. |
 | echo link | A link by theme or wording. Weaker than a quotation link. |
+| mark | The dot or ring in the text that shows a link, in the narrow layout. |
+| margin label | The label in the right margin that shows a link, on a wide screen. |
+| pop-up | The panel that shows a linked passage, with "Go there" and "Stay here". |
 | travel | The move from one passage to a linked passage. |
-| trail | The list of passages that the reader visited by travel. |
+| trail | The list of passages that the reader visited by travel, with the control "Back". |
 | read-with list | The list at the top of a chapter that names the chapters in other books with the most cross-references to it. |
-| timeline | The overview page. Books on a time axis with arcs for quotation links. |
+| Reference section | The three pages Timeline, Quotations, and Sources. |
+| timeline | The page that shows when each book was written. |
+| estimate | A date on the timeline that is not exact. Its book name is in light letters. |
+| quotation diagram | The page "Quotations". The 66 books around a circle, with lines for quotation links. |
+| Sources page | The page that credits the translation, the data sources, and the fonts. |
+
+These names are from the first build. Do not use them for the new pages: table, stack, spine, cover, spread, scene.

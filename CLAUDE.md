@@ -34,6 +34,7 @@ When Arthur says "do the next task", start again at step 1.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
 - Do not change the words of a Bible text.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
+- Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
 - The accuracy reviewer does not approve content. Only Arthur changes `review: "draft"` to `review: "approved"`.
 - If a task is not clear, or a check in a task fails, stop and ask Arthur. Do not guess.
 

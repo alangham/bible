@@ -44,6 +44,8 @@ For each changed book:
 4. Make sure that a disputed fact is not stated as certain.
 5. Make sure that the summary agrees with the content of the book. Read the first chapter and the last chapter in the bundled text as a minimum.
 6. Make sure that `review` is `"draft"` unless Arthur approved the book.
+7. Make sure that each source is in the approved list in `docs/CONTENT-SOURCES.md`.
+8. Compare each introduction with its sources. Report a sentence that is copied from a source that is under copyright.
 
 ## Check 3. Links
 

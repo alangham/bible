@@ -93,14 +93,34 @@ Accuracy review: yes
 
 Goal: the book page from section 4.2 of `docs/DESIGN.md`.
 
+Approved sources. Arthur approved this list on 2026-11-13. Step 1 is complete. Start at step 2.
+
+| Source | Role | Rights |
+|---|---|---|
+| Easton's Bible Dictionary, 1897, on Wikisource | The traditional author, date, and place. | Public domain. |
+| ESV Global Study Bible, the introduction to each book, on `esv.org/resources/esv-global-study-bible/` | The traditional view in current scholarship. | Copyright Crossway, all rights reserved. Facts only. Copy no sentence. |
+| Wikipedia, the article on each book | The "scholars differ" line. | CC BY-SA 4.0. Facts only. Copy no sentence. |
+| 1911 Encyclopaedia Britannica, on Wikisource | Fallback only, for a book where the Wikipedia article cites no scholar. | Public domain. |
+
+Conditions for the approved sources:
+
+1. Wikipedia is a pointer, not the authority. Write a "scholars differ" line only where the article cites a published scholar for that claim. Record the scholar, the work, and the revision link of the article in `docs/CONTENT-SOURCES.md`.
+2. Dates are approximate. Give a century or "about". Do not give an exact year from Easton. Example: "by tradition, about the 15th century BC".
+3. If the sources state the traditional view differently, do not choose. Put the item on the "Not verified" list for Arthur.
+4. If an ESV Global Study Bible page needs a sign-in, stop and tell Arthur. Do not use a different copy of that text.
+5. The "Sources" page in Task 6 credits the sources.
+
 Steps:
 
-1. Create `docs/CONTENT-SOURCES.md`. Then create `public/data/intros.json`. For each of the 66 books: author, written, what it is, and `review: "draft"`. Record the source of each fact in `docs/CONTENT-SOURCES.md`.
-2. Obey the authorship rule in section 4.2. Give the traditional view first. Add one short line where scholars differ.
-3. Build the cover page: the closed book on the table, the "Open the book" button, the three facts, the chapter list.
-4. Make the move from the table: the selected spine slides out and lands as the closed book.
-5. Show a small "draft" label on each introduction that Arthur did not approve.
-6. Add a Playwright smoke test for one book.
+1. Propose the sources for the book introductions to Arthur. For each source, give the name, the address, the licence or copyright status, and why it is reliable. Give a minimum of two sources, so that one can confirm the other. Stop. Wait for Arthur's approval.
+2. Create `docs/CONTENT-SOURCES.md`. Record the approved sources in it. Use only the approved sources for the steps that follow. If you need one more source, ask Arthur first.
+3. Create `public/data/intros.json`. For each of the 66 books: author, written, what it is, and `review: "draft"`. Record the source of each fact in `docs/CONTENT-SOURCES.md`.
+4. Write each introduction in your own words. Do not copy a sentence from a source. A source gives facts only. Exception: text that is in the public domain can be quoted, with the source named.
+5. Obey the authorship rule in section 4.2 of `docs/DESIGN.md`. Give the traditional view first. Add one short line where scholars differ.
+6. Build the cover page: the closed book on the table, the "Open the book" button, the three facts, the chapter list.
+7. Make the move from the table: the selected spine slides out and lands as the closed book.
+8. Show a small "draft" label on each introduction that Arthur did not approve.
+9. Add a Playwright smoke test for one book.
 
 Done when:
 
@@ -156,9 +176,10 @@ Steps:
 3. Build a "Sources" page. Add a control to it on the table page.
 4. On the "Sources" page, name the Berean Standard Bible and say that it is in the public domain.
 5. On the "Sources" page, credit each data source as its licence requires. Read `docs/DATA-SOURCES.md` for the conditions. OpenBible.info requires a credit and a link to the CC BY 4.0 licence.
-6. Read the licence of each bundled font. If the licence requires a notice, show the notice on the "Sources" page.
-7. In `docs/DATA-SOURCES.md`, add a line to the ESV section: "Not used in version 1. Decision by Arthur on 2026-11-13."
-8. Add a Playwright smoke test: the "Sources" page loads and has the OpenBible.info credit.
+6. Credit the sources of the book introductions on the "Sources" page: Easton's Bible Dictionary, the ESV Global Study Bible by Crossway, and Wikipedia with a link to the CC BY-SA 4.0 licence. Say that the introductions use facts from these sources and are written for this site.
+7. Read the licence of each bundled font. If the licence requires a notice, show the notice on the "Sources" page.
+8. In `docs/DATA-SOURCES.md`, add a line to the ESV section: "Not used in version 1. Decision by Arthur on 2026-11-13."
+9. Add a Playwright smoke test: the "Sources" page loads and has the OpenBible.info credit.
 
 Done when:
 

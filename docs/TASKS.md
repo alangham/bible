@@ -403,22 +403,32 @@ Status: TODO
 
 Accuracy review: yes
 
-Goal: section 4.6 of `docs/DESIGN.md`.
+Goal: section 4.6 of `docs/DESIGN.md`. Read that section first. Arthur decided the two bands on 2026-11-14.
 
 Steps:
 
-1. Create `public/data/dates.json`. For each book: traditional date, a range where scholars differ, and `review: "draft"`. Record the source of each date in `docs/CONTENT-SOURCES.md`.
-2. Build the timeline page: books on a time axis in their category colors.
-3. Draw an arc between two books that have a quotation link.
-4. Make each book a control that goes to its cover page.
-5. Add the "Timeline" control to the cover page and the spread page.
-6. Add a Playwright smoke test.
+1. Create `public/data/dates.json` from the Written fact of each book in `public/data/intros.json`. Do not do new research. For each book: the first year, the last year, the kind (`year`, `range`, or `unknown`), and the words of the Written fact that give the date. Use negative numbers for years BC. A century is a range, for example "the 6th century BC" is -600 to -501.
+2. If a Written fact does not clearly give a year, a range, or "not known", do not guess. Put the book on the "Not verified" list, and place it in the "Date not known" group.
+3. Add a unit test: each of the 66 books is in `dates.json`. Add a second test: the years of each book are in the words of its Written fact, or follow from a century or a period in `public/data/periods.json`.
+4. Build the timeline page with the two bands, the axes, the spines, the range bars, the stacks, and the "Date not known" groups.
+5. Compute the number of years between the two bands from the dates, and show it.
+6. Compute the arcs from the quotation links in `public/data/links/`. Count the quotation links for each pair of books. Draw the arcs in three steps of thickness.
+7. Build the select behavior: the arcs of the selected book stay, the other arcs dim, and the list of quoted books shows. Add the action that opens the cover.
+8. Add the legend with the same behavior as on the table page. Use the same code.
+9. Add the small sign for a book whose Written fact has a "Scholars differ" detail.
+10. Add the "Timeline" control to the table page, the cover page, and the spread page. The route is `#/timeline`.
+11. Build the narrow layout from section 4.6: a list in date order, in two parts, with no arcs. Use the one layout function to select it.
+12. Add the reduced-motion fallback and keyboard access.
+13. Add a Playwright smoke test: the page loads with 66 books, a selected book shows its list, and the cover action opens the cover.
+14. Run the `accuracy-reviewer` agent. It checks each entry of `dates.json` against the Written fact of the book.
 
 Done when:
 
-- The test passes.
+- The tests pass.
+- The report gives, for each band, the first book, the last book, and the number of books in "Date not known".
+- The report gives the five pairs of books with the most quotation links.
 
-Stop and report. Give Arthur the list of dates to review.
+Stop and report. Include screenshots of the page, of a selected book, and of the narrow layout.
 
 ---
 

@@ -102,3 +102,23 @@ Page: spread. Seen in `docs/screenshots/task-5/nine-scenes.png`, Psalm 75, on 20
 Problem: a small tree of the scene is at the right edge of the text panel, next to the word "Selah".
 
 Correction: keep the large shapes of the front layers out of the text panel area, or make sure that the panel covers them.
+
+## 10. The marks for links are very small
+
+Status: PROPOSED
+
+Page: spread. Seen in `docs/screenshots/task-7/hebrews-9-task-7b.png` on 2026-11-14.
+
+Problem: a quotation link is a small filled dot and an echo link is a small dotted ring, next to the verse number. A reader can miss them. They are small for a finger.
+
+Correction: make the marks easier to see and to select. The touch area of a mark must be 44 px or larger. Keep the difference between the strong mark and the light mark. Do not make the text hard to read.
+
+## 11. The travel move is plain
+
+Status: PROPOSED
+
+Page: travel. Seen in `docs/screenshots/task-7/travel-mid.png` on 2026-11-14.
+
+Problem: travel shows a row of 66 colored bars on empty linen. It does show that the reader crossed the Bible, but it does not look like the table of books, and most of the page is empty.
+
+Correction: make the move look like the books of the table page: real spines with names, light, and shadow. The timeline page from Task 8 is a second option for the map of the move.

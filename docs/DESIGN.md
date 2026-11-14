@@ -136,6 +136,10 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
   - An OpenBible.info row where a verse links to a passage that starts at the same verse is not used.
   - A cross-reference line that names whole books links to the start of the first book.
   - In the read-with list, on a tie, the chapter with more links comes first, then Bible order. A link counts in the chapter of its first verse.
+  - When an OpenBible.info row and its reverse merge into one link, the link has the higher of the two vote counts.
+  - The fit rule reads only the main text of the Berean Standard Bible. It does not read the footnotes. So the links that end at Mark 9:44 and Mark 15:28 are echo links.
+  - An echo link from the Bible Quotation Database stays on the site also when it shares no words with its linked verse. No link is removed.
+  - Where the fit rule cannot decide a link, the link keeps the fit label that it has.
 - A link shows at its two ends. Example: Hebrews 9:20 shows the link to Exodus 24:8, and Exodus 24:8 shows the link to Hebrews 9:20.
 - The OpenBible.info set is very large: 301,574 links. The site shows only its strongest links as marks in the text, so that the text is not full of marks. Arthur approved this limit on 2026-11-14:
   - a link needs 20 votes or more;
@@ -160,11 +164,28 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 
 ### 4.6 Timeline
 
-- Books sit on a time axis in their category colors.
-- Arcs join books that have quotation links.
-- Select a book to open its cover.
+Arthur decided the two bands on 2026-11-14.
+
+- The timeline is one page on the linen table. It shows when each book was written, by the traditional view.
+- Two bands, one above the other. Each band has its own time scale and its own axis with years.
+  - Band 1: the 39 books of the Old Testament.
+  - Band 2: the 27 books of the New Testament.
+  - Reason: by the traditional dates, the Old Testament books cover about 1,000 years and the New Testament books cover about 50 years. On one scale, the New Testament is one thin line.
+- Between the bands, a short line says how many years are between the last book of band 1 and the first book of band 2. Compute the number from the dates. Do not write it by hand.
+- Each book is a spine in its category colors, as on the table page. It stands at its date of writing.
+- The date of a book comes from the Written fact of its cover in `public/data/intros.json`. The timeline uses the traditional view only. It needs no new research.
+  - A fact that gives one year: the spine stands at that year.
+  - A fact that gives a range or a century: the spine stands at the middle, and a thin bar under it shows the range.
+  - A fact that gives no date: the book goes in a group named "Date not known" at the end of its band.
+- Books with the same date stack, so that no spine covers a different spine.
+- A book whose Written fact has a "Scholars differ" detail shows a small sign. The sign has a text label for screen readers. The detail itself stays on the cover.
+- Arcs join two books that have one quotation link or more between them. Echo links give no arc. An arc is thicker when the two books have more quotation links: three steps of thickness.
+- Select a book: its arcs stay, the other arcs dim, and a short list names the books that it quotes and the books that quote it, with the number of quotation links for each. The list is the text form of the arcs, for a reader who cannot see them.
+- A second action on the selected book opens its cover.
+- The legend of the ten groups is on the page, with the same select and clear behavior as on the table page.
+- Each book is a real `a` or `button` with keyboard access. Obey the reduced-motion rule.
+- Narrow layout, below 768 px: the books are a list in date order, in two parts, with no arcs. The list of quoted books still shows for a selected book. Task 9 can improve it.
 - Travel can use the timeline as its map in a later version. This is not in version 1.
-- Dates are disputed for some books. Use the same rule as the cover page: traditional date first, and show a range where scholars differ.
 
 ## 5. Bible text
 

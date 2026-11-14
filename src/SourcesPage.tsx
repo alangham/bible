@@ -52,7 +52,13 @@ export function SourcesPage() {
             <a href="https://en.wikisource.org/wiki/Easton%27s_Bible_Dictionary_(1897)">Easton’s Bible Dictionary</a>, 1897, on Wikisource. In the
             public domain.
           </li>
-          <li>The ESV Global Study Bible, by Crossway: the introduction to each book, on esv.org.</li>
+          <li>
+            The{' '}
+            <a href="https://www.esv.org/resources/esv-global-study-bible/introduction-a-users-guide-to-the-global-study-bible/">
+              ESV Global Study Bible
+            </a>
+            , by Crossway: the introduction to each book, on esv.org.
+          </li>
           <li>
             <a href="https://en.wikipedia.org/">Wikipedia</a>, the article on each book, under the{' '}
             <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0)</a>.

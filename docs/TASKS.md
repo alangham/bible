@@ -516,7 +516,7 @@ Stop and report.
 
 ## Task 10. Design fixes
 
-Status: TODO
+Status: DONE
 
 Goal: correct the design problems in `docs/POLISH.md` that Arthur approved.
 

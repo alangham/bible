@@ -34,6 +34,7 @@ Hebrews is in General Letters, as on the wall image.
 - Fonts: Cormorant Garamond for titles and spines. Newsreader for body text. Load them from Google Fonts or bundle them.
 - Text contrast: minimum 4.5 to 1. Minimum 3 to 1 for text of 24 px or larger.
 - Controls: minimum 44 px touch size. Real `button` and `a` elements. Keyboard access for each action.
+- Exception to the 44 px size: the spines on the table page in the wide layout. Arthur decided this on 2026-11-13. See section 4.1.
 - Motion: obey `prefers-reduced-motion`. With reduced motion, replace each 3D move with a cross-fade.
 
 ## 4. Pages
@@ -52,7 +53,10 @@ Hebrews is in General Letters, as on the wall image.
 - Each spine has a small sideways offset so that the stack looks real.
 - A legend below the stacks lists the ten groups. Select a group to light its spines and dim the others. Select it again to clear.
 - Select a spine: the book slides out of the stack and lands on the table as the cover page.
-- Phone: the thin spines are too small to touch. Use one stack at a time with larger spines, and move between stacks by swipe.
+- Two layouts, selected by screen width. The limit is 768 px.
+  - Wide layout, 768 px or more: five stacks in one view, as in mockup D1. The spines can be thinner than 44 px. This is the one permitted exception to the 44 px size.
+  - Narrow layout, below 768 px: one stack at a time with spines of 44 px or more. Move between stacks by swipe. Task 9 builds this layout.
+- One function in the code decides which layout applies. No other code tests the screen width. Reason: design fixes will follow, and the rule can change, for example to a test of the input type. A wide touch screen gets the wide layout with thin spines for now. This is a known limit.
 
 ### 4.2 Cover (book page, mockup D2)
 

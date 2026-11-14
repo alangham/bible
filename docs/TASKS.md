@@ -156,8 +156,9 @@ Steps:
 3. Build a "Sources" page. Add a control to it on the table page.
 4. On the "Sources" page, name the Berean Standard Bible and say that it is in the public domain.
 5. On the "Sources" page, credit each data source as its licence requires. Read `docs/DATA-SOURCES.md` for the conditions. OpenBible.info requires a credit and a link to the CC BY 4.0 licence.
-6. In `docs/DATA-SOURCES.md`, add a line to the ESV section: "Not used in version 1. Decision by Arthur on 2026-11-13."
-7. Add a Playwright smoke test: the "Sources" page loads and has the OpenBible.info credit.
+6. Read the licence of each bundled font. If the licence requires a notice, show the notice on the "Sources" page.
+7. In `docs/DATA-SOURCES.md`, add a line to the ESV section: "Not used in version 1. Decision by Arthur on 2026-11-13."
+8. Add a Playwright smoke test: the "Sources" page loads and has the OpenBible.info credit.
 
 Done when:
 
@@ -232,11 +233,12 @@ Goal: the site is good on a phone.
 
 Steps:
 
-1. Build the phone layout of the table page from section 4.1.
+1. Build the narrow layout of the table page from section 4.1 of `docs/DESIGN.md`: below 768 px, one stack at a time, spines of 44 px or more, swipe between stacks. Use the one layout function to select it.
 2. Make the spread readable on a phone: one page in view, swipe to turn.
 3. Measure the frame rate on a mid-range phone profile in the browser tools. Target: 50 frames in one second or more.
 4. Reduce the scene detail where the target is not met.
-5. Run an accessibility check on each page type. Correct each failure.
+5. Load the 3D code as a separate chunk, so that the first load does not wait for it. In Task 2 the bundle was 1,148 kB. Give the new sizes in the report.
+6. Run an accessibility check on each page type. Correct each failure.
 
 Done when:
 
@@ -244,3 +246,25 @@ Done when:
 - The measurements are in the report.
 
 Stop and report.
+
+---
+
+## Task 10. Design fixes
+
+Status: TODO
+
+Goal: correct the design problems in `docs/POLISH.md`.
+
+Steps:
+
+1. Read `docs/POLISH.md`.
+2. Do only the items that have the status `APPROVED`. Arthur sets this status.
+3. For each item, make the change, then take a screenshot.
+4. Set the status of each completed item to `DONE`.
+
+Done when:
+
+- Each `APPROVED` item is `DONE`.
+- The tests pass.
+
+Stop and report. Include the screenshots.

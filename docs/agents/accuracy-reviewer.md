@@ -39,17 +39,18 @@ Applies when `public/data/intros.json` changed.
 For each changed book:
 
 1. Find each fact: author, date, place, audience, content.
-2. Find the source of each fact in `docs/CONTENT-SOURCES.md`. Open the source. Make sure that the source states the fact.
+2. Find the source of each fact in `docs/CONTENT-SOURCES.md`. Open the source. Make sure that the source states the fact. The bundled Bible text is a source for what a book says.
 3. Make sure that the authorship rule is obeyed. The Author fact and the Written fact give the traditional view only. The view of critical scholars is only in the detail.
 4. Make sure that the `critical` part of a detail matches its source in strength. "Most" in the source is "most" in the detail. Report a claim that is weaker or stronger than its source.
-5. Make sure that the `conservative` part of a detail comes from the ESV Global Study Bible page for that book. Report a `conservative` part that the page does not support.
-6. Report a line that rests on one scholar.
+5. Make sure that the `conservative` part of a detail comes from the ESV Global Study Bible page for that book. Report a `conservative` part that the page does not support. Report a reason that is not on the page. Report a detail that has no `conservative` part when the page holds the traditional view for that fact.
+6. Report a line that rests on the view of one scholar. A general view that the article states and supports with one citation is permitted. A claim from an article about a group of books is permitted for each book in the group, when the cited claim names the group.
 7. Report a place of writing that no approved source states.
-8. Plain words. Report a term of scholars that has no meaning in the same sentence, for example "anonymous" or "Hellenistic period". Report a period with no years. Report a sentence that uses one word for "the book does not name its writer" and "scholars doubt the traditional author".
-9. Make sure that the summary agrees with the content of the book. Read the first chapter and the last chapter in the bundled text as a minimum.
-10. Make sure that `review` is `"draft"` unless Arthur approved the book.
-11. Make sure that each source is in the approved list in `docs/CONTENT-SOURCES.md`.
-12. Compare each introduction with its sources. Report a sentence that is copied from a source that is under copyright.
+8. Periods. Make sure that the years of each period are the years in `public/data/periods.json`. Report a period with different years.
+9. Plain words. Report a term of scholars that has no meaning in the same sentence, for example "anonymous" or "Hellenistic period". Report a period with no years. Report a sentence that uses one word for "the book does not name its writer" and "scholars doubt the traditional author".
+10. Make sure that the summary agrees with the content of the book. Read the first chapter and the last chapter in the bundled text as a minimum.
+11. Make sure that `review` is `"draft"` unless Arthur approved the book.
+12. Make sure that each source is in the approved list in `docs/CONTENT-SOURCES.md`.
+13. Compare each introduction with its sources. Report a sentence that is copied from a source that is under copyright.
 
 ## Check 3. Links
 

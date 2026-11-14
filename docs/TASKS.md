@@ -184,6 +184,46 @@ Stop and report. Give Arthur the "Not verified" list.
 
 ---
 
+## Task 4c. Introductions: decisions on the "Not verified" list
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: apply Arthur's decisions of 2026-11-13 on the 25 "Not verified" items from Task 4b, and give each detail its conservative part where the source permits. The approved sources and their conditions are in Task 4. The five rules and the plain-words rule are in Task 4b. They do not change, but rule 5 gets a clarification below.
+
+Four new rules:
+
+1. One table of periods for the whole site. Create `public/data/periods.json`. It has one set of years for each period that the introductions name: the captivity in Babylon, Persian rule, Greek rule, and any other period in the text. Take the years from the ESV Global Study Bible where it gives them. Record the source of each period in `docs/CONTENT-SOURCES.md`. Each introduction uses the years from this table. If no approved source gives the years of a period, put that period on the "Not verified" list.
+2. An article about a group of books can be the source for each book in the group, when the cited claim names the group. Examples: the Wikipedia article on 1 John for the five books credited to John, and the article on 1 Timothy for the three letters to Timothy and Titus.
+3. Clarification of rule 5. Rule 5 excludes the view of one scholar. It does not exclude a general view that the article states and supports with one citation. A line such as "Scholars date ..." with one cited work stays.
+4. The bundled Bible text is a source for what a book says. Example: "The writer calls himself the elder". Record the verse in `docs/CONTENT-SOURCES.md`.
+
+Steps:
+
+1. Create the table of periods under new rule 1. Change each introduction to use it. This settles items 1, 9, 10, and 16, and the three different end years for Persian rule.
+2. Apply new rule 2. Titus: use the group claim, and make the strength word match it. 2 John and 3 John: add an Author detail from the group claim. This settles items 21, 24, and 25.
+3. Apply new rule 3. Keep the 1 John date line and the Micah line. For 1 John, say what kind of work gives the date, for example "A standard textbook dates it ...". This settles item 23 and the Micah line.
+4. Apply new rule 4 to the facts that cite the bundled Bible text.
+5. Joshua, item 2: the Written fact on the cover gives only "By tradition, in the lifetime of Joshua, except the last verses". Move the second view into the detail. Do not state it two times.
+6. Judges, item 3: the detail under Written has no date and is about who shaped the book. Move it to the Author detail.
+7. Obadiah, item 14: put the Written detail back. Give the majority view first, with the strength word of the source. Then give the later date as the view of some scholars.
+8. Leave these items as they are: 4, 5, 6, 7, 8, 11, 12, 13, 15, 17, 18, 19, 20, and 22. Remove them from the "Not verified" list. Record in `docs/CONTENT-SOURCES.md` that Arthur accepted them on 2026-11-13.
+9. The conservative part. For each of the details that has no conservative part now: open the ESV Global Study Bible page for the book. If the page holds the traditional view for that fact, add a conservative part. It says that conservative scholars keep the traditional view, and it gives the reason from the page if the page gives one. Write it in your own words. If the page does not hold the traditional view, or does not speak about that fact, add nothing. Do not write a reason from memory.
+10. Write the "Not verified" list again. Give the number of items in the report. Give the number of details with a conservative part, and the number without.
+11. Run the `accuracy-reviewer` agent on each book that changed, after your last correction.
+12. Update the tests if the data shape changed.
+
+Done when:
+
+- Each item in steps 1 to 8 is applied.
+- The accuracy review ran after the last correction.
+- The tests pass.
+
+Stop and report.
+
+---
+
 ## Task 5. Spread page with the bundled text
 
 Status: TODO

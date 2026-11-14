@@ -71,7 +71,8 @@ Hebrews is in General Letters, as on the wall image.
   - Layer 1, on the cover: the Author fact and the Written fact give the traditional view only. Where tradition names no author, say so. The cover does not state the view of critical scholars.
   - Layer 2, the detail: a book that has a dispute shows a small "Scholars differ" control next to the fact. The control is always visible on that book. It opens a short detail with two parts: what critical scholars say, and what conservative scholars answer.
   - A book with no dispute has no control.
-  - The detail hides nothing and adds nothing: each part needs a source. If no approved source gives the conservative answer, the detail has the critical part only.
+  - The detail hides nothing and adds nothing: each part needs a source.
+  - The conservative part: where the ESV Global Study Bible holds the traditional view for the book, the detail has a conservative part that says so, with the reason from that page if the page gives one. Where the ESV Global Study Bible does not hold the traditional view, for example Hebrews, the detail has the critical part only.
   - Reason: with one layer, about 50 of the 66 covers showed a doubt about the author before chapter 1, and the conservative answer was not shown.
 
 ### 4.3 Spread (chapter page, mockup D3)

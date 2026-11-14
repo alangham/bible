@@ -226,7 +226,7 @@ Stop and report.
 
 ## Task 4d. Six author details under the new wording
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

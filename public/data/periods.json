@@ -10,7 +10,7 @@
   {
     "id": "david",
     "name": "the time of King David",
-    "names": ["the time of King David", "the reign of King David"],
+    "names": ["the time of King David", "the reign of King David", "the reign of David"],
     "years": "1010 to 970 BC",
     "from": -1010,
     "to": -970

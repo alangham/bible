@@ -45,10 +45,15 @@ Each period that the introductions name has one set of years. `public/data/perio
 | Period | Years | Source |
 |---|---|---|
 | the time of the judges | before about 1050 BC | ESV Global Study Bible, introduction to Ruth, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ruth/: after the conquest of Canaan and before about 1050 BC. |
-| the time of King David | 1010 to 970 BC | ESV Global Study Bible, introduction to Judges, Author and Date, https://www.esv.org/resources/esv-global-study-bible/introduction-to-judges/: David's time, 1010 to 970 BC. Added at Arthur's request on 2026-11-14. Two other ESV pages end the reign in 971 BC: the introduction to 1 and 2 Samuel, and the map "The Extent of David's Kingdom", 1010 to 971 BC, in the introduction to 1 and 2 Chronicles. |
+| the time of King David | 1010 to 970 BC | ESV Global Study Bible, introduction to Judges, Author and Date, https://www.esv.org/resources/esv-global-study-bible/introduction-to-judges/: David's time, 1010 to 970 BC. Arthur chose 1010 to 970 BC on 2026-11-14, with the 971 pages in view. Two other ESV pages end the reign in 971 BC: the introduction to 1 and 2 Samuel, and the map "The Extent of David's Kingdom", 1010 to 971 BC, in the introduction to 1 and 2 Chronicles. |
 | the captivity in Babylon | 586 to 538 BC | ESV Global Study Bible, introduction to 1 and 2 Chronicles, timeline, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/. |
 | Persian rule | 539 to 332 BC | ESV Global Study Bible, introduction to 1 and 2 Chronicles, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-chronicles/: the Persian period, 539 to 332 BC. |
 | Greek rule | from 332 BC | The year when Persian rule ended in the ESV Global Study Bible, introduction to 1 and 2 Chronicles. |
+
+Arthur decided these on 2026-11-14:
+
+1. The time of King David is 1010 to 970 BC, and the reign ends about 970 BC. Two ESV pages give 971 BC for the end; the site uses 970 BC. 1 Chronicles 29:27 in the Berean Standard Bible gives David's reign as forty years. Each introduction that names the end of the reign gives about 970 BC. A source record keeps the year that its page gives.
+2. The time of a person is not a period and needs no years. Example: Job, Written: "the time of Moses or of David and Solomon".
 
 ## How the introductions were written
 
@@ -242,12 +247,14 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/. States: Says David reigned until 971 BC and the books were probably written shortly after his reign.
 - Written, critical scholars: Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Books_of_Samuel&oldid=1381292867, section "Lead; Composition: Authorship and date of composition". States: Says most scholars accept the Deuteronomistic history in broad outline, dated about 630 to 540 BCE. Also reports serious scholarly opposition to this late compilation. The article cites: David Toshio Tsumura, The First Book of Samuel, Eerdmans, 2007, pp. 15 to 19; Douglas A. Knight, 1995, p. 62; Gwilym H. Jones, 1 and 2 Samuel, Oxford Bible Commentary, 2001, p. 197; John H. Walton, A Survey of the Old Testament, 2009, pp. 258 to 259.
-- Written, conservative scholars: Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended in 971 BC.
+- Written, conservative scholars: Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended, about 970 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/, section "Author and Date". States: The writer or writers are not known. David reigned until 971 BC. The two books probably date from soon after that. No reason is given.
 - What it is: A narrative of Israel's move from judges to kings, told through Samuel, Saul, and the young David. It runs from the birth of Samuel to the death of Saul.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FSamuel%2C_Books_of&oldid=14300183. States: Says 1 Samuel covers Eli, Samuel, Saul, and David in exile.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/. States: Says leadership passes from Eli to Samuel, then to Saul, then to David.
   - Berean Standard Bible. States: Chapter 1 tells of Hannah and the birth of Samuel. Chapter 31 tells of the death of Saul and his sons on Mount Gilboa.
+- Decided by Arthur on 2026-11-14:
+  - The time of King David ends about 970 BC, as in public/data/periods.json. The Written detail gives about 970 BC. Its source, the ESV Global Study Bible page, gives 971 BC; the record keeps that year.
 
 ### 2 Samuel (`2-samuel`)
 
@@ -260,11 +267,15 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/. States: Says David reigned until 971 BC and the books were probably written shortly after his reign.
 - Written, critical scholars: Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Books_of_Samuel&oldid=1381292867, section "Lead; Composition: Authorship and date of composition". States: Says most scholars accept the Deuteronomistic history in broad outline, dated about 630 to 540 BCE. Also reports serious scholarly opposition to this late compilation. The article cites: David Toshio Tsumura, The First Book of Samuel, Eerdmans, 2007, pp. 15 to 19; Douglas A. Knight, 1995, p. 62; Gwilym H. Jones, 1 and 2 Samuel, Oxford Bible Commentary, 2001, p. 197; John H. Walton, A Survey of the Old Testament, 2009, pp. 258 to 259.
-- Written, conservative scholars: Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended in 971 BC.
+- Written, conservative scholars: Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended, about 970 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-samuel/, section "Author and Date". States: The writer or writers are not known. David reigned until 971 BC. The two books probably date from soon after that. No reason is given.
-- What it is: A narrative of the reign of David, first over Judah and then over all Israel. It opens with David's lament for Saul and Jonathan and closes as a plague on Israel ends.
+- What it is: A narrative of the reign of King David, 1010 to 970 BC, over Judah and then all Israel. It opens with David's lament for Saul and Jonathan and closes as a plague on Israel ends.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FSamuel%2C_Books_of&oldid=14300183. States: Says 2 Samuel covers the reign of David over Judah, chapters 1 to 4, and over all Israel, chapters 5 to 24.
   - Berean Standard Bible. States: Chapter 1 has David's lament for Saul and Jonathan. Chapter 24 ends when David builds an altar and the plague on Israel stops.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-judges/, section "Author and Date". States: The years of David's time, 1010 to 970 BC, as public/data/periods.json gives them from the introduction to Judges.
+- Decided by Arthur on 2026-11-14:
+  - The time of King David ends about 970 BC, as in public/data/periods.json. The Written detail gives about 970 BC. Its source, the ESV Global Study Bible page, gives 971 BC; the record keeps that year.
+  - The time of King David ends about 970 BC, as in public/data/periods.json. "What it is" gives the years of the period (Task 4c rule 1).
 
 ### 1 Kings (`1-kings`)
 
@@ -451,6 +462,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.
   - Berean Standard Bible. States: Job 1:1 introduces a blameless man in Uz. Job 1:19 tells of his children killed. Job 2:11 brings three friends. At 38:1 the LORD answers him.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJob%2C_Book_of&oldid=7352541. States: A prose opening in chapters 1 and 2, a debate in poetry from chapter 3 to 42:6, and a prose close.
+- Decided by Arthur on 2026-11-14:
+  - The time of a person is not a period and needs no years. The Written fact names "the time of Moses or of David and Solomon" without years.
 
 ### Psalms (`psalms`)
 

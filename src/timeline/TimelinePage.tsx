@@ -207,18 +207,10 @@ function Bands({ books, data, differ, selected, picked, onActivate }: ViewProps)
     return m
   }, [bands])
 
-  // The years between the last book of band 1 and the first book of band 2, from the dates.
+  // The years between the two bands, from the dates. docs/DESIGN.md section 4.6.
   const between = useMemo(() => {
-    const inOrder = (list: Book[]) =>
-      list
-        .map((b, i) => ({ b, i, at: standPoint(data.dates.get(b.id)!) }))
-        .filter((e) => e.at !== null)
-        .sort((p, q) => p.at! - q.at! || p.i - q.i)
-    const old = inOrder(books.slice(0, OLD_TESTAMENT_BOOKS))
-    const neu = inOrder(books.slice(OLD_TESTAMENT_BOOKS))
-    const last = old[old.length - 1].b
-    const first = neu[0].b
-    return { last, first, years: yearsBetween(data.dates.get(last.id)!, data.dates.get(first.id)!) }
+    const datesOf = (list: Book[]) => list.map((b) => data.dates.get(b.id)!)
+    return yearsBetween(datesOf(books.slice(0, OLD_TESTAMENT_BOOKS)), datesOf(books.slice(OLD_TESTAMENT_BOOKS)))
   }, [books, data])
 
   // A spine dims when a legend group excludes it, or when a different book is selected and it has no arc to that book.
@@ -337,7 +329,7 @@ function Bands({ books, data, differ, selected, picked, onActivate }: ViewProps)
 
           {renderBand(bands.old, 1, 'Old Testament')}
           <p className="tl-between" style={{ top: axis1 + MIDDLE_PX / 2 - 16 }}>
-            About {between.years} years between {between.last.name} and {between.first.name}
+            About {between} years or more between the last Old Testament book and the first New Testament book
           </p>
           {renderBand(bands.neu, 2, 'New Testament')}
         </>

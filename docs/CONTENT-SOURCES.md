@@ -2551,7 +2551,11 @@ How the words give the years:
 8. The time of a person gives no years, unless the table of periods has an entry for it. Arthur's decision 2 under "Periods" says this.
 9. Words that give only the latest time, or only the earliest time, give no date: "before AD 70", "no later than the 90s AD", "by the time of King David", "some time after David became king", "no earlier than about AD 62", "from about 520 BC". The book goes in the group "Date not known" and on the "Not verified" list. Task 8 step 2 says this.
 10. Words that place the writing soon after a dated event give the year of the event: "soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, and "soon after the end of David's reign, about 970 BC" is 970 BC.
-11. The spine stands at the year, or at the middle of the range. The years between the two bands are counted between the spine of the last book of the Old Testament band and the spine of the first book of the New Testament band, with no year 0, and rounded to 10 years.
+11. Where the words give a year and a century for the time of writing, the year leads (Task 8b). Obadiah: "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC" is 586 BC, as Lamentations is. A year that is only a limit, or the year of an event in the book, does not lead. 2 Kings: "the 6th century BC", and "before Cyrus let the captives in Babylon go home in 538 BC" is a limit. Daniel: "the 6th century BC", and 605 BC to 536 BC are the years of Daniel's life in the book. Isaiah: "the late 8th and early 7th centuries BC", and 740 BC is the year when Isaiah was called. These three books keep their century. Proverbs: "Begun under Solomon in the 10th century BC" is the start and "about 700 BC" is the end, so rule 6 makes one range, 1000 BC to 700 BC. A script found no other Written fact with a year and a century, outside the sentences that start "An older view".
+12. The spine stands at the year, or at the middle of the range.
+13. The line between the bands counts from the end of the last range in the Old Testament band to the start of the first range in the New Testament band (Task 8b). A book with one year is a range of one year. Books with no date do not count. The count has no year 0, and is rounded down to 10 years, because the line says "or more". With the dates below: 332 BC, the end of 1 and 2 Chronicles, to AD 40, the start of James, is 371 years. The line says "About 370 years or more between the last Old Testament book and the first New Testament book".
+
+Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6). Rules 11 and 13 are his decisions of the same day.
 
 | Book | Kind | First year | Last year | Words of the Written fact |
 |---|---|---|---|---|
@@ -2585,7 +2589,7 @@ How the words give the years:
 | Hosea | range | 750 BC | 701 BC | "the late 8th century BC" |
 | Joel | year | 500 BC | 500 BC | "perhaps about 500 BC" |
 | Amos | range | 800 BC | 701 BC | "the 8th century BC" |
-| Obadiah | range | 600 BC | 501 BC | "Probably the 6th century BC" |
+| Obadiah | year | 586 BC | 586 BC | "soon after Babylon destroyed Jerusalem about 586 BC" |
 | Jonah | range | 800 BC | 701 BC | "the 8th century BC" |
 | Micah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |
 | Nahum | range | 700 BC | 601 BC | "the 7th century BC" |

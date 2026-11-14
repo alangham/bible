@@ -58,14 +58,15 @@ export function arcStep(n: number): 1 | 2 | 3 {
 }
 
 /**
- * The years between the last book of the first band and the first book of the second band,
- * from the points where their spines stand. Rounded to 10 years.
+ * The years between two bands: from the end of the last range in the first band to the start of the
+ * first range in the second band. A book with one year is a range of one year. Books with no date do
+ * not count. Rounded down to 10 years, because the line says "N years or more". docs/DESIGN.md 4.6.
  */
-export function yearsBetween(last: BookDate, first: BookDate): number {
-  const a = standPoint(last)
-  const b = standPoint(first)
-  if (a === null || b === null) throw new Error('A book with no date has no place on the axis')
-  return Math.round((b - a) / 10) * 10
+export function yearsBetween(first: BookDate[], second: BookDate[]): number {
+  const ends = first.filter((d) => d.to !== null).map((d) => lineYear(d.to!))
+  const starts = second.filter((d) => d.from !== null).map((d) => lineYear(d.from!))
+  if (!ends.length || !starts.length) throw new Error('A band has no book with a date')
+  return Math.floor((Math.min(...starts) - Math.max(...ends)) / 10) * 10
 }
 
 export async function loadDates(): Promise<BookDate[]> {

@@ -434,7 +434,7 @@ Stop and report. Include screenshots of the page, of a selected book, and of the
 
 ## Task 8b. Timeline: two corrections
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

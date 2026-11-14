@@ -29,7 +29,7 @@
  {"id":"hosea","kind":"range","from":-750,"to":-701,"words":"the late 8th century BC"},
  {"id":"joel","kind":"year","from":-500,"to":-500,"words":"perhaps about 500 BC"},
  {"id":"amos","kind":"range","from":-800,"to":-701,"words":"the 8th century BC"},
- {"id":"obadiah","kind":"range","from":-600,"to":-501,"words":"Probably the 6th century BC"},
+ {"id":"obadiah","kind":"year","from":-586,"to":-586,"words":"soon after Babylon destroyed Jerusalem about 586 BC"},
  {"id":"jonah","kind":"range","from":-800,"to":-701,"words":"the 8th century BC"},
  {"id":"micah","kind":"range","from":-750,"to":-651,"words":"the late 8th and early 7th centuries BC"},
  {"id":"nahum","kind":"range","from":-700,"to":-601,"words":"the 7th century BC"},

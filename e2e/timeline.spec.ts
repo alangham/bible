@@ -9,7 +9,7 @@ test.describe('timeline page', () => {
     await expect(page.getByRole('list', { name: 'Old Testament, in date order' }).getByRole('button')).toHaveCount(39)
     await expect(page.getByRole('list', { name: 'New Testament, in date order' }).getByRole('button')).toHaveCount(27)
     await expect(page.locator('path.tl-arc')).toHaveCount(129)
-    await expect(page.locator('.tl-between')).toHaveText(/^About \d+ years between \S.* and \S/)
+    await expect(page.locator('.tl-between')).toHaveText(/^About \d+ years or more between the last Old Testament book and the first New Testament book$/)
   })
 
   test('a selected book shows its list, and a second action opens its cover', async ({ page }) => {

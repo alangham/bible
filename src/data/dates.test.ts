@@ -130,10 +130,27 @@ describe('the date helpers', () => {
     expect([1, 2, 5, 6, 38].map(arcStep)).toEqual([1, 2, 2, 3, 3])
   })
 
-  it('computes the years between two spines', () => {
+  it('counts the years between the bands from the end of the last range to the start of the first range (Task 8b)', () => {
     const a: BookDate = { id: 'a', kind: 'range', from: -539, to: -332, words: '' }
+    const y: BookDate = { id: 'y', kind: 'year', from: -460, to: -460, words: '' }
+    const none: BookDate = { id: 'n', kind: 'unknown', from: null, to: null, words: '' }
     const b: BookDate = { id: 'b', kind: 'range', from: 40, to: 44, words: '' }
-    expect(yearsBetween(a, b)).toBe(480)
+    const c: BookDate = { id: 'c', kind: 'year', from: 48, to: 48, words: '' }
+    // From 332 BC to AD 40 with no year 0: 371 years, rounded down to 370.
+    expect(yearsBetween([y, a, none], [c, b, none])).toBe(370)
+  })
+
+  it('gives 370 years between the bands with the dates of dates.json', () => {
+    expect(yearsBetween(dates.slice(0, 39), dates.slice(39))).toBe(370)
+  })
+})
+
+describe('the year leads where the words give a year and a century (Task 8b step 2)', () => {
+  it('stands Obadiah and Lamentations at 586 BC', () => {
+    for (const id of ['obadiah', 'lamentations']) {
+      const d = dates.find((x) => x.id === id)!
+      expect([d.kind, d.from, d.to], id).toEqual(['year', -586, -586])
+    }
   })
 })
 

@@ -224,6 +224,30 @@ Stop and report.
 
 ---
 
+## Task 4d. Six author details under the new wording
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: section 4.2 of `docs/DESIGN.md` now says that the conservative part gives the view of the ESV Global Study Bible on the fact. Six author details have a view on the page but no conservative part.
+
+Steps:
+
+1. Add a conservative part to the Author detail of Judges, 1 Kings, 2 Kings, 1 Chronicles, 2 Chronicles, and Job. It gives the view of the ESV Global Study Bible page for that book, in your own words. Obey the plain-words rule.
+2. Do not change a different book.
+3. Run the `accuracy-reviewer` agent on the six books after your last correction.
+4. Give the new numbers in the report: details with a conservative part, and details without.
+
+Done when:
+
+- The six details have a conservative part that the page supports.
+- The tests pass.
+
+Stop and report. This task is small. Arthur can tell you to continue with Task 5 in the same session.
+
+---
+
 ## Task 5. Spread page with the bundled text
 
 Status: TODO
@@ -232,26 +256,41 @@ Accuracy review: yes
 
 Goal: the chapter page from sections 4.3 and 4.4 of `docs/DESIGN.md`, with the bundled translation only.
 
+Step 1 is complete. Arthur approved the nine scene subjects on 2026-11-14, with three changes. The approved subjects and the scene rules are in section 4.4 of `docs/DESIGN.md`. Read that section before you build. The three changes from your proposal:
+
+- Scene 7 looks Roman: columns, an arch, tile roofs.
+- The time of day follows the position of the chapter in its book. It does not come from a fixed number.
+- No person that a reader can identify, and the chapter text is readable at each time of day.
+
+Decisions on the Bible text, by Arthur on 2026-11-14:
+
+- The words come from `bsb.txt`. The section headings, the paragraphs, the poetry lines, and the footnotes come from the USFM files of the same publisher. This is your plan from the step 1 report, and it is approved.
+- Keep the section headings, the paragraphs, the poetry lines, and the verse numbers.
+- Footnotes: keep only the notes about manuscripts. See section 4.3 of `docs/DESIGN.md`.
+- Keep the 1,325 cross-reference lines of the USFM files in the data, in a field of their own. Do not show them in this task. Task 7 uses them as a source of links.
+
 Steps:
 
-1. Propose the subject of the nine base scenes to Arthur. Wait for approval.
-2. Add the bundled translation as one JSON file for each book in `public/data/text/`. Use the source that passed the licence check in Task 1. Task 1 did not check the format of the source file. Check it first. Keep the verse numbers. In the report, say what the source has for headings, paragraphs, poetry lines, and footnotes, and which of these the site keeps.
-3. Some passages are not in the earliest manuscripts, for example Mark 16:9 to 20 and John 7:53 to 8:11. Find how the source marks these passages. Keep that mark visible on the spread. Do not remove text and do not add text. If the source has no mark, stop and ask Arthur.
-4. Build the open book: two pages, the text on the right page, the header above the text.
-5. Build the scene engine: four paper-cut layers, parallax, and the rule that changes the scene for each book and chapter.
-6. Build the nine base scenes.
-7. Build the page turn: drag a corner, and arrow keys. The page must curl.
-8. Make the "Open the book" move from the cover page.
-9. Add the reduced-motion fallback.
-10. Add a unit test: the same book and chapter always give the same scene values.
-11. Add a Playwright smoke test: open Genesis 1, turn to Genesis 2.
+1. Complete. See above.
+2. Confirm that the public-domain statement of the publisher covers the USFM files, with their headings and footnotes. Record the download, its address, its date, and the result in `docs/DATA-SOURCES.md`. If the statement does not cover them, stop and ask Arthur.
+3. Add the bundled translation as one JSON file for each book in `public/data/text/`. Take the words from `bsb.txt` and the structure from the USFM files. Add a unit test: the words of each verse in the JSON files are the same as in `bsb.txt`, for all 31,086 verses.
+4. Keep the two manuscript notes, on Mark 16:8 and John 7:52, visible on the spread. For each of the 16 verses that are not in the main text, show the verse number and its note. Do not remove text and do not add text.
+5. Build the open book: two pages, the text on the right page, the header above the text.
+6. Build the scene engine: four paper-cut layers, parallax, the time of day from the position of the chapter in its book, the colors near the cloth color of the group, and the small shifts of each layer from a fixed number.
+7. Build the nine base scenes from section 4.4 of `docs/DESIGN.md`.
+8. Set the color of the chapter text from the scene behind it: dark text on a light scene, light text on a dark scene. Add a test that measures the contrast of the text for each of the nine scenes at dawn, day, dusk, and night. Each of the 36 results must be 4.5 to 1 or more.
+9. Build the page turn: drag a corner, and arrow keys. The page must curl.
+10. Make the "Open the book" move from the cover page.
+11. Add the reduced-motion fallback.
+12. Add a unit test: the same book and chapter always give the same scene values. Add a unit test: in a book with more than three chapters, chapter 1 is dawn, the middle chapter is day, and the last chapter is night.
+13. Add a Playwright smoke test: open Genesis 1, turn to Genesis 2. Add a second one: Mark 16 shows the manuscript note.
 
 Done when:
 
 - Each of the 1,189 chapters opens with text and a scene.
 - The tests pass.
 
-Stop and report. Include screenshots of three categories.
+Stop and report. Include one screenshot of each of the nine scenes. Include Genesis 1, Genesis 25, and Genesis 50, so that Arthur sees dawn, day, and night in one book.
 
 ---
 

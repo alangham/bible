@@ -31,3 +31,30 @@ Open questions:
 3. The map must fit the look of the site: paper-cut layers on the linen table, not a modern web map.
 4. Do the passages link to the map? Example: select a place name in a chapter, and the map shows it. This connects to links and travel in section 4.5 of `docs/DESIGN.md`.
 5. The accuracy reviewer needs a check for places.
+
+
+---
+
+## 2. A scene of its own for a book that does not fit its category scene
+
+Added: 2026-11-14, by the designer.
+
+Idea: version 1 has one scene for each category. Three books do not fit their scene: Obadiah, Jonah, and Jude. Other books fit only in part, for example Genesis, Ruth, Esther, Acts, Daniel, and Galatians. A later version can give such a book a scene of its own. Example: the sea and a ship for Jonah.
+
+Open questions:
+
+1. Which books get a scene of their own first?
+2. Each new subject needs Arthur's approval and a check by the accuracy reviewer, as in Task 5.
+
+---
+
+## 3. All footnotes of the Bible text
+
+Added: 2026-11-14, by the designer.
+
+Idea: the source has 4,854 footnotes. Version 1 shows only the notes about manuscripts. A later version can show all of them.
+
+Open questions:
+
+1. How does a footnote look on the spread? A mark in the text that opens a note is one option. The pop-up for links in section 4.5 of `docs/DESIGN.md` is a similar control. The two must not be confused.
+2. Can the reader switch the footnote marks off?

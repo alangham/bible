@@ -80,15 +80,38 @@ Hebrews is in General Letters, as on the wall image.
 - The book is open on the table. Two pages.
 - A scene covers the two pages. The text is on the right page for a short chapter. For a long chapter, the text scrolls on the right page, and the scene moves in parallax.
 - Above the text: book name, chapter number, number of chapters.
+- The chapter text keeps the section headings, the paragraphs, and the poetry lines of the source. It keeps the verse numbers.
+- Footnotes in version 1: only the notes about manuscripts. These are the notes on Mark 16:8 and John 7:52, and the notes for the 16 verses that are not in the main text. A verse that is not in the main text shows its number and its note. The other footnotes are not in version 1.
+- The chapter text must be readable on the scene at each time of day: a contrast of 4.5 to 1 or more. Use dark text on a light scene and light text on a dark scene.
 - Drag a page corner, or use the arrow keys, to turn to the next or previous chapter. The page must curl.
 - "Close the book" goes back to the cover.
 
 ### 4.4 Scenes
 
+Arthur approved the nine subjects and these rules on 2026-11-14.
+
 - Nine base scenes, one for each category. Each scene has four flat paper-cut layers that move in parallax.
-- Code changes each scene by rule for the book and the chapter: time of day, color, and layer positions. The same chapter always gives the same scene.
-- No scene is specific to the content of a chapter in version 1.
-- Arthur must approve the subject of each base scene before you build it. Propose the nine subjects in Task 5.
+
+| # | Category | Subject | Layers, from back to front |
+|---|---|---|---|
+| 1 | Law | A camp of tents in the wilderness below a mountain | sky; mountain; tents; rocks and scrub |
+| 2 | History, with Acts | A walled city with a gate, and fields of grain | sky; hills; walled city with gate; fields |
+| 3 | Poetry & Wisdom | A stream through grazing hills, with a tree by the water | sky; hills with a flock; tree; stream |
+| 4 | Major Prophets | A watchtower on a hill above a great river | sky; river plain; watchtower; river bank |
+| 5 | Minor Prophets | Farm country of vines and fig trees, with a threshing floor | sky; terraced hills; vines and figs; threshing floor |
+| 6 | Gospels | A lake shore with fishing boats | sky; far hills; lake with boats; shore with nets |
+| 7 | Letters of Paul | A Roman town where a church meets in a home | sky; tile roofs; houses with columns and an arch; street |
+| 8 | General Letters | Travellers on a road through grassy hills, with wild flowers | sky with morning star; hills; road; flowers |
+| 9 | Prophecy | Clouds with heaven opening in light, above an island coast | light; high clouds; clouds with a rainbow; island rocks |
+
+- Scene 7 must look Roman, not Judean: columns, an arch, tile roofs. It must not look like the walled city of scene 2.
+- Scenes 3, 5, and 8 all have hills. Give each a different main shape in front: the tree and stream, the vines and threshing floor, the road.
+- The time of day follows the position of the chapter in its book. The first chapter is dawn. The middle of the book is day. The last chapters are dusk, and the last chapter is night. The change from chapter to chapter is gradual. A book with one chapter is day. Reason: in the reference, each spread is a later hour of one day, so the reader feels the day pass through the book.
+- Stars show only at night and at dawn.
+- The colors of a scene are near the cloth color of its group.
+- A fixed number from the book and the chapter sets small shifts of each layer. The same chapter always gives the same scene.
+- No person that a reader can identify. Small plain figures are permitted, for example the travellers in scene 8 and the flock in scene 3.
+- No scene is specific to the content of a chapter in version 1. Three books do not fit their scene: Obadiah, Jonah, and Jude. This is accepted for version 1.
 
 ### 4.5 Links, travel, and trail
 

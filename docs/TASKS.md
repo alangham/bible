@@ -235,15 +235,16 @@ Goal: the chapter page from sections 4.3 and 4.4 of `docs/DESIGN.md`, with the b
 Steps:
 
 1. Propose the subject of the nine base scenes to Arthur. Wait for approval.
-2. Add the bundled translation as one JSON file for each book in `public/data/text/`. Use the source that passed the licence check in Task 1.
-3. Build the open book: two pages, the text on the right page, the header above the text.
-4. Build the scene engine: four paper-cut layers, parallax, and the rule that changes the scene for each book and chapter.
-5. Build the nine base scenes.
-6. Build the page turn: drag a corner, and arrow keys. The page must curl.
-7. Make the "Open the book" move from the cover page.
-8. Add the reduced-motion fallback.
-9. Add a unit test: the same book and chapter always give the same scene values.
-10. Add a Playwright smoke test: open Genesis 1, turn to Genesis 2.
+2. Add the bundled translation as one JSON file for each book in `public/data/text/`. Use the source that passed the licence check in Task 1. Task 1 did not check the format of the source file. Check it first. Keep the verse numbers. In the report, say what the source has for headings, paragraphs, poetry lines, and footnotes, and which of these the site keeps.
+3. Some passages are not in the earliest manuscripts, for example Mark 16:9 to 20 and John 7:53 to 8:11. Find how the source marks these passages. Keep that mark visible on the spread. Do not remove text and do not add text. If the source has no mark, stop and ask Arthur.
+4. Build the open book: two pages, the text on the right page, the header above the text.
+5. Build the scene engine: four paper-cut layers, parallax, and the rule that changes the scene for each book and chapter.
+6. Build the nine base scenes.
+7. Build the page turn: drag a corner, and arrow keys. The page must curl.
+8. Make the "Open the book" move from the cover page.
+9. Add the reduced-motion fallback.
+10. Add a unit test: the same book and chapter always give the same scene values.
+11. Add a Playwright smoke test: open Genesis 1, turn to Genesis 2.
 
 Done when:
 

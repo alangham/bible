@@ -329,28 +329,37 @@ Status: TODO
 
 Accuracy review: yes
 
-Goal: section 4.5 of `docs/DESIGN.md`.
+Goal: section 4.5 of `docs/DESIGN.md`. Read that section first. It has the sources rule that Arthur decided on 2026-11-14: links come only from the three approved sources, and no person and no agent adds a link by hand.
 
 Steps:
 
-1. Build `public/data/links/` from the sources that passed the licence check in Task 1. Mark each link as a quotation link or an echo link.
-2. Show the marks in the text. Strong for quotation links. Light for echo links.
-3. Add a switch for echo links.
-4. Build the pop-up: reference, the text of the linked passage, "Go there", "Stay here".
-5. Write a reason line for each quotation link. Do not write a reason line for an echo link. The reason line must say only what the two passages show. Record the source of each quotation link in `docs/CONTENT-SOURCES.md`.
-6. Write a script in `scripts/` that checks each link: the two ends exist, no link to itself, no duplicate, the type is set. Add the script to the unit tests.
-7. Build travel: the current book closes, the linked book comes onto the table, it opens at the linked passage.
-8. Build the trail. Each stop is a control that goes back to that stop.
-9. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back.
+1. Read the three sources. Do not build yet. Report to Arthur:
+   - the number of links in each source;
+   - what the cross-reference lines of the Berean Standard Bible files contain, with three examples;
+   - for the OpenBible.info set: the measure of strength that the data has, and how many links each verse has, as a minimum, a median, and a maximum;
+   - a proposal for the limit: which OpenBible.info links the site shows. Give the number of links that remain, and the number of marks on a typical chapter. Give Genesis 1, Psalm 23, John 3, and Hebrews 9 as examples;
+   - the links of Hebrews 9 in each source, with the limit and without it. Say if a link to Leviticus 16 or to Numbers 19 exists.
+   Stop. Wait for Arthur's approval of the limit.
+2. Build `public/data/links/` from the three sources, with the approved limit. Each link records its source and its type. If two sources give the same pair, keep one link. A quotation link takes priority over an echo link.
+3. Do not add a link that is not in a source. Do not remove a link because you disagree with it. If a link looks wrong, put it on the "Not verified" list.
+4. Show the marks in the text at the two ends of each link. Strong for quotation links. Light for echo links. An echo link from the cross-reference lines of the Berean Standard Bible files is on its section heading.
+5. Add a switch for echo links.
+6. Build the pop-up: reference, the text of the linked passage, "Go there", "Stay here". If a passage has more than one link, the pop-up lists them, quotation links first.
+7. Write a reason line for each quotation link. Do not write a reason line for an echo link. The reason line must say only what the two passages show. Obey the plain-words rule from Task 4b. Record the source of each quotation link in `docs/CONTENT-SOURCES.md`.
+8. Write a script in `scripts/` that checks each link: the two ends exist, no link to itself, no duplicate, the type is set, and the source is one of the three approved sources. Add the script to the unit tests.
+9. Build travel: the current book closes, the linked book comes onto the table, it opens at the linked passage.
+10. Build the trail. Each stop is a control that goes back to that stop.
+11. Credit OpenBible.info as its licence requires. If the "Sources" page from Task 6 already has the credit, make sure that it is correct.
+12. Add a Playwright test: open Hebrews 9, select a quotation link, travel, then use the trail to go back.
 
 Done when:
 
 - The test passes.
 - Hebrews 9 has quotation links to the Old Testament passages that it quotes.
 - The link check script passes on each link.
-- The report gives the number of quotation links and the number of echo links.
+- The report gives the number of quotation links and the number of echo links, for each source.
 
-Stop and report.
+Stop and report. Include screenshots of the pop-up, of a chapter with marks, and of the trail.
 
 ---
 

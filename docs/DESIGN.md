@@ -116,6 +116,17 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 ### 4.5 Links, travel, and trail
 
 - A passage with a link has a visible mark in the text.
+- Links come only from the three approved sources. No person and no agent adds a link by hand. If the sources have no link between two passages, the site has no link between them. Arthur decided this on 2026-11-14.
+
+| Source | Gives | Type of link |
+|---|---|---|
+| Bible Quotation Database, public domain | Places where one passage quotes a different passage | Quotation link |
+| OpenBible.info cross-references, CC BY 4.0 | Passages that share a theme, an event, a person, or wording | Echo link |
+| Cross-reference lines in the Berean Standard Bible files, public domain | Passages that the publisher lists under a section heading | Echo link, on the section heading |
+
+- If two sources give the same pair of passages, the link is one link. A quotation link takes priority over an echo link.
+- A link shows at its two ends. Example: Hebrews 9:20 shows the link to Exodus 24:8, and Exodus 24:8 shows the link to Hebrews 9:20.
+- The OpenBible.info set is very large. The site shows only its strongest links, so that the text is not full of marks. Arthur approves the limit in Task 7.
 - Quotation links have a strong mark. Echo links have a light mark. The reader can switch echo links off.
 - Select a mark: a pop-up shows the reference and the text of the linked passage.
 - The pop-up for a quotation link also shows a reason line: one line that says why the linked passage matters here. The pop-up for an echo link has no reason line in version 1. Reason: the reason line is interpretation, and each reason line must be checked.
@@ -123,6 +134,7 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 - "Go there" is travel. The current book closes, the linked book comes onto the table, and it opens at the linked passage. The move must show that the reader crossed the Bible.
 - The trail is always on screen after the first travel. Each stop is a control. Select a stop to go back to it in one step.
 - Reason: existing apps show only the reference. A new reader does not know the linked passage, so the reference means little. Example: Hebrews 9 is hard to read without Leviticus 16, Exodus 24, and Numbers 19.
+- Known result of the sources rule: the quotation data links Hebrews 9 to Exodus 24:8 and Isaiah 53:12. A link from Hebrews 9 to Leviticus 16 or Numbers 19 can be an echo link only, and only if the cross-reference data has it.
 
 ### 4.6 Timeline
 

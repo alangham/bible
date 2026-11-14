@@ -61,7 +61,8 @@ Do the four parts in this order.
 Part 1. All links, by machine. Coverage: each link.
 
 1. Run the link check script in `scripts/`. If the script does not exist, report this as a problem.
-2. The script must confirm for each link: the two ends exist, no link to itself, no duplicate, the type is set.
+2. The script must confirm for each link: the two ends exist, no link to itself, no duplicate, the type is set, and the source is one of the three approved sources in section 4.5 of `docs/DESIGN.md`.
+3. Take 50 links at random. Find each one in the source that it names. Report a link that is not in its source. No person and no agent adds a link by hand.
 
 Part 2. Quotation links. Coverage: each quotation link on the first run. On a later run, each quotation link that changed.
 

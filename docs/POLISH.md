@@ -1,5 +1,7 @@
 # Bible site: design fixes
 
+Design work is paused from 2026-11-14. Arthur plans a redesign. Do not do or propose more design fixes until he says so.
+
 This file is the list of design problems to correct later. Arthur or the designer adds an item. Claude Code can add an item with the status `PROPOSED`. Claude Code does an item only when its status is `APPROVED`. Task 10 in `docs/TASKS.md` uses this file.
 
 Status values: `PROPOSED`, `APPROVED`, `DONE`, `REJECTED`.
@@ -22,11 +24,11 @@ Correction: measure the contrast from the rendered pixels. Change the light or t
 
 ## 2. The shadows have hard edges
 
-Status: APPROVED
+Status: DONE
+
+Done on 2026-11-14 in commit 906b5c3: the shadows have soft edges, from a variance shadow map with a blur. The blur is the same at each distance from the stack. Arthur accepted this as done on 2026-11-14.
 
 Approved by Arthur on 2026-11-14.
-
-Part done on 2026-11-14 in commit 906b5c3: the shadows have soft edges, from a variance shadow map with a blur. The blur is the same at each distance from the stack. The correction asks for more blur at a larger distance, so the item stays APPROVED until Arthur decides.
 
 Page: table. Seen in `docs/screenshots/task-2-table.png` on 2026-11-13.
 

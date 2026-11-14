@@ -15,6 +15,7 @@ import { CoverFact } from './CoverFact.tsx'
 import { COVER_LABEL_FONT, COVER_TITLE_FONT, coverInk } from './coverTexture.ts'
 import { CoverScene } from './CoverScene.tsx'
 import { clearHandoff, peekHandoff } from './handoff.ts'
+import { plainClick } from './links.ts'
 
 interface CoverPageProps {
   book: Book
@@ -84,16 +85,34 @@ export function CoverPage({ book, intro }: CoverPageProps) {
     setLanded(true)
   }, [])
   const onLanded = useCallback(() => setLanded(true), [])
+  // "Open the book": the front board opens in 3D, then the spread shows chapter 1.
+  // With reduced motion or without WebGL, the link goes to the spread at once, and the spread fades in.
+  const [opening, setOpening] = useState(false)
+  const onOpened = useCallback(() => {
+    window.location.hash = chapterHref(book.id, 1)
+  }, [book.id])
+  // If the 3D scene fails while the book opens, go to the spread at once.
+  useEffect(() => {
+    if (opening && !webgl) onOpened()
+  }, [opening, webgl, onOpened])
 
   const mode = webgl ? '3d' : 'flat'
   const chapters = Array.from({ length: book.chapters }, (_, i) => i + 1)
   const bookStyle = { '--cloth': group.cloth, '--cover-ink': coverInk(group) } as CSSProperties
 
   return (
-    <main className="cover-page" data-mode={mode} data-landed={landed}>
+    <main className="cover-page" data-mode={mode} data-landed={landed} data-opening={opening}>
       {webgl && fontsReady && stage && (
         <SceneBoundary onError={onSceneError}>
-          <CoverScene book={book} center={stage.center} coverPx={stage.coverPx} start={start} onLanded={onLanded} />
+          <CoverScene
+            book={book}
+            center={stage.center}
+            coverPx={stage.coverPx}
+            start={start}
+            onLanded={onLanded}
+            opening={opening}
+            onOpened={onOpened}
+          />
         </SceneBoundary>
       )}
       <div className="cover-inner">
@@ -117,7 +136,16 @@ export function CoverPage({ book, intro }: CoverPageProps) {
           </div>
         </div>
 
-        <a className="open-book" href={chapterHref(book.id, 1)}>
+        <a
+          className="open-book"
+          href={chapterHref(book.id, 1)}
+          onClick={(e) => {
+            if (plainClick(e) && webgl && fontsReady && stage && landed && !reducedMotion) {
+              e.preventDefault()
+              setOpening(true)
+            }
+          }}
+        >
           Open the book
         </a>
 

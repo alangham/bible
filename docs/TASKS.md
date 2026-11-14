@@ -250,7 +250,7 @@ Stop and report. This task is small. Arthur can tell you to continue with Task 5
 
 ## Task 5. Spread page with the bundled text
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

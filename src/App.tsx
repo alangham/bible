@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { BookNotFound } from './book/BookNotFound.tsx'
 import { CoverPage } from './book/CoverPage.tsx'
-import { SpreadPlaceholder } from './book/SpreadPlaceholder.tsx'
+import { SpreadPage } from './book/SpreadPage.tsx'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
 import { useRoute } from './router.ts'
@@ -42,7 +42,9 @@ function App() {
     // The key gives each book a new cover page, so that the landing runs again.
     page = book ? <CoverPage key={book.id} book={book} intro={intro} /> : <BookNotFound />
   } else if (route.page === 'spread') {
-    page = <SpreadPlaceholder book={books.find((b) => b.id === route.id)} chapter={route.chapter} />
+    const book = books.find((b) => b.id === route.id)
+    // The key keeps one spread page while the chapter changes, so that a page can turn.
+    page = book ? <SpreadPage key={book.id} book={book} chapter={route.chapter} layout={layout} /> : <BookNotFound />
   } else {
     page = <TablePage books={books} />
   }

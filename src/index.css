@@ -571,6 +571,415 @@ a {
   background: var(--linen-light);
 }
 
+/* ---- Spread: mockup D3, docs/DESIGN.md sections 4.3 and 4.4 ---- */
+
+.spread-page {
+  box-sizing: border-box;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 24px 24px;
+}
+
+.spread-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.spread-bar a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 6px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.spread-bar a:hover {
+  text-decoration: underline;
+}
+
+.spread-bar-turns {
+  display: flex;
+  gap: 18px;
+}
+
+.spread-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 18px;
+}
+
+.spread-book {
+  position: relative;
+  width: min(calc(100vw - 72px), calc((100svh - 110px) * 1.6), 1500px);
+  aspect-ratio: 1.6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: opacity 180ms ease;
+}
+
+/* The boards of the cover under the pages, and the shadow of the book on the table. */
+.spread-book::before {
+  content: '';
+  position: absolute;
+  inset: -1.6% -1.2% -2.6%;
+  border-radius: 7px;
+  background: var(--board);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+    16px 26px 46px rgba(60, 38, 10, 0.38);
+}
+
+/* The edges of the stacked pages below the open pages. */
+.spread-book::after {
+  content: '';
+  position: absolute;
+  left: 0.4%;
+  right: 0.4%;
+  bottom: -1.3%;
+  height: 1.3%;
+  background: repeating-linear-gradient(0deg, #f1e8d4 0 1px, #d6c8aa 1px 2px);
+  border-radius: 0 0 4px 4px;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #efe6d2;
+}
+
+.page-left {
+  border-radius: 5px 0 0 5px;
+}
+
+.page-right {
+  border-radius: 0 5px 5px 0;
+}
+
+/* The grain of the paper, over the scene. */
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* The shade of the paper at the spine. The same values as GUTTER in src/book/turn/pageImage.ts. */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.page-left::after {
+  background: linear-gradient(to left, rgba(40, 25, 10, 0.2), rgba(40, 25, 10, 0) 6%);
+}
+
+.page-right::after {
+  background: linear-gradient(to right, rgba(40, 25, 10, 0.2), rgba(40, 25, 10, 0) 6%);
+}
+
+/* The scene: one picture across the two pages. Each page shows its half. */
+.scene {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200%;
+  z-index: 1;
+}
+
+.scene[data-half='left'] {
+  left: 0;
+}
+
+.scene[data-half='right'] {
+  left: -100%;
+}
+
+.scene-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  will-change: transform;
+}
+
+/* Each paper layer casts a shadow on the layers behind it. The sun is at the top left. */
+.scene-layer-1,
+.scene-layer-2,
+.scene-layer-3 {
+  filter: drop-shadow(3.5px 6px 5px rgba(20, 12, 4, 0.25));
+}
+
+/*
+  The text column on the right page, on a veil. src/scene/values.ts sets the ink and the
+  veil from the scene, so that the text has a contrast of 4.5 to 1 or more.
+*/
+.spread-text {
+  position: absolute;
+  z-index: 3;
+  top: 6%;
+  bottom: 7%;
+  left: 9%;
+  right: 11%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 24px 28px 28px;
+  border-radius: 10px;
+  color: var(--ink);
+  background: var(--veil-color);
+  box-shadow: 0 0 20px 8px var(--veil-edge);
+  font-size: 17px;
+  line-height: 1.6;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) transparent;
+}
+
+.spread-ghost {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spread-header {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--ink);
+  text-align: center;
+}
+
+.spread-header h1,
+.spread-title-ghost {
+  margin: 0;
+  font-weight: normal;
+}
+
+.spread-book-name {
+  display: block;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.spread-chapter {
+  display: block;
+  font-family: var(--title-font);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.spread-count {
+  margin: 0;
+  font-size: 14px;
+}
+
+.chapter-body p {
+  margin: 0 0 0.7em;
+}
+
+.chapter-body .sh-s1 {
+  margin: 1.1em 0 0.4em;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.chapter-body .sh-s2 {
+  margin: 0.9em 0 0.3em;
+  font-size: 17px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.chapter-body .sh-ms {
+  margin: 0.6em 0 0;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.chapter-body .sh-d {
+  margin: 0 0 0.6em;
+  font-style: italic;
+  text-align: center;
+}
+
+.chapter-body .sh-qa {
+  display: inline-block;
+  margin: 0.8em 0.5em 0.2em 0;
+  font-weight: 600;
+}
+
+.chapter-body .tb-p {
+  text-indent: 1.2em;
+}
+
+.chapter-body .tb-q1,
+.chapter-body .tb-q2,
+.chapter-body .tb-li1,
+.chapter-body .tb-li2 {
+  margin: 0;
+  text-indent: -1.2em;
+}
+
+.chapter-body .tb-q1 {
+  padding-left: 2.2em;
+}
+
+.chapter-body .tb-q2 {
+  padding-left: 3.4em;
+}
+
+.chapter-body .tb-li1 {
+  padding-left: 1.8em;
+}
+
+.chapter-body .tb-li2 {
+  padding-left: 3em;
+}
+
+.chapter-body .tb-pmo {
+  padding-left: 1.4em;
+}
+
+.chapter-body .tb-pc {
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.chapter-body .tb-qr,
+.chapter-body .tb-qd {
+  font-style: italic;
+  text-align: right;
+}
+
+.chapter-body .tb-d {
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+.chapter-body .stanza-break {
+  height: 0.7em;
+}
+
+.vn {
+  margin-right: 0.15em;
+  font-size: 0.62em;
+  font-weight: 600;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.chapter-body .vn:not(:first-child) {
+  margin-left: 0.2em;
+}
+
+/* The notes about manuscripts: the passage notes, and the verses that are not in the main text. */
+.ms-note,
+.omitted {
+  display: block;
+  margin: 0.5em 0 0.9em;
+  padding: 0.35em 0 0.35em 0.8em;
+  border-left: 3px solid currentColor;
+  font-size: 15px;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+.note-verse {
+  margin-right: 0.15em;
+  font-size: 0.7em;
+}
+
+/* The corners that the reader can drag. They lie outside the text column. */
+.page-corner {
+  position: absolute;
+  z-index: 5;
+  width: 5%;
+  height: 13%;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.page-corner[data-corner='br'] {
+  right: 0;
+  bottom: 0;
+}
+
+.page-corner[data-corner='tr'] {
+  right: 0;
+  top: 0;
+}
+
+.page-corner[data-corner='bl'] {
+  left: 0;
+  bottom: 0;
+}
+
+.page-corner[data-corner='tl'] {
+  left: 0;
+  top: 0;
+}
+
+.page-corner[data-corner='br']:hover {
+  background: linear-gradient(135deg, transparent 72%, rgba(40, 25, 10, 0.12) 72%, #f3ead6 82%);
+}
+
+.page-corner[data-corner='bl']:hover {
+  background: linear-gradient(225deg, transparent 72%, rgba(40, 25, 10, 0.12) 72%, #f3ead6 82%);
+}
+
+/* The 3D leaf. The canvas reaches past the book, so that the curl can rise above it. */
+.turn-layer {
+  position: absolute;
+  z-index: 6;
+  left: -4%;
+  right: -4%;
+  top: calc(var(--turn-margin) * -100%);
+  bottom: calc(var(--turn-margin) * -100%);
+  pointer-events: none;
+}
+
+.spread-page[data-fade='out'] .spread-book {
+  opacity: 0;
+}
+
+.spread-page[data-fade='in'] .spread-book {
+  animation: spread-in 180ms ease both;
+}
+
+@keyframes spread-in {
+  from {
+    opacity: 0;
+  }
+}
+
 /* ---- Other pages ---- */
 
 .message,
@@ -644,4 +1053,61 @@ a {
 .app[data-layout='narrow'] .facts {
   grid-template-columns: 1fr;
   gap: 18px;
+}
+
+/* The spread in the narrow layout: the right page only, with the text. Task 9 builds the phone layout. */
+.app[data-layout='narrow'] .spread-page {
+  padding: 4px 8px 16px;
+}
+
+.app[data-layout='narrow'] .spread-book {
+  width: calc(100vw - 24px);
+  aspect-ratio: 0.72;
+  grid-template-columns: 1fr;
+}
+
+.app[data-layout='narrow'] .page-left,
+.app[data-layout='narrow'] .page-corner {
+  display: none;
+}
+
+.app[data-layout='narrow'] .page-right {
+  border-radius: 5px;
+}
+
+.app[data-layout='narrow'] .spread-text {
+  left: 6%;
+  right: 6%;
+  padding: 16px 18px 20px;
+}
+
+/* While the book opens, the text below it fades. */
+.cover-page[data-opening='true'] .open-book,
+.cover-page[data-opening='true'] .cover-facts,
+.cover-page[data-opening='true'] .chapter-list,
+.cover-page[data-opening='true'] .cover-bar {
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+/* Text for screen readers only. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* A chapter link at the first or the last chapter: it stays in place, without a target. */
+.spread-bar a[aria-disabled='true'] {
+  color: var(--ink-secondary);
+  cursor: default;
+  text-decoration: none;
+  opacity: 0.6;
 }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { bookHref, parseRoute } from './router.ts'
+import { bookHref, chapterHref, parseRoute } from './router.ts'
 
 describe('parseRoute', () => {
   it('gives the table for an empty hash', () => {
@@ -13,5 +13,14 @@ describe('parseRoute', () => {
 
   it('reads back the href of a spine', () => {
     expect(parseRoute(bookHref('song-of-solomon'))).toEqual({ page: 'book', id: 'song-of-solomon' })
+  })
+
+  it('gives a spread for #/book/<id>/<chapter>', () => {
+    expect(parseRoute('#/book/psalms/119')).toEqual({ page: 'spread', id: 'psalms', chapter: 119 })
+    expect(parseRoute(chapterHref('1-john', 5))).toEqual({ page: 'spread', id: '1-john', chapter: 5 })
+  })
+
+  it('does not accept chapter 0', () => {
+    expect(parseRoute('#/book/genesis/0')).toEqual({ page: 'table' })
   })
 })

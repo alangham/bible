@@ -1,6 +1,9 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { BookPlaceholder } from './book/BookPlaceholder.tsx'
+import { BookNotFound } from './book/BookNotFound.tsx'
+import { CoverPage } from './book/CoverPage.tsx'
+import { SpreadPlaceholder } from './book/SpreadPlaceholder.tsx'
 import { loadBooks, type Book } from './data/books.ts'
+import { loadIntros, type Intro } from './data/intros.ts'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
 import { TablePage } from './table/TablePage.tsx'
@@ -11,9 +14,12 @@ function App() {
   const layout = useScreenLayout()
   const [books, setBooks] = useState<Book[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  // Undefined while loading. Null if the file did not load: the cover shows a message.
+  const [intros, setIntros] = useState<Intro[] | null | undefined>(undefined)
 
   useEffect(() => {
     loadBooks().then(setBooks, (e: unknown) => setError(String(e)))
+    loadIntros().then(setIntros, () => setIntros(null))
   }, [])
 
   let page: ReactNode
@@ -31,7 +37,12 @@ function App() {
       </main>
     )
   } else if (route.page === 'book') {
-    page = <BookPlaceholder book={books.find((b) => b.id === route.id)} />
+    const book = books.find((b) => b.id === route.id)
+    const intro = intros === undefined || intros === null ? intros : (intros.find((i) => i.id === route.id) ?? null)
+    // The key gives each book a new cover page, so that the landing runs again.
+    page = book ? <CoverPage key={book.id} book={book} intro={intro} /> : <BookNotFound />
+  } else if (route.page === 'spread') {
+    page = <SpreadPlaceholder book={books.find((b) => b.id === route.id)} chapter={route.chapter} />
   } else {
     page = <TablePage books={books} />
   }

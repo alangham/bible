@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import { coverInk } from '../book/coverTexture.ts'
 import { GROUPS, spineThickness, type Book } from '../data/books.ts'
+import { contrastRatio } from '../data/contrast.ts'
 import { layoutTable, PX, STACK_GAP, STACK_WIDTH } from './layout.ts'
 
 const books = JSON.parse(
@@ -43,19 +45,11 @@ describe('layoutTable', () => {
 })
 
 describe('group colors', () => {
-  // WCAG 2 relative luminance and contrast ratio.
-  const luminance = (hex: string) => {
-    const [r, g, b] = [1, 3, 5]
-      .map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
-      .map((v) => (v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4))
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
-  }
-  const contrast = (a: string, b: string) => {
-    const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x)
-    return (hi + 0.05) / (lo + 0.05)
-  }
-
   it.each(GROUPS.map((g) => [g.name, g] as const))('%s spine text has a contrast of 4.5 to 1 or more', (_, g) => {
-    expect(contrast(g.cloth, g.text)).toBeGreaterThanOrEqual(4.5)
+    expect(contrastRatio(g.cloth, g.text)).toBeGreaterThanOrEqual(4.5)
+  })
+
+  it.each(GROUPS.map((g) => [g.name, g] as const))('%s cover text has a contrast of 4.5 to 1 or more', (_, g) => {
+    expect(contrastRatio(g.cloth, coverInk(g))).toBeGreaterThanOrEqual(4.5)
   })
 })

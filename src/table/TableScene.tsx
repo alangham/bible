@@ -17,16 +17,19 @@ export interface Rect {
   height: number
 }
 
-/** Screen rectangles of a spine face: at rest in the stack, and slid out. */
+/** Screen rectangles of a spine face: at rest in the stack, slid out, and at the end of the move to the cover. */
 export interface SpineRect {
   id: string
   rest: Rect
   out: Rect
+  leave: Rect
 }
 
 interface TableSceneProps {
   layout: TableLayout
   hoveredId: string | null
+  /** The spine that leaves the stack for the cover page. */
+  leavingId: string | null
   dimmedIds: ReadonlySet<string>
   reducedMotion: boolean
   onRects: (rects: SpineRect[]) => void
@@ -34,6 +37,9 @@ interface TableSceneProps {
 
 /** How far a spine slides out toward the reader on hover or focus. */
 const SLIDE = 40 * PX
+/** The move of the selected spine before the cover page opens. docs/TASKS.md Task 4 step 7. */
+const LEAVE_SLIDE = 130 * PX
+const LEAVE_LIFT = 30 * PX
 /**
  * A dimmed spine is mixed with the linen color. Mockup D1 shows a dimmed
  * spine at opacity 0.18, which is 82 % linen. An opaque mix does not show the
@@ -43,7 +49,7 @@ const DIM_MIX = 0.82
 const LINEN = new Color('#E7DCC6')
 const PAPER = '#EFE6D2'
 
-export function TableScene({ layout, hoveredId, dimmedIds, reducedMotion, onRects }: TableSceneProps) {
+export function TableScene({ layout, hoveredId, leavingId, dimmedIds, reducedMotion, onRects }: TableSceneProps) {
   return (
     <Canvas
       className="table-canvas"
@@ -81,6 +87,7 @@ export function TableScene({ layout, hoveredId, dimmedIds, reducedMotion, onRect
           key={box.book.id}
           box={box}
           hovered={hoveredId === box.book.id}
+          leaving={leavingId === box.book.id}
           dimmed={dimmedIds.has(box.book.id)}
           reducedMotion={reducedMotion}
         />
@@ -93,11 +100,12 @@ export function TableScene({ layout, hoveredId, dimmedIds, reducedMotion, onRect
 interface SpineProps {
   box: SpineBox
   hovered: boolean
+  leaving: boolean
   dimmed: boolean
   reducedMotion: boolean
 }
 
-function Spine({ box, hovered, dimmed, reducedMotion }: SpineProps) {
+function Spine({ box, hovered, leaving, dimmed, reducedMotion }: SpineProps) {
   const mesh = useRef<Mesh>(null)
   const mix = useRef(0)
   const group = groupOf(box.book)
@@ -126,8 +134,9 @@ function Spine({ box, hovered, dimmed, reducedMotion }: SpineProps) {
     const m = mesh.current
     if (!m) return
     // Reduced motion: the spine does not move. The page fades in a ring instead.
-    const slide = hovered && !reducedMotion ? SLIDE : 0
+    const slide = leaving ? LEAVE_SLIDE : hovered && !reducedMotion ? SLIDE : 0
     m.position.z = MathUtils.damp(m.position.z, box.z + slide, 14, delta)
+    m.position.y = MathUtils.damp(m.position.y, box.y + (leaving ? LEAVE_LIFT : 0), 14, delta)
     // Dimming is a fade, so it runs with reduced motion also.
     mix.current = MathUtils.damp(mix.current, dimmed ? DIM_MIX : 0, 10, delta)
     // The React compiler rule does not know that useFrame runs outside render.
@@ -184,7 +193,7 @@ function FitAndProject({ layout, onRects }: { layout: TableLayout; onRects: (rec
     camera.updateMatrixWorld()
 
     const corner = new Vector3()
-    const faceRect = (box: SpineBox, z: number): Rect => {
+    const faceRect = (box: SpineBox, z: number, lift = 0): Rect => {
       let minX = Infinity
       let minY = Infinity
       let maxX = -Infinity
@@ -192,7 +201,7 @@ function FitAndProject({ layout, onRects }: { layout: TableLayout; onRects: (rec
       for (const dx of [-1, 1]) {
         for (const dy of [-1, 1]) {
           corner
-            .set(box.x + (dx * box.width) / 2, box.y + (dy * box.thickness) / 2, z + box.depth / 2)
+            .set(box.x + (dx * box.width) / 2, box.y + lift + (dy * box.thickness) / 2, z + box.depth / 2)
             .project(camera)
           const sx = ((corner.x + 1) / 2) * size.width
           const sy = ((1 - corner.y) / 2) * size.height
@@ -209,6 +218,7 @@ function FitAndProject({ layout, onRects }: { layout: TableLayout; onRects: (rec
         id: box.book.id,
         rest: faceRect(box, box.z),
         out: faceRect(box, box.z + SLIDE),
+        leave: faceRect(box, box.z + LEAVE_SLIDE, LEAVE_LIFT),
       })),
     )
   }, [camera, size, layout, onRects])

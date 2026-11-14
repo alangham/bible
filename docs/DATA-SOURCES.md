@@ -120,7 +120,7 @@ The design names these two fonts in `docs/DESIGN.md` section 3. The site bundles
 
 | Font | Package | Licence | Licence file |
 |---|---|---|---|
-| Cormorant Garamond, weight 700 | `@fontsource/cormorant-garamond` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/cormorant-garamond/LICENSE` |
+| Cormorant Garamond, weight 700, and weight 600 italic for the cover title (Task 4) | `@fontsource/cormorant-garamond` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/cormorant-garamond/LICENSE` |
 | Newsreader, weights 400 and 600 | `@fontsource/newsreader` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/newsreader/LICENSE` |
 
 - Copyright lines in the licence files: "Copyright 2015 The Cormorant Project Authors" and "Copyright 2020 The Newsreader Project Authors". Read on 2026-11-13.
@@ -129,3 +129,17 @@ The design names these two fonts in `docs/DESIGN.md` section 3. The site bundles
   2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
   3. A changed font must not use a Reserved Font Name. The site does not change the fonts.
 - Open: I did not check that the `.woff2` files in `dist/assets/` keep the copyright and licence in their metadata. If they do not, the "Sources" page of Task 6 must show the notice and the licence.
+
+## 7. Code libraries with a licence that is not open source
+
+| Library | Package | Licence | Read |
+|---|---|---|---|
+| GSAP, for transition timing (CLAUDE.md, Stack) | `gsap` 3.15.1, added in Task 4 | GSAP Standard "no charge" licence, https://gsap.com/standard-license | 2026-11-13 |
+
+- The licence permits use on any website at no charge, commercial use included.
+- It does not require a credit. It forbids the removal of the notices in the GSAP files.
+- It forbids use of GSAP in a visual tool that competes with the Webflow animation builder. The site is not such a tool.
+
+## 8. Content sources
+
+The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthur approved them in Task 4.

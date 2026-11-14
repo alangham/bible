@@ -1,12 +1,9 @@
-// Placeholder for the route `#/book/<id>`. Task 4 replaces it with the cover page.
+// The page for a book id that is not in books.json.
 
-import type { Book } from '../data/books.ts'
-
-export function BookPlaceholder({ book }: { book: Book | undefined }) {
+export function BookNotFound() {
   return (
     <main className="book-placeholder">
-      <h1>{book ? book.name : 'Book not found'}</h1>
-      {book && <p>The cover page for this book is not built yet.</p>}
+      <h1>Book not found</h1>
       <p>
         <a href="#/">Back to the table</a>
       </p>

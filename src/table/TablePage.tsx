@@ -4,7 +4,9 @@
 // over the spine on screen, so that keyboard and screen reader users can use it.
 // Without WebGL, the `a` elements show as flat spines.
 
-import { useCallback, useEffect, useMemo, useState, type CSSProperties } from 'react'
+import gsap from 'gsap'
+import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import { clearHandoff, setHandoff } from '../book/handoff.ts'
 import { groupOf, spineThickness, type Book, type GroupName } from '../data/books.ts'
 import { bookHref } from '../router.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
@@ -16,14 +18,18 @@ import { TableScene, type SpineRect } from './TableScene.tsx'
 import { hasWebGL } from './webgl.ts'
 
 const STACKS = [1, 2, 3, 4, 5]
+/** Duration of the move of the selected spine before the cover page opens. */
+const LEAVE_S = 0.35
 
 export function TablePage({ books }: { books: Book[] }) {
   const [picked, setPicked] = useState<GroupName | null>(null)
   const [hoveredId, setHoveredId] = useState<string | null>(null)
+  const [leavingId, setLeavingId] = useState<string | null>(null)
   const [rects, setRects] = useState<Map<string, SpineRect> | null>(null)
   const [webgl, setWebgl] = useState(hasWebGL)
   const [fontsReady, setFontsReady] = useState(false)
   const reducedMotion = useReducedMotion()
+  const leaveCall = useRef<gsap.core.Tween | null>(null)
   const layout = useMemo(() => layoutTable(books), [books])
 
   // The spine textures need the font before they are drawn.
@@ -38,6 +44,17 @@ export function TablePage({ books }: { books: Book[] }) {
     }
   }, [])
 
+  // If the reader leaves the table during the move, the cover does not open.
+  useEffect(
+    () => () => {
+      if (leaveCall.current?.isActive()) {
+        leaveCall.current.kill()
+        clearHandoff()
+      }
+    },
+    [],
+  )
+
   const dimmedIds = useMemo(
     () => new Set(books.filter((b) => picked !== null && b.group !== picked).map((b) => b.id)),
     [books, picked],
@@ -47,6 +64,32 @@ export function TablePage({ books }: { books: Book[] }) {
 
   const mode = webgl ? '3d' : 'flat'
   const ready = !webgl || rects !== null
+
+  // docs/TASKS.md Task 4 step 7: the selected spine slides out, then the cover
+  // page opens and the book lands there. Without 3D or with reduced motion,
+  // or with a modifier key, the link works as a plain link.
+  const onSpineClick = (event: MouseEvent<HTMLAnchorElement>, book: Book) => {
+    const rect = rects?.get(book.id)
+    if (mode !== '3d' || reducedMotion || !rect) return
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    if (leavingId) return
+    const link = event.currentTarget.getBoundingClientRect()
+    setHandoff({
+      id: book.id,
+      rect: {
+        left: link.left + rect.leave.left - rect.rest.left,
+        top: link.top + rect.leave.top - rect.rest.top,
+        width: rect.leave.width,
+        height: rect.leave.height,
+      },
+      at: performance.now(),
+    })
+    setLeavingId(book.id)
+    leaveCall.current = gsap.delayedCall(LEAVE_S, () => {
+      window.location.hash = bookHref(book.id)
+    })
+  }
 
   return (
     <main className="table-page">
@@ -61,6 +104,7 @@ export function TablePage({ books }: { books: Book[] }) {
             <TableScene
               layout={layout}
               hoveredId={hoveredId}
+              leavingId={leavingId}
               dimmedIds={dimmedIds}
               reducedMotion={reducedMotion}
               onRects={onRects}
@@ -81,6 +125,7 @@ export function TablePage({ books }: { books: Book[] }) {
                       data-group={book.group}
                       data-dimmed={dimmedIds.has(book.id)}
                       style={spineStyle(book, books.indexOf(book), mode, rects?.get(book.id), hoveredId === book.id && !reducedMotion)}
+                      onClick={(event) => onSpineClick(event, book)}
                       onMouseEnter={() => setHoveredId(book.id)}
                       onMouseLeave={() => setHoveredId((id) => (id === book.id ? null : id))}
                       onFocus={() => setHoveredId(book.id)}

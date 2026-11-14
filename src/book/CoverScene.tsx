@@ -1,0 +1,199 @@
+// The 3D part of the cover page: the closed book on the linen table.
+// Mockup D2, docs/DESIGN.md section 4.2.
+//
+// The book comes from the table: it starts where the spine left the stack,
+// turns from its spine to its front, and lands on the table.
+// docs/TASKS.md Task 4 step 7.
+
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
+import gsap from 'gsap'
+import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
+import {
+  MathUtils,
+  Mesh,
+  MeshBasicMaterial,
+  MeshStandardMaterial,
+  PerspectiveCamera,
+  Plane,
+  Raycaster,
+  Vector2,
+  Vector3,
+} from 'three'
+import { groupOf, spineThickness, type Book } from '../data/books.ts'
+import { BOOK_DEPTH, PX, STACK_WIDTH } from '../table/layout.ts'
+import { makeSpineTexture } from '../table/spineTexture.ts'
+import type { Rect } from '../table/TableScene.tsx'
+import { makeCoverTexture } from './coverTexture.ts'
+
+/** The book is the same size as its spine on the table. */
+const COVER_WIDTH = BOOK_DEPTH
+const COVER_HEIGHT = STACK_WIDTH
+const PAPER = '#EFE6D2'
+
+/** Camera tilt down to the table. Mockup D2 shows the cover at about rotateX(26deg). */
+const PITCH = MathUtils.degToRad(64)
+/** The book lies at an angle. Mockup D2: rotateZ(-11deg). */
+const REST_YAW = MathUtils.degToRad(11)
+/** At the start the spine faces the reader at the 22° view of the table. */
+const START_TILT = -(PITCH - MathUtils.degToRad(22))
+/** Duration of the landing, in seconds. */
+const LAND_S = 0.9
+
+export interface CoverSceneProps {
+  book: Book
+  /** Center of the book on the page, in px from the top left of the canvas. */
+  center: { x: number; y: number }
+  /** Height of the cover on screen, in px. */
+  coverPx: number
+  /** The spine at the end of its move on the table, in viewport px. Null: no landing. */
+  start: Rect | null
+  onLanded: () => void
+}
+
+export function CoverScene(props: CoverSceneProps) {
+  return (
+    <Canvas
+      className="cover-canvas"
+      shadows
+      flat
+      dpr={[1, 2]}
+      gl={{ alpha: true, antialias: true }}
+      camera={{ fov: 26, near: 0.1, far: 200 }}
+      aria-hidden="true"
+    >
+      {/* The same light as the table: ambient PI, and the sun from the top left. */}
+      <ambientLight intensity={Math.PI} />
+      <directionalLight
+        castShadow
+        position={[-5, 16, -3]}
+        intensity={1}
+        shadow-mapSize={[2048, 2048]}
+        shadow-camera-left={-8}
+        shadow-camera-right={8}
+        shadow-camera-top={8}
+        shadow-camera-bottom={-8}
+        shadow-bias={-0.0005}
+      />
+      <mesh receiveShadow rotation-x={-Math.PI / 2}>
+        <planeGeometry args={[80, 80]} />
+        <shadowMaterial color="#543a14" opacity={0.24} transparent />
+      </mesh>
+      <ClosedBook {...props} />
+    </Canvas>
+  )
+}
+
+function ClosedBook({ book, center, coverPx, start, onLanded }: CoverSceneProps) {
+  const mesh = useRef<Mesh>(null)
+  const camera = useThree((s) => s.camera) as PerspectiveCamera
+  const size = useThree((s) => s.size)
+  const invalidate = useThree((s) => s.invalidate)
+  const group = groupOf(book)
+  const thickness = spineThickness(book.chapters) * PX
+  /** 0 at the start pose, 1 at rest. */
+  const progress = useRef({ t: start ? 0 : 1 })
+  const startPose = useRef<{ position: Vector3; scale: number } | null>(null)
+
+  const materials = useMemo(() => {
+    const front = new MeshBasicMaterial({
+      map: makeCoverTexture(book.name, book.chapters, group, COVER_WIDTH / PX, COVER_HEIGHT / PX),
+    })
+    const spine = new MeshStandardMaterial({
+      map: makeSpineTexture(book.name, group, COVER_HEIGHT / PX, thickness / PX),
+      roughness: 0.95,
+    })
+    const cloth = new MeshStandardMaterial({ color: group.cloth, roughness: 0.95 })
+    const paper = new MeshStandardMaterial({ color: PAPER, roughness: 1 })
+    // Box faces in three.js order: +x, -x, +y, -y, +z, -z.
+    // -x is the spine, on the left at rest. +y is the front cover.
+    return { faces: [paper, spine, front, cloth, paper, paper], front, spine, cloth, paper }
+  }, [book.name, book.chapters, group, thickness])
+
+  useEffect(
+    () => () => {
+      materials.front.map?.dispose()
+      materials.spine.map?.dispose()
+      for (const m of [materials.front, materials.spine, materials.cloth, materials.paper]) m.dispose()
+    },
+    [materials],
+  )
+
+  // Camera: the book center is at the world origin. setViewOffset moves the
+  // origin to `center` on the canvas. The distance gives the cover `coverPx` in height.
+  useLayoutEffect(() => {
+    if (size.width === 0 || size.height === 0) return
+    const pxPerUnit = coverPx / COVER_HEIGHT
+    const distance = size.height / (2 * pxPerUnit * Math.tan(MathUtils.degToRad(camera.fov) / 2))
+    camera.position.set(0, Math.sin(PITCH) * distance, Math.cos(PITCH) * distance)
+    camera.lookAt(0, 0, 0)
+    camera.setViewOffset(
+      size.width,
+      size.height,
+      size.width / 2 - center.x,
+      size.height / 2 - center.y,
+      size.width,
+      size.height,
+    )
+    camera.updateProjectionMatrix()
+    camera.updateMatrixWorld()
+
+    // The start pose: where the spine was on screen, at the same size.
+    if (start && !startPose.current) {
+      const ndc = (x: number, y: number) => new Vector2((x / size.width) * 2 - 1, 1 - (y / size.height) * 2)
+      const ray = new Raycaster()
+      const hit = new Vector3()
+      const plane = new Plane(new Vector3(0, 1, 0), -thickness)
+      ray.setFromCamera(ndc(start.left + start.width / 2, start.top + start.height / 2), camera)
+      if (ray.ray.intersectPlane(plane, hit)) {
+        const a = hit.clone().project(camera)
+        const b = hit.clone().add(new Vector3(1, 0, 0)).project(camera)
+        const unitPx = Math.abs(b.x - a.x) * (size.width / 2)
+        startPose.current = { position: hit, scale: unitPx > 0 ? start.width / (COVER_HEIGHT * unitPx) : 1 }
+      }
+    }
+    invalidate()
+  }, [camera, size, center.x, center.y, coverPx, start, thickness, invalidate])
+
+  // GSAP times the landing. useFrame applies it to the mesh.
+  useEffect(() => {
+    if (!start) return
+    const tween = gsap.to(progress.current, {
+      t: 1,
+      duration: LAND_S,
+      ease: 'power2.inOut',
+      onComplete: onLanded,
+    })
+    return () => {
+      tween.kill()
+    }
+  }, [start, onLanded])
+
+  useFrame(() => {
+    const m = mesh.current
+    if (!m) return
+    const t = progress.current.t
+    const from = startPose.current
+    // The React compiler rule does not know that useFrame runs outside render.
+    // Changing three.js objects in useFrame is the documented fiber pattern.
+    /* oxlint-disable react/immutability */
+    if (!from || t >= 1) {
+      m.position.set(0, thickness / 2, 0)
+      m.rotation.set(0, REST_YAW, 0)
+      m.scale.setScalar(1)
+    } else {
+      const rest = new Vector3(0, thickness / 2, 0)
+      m.position.lerpVectors(from.position, rest, t)
+      // A small lift on the way, so the book lands.
+      m.position.y += Math.sin(Math.PI * t) * 0.6
+      m.rotation.set(MathUtils.lerp(START_TILT, 0, t), MathUtils.lerp(Math.PI / 2, REST_YAW, t), 0)
+      m.scale.setScalar(MathUtils.lerp(from.scale, 1, t))
+    }
+    /* oxlint-enable react/immutability */
+  })
+
+  return (
+    <mesh ref={mesh} material={materials.faces} castShadow position={[0, thickness / 2, 0]} rotation={[0, REST_YAW, 0]}>
+      <boxGeometry args={[COVER_WIDTH, thickness, COVER_HEIGHT]} />
+    </mesh>
+  )
+}

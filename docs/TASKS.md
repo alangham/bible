@@ -87,7 +87,7 @@ Stop and report. Give Arthur the address.
 
 ## Task 4. Cover page
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

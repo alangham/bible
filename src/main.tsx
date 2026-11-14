@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import '@fontsource/cormorant-garamond/600-italic.css'
 import '@fontsource/cormorant-garamond/700.css'
 import '@fontsource/newsreader/400.css'
 import '@fontsource/newsreader/600.css'

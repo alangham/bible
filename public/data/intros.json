@@ -1,0 +1,464 @@
+[
+  {
+    "id": "genesis",
+    "author": "Moses, by tradition. Many scholars think several writers and editors produced it long after Moses.",
+    "written": "By tradition, in the time of Moses, for the Israelites he led through the wilderness. Most scholars now date its final shape after the exile in Babylon, perhaps the 5th century BC.",
+    "whatItIs": "A narrative that begins with creation, then tells of the flood and the families of Abraham, Isaac, Jacob, and Joseph. It ends with Joseph's death in Egypt, where Jacob's family now lives.",
+    "review": "draft"
+  },
+  {
+    "id": "exodus",
+    "author": "Moses, by tradition, with some details added later. By the late 1800s, many scholars had given up this view.",
+    "written": "By tradition, in the time of Moses, after Israel left Egypt. Some scholars date its formation to the 5th or 4th century BC.",
+    "whatItIs": "A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.",
+    "review": "draft"
+  },
+  {
+    "id": "leviticus",
+    "author": "Moses, by tradition. Most scholars assign chapters 1 to 26 to two linked schools of priestly writers.",
+    "written": "By tradition, the laws were given at Mount Sinai in the second year after the exodus. Most scholars place the final form of the first five books in the Persian period, 538 to 332 BC.",
+    "whatItIs": "A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.",
+    "review": "draft"
+  },
+  {
+    "id": "numbers",
+    "author": "Moses, by tradition. Some scholars see it as an older text reworked by priestly editors.",
+    "written": "By tradition, in the lifetime of Moses. Most scholars date the present form of the first five books after about 520 BC.",
+    "whatItIs": "A narrative with laws, following Israel through the wilderness from Mount Sinai to the plains of Moab. It takes its name from two counts of the people.",
+    "review": "draft"
+  },
+  {
+    "id": "deuteronomy",
+    "author": "Moses, by tradition, apart from the account of his death. Most scholars reject the view that Moses wrote it.",
+    "written": "By tradition, Moses gave these speeches in Moab, shortly before he died. Most scholars date the book from the 7th to the 5th century BC.",
+    "whatItIs": "Speeches of Moses that retell Israel's journey and restate the law before the people enter Canaan. It ends with the death of Moses.",
+    "review": "draft"
+  },
+  {
+    "id": "joshua",
+    "author": "Joshua, by Jewish tradition, except the last verses. The book itself does not say that he wrote it.",
+    "written": "The date is uncertain. Most scholars agree it was first written at King Josiah's court, late in the 7th century BC.",
+    "whatItIs": "A narrative of how Israel, led by Joshua, takes Canaan and divides the land among the tribes. It ends with Joshua's farewell and death.",
+    "review": "draft"
+  },
+  {
+    "id": "judges",
+    "author": "Samuel, in one older view. The Bible itself names no author.",
+    "written": "Probably no later than the reign of King David, about 1000 BC. Martin Noth dated the larger history that includes it to the 6th century BC.",
+    "whatItIs": "A narrative of Israel after the death of Joshua, when leaders called judges rescued the tribes from enemies. It ends in civil war, in days when Israel had no king.",
+    "review": "draft"
+  },
+  {
+    "id": "ruth",
+    "author": "Samuel, by Jewish tradition. The book itself names no author.",
+    "written": "Not before David became king, about 1010 BC. Many scholars place it in the Persian period, 550 to 330 BC.",
+    "whatItIs": "A narrative about the widow Naomi, Ruth from Moab, and Boaz of Bethlehem. It is set when the judges ruled and ends with the family line of David.",
+    "review": "draft"
+  },
+  {
+    "id": "1-samuel",
+    "author": "Samuel, then Gad and Nathan, in one older view. The authors are not known for certain.",
+    "written": "Probably not long after David's reign ended, about 970 BC. Many scholars think writers of the 6th century BC shaped most of it from older sources.",
+    "whatItIs": "A narrative of Israel's move from judges to kings, told through Samuel, Saul, and the young David. It runs from the birth of Samuel to the death of Saul.",
+    "review": "draft"
+  },
+  {
+    "id": "2-samuel",
+    "author": "Gad and Nathan, in one older view. The authors are not known for certain.",
+    "written": "Probably not long after David's reign ended, about 970 BC. Many scholars think writers of the 6th century BC shaped most of it from older sources.",
+    "whatItIs": "A narrative of the reign of David, first over Judah and then over all Israel. It opens with David's lament for Saul and Jonathan and closes as a plague on Israel ends.",
+    "review": "draft"
+  },
+  {
+    "id": "1-kings",
+    "author": "Jeremiah, by one tradition. The author is not known for certain.",
+    "written": "By tradition, in the 6th century BC, after Jerusalem fell to Babylon. Many scholars see an earlier first edition under King Josiah, late in the 7th century BC.",
+    "whatItIs": "A narrative of Israel and Judah under their kings, from Solomon's anointing to the reign of Ahab's son Ahaziah. It tells of the temple, the split into two kingdoms, and the prophet Elijah.",
+    "review": "draft"
+  },
+  {
+    "id": "2-kings",
+    "author": "Jeremiah, by one tradition, but the author is not known for certain. Many scholars see Kings as the end of a longer history shaped by the ideas of Deuteronomy.",
+    "written": "By tradition, the 6th century BC, after the last event in the book. Some scholars see a first edition in the late 7th century BC.",
+    "whatItIs": "A history of the kings who ruled Israel and Judah after Ahab died, up to the fall of Jerusalem. It ends with King Jehoiachin freed from prison in Babylon.",
+    "review": "draft"
+  },
+  {
+    "id": "1-chronicles",
+    "author": "Ezra, by Jewish tradition, though the book does not name its author. Many scholars doubt that the same writer also wrote the story parts of Ezra and Nehemiah.",
+    "written": "By tradition, after the exile, in the 5th century BC. Some scholars date it between 400 and 250 BC.",
+    "whatItIs": "Family lists from Adam to the tribes of Israel, then a history of the reign of King David. It was written for the Jews who came back from exile.",
+    "review": "draft"
+  },
+  {
+    "id": "2-chronicles",
+    "author": "Ezra, by Jewish tradition, though the book does not name its author. Many scholars doubt that the same writer also wrote the story parts of Ezra and Nehemiah.",
+    "written": "By tradition, after the exile, in the 5th century BC. Some scholars date it between 400 and 250 BC.",
+    "whatItIs": "A history of King Solomon and the kings of Judah, up to the fall of Jerusalem. It ends as Cyrus king of Persia lets the exiles go back to build the temple.",
+    "review": "draft"
+  },
+  {
+    "id": "ezra",
+    "author": "Ezra, by tradition, for most of the book. Some scholars think it grew through several stages of editing.",
+    "written": "The date is not certain, but the events end in the 5th century BC. One scholar dates the final form to the 4th century BC.",
+    "whatItIs": "A history of the Jews who came back from exile in Babylon and rebuilt the temple. It then tells how Ezra the scribe led more exiles home and dealt with marriages to foreign women.",
+    "review": "draft"
+  },
+  {
+    "id": "nehemiah",
+    "author": "Nehemiah, by tradition, at least for the parts told in his own voice. Some scholars doubt that this memoir is his own record.",
+    "written": "By tradition, the 5th century BC, in Jerusalem, after Nehemiah came back from Persia. Some scholars think Ezra and Nehemiah may first have been joined as one book early in the 4th century BC.",
+    "whatItIs": "An account, much of it in Nehemiah's own voice, of how he rebuilt the wall of Jerusalem after the exile. It ends with his reforms of the temple, the Sabbath, and marriage.",
+    "review": "draft"
+  },
+  {
+    "id": "esther",
+    "author": "The author is not known. The writer may have lived at the time of Esther and Mordecai.",
+    "written": "By tradition, the 5th century BC, among the Jews who lived outside Judah. Some scholars date it to the Hellenistic period.",
+    "whatItIs": "A story set at Susa in the reign of King Xerxes of Persia. Esther, a Jewish queen, stops a plan by Haman to destroy the Jews, and the feast of Purim begins.",
+    "review": "draft"
+  },
+  {
+    "id": "job",
+    "author": "The author is not known. Many scholars think the speeches of Elihu were added later by a different writer.",
+    "written": "The date is uncertain, and the story appears to be set in Uz in the age of the patriarchs. Some scholars date the book to the Persian period, about 540 to 330 BC.",
+    "whatItIs": "A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.",
+    "review": "draft"
+  },
+  {
+    "id": "psalms",
+    "author": "Many writers, by tradition, above all David, with Solomon, Moses, and others. Many modern scholars doubt that David wrote the psalms named for him.",
+    "written": "By tradition, over many centuries, from the time of Moses to the time of Ezra. Some scholars think the collection stayed open until the 1st century AD.",
+    "whatItIs": "A collection of 150 songs and prayers in five books, with praise, laments, and thanks. Israel sang them in worship.",
+    "review": "draft"
+  },
+  {
+    "id": "proverbs",
+    "author": "Solomon, by tradition, as author or collector, with sayings also from Agur and Lemuel. One scholar reads the headings with his name as labels, not as claims that he wrote the sayings.",
+    "written": "By tradition, begun under Solomon in the 10th century BC and probably finished under Hezekiah, about 700 BC. Some scholars date chapters 1 to 9 and the final editing to the Persian or Hellenistic period.",
+    "whatItIs": "Short wise sayings and longer poems that teach the way of wisdom. Much is addressed to a son, and it ends with a poem about a wife of noble character.",
+    "review": "draft"
+  },
+  {
+    "id": "ecclesiastes",
+    "author": "Solomon, by tradition. The Teacher calls himself the son of David and king in Jerusalem, but never uses the name Solomon.",
+    "written": "By tradition, in the time of Solomon. Many scholars reject a date before the exile, and some place it between about 450 and 180 BC.",
+    "whatItIs": "Wisdom writing in which the Teacher, a king in Jerusalem, searches for meaning and finds everything futile. It closes by telling the reader to fear God and obey his commands.",
+    "review": "draft"
+  },
+  {
+    "id": "song-of-solomon",
+    "author": "Solomon, by tradition. The first verse names him, but it may be a song made to honor him.",
+    "written": "By tradition, the 10th century BC, in the time of Solomon. Most scholars place it in the 3rd century BC.",
+    "whatItIs": "Love poems, spoken in turn by a young woman and the man she loves. The daughters of Jerusalem listen, and she warns them not to stir up love too soon.",
+    "review": "draft"
+  },
+  {
+    "id": "isaiah",
+    "author": "Isaiah son of Amoz, by tradition. Many scholars hold that later writers added large parts of the book.",
+    "written": "By tradition, the late 8th and early 7th centuries BC, in Judah. Many scholars date chapters 40 to 66 to the exile in Babylon and after.",
+    "whatItIs": "Prophecy about judgment and comfort for Judah and Jerusalem. It speaks of the Assyrian threat, the exile in Babylon, and the return.",
+    "review": "draft"
+  },
+  {
+    "id": "jeremiah",
+    "author": "Jeremiah son of Hilkiah, by tradition, with help from his scribe Baruch. Some scholars think followers and later editors added much to the book.",
+    "written": "By tradition, the late 7th and early 6th centuries BC, in Judah and later in Egypt. Some scholars date the final forms of the book to the Persian period or later.",
+    "whatItIs": "Prophecies of judgment and hope that Jeremiah spoke to Judah and the nations, with stories from his life. It closes with the fall of Jerusalem and the exile.",
+    "review": "draft"
+  },
+  {
+    "id": "lamentations",
+    "author": "Jeremiah, by an old tradition. The book itself does not name him, and most scholars think he did not write it.",
+    "written": "By tradition, soon after Babylon destroyed Jerusalem about 586 BC. One tradition places the writing in a cave outside Jerusalem.",
+    "whatItIs": "Five poems that mourn the fall of Jerusalem and its temple and confess the sin of its people. The last poem is a prayer that God will restore his people.",
+    "review": "draft"
+  },
+  {
+    "id": "ezekiel",
+    "author": "Ezekiel son of Buzi, a priest among the exiles, by tradition. Some scholars think his followers reworked his words over time.",
+    "written": "By tradition, the early 6th century BC, among the Jewish exiles in Babylonia.",
+    "whatItIs": "Prophecy and visions given to the exiles in Babylonia. The book moves from judgment on Jerusalem and the nations to a vision of a new temple and land.",
+    "review": "draft"
+  },
+  {
+    "id": "daniel",
+    "author": "Daniel, by tradition. Some scholars think the visions come from unnamed writers of a later time.",
+    "written": "By tradition, the 6th century BC, during the exile in Babylon. Some scholars date the visions to the 2nd century BC.",
+    "whatItIs": "Stories of Daniel at the court in Babylon, then visions of kingdoms to come and the time of the end. The stories are set under Babylonian and Persian kings.",
+    "review": "draft"
+  },
+  {
+    "id": "hosea",
+    "author": "Hosea son of Beeri, by tradition. Some scholars think later editors shaped the book as we have it.",
+    "written": "By tradition, the 8th century BC, when Hosea spoke to the northern kingdom of Israel before its fall.",
+    "whatItIs": "Prophecy that compares the unfaithfulness of Israel to God with the marriage of Hosea to an unfaithful wife. It closes with a call to return to God.",
+    "review": "draft"
+  },
+  {
+    "id": "joel",
+    "author": "Joel son of Pethuel, by tradition. Some scholars think later writers added to the book.",
+    "written": "Probably in Judah, at a date that is not certain. Proposed dates range from about 800 BC to after the exile in Babylon.",
+    "whatItIs": "Prophecy about a plague of locusts and a call to turn back to God. It looks ahead to a coming day of the LORD and to judgment on the nations.",
+    "review": "draft"
+  },
+  {
+    "id": "amos",
+    "author": "Amos, a herdsman from Tekoa, by tradition. Some scholars now doubt the account of his life in the book.",
+    "written": "By tradition, the 8th century BC, when Uzziah ruled Judah and Jeroboam II ruled Israel. Amos took his message to the northern kingdom.",
+    "whatItIs": "Prophecy of judgment on the nations around Israel and on Israel itself. It ends with a promise that God will restore his people to their land.",
+    "review": "draft"
+  },
+  {
+    "id": "obadiah",
+    "author": "Obadiah, by tradition. Nothing is known about him except his name.",
+    "written": "By tradition, the 6th century BC, soon after Babylon destroyed Jerusalem. Some scholars think the book took shape later, in the 5th and 4th centuries BC.",
+    "whatItIs": "A short prophecy against Edom, which sided with the enemies of Jerusalem. It ends with a promise of rescue on Mount Zion and of a kingdom that belongs to the LORD.",
+    "review": "draft"
+  },
+  {
+    "id": "jonah",
+    "author": "Jonah, by tradition.",
+    "written": "By tradition, the 8th century BC, when Jeroboam II ruled Israel. Most scholars think the book was written long after the time of Jonah.",
+    "whatItIs": "A story about the prophet Jonah, who flees when God sends him to warn Nineveh. When the city repents and God spares it, Jonah is angry.",
+    "review": "draft"
+  },
+  {
+    "id": "micah",
+    "author": "Micah, by tradition. Some scholars think only chapters 1 to 3 go back to him.",
+    "written": "By tradition, the 8th century BC, in Judah, under the kings Jotham, Ahaz, and Hezekiah. Many scholars think the book reached its final form centuries later.",
+    "whatItIs": "Prophecy against the sins of Samaria and Jerusalem, with promises of hope. It ends with trust that God will pardon sin and keep faith with Jacob and Abraham.",
+    "review": "draft"
+  },
+  {
+    "id": "nahum",
+    "author": "The prophet Nahum, by tradition. The book names him as Nahum the Elkoshite.",
+    "written": "By tradition, before Nineveh fell in the late 7th century BC. Scholars have proposed dates from the 7th century BC to the 2nd century BC.",
+    "whatItIs": "A prophecy that Nineveh, the chief city of Assyria, will fall. It tells Judah that this enemy will not invade again.",
+    "review": "draft"
+  },
+  {
+    "id": "habakkuk",
+    "author": "The prophet Habakkuk, by tradition.",
+    "written": "By tradition, the 7th century BC, as the Chaldeans rose to power. Most scholars link it to the reign of King Jehoiakim, about 609 to 597 BC.",
+    "whatItIs": "A dialogue in which the prophet questions the Lord about injustice and hears his answers. It ends with a prayer set for stringed instruments.",
+    "review": "draft"
+  },
+  {
+    "id": "zephaniah",
+    "author": "The prophet Zephaniah, son of Cushi, by tradition.",
+    "written": "By tradition, while Josiah was king of Judah, in the 7th century BC. Some scholars think later editors expanded a core of his sayings during or after the exile.",
+    "whatItIs": "A prophecy about the day of the Lord, with judgment on Judah and on other nations. It ends with a promise to gather and restore the people.",
+    "review": "draft"
+  },
+  {
+    "id": "haggai",
+    "author": "The prophet Haggai, by tradition.",
+    "written": "By tradition, about 520 BC, after the return from exile in Babylon. Some scholars identify the king Darius as Darius II, which puts the book in the late 5th century BC.",
+    "whatItIs": "Dated messages from the second year of King Darius that urge the people to rebuild the house of the Lord. They speak to Zerubbabel the governor, Joshua the high priest, and the people.",
+    "review": "draft"
+  },
+  {
+    "id": "zechariah",
+    "author": "The prophet Zechariah, a priest, by tradition. Most modern scholars think at least two writers produced the book.",
+    "written": "By tradition, from about 520 BC, among the people of Judah after the exile. Most scholars date chapters 9 to 14 to the 5th century BC.",
+    "whatItIs": "Night visions and messages that call the people back to the Lord, then oracles about Jerusalem and the nations. The book opens in the second year of King Darius.",
+    "review": "draft"
+  },
+  {
+    "id": "malachi",
+    "author": "The prophet Malachi, by tradition. Some scholars treat the book as anonymous.",
+    "written": "By tradition, about 460 BC, in the time of Ezra and Nehemiah. Most scholars think the book grew through stages of editing, and date its oldest parts to about 500 BC.",
+    "whatItIs": "A set of disputes between the Lord and Israel about worship, marriage, and offerings. It ends with a call to remember the law of Moses and a promise of Elijah.",
+    "review": "draft"
+  },
+  {
+    "id": "matthew",
+    "author": "The apostle Matthew, a former tax collector, by tradition. Most scholars regard the book as anonymous.",
+    "written": "By tradition, about AD 60, before the fall of Jerusalem.",
+    "whatItIs": "A Gospel account of Jesus from his birth to his death, resurrection, and command to make disciples of all nations. Its writer had Jewish Christians in mind.",
+    "review": "draft"
+  },
+  {
+    "id": "mark",
+    "author": "John Mark, by tradition, who drew on the teaching of Peter. Scholars debate this, and some doubt that anyone named Mark wrote it.",
+    "written": "By tradition, in Rome, in the 50s or 60s AD. Many scholars date it to about AD 70.",
+    "whatItIs": "A Gospel account that begins when John baptizes Jesus and ends with his death and resurrection. It explains Jewish customs for readers who did not know them.",
+    "review": "draft"
+  },
+  {
+    "id": "luke",
+    "author": "Luke, a physician and companion of Paul, by tradition. Late in the 20th century, scholars were about evenly divided on this tradition.",
+    "written": "By tradition, the early 60s AD, before Acts. Most scholars date it to about AD 80 to 90.",
+    "whatItIs": "A Gospel account of Jesus from his birth to his resurrection and his going up to heaven. The writer addresses it to a man named Theophilus.",
+    "review": "draft"
+  },
+  {
+    "id": "john",
+    "author": "The apostle John, by tradition. Most scholars now prefer another author, such as John the Elder.",
+    "written": "By tradition, in Ephesus, late in the 1st century AD.",
+    "whatItIs": "A Gospel account of Jesus that records his signs, his long talks with his disciples, and his death and resurrection. Its stated witness is the unnamed disciple whom Jesus loved.",
+    "review": "draft"
+  },
+  {
+    "id": "acts",
+    "author": "Luke, a physician and companion of Paul, by tradition. Late in the 20th century, scholars were about evenly divided on whether Luke wrote it.",
+    "written": "By tradition, about AD 62, probably in Rome. Most scholars date it to about AD 80 to 90.",
+    "whatItIs": "A history of the early church from the ascension of Jesus to the two years of Paul in Rome. It continues the book of Luke and also addresses Theophilus.",
+    "review": "draft"
+  },
+  {
+    "id": "romans",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, the mid 1st century AD, probably in Corinth.",
+    "whatItIs": "A letter that explains the gospel to Jews and Gentiles and then turns to daily Christian life. Paul wrote it to the believers in Rome before he had visited them.",
+    "review": "draft"
+  },
+  {
+    "id": "1-corinthians",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, the mid 1st century AD, in Ephesus, late in Paul's three years there.",
+    "whatItIs": "A letter to the church in Corinth about divisions, sexual conduct, worship, and the resurrection of the dead. Paul answers news he had heard and a letter the church had sent him.",
+    "review": "draft"
+  },
+  {
+    "id": "2-corinthians",
+    "author": "Paul, by tradition. Scholars discuss whether it joins two or more of his letters.",
+    "written": "By tradition, the mid 1st century AD, in Macedonia.",
+    "whatItIs": "A letter in which Paul defends his work as an apostle and asks for money for poor believers in Judea. He sent it to the Corinthian church and to the believers across Achaia.",
+    "review": "draft"
+  },
+  {
+    "id": "galatians",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, the 1st century AD. Most scholars date it from the late 40s to the early 50s AD.",
+    "whatItIs": "A letter in which Paul argues that Gentile believers do not need circumcision or the law of Moses. He wrote it to the churches of Galatia.",
+    "review": "draft"
+  },
+  {
+    "id": "ephesians",
+    "author": "Paul, by tradition. Many scholars doubt that Paul wrote it.",
+    "written": "By tradition, about AD 62, in Rome, while Paul was in prison. Scholars who doubt Paul wrote it date it to about AD 70 to 80.",
+    "whatItIs": "A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.",
+    "review": "draft"
+  },
+  {
+    "id": "philippians",
+    "author": "Paul, by tradition. Some scholars think it joins parts of more than one of his letters.",
+    "written": "By tradition, about AD 62, while Paul was in prison, probably in Rome.",
+    "whatItIs": "A letter that thanks the church for its gifts and urges unity and joy in the Lord. Paul wrote it to the believers at Philippi while he was in chains.",
+    "review": "draft"
+  },
+  {
+    "id": "colossians",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, the mid 1st century AD, while Paul was in prison, probably in Rome. If Paul did not write it, it may date from the late 1st century AD.",
+    "whatItIs": "A letter that sets Christ above all creation and warns the church against false teaching. It names Paul and Timothy as senders and greets the believers at Colossae.",
+    "review": "draft"
+  },
+  {
+    "id": "1-thessalonians",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, the mid 1st century AD, probably in Corinth.",
+    "whatItIs": "A letter of thanks and encouragement, with teaching on holy living and the coming Day of the Lord. It comes from Paul, Silvanus, and Timothy to the church of the Thessalonians.",
+    "review": "draft"
+  },
+  {
+    "id": "2-thessalonians",
+    "author": "Paul, by tradition. Critical scholars are about evenly divided on whether Paul wrote it.",
+    "written": "By tradition, the mid 1st century AD, probably in Corinth, soon after 1 Thessalonians. Scholars who think it came later date it to about AD 80 to 115.",
+    "whatItIs": "A letter that corrects a mistaken view about the Lord's return and warns against idle living. It names Paul, Silvanus, and Timothy as senders and goes to the church of the Thessalonians.",
+    "review": "draft"
+  },
+  {
+    "id": "1-timothy",
+    "author": "Paul, by tradition. Most scholars now think someone else wrote it after Paul's death.",
+    "written": "By tradition, the 60s AD, between Paul's first and second imprisonments in Rome.",
+    "whatItIs": "A letter of instruction on worship, church leaders, and false teaching. It names Paul as its writer and Timothy, at Ephesus, as its reader.",
+    "review": "draft"
+  },
+  {
+    "id": "2-timothy",
+    "author": "Paul, by tradition. Since the early 1800s, more and more scholars think a follower of Paul wrote it.",
+    "written": "By tradition, the 60s AD, in Rome, while Paul was in prison for a second time.",
+    "whatItIs": "A personal letter that urges Timothy to endure hardship and asks him to come quickly. It names Paul as its writer, a prisoner who expects to die soon.",
+    "review": "draft"
+  },
+  {
+    "id": "titus",
+    "author": "Paul, by tradition. Some scholars think a later writer used his name.",
+    "written": "By tradition, the 60s AD, after Paul was released from his first imprisonment in Rome.",
+    "whatItIs": "A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.",
+    "review": "draft"
+  },
+  {
+    "id": "philemon",
+    "author": "Paul, by tradition.",
+    "written": "By tradition, about AD 62, in Rome, while Paul was a prisoner.",
+    "whatItIs": "A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to receive Onesimus back as a dear brother, not as a slave.",
+    "review": "draft"
+  },
+  {
+    "id": "hebrews",
+    "author": "The letter does not name its author. Paul is one of several proposed authors, and many scholars hold that he did not write it.",
+    "written": "By tradition, before AD 70, probably in Rome. Some scholars date it later, between AD 70 and 100.",
+    "whatItIs": "A long letter of encouragement that presents Jesus as greater than the angels, Moses, and the old priesthood. By tradition, its first readers were Christians who knew the Jewish faith.",
+    "review": "draft"
+  },
+  {
+    "id": "james",
+    "author": "James, the brother of Jesus, by tradition. Many scholars think a later writer used his name.",
+    "written": "By tradition, the 1st century AD, in Jerusalem. Some scholars date it later, from the late 1st to the mid 2nd century AD.",
+    "whatItIs": "A letter of practical teaching on trials, wisdom, speech, wealth, and faith shown by deeds. It is addressed to the twelve tribes of the Dispersion.",
+    "review": "draft"
+  },
+  {
+    "id": "1-peter",
+    "author": "The apostle Peter, by tradition. Most scholars think that later Christians wrote it in his name.",
+    "written": "By tradition, the early 60s AD. The letter sends greetings from the church in Babylon.",
+    "whatItIs": "A letter that encourages Christians to stay hopeful and faithful while they suffer. It is sent to exiles scattered through five regions of Asia Minor.",
+    "review": "draft"
+  },
+  {
+    "id": "2-peter",
+    "author": "The apostle Peter, by tradition. Most scholars think that a follower wrote it in his name.",
+    "written": "By tradition, the mid 60s AD, probably in Rome, shortly before Peter died. Some scholars date it in the 2nd century AD.",
+    "whatItIs": "A farewell letter that warns against false teachers and answers those who mock the promise of the Lord's coming. It calls itself the second letter to its readers.",
+    "review": "draft"
+  },
+  {
+    "id": "1-john",
+    "author": "The apostle John, by tradition. Most modern scholars think the apostle did not write it.",
+    "written": "By tradition, about AD 85, in Ephesus, when John was old. Some scholars date it between AD 95 and 110.",
+    "whatItIs": "A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.",
+    "review": "draft"
+  },
+  {
+    "id": "2-john",
+    "author": "The apostle John, by tradition. The writer calls himself the elder.",
+    "written": "By tradition, in Ephesus, no later than the 90s AD.",
+    "whatItIs": "A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.",
+    "review": "draft"
+  },
+  {
+    "id": "3-john",
+    "author": "The apostle John, by tradition. Some scholars think the writer, who calls himself the elder, cannot be matched to a known person.",
+    "written": "By tradition, in Ephesus, no later than the 90s AD. Some scholars date it between AD 96 and 110.",
+    "whatItIs": "A short personal letter from the elder to Gaius. It praises his help for traveling believers and warns about Diotrephes, who refuses to welcome them.",
+    "review": "draft"
+  },
+  {
+    "id": "jude",
+    "author": "Jude, the brother of James, by tradition. Some scholars think a later writer used his name.",
+    "written": "By tradition, between the mid 60s AD and AD 70, perhaps in Palestine. Some scholars date it late in the 1st century AD, about AD 90.",
+    "whatItIs": "A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved, and kept.",
+    "review": "draft"
+  },
+  {
+    "id": "revelation",
+    "author": "The apostle John, by tradition. Many modern scholars do not identify the writer with the apostle.",
+    "written": "By tradition, the mid 90s AD, on the island of Patmos.",
+    "whatItIs": "A book of prophetic visions, opened by letters to seven churches in the province of Asia. It describes the conflict between God and evil and closes with a new heaven and earth.",
+    "review": "draft"
+  }
+]

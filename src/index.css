@@ -244,6 +244,266 @@ a {
 
 /* Reduced motion: the fades of opacity and color stay. They are not moves. */
 
+/* ---- Cover page: mockup D2, docs/DESIGN.md section 4.2 ---- */
+
+.cover-page {
+  position: relative;
+  min-height: 100svh;
+}
+
+/* The canvas lies over the top of the page and does not take the pointer. */
+.cover-canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: max(100svh, 760px) !important;
+  pointer-events: none;
+}
+
+.cover-inner {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 72px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.cover-bar {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cover-bar a,
+.chapter-list a,
+.open-book {
+  text-decoration: none;
+}
+
+.cover-bar a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cover-bar a:hover {
+  text-decoration: underline;
+}
+
+.cover-stage {
+  align-self: stretch;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1500px;
+}
+
+/* The flat book: mockup D2 in CSS. In 3D mode the text stays for screen readers only. */
+.cover-book {
+  width: 350px;
+  height: 480px;
+  box-sizing: border-box;
+  padding: 18px;
+  background: var(--cloth);
+  color: var(--cover-ink);
+  border-radius: 4px 8px 8px 4px;
+  transform: rotateX(26deg) rotateZ(-11deg);
+  box-shadow:
+    5px 5px 0 #f1e8d3,
+    8px 8px 0 rgba(0, 0, 0, 0.35),
+    46px 64px 54px rgba(84, 58, 20, 0.38);
+  display: flex;
+}
+
+.cover-frame {
+  flex: 1;
+  box-sizing: border-box;
+  border: 2px solid var(--cover-ink);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cover-group,
+.cover-chapters {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.cover-emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: auto;
+}
+
+.cover-arch {
+  width: 96px;
+  height: 48px;
+  border-radius: 96px 96px 0 0;
+  background: var(--cover-ink);
+}
+
+.cover-rule {
+  width: 180px;
+  height: 2px;
+  background: var(--cover-ink);
+}
+
+.cover-title {
+  margin: 18px 0 auto;
+  font-family: var(--title-font);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.cover-page[data-mode='3d'] .cover-book {
+  opacity: 0;
+}
+
+.open-book {
+  min-height: 52px;
+  padding: 0 32px;
+  display: inline-flex;
+  align-items: center;
+  background: var(--ink);
+  color: #f7ecd3;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 26px;
+}
+
+.open-book:hover {
+  background: #4a3b2a;
+}
+
+/* While the book lands, the text below waits. A fade is permitted with reduced motion. */
+.cover-page .open-book,
+.cover-page .cover-facts,
+.cover-page .chapter-list {
+  transition:
+    opacity 300ms,
+    visibility 0s;
+}
+
+/* Hidden also from the keyboard and screen readers until the book lands. */
+.cover-page[data-landed='false'] .open-book,
+.cover-page[data-landed='false'] .cover-facts,
+.cover-page[data-landed='false'] .chapter-list {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cover-facts {
+  max-width: 1040px;
+  width: 100%;
+  border-top: 1px solid var(--rule);
+  padding-top: 22px;
+}
+
+.draft-label {
+  margin: 0 0 16px;
+  font-size: 15px;
+  color: var(--ink-secondary);
+}
+
+.draft-label span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 8px;
+  border: 1px solid var(--ink-secondary);
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.facts dt {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.chapter-list {
+  max-width: 1040px;
+  width: 100%;
+}
+
+.chapter-list h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.chapter-list ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.chapter-list a {
+  min-width: 44px;
+  min-height: 44px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.chapter-list a:hover {
+  background: var(--linen-light);
+}
+
 /* ---- Other pages ---- */
 
 .message,
@@ -294,4 +554,27 @@ a {
 
 .app[data-layout='narrow'] .table-scene {
   margin-inline: -16px;
+}
+
+.app[data-layout='narrow'] .cover-inner {
+  padding: 16px 16px 32px;
+  gap: 20px;
+}
+
+.app[data-layout='narrow'] .cover-stage {
+  height: 380px;
+}
+
+.app[data-layout='narrow'] .cover-book {
+  width: 240px;
+  height: 330px;
+}
+
+.app[data-layout='narrow'] .cover-title {
+  font-size: 42px;
+}
+
+.app[data-layout='narrow'] .facts {
+  grid-template-columns: 1fr;
+  gap: 18px;
 }

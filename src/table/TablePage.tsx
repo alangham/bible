@@ -4,7 +4,7 @@
 // over the spine on screen, so that keyboard and screen reader users can use it.
 // Without WebGL, the `a` elements show as flat spines.
 //
-// The narrow layout, below 768 px, shows one stack at a time with flat spines of 44 px or more.
+// The narrow layout, below 900 px, shows one stack at a time with flat spines of 44 px or more.
 // The reader moves between stacks by swipe, or with the two stack buttons. docs/DESIGN.md section 4.1.
 
 import gsap from 'gsap'
@@ -16,7 +16,7 @@ import { bookHref, sourcesHref, timelineHref } from '../router.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { layoutTable, spineOffsetPx } from './layout.ts'
 import { Legend } from './Legend.tsx'
-import { SPINE_FONT_FAMILY } from './spineFont.ts'
+import { SPINE_FONT_FAMILY, spineFontPx } from './spineFont.ts'
 import { SceneBoundary } from './SceneBoundary.tsx'
 import type { SpineRect } from './TableScene.tsx'
 
@@ -243,7 +243,7 @@ function spineStyle(
     height: thickness,
     background: group.cloth,
     color: group.text,
-    fontSize: Math.max(14, Math.min(24, thickness * 0.42)),
+    fontSize: spineFontPx(thickness),
     transform: `translateX(${spineOffsetPx(index)}px)`,
   }
 }

@@ -38,11 +38,11 @@ test.describe('table page', () => {
     await expect(psalms).not.toHaveAttribute('style', /--ring-top: 0px/)
   })
 
-  test('the layout is wide at 768 px and narrow at 767 px', async ({ page }) => {
-    await page.setViewportSize({ width: 768, height: 900 })
+  test('the layout is wide at 900 px and narrow at 899 px', async ({ page }) => {
+    await page.setViewportSize({ width: 900, height: 900 })
     await page.goto('./')
     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'wide')
-    await page.setViewportSize({ width: 767, height: 900 })
+    await page.setViewportSize({ width: 899, height: 900 })
     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'narrow')
   })
 

@@ -95,12 +95,22 @@ export interface Palette {
   layers: [string, string, string]
   /** The sun by day, the moon at night. */
   light: string
+  /** The blue of the water, for the Gospels lake only. POLISH.md item 7. */
+  water?: string
   /** Opacity of the stars, 0 to 1. */
   stars: number
 }
 
-/** The colors of a scene: the cloth color of the group, lighter or darker by the time of day. */
-export function paletteFor(cloth: string, h: number): Palette {
+/** The hue and the saturation of the lake water. A blue that stays near the paper look of the scenes. */
+const WATER_HUE = 205
+const WATER_SAT = 0.34
+
+/**
+ * The colors of a scene: the cloth color of the group, lighter or darker by the time of day.
+ * With `water`, the palette also has a blue for water, lighter or darker by the time of day in the
+ * same way. POLISH.md item 7 permits this exception for the Gospels lake.
+ */
+export function paletteFor(cloth: string, h: number, water = false): Palette {
   const [hue, sat, lum] = rgbToHsl(cloth)
   // Scenery needs some color. A very pale cloth, as for the Gospels, keeps its hue with less color.
   const s = Math.min(0.55, Math.max(0.22, sat * 0.75)) * (lum > 0.85 ? 0.5 : 1)
@@ -110,7 +120,9 @@ export function paletteFor(cloth: string, h: number): Palette {
   const skyHorizon = tint(mix(hslToHex(hue, s * 0.5, L.skyHorizon), WARM, L.warm * 0.6))
   const layers = L.layers.map((l, i) => tint(mix(hslToHex(hue, s, l), WARM, L.warm * 0.15 * (3 - i)))) as Palette['layers']
   const light = h >= 1 ? '#F4EEDC' : mix('#FFF6DC', WARM, L.warm)
-  return { skyTop, skyHorizon, layers, light, stars: L.stars }
+  const palette: Palette = { skyTop, skyHorizon, layers, light, stars: L.stars }
+  if (water) palette.water = tint(mix(hslToHex(WATER_HUE, WATER_SAT, L.layers[1]), WARM, L.warm * 0.15))
+  return palette
 }
 
 /** A string hash (FNV-1a). */
@@ -161,7 +173,7 @@ export const SHADOW_ALPHA = 0.3
 /** Each color that can be behind the text: the sky, the light, each layer at each tone, with and without a shadow. */
 export function colorsBehindText(p: Palette): string[] {
   const out = [p.skyTop, p.skyHorizon, p.light]
-  for (const c of p.layers) for (const t of [-TONE_RANGE, 0, TONE_RANGE]) out.push(shade(c, t))
+  for (const c of p.water ? [...p.layers, p.water] : p.layers) for (const t of [-TONE_RANGE, 0, TONE_RANGE]) out.push(shade(c, t))
   return [...out, ...out.map((c) => over('#000000', SHADOW_ALPHA, c))]
 }
 
@@ -203,6 +215,6 @@ export function sceneValues(book: Book, chapter: number): SceneValues {
 export function valuesAt(scene: SceneId, cloth: string, h: number, seed: number): SceneValues {
   const random = seeded(seed)
   const shifts = MAX_SHIFT.map((m) => Math.round((random() * 2 - 1) * m)) as SceneValues['shifts']
-  const palette = paletteFor(cloth, h)
+  const palette = paletteFor(cloth, h, scene === 'lake')
   return { scene, h, phase: phaseOf(h), palette, shifts, text: textStyleFor(palette) }
 }

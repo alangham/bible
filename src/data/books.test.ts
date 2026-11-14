@@ -41,8 +41,9 @@ describe('books.json', () => {
 })
 
 describe('spineThickness', () => {
-  it('follows 26 + 3.2 * sqrt(chapters)', () => {
-    expect(spineThickness(1)).toBeCloseTo(29.2)
+  it('follows 26 + 3.2 * sqrt(chapters), with 40 px at least (POLISH.md items 3 and 13)', () => {
+    expect(spineThickness(1)).toBe(40)
+    expect(spineThickness(20)).toBeCloseTo(26 + 3.2 * Math.sqrt(20))
     expect(spineThickness(150)).toBeCloseTo(26 + 3.2 * Math.sqrt(150))
   })
 })

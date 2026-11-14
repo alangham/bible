@@ -18,6 +18,10 @@ function fillOf(shape: Shape, layerColor: string, v: SceneValues): { fill: strin
   const p = v.palette
   if (shape.fill === 'light') return { fill: p.light, opacity: shape.opacity ?? 1 }
   if (shape.fill === 'star') return { fill: p.light, opacity: (shape.opacity ?? 1) * p.stars }
+  if (shape.fill === 'water') {
+    const water = p.water ?? layerColor
+    return { fill: shape.tone ? shade(water, shape.tone) : water, opacity: shape.opacity ?? 1 }
+  }
   return { fill: shape.tone ? shade(layerColor, shape.tone) : layerColor, opacity: shape.opacity ?? 1 }
 }
 
@@ -31,10 +35,18 @@ function paths(shapes: Shape[], layerColor: string, v: SceneValues): string {
   return out
 }
 
-/** The sun from dawn to dusk, and the moon at night: its place and size in scene units. */
+/** The sun moves from this x at dawn to SUN_X1 at dusk, on the left page. POLISH.md item 8. */
+export const SUN_X0 = 140
+/** The sun and its glow stay this far from the fold, so that the fold and the text panel do not cover them. */
+export const SUN_X1 = 600
+
+/**
+ * The sun from dawn to dusk, and the moon at night: its place and size in scene units.
+ * Both stay on the left page, away from the fold and the text panel. POLISH.md item 8.
+ */
 export function lightPosition(h: number): { x: number; y: number; r: number; moon: boolean } {
   if (h >= 1) return { x: 300, y: 170, r: 36, moon: true }
-  return { x: 200 + h * 1300, y: 640 - Math.sin(Math.PI * Math.min(1, h * 1.05)) * 500, r: 46, moon: false }
+  return { x: SUN_X0 + h * (SUN_X1 - SUN_X0), y: 640 - Math.sin(Math.PI * Math.min(1, h * 1.05)) * 500, r: 46, moon: false }
 }
 
 /** The markup inside the <svg> of one layer. Layer 0 is the sky. `id` makes the gradient id unique. */

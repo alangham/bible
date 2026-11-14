@@ -5,7 +5,7 @@
 // Each shape has a tone: a small change of lightness from the layer color.
 // The shapes come from code with a fixed seed, so each scene is the same at each build.
 
-import { seeded, TONE_RANGE, type SceneId } from './values.ts'
+import { MAX_SHIFT, seeded, TONE_RANGE, type SceneId } from './values.ts'
 
 export const SCENE_W = 1600
 export const SCENE_H = 1000
@@ -13,13 +13,26 @@ const X0 = -170
 const X1 = 1770
 const BOTTOM = 1250
 
+/**
+ * The text panel of the right page, in scene units: `.spread-text` in src/index.css is 9 % from the
+ * left of the right page, 11 % from its right, 6 % from the top, and 7 % from the bottom.
+ * POLISH.md item 9: a large shape of a front layer does not cross the left or the right edge.
+ */
+export const TEXT_PANEL = { left: 800 + 0.09 * 800, right: 800 + 0.89 * 800, top: 60, bottom: 930 }
+
+/** True if a shape from x0 to x1 in a layer can cross the left or the right edge of the text panel, with its shift. */
+export function crossesPanelEdge(x0: number, x1: number, layer: number): boolean {
+  const s = MAX_SHIFT[layer]
+  return [TEXT_PANEL.left, TEXT_PANEL.right].some((edge) => x0 - s < edge && x1 + s > edge)
+}
+
 export interface Shape {
   /** SVG path data, in scene units. */
   d: string
   /** Change of lightness from the layer color, -TONE_RANGE to TONE_RANGE. */
   tone?: number
-  /** "light": the color of the sun. "star": the color of the sun with the opacity of the stars. */
-  fill?: 'light' | 'star'
+  /** "light": the color of the sun. "star": the color of the sun with the opacity of the stars. "water": the blue of the water (the lake only). */
+  fill?: 'light' | 'star' | 'water'
   opacity?: number
 }
 
@@ -160,7 +173,8 @@ function camp(): SceneShapes {
   // Layer 2: the ground of the camp, and the tents.
   const g2 = groundLine(r, 745, 14)
   const layer2: Shape[] = [{ d: groundShape(g2) }]
-  const tents = [40, 150, 215, 330, 470, 545, 690, 800, 950, 1030, 1200, 1340, 1420, 1590]
+  // No tent stands across an edge of the text panel (POLISH.md item 9).
+  const tents = [40, 150, 215, 330, 470, 545, 690, 800, 950, 1030, 1200, 1320, 1650]
   for (const [k, tx] of tents.entries()) {
     const big = k % 3 === 0
     const w = (big ? 120 : 70) + r() * 40
@@ -194,10 +208,11 @@ function city(): SceneShapes {
   const g1 = groundLine(r, 560, 30)
   const layer1: Shape[] = [{ d: groundShape(g1) }, { d: band(groundLine(r, 600, 20), 0, 400), tone: -T * 0.3 }]
 
-  // Layer 2: houses behind the wall, the wall, towers, and the gate.
+  // Layer 2: houses behind the wall, the wall, towers, and the gate. The city ends on the left
+  // page, so that no house or tower stands at the edge of the text panel (POLISH.md item 9).
   const ground = 770
   const layer2: Shape[] = []
-  for (let hx = 90; hx < 960; hx += 55 + r() * 30) {
+  for (let hx = 90; hx < 690; hx += 55 + r() * 30) {
     const w = 60 + r() * 40
     const h = 60 + r() * 90
     layer2.push({ d: rect(hx, 600 - h, w, h + 200), tone: T * 0.5 })
@@ -205,10 +220,10 @@ function city(): SceneShapes {
   }
   layer2.push({ d: groundShape(groundLine(r, ground, 8)) })
   const wall: Pt[] = [[40, ground + 20], [40, 600]]
-  for (let wx = 40; wx < 1000; wx += 36) wall.push([wx, 600], [wx, 584], [wx + 18, 584], [wx + 18, 600])
-  wall.push([1000, 600], [1000, ground + 20])
+  for (let wx = 40; wx < 760; wx += 36) wall.push([wx, 600], [wx, 584], [wx + 18, 584], [wx + 18, 600])
+  wall.push([760, 600], [760, ground + 20])
   layer2.push({ d: poly(wall) })
-  for (const tx of [40, 480, 640, 1000]) {
+  for (const tx of [40, 480, 640, 760]) {
     const w = tx === 480 || tx === 640 ? 80 : 90
     const top = tx === 480 || tx === 640 ? 500 : 530
     const left = tx - w / 2
@@ -219,7 +234,7 @@ function city(): SceneShapes {
     layer2.push({ d: rect(tx - 6, top + 30, 12, 26), tone: -T })
   }
   layer2.push({ d: arched(510, 640, 100, 135), tone: -T })
-  layer2.push({ d: rect(40, 600, 960, 8), tone: T * 0.4 })
+  layer2.push({ d: rect(40, 600, 720, 8), tone: T * 0.4 })
 
   // Layer 3: fields of grain in front, with rows and sheaves.
   const g3 = groundLine(r, 850, 18)
@@ -261,9 +276,10 @@ function stream(): SceneShapes {
   layer2.push({ d: poly([[tx - 32, base], [tx - 14, 600], [tx - 70, 520], [tx - 60, 510], [tx - 8, 570], [tx - 4, 470], [tx + 6, 470], [tx + 10, 560], [tx + 70, 500], [tx + 78, 512], [tx + 16, 600], [tx + 34, base]]), tone: -T * 0.6 })
   layer2.push({ d: cluster(r, tx, 420, 380, 220, 22, 62) })
   layer2.push({ d: cluster(r, tx - 50, 380, 220, 120, 10, 44), tone: T * 0.5 })
-  // A second, smaller tree on the right page, low.
-  layer2.push({ d: rect(1430, g2(1430) - 120, 14, 140), tone: -T * 0.6 })
-  layer2.push({ d: cluster(r, 1437, g2(1430) - 150, 150, 90, 10, 36) })
+  // A second, smaller tree on the right page, low. It stands well inside the text panel, so that the
+  // panel covers it and it does not show at the edge of the text (POLISH.md item 9).
+  layer2.push({ d: rect(1180, g2(1180) - 120, 14, 140), tone: -T * 0.6 })
+  layer2.push({ d: cluster(r, 1187, g2(1180) - 150, 150, 90, 10, 36) })
 
   // Layer 3: the stream and the grass in front.
   const g3 = groundLine(r, 870, 12)
@@ -329,7 +345,9 @@ function watchtower(): SceneShapes {
   const layer3: Shape[] = [{ d: groundShape(g3) }, { d: band(g3, 120, 600), tone: T * 0.9 }]
   for (let sx = X0 + 40; sx < X1; sx += 70 + r() * 90) {
     const w = 30 + r() * 50
-    layer3.push({ d: ellipse(sx, g3(sx) + 18 + r() * 40, w, w * 0.5), tone: r() > 0.5 ? T * 0.4 : -T * 0.5 })
+    const stone = { d: ellipse(sx, g3(sx) + 18 + r() * 40, w, w * 0.5), tone: r() > 0.5 ? T * 0.4 : -T * 0.5 }
+    // A large stone at an edge of the text panel is left out. The random numbers stay in the same order.
+    if (!(w >= 30 && crossesPanelEdge(sx - w, sx + w, 3))) layer3.push(stone)
   }
   for (const rx of [80, 640, 1120, 1560]) {
     for (let k = 0; k < 7; k++) {
@@ -353,18 +371,20 @@ function farm(): SceneShapes {
   layer1.push({ d: groundShape(hillB), tone: -T * 0.25 })
   for (let k = 0; k < 3; k++) layer1.push({ d: band(hillB, 22 + k * 28, 28 + k * 28), tone: -T * 0.8 })
 
-  // Layer 2: rows of vines on posts, and fig trees.
+  // Layer 2: rows of vines on posts, and fig trees. The fig trees stand clear of the edges of the
+  // text panel: one on the left page and one inside the panel (POLISH.md item 9).
+  const FIGS = [170, 640, 1180]
   const g2 = groundLine(r, 760, 10)
   const layer2: Shape[] = [{ d: groundShape(g2) }]
   for (let row = 0; row < 2; row++) {
     for (let vx = X0 + 40 + row * 30; vx < X1; vx += 62) {
-      if (Math.abs(vx - 170) < 120 || Math.abs(vx - 760) < 110 || Math.abs(vx - 1420) < 110) continue
+      if (FIGS.some((fx) => Math.abs(vx - fx) < (fx === 170 ? 120 : 110))) continue
       const y0 = g2(vx) + row * 26
       layer2.push({ d: rect(vx - 2, y0 - 46, 4, 50), tone: -T * 0.7 })
       layer2.push({ d: cluster(r, vx, y0 - 44, 54, 22, 5, 12), tone: row ? -T * 0.2 : T * 0.2 })
     }
   }
-  for (const fx of [170, 760, 1420]) {
+  for (const fx of FIGS) {
     const y0 = g2(fx) + 20
     layer2.push({ d: poly([[fx - 14, y0], [fx - 8, y0 - 80], [fx - 40, y0 - 120], [fx - 30, y0 - 126], [fx, y0 - 96], [fx + 34, y0 - 130], [fx + 42, y0 - 122], [fx + 8, y0 - 80], [fx + 14, y0]]), tone: -T * 0.7 })
     layer2.push({ d: cluster(r, fx, y0 - 150, 230, 110, 14, 38), tone: -T * 0.2 })
@@ -409,9 +429,11 @@ function lake(): SceneShapes {
 
   // Layer 2: the lake, with boats and small waves.
   const lakePath = rect(X0, 570, X1 - X0, BOTTOM - 570)
-  const layer2: Shape[] = [{ d: lakePath, tone: T }, { d: lakePath, ...SHINE }]
-  for (let k = 0; k < 18; k++) layer2.push({ d: rect(X0 + r() * (X1 - X0), 600 + r() * 220, 40 + r() * 60, 3), tone: -T * 0.4 })
-  layer2.push(...boat(200, 700, 170), ...boat(560, 650, 120), ...boat(1180, 720, 150), ...boat(1440, 630, 90))
+  // The water is blue at each time of day (POLISH.md item 7). The sky and the shore keep the cloth color.
+  const layer2: Shape[] = [{ d: lakePath, tone: T, fill: 'water' }, { d: lakePath, ...SHINE }]
+  for (let k = 0; k < 18; k++) layer2.push({ d: rect(X0 + r() * (X1 - X0), 600 + r() * 220, 40 + r() * 60, 3), tone: -T * 0.4, fill: 'water' })
+  // The small boat stays inside the text panel, away from its right edge (POLISH.md item 9).
+  layer2.push(...boat(200, 700, 170), ...boat(560, 650, 120), ...boat(1180, 720, 150), ...boat(1360, 630, 90))
 
   // Layer 3: the shore with nets on poles, stones, and a beached boat.
   const g3 = groundLine(r, 860, 14)
@@ -478,8 +500,9 @@ function town(): SceneShapes {
   layer2.push({ d: rect(548, ground - 284, 264, 26), tone: -T * 0.5 })
   layer2.push({ d: arched(620, ground - 190, 120, 190), tone: -T })
   for (const cx of [572, 768]) layer2.push({ d: rect(cx, ground - 250, 20, 240), tone: T * 0.4 })
-  // Houses: a house with a door and arched windows, where a church can meet.
-  for (const [hx, w, h] of [[880, 230, 190], [1150, 200, 150], [1390, 260, 210]] as [number, number, number][]) {
+  // Houses: a house with a door and arched windows, where a church can meet. The three houses stand
+  // inside the text panel, clear of its edges (POLISH.md item 9).
+  for (const [hx, w, h] of [[920, 190, 190], [1130, 160, 150], [1310, 160, 210]] as [number, number, number][]) {
     layer2.push({ d: rect(hx, ground - h, w, h), tone: T * 0.3 })
     layer2.push(...tiledRoof(hx, ground - h, w, 46))
     layer2.push({ d: arched(hx + w / 2 - 22, ground - 92, 44, 92), tone: -T })
@@ -575,23 +598,25 @@ function heaven(): SceneShapes {
   // Layer 2: clouds with a rainbow.
   const layer2: Shape[] = []
   const bands = 5
+  // The rainbow stands on the left page, and the clouds and the island stand clear of the edges of the
+  // text panel (POLISH.md item 9).
   for (let k = 0; k < bands; k++) {
-    const ro = 470 - k * 22
+    const ro = 360 - k * 22
     const ri = ro - 22
-    const cx = 640
+    const cx = 400
     const cy = 860
     layer2.push({ d: `M${cx - ro} ${cy}A${ro} ${ro} 0 0 1 ${cx + ro} ${cy}L${cx + ri} ${cy}A${ri} ${ri} 0 0 0 ${cx - ri} ${cy}Z`, tone: k % 2 ? T : -T * 0.2 })
   }
-  for (const [cx, cy, w] of [[140, 930, 520], [1150, 930, 560], [1620, 930, 400]] as [number, number, number][]) {
+  for (const [cx, cy, w] of [[140, 930, 520], [1190, 930, 420]] as [number, number, number][]) {
     layer2.push({ d: cloud(r, cx, cy, w) })
     layer2.push({ d: cloud(r, cx - 40, cy - 30, w * 0.5), tone: T * 0.5 })
   }
   // Layer 3: the sea and the rocks of an island coast.
   const layer3: Shape[] = [{ d: rect(X0, 900, X1 - X0, BOTTOM - 900), tone: T * 0.5 }]
   for (let k = 0; k < 10; k++) layer3.push({ d: rect(X0 + r() * (X1 - X0), 915 + r() * 60, 50 + r() * 70, 3), tone: T })
-  const island: Pt[] = [[880, 960], [940, 880], [990, 860], [1030, 790], [1080, 770], [1120, 700], [1170, 690], [1230, 740], [1290, 730], [1350, 800], [1420, 810], [1480, 760], [1540, 790], [1620, 850], [X1, 860], [X1, BOTTOM], [880, BOTTOM]]
+  const island: Pt[] = [[940, 960], [970, 880], [995, 860], [1018, 800], [1045, 775], [1070, 705], [1100, 692], [1140, 740], [1175, 732], [1210, 800], [1255, 810], [1290, 762], [1325, 790], [1370, 850], [1415, 900], [1440, 960], [1440, BOTTOM], [940, BOTTOM]]
   layer3.push({ d: poly(island), tone: -T * 0.4 })
-  layer3.push({ d: poly([[1120, 700], [1170, 690], [1150, 760], [1100, 800], [1080, 770]]), tone: T * 0.3 })
+  layer3.push({ d: poly([[1070, 705], [1100, 692], [1088, 760], [1058, 800], [1045, 775]]), tone: T * 0.3 })
   for (const [rx, rw] of [[120, 90], [260, 60], [600, 50]] as [number, number][]) {
     layer3.push({ d: poly([[rx - rw / 2, 960], [rx - rw * 0.2, 920 - r() * 30], [rx + rw * 0.1, 910 - r() * 30], [rx + rw / 2, 960]]), tone: -T * 0.6 })
   }

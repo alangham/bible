@@ -49,7 +49,7 @@ Hebrews is in General Letters, as on the wall image.
   - Stack 4: Matthew to 2 Thessalonians.
   - Stack 5: 1 Timothy to Revelation.
 - Each spine shows the book name in capitals in its category colors.
-- Spine thickness follows the number of chapters. Mockup rule: `26 + 3.2 * sqrt(chapters)` px.
+- Spine thickness follows the number of chapters. Mockup rule: `26 + 3.2 * sqrt(chapters)` px, with 40 px at least. The minimum comes from POLISH.md items 3 and 13, which Arthur approved on 2026-11-14: each spine is 24 px or more on screen at 1440 by 900 px.
 - Each spine has a small sideways offset so that the stack looks real.
 - A legend below the stacks lists the ten groups. Select a group to light its spines and dim the others. Select it again to clear.
 - Select a spine: the book slides out of the stack and lands on the table as the cover page.
@@ -109,7 +109,7 @@ Arthur approved the nine subjects and these rules on 2026-11-14.
 - Scenes 3, 5, and 8 all have hills. Give each a different main shape in front: the tree and stream, the vines and threshing floor, the road.
 - The time of day follows the position of the chapter in its book. The first chapter is dawn. The middle of the book is day. The last chapters are dusk, and the last chapter is night. The change from chapter to chapter is gradual. A book with one chapter is day. Reason: in the reference, each spread is a later hour of one day, so the reader feels the day pass through the book.
 - Stars show only at night and at dawn.
-- The colors of a scene are near the cloth color of its group.
+- The colors of a scene are near the cloth color of its group. Exception: the water of the Gospels scene is blue at each time of day. POLISH.md item 7, approved by Arthur on 2026-11-14.
 - A fixed number from the book and the chapter sets small shifts of each layer. The same chapter always gives the same scene.
 - No person that a reader can identify. Small plain figures are permitted, for example the travellers in scene 8 and the flock in scene 3.
 - No scene is specific to the content of a chapter in version 1. Three books do not fit their scene: Obadiah, Jonah, and Jude. This is accepted for version 1.

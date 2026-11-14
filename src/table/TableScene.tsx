@@ -48,17 +48,28 @@ const LEAVE_LIFT = 30 * PX
 const DIM_MIX = 0.82
 const LINEN = new Color('#E7DCC6')
 const PAPER = '#EFE6D2'
+/** The blur of the shadows, in shadow-map texels. POLISH.md item 2: soft edges, as in mockup D1. */
+const SHADOW_BLUR = 14
 
 export function TableScene({ layout, hoveredId, leavingId, dimmedIds, reducedMotion, onRects }: TableSceneProps) {
   return (
     <Canvas
       className="table-canvas"
-      shadows
+      shadows="variance"
       flat
       dpr={[1, 2]}
       gl={{ alpha: true, antialias: true }}
       camera={{ fov: 26, near: 0.1, far: 200 }}
       aria-hidden="true"
+      onCreated={({ gl }) => {
+        // The soft shadows cost a blur pass. The shadow map is drawn again only when a spine moves.
+        gl.shadowMap.autoUpdate = false
+        gl.shadowMap.needsUpdate = true
+        // A restored WebGL context has an empty shadow map: draw it again.
+        gl.domElement.addEventListener('webglcontextrestored', () => {
+          gl.shadowMap.needsUpdate = true
+        })
+      }}
     >
       {/*
         Ambient light of intensity PI gives a face that the sun does not reach
@@ -77,6 +88,8 @@ export function TableScene({ layout, hoveredId, leavingId, dimmedIds, reducedMot
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
         shadow-bias={-0.0005}
+        shadow-radius={SHADOW_BLUR}
+        shadow-blurSamples={16}
       />
       <mesh receiveShadow rotation-x={-Math.PI / 2}>
         <planeGeometry args={[80, 80]} />
@@ -130,13 +143,17 @@ function Spine({ box, hovered, leaving, dimmed, reducedMotion }: SpineProps) {
     [materials],
   )
 
-  useFrame((_, delta) => {
+  useFrame((state, delta) => {
     const m = mesh.current
     if (!m) return
     // Reduced motion: the spine does not move. The page fades in a ring instead.
     const slide = leaving ? LEAVE_SLIDE : hovered && !reducedMotion ? SLIDE : 0
-    m.position.z = MathUtils.damp(m.position.z, box.z + slide, 14, delta)
-    m.position.y = MathUtils.damp(m.position.y, box.y + (leaving ? LEAVE_LIFT : 0), 14, delta)
+    const z = MathUtils.damp(m.position.z, box.z + slide, 14, delta)
+    const y = MathUtils.damp(m.position.y, box.y + (leaving ? LEAVE_LIFT : 0), 14, delta)
+    // A moving spine moves its shadow: draw the shadow map again in this frame.
+    if (Math.abs(z - m.position.z) > 1e-5 || Math.abs(y - m.position.y) > 1e-5) state.gl.shadowMap.needsUpdate = true
+    m.position.z = z
+    m.position.y = y
     // Dimming is a fade, so it runs with reduced motion also.
     mix.current = MathUtils.damp(mix.current, dimmed ? DIM_MIX : 0, 10, delta)
     // The React compiler rule does not know that useFrame runs outside render.

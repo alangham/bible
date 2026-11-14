@@ -9,12 +9,13 @@ import { useSyncExternalStore } from 'react'
 export type ScreenLayout = 'wide' | 'narrow'
 
 /** Below this width in CSS px, the layout is narrow. */
-export const NARROW_LIMIT_PX = 768
+export const NARROW_LIMIT_PX = 900
 
 /**
  * Decides the layout.
- * - wide, 768 px or more: five stacks in one view, as in mockup D1. Spines can be thinner than 44 px.
- * - narrow, below 768 px: one stack at a time with spines of 44 px or more. Task 9 builds it.
+ * - wide, 900 px or more: five stacks in one view, as in mockup D1. Spines can be thinner than 44 px,
+ *   but each is 24 px or more on screen at 1440 by 900 px. POLISH.md item 5 moved the limit from 768 px.
+ * - narrow, below 900 px: one stack at a time with spines of 44 px or more.
  */
 export function selectLayout(viewportWidthPx: number): ScreenLayout {
   return viewportWidthPx >= NARROW_LIMIT_PX ? 'wide' : 'narrow'

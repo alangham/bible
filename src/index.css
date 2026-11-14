@@ -1197,29 +1197,38 @@ a {
 
 /* ---- Links, travel, and trail: docs/DESIGN.md section 4.5 ---- */
 
-/* A mark of links after a verse number or a heading. Strong for quotation links, light for echo links.
-   The mark is small in the text; its touch area is 44 px. */
+/*
+  A mark of links after a verse number or a heading. POLISH.md item 10: the marks are the way to
+  travel, so they are easy to see. Strong for quotation links: a filled dot inside a ring. Light for
+  echo links: a dashed ring. The touch area of each mark is 44 px (::after).
+*/
 .link-mark {
   position: relative;
   display: inline-block;
-  width: 0.62em;
-  height: 0.62em;
-  margin: 0 0.25em 0 0.05em;
+  box-sizing: border-box;
+  width: 0.92em;
+  height: 0.92em;
+  margin: 0 0.3em 0 0.08em;
   padding: 0;
   border: 2px solid var(--ink);
   border-radius: 50%;
   background: transparent;
-  vertical-align: 0.05em;
+  /* A button does not take the size of the text by default. The mark follows the text size. */
+  font-size: inherit;
+  vertical-align: -0.12em;
   cursor: pointer;
 }
 
 .link-mark[data-kind='quotation'] {
-  background: var(--ink);
+  background: radial-gradient(circle closest-side, var(--ink) 58%, transparent 64%);
 }
 
 .link-mark[data-kind='echo'] {
-  border-width: 1.5px;
   border-style: dashed;
+}
+
+.link-mark:hover {
+  box-shadow: 0 0 0 3px var(--veil-edge, rgba(0, 0, 0, 0.1));
 }
 
 .link-mark::after {
@@ -1913,7 +1922,7 @@ a {
 .app[data-layout='narrow'] .table-scene[data-mode='flat'] .stack {
   flex: 0 0 100%;
   box-sizing: border-box;
-  padding: 8px 36px 28px;
+  padding: 8px max(36px, calc(50% - 260px)) 28px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   gap: 3px;

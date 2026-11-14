@@ -23,10 +23,8 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22
  * Known failures that wait for a design decision of Arthur, with their item in docs/POLISH.md.
  * Task 9b step 3: the test does not fail on them, but each one must stay on this list and in POLISH.md.
  */
-const KNOWN = [
-  // POLISH.md item 13: the spines of the table page in the wide layout are thinner than 24 px on screen.
-  // docs/DESIGN.md section 4.1 permits thin spines there. WCAG 2.2 rule 2.5.8 asks for 24 px.
-  { rule: 'target-size', layout: 'wide', page: 'table', selector: /^a\[href\$="#\/book\/[a-z0-9-]+"\]$/ },
+const KNOWN: { rule: string; layout: string; page: string; selector: RegExp }[] = [
+  // Empty. Task 10 corrected POLISH.md item 13, the spines of the wide table below 24 px.
 ]
 
 /** The axe-core failures on the page, as text, without the known failures. An empty list is a pass. */
@@ -227,15 +225,14 @@ test('the accessibility check finds a planted problem', async ({ page }) => {
   expect(problems.some((x) => /^page is \d+ px wide in a 390 px window$/.test(x))).toBe(true)
 })
 
-test('each known failure is still there, so that a stale entry of KNOWN fails the test', async ({ page }) => {
-  // When POLISH.md item 13 is done, this test fails: delete the entry from KNOWN and this test.
+test('each spine of the wide table is 24 px or more on screen at 1440 by 900 px (POLISH.md item 13)', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.goto('./')
+  await expect(page.locator('.spine-links')).toHaveAttribute('data-ready', 'true')
   await settled(page)
-  const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
-  const nodes = result.violations.filter((v) => v.id === 'target-size').flatMap((v) => v.nodes.map((n) => n.target.join(' ')))
-  expect(nodes.length).toBeGreaterThan(0)
-  expect(nodes.every((n) => KNOWN[0].selector.test(n))).toBe(true)
+  const heights = await page.locator('a.spine').evaluateAll((els) => els.map((e) => e.getBoundingClientRect().height))
+  expect(heights).toHaveLength(66)
+  expect(Math.min(...heights)).toBeGreaterThanOrEqual(24)
 })
 
 for (const layout of LAYOUTS) {

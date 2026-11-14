@@ -5,7 +5,7 @@ import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { contrastRatio } from '../data/contrast.ts'
 import { GROUPS, type Book } from '../data/books.ts'
-import { over } from './color.ts'
+import { over, rgbToHsl } from './color.ts'
 import {
   PHASE_POSITION,
   SCENE_OF_GROUP,
@@ -112,5 +112,26 @@ describe('text contrast on the scene', () => {
       expect(valuesAt(c.scene, c.cloth, PHASE_POSITION.day, 1).text.ink, c.group).toBe('#2A1E12')
       expect(valuesAt(c.scene, c.cloth, PHASE_POSITION.night, 1).text.ink, c.group).toBe('#F7ECD3')
     }
+  })
+})
+
+describe('the water of the Gospels lake (POLISH.md item 7)', () => {
+  const gospels = GROUPS.find((g) => g.name === 'Gospels')!.cloth
+
+  it('is blue at dawn, day, dusk, and night', () => {
+    for (const phase of PHASES) {
+      const v = valuesAt('lake', gospels, PHASE_POSITION[phase], 1)
+      expect(v.palette.water, phase).toBeDefined()
+      const [hue, sat] = rgbToHsl(v.palette.water!)
+      expect(hue, phase).toBeGreaterThan(190)
+      expect(hue, phase).toBeLessThan(235)
+      expect(sat, phase).toBeGreaterThan(0.15)
+    }
+  })
+
+  it('is behind the text in the contrast check of the lake, and only the lake has it', () => {
+    const v = valuesAt('lake', gospels, 0.5, 1)
+    expect(colorsBehindText(v.palette)).toContain(v.palette.water)
+    expect(valuesAt('stream', gospels, 0.5, 1).palette.water).toBeUndefined()
   })
 })

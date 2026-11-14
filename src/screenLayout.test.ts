@@ -5,14 +5,16 @@ import { describe, expect, it } from 'vitest'
 import { NARROW_LIMIT_PX, selectLayout } from './screenLayout.ts'
 
 describe('selectLayout', () => {
-  it('gives the narrow layout below 768 px', () => {
-    expect(NARROW_LIMIT_PX).toBe(768)
+  it('gives the narrow layout below 900 px', () => {
+    expect(NARROW_LIMIT_PX).toBe(900)
     expect(selectLayout(390)).toBe('narrow')
     expect(selectLayout(767)).toBe('narrow')
+    expect(selectLayout(834)).toBe('narrow')
+    expect(selectLayout(899)).toBe('narrow')
   })
 
-  it('gives the wide layout at 768 px or more', () => {
-    expect(selectLayout(768)).toBe('wide')
+  it('gives the wide layout at 900 px or more', () => {
+    expect(selectLayout(900)).toBe('wide')
     expect(selectLayout(1440)).toBe('wide')
   })
 })

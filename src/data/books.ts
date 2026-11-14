@@ -55,9 +55,12 @@ export function groupOf(book: Book): Group {
   return group
 }
 
-/** Spine thickness in px. Mockup rule from docs/DESIGN.md section 4.1. */
+/** The least thickness of a spine, in mockup px. POLISH.md items 3 and 13: each spine of the wide table is 24 px or more on screen at 1440 by 900 px. */
+export const MIN_SPINE_THICKNESS = 40
+
+/** Spine thickness in mockup px: the mockup rule of docs/DESIGN.md section 4.1, and 40 px at least. */
 export function spineThickness(chapters: number): number {
-  return 26 + 3.2 * Math.sqrt(chapters)
+  return Math.max(MIN_SPINE_THICKNESS, 26 + 3.2 * Math.sqrt(chapters))
 }
 
 export async function loadBooks(): Promise<Book[]> {

@@ -131,6 +131,52 @@ Stop and report. Give Arthur the list of introductions to review.
 
 ---
 
+## Task 4b. Introductions: two layers and review rules
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the introductions obey the two-layer authorship rule in section 4.2 of `docs/DESIGN.md`, and the "Not verified" list for Arthur is short. Arthur decided the two layers and the five rules on 2026-11-13.
+
+The approved sources and their conditions are in Task 4. They do not change.
+
+The five rules. Apply them to each of the 66 introductions and to `docs/CONTENT-SOURCES.md`:
+
+1. No place of writing unless an approved source states it. Remove a place that no source gives.
+2. One approved source is sufficient for a fact when no approved source contradicts it. Record the source. Do not put the item on the "Not verified" list.
+3. When Easton and the ESV Global Study Bible differ on the traditional view, the ESV Global Study Bible leads. Easton can follow as "An older view names ...". Do not put the item on the "Not verified" list.
+4. The strength word must match the source. If the source says "most scholars", write "most". Do not make a claim weaker or stronger than its source.
+5. No line that rests on one scholar. Remove a line such as "One scholar dates ..." or a line that names one scholar. A standard reference work, for example the Oxford Dictionary of the Christian Church, counts as a source.
+
+Steps:
+
+1. Change the data shape in `public/data/intros.json`. For the Author fact and the Written fact of each book, keep the traditional view in the fact. Move the view of critical scholars to a new detail with two parts: `critical` and `conservative`.
+2. Write the `critical` part from Wikipedia under the Task 4 conditions. Apply rules 4 and 5.
+3. Write the `conservative` part from the ESV Global Study Bible only. Use facts only, in your own words. If the ESV Global Study Bible page for the book does not answer the critical view, leave the `conservative` part out. Do not write one from memory.
+4. Start each Written fact with the traditional view. Correct Joshua, 1 Samuel, and 2 Samuel, which do not do this now.
+5. Apply rules 1, 2, and 3 to each fact.
+6. Correct these items, which the designer found on 2026-11-13. Check each one against the sources first. If the sources do not support the correction, put the item on the "Not verified" list.
+   - Haggai: the line about Darius II gives a rare view too much weight. Remove it unless the source says that the view is common.
+   - Galatians: the "scholars" date does not differ from the traditional date. A book with no dispute has no detail.
+   - Colossians: the Written fact says "If Paul did not write it", but the Author fact has no dispute. Make the two agree. The Wikipedia article reports a survey with more scholars for Paul than against. Rule 4 applies.
+   - Daniel: the source states the late date as the view of critical scholars, without "some". Rule 4 applies.
+7. Build the "Scholars differ" control and the detail on the cover page. The control is a real `button`. It is 44 px or larger. It works with the keyboard. The detail names its two parts: "Critical scholars" and "Conservative scholars".
+8. Write the "Not verified" list again in `docs/CONTENT-SOURCES.md`. It must have only the items that the five rules do not settle. Give the number of items in the report.
+9. Run the `accuracy-reviewer` agent on all 66 introductions after your last correction. If you make a correction after the review, run the review again on the changed books.
+10. Add a Playwright test: the Genesis cover shows the traditional author, the control opens the detail, and the detail has two parts. Romans has no control.
+
+Done when:
+
+- No cover fact states the view of critical scholars.
+- Each book with a dispute has the control and the detail.
+- The accuracy review ran after the last correction.
+- The tests pass.
+
+Stop and report. Give Arthur the "Not verified" list.
+
+---
+
 ## Task 5. Spread page with the bundled text
 
 Status: TODO

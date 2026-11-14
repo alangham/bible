@@ -296,7 +296,7 @@ Stop and report. Include one screenshot of each of the nine scenes. Include Gene
 
 ## Task 6. Sources page and translation label
 
-Status: TODO
+Status: DONE
 
 Goal: the site names its translation and credits its data sources. This task replaces the earlier "Live ESV text" task. Arthur decided on 2026-11-13 that the ESV is not in version 1. Reason: the ESV terms forbid a published access key, and the site has no server to hold the key.
 

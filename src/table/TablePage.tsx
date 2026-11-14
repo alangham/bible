@@ -8,7 +8,7 @@ import gsap from 'gsap'
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
 import { clearHandoff, setHandoff } from '../book/handoff.ts'
 import { groupOf, spineThickness, type Book, type GroupName } from '../data/books.ts'
-import { bookHref } from '../router.ts'
+import { bookHref, sourcesHref } from '../router.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { layoutTable, spineOffsetPx } from './layout.ts'
 import { Legend } from './Legend.tsx'
@@ -95,7 +95,12 @@ export function TablePage({ books }: { books: Book[] }) {
     <main className="table-page">
       <header className="table-header">
         <h1>Books of the Bible</h1>
-        <p>Sixty-six books on one table. Take one from a stack and open it.</p>
+        <div className="table-header-side">
+          <p>Sixty-six books on one table. Take one from a stack and open it.</p>
+          <nav aria-label="Site">
+            <a href={sourcesHref()}>Sources</a>
+          </nav>
+        </div>
       </header>
 
       <div className="table-scene" data-mode={mode} data-reduced-motion={reducedMotion}>

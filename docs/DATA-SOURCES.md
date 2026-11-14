@@ -8,7 +8,9 @@ Do not add a data source until you read its licence and add it here.
 
 ## 1. ESV API (Crossway)
 
-- Use: preferred translation, fetched at read time. Task 6.
+Not used in version 1. Decision by Arthur on 2026-11-13.
+
+- Use: none. Before the decision above, the plan was to fetch the preferred translation at read time in Task 6.
 - Address: `https://api.esv.org/v3/passage/html/`
 - Terms: `https://api.esv.org/`, section "What are the conditions of use for the text?". Read on 2026-11-13.
 - Licence: Crossway terms of use. Not an open licence. Non-commercial use only.
@@ -100,6 +102,7 @@ These are findings. Arthur must decide on them. They do not change the design.
 ### Conditions
 
 1. Attribution is required. The site must credit OpenBible.info and link to the licence. Put the credit on the site, for example on an "About" or "Sources" page.
+   - Task 6: the "Sources" page credits OpenBible.info with a link to its page and to the CC BY 4.0 licence. Task 7 adds a statement of any change to the data, if it changes the data (CC BY 4.0 section 3(a)(1)(B)).
 
 ### Check (Task 1 step 9)
 
@@ -147,7 +150,7 @@ The design names these two fonts in `docs/DESIGN.md` section 3. The site bundles
   1. The fonts must not be sold alone.
   2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
   3. A changed font must not use a Reserved Font Name. The site does not change the fonts.
-- Open: I did not check that the `.woff2` files in `dist/assets/` keep the copyright and licence in their metadata. If they do not, the "Sources" page of Task 6 must show the notice and the licence.
+- Check (Task 6 step 7), 2026-11-14: fontTools read the `name` table of `newsreader-latin-400-normal.woff2` and `cormorant-garamond-latin-700-normal.woff2`. Each keeps its copyright line (name 0) and a licence address (name 14). The licence text (name 13) is empty. So the site ships the two licence files as `public/licenses/OFL-cormorant-garamond.txt` and `public/licenses/OFL-newsreader.txt`, copied from the packages. The "Sources" page shows each copyright notice and links to its licence file.
 
 ## 7. Code libraries with a licence that is not open source
 

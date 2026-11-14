@@ -1111,3 +1111,86 @@ a {
   text-decoration: none;
   opacity: 0.6;
 }
+
+/* ---- Sources page: docs/TASKS.md Task 6 ---- */
+
+.sources-page {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 32px 56px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.sources-bar a,
+.table-header-side nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sources-bar a:hover,
+.table-header-side nav a:hover {
+  text-decoration: underline;
+}
+
+.sources-page h1 {
+  margin: 16px 0 8px;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.sources-page h2 {
+  margin: 32px 0 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.sources-page p,
+.sources-page li {
+  margin: 0 0 12px;
+}
+
+.sources-page ul {
+  padding-left: 1.2em;
+}
+
+.sources-page a {
+  overflow-wrap: anywhere;
+}
+
+.table-header-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.app[data-layout='narrow'] .sources-page {
+  padding: 16px 16px 40px;
+}
+
+.app[data-layout='narrow'] .sources-page h1 {
+  font-size: 48px;
+}
+
+.app[data-layout='narrow'] .table-header-side {
+  align-items: flex-start;
+}
+
+/* The name of the translation on each spread. docs/DESIGN.md section 5. */
+.spread-translation {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.06em;
+}

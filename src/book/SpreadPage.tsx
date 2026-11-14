@@ -431,6 +431,8 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
                 <p className="spread-count">
                   of {book.chapters} {book.chapters === 1 ? 'chapter' : 'chapters'}
                 </p>
+                {/* The name of the translation on each spread. docs/DESIGN.md section 5. */}
+                {text && <p className="spread-translation">{text.translation}</p>}
               </header>
               {error && <p role="alert">The text did not load. {error}</p>}
               {rightChapter && <ChapterBody chapter={rightChapter} />}
@@ -444,6 +446,7 @@ export function SpreadPage({ book, chapter, layout }: SpreadPageProps) {
                   <p className="spread-count">
                     of {book.chapters} {book.chapters === 1 ? 'chapter' : 'chapters'}
                   </p>
+                  {text && <p className="spread-translation">{text.translation}</p>}
                 </header>
                 <ChapterBody chapter={ghostChapter} />
               </article>

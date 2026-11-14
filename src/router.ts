@@ -6,8 +6,10 @@ export type Route =
   | { page: 'table' }
   | { page: 'book'; id: string }
   | { page: 'spread'; id: string; chapter: number }
+  | { page: 'sources' }
 
 export function parseRoute(hash: string): Route {
+  if (/^#\/sources\/?$/.test(hash)) return { page: 'sources' }
   const book = /^#\/book\/([a-z0-9-]+)\/?$/.exec(hash)
   if (book) return { page: 'book', id: book[1] }
   const spread = /^#\/book\/([a-z0-9-]+)\/([1-9][0-9]*)\/?$/.exec(hash)
@@ -27,6 +29,11 @@ export function useRoute(): Route {
     () => '',
   )
   return parseRoute(hash)
+}
+
+/** The Sources page. docs/TASKS.md Task 6. */
+export function sourcesHref(): string {
+  return '#/sources'
 }
 
 /** The cover of a book. */

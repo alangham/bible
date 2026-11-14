@@ -7,6 +7,13 @@ const read = (path: string) => readFileSync(new URL(path, import.meta.url), 'utf
 const books = JSON.parse(read('../../public/data/books.json')) as Book[]
 const intros = JSON.parse(read('../../public/data/intros.json')) as Intro[]
 const sources = read('../../docs/CONTENT-SOURCES.md')
+const periods = JSON.parse(read('../../public/data/periods.json')) as {
+  name: string
+  names: string[]
+  years: string | null
+  from: number | null
+  to: number | null
+}[]
 
 describe('intros.json', () => {
   it('has one introduction for each book, in Bible order', () => {
@@ -51,6 +58,37 @@ describe('intros.json', () => {
         if (detail.conservative !== undefined) {
           expect(detail.conservative.trim(), `${intro.id}.${field}.conservative`).not.toBe('')
         }
+      }
+    }
+  })
+
+  it('gives each named period the years of public/data/periods.json (Task 4c rule 1)', () => {
+    const texts = intros.flatMap((i) =>
+      [i.author, i.written, i.whatItIs, i.authorDetail?.critical, i.authorDetail?.conservative, i.writtenDetail?.critical, i.writtenDetail?.conservative]
+        .filter((t): t is string => Boolean(t))
+        .map((t) => [i.id, t] as const),
+    )
+    for (const [id, text] of texts) {
+      for (const sentence of text.split(/(?<=[.?!])\s+/)) {
+        for (const period of periods) {
+          if (!period.years) continue
+          if (period.names.some((name) => sentence.includes(name))) {
+            expect(sentence, `${id}: ${period.name}`).toContain(period.years)
+          }
+        }
+      }
+    }
+  })
+
+  it('keeps the from and to years of each period equal to its years text', () => {
+    const bc = (n: number) => `${-n}`
+    for (const period of periods) {
+      if (period.from !== null && period.to !== null) {
+        expect(period.years, period.name).toBe(`${bc(period.from)} to ${bc(period.to)} BC`)
+      } else if (period.from !== null) {
+        expect(period.years, period.name).toBe(`from ${bc(period.from)} BC`)
+      } else if (period.to !== null) {
+        expect(period.years, period.name).toBe(`before about ${bc(period.to)} BC`)
       }
     }
   })

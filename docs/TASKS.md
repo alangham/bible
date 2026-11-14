@@ -186,7 +186,7 @@ Stop and report. Give Arthur the "Not verified" list.
 
 ## Task 4c. Introductions: decisions on the "Not verified" list
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

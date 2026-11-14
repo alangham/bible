@@ -1,0 +1,34 @@
+[
+  {
+    "id": "judges",
+    "name": "the time of the judges",
+    "names": ["the time of the judges", "when the judges ruled"],
+    "years": "before about 1050 BC",
+    "from": null,
+    "to": -1050
+  },
+  {
+    "id": "captivity",
+    "name": "the captivity in Babylon",
+    "names": ["captivity in Babylon"],
+    "years": "586 to 538 BC",
+    "from": -586,
+    "to": -538
+  },
+  {
+    "id": "persian",
+    "name": "Persian rule",
+    "names": ["Persian rule", "Persian period"],
+    "years": "539 to 332 BC",
+    "from": -539,
+    "to": -332
+  },
+  {
+    "id": "greek",
+    "name": "Greek rule",
+    "names": ["Greek rule"],
+    "years": "from 332 BC",
+    "from": -332,
+    "to": null
+  }
+]

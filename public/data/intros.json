@@ -8,7 +8,8 @@
     },
     "written": "By tradition, in the time of Moses, for the Israelites he led through the wilderness.",
     "writtenDetail": {
-      "critical": "Most scholars date its final form after the captivity in Babylon, perhaps to the 5th century BC."
+      "critical": "Most scholars date its final form after the captivity in Babylon, 586 to 538 BC, possibly the 5th century BC.",
+      "conservative": "Conservative scholars hold that Moses wrote it, citing Numbers 33:2, Deuteronomy 31:24, and John 5:46. He wrote for the Israelites he led, and he probably gathered stories passed down from earlier times."
     },
     "whatItIs": "A narrative that begins with creation, then tells of the flood and the families of Abraham, Isaac, Jacob, and Joseph. It ends with Joseph's death in Egypt, where Jacob's family now lives.",
     "review": "draft"
@@ -17,11 +18,13 @@
     "id": "exodus",
     "author": "Moses, by tradition, wrote most of it. Some details were added later, and some wording appears to have been updated.",
     "authorDetail": {
-      "critical": "By the end of the 1800s, scholars had given up the view that Moses wrote it. Contradictions and repeated passages in the first five books of the Bible led them to this."
+      "critical": "By the end of the 1800s, scholars had given up the view that Moses wrote it. Contradictions and repeated passages in the first five books of the Bible led them to this.",
+      "conservative": "Conservative scholars hold that Moses is best seen as the main writer, as with the other four books of Moses. They accept that some details were clearly added later."
     },
     "written": "By tradition, in the lifetime of Moses.",
     "writtenDetail": {
-      "critical": "Modern scholars think it was first composed in the 6th century BC, among Jews taken captive to Babylon. They date its final revisions to the 5th century BC."
+      "critical": "Modern scholars think it was first composed in the captivity in Babylon, 586 to 538 BC. They date its final revisions to the 5th century BC.",
+      "conservative": "Conservative scholars hold that Moses wrote most of it, in his lifetime. A common view dates Israel's exit from Egypt to about 1446 BC, but some prefer about 1260 BC."
     },
     "whatItIs": "A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.",
     "review": "draft"
@@ -30,11 +33,13 @@
     "id": "leviticus",
     "author": "Moses, by tradition, as its source and main author.",
     "authorDetail": {
-      "critical": "Most scholars think two related schools of priestly writers produced chapters 1 to 16 and chapters 17 to 26."
+      "critical": "Most scholars think two related schools of priestly writers produced chapters 1 to 16 and chapters 17 to 26.",
+      "conservative": "Conservative scholars hold that Moses is best seen as its source and main writer, as with each book of Moses. Leviticus carries on the story of Exodus."
     },
     "written": "By tradition, in the lifetime of Moses. The laws were given at Mount Sinai within one month, in the second year after Israel left Egypt.",
     "writtenDetail": {
-      "critical": "Most scholars place the final form of the five books of Moses under Persian rule, 538 to 332 BC. Leviticus grew over a long time before that."
+      "critical": "Most scholars place the final form of the five books of Moses under Persian rule, 539 to 332 BC. Leviticus grew over a long time before that.",
+      "conservative": "Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. The Lord gave its laws at Mount Sinai, which a common view dates to about 1446 BC."
     },
     "whatItIs": "A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.",
     "review": "draft"
@@ -43,11 +48,13 @@
     "id": "numbers",
     "author": "Moses, by tradition, as its source and main author.",
     "authorDetail": {
-      "critical": "Scholars often trace the first five books of the Bible to four sources. They generally see each source as the work of a school of writers, not one person."
+      "critical": "Scholars often trace the first five books of the Bible to four sources. They generally see each source as the work of a school of writers, not one person.",
+      "conservative": "Conservative scholars keep the traditional view that Moses is the source and main writer of Numbers."
     },
     "written": "By tradition, in the lifetime of Moses.",
     "writtenDetail": {
-      "critical": "Most modern scholars think the first five books of the Bible reached their present form after about 520 BC."
+      "critical": "Most modern scholars think the first five books of the Bible reached their present form after about 520 BC.",
+      "conservative": "Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. It tells of about 40 years, from Mount Sinai to the Jordan River."
     },
     "whatItIs": "A narrative with laws, following Israel through the wilderness from Mount Sinai to the plains of Moab. It takes its name from two counts of the people.",
     "review": "draft"
@@ -56,11 +63,13 @@
     "id": "deuteronomy",
     "author": "Moses, by tradition, apart from the account of his death at the end.",
     "authorDetail": {
-      "critical": "Nearly all secular scholars reject the view that Moses wrote it. So do most scholars who are Christian or Jewish."
+      "critical": "Nearly all secular scholars reject the view that Moses wrote it. So do most scholars who are Christian or Jewish.",
+      "conservative": "Conservative scholars hold that the book is mainly sermons that Moses preached to Israel shortly before he died."
     },
     "written": "By tradition, near the end of the 40 years in the wilderness, shortly before Moses died.",
     "writtenDetail": {
-      "critical": "Nearly all secular scholars date it from the 7th to 5th century BC, as do most Christian and Jewish scholars. Most scholars place its core of laws, chapters 12 to 26, in the 7th century BC."
+      "critical": "Nearly all secular scholars date it from the 7th to 5th century BC, as do most Christian and Jewish scholars. Most scholars place its core of laws, chapters 12 to 26, in the 7th century BC.",
+      "conservative": "Conservative scholars hold that Moses gave these sermons on the plains of Moab, about 1406 BC. That was shortly before he died, as Israel waited to enter Canaan."
     },
     "whatItIs": "Speeches of Moses that retell Israel's journey and restate the law before the people enter Canaan. It ends with the death of Moses.",
     "review": "draft"
@@ -68,10 +77,10 @@
   {
     "id": "joshua",
     "author": "The book does not name its author, though it mentions Joshua writing. An older view, from Jewish tradition, names Joshua, except for the last verses.",
-    "written": "By tradition, in the lifetime of Joshua, except the last verses. Another view says it was perhaps finished in the captivity in Babylon, after 587 BC, but probably begun much earlier.",
+    "written": "By tradition, in the lifetime of Joshua, except the last verses.",
     "writtenDetail": {
       "critical": "Scholars now generally agree it was part of a history from Deuteronomy to Kings, first written under King Josiah. They date that first form near the end of the 7th century BC and a heavy revision to the 6th.",
-      "conservative": "Conservative scholars point to the many notes that something remains to this day. These suggest that the book was finished well after the events, but the writing likely started much earlier."
+      "conservative": "Conservative scholars hold that the writing probably began long before the captivity in Babylon, 586 to 538 BC. Notes on what remains to this day suggest it was finished long after the events, perhaps in the captivity."
     },
     "whatItIs": "A narrative of how Israel, led by Joshua, takes Canaan and divides the land among the tribes. It ends with Joshua's farewell and death.",
     "review": "draft"
@@ -79,10 +88,10 @@
   {
     "id": "judges",
     "author": "Scripture names no author. An older view names Samuel.",
-    "written": "Most of it was probably written by the time of King David, 1010 to 970 BC.",
-    "writtenDetail": {
+    "authorDetail": {
       "critical": "Since about 1950, most scholars see Judges as part of one history from Deuteronomy to Kings. Scholars agree that the editors of that history shaped its repeated pattern of sin, oppression, and rescue."
     },
+    "written": "Most of it was probably written by the time of King David, 1010 to 970 BC.",
     "whatItIs": "A narrative of Israel after the death of Joshua, when leaders called judges rescued the tribes from enemies. It ends in civil war, in days when Israel had no king.",
     "review": "draft"
   },
@@ -91,9 +100,10 @@
     "author": "The book names no author. An older view, from Jewish tradition, names Samuel.",
     "written": "Some time after David became king, about 1010 BC, since it names David and his family line.",
     "writtenDetail": {
-      "critical": "A substantial number of scholars place it in the time of Persian rule, 550 to 330 BC. Its open attitude to foreigners suggests the 5th century BC, when marriage to foreigners was disputed."
+      "critical": "A substantial number of scholars place it under Persian rule, 539 to 332 BC. Its open attitude to foreigners suggests the 5th century BC, when marriage to foreigners was disputed.",
+      "conservative": "Conservative scholars hold that it was written some time after David became king, about 1010 BC. The book names David and his family line in 4:17 to 22."
     },
-    "whatItIs": "A narrative about the widow Naomi, Ruth from Moab, and Boaz of Bethlehem. It is set when the judges ruled and ends with the family line of David.",
+    "whatItIs": "A narrative about the widow Naomi, Ruth from Moab, and Boaz of Bethlehem. It is set when the judges ruled, before about 1050 BC, and ends with the family line of David.",
     "review": "draft"
   },
   {
@@ -101,7 +111,8 @@
     "author": "The author is not known. An older view names Samuel, Gad, and Nathan.",
     "written": "Probably soon after the end of David's reign, about 970 BC.",
     "writtenDetail": {
-      "critical": "Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC."
+      "critical": "Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.",
+      "conservative": "Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended in 971 BC."
     },
     "whatItIs": "A narrative of Israel's move from judges to kings, told through Samuel, Saul, and the young David. It runs from the birth of Samuel to the death of Saul.",
     "review": "draft"
@@ -111,7 +122,8 @@
     "author": "The author is not known. An older view names Gad and Nathan.",
     "written": "Probably soon after the end of David's reign, about 970 BC.",
     "writtenDetail": {
-      "critical": "Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC."
+      "critical": "Most scholars see it as part of a history from Deuteronomy to Kings, composed about 630 to 540 BC.",
+      "conservative": "Conservative scholars hold that 1 and 2 Samuel were probably written shortly after David's reign ended in 971 BC."
     },
     "whatItIs": "A narrative of the reign of David, first over Judah and then over all Israel. It opens with David's lament for Saul and Jonathan and closes as a plague on Israel ends.",
     "review": "draft"
@@ -124,7 +136,8 @@
     },
     "written": "By tradition, in the 6th century BC, after Babylon took Jerusalem.",
     "writtenDetail": {
-      "critical": "Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC."
+      "critical": "Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC.",
+      "conservative": "Conservative scholars see 1 and 2 Kings as written to answer questions raised when Babylon took Jerusalem in 586 BC."
     },
     "whatItIs": "A narrative of Israel and Judah under their kings, from Solomon's anointing to the reign of Ahab's son Ahaziah. It tells of the temple, the split into two kingdoms, and the prophet Elijah.",
     "review": "draft"
@@ -137,7 +150,8 @@
     },
     "written": "By tradition, the 6th century BC. That is after King Jehoiachin was freed and before Cyrus let the captives in Babylon go home in 538 BC.",
     "writtenDetail": {
-      "critical": "Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC."
+      "critical": "Scholars tend to see a first edition under King Josiah in the late 7th century BC. A final edition followed in the middle of the 6th century BC.",
+      "conservative": "Conservative scholars see 1 and 2 Kings as written to answer questions raised when Babylon took Jerusalem in 586 BC."
     },
     "whatItIs": "A history of the kings who ruled Israel and Judah after Ahab died, up to the fall of Jerusalem. It ends with King Jehoiachin freed from prison in Babylon.",
     "review": "draft"
@@ -148,9 +162,10 @@
     "authorDetail": {
       "critical": "Many now think it unlikely that the writer of Chronicles also wrote the story parts of Ezra and Nehemiah."
     },
-    "written": "In the Persian period, 539 to 332 BC, after the Jews came back from captivity in Babylon. An older view gives the 5th century BC.",
+    "written": "In the Persian period, 539 to 332 BC, after the Jews came back from Babylon. An older view gives the 5th century BC.",
     "writtenDetail": {
-      "critical": "Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely."
+      "critical": "Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely.",
+      "conservative": "Conservative scholars hold that the writer served in the temple under Persian rule, 539 to 332 BC. He wrote for the Jews who had come back from Babylon and rebuilt the temple."
     },
     "whatItIs": "Family lists from Adam to the tribes of Israel, then a history of the reign of King David. It was written for the Jews who came back from captivity in Babylon, 586 to 538 BC.",
     "review": "draft"
@@ -161,9 +176,10 @@
     "authorDetail": {
       "critical": "Many now think it unlikely that the writer of Chronicles also wrote the story parts of Ezra and Nehemiah."
     },
-    "written": "In the Persian period, 539 to 332 BC, after the Jews came back from captivity in Babylon. An older view gives the 5th century BC.",
+    "written": "In the Persian period, 539 to 332 BC, after the Jews came back from Babylon. An older view gives the 5th century BC.",
     "writtenDetail": {
-      "critical": "Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely."
+      "critical": "Critics suggest a date probably between about 400 and 250 BC, with 350 to 300 BC the most likely.",
+      "conservative": "Conservative scholars hold that the writer served in the temple under Persian rule, 539 to 332 BC. He wrote for the Jews who had come back from Babylon and rebuilt the temple."
     },
     "whatItIs": "A history of King Solomon and the kings of Judah, up to the fall of Jerusalem. It ends as Cyrus king of Persia lets the captives in Babylon go back to build the temple.",
     "review": "draft"
@@ -176,14 +192,15 @@
       "conservative": "The first person part, 7:27 to 9:15, comes from Ezra himself. Many scholars hold that one writer produced Ezra, Nehemiah, and 1 and 2 Chronicles."
     },
     "written": "The date of writing is not known. The events in the book end in the 5th century BC.",
-    "whatItIs": "A history of the Jews who came home from captivity in Babylon from 538 BC and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.",
+    "whatItIs": "A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.",
     "review": "draft"
   },
   {
     "id": "nehemiah",
     "author": "The book uses Nehemiah's own records, but he did not write all of it. An older view names Nehemiah as the author of nearly all of it.",
     "authorDetail": {
-      "critical": "Whether Nehemiah's account in his own voice is genuine is now very controversial. Minimalists, scholars who accept little of the story as history, doubt that he existed."
+      "critical": "Whether Nehemiah's account in his own voice is genuine is now very controversial. Minimalists, scholars who accept little of the story as history, doubt that he existed.",
+      "conservative": "Conservative scholars hold that the book uses some of Nehemiah's own records, but he did not write all of it. The same writer probably wrote parts of Ezra also."
     },
     "written": "By tradition, the 5th century BC, probably after Nehemiah's second visit to Jerusalem.",
     "writtenDetail": {
@@ -210,7 +227,7 @@
     },
     "written": "The date is not certain, and the story seems set in the age of Abraham, Isaac, and Jacob. An older view gives the time of Moses or of David and Solomon.",
     "writtenDetail": {
-      "critical": "Its language is a late Hebrew with Aramaic influence. That points to the Persian period, about 540 to 330 BC."
+      "critical": "Its Hebrew is from after the captivity in Babylon, 586 to 538 BC, with words and forms from Aramaic. Aramaic grew into a main language under Persian rule, 539 to 332 BC, which points to that time."
     },
     "whatItIs": "A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.",
     "review": "draft"
@@ -219,11 +236,13 @@
     "id": "psalms",
     "author": "The psalms have many writers. David wrote about half, and others are linked to Asaph, the sons of Korah, Solomon, and Moses.",
     "authorDetail": {
-      "critical": "Modern scholars do not accept as history that David wrote the psalms. They see the names as a way to tie the writings to famous figures."
+      "critical": "Modern scholars do not accept as history that David wrote the psalms. They see the names as a way to tie the writings to famous figures.",
+      "conservative": "Conservative scholars hold that about half of the psalms come from David himself. They also link psalms to Asaph, the sons of Korah, Solomon, and Moses."
     },
     "written": "By tradition, over many centuries, from the time of Moses to the time of Ezra.",
     "writtenDetail": {
-      "critical": "The psalms were written over at least five centuries, from the 10th to the 5th century BC or later. Scholars of the Septuagint, the early Greek translation, argue that the collection stayed open until the 1st century AD."
+      "critical": "The psalms were written over at least five centuries, from the 10th to the 5th century BC or later. Scholars of the Septuagint, the early Greek translation, argue that the collection stayed open until the 1st century AD.",
+      "conservative": "Conservative scholars hold that the psalms come from many periods of Israel's history. The heading of Psalm 90 names Moses, long before David."
     },
     "whatItIs": "A collection of 150 songs and prayers in five books, with praise, laments, and thanks. Israel sang them in worship.",
     "review": "draft"
@@ -237,7 +256,8 @@
     },
     "written": "Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC.",
     "writtenDetail": {
-      "critical": "Some argue that the sections differ in date, and chapters 1 to 9 and 30 to 31 are the latest. They put the final editing late in Persian rule, which ended in 331 BC, or after it."
+      "critical": "Some argue that the sections differ in date, and chapters 1 to 9 and 30 to 31 are the latest. They put the final editing late in Persian rule, 539 to 332 BC, or under Greek rule, from 332 BC.",
+      "conservative": "Conservative scholars hold that Proverbs was begun under Solomon, about 971 to 931 BC, as the book itself says. It probably reached its present form under Hezekiah, whose men copied more proverbs."
     },
     "whatItIs": "Short wise sayings and longer poems that teach the way of wisdom. Much is addressed to a son, and it ends with a poem about a wife of noble character.",
     "review": "draft"
@@ -246,12 +266,11 @@
     "id": "ecclesiastes",
     "author": "The writer calls himself the Teacher, son of David and king in Jerusalem, but gives no name. Tradition names Solomon.",
     "authorDetail": {
-      "critical": "Critical scholars have long rejected any date before the captivity in Babylon. Words borrowed from Persian and Aramaic point to no earlier than about 450 BC, long after Solomon.",
-      "conservative": "Some take the writer to be Solomon, and others a later writer who speaks in a role. Either way, the book traces its wisdom to the Lord, the single Shepherd of 12:11."
+      "critical": "Critical scholars have long rejected any date before the captivity in Babylon, 586 to 538 BC. Words borrowed from Persian and Aramaic point to no earlier than about 450 BC, long after Solomon."
     },
     "written": "By tradition, in the time of Solomon.",
     "writtenDetail": {
-      "critical": "Critical scholars date it between about 450 BC and 180 BC, the year Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point after 330 BC."
+      "critical": "Critical scholars date it between about 450 BC and 180 BC, the year Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC."
     },
     "whatItIs": "A book in which the Teacher, a king in Jerusalem, searches for meaning and finds everything futile. It closes by telling the reader to fear God and obey his commands.",
     "review": "draft"
@@ -261,7 +280,8 @@
     "author": "Solomon was probably not the writer, and the song may have been made in his honor. An older view names Solomon as the author.",
     "written": "Probably in the time of Solomon, perhaps under his oversight, in the 10th century BC.",
     "writtenDetail": {
-      "critical": "Most scholars since the 1800s place the song in the 3rd century BC, chiefly because of its language. Others doubt that the language requires a date after the return from Babylon, late in the 6th century BC."
+      "critical": "Most scholars since the 1800s place the song in the 3rd century BC, chiefly because of its language. Others doubt that the language requires a date after the return from Babylon, late in the 6th century BC.",
+      "conservative": "Conservative scholars think the song was probably written in Solomon's reign, about 960 to 931 BC. It may have been written under his oversight."
     },
     "whatItIs": "Love poems, spoken in turn by a young woman and the man she loves. The daughters of Jerusalem listen, and she warns them not to stir up love too soon.",
     "review": "draft"
@@ -270,7 +290,8 @@
     "id": "isaiah",
     "author": "Isaiah son of Amoz, by tradition.",
     "authorDetail": {
-      "critical": "Scholars widely accept that the prophet Isaiah did not write the whole book. Few scholars today credit one person with all of it, or even most of it."
+      "critical": "Scholars widely accept that the prophet Isaiah did not write the whole book. Few scholars today credit one person with all of it, or even most of it.",
+      "conservative": "Conservative scholars treat the prophet Isaiah as the writer, from about 740 BC until after 681 BC. They read chapters 40 to 55 as his prophecies for the captivity in Babylon, 586 to 538 BC."
     },
     "written": "By tradition, the late 8th and early 7th centuries BC. Isaiah was called about 740 BC and outlived the Assyrian king Sennacherib.",
     "writtenDetail": {
@@ -313,7 +334,8 @@
     "id": "daniel",
     "author": "Daniel, a young man of Judah taken captive to serve at the court in Babylon, by tradition.",
     "authorDetail": {
-      "critical": "The stories in chapters 1 to 6 began as legends. Unnamed writers of the 2nd century BC produced the visions in chapters 7 to 12."
+      "critical": "The stories in chapters 1 to 6 began as legends. Unnamed writers of the 2nd century BC produced the visions in chapters 7 to 12.",
+      "conservative": "Conservative scholars hold that Daniel himself wrote the book in the 500s BC. It covers his life and visions from his capture in 605 BC to 536 BC."
     },
     "written": "By tradition, the 6th century BC. The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC.",
     "writtenDetail": {
@@ -334,11 +356,13 @@
     "id": "joel",
     "author": "Joel son of Pethuel, a prophet from Judah, by tradition. Little is known about him.",
     "authorDetail": {
-      "critical": "The book shows signs of growth over time, with material added at later stages. Some influential scholars hold that it is one piece of work."
+      "critical": "The book shows signs of growth over time, with material added at later stages. Some influential scholars hold that it is one piece of work.",
+      "conservative": "Conservative scholars treat Joel, a prophet from Judah, as the writer of the book. Little is known about him, and he may have come from Jerusalem."
     },
-    "written": "Probably after the people of Judah came home from captivity in Babylon, perhaps about 500 BC. An older view places Joel about 800 BC, when Uzziah was king.",
+    "written": "Probably after Judah's people came home from the captivity in Babylon, 586 to 538 BC, perhaps about 500 BC. An older view places Joel about 800 BC, when Uzziah was king.",
     "writtenDetail": {
-      "critical": "Its many echoes of earlier scripture point to a late origin. Some scholars think parts were added as late as the 3rd century BC."
+      "critical": "Its many echoes of earlier scripture point to a late origin. Some scholars think parts were added as late as the 3rd century BC.",
+      "conservative": "Conservative scholars agree with most scholars that the book is later than 586 BC, when Babylon took Judah captive."
     },
     "whatItIs": "Prophecy about a plague of locusts and a call to turn back to God. It looks ahead to a coming day of the LORD and to judgment on the nations.",
     "review": "draft"
@@ -352,7 +376,8 @@
     },
     "written": "By tradition, the 8th century BC, when Uzziah ruled Judah and Jeroboam II ruled Israel. Amos took his message to the northern kingdom.",
     "writtenDetail": {
-      "critical": "The heading and the story of Amos and the priest Amaziah are increasingly seen as written after his time. The vision reports may belong to a later phase as well."
+      "critical": "The heading and the story of Amos and the priest Amaziah are increasingly seen as written after his time. The vision reports may belong to a later phase as well.",
+      "conservative": "Conservative scholars date the preaching of Amos between 793 and 739 BC, probably late in that span. He preached to Israel, the northern kingdom."
     },
     "whatItIs": "Prophecy of judgment on the nations around Israel and on Israel itself. It ends with a promise that God will restore his people to their land.",
     "review": "draft"
@@ -361,6 +386,10 @@
     "id": "obadiah",
     "author": "Obadiah, by tradition. Only his name is known.",
     "written": "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC.",
+    "writtenDetail": {
+      "critical": "The majority of scholars date it soon after Jerusalem fell to Babylon, in the 6th century BC. Some scholars think it took shape over time, amid conflicts with Edom in the 5th and 4th centuries BC.",
+      "conservative": "Conservative scholars place it early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC."
+    },
     "whatItIs": "A short prophecy against Edom, which sided with the enemies of Jerusalem. It ends with a promise of rescue on Mount Zion and of a kingdom that belongs to the LORD.",
     "review": "draft"
   },
@@ -369,7 +398,8 @@
     "author": "Jonah son of Amittai, by tradition.",
     "written": "By tradition, the 8th century BC, when Jeroboam II ruled Israel.",
     "writtenDetail": {
-      "critical": "Most scholars think it was written long after the events, since it uses words known only from much later writings. Mainstream scholars generally read the story as fiction."
+      "critical": "Most scholars think it was written long after the events, since it uses words known only from much later writings. Mainstream scholars generally read the story as fiction.",
+      "conservative": "Conservative scholars place the prophet Jonah in the reign of Jeroboam II over Israel, 782 to 753 BC. They point to 2 Kings 14:23 to 28."
     },
     "whatItIs": "A story about the prophet Jonah, who flees when God sends him to warn Nineveh. When the city repents and God spares it, Jonah is angry.",
     "review": "draft"
@@ -378,11 +408,13 @@
     "id": "micah",
     "author": "Micah the Moreshite, by tradition.",
     "authorDetail": {
-      "critical": "Some scholars, though not all, hold that only chapters 1 to 3 go back to Micah himself."
+      "critical": "Some scholars, though not all, hold that only chapters 1 to 3 go back to Micah himself.",
+      "conservative": "Conservative scholars hold that the prophet Micah wrote the book. They credit passages from chapters 1 to 7 to him."
     },
     "written": "By tradition, the late 8th and early 7th centuries BC, while Jotham, Ahaz, and Hezekiah ruled Judah.",
     "writtenDetail": {
-      "critical": "Scholars agree the book grew over a long time, but dispute how much took shape only at the end. Scholars date the latest parts after the temple's rebuilding in 515 BC, perhaps early in the 5th century BC."
+      "critical": "Scholars agree its last stage came under Persian rule, 539 to 332 BC, or even Greek rule, from 332 BC. They dispute how much took shape then, and date the latest parts after the temple's rebuilding in 515 BC.",
+      "conservative": "Conservative scholars place Micah's work under three kings of Judah, Jotham, Ahaz, and Hezekiah, from 750 to 687 BC. His public work may have lasted about 20 to 25 years."
     },
     "whatItIs": "Prophecy against the sins of Samaria and Jerusalem, with promises of hope. It ends with trust that God will pardon sin and keep faith with Jacob and Abraham.",
     "review": "draft"
@@ -402,7 +434,8 @@
     "id": "habakkuk",
     "author": "The prophet Habakkuk, by tradition. The book names him in its first verse and at the head of chapter 3.",
     "authorDetail": {
-      "critical": "Scholars debate whether chapter 3 has the same author as chapters 1 and 2, or was added later. Every copy of the Septuagint, the Greek translation finished by 132 BC, includes it."
+      "critical": "Scholars debate whether chapter 3 has the same author as chapters 1 and 2, or was added later. Every copy of the Septuagint, the Greek translation finished by 132 BC, includes it.",
+      "conservative": "Conservative scholars treat the prophet Habakkuk as the writer of all three chapters. They read the closing prayer of praise as his own response to God."
     },
     "written": "By tradition, late in the 7th century BC, shortly before Babylon invaded Judah. An older view dates it a little earlier, in the mid 7th century BC.",
     "whatItIs": "A dialogue in which the prophet questions the Lord about injustice and hears his answers. It ends with a prayer set for stringed instruments.",
@@ -413,7 +446,8 @@
     "author": "The prophet Zephaniah, son of Cushi, by tradition.",
     "written": "By tradition, while Josiah was king of Judah, in the 7th century BC.",
     "writtenDetail": {
-      "critical": "Some scholars keep the time of Josiah. Others think editors expanded an early core of messages after Judah fell in 586 BC, or later still."
+      "critical": "Some scholars keep the time of Josiah. Others think editors expanded an early core of messages after Judah fell in 586 BC, or later still.",
+      "conservative": "Conservative scholars place the prophet Zephaniah in the reign of Josiah over Judah, 640 to 609 BC."
     },
     "whatItIs": "A prophecy about the day of the Lord, when he will judge Judah and other nations. It ends with a promise to gather and restore the people.",
     "review": "draft"
@@ -429,11 +463,13 @@
     "id": "zechariah",
     "author": "The prophet Zechariah, a priest, by tradition.",
     "authorDetail": {
-      "critical": "Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet wrote or edited chapters 9 to 14."
+      "critical": "Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet wrote or edited chapters 9 to 14.",
+      "conservative": "Conservative scholars treat the prophet Zechariah, who was also a priest, as the writer of the book."
     },
     "written": "By tradition, from about 520 BC, after the people of Judah returned from Babylon in 538 BC.",
     "writtenDetail": {
-      "critical": "Most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated."
+      "critical": "Most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated.",
+      "conservative": "Conservative scholars date the start of his work to 520 BC, soon after Haggai began to prophesy. Judah's people had come home from Babylon in 538 BC."
     },
     "whatItIs": "Night visions and messages that call the people back to the Lord, then two prophecies about Jerusalem and the nations. The book opens in the second year of King Darius.",
     "review": "draft"
@@ -442,11 +478,13 @@
     "id": "malachi",
     "author": "The prophet Malachi, by tradition. His name means my messenger.",
     "authorDetail": {
-      "critical": "Some scholars think the writer is unknown and that Malachi, meaning my messenger, is a title rather than a name. Others argue from the grammar that it is a name."
+      "critical": "Some scholars think the writer is unknown and that Malachi, meaning my messenger, is a title rather than a name. Others argue from the grammar that it is a name.",
+      "conservative": "Conservative scholars treat Malachi as the name of the prophet behind the book. The name means my messenger."
     },
     "written": "By tradition, about 460 BC, when Ezra and Nehemiah lived.",
     "writtenDetail": {
-      "critical": "Most scholars think editors added to the book in several stages. Its oldest parts date to about 500 BC, and it was almost complete by about 180 BC."
+      "critical": "Most scholars think editors added to the book in several stages. Its oldest parts date to about 500 BC, and it was almost complete by about 180 BC.",
+      "conservative": "Conservative scholars date Malachi probably to about 460 BC, when Ezra and Nehemiah lived. He worked decades after the exiles came home from Babylon and rebuilt the temple."
     },
     "whatItIs": "A set of disputes between the Lord and Israel about worship, marriage, and offerings. It ends with a call to remember the law of Moses and a promise of Elijah.",
     "review": "draft"
@@ -455,11 +493,13 @@
     "id": "matthew",
     "author": "The apostle Matthew, also called Levi, a former tax collector, by tradition.",
     "authorDetail": {
-      "critical": "Most scholars doubt the apostle wrote it, and see it as the work of the next generation of Christians. It also draws on the Gospel of Mark, and some scholars still defend the apostle."
+      "critical": "Most scholars doubt the apostle wrote it, and see it as the work of the next generation of Christians. It also draws on the Gospel of Mark, and some scholars still defend the apostle.",
+      "conservative": "Conservative scholars keep the traditional view that Matthew wrote this Gospel. He was the tax collector, also called Levi, who became a disciple of Jesus."
     },
     "written": "By tradition, about AD 60, before the fall of Jerusalem.",
     "writtenDetail": {
-      "critical": "Most scholars date it after AD 70, because it seems to know of the fall of Jerusalem. Other scholars argue for the 40s or 50s AD."
+      "critical": "Most scholars date it after AD 70, because it seems to know of the fall of Jerusalem. Other scholars argue for the 40s or 50s AD.",
+      "conservative": "Conservative scholars place the writing of this Gospel probably near AD 60, in the late 50s or the early 60s."
     },
     "whatItIs": "A Gospel account of Jesus from his birth to his death, resurrection, and command to make disciples of all nations. Its writer had Jewish Christians in mind.",
     "review": "draft"
@@ -468,11 +508,13 @@
     "id": "mark",
     "author": "John Mark, by tradition. He recorded the reports about Jesus that the apostle Peter passed on to him.",
     "authorDetail": {
-      "critical": "The book does not name its writer, and scholars debate who wrote it. Some deny that anyone named Mark wrote it, and others accept John Mark."
+      "critical": "The book does not name its writer, and scholars debate who wrote it. Some deny that anyone named Mark wrote it, and others accept John Mark.",
+      "conservative": "Conservative scholars hold that John Mark wrote this Gospel. He wrote down Peter's witness to what Jesus said and did."
     },
-    "written": "By tradition, the second half of the 50s AD, likely in Rome. A date in the 60s AD is also possible.",
+    "written": "By tradition, the second half of the 50s AD, likely in Rome. A date in the middle or late 60s AD is also possible.",
     "writtenDetail": {
-      "critical": "Scholars usually date it just before or just after AD 70. Chapter 13 seems to reflect the Jewish war with Rome, AD 66 to 74."
+      "critical": "Scholars usually date it just before or just after AD 70. Chapter 13 seems to reflect the Jewish war with Rome, AD 66 to 74.",
+      "conservative": "Conservative scholars think Mark was likely written in Rome in the middle or late 50s AD. They also allow a date in the middle or late 60s AD."
     },
     "whatItIs": "A Gospel account that begins when John baptizes Jesus and ends with his death and resurrection. It explains Jewish customs for readers who did not know them.",
     "review": "draft"
@@ -481,11 +523,13 @@
     "id": "luke",
     "author": "Luke, a physician and travel companion of Paul, by tradition.",
     "authorDetail": {
-      "critical": "Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most now hold that the writer did travel with Paul, but some point to differences with his letters."
+      "critical": "Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most now hold that the writer did travel with Paul, but some point to differences with his letters.",
+      "conservative": "Conservative scholars keep the traditional view that Luke wrote this Gospel and the book of Acts. Luke was a doctor who traveled with Paul."
     },
     "written": "By tradition, no earlier than about AD 62, just after the last events in Acts. An older view dates it to about AD 60 to 63, a little before Acts.",
     "writtenDetail": {
-      "critical": "Most scholars date it to about AD 80 to 90, after Mark and after the fall of Jerusalem."
+      "critical": "Most scholars date it to about AD 80 to 90, after Mark and after the fall of Jerusalem.",
+      "conservative": "Conservative scholars keep the traditional view that the earliest date is about AD 62. That date comes just after the last events that Acts tells, in chapter 28."
     },
     "whatItIs": "A Gospel account of Jesus from his birth to his resurrection and his going up to heaven. The writer addresses it to a man named Theophilus.",
     "review": "draft"
@@ -505,7 +549,8 @@
     "id": "acts",
     "author": "Luke, a physician and travel companion of Paul, by tradition.",
     "authorDetail": {
-      "critical": "Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most still hold that the writer travelled with Paul, but others note tensions with his letters."
+      "critical": "Late in the 20th century, critical scholars were about evenly split on whether Luke wrote it. Most still hold that the writer travelled with Paul, but others note tensions with his letters.",
+      "conservative": "Conservative scholars keep the traditional view that Luke wrote Acts. He was a doctor and a companion of Paul on his travels, and he also wrote the Gospel of Luke."
     },
     "written": "By tradition, about AD 62, when the story in Acts ends. An older view adds that it was probably written in Rome.",
     "writtenDetail": {
@@ -547,11 +592,13 @@
     "id": "ephesians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A survey in 2011 found 39 of 109 scholars for Paul, 42 against, and 28 unsure."
+      "critical": "Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A survey in 2011 found 39 of 109 scholars for Paul, 42 against, and 28 unsure.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 62, while Paul was in prison in Rome.",
     "writtenDetail": {
-      "critical": "Many scholars who doubt that Paul wrote it date it to about AD 70 to 100."
+      "critical": "Many scholars who doubt that Paul wrote it date it to about AD 70 to 100.",
+      "conservative": "Conservative scholars keep the traditional date of about AD 62. They place it during the house arrest of Paul in Rome, told in Acts 28."
     },
     "whatItIs": "A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.",
     "review": "draft"
@@ -567,11 +614,13 @@
     "id": "colossians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A survey in 2011 found 56 of 109 scholars for Paul, 17 against, and 36 unsure."
+      "critical": "Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A survey in 2011 found 56 of 109 scholars for Paul, 17 against, and 36 unsure.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 62, during Paul's imprisonment, probably in Rome.",
     "writtenDetail": {
-      "critical": "A standard Bible commentary holds that Paul did not write it. It dates the letter after his lifetime, between AD 70 and 80."
+      "critical": "A standard Bible commentary holds that Paul did not write it. It dates the letter after his lifetime, between AD 70 and 80.",
+      "conservative": "Conservative scholars keep the view that it was probably written about AD 62. Paul was then in prison, probably in Rome, when he also wrote Ephesians and Philemon."
     },
     "whatItIs": "A letter that sets Christ above all creation and warns the church against false teaching. It names Paul and Timothy as senders and greets the believers at Colossae.",
     "review": "draft"
@@ -587,11 +636,13 @@
     "id": "2-thessalonians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Critical commentators are about evenly split on whether Paul wrote it. A wider survey of 111 scholars in 2011 found 63 for Paul, 13 against, and 35 unsure."
+      "critical": "Critical commentators are about evenly split on whether Paul wrote it. A wider survey of 111 scholars in 2011 found 63 for Paul, 13 against, and 35 unsure.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 50, soon after 1 Thessalonians. Paul was probably in Corinth.",
     "writtenDetail": {
-      "critical": "Scholars who think a later writer wrote it date it to about AD 80 to 115."
+      "critical": "Scholars who think a later writer wrote it date it to about AD 80 to 115.",
+      "conservative": "Conservative scholars date it to AD 49 to 51, soon after 1 Thessalonians, with Paul probably in Corinth. Paul wrote after he heard that the church believed the day of the Lord was already here."
     },
     "whatItIs": "A letter that corrects a mistaken view about the Lord's return and warns against idle living. It names Paul, Silvanus, and Timothy as senders and goes to the church of the Thessalonians.",
     "review": "draft"
@@ -600,11 +651,13 @@
     "id": "1-timothy",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Most scholars think a later Christian wrote it in Paul's name, in words and a style unlike his. A small and shrinking number of scholars still hold that Paul wrote it."
+      "critical": "Most scholars think a later Christian wrote it in Paul's name, in words and a style unlike his. A small and shrinking number of scholars still hold that Paul wrote it.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, the 60s AD, between Paul's first and last imprisonments in Rome. The place is not known, but an older view names Macedonia.",
     "writtenDetail": {
-      "critical": "Most scholars date it after Paul's death, between the late 1st century and the middle of the 2nd century AD."
+      "critical": "Most scholars date it after Paul's death, between the late 1st century and the middle of the 2nd century AD.",
+      "conservative": "Conservative scholars keep the view that Paul probably wrote it in the 60s AD. He wrote on a journey after the events in Acts, between his two imprisonments in Rome."
     },
     "whatItIs": "A letter of instruction on worship, church leaders, and false teaching. It names Paul as its writer and Timothy, at Ephesus, as its reader.",
     "review": "draft"
@@ -613,11 +666,13 @@
     "id": "2-timothy",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Since the early 1800s, more and more scholars think an unknown follower of Paul wrote it in his name. A number of scholars still hold that Paul wrote it."
+      "critical": "Since the early 1800s, more and more scholars think an unknown follower of Paul wrote it in his name. A number of scholars still hold that Paul wrote it.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 65, in Rome, while Paul was in prison for the second time, shortly before his death.",
     "writtenDetail": {
-      "critical": "Some critical scholars date it to about AD 90 to 140."
+      "critical": "Some critical scholars date it to about AD 90 to 140.",
+      "conservative": "Conservative scholars date it to the second prison term of Paul in Rome, probably AD 64 or 65. In chapter 4, Paul says that he expects to die soon."
     },
     "whatItIs": "A personal letter that urges Timothy to endure hardship and asks him to come quickly. It names Paul as its writer, a prisoner who expects to die soon.",
     "review": "draft"
@@ -626,11 +681,13 @@
     "id": "titus",
     "author": "The apostle Paul, by tradition.",
     "authorDetail": {
-      "critical": "Some scholars think a later writer used the name of Paul after his death. They point to the vocabulary, style, and ideas of the letter."
+      "critical": "Most scholars think all three letters to Timothy and Titus were written after Paul's death, by someone using his name.",
+      "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, the 60s AD, after the first imprisonment of Paul in Rome. The place is not known, but an older view names Nicopolis in Epirus.",
     "writtenDetail": {
-      "critical": "Scholars who doubt Paul wrote it date it from the 80s AD to the late 2nd century AD. Most of them place it between about AD 80 and 100."
+      "critical": "Scholars who doubt Paul wrote it date it from the 80s AD to the late 2nd century AD. Most of them place it between about AD 80 and 100.",
+      "conservative": "Conservative scholars keep the view that Paul probably wrote it in the 60s AD. That was after his first imprisonment in Rome, told in Acts 28, and before his second."
     },
     "whatItIs": "A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.",
     "review": "draft"
@@ -647,7 +704,8 @@
     "author": "The letter does not name its writer, and who wrote it is not known. An older view names Paul.",
     "written": "By tradition, before AD 70, probably in Rome.",
     "writtenDetail": {
-      "critical": "Some scholars date it later, between AD 70 and 100."
+      "critical": "Some scholars date it later, between AD 70 and 100.",
+      "conservative": "Conservative scholars keep the view that it was probably written before AD 70."
     },
     "whatItIs": "A long letter of encouragement that presents Jesus as greater than the angels, Moses, and the old priesthood of Israel. By tradition, its first readers were Christians who knew the Jewish faith.",
     "review": "draft"
@@ -656,11 +714,13 @@
     "id": "james",
     "author": "By tradition, James, the brother of Jesus, who led the church in Jerusalem. An older view also counts him among the twelve apostles.",
     "authorDetail": {
-      "critical": "A widely held view among scholars is that another writer used the name of James."
+      "critical": "A widely held view among scholars is that another writer used the name of James.",
+      "conservative": "Conservative scholars keep the traditional view that Jesus's brother James wrote it. James led the church in Jerusalem, as Acts 15 shows."
     },
     "written": "By tradition, the early 40s AD. An older view places it in Jerusalem in the early 60s AD.",
     "writtenDetail": {
-      "critical": "Scholars who doubt James wrote it usually date it from the late 1st to the mid 2nd century AD. But the debate now seems to lean toward an earlier date than that."
+      "critical": "Scholars who doubt James wrote it usually date it from the late 1st to the mid 2nd century AD. But the debate now seems to lean toward an earlier date than that.",
+      "conservative": "Conservative scholars keep the view that it was probably written about AD 40 to 45."
     },
     "whatItIs": "A letter of practical teaching on trials, wisdom, speech, wealth, and faith shown by deeds. It is addressed to the twelve tribes of the Dispersion, meaning Jewish believers who lived outside Palestine.",
     "review": "draft"
@@ -670,11 +730,12 @@
     "author": "The apostle Peter, by tradition.",
     "authorDetail": {
       "critical": "Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, rhetoric, and philosophy, unlike a fisherman from Galilee.",
-      "conservative": "The letter names Peter as its writer. The writer also calls himself a witness of Christ's sufferings."
+      "conservative": "Conservative scholars keep the traditional view that the apostle Peter wrote it. The letter names Peter as its writer, and the writer calls himself a witness of Christ's sufferings."
     },
     "written": "By tradition, the early 60s AD, probably in Rome. An older view places it in Babylon on the Euphrates.",
     "writtenDetail": {
-      "critical": "Most scholars think it was written after the death of Peter and the other apostles."
+      "critical": "Most scholars think it was written after the death of Peter and the other apostles.",
+      "conservative": "Conservative scholars date it to about AD 62 or 63, under the emperor Nero, probably in Rome. In 1 Peter 5:13, they read the name Babylon as almost certainly meaning Rome."
     },
     "whatItIs": "A letter that encourages Christians to stay hopeful and faithful while they suffer. It is sent to exiles scattered through five regions of Asia Minor, in what is now Turkey.",
     "review": "draft"
@@ -698,11 +759,13 @@
     "id": "1-john",
     "author": "The letter does not name its writer. By tradition, the apostle John, the son of Zebedee.",
     "authorDetail": {
-      "critical": "Most critical scholars hold that the apostle John wrote none of the five books that tradition credits to him."
+      "critical": "Most critical scholars hold that the apostle John wrote none of the five books that tradition credits to him.",
+      "conservative": "Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."
     },
     "written": "By tradition, about AD 85, in Ephesus, late in the life of John.",
     "writtenDetail": {
-      "critical": "Critical scholars think it was probably written between about AD 95 and 110."
+      "critical": "A standard textbook dates it between about AD 95 and 110, probably in Ephesus.",
+      "conservative": "Conservative scholars date it to about AD 85, and no later than the 90s AD. John likely wrote it from Ephesus, where he had apparently moved about AD 70."
     },
     "whatItIs": "A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.",
     "review": "draft"
@@ -710,6 +773,10 @@
   {
     "id": "2-john",
     "author": "By tradition, the apostle John, the son of Zebedee. The writer calls himself the elder.",
+    "authorDetail": {
+      "critical": "Most critical scholars hold that the apostle John wrote none of the five books credited to him. This letter is one of the five.",
+      "conservative": "Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."
+    },
     "written": "By tradition, in Ephesus, no later than the 90s AD.",
     "whatItIs": "A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.",
     "review": "draft"
@@ -717,6 +784,10 @@
   {
     "id": "3-john",
     "author": "By tradition, the apostle John, the son of Zebedee. The writer calls himself the elder.",
+    "authorDetail": {
+      "critical": "Most critical scholars hold that the apostle John wrote none of the five books credited to him. This letter is one of the five.",
+      "conservative": "Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."
+    },
     "written": "By tradition, in Ephesus, no later than the 90s AD.",
     "whatItIs": "A short personal letter from the elder to Gaius. It praises his help for traveling believers and warns about Diotrephes, who refuses to welcome them.",
     "review": "draft"
@@ -725,12 +796,13 @@
     "id": "jude",
     "author": "By tradition, Jude, a brother of both James and Jesus. An older view counts him among the twelve apostles, as Judas, also called Lebbaeus and Thaddaeus.",
     "authorDetail": {
-      "critical": "Scholars still debate who the writer was. One view is that a later writer used the name of Jude to make the letter carry more weight."
+      "critical": "Scholars still debate who the writer was. One view is that a later writer used the name of Jude to make the letter carry more weight.",
+      "conservative": "Conservative scholars keep the traditional view that Jude, a brother of James and of Jesus, wrote it. In Matthew 13:55, Jesus has a brother Judas, and in Greek Judas and Jude are one name."
     },
     "written": "By tradition, the mid 60s AD, apparently in Palestine.",
     "writtenDetail": {
       "critical": "The date is not known, and proposals run from about AD 50 to 110. Scholars who doubt that Jude wrote it generally prefer the later dates, about AD 90 to 110 or after.",
-      "conservative": "Jude and 2 Peter share material, so they are dated close together. The letter itself offers little evidence for its date."
+      "conservative": "Conservative scholars keep the view that it probably dates from the mid 60s AD. Jude and 2 Peter share material, so they are dated close together."
     },
     "whatItIs": "A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved, and kept.",
     "review": "draft"
@@ -739,7 +811,8 @@
     "id": "revelation",
     "author": "By tradition, the apostle John, the son of Zebedee. The writer calls himself John.",
     "authorDetail": {
-      "critical": "Modern scholarship generally does not identify the writer with the apostle John. Many hold that nothing is known of him beyond his work as a Christian prophet."
+      "critical": "Modern scholarship generally does not identify the writer with the apostle John. Many hold that nothing is known of him beyond his work as a Christian prophet.",
+      "conservative": "Conservative scholars keep the traditional view that the writer was John, the son of Zebedee. They hold that he also wrote the Gospel of John and the three letters of John."
     },
     "written": "By tradition, the mid 90s AD, on the island of Patmos.",
     "whatItIs": "A book of prophetic visions, opened by letters to seven churches in Asia, a Roman province, now western Turkey. It describes the conflict between God and evil and ends with a new heaven and earth.",

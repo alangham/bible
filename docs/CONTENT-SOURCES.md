@@ -53,7 +53,7 @@ Each period that the introductions name has one set of years. `public/data/perio
 Arthur decided these on 2026-11-14:
 
 1. The time of King David is 1010 to 970 BC, and the reign ends about 970 BC. Two ESV pages give 971 BC for the end; the site uses 970 BC. 1 Chronicles 29:27 in the Berean Standard Bible gives David's reign as forty years. Each introduction that names the end of the reign gives about 970 BC. A source record keeps the year that its page gives.
-2. The time of a person is not a period and needs no years. Example: Job, Written: "the time of Moses or of David and Solomon".
+2. The time of a person is not a period and needs no years, unless the table of periods has an entry for it. Arthur added the exception on 2026-11-14. Example: Job, Written: "the time of Moses or of David and Solomon" needs no years. Entry: the time of King David has years in the table.
 
 ## How the introductions were written
 
@@ -463,7 +463,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Berean Standard Bible. States: Job 1:1 introduces a blameless man in Uz. Job 1:19 tells of his children killed. Job 2:11 brings three friends. At 38:1 the LORD answers him.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJob%2C_Book_of&oldid=7352541. States: A prose opening in chapters 1 and 2, a debate in poetry from chapter 3 to 42:6, and a prose close.
 - Decided by Arthur on 2026-11-14:
-  - The time of a person is not a period and needs no years. The Written fact names "the time of Moses or of David and Solomon" without years.
+  - The time of a person is not a period and needs no years, unless the table of periods has an entry for it. The Written fact names "the time of Moses or of David and Solomon" without years.
 
 ### Psalms (`psalms`)
 
@@ -540,11 +540,14 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-the-song-of-solomon/. States: Probably composed in Solomon's day, perhaps under his oversight, about 960 to 931 BC. That falls in the 10th century BC.
 - Written, critical scholars: Most scholars since the 1800s place the song in the 3rd century BC, chiefly because of its language. Others doubt that the language requires a date after the return from Babylon, late in the 6th century BC.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Song_of_Songs&oldid=1382222334, section "Composition". States: Since the 19th century, most place the Song in the 3rd century BC. Others doubt its language demands a date after the exile, which ended in the late 6th century. The article cites: Torleif Elgvin, The Song of Songs in Its Context (2020), p. 71. Ariel Bloch and Chana Bloch, The Song of Songs (1995), p. 23. J. Cheryl Exum, Unity, Date, Authorship and the Wisdom of the Song of Songs (2016), p. 57.
-- Written, conservative scholars: Conservative scholars think the song was probably written in Solomon's reign, about 960 to 931 BC. It may have been written under his oversight.
-  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-the-song-of-solomon/, section "Author and Date". States: Solomon probably did not write it himself, but it was probably composed in his reign, perhaps under his oversight, about 960 to 931 BC.
+- Written, conservative scholars: Conservative scholars think that the song was probably written while Solomon was king, and he may have overseen it. These scholars give about 960 to 931 BC as the probable years of the writing.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-the-song-of-solomon/, section "Author and Date". States: Solomon probably did not write it himself, but it was probably composed in Solomon's day, possibly overseen by him, about 960 to 931 BC.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-proverbs/, section "Author and Date". States: Solomon reigned about 971 to 931 BC.
 - What it is: Love poems, spoken in turn by a young woman and the man she loves. The daughters of Jerusalem listen, and she warns them not to stir up love too soon.
   - Berean Standard Bible. States: Song of Solomon 1:2 to 1:8 give words of a woman and her beloved. At 2:7 she charges the daughters of Jerusalem to wait for love.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-the-song-of-solomon/. States: Love poetry in which a young woman and a young man speak in turn, with others joining in like a chorus.
+- Decided by Arthur on 2026-11-14:
+  - Arthur asked on 2026-11-14 that the years of writing not read as the years of Solomon's reign. The time of a person is not a period and needs no years, unless the table of periods has an entry for it. The time of Solomon has no entry, so the site gives no years for his reign here.
 
 ### Isaiah (`isaiah`)
 

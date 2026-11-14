@@ -35,6 +35,26 @@ describe('intros.json', () => {
     }
   })
 
+  it('keeps the cover facts to the traditional view: no fact names scholars (docs/DESIGN.md 4.2, layer 1)', () => {
+    for (const intro of intros) {
+      expect(intro.author, `${intro.id}.author`).not.toMatch(/scholar/i)
+      expect(intro.written, `${intro.id}.written`).not.toMatch(/scholar/i)
+    }
+  })
+
+  it('gives each detail a critical part, and no empty part (layer 2)', () => {
+    for (const intro of intros) {
+      for (const field of ['authorDetail', 'writtenDetail'] as const) {
+        const detail = intro[field]
+        if (!detail) continue
+        expect(detail.critical.trim(), `${intro.id}.${field}.critical`).not.toBe('')
+        if (detail.conservative !== undefined) {
+          expect(detail.conservative.trim(), `${intro.id}.${field}.conservative`).not.toBe('')
+        }
+      }
+    }
+  })
+
   it('has a section for each book in docs/CONTENT-SOURCES.md', () => {
     for (const book of books) expect(sources, book.id).toContain(`### ${book.name} (\`${book.id}\`)`)
   })

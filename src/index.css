@@ -444,10 +444,77 @@ a {
   gap: 40px;
 }
 
-.facts div {
+.facts .fact {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.fact-text {
+  margin: 0;
+}
+
+/* Layer 2 of the authorship rule: the "Scholars differ" control and its detail. */
+.scholars-control {
+  align-self: flex-start;
+  margin-top: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--ink-secondary);
+  border-radius: 22px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scholars-control:hover {
+  background: var(--linen-light);
+}
+
+.scholars-control::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+}
+
+.scholars-control[aria-expanded='true']::after {
+  transform: translateY(1px) rotate(-135deg);
+}
+
+.scholars-detail {
+  margin-top: 10px;
+  padding: 4px 0 4px 14px;
+  border-left: 2px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scholars-detail[hidden] {
+  display: none;
+}
+
+.scholars-part h2 {
+  margin: 0 0 2px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.scholars-part p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .facts dt {

@@ -11,6 +11,7 @@ import { chapterHref } from '../router.ts'
 import { SceneBoundary } from '../table/SceneBoundary.tsx'
 import { hasWebGL } from '../table/webgl.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
+import { CoverFact } from './CoverFact.tsx'
 import { COVER_LABEL_FONT, COVER_TITLE_FONT, coverInk } from './coverTexture.ts'
 import { CoverScene } from './CoverScene.tsx'
 import { clearHandoff, peekHandoff } from './handoff.ts'
@@ -130,18 +131,9 @@ export function CoverPage({ book, intro }: CoverPageProps) {
                 </p>
               )}
               <dl className="facts">
-                <div>
-                  <dt>Author</dt>
-                  <dd>{intro.author}</dd>
-                </div>
-                <div>
-                  <dt>Written</dt>
-                  <dd>{intro.written}</dd>
-                </div>
-                <div>
-                  <dt>What it is</dt>
-                  <dd>{intro.whatItIs}</dd>
-                </div>
+                <CoverFact label="Author" text={intro.author} detail={intro.authorDetail} />
+                <CoverFact label="Written" text={intro.written} detail={intro.writtenDetail} />
+                <CoverFact label="What it is" text={intro.whatItIs} />
               </dl>
             </>
           )}

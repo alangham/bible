@@ -133,7 +133,7 @@ Stop and report. Give Arthur the list of introductions to review.
 
 ## Task 4b. Introductions: two layers and review rules
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

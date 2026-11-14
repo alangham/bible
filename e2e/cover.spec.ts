@@ -20,6 +20,35 @@ test.describe('cover page', () => {
     await expect(page).toHaveURL(/#\/book\/genesis\/3$/)
   })
 
+  test('Genesis gives the traditional author, and the control opens the detail in two parts', async ({ page }) => {
+    await page.goto('./#/book/genesis')
+    const author = page.locator('.fact').filter({ has: page.locator('dt', { hasText: 'Author' }) })
+    await expect(author.locator('.fact-text')).toHaveText(/Moses/)
+    await expect(author.locator('.fact-text')).not.toHaveText(/scholar/i)
+
+    const control = author.getByRole('button', { name: 'Scholars differ' })
+    await expect(control).toHaveAttribute('aria-expanded', 'false')
+    const detail = page.getByRole('region', { name: 'Author: scholars differ' })
+    await expect(detail).toBeHidden()
+
+    await control.focus()
+    await page.keyboard.press('Enter')
+    await expect(control).toHaveAttribute('aria-expanded', 'true')
+    await expect(detail).toBeVisible()
+    await expect(detail.getByRole('heading', { level: 2 })).toHaveText(['Critical scholars', 'Conservative scholars'])
+    await expect(detail.locator('.scholars-part p')).toHaveCount(2)
+
+    const box = await control.boundingBox()
+    expect(box?.height).toBeGreaterThanOrEqual(44)
+  })
+
+  test('Romans has no Scholars differ control', async ({ page }) => {
+    await page.goto('./#/book/romans')
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Romans')
+    await expect(page.locator('.facts dd').first()).toBeVisible()
+    await expect(page.getByRole('button', { name: 'Scholars differ' })).toHaveCount(0)
+  })
+
   test('a spine on the table lands as the closed book', async ({ page }) => {
     await page.goto('./')
     await expect(page.locator('.spine-links')).toHaveAttribute('data-ready', 'true')

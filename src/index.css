@@ -1,4 +1,4 @@
-/* Colors from docs/DESIGN.md section 3. */
+/* Colors and fonts from docs/DESIGN.md section 3. */
 :root {
   --linen: #e7dcc6;
   --linen-light: #f6eedd;
@@ -7,8 +7,10 @@
   --ink-secondary: #4a3b2a;
   --rule: #b9a888;
   --gold: #f3dda0;
+  --title-font: 'Cormorant Garamond', Georgia, serif;
+  --body-font: 'Newsreader', Georgia, serif;
 
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--body-font);
   color: var(--ink);
   background: var(--linen);
 }
@@ -16,16 +18,280 @@
 body {
   margin: 0;
   min-height: 100svh;
-  background: linear-gradient(135deg, var(--linen-light), var(--linen) 50%, var(--linen-shade));
+  /* Linen: light from the top left, shade at the bottom right, and a fine weave. */
+  background:
+    repeating-linear-gradient(0deg, rgba(84, 58, 20, 0.035) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(84, 58, 20, 0.03) 0 1px, transparent 1px 3px),
+    radial-gradient(1100px 800px at 18% 8%, var(--linen-light) 0%, var(--linen) 55%, var(--linen-shade) 100%);
+  background-attachment: fixed;
 }
 
-.table {
-  padding: 48px 16px;
-  text-align: center;
+a {
+  color: inherit;
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 48px;
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* ---- Table page ---- */
+
+.table-page {
+  box-sizing: border-box;
+  min-height: 100svh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 44px 72px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.table-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.table-header h1,
+.message h1,
+.book-placeholder h1 {
   margin: 0;
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 0.95;
+  letter-spacing: -1px;
+}
+
+.table-header p {
+  margin: 0 0 10px;
+  max-width: 330px;
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--ink-secondary);
+}
+
+.table-scene {
+  position: relative;
+  flex: 1;
+  min-height: 560px;
+  /* The canvas reaches the page edges, so the shadows are not cut at the padding. */
+  margin-inline: -72px;
+}
+
+.table-scene[data-mode='flat'] {
+  margin-inline: 0;
+}
+
+.table-canvas {
+  position: absolute !important;
+  inset: 0;
+}
+
+.spine-links {
+  position: absolute;
+  inset: 0;
+}
+
+.stack {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.spine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* 3D mode: the links lie over the spines on screen. The canvas draws the spines. */
+.table-scene[data-mode='3d'] .spine {
+  position: absolute;
+  border-radius: 3px;
+}
+
+.table-scene[data-mode='3d'] .spine-label {
+  opacity: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/*
+  The ring shows the selected spine in 3D mode. It follows the spine when the
+  spine slides out. With reduced motion the spine does not move, and the ring
+  fades in on hover also. A fade is permitted with reduced motion.
+*/
+.table-scene[data-mode='3d'] .spine:focus-visible {
+  outline: none;
+}
+
+.table-scene[data-mode='3d'] .spine::after {
+  content: '';
+  position: absolute;
+  left: var(--ring-left, 0);
+  top: var(--ring-top, 0);
+  width: var(--ring-width, 100%);
+  height: var(--ring-height, 100%);
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 3px var(--ink),
+    0 0 0 5px var(--linen-light);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 200ms,
+    left 150ms,
+    top 150ms,
+    width 150ms,
+    height 150ms;
+}
+
+.table-scene[data-mode='3d'] .spine:focus-visible::after,
+.table-scene[data-mode='3d'][data-reduced-motion='true'] .spine:hover::after {
+  opacity: 1;
+}
+
+.table-scene[data-mode='3d'][data-reduced-motion='true'] .spine::after {
+  transition: opacity 200ms;
+}
+
+.spine-links[data-ready='false'] {
+  visibility: hidden;
+}
+
+/* Flat mode, without WebGL: the links are the spines. */
+.table-scene[data-mode='flat'] .spine-links {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 44px;
+  align-items: end;
+}
+
+.table-scene[data-mode='flat'] .stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  filter: drop-shadow(14px 18px 14px rgba(84, 58, 20, 0.28));
+}
+
+.table-scene[data-mode='flat'] .spine {
+  border-radius: 3px;
+  box-shadow:
+    inset 0 -3px 0 rgba(0, 0, 0, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.14);
+  transition: opacity 200ms;
+}
+
+.table-scene[data-mode='flat'] .spine[data-dimmed='true'] {
+  opacity: 0.18;
+}
+
+/* ---- Legend ---- */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 26px;
+  border-top: 1px solid var(--rule);
+  padding-top: 6px;
+}
+
+.legend-entry {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--body-font);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: color 200ms;
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--ink);
+  transition: opacity 200ms;
+}
+
+/* A dimmed entry keeps a text contrast of 4.5 to 1 or more. Only the swatch fades. */
+.legend-entry[data-state='off'] {
+  color: var(--ink-secondary);
+  font-weight: 400;
+}
+
+.legend-entry[data-state='off'] .legend-swatch {
+  opacity: 0.35;
+}
+
+/* Reduced motion: the fades of opacity and color stay. They are not moves. */
+
+/* ---- Other pages ---- */
+
+.message,
+.book-placeholder {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 44px 72px;
+}
+
+.book-placeholder p {
+  font-size: 20px;
+}
+
+.book-placeholder a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/*
+  Narrow layout: src/screenLayout.ts decides it and App sets data-layout.
+  Do not add a width media query. docs/DESIGN.md section 4.1.
+  For now the header stacks and the padding is smaller. Task 9 builds the
+  narrow table: one stack at a time, spines of 44 px or more.
+*/
+.app[data-layout='narrow'] .table-page,
+.app[data-layout='narrow'] .message,
+.app[data-layout='narrow'] .book-placeholder {
+  padding: 24px 16px;
+}
+
+.app[data-layout='narrow'] .table-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.app[data-layout='narrow'] .table-header h1,
+.app[data-layout='narrow'] .message h1,
+.app[data-layout='narrow'] .book-placeholder h1 {
+  font-size: 48px;
+}
+
+.app[data-layout='narrow'] .table-header p {
+  max-width: none;
+}
+
+.app[data-layout='narrow'] .table-scene {
+  margin-inline: -16px;
 }

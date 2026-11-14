@@ -36,7 +36,7 @@ Stop and report. If the check in step 7 fails, set the status of Task 6 to `BLOC
 
 ## Task 2. Book data and the table page
 
-Status: TODO
+Status: DONE
 
 Goal: the landing page from section 4.1 of `docs/DESIGN.md`.
 

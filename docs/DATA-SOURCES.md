@@ -60,6 +60,14 @@ These are findings. Arthur must decide on them. They do not change the design.
 - Result: PASS. The full text can be committed to a public repository. The licence permits all uses.
 - Limit: I did not download `bsb.txt` in Task 1. I did not check the file format. Task 5 does this.
 
+### Use in Task 2: chapter counts in `public/data/books.json`
+
+- Date: 2026-11-13. I downloaded `https://bereanbible.com/bsb.txt` to a temporary folder. I did not commit the file.
+- Format: UTF-8 with a byte order mark, CRLF line ends. Three header lines, then one verse on each line: `<Book> <chapter>:<verse>`, a tab, the verse text.
+- Method: a script took the highest chapter number of each book. Result: 66 books, 1,189 chapters.
+- The text file names the book of Psalms "Psalm" in each verse reference. `books.json` uses the name "Psalms" and the id `psalms`, as in mockup D1.
+- The groups, stack numbers, and positions in `books.json` come from `docs/DESIGN.md` sections 2 and 4.1. They are not from the BSB.
+
 ---
 
 ## 3. OpenBible.info cross-references
@@ -103,3 +111,21 @@ These are findings. Arthur must decide on them. They do not change the design.
 
 1. Open Bible Data, Freely-Given.org (`https://freely-given.org/OBD/`). It shows the Tyndale Open Bible Dictionary article on quotations as HTML pages. I found no data file and no named licence for the data.
 2. STEPBible Data (`https://github.com/STEPBible/STEPBible-Data`). Licence CC BY 4.0 for the repository. I found no file that lists New Testament quotations of the Old Testament.
+
+---
+
+## 6. Fonts
+
+The design names these two fonts in `docs/DESIGN.md` section 3. The site bundles them from npm. It does not load them from Google Fonts.
+
+| Font | Package | Licence | Licence file |
+|---|---|---|---|
+| Cormorant Garamond, weight 700 | `@fontsource/cormorant-garamond` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/cormorant-garamond/LICENSE` |
+| Newsreader, weights 400 and 600 | `@fontsource/newsreader` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/newsreader/LICENSE` |
+
+- Copyright lines in the licence files: "Copyright 2015 The Cormorant Project Authors" and "Copyright 2020 The Newsreader Project Authors". Read on 2026-11-13.
+- Conditions, from OFL 1.1 sections 1 to 3:
+  1. The fonts must not be sold alone.
+  2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
+  3. A changed font must not use a Reserved Font Name. The site does not change the fonts.
+- Open: I did not check that the `.woff2` files in `dist/assets/` keep the copyright and licence in their metadata. If they do not, the "Sources" page of Task 6 must show the notice and the licence.

@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type 
 import { plainClick } from '../book/links.ts'
 import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
-import { bookHref, sourcesHref, timelineHref } from '../router.ts'
+import { bookHref, quotationsHref, sourcesHref, timelineHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { fitName, measureNames, NAME_FONT, type NameFit } from './fit.ts'
@@ -180,13 +180,14 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
   )
 }
 
-/** The bottom line: the translation, and the links to the pages of the Reference section. Task 15 adds "Quotations". */
+/** The bottom line: the translation, and the links to the pages of the Reference section. docs/DESIGN.md section 7.8. */
 function WallFoot() {
   return (
     <footer className="wall-foot">
       <span className="wall-translation">Berean Standard Bible</span>
       <nav className="wall-reference" aria-label="Reference">
         <a href={timelineHref()}>Timeline</a>
+        <a href={quotationsHref()}>Quotations</a>
         <a href={sourcesHref()}>Sources</a>
       </nav>
     </footer>

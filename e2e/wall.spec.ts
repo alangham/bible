@@ -89,10 +89,10 @@ test.describe('wall', () => {
     expect(await width('Genesis')).toBeCloseTo(168, 0)
   })
 
-  test('the bottom line has the translation and the links Timeline and Sources', async ({ page }) => {
+  test('the bottom line has the translation and the links Timeline, Quotations, and Sources', async ({ page }) => {
     await openWall(page, WIDE)
     const reference = page.getByRole('navigation', { name: 'Reference' })
-    await expect(reference.getByRole('link')).toHaveText(['Timeline', 'Sources'])
+    await expect(reference.getByRole('link')).toHaveText(['Timeline', 'Quotations', 'Sources'])
     await reference.getByRole('link', { name: 'Timeline' }).click()
     await expect(page).toHaveURL(/#\/timeline$/)
   })

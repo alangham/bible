@@ -139,68 +139,6 @@ a {
   border: 0;
 }
 
-/* ---- Sources page: docs/TASKS.md Task 6 ---- */
-
-.sources-page {
-  box-sizing: border-box;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 24px 32px 56px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.sources-bar a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.sources-bar a:hover {
-  text-decoration: underline;
-}
-
-.sources-page h1 {
-  margin: 16px 0 8px;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1;
-}
-
-.sources-page h2 {
-  margin: 32px 0 8px;
-  padding-top: 16px;
-  border-top: 1px solid var(--rule);
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.sources-page p,
-.sources-page li {
-  margin: 0 0 12px;
-}
-
-.sources-page ul {
-  padding-left: 1.2em;
-}
-
-.sources-page a {
-  overflow-wrap: anywhere;
-}
-
-.app[data-layout='narrow'] .sources-page {
-  padding: 16px 16px 40px;
-}
-
-.app[data-layout='narrow'] .sources-page h1 {
-  font-size: 48px;
-}
-
 /* ---- Timeline: docs/DESIGN.md section 4.6, docs/TASKS.md Task 8 ---- */
 
 .timeline-page {
@@ -1760,4 +1698,311 @@ html:has(.reading) {
 .pop-text:focus-visible {
   outline: 2px solid var(--rd-ink);
   outline-offset: 4px;
+}
+
+/* ---- Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15. ---- */
+/* The values are those of docs/prototype/index.html. Task 17 moves the timeline into this section. */
+
+.ref-page {
+  --ref-ink: #1d1d1f;
+  --ref-ink-secondary: #6e6e73;
+  --ref-line: rgba(0, 0, 0, 0.09);
+
+  min-height: 100svh;
+  background: #fff;
+  color: var(--ref-ink);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The top bar: "Books", then the three pages. The link of the current page has an underline. */
+.ref-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--ref-line);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ref-ink-secondary);
+}
+
+.ref-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ref-books {
+  min-width: 84px;
+  margin-left: -10px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+}
+
+.ref-tabs {
+  display: flex;
+  gap: 22px;
+  height: 100%;
+  margin-left: auto;
+}
+
+.ref-tabs a {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.ref-tabs a[aria-current='page'] {
+  color: var(--ref-ink);
+  font-weight: 600;
+  border-bottom-color: var(--ref-ink);
+}
+
+@media (hover: hover) {
+  .ref-bar a:hover {
+    color: var(--ref-ink);
+  }
+}
+
+.ref-bar a:focus-visible {
+  outline: 2px solid var(--ref-ink);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+.ref-main {
+  box-sizing: border-box;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 44px 60px 80px;
+}
+
+.ref-main h1 {
+  margin: 0 0 10px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.ref-lead {
+  max-width: 640px;
+  margin: 0 0 28px;
+  color: var(--ref-ink-secondary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ref-foot {
+  margin-top: 18px;
+  color: var(--ref-ink-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* The quotation diagram and the list of the selected book. */
+.q-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 56px;
+}
+
+.q-diagram {
+  flex: none;
+  max-width: 100%;
+  height: auto;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.q-book {
+  cursor: pointer;
+  outline: none;
+}
+
+.q-hit {
+  fill: transparent;
+  stroke: none;
+}
+
+.q-book:focus-visible .q-hit {
+  stroke: var(--ref-ink);
+  stroke-width: 1.5;
+}
+
+@media (hover: hover) {
+  .q-book:hover text {
+    text-decoration: underline;
+  }
+}
+
+.q-line {
+  transition: stroke-opacity 0.3s;
+}
+
+.q-list {
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  padding-top: 60px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.q-band {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 7px;
+  background: var(--q);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.q-list h2 {
+  margin: 8px 0 4px;
+  color: var(--q);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.q-list h2:focus {
+  outline: none;
+}
+
+.q-list h3 {
+  margin: 16px 0 4px;
+  color: var(--ref-ink-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.q-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.q-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.q-list li button {
+  min-height: 30px;
+  padding: 5px 0;
+  border: 0;
+  background: none;
+  font: 600 15px Inter, system-ui, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .q-list li button:hover {
+    text-decoration: underline;
+  }
+}
+
+.q-none {
+  margin: 0;
+}
+
+.q-open {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 6px 0;
+  color: var(--q);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.q-select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin: 0 0 14px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ref-ink);
+  font: 500 16px Inter, system-ui, sans-serif;
+}
+
+/* The Sources page: one column of 700 px at most. */
+.ref-main.sources-page > section {
+  max-width: 700px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.ref-main.sources-page h2 {
+  margin: 34px 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ref-main.sources-page p,
+.ref-main.sources-page li {
+  margin: 0 0 12px;
+}
+
+.ref-main.sources-page ul {
+  padding-left: 20px;
+}
+
+.ref-main.sources-page a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Narrow layout. */
+.app[data-layout='narrow'] .ref-bar {
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.app[data-layout='narrow'] .ref-tabs {
+  gap: 14px;
+  font-size: 14px;
+}
+
+.app[data-layout='narrow'] .ref-main {
+  padding: 28px 20px 60px;
+}
+
+.app[data-layout='narrow'] .ref-main h1 {
+  font-size: 36px;
+}
+
+.app[data-layout='narrow'] .q-list {
+  max-width: none;
+  padding-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q-line {
+    transition: none;
+  }
 }

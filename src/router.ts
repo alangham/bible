@@ -8,10 +8,12 @@ export type Route =
   | { page: 'chapter'; id: string; chapter: number; verse?: number }
   | { page: 'sources' }
   | { page: 'timeline' }
+  | { page: 'quotations' }
 
 export function parseRoute(hash: string): Route {
   if (/^#\/sources\/?$/.test(hash)) return { page: 'sources' }
   if (/^#\/timeline\/?$/.test(hash)) return { page: 'timeline' }
+  if (/^#\/quotations\/?$/.test(hash)) return { page: 'quotations' }
   const book = /^#\/book\/([a-z0-9-]+)\/?$/.exec(hash)
   if (book) return { page: 'book', id: book[1] }
   const chapter = /^#\/book\/([a-z0-9-]+)\/([1-9][0-9]*)(?:\/([1-9][0-9]*))?\/?$/.exec(hash)
@@ -45,6 +47,11 @@ export function sourcesHref(): string {
 /** The timeline. docs/DESIGN.md section 4.6. */
 export function timelineHref(): string {
   return '#/timeline'
+}
+
+/** The quotation diagram. docs/DESIGN.md section 7.8, docs/TASKS.md Task 15. */
+export function quotationsHref(): string {
+  return '#/quotations'
 }
 
 /** A book: the reading page at the last-read chapter of the book, or at chapter 1. */

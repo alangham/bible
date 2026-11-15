@@ -3,6 +3,7 @@ import { SourcesPage } from './SourcesPage.tsx'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
 import { ReadingPage } from './reading/ReadingPage.tsx'
+import { QuotationsPage } from './reference/QuotationsPage.tsx'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
 import { TimelinePage } from './timeline/TimelinePage.tsx'
@@ -44,6 +45,8 @@ function App() {
     page = <ReadingPage books={books} intros={intros} id={route.id} chapter={chapter} verse={verse} layout={layout} />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
+  } else if (route.page === 'quotations') {
+    page = <QuotationsPage books={books} layout={layout} />
   } else if (route.page === 'timeline') {
     page = <TimelinePage books={books} intros={intros} layout={layout} />
   } else {

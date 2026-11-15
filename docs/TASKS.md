@@ -724,7 +724,7 @@ Stop and report.
 
 ## Task 15. Reference section: Quotations and Sources
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

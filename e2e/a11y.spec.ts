@@ -51,7 +51,8 @@ const PAGES: { name: string; path: string; minTarget?: number; open?: string }[]
   { name: 'reading, About this book open', path: './#/book/genesis/1', minTarget: 24, open: 'About this book' },
   { name: 'reading, poetry', path: './#/book/psalms/119', minTarget: 24 },
   { name: 'reading, links', path: './#/book/hebrews/9', minTarget: 24 },
-  { name: 'sources', path: './#/sources' },
+  { name: 'sources', path: './#/sources', minTarget: 24 },
+  { name: 'quotations', path: './#/quotations', minTarget: 24 },
   { name: 'timeline', path: './#/timeline' },
 ]
 
@@ -111,7 +112,10 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
           h = Math.max(h, parseFloat(ps.height) || 0)
         }
       }
-      if (!inSentence && (w < minTarget - 0.5 || h < minTarget - 0.5)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
+      // WCAG 2.5.8, the exception "Equivalent": a different control on the page does the same thing and is big enough.
+      const equivalent = el.getAttribute('data-target-equivalent')
+      const hasEquivalent = !!equivalent && [...document.getElementsByClassName(equivalent)].some((e) => visible(e) && e.getBoundingClientRect().height >= minTarget)
+      if (!inSentence && !hasEquivalent && (w < minTarget - 0.5 || h < minTarget - 0.5)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
     }
 
     // 4. Contrast.
@@ -264,6 +268,18 @@ for (const layout of LAYOUTS) {
     await settled(page)
     await page.getByRole('button', { name: 'Psalm 78:1–72' }).click()
     await expect(page.getByRole('dialog', { name: 'Psalm 78:1–72' })).toBeVisible()
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the quotation diagram with Romans selected, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/quotations')
+    await settled(page)
+    if (layout.name === 'narrow') await page.getByRole('combobox', { name: 'Select a book' }).selectOption('romans')
+    else await page.getByRole('button', { name: 'Romans', exact: true }).click()
+    await expect(page.locator('.q-list h2')).toHaveText('Romans')
     await page.waitForTimeout(400)
     expect(await audit(page, layout.name, 24)).toEqual([])
     expect(await axe(page)).toEqual([])

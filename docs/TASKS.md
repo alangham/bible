@@ -1121,7 +1121,7 @@ Stop and report.
 
 ## Task 21. King James Version: the pages
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

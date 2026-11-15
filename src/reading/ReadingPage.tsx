@@ -8,6 +8,8 @@
 //   no entry to the browser history.
 // - The links: a control opens the pop-up. "Go there" is travel: a direct change to the linked
 //   verse, which has a light background for a short time. The trail shows below the top bar.
+// - The translation switch is at the top of the panel of the chapter grid. A change of the translation
+//   keeps the verse at the top of the page at its place. docs/DESIGN.md section 8.5, Task 21 step 6.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
@@ -16,6 +18,8 @@ import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
+import type { Translation } from '../data/translation.ts'
+import { TranslationSwitch } from '../TranslationSwitch.tsx'
 import type { ChapterRef, LinkEnd } from '../data/links.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { bookHref, chapterHref } from '../router.ts'
@@ -51,6 +55,70 @@ interface ReadingPageProps {
   layout: ScreenLayout
 }
 
+/**
+ * The place of the verse at the top of the page when the reader changes the translation: the first
+ * verse number below the top bar, and its distance from the top of the screen.
+ */
+interface KeptPlace {
+  translation: Translation
+  book: string
+  c: number
+  v: number
+  top: number
+  /** When the place was taken, in ms. An old place is not used. */
+  at: number
+  /** The chapters on the page when the place was taken, as "<book> <chapter>". The place waits for their new text. */
+  chapters: string[]
+}
+
+/** How long a kept place waits for the text of the new translation, in ms. */
+const KEEP_MS = 5000
+/** The actions of the reader that end a kept place: the reader scrolls or reads on. */
+const READER_EVENTS = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const
+
+const sectionKey = (s: HTMLElement) => `${s.dataset.book} ${s.dataset.chapter}`
+
+/** The first verse number below the top bar, on the page now. */
+function topVerse(translation: Translation): KeptPlace | null {
+  const sections = [...document.querySelectorAll<HTMLElement>('.rd-column section.rd-chapter')]
+  for (const number of document.querySelectorAll<HTMLElement>('.rd-column section.rd-chapter .chapter-body .vn[data-verse]')) {
+    const top = number.getBoundingClientRect().top
+    if (top < BAR_PX) continue
+    const section = number.closest<HTMLElement>('section.rd-chapter')
+    if (!section?.dataset.book) return null
+    return {
+      translation,
+      book: section.dataset.book,
+      c: Number(section.dataset.chapter),
+      v: Number(number.dataset.verse),
+      top,
+      at: Date.now(),
+      chapters: sections.map(sectionKey),
+    }
+  }
+  return null
+}
+
+/**
+ * Scrolls so that the kept verse is at its old distance from the top of the screen. If the text has
+ * no verse with that number, the verse before it. False if the chapter of the verse is not on the page.
+ */
+function restorePlace(column: HTMLElement, place: KeptPlace): boolean {
+  const section = column.querySelector(`section.rd-chapter[data-book="${place.book}"][data-chapter="${place.c}"]`)
+  if (!section) return false
+  let best: HTMLElement | null = null
+  let bestVerse = 0
+  for (const number of section.querySelectorAll<HTMLElement>('.chapter-body .vn[data-verse]')) {
+    const v = Number(number.dataset.verse)
+    if (v <= place.v && v > bestVerse) {
+      best = number
+      bestVerse = v
+    }
+  }
+  if (best) window.scrollBy(0, best.getBoundingClientRect().top - place.top)
+  return true
+}
+
 /** Replaces the address with no new entry in the browser history. */
 function replaceAddress(hash: string) {
   if (window.location.hash === hash) return
@@ -70,6 +138,31 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   const [current, setCurrent] = useState<ChapterPlace | null>(null)
   const [popup, setPopup] = useState<{ end: LinkEnd; anchor: HTMLElement; reference?: LineReference } | null>(null)
   const trail = useTrail()
+  const kept = useRef<KeptPlace | null>(null)
+  /** Removes the listeners for the actions of the reader that end the kept place. */
+  const stopWatch = useRef<(() => void) | null>(null)
+
+  const dropKept = useCallback(() => {
+    kept.current = null
+    stopWatch.current?.()
+    stopWatch.current = null
+  }, [])
+
+  // The place of the top verse is kept until the chapters on the page show the new translation. If the
+  // reader scrolls or reads on before that, the page does not move back.
+  const keepPlace = useCallback(
+    (place: KeptPlace | null) => {
+      dropKept()
+      if (!place) return
+      kept.current = place
+      for (const e of READER_EVENTS) window.addEventListener(e, dropKept, { capture: true, passive: true })
+      stopWatch.current = () => {
+        for (const e of READER_EVENTS) window.removeEventListener(e, dropKept, { capture: true })
+      }
+    },
+    [dropKept],
+  )
+  useEffect(() => dropKept, [dropKept])
 
   useLayoutEffect(() => {
     if (!book || !valid) return
@@ -129,6 +222,23 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   )
   const closePopup = useCallback(() => setPopup(null), [])
 
+  // A chapter shows new text. After a change of the translation, the kept verse goes back to its place,
+  // before the browser paints. When each chapter that was on the page shows the new translation, the
+  // place is not kept.
+  const onTextShown = useCallback(() => {
+    const place = kept.current
+    const column = document.querySelector<HTMLElement>('.rd-column')
+    if (!place || !column) return
+    if (Date.now() - place.at > KEEP_MS || !restorePlace(column, place)) {
+      dropKept()
+      return
+    }
+    const waiting = [...column.querySelectorAll<HTMLElement>('section.rd-chapter')].some(
+      (s) => place.chapters.includes(sectionKey(s)) && s.dataset.translation !== place.translation,
+    )
+    if (!waiting) dropKept()
+  }, [dropKept])
+
   if (!book) return <BookNotFound />
   if (!valid) {
     return (
@@ -144,15 +254,32 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   const shown = current ?? (start ? { book: start.book, n: start.n } : null)
   return (
     <div className="reading" data-trail={trail.stops.length > 0} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
-      {shown && <TopBar books={books} place={shown} onOpenChapter={(p) => open({ book: p.book.id, c: p.n })} />}
+      {shown && (
+        <TopBar
+          books={books}
+          place={shown}
+          onOpenChapter={(p) => open({ book: p.book.id, c: p.n })}
+          onTranslation={(t) => keepPlace(topVerse(t))}
+        />
+      )}
       <TrailBar books={books} onGo={open} />
-      {start && <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onLink={onLink} onReadWith={onReadWith} />}
+      {start && (
+        <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onTextShown={onTextShown} onLink={onLink} onReadWith={onReadWith} />
+      )}
       {popup && <LinkPopup key={popup.anchor.dataset.link} books={books} end={popup.end} reference={popup.reference} anchor={popup.anchor} layout={layout} onGo={onGo} onClose={closePopup} />}
     </div>
   )
 }
 
-function TopBar({ place, onOpenChapter }: { books: Book[]; place: ChapterPlace; onOpenChapter: (p: ChapterPlace) => void }) {
+interface TopBarProps {
+  books: Book[]
+  place: ChapterPlace
+  onOpenChapter: (p: ChapterPlace) => void
+  /** The reader selected a different translation. The page still shows the old text. */
+  onTranslation: (t: Translation) => void
+}
+
+function TopBar({ place, onOpenChapter, onTranslation }: TopBarProps) {
   const [open, setOpen] = useState(false)
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
@@ -208,6 +335,15 @@ function TopBar({ place, onOpenChapter }: { books: Book[]; place: ChapterPlace; 
       </header>
       {open && <div className="rd-shade" onClick={() => setOpen(false)} />}
       <div className="rd-grid-panel" id={gridId} ref={gridRef} hidden={!open}>
+        {/* A selection closes the panel. The focus goes back to the control that opens the panel. */}
+        <TranslationSwitch
+          className="rd-translation-switch"
+          onSelect={(t, changed) => {
+            if (changed) onTranslation(t)
+            setOpen(false)
+            whereRef.current?.focus()
+          }}
+        />
         <nav aria-label={`Chapters of ${book.name}`}>
           <ol className="rd-grid">
             {Array.from({ length: book.chapters }, (_, i) => i + 1).map((c) => (
@@ -239,11 +375,13 @@ interface ReadingScrollProps {
   intros: Intro[] | null | undefined
   start: Start
   onCurrent: (place: ChapterPlace, first: boolean) => void
+  /** A chapter shows new text. */
+  onTextShown: () => void
   onLink: (end: LinkEnd, control: HTMLElement, reference?: LineReference) => void
   onReadWith: (from: ChapterRef, to: ChapterRef) => void
 }
 
-function ReadingScroll({ books, intros, start, onCurrent, onLink, onReadWith }: ReadingScrollProps) {
+function ReadingScroll({ books, intros, start, onCurrent, onTextShown, onLink, onReadWith }: ReadingScrollProps) {
   const [chapters, setChapters] = useState<ChapterPlace[]>(() => [{ book: start.book, n: start.n }])
   const [loaded, setLoaded] = useState<ReadonlySet<string>>(() => new Set())
   const echoOn = useEchoLinks()
@@ -379,6 +517,7 @@ function ReadingScroll({ books, intros, start, onCurrent, onLink, onReadWith }: 
           echoOn={echoOn}
           marginLabels={marginLabels}
           onLoaded={onLoaded}
+          onTextShown={onTextShown}
           onLink={onLink}
           onReadWith={onReadWith}
         />

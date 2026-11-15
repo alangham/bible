@@ -3,6 +3,7 @@
 // introductions are in docs/CONTENT-SOURCES.md.
 // The look of the Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15 step 9.
 // The fonts section names the fonts that the site uses, Inter and Lora: docs/TASKS.md Task 17 step 11.
+// The credit of the King James Version: docs/TASKS.md Task 21 step 9.
 
 import { useEffect } from 'react'
 import { RefBar } from './reference/RefBar.tsx'
@@ -22,8 +23,8 @@ export function SourcesPage() {
         <section aria-labelledby="sources-text">
           <h2 id="sources-text">The Bible text</h2>
           <p>
-            The text on this site is the <a href="https://berean.bible/">Berean Standard Bible</a> (BSB). The Berean Standard Bible is in the public
-            domain. The publisher placed it in the public domain on April 30, 2023, with the{' '}
+            The site has two translations: the <a href="https://berean.bible/">Berean Standard Bible</a> (BSB) and the King James Version (KJV). The
+            Berean Standard Bible is in the public domain. The publisher placed it in the public domain on April 30, 2023, with the{' '}
             <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> dedication. The site shows the words without change.
           </p>
           <p>
@@ -33,6 +34,22 @@ export function SourcesPage() {
           <p>
             The Holy Bible, Berean Standard Bible, BSB is produced in cooperation with Bible Hub, Discovery Bible, unfoldingWord, Bible Aquifer,
             OpenBible.com, and the Berean Bible Translation Committee.
+          </p>
+          {/* The King James Version: docs/DESIGN.md section 8.6, docs/TASKS.md Task 21 step 9. The facts are from sources/kjv/copr.htm. */}
+          <p>
+            The King James Version on this site is the standardized text of 1769, from the files of{' '}
+            <a href="https://ebible.org/eng-kjv2006">eBible.org</a>, by courtesy of the <a href="https://crosswire.org/">Crosswire Bible Society</a>{' '}
+            and eBible.org. It is in the public domain. In the United Kingdom, three publishers have the exclusive right to print this translation:
+            Cambridge University Press, Oxford University Press, and Collins. eBible.org states that this right has no effect outside the United
+            Kingdom.
+          </p>
+          <p>
+            The site does not show the Strong's numbers and the footnotes of these files. The words that the translators added show in italics. In
+            13 verses, the files write one word as two words, for example "can not", and the site joins the word.
+          </p>
+          <p>
+            On the King James Version pages, the section headings, the cross-reference lines, the paragraphs, and the lines of poetry are those of
+            the Berean Standard Bible files. They are not part of the King James Version.
           </p>
         </section>
 

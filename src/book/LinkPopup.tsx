@@ -2,12 +2,14 @@
 // the reference in capitals, the type of link and the passage that it comes from, the text of the
 // linked passage, the reason line of a quotation link, the source, and "Go there" and "Stay here".
 // In the wide layout it opens near the control. In the narrow layout it opens from the bottom.
+// The text of the linked passage is in the selected translation. docs/DESIGN.md section 8.4.
 
-import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
+import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { groupOf, type Book } from '../data/books.ts'
 import type { LinkEnd } from '../data/links.ts'
 import { passageName, passageVerses, type PassageRange } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
+import { useTranslation } from '../data/translation.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { chapterHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
@@ -44,20 +46,21 @@ interface LinkPopupProps {
  * area takes the keyboard focus, so that the keyboard can scroll it.
  */
 function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageRange; name: string }) {
+  const translation = useTranslation()
   const [text, setText] = useState<BookText | null>(null)
   const [failed, setFailed] = useState(false)
   const [scrolls, setScrolls] = useState(false)
   const area = useRef<HTMLParagraphElement>(null)
   useEffect(() => {
     let live = true
-    loadBookText(passage.book).then(
+    loadBookText(passage.book, translation).then(
       (t) => live && setText(t),
       () => live && setFailed(true),
     )
     return () => {
       live = false
     }
-  }, [passage.book])
+  }, [passage.book, translation])
   useLayoutEffect(() => {
     const el = area.current
     if (!el) return
@@ -80,10 +83,21 @@ function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageR
       {verses.map((v) => (
         <span key={`${v.c}:${v.v}`} className={v.omitted ? 'pop-omitted' : undefined}>
           <sup className="pop-vn">{v.v}</sup>
-          {v.text}{' '}
+          {/* The added words of the King James Version, in italics. docs/DESIGN.md section 8.2. */}
+          {v.parts.map((part, i) =>
+            part.a ? (
+              <i key={i} className="added">
+                {part.t}
+              </i>
+            ) : (
+              <Fragment key={i}>{part.t}</Fragment>
+            ),
+          )}{' '}
         </span>
       ))}
-      <span className="sr-only">({passageName(books, passage)}, Berean Standard Bible)</span>
+      <span className="sr-only">
+        ({passageName(books, passage)}, {text.translation})
+      </span>
     </p>
   )
 }
@@ -94,6 +108,7 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
   const [pos, setPos] = useState<{ left: number; top: number; maxHeight: number } | null>(null)
   const there = books.find((b) => b.id === end.there.book)
   const quotation = end.link.type === 'quotation'
+  const translation = useTranslation()
 
   // Wide layout: under the control, or above it when there is more space above. It follows the control.
   useLayoutEffect(() => {
@@ -191,6 +206,8 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
         {reference?.firstVerse && <p className="pop-first">First verse</p>}
         <LinkedText books={books} passage={reference?.passage ?? end.there} name={reference?.shown ?? passageName(books, end.there)} />
         {end.link.reason && <p className="pop-reason">{end.link.reason}</p>}
+        {/* The reason line quotes the Berean Standard Bible. docs/DESIGN.md section 8.4. */}
+        {quotation && translation === 'kjv' && <p className="pop-quoted-from">The quoted words are from the Berean Standard Bible.</p>}
         <p className="pop-source">{SOURCE_LINE[end.link.source]}</p>
         <div className="pop-actions">
           <a

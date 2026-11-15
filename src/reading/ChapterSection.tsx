@@ -17,6 +17,7 @@ import { loadBookLinks, marksOf, type BookLinks, type ChapterRef, type LinkEnd }
 import type { LineReference } from '../data/xrefs.ts'
 import { passageName } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
+import { useTranslation, type Translation } from '../data/translation.ts'
 import { bandLabel } from '../wall/layout.ts'
 import { AboutBook } from './AboutBook.tsx'
 import { headingWidthEm } from './heading.ts'
@@ -36,13 +37,19 @@ interface ChapterSectionProps {
   echoOn: boolean
   marginLabels: boolean
   onLoaded: (key: string) => void
+  /** The text on the page changed: the first text, or the text of a new translation. */
+  onTextShown: () => void
   onLink: (end: LinkEnd, control: HTMLElement, reference?: LineReference) => void
   onReadWith: (from: ChapterRef, to: ChapterRef) => void
 }
 
-export function ChapterSection({ books, book, n, full, intro, first, echoOn, marginLabels, onLoaded, onLink, onReadWith }: ChapterSectionProps) {
-  const [text, setText] = useState<BookText | null>(null)
-  const [error, setError] = useState<string | null>(null)
+export function ChapterSection({ books, book, n, full, intro, first, echoOn, marginLabels, onLoaded, onTextShown, onLink, onReadWith }: ChapterSectionProps) {
+  const translation = useTranslation()
+  // The text on the page and its translation. When the reader selects a different translation, the
+  // old text stays on the page until the new text loads, so the height of the page does not jump.
+  const [shown, setShown] = useState<{ translation: Translation; text: BookText } | null>(null)
+  const [error, setError] = useState<{ translation: Translation; message: string } | null>(null)
+  const text = shown?.text ?? null
   const [links, setLinks] = useState<BookLinks | null>(null)
   /** True when the links loaded or did not load. Then the height of the chapter is final. */
   const [linksDone, setLinksDone] = useState(false)
@@ -52,10 +59,29 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
 
   useEffect(() => {
     let live = true
-    loadBookText(book.id).then(
-      (t) => live && setText(t),
-      (e: unknown) => live && setError(String(e)),
+    loadBookText(book.id, translation).then(
+      (t) => {
+        if (!live) return
+        setShown({ translation, text: t })
+        setError(null)
+      },
+      (e: unknown) => {
+        if (!live) return
+        setShown(null)
+        setError({ translation, message: String(e) })
+      },
     )
+    return () => {
+      live = false
+    }
+  }, [book.id, translation])
+
+  useLayoutEffect(() => {
+    if (shown || error) onTextShown()
+  }, [shown, error, onTextShown])
+
+  useEffect(() => {
+    let live = true
     // Without the links, the text shows with no link controls.
     loadBookLinks(book.id)
       .then(
@@ -132,6 +158,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
       data-chapter={n}
       data-full={full}
       data-loaded={(chapter !== undefined && linksDone) || error !== null}
+      data-translation={shown?.translation ?? error?.translation}
       data-labels-ready={labelEnds.length > 0 ? labelTops !== null : undefined}
       style={style}
       aria-labelledby={headingId}
@@ -149,7 +176,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
           <ReadWith books={books} list={readWith} onTravel={(to) => onReadWith({ book: book.id, c: n }, to)} />
         </div>
       )}
-      {error && <p role="alert">The text did not load. {error}</p>}
+      {error && <p role="alert">The text did not load. {error.message}</p>}
       {chapter && <ChapterBody chapter={chapter} books={books} marks={marks} echoOn={echoOn} verseLabels={marginLabels ? renderLabels : undefined} onLink={onLink} />}
     </section>
   )

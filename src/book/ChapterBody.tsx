@@ -187,8 +187,14 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
                   </span>
                 )
               }
-              // Added words show as plain words until a task adds italics. docs/TASKS.md Task 20 step 7.
-              return <Fragment key={i}>{isAdded(item) ? item.a : item}</Fragment>
+              // The added words of the King James Version, in italics. docs/DESIGN.md section 8.2.
+              if (isAdded(item))
+                return (
+                  <i key={i} className="added">
+                    {item.a}
+                  </i>
+                )
+              return <Fragment key={i}>{item}</Fragment>
             })}
           </p>
         )

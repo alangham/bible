@@ -281,6 +281,43 @@ for (const layout of LAYOUTS) {
     expect(await axe(page)).toEqual([])
   })
 
+  // The King James Version selected. docs/TASKS.md Task 21 step 11.
+  test(`accessibility: the wall, King James Version, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
+    await page.goto('./')
+    await settled(page)
+    await expect(page.getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'true')
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the reading page with the panel of the chapter grid open, King James Version, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
+    await page.goto('./#/book/psalms/23')
+    await settled(page)
+    await page.locator('.rd-where').click()
+    await expect(page.locator('.rd-grid-panel')).toBeVisible()
+    await page.waitForTimeout(300)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the link pop-up, King James Version, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
+    await page.goto('./#/book/hebrews/9')
+    await settled(page)
+    const name = layout.name === 'wide' ? 'Verse 20 has a quotation link to Exodus 24:8' : 'Quotation link to Exodus 24:8'
+    await page.getByRole('button', { name }).click()
+    await expect(page.getByRole('dialog', { name: 'Exodus 24:8' })).toBeVisible()
+    await expect(page.locator('.pop-quoted-from')).toBeVisible()
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
   test(`accessibility: the trail after travel, ${layout.name} layout`, async ({ page }) => {
     await page.setViewportSize(layout.viewport)
     await page.goto('./#/book/hebrews/9')

@@ -7,6 +7,7 @@ import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../
 import { groupOf, type Book } from '../data/books.ts'
 import { bookHref, quotationsHref, sourcesHref, timelineHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
+import { TranslationSwitch } from '../TranslationSwitch.tsx'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { fitName, measureNames, NAME_FONT, type NameFit } from './fit.ts'
 import { balancedSplit, bandLabel, groupBlocks, narrowSizes, NARROW_GAP_PX, NARROW_PAD_PX, wideColumns, wideSizes } from './layout.ts'
@@ -180,11 +181,14 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
   )
 }
 
-/** The bottom line: the translation, and the links to the pages of the Reference section. docs/DESIGN.md section 7.8. */
+/**
+ * The bottom line: the translation switch, and the links to the pages of the Reference section.
+ * docs/DESIGN.md sections 7.8 and 8.5.
+ */
 function WallFoot() {
   return (
     <footer className="wall-foot">
-      <span className="wall-translation">Berean Standard Bible</span>
+      <TranslationSwitch className="wall-translation" />
       <nav className="wall-reference" aria-label="Reference">
         <a href={timelineHref()}>Timeline</a>
         <a href={quotationsHref()}>Quotations</a>

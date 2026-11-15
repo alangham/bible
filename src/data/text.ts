@@ -6,7 +6,9 @@
 // This module is the one text service of the site. A second translation can be added
 // behind the same functions without a change to the pages. docs/DESIGN.md section 5.
 // The King James Version data is in public/data/text-kjv/, in the same form, with added-words
-// items. scripts/build-text-kjv.mjs makes it. docs/DESIGN.md section 8, Task 20. No page reads it yet.
+// items. scripts/build-text-kjv.mjs makes it. docs/DESIGN.md section 8, Tasks 20 and 21.
+
+import type { Translation } from './translation.ts'
 
 /** One run of a note: plain text, quoted alternative text (q), or a verse number (v). */
 export interface NoteRun {
@@ -109,16 +111,23 @@ export function isAdded(x: Inline): x is AddedWords {
 
 const cache = new Map<string, Promise<BookText>>()
 
-/** The text of one book. The same promise is returned for each call, so a book loads once. */
-export function loadBookText(id: string): Promise<BookText> {
-  let p = cache.get(id)
+/** The folder in public/data/ of each translation. */
+const FOLDER: Record<Translation, string> = { bsb: 'text', kjv: 'text-kjv' }
+
+/**
+ * The text of one book in one translation. The same promise is returned for each call, so a book
+ * loads once for each translation.
+ */
+export function loadBookText(id: string, translation: Translation): Promise<BookText> {
+  const key = `${translation}/${id}`
+  let p = cache.get(key)
   if (!p) {
-    p = fetch(`${import.meta.env.BASE_URL}data/text/${id}.json`).then((res) => {
+    p = fetch(`${import.meta.env.BASE_URL}data/${FOLDER[translation]}/${id}.json`).then((res) => {
       if (!res.ok) throw new Error(`${id}.json: HTTP ${res.status}`)
       return res.json() as Promise<BookText>
     })
-    p.catch(() => cache.delete(id))
-    cache.set(id, p)
+    p.catch(() => cache.delete(key))
+    cache.set(key, p)
   }
   return p
 }

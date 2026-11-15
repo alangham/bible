@@ -219,6 +219,57 @@ a {
   margin-right: 0;
 }
 
+/* ---- The translation switch: docs/DESIGN.md section 8.5, docs/TASKS.md Task 21 step 4. ---- */
+/* The look of the renders in docs/screenshots/kjv-design/. */
+
+.tr-switch {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.tr-switch button {
+  box-sizing: border-box;
+  min-width: 24px;
+  min-height: 24px;
+  margin: 0;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  color: var(--tr-ink-secondary);
+  font: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tr-switch button[aria-pressed='true'] {
+  color: var(--tr-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+  text-underline-position: under;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .tr-switch button:hover {
+    color: var(--tr-ink);
+  }
+}
+
+.wall-foot .tr-switch {
+  --tr-ink: var(--wall-ink);
+  --tr-ink-secondary: var(--wall-ink-secondary);
+}
+
+.wall-foot button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* ---- Reading page: docs/DESIGN.md sections 7.5 and 7.6, docs/TASKS.md Task 13. ---- */
 /* The values are those of docs/prototype/index.html. */
 
@@ -324,6 +375,24 @@ html:has(.reading) {
 
 .rd-grid-panel[hidden] {
   display: none;
+}
+
+/* The translation switch at the top of the panel, with a line between it and the chapter grid. */
+.rd-translation-switch {
+  --tr-ink: var(--rd-ink);
+  --tr-ink-secondary: var(--rd-ink-secondary);
+
+  column-gap: 14px;
+  max-width: 700px;
+  margin: 0 auto 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rd-line);
+  font-size: 15px;
+}
+
+.rd-translation-switch button {
+  min-height: 44px;
+  padding: 0;
 }
 
 .rd-grid {
@@ -596,6 +665,18 @@ html:has(.reading) {
 .rd-column .tb-qd {
   color: #3a3a3c;
   font-style: italic;
+}
+
+/*
+  The added words of the King James Version: in italics, as in a printed copy. In a Psalm title, which
+  is in italics, the added words are upright. docs/DESIGN.md section 8.2, Task 21 step 8.
+*/
+.added {
+  font-style: italic;
+}
+
+.rd-column .tb-d .added {
+  font-style: normal;
 }
 
 .rd-column .sh-qa {
@@ -1212,7 +1293,8 @@ html:has(.reading) {
   font: italic 400 15px/1.5 Lora, Georgia, serif;
 }
 
-.pop-source {
+.pop-source,
+.pop-quoted-from {
   margin: 10px 0 0;
   color: var(--rd-ink-secondary);
   font-size: 12px;

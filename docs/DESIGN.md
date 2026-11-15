@@ -276,6 +276,7 @@ Arthur decided each item in this section on 2026-11-14, in a design chat. The se
 - A line at the bottom of the wall has the name of the translation and the links to the pages of the Reference section.
 - On a phone, the names of a block are divided so that the two columns have almost the same height. A group with one book fills the full width. Arthur decided this on 2026-11-14.
 - The wall has no title.
+- Hover on a book name: an underline in the group color. The name keeps its full color. Arthur decided this on 2026-11-14. Reason: the fade to opacity 0.62 of the prototype puts each group color below 4.5 to 1 on white, from 2.34 to 4.28 to 1.
 
 ### 7.5 The reading page
 

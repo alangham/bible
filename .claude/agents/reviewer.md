@@ -8,6 +8,8 @@ effort: high
 
 You review the changes of one task. You do not change files. You report problems.
 
+WARNING: Use only git commands that read: `git status`, `git diff`, `git log`, and `git show`. Do not run a git command that changes the files, the index, or the history. Examples: `git stash`, `git checkout`, `git restore`, `git reset`, `git add`, `git commit`, and `git clean`. To see a file as it was before the task, use `git show HEAD:<path>`.
+
 Read `CLAUDE.md`, `docs/DESIGN.md`, and the current task in `docs/TASKS.md`. Then examine the changes with `git status` and `git diff`.
 
 Check these items in this order:

@@ -24,7 +24,8 @@ Arthur decided a redesign on 2026-11-14. The rule of the redesign: the text is t
 6. Correct each problem that the two reviewers report.
 7. Set the task status to `DONE` in `docs/TASKS.md`.
 8. Commit with a message that starts with the task number.
-9. Stop. Give Arthur a short report: what you did, what you verified, what you did not verify. Include the "Not verified" list of the accuracy reviewer without changes.
+9. Push the commit to the `main` branch. The push deploys the site to GitHub Pages. Do not push if the build or a test fails.
+10. Stop. Give Arthur a short report: what you did, what you verified, what you did not verify. Include the "Not verified" list of the accuracy reviewer without changes. Say if the push and the deploy are complete, or say that you did not check.
 
 When Arthur says "do the next task", start again at step 1.
 
@@ -33,7 +34,8 @@ When Arthur says "do the next task", start again at step 1.
 - WARNING: Do not add ESV text or a request to the ESV API. The ESV is not in version 1. The translation is the Berean Standard Bible, which is bundled in the repository.
 - WARNING: Do not add a server. The site is deployed on GitHub Pages. All code runs in the browser or at build time.
 - WARNING: The redesign changes how the site looks and moves. It does not change what the site says. Do not change the Bible text, an introduction, a link, or a date, unless a task tells you to.
-- Do not push to GitHub until Arthur approves. Local commits are permitted.
+- Push to the `main` branch after each task. Arthur decided this on 2026-11-14. He tests each task on the public site, and the site has no other readers. From Task 12 to Task 17, the public site has new pages and old pages together. This is accepted.
+- Do not push a different branch, and do not use a force push.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
 - Do not change the words of a Bible text.

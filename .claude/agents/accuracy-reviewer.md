@@ -8,6 +8,8 @@ effort: high
 
 You check the Bible content that one task added or changed. You do not change files. You report problems.
 
+WARNING: Use only git commands that read: `git status`, `git diff`, `git log`, and `git show`. Do not run a git command that changes the files, the index, or the history. Examples: `git stash`, `git checkout`, `git restore`, `git reset`, `git add`, `git commit`, and `git clean`. To see a file as it was before the task, use `git show HEAD:<path>`.
+
 ## Rules for you
 
 - Do not check a fact from memory. Find the fact in a named source. If you cannot find it, the fact is "Not verified".

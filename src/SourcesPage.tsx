@@ -2,7 +2,7 @@
 // The conditions of each licence are in docs/DATA-SOURCES.md. The sources of the book
 // introductions are in docs/CONTENT-SOURCES.md.
 // The look of the Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15 step 9.
-// Task 17 changes the fonts section.
+// The fonts section names the fonts that the site uses, Inter and Lora: docs/TASKS.md Task 17 step 11.
 
 import { useEffect } from 'react'
 import { RefBar } from './reference/RefBar.tsx'
@@ -83,12 +83,12 @@ export function SourcesPage() {
           <h2 id="sources-fonts">Fonts</h2>
           <ul>
             <li>
-              Cormorant Garamond. Copyright 2015 The Cormorant Project Authors (github.com/CatharsisFonts/Cormorant). Under the{' '}
-              <a href={`${LICENSES}OFL-cormorant-garamond.txt`}>SIL Open Font License, Version 1.1</a>.
+              Inter. Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter). Under the{' '}
+              <a href={`${LICENSES}OFL-inter.txt`}>SIL Open Font License, Version 1.1</a>.
             </li>
             <li>
-              Newsreader. Copyright 2020 The Newsreader Project Authors (http://github.com/productiontype/Newsreader). Under the{' '}
-              <a href={`${LICENSES}OFL-newsreader.txt`}>SIL Open Font License, Version 1.1</a>.
+              Lora. Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora". Under the{' '}
+              <a href={`${LICENSES}OFL-lora.txt`}>SIL Open Font License, Version 1.1</a>.
             </li>
           </ul>
         </section>

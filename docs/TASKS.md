@@ -804,7 +804,7 @@ Stop and report. Ask Arthur to approve the rows. He can approve them as one grou
 
 ## Task 17. Timeline page
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

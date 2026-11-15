@@ -1,11 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource/cormorant-garamond/600-italic.css'
-import '@fontsource/cormorant-garamond/700.css'
-import '@fontsource/newsreader/400.css'
-import '@fontsource/newsreader/400-italic.css'
-import '@fontsource/newsreader/600.css'
-// The fonts of the redesign, docs/DESIGN.md section 7.3. Task 11 adds them. No page uses them yet.
+// The fonts of the redesign, docs/DESIGN.md section 7.3. Task 17 removed the fonts of the first build.
 import '@fontsource/inter/300.css'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/500.css'

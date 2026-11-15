@@ -4,6 +4,8 @@ This file is the proposal of Task 16 in `docs/TASKS.md`. It gives an estimated d
 
 Arthur approved the 17 rows on 2026-11-14. He approved the 16 rows with a year as proposed, with the recommended view in each row: the values in the columns First year and Last year. For Job he chose option (b): the latest limit of 600 BC, with the date text "by 600 BC". Task 17 writes the approved rows into the date data and records their sources in `docs/CONTENT-SOURCES.md`.
 
+On 2026-11-15 Arthur approved seven more date texts, by the rule that a date text keeps the limit word of its fact and keeps "about" where the fact has it: Judges "by 970 BC", Ruth "after about 1010 BC", Zechariah "from about 520 BC", Luke "about AD 62 or later", Hebrews "before AD 70", 2 John "by AD 99", and 3 John "by AD 99". The years in the table do not change. `docs/DESIGN.md` section 7.8 records the rule.
+
 This proposal changes earlier rules for these 17 books, if Arthur approves it:
 
 - Section 4.6 of `docs/DESIGN.md`, and rule 8 of "Dates of the timeline" in `docs/CONTENT-SOURCES.md`, say that the time of a person gives no years. Decision 2 under "Periods" in that file says the same. This proposal gives years to the time of Moses, of Joshua, of Solomon, and of Ezra.

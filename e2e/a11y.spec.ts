@@ -6,8 +6,8 @@
 // 1. The page has a language, one h1, and no skipped heading level.
 // 2. Each visible link and button has an accessible name and can take focus.
 // 3. Each visible control is 44 px or more in each direction (docs/DESIGN.md section 3). An inline
-//    link in a paragraph is exempt. On the wall and the reading page, the limit is 24 px: section 7.3
-//    sets 24 by 24 px for the pages of the redesign.
+//    link in a paragraph is exempt. On the pages of the redesign, the limit is 24 px: section 7.3
+//    sets 24 by 24 px for these pages.
 // 4. Each visible text has a contrast of 4.5 to 1 or more, or 3 to 1 for large text. The check
 //    skips text that it cannot measure, and docs/reviews/task-9-measurements.md lists the cases:
 //    text over a background image or a canvas, text with an opacity below 1, and text in a dimmed
@@ -53,7 +53,7 @@ const PAGES: { name: string; path: string; minTarget?: number; open?: string }[]
   { name: 'reading, links', path: './#/book/hebrews/9', minTarget: 24 },
   { name: 'sources', path: './#/sources', minTarget: 24 },
   { name: 'quotations', path: './#/quotations', minTarget: 24 },
-  { name: 'timeline', path: './#/timeline' },
+  { name: 'timeline', path: './#/timeline', minTarget: 24 },
 ]
 
 const LAYOUTS = [
@@ -139,11 +139,8 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
       const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p)
       return (x + 0.05) / (y + 0.05)
     }
-    // The linen of the body: the lightest and the darkest point of its gradient.
-    const LINEN = [
-      { r: 0xf6, g: 0xee, b: 0xdd },
-      { r: 0xd8, g: 0xc9, b: 0xad },
-    ]
+    // The background of the body: white. Task 17 removed the linen.
+    const PAGE_BACKGROUND = [{ r: 0xff, g: 0xff, b: 0xff }]
     const backgrounds = (el: Element): { r: number; g: number; b: number }[] | null => {
       const layers: { r: number; g: number; b: number; a: number }[] = []
       for (let e: Element | null = el; e; e = e.parentElement) {
@@ -155,7 +152,7 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
           if (c.a >= 1) break
         }
       }
-      const base = layers.length && layers[layers.length - 1].a >= 1 ? [layers[layers.length - 1]] : LINEN
+      const base = layers.length && layers[layers.length - 1].a >= 1 ? [layers[layers.length - 1]] : PAGE_BACKGROUND
       return base.map((b) => layers.slice(0, layers.length && layers[layers.length - 1].a >= 1 ? -1 : undefined).reduceRight((acc, l) => over(l, acc), b as { r: number; g: number; b: number }))
     }
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
@@ -293,17 +290,6 @@ for (const layout of LAYOUTS) {
     await expect(page.getByRole('navigation', { name: 'Trail' })).toBeVisible()
     await settled(page)
     expect(await audit(page, layout.name, 24)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
-
-  test(`accessibility: the list of a selected book on the timeline, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    await page.goto('./#/timeline')
-    await settled(page)
-    await page.getByRole('button', { name: /^Romans\b/ }).click()
-    await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
-    await page.waitForTimeout(400)
-    expect(await audit(page, layout.name)).toEqual([])
     expect(await axe(page)).toEqual([])
   })
 }

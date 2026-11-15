@@ -1,8 +1,9 @@
-// The dates of the timeline. docs/DESIGN.md section 4.6, docs/TASKS.md Task 8.
+// The dates of the timeline. docs/DESIGN.md sections 4.6 and 7.8, docs/TASKS.md Tasks 8 and 17.
 // public/data/dates.json comes from the Written fact of each book in public/data/intros.json.
 // The timeline uses the traditional view only. Years BC are negative numbers.
+// 17 books have an estimate: the rows of docs/TIMELINE-ESTIMATES.md that Arthur approved on 2026-11-14.
 
-export type DateKind = 'year' | 'range' | 'unknown'
+export type DateKind = 'year' | 'range'
 
 /** A dated event in the Written fact that limits the range. docs/DESIGN.md section 4.6, Task 9b. */
 export interface DateLimit {
@@ -15,18 +16,23 @@ export interface BookDate {
   /** Book id, the same as in books.json. */
   id: string
   kind: DateKind
-  /** The first year. Null for the kind "unknown". */
-  from: number | null
+  /** The first year. */
+  from: number
   /** The last year. The same as `from` for the kind "year". */
-  to: number | null
+  to: number
   /** The words of the Written fact that give the date. */
   words: string
   /** The last dated event that the fact names. The range starts no earlier than its year. */
   after?: DateLimit
   /** A dated event that the writing came before. The range ends no later than its year. */
   before?: DateLimit
-  /** Why the fact gives no date. Arthur accepted each reason on 2026-11-14 (docs/CONTENT-SOURCES.md). */
-  reason?: string
+  /** True for a date that is an estimate: an approved row of docs/TIMELINE-ESTIMATES.md. */
+  estimate?: true
+  /**
+   * The date text, where it is not the text of the years. It keeps the limit word of the Written fact,
+   * and "about" where the fact has it. Arthur approved the eight texts: docs/DESIGN.md section 7.8.
+   */
+  label?: string
 }
 
 /** One pair of books with quotation links. `from` quotes `to`. */
@@ -38,15 +44,14 @@ export interface QuotationPair {
 
 /**
  * A year as a point on a line with no year 0: 1 BC is 0, 2 BC is -1, AD 1 is 1.
- * The axes and the count of years between the bands use this, so that the count is right across 1 BC and AD 1.
+ * The scale of the timeline and the count of years with no books use this, so that the count is right across 1 BC and AD 1.
  */
 export function lineYear(year: number): number {
   return year < 0 ? year + 1 : year
 }
 
-/** The point where the spine stands: the year, or the middle of the range. Null for an unknown date. */
-export function standPoint(d: BookDate): number | null {
-  if (d.from === null || d.to === null) return null
+/** The point where a book stands: the year, or the middle of the range. */
+export function standPoint(d: BookDate): number {
   return (lineYear(d.from) + lineYear(d.to)) / 2
 }
 
@@ -54,29 +59,24 @@ function yearText(y: number): string {
   return y < 0 ? `${-y} BC` : `AD ${y}`
 }
 
-/** The date as short text, for a label. */
+/** The date as short text, for a label. It does not say that the date is an estimate. */
 export function dateLabel(d: BookDate): string {
-  if (d.from === null || d.to === null) return 'Date not known'
+  if (d.label) return d.label
   if (d.from === d.to) return `about ${yearText(d.from)}`
   if (d.from < 0 && d.to < 0) return `${-d.from} to ${-d.to} BC`
   if (d.from > 0 && d.to > 0) return `AD ${d.from} to ${d.to}`
   return `${yearText(d.from)} to ${yearText(d.to)}`
 }
 
-/** The number of quotation links for each step of arc thickness: 1, 2 to 5, 6 or more. */
-export function arcStep(n: number): 1 | 2 | 3 {
-  return n >= 6 ? 3 : n >= 2 ? 2 : 1
-}
-
 /**
- * The years between two bands: from the end of the last range in the first band to the start of the
- * first range in the second band. A book with one year is a range of one year. Books with no date do
- * not count. Rounded down to 10 years, because the line says "N years or more". docs/DESIGN.md 4.6.
+ * The years with no books between the Old Testament and the New Testament: from the end of the last
+ * range in the first list to the start of the first range in the second list. A book with one year is
+ * a range of one year. Rounded down to 10 years, because the words say "or more". docs/DESIGN.md 4.6.
  */
 export function yearsBetween(first: BookDate[], second: BookDate[]): number {
-  const ends = first.filter((d) => d.to !== null).map((d) => lineYear(d.to!))
-  const starts = second.filter((d) => d.from !== null).map((d) => lineYear(d.from!))
-  if (!ends.length || !starts.length) throw new Error('A band has no book with a date')
+  const ends = first.map((d) => lineYear(d.to))
+  const starts = second.map((d) => lineYear(d.from))
+  if (!ends.length || !starts.length) throw new Error('A list of dates is empty')
   return Math.floor((Math.min(...starts) - Math.max(...ends)) / 10) * 10
 }
 

@@ -2559,31 +2559,33 @@ How the words give the years:
 15. A book is not written before the last event that its Written fact names (Task 9b). The range starts at the year of that event. Daniel: "The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC", so the range is 536 BC to 501 BC. Isaiah: the last event that the fact names is that Isaiah outlived Sennacherib, and the fact gives no year for it, so the range stays 750 BC to 651 BC. The fact also names the call of Isaiah, about 740 BC. That year is not used. Arthur decided on 2026-11-14 that Isaiah keeps 750 BC to 651 BC. Haggai and Joel name an event in 538 BC, which is before their year, so their date does not change.
 16. Where a fact gives one date and says that a second date is "also possible", the first date leads (Task 9b). Mark: "the second half of the 50s AD" leads, and "the middle or late 60s AD" is not used.
 
+Task 17: rules 8 and 9 do not give the date of the 17 books in "Estimates" below. Those books have an estimate that Arthur approved on 2026-11-14. The words in the table are still the words of the Written fact.
+
 Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6). Rules 11, 13, 14, and 15 are his decisions of the same day. He accepted rule 16, the date of Mark as built, on the same day. A unit test checks that each year in the traditional sentences of a dated Written fact is in the words of the date or in a limit. The one exception is the call of Isaiah, about 740 BC.
 
 | Book | Kind | First year | Last year | Words of the Written fact | Limit |
 |---|---|---|---|---|---|
-| Genesis | unknown |  |  | "in the time of Moses" |  |
-| Exodus | unknown |  |  | "in the lifetime of Moses" |  |
-| Leviticus | unknown |  |  | "in the lifetime of Moses" |  |
-| Numbers | unknown |  |  | "in the lifetime of Moses" |  |
-| Deuteronomy | unknown |  |  | "near the end of the 40 years in the wilderness, shortly before Moses died" |  |
-| Joshua | unknown |  |  | "in the lifetime of Joshua" |  |
-| Judges | unknown |  |  | "by the time of King David, 1010 to 970 BC" |  |
-| Ruth | unknown |  |  | "Some time after David became king, about 1010 BC" |  |
+| Genesis | range, estimate | 1446 BC | 1406 BC | "in the time of Moses" |  |
+| Exodus | range, estimate | 1446 BC | 1406 BC | "in the lifetime of Moses" |  |
+| Leviticus | range, estimate | 1446 BC | 1406 BC | "in the lifetime of Moses" |  |
+| Numbers | range, estimate | 1446 BC | 1406 BC | "in the lifetime of Moses" |  |
+| Deuteronomy | year, estimate | 1406 BC | 1406 BC | "near the end of the 40 years in the wilderness, shortly before Moses died" |  |
+| Joshua | range, estimate | 1406 BC | 1381 BC | "in the lifetime of Joshua" |  |
+| Judges | range, estimate | 1010 BC | 970 BC | "by the time of King David, 1010 to 970 BC" |  |
+| Ruth | year, estimate | 1010 BC | 1010 BC | "Some time after David became king, about 1010 BC" |  |
 | 1 Samuel | year | 970 BC | 970 BC | "about 970 BC" |  |
 | 2 Samuel | year | 970 BC | 970 BC | "about 970 BC" |  |
 | 1 Kings | range | 600 BC | 501 BC | "in the 6th century BC" |  |
 | 2 Kings | range | 600 BC | 538 BC | "the 6th century BC" | before 538 BC: "before Cyrus let the captives in Babylon go home in 538 BC" |
 | 1 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |  |
 | 2 Chronicles | range | 539 BC | 332 BC | "In the Persian period, 539 to 332 BC" |  |
-| Ezra | unknown |  |  | "The date of writing is not known" |  |
+| Ezra | range, estimate | 500 BC | 401 BC | "The date of writing is not known" |  |
 | Nehemiah | range | 500 BC | 401 BC | "the 5th century BC" |  |
 | Esther | range | 500 BC | 401 BC | "probably the 5th century BC" |  |
-| Job | unknown |  |  | "The date is not certain" |  |
-| Psalms | unknown |  |  | "over many centuries, from the time of Moses to the time of Ezra" |  |
+| Job | year, estimate | 600 BC | 600 BC | "The date is not certain" |  |
+| Psalms | range, estimate | 1446 BC | 433 BC | "over many centuries, from the time of Moses to the time of Ezra" |  |
 | Proverbs | range | 1000 BC | 700 BC | "Begun under Solomon in the 10th century BC, and probably complete in its present form under Hezekiah, about 700 BC" |  |
-| Ecclesiastes | unknown |  |  | "in the time of Solomon" |  |
+| Ecclesiastes | range, estimate | 971 BC | 931 BC | "in the time of Solomon" |  |
 | Song of Solomon | range | 1000 BC | 901 BC | "in the 10th century BC" |  |
 | Isaiah | range | 750 BC | 651 BC | "the late 8th and early 7th centuries BC" |  |
 | Jeremiah | range | 650 BC | 551 BC | "the late 7th and early 6th centuries BC" |  |
@@ -2600,11 +2602,11 @@ Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6
 | Habakkuk | range | 650 BC | 601 BC | "late in the 7th century BC" |  |
 | Zephaniah | range | 700 BC | 601 BC | "in the 7th century BC" |  |
 | Haggai | year | 520 BC | 520 BC | "about 520 BC" | after 538 BC: "after the Jews returned from Babylon in 538 BC" |
-| Zechariah | unknown |  |  | "from about 520 BC" |  |
+| Zechariah | year, estimate | 520 BC | 520 BC | "from about 520 BC" |  |
 | Malachi | year | 460 BC | 460 BC | "about 460 BC" |  |
 | Matthew | year | AD 60 | AD 60 | "about AD 60" |  |
 | Mark | range | AD 55 | AD 59 | "the second half of the 50s AD" |  |
-| Luke | unknown |  |  | "no earlier than about AD 62, just after the last events in Acts" |  |
+| Luke | year, estimate | AD 62 | AD 62 | "no earlier than about AD 62, just after the last events in Acts" |  |
 | John | range | AD 51 | AD 100 | "late in the 1st century AD" |  |
 | Acts | year | AD 62 | AD 62 | "about AD 62" |  |
 | Romans | year | AD 57 | AD 57 | "about AD 57" |  |
@@ -2620,35 +2622,73 @@ Arthur accepted rules 1 to 10 as built on 2026-11-14 (docs/DESIGN.md section 4.6
 | 2 Timothy | year | AD 65 | AD 65 | "about AD 65" |  |
 | Titus | range | AD 60 | AD 69 | "the 60s AD" |  |
 | Philemon | year | AD 62 | AD 62 | "about AD 62" |  |
-| Hebrews | unknown |  |  | "before AD 70" |  |
+| Hebrews | year, estimate | AD 70 | AD 70 | "before AD 70" |  |
 | James | range | AD 40 | AD 44 | "the early 40s AD" |  |
 | 1 Peter | range | AD 60 | AD 64 | "the early 60s AD" |  |
 | 2 Peter | range | AD 63 | AD 66 | "the mid 60s AD" |  |
 | 1 John | year | AD 85 | AD 85 | "about AD 85" |  |
-| 2 John | unknown |  |  | "no later than the 90s AD" |  |
-| 3 John | unknown |  |  | "no later than the 90s AD" |  |
+| 2 John | range, estimate | AD 90 | AD 99 | "no later than the 90s AD" |  |
+| 3 John | range, estimate | AD 90 | AD 99 | "no later than the 90s AD" |  |
 | Jude | range | AD 63 | AD 66 | "the mid 60s AD" |  |
 | Revelation | range | AD 93 | AD 96 | "the mid 90s AD" |  |
 
-### Books in "Date not known", accepted
+### Estimates
 
-Arthur accepted these on 2026-11-14 and closed them. They were items 5 to 19 of the "Not verified" list. Each book stays in the group "Date not known" for the reason given. `public/data/dates.json` holds the same reason in the field `reason`.
+Task 17. Arthur decided on 2026-11-14 that the timeline has no group "Date not known" (docs/DESIGN.md section 7.8). Each of the 17 books that were in that group now stands at an estimate. Arthur approved the 17 rows of `docs/TIMELINE-ESTIMATES.md` on 2026-11-14, with the recommended view in each row. That file gives the second views and the full reasons. `public/data/dates.json` marks each of these dates with `"estimate": true`. A unit test checks that the years in `dates.json` are the years of the approved rows.
 
-1. Genesis: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the time of Moses".
-2. Exodus: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
-3. Leviticus: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
-4. Numbers: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "in the lifetime of Moses".
-5. Deuteronomy: The fact names the time of Moses but gives no year, and public/data/periods.json has no period for Moses. Words: "near the end of the 40 years in the wilderness, shortly before Moses died".
-6. Joshua: The fact names the lifetime of Joshua but gives no year, and public/data/periods.json has no period for Joshua. Words: "in the lifetime of Joshua".
-7. Judges: The fact gives only the latest time of writing: by the time of King David. It gives no earliest year. Words: "by the time of King David, 1010 to 970 BC".
-8. Ruth: The fact gives only the earliest time of writing: some time after about 1010 BC. It gives no latest year. Words: "Some time after David became king, about 1010 BC".
-9. Psalms: The fact names the times of Moses and of Ezra but gives no year, and public/data/periods.json has no period for them. Words: "over many centuries, from the time of Moses to the time of Ezra".
-10. Ecclesiastes: The fact names the time of Solomon but gives no year, and public/data/periods.json has no period for Solomon. Words: "in the time of Solomon".
-11. Zechariah: The fact gives only the earliest time of writing: from about 520 BC. It gives no latest year. Words: "from about 520 BC".
-12. Luke: The fact gives the earliest year, about AD 62, and says "just after". It gives no latest year. Words: "no earlier than about AD 62, just after the last events in Acts".
-13. Hebrews: The fact gives only the latest year: before AD 70. It gives no earliest year. Words: "before AD 70".
-14. 2 John: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD".
-15. 3 John: The fact gives only the latest time: no later than the 90s AD. It gives no earliest year. Words: "no later than the 90s AD".
+The ESV Global Study Bible pages have no revision number. They were read on 2026-11-14. The Easton addresses are fixed revisions. A year that no source states is marked "calculation", with the calculation.
+
+The sources of the times of a person:
+
+- The time of Moses, 1446 to 1406 BC.
+  - The exodus, about 1446 BC: ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-exodus/, section "Author and Date", the common view. The same year is the setting of Leviticus, https://www.esv.org/resources/esv-global-study-bible/introduction-to-leviticus/, section "The Setting of Leviticus", and of Numbers, https://www.esv.org/resources/esv-global-study-bible/introduction-to-numbers/, section "Journeys in the Wilderness".
+  - The sermons of Moses shortly before his death, about 1406 BC: https://www.esv.org/resources/esv-global-study-bible/introduction-to-deuteronomy/, section "The Setting of Deuteronomy". The section "Purpose and Background" places them 40 years after Sinai.
+  - The 40 years: Deuteronomy 1:3 in the Berean Standard Bible, the fortieth year.
+- The lifetime of Joshua, 1406 to 1381 BC.
+  - The first year, about 1406 BC: https://www.esv.org/resources/esv-global-study-bible/introduction-to-joshua/, section "The Setting of Joshua". The page dates the setting of the book. The book begins with the crossing of the Jordan, Joshua 1 to 4.
+  - The death of Joshua, 25 years after he crossed the Jordan: Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton%27s_Bible_Dictionary_(1897)/Joshua&oldid=736115.
+  - The last year, 1381 BC, is a calculation: 1406 BC less 25 years.
+- The time of Solomon, 971 to 931 BC: the ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-2-kings/, the map "The Extent of Solomon's Kingdom", about 971 to 931 BC.
+- The time of Ezra, to 433 BC: the ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ezra/, section "Author and Date": Ezra 7 to Nehemiah 13 covers 458 to 433 BC. No approved source gives the end of the time of Ezra. 433 BC is the end of that span. Easton's article on the Psalms names Ezra and Nehemiah together as the latest time of a psalm: https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPsalms&oldid=759929.
+
+The rules of `docs/TIMELINE-ESTIMATES.md` for a Written fact that gives a year:
+
+- R1: the estimate is the date that the words give, by rules 1 to 6 above. The timeline does not use a sentence that starts "An older view".
+- R2: a limit in the words limits the range, by rule 14. Where the words give no other year, the estimate is the limit year. R2 replaces rule 9 for these books.
+- R3: rule 15.
+
+The 17 books:
+
+1. Genesis: 1446 to 1406 BC. The time of Moses. Its Written fact names the Israelites whom Moses led through the wilderness.
+2. Exodus: 1446 to 1406 BC. The time of Moses.
+3. Leviticus: 1446 to 1406 BC. The time of Moses. The first year is the ESV setting of Leviticus at Sinai, about 1446 BC.
+4. Numbers: 1446 to 1406 BC. The time of Moses.
+5. Deuteronomy: 1406 BC. The last year of the time of Moses: the ESV setting of Deuteronomy, about 1406 BC.
+6. Joshua: 1406 to 1381 BC. The lifetime of Joshua. 1381 BC is a calculation.
+7. Judges: 1010 to 970 BC. Rule R1: the range in the words, "by the time of King David, 1010 to 970 BC". Rule R2: "by" gives no other year.
+8. Ruth: 1010 BC. Rule R1: the year in the words, "Some time after David became king, about 1010 BC". Rule R2: "some time after" gives no other year.
+9. Ezra: 500 to 401 BC. Rule R1: the century in the words, "The events in the book end in the 5th century BC", by rule 3, as for Nehemiah. The century is the time of the last events, not of the writing.
+10. Job: 600 BC, with the date text "by 600 BC". Arthur's decision of 2026-11-14, option (b). Easton's Bible Dictionary says that the book was known in the days of Ezekiel, 600 BC, and cites Ezekiel 14:14: https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJob%2C_Book_of&oldid=7352541. This is a latest limit, not a date of writing. The Written fact does not name it.
+11. Psalms: 1446 to 433 BC. From the first year of the time of Moses to the end of the span of the time of Ezra.
+12. Ecclesiastes: 971 to 931 BC. The time of Solomon.
+13. Zechariah: 520 BC. Rule R1: the year in the words, "from about 520 BC". Rule R2: "from" gives no other year.
+14. Luke: AD 62. Rule R1: the year in the words, "no earlier than about AD 62". Rule R2: "no earlier than" gives no other year.
+15. Hebrews: AD 70. Rule R1: the year in the words, "before AD 70". Rule R2: "before" gives no other year. The estimate stands at the limit year.
+16. 2 John: AD 90 to 99. Rule R1: the decade in the words, "no later than the 90s AD", by rule 5. Rule R2: "no later than" gives no other year.
+17. 3 John: AD 90 to 99. As for 2 John.
+
+Date texts. Arthur decided on 2026-11-15 that a date text keeps the limit word of its fact, and that it keeps "about" where the fact has it. `docs/DESIGN.md` section 7.8 records the rule. Each date text below takes its words from the Written fact of the book, in `public/data/intros.json`, and its year from the date above. Arthur approved each text on 2026-11-15. Job's text is from his decision of 2026-11-14.
+
+| Book | Words of the Written fact, or of the source | Date text |
+|---|---|---|
+| Judges | by the time of King David, 1010 to 970 BC | by 970 BC |
+| Ruth | Some time after David became king, about 1010 BC | after about 1010 BC |
+| Job | The Written fact: "The date is not certain". The source of the year: Easton, the latest limit of 600 BC, item 10 above | by 600 BC |
+| Zechariah | from about 520 BC | from about 520 BC |
+| Luke | no earlier than about AD 62 | about AD 62 or later |
+| Hebrews | before AD 70 | before AD 70 |
+| 2 John | no later than the 90s AD | by AD 99 |
+| 3 John | no later than the 90s AD | by AD 99 |
 
 ## Not verified
 

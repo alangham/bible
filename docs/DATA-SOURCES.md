@@ -150,27 +150,23 @@ These are findings. Arthur must decide on them. They do not change the design.
 
 ## 6. Fonts
 
-The design names the first two fonts in `docs/DESIGN.md` section 3, and Inter and Lora in section 7.3. The site bundles them from npm. It does not load them from Google Fonts.
+The site uses two fonts, Inter and Lora. Section 7.3 of `docs/DESIGN.md` names them. The site bundles them from npm. It does not load them from Google Fonts.
 
 | Font | Package | Licence | Licence file |
 |---|---|---|---|
-| Cormorant Garamond, weight 700, and weight 600 italic for the cover title (Task 4) | `@fontsource/cormorant-garamond` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/cormorant-garamond/LICENSE` |
-| Newsreader, weights 400 and 600, and 400 italic for psalm titles and notes (Task 5) | `@fontsource/newsreader` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/newsreader/LICENSE` |
 | Inter, weights 300, 400, 500, 600, 700, and 800, for the redesign (Task 11) | `@fontsource/inter` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/inter/LICENSE` |
 | Lora, weight 400, regular and italic, for the Bible text of the redesign (Task 11) | `@fontsource/lora` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/lora/LICENSE` |
 
-- Copyright lines in the licence files: "Copyright 2015 The Cormorant Project Authors" and "Copyright 2020 The Newsreader Project Authors". Read on 2026-11-13.
+- Copyright lines in the licence files, read on 2026-11-14: "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)" and "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora"."
 - Conditions, from OFL 1.1 sections 1 to 3:
   1. The fonts must not be sold alone.
   2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
   3. A changed font must not use a Reserved Font Name. The site does not change the fonts.
-- Check (Task 6 step 7), 2026-11-14: fontTools read the `name` table of `newsreader-latin-400-normal.woff2` and `cormorant-garamond-latin-700-normal.woff2`. Each keeps its copyright line (name 0) and a licence address (name 14). The licence text (name 13) is empty. So the site ships the two licence files as `public/licenses/OFL-cormorant-garamond.txt` and `public/licenses/OFL-newsreader.txt`, copied from the packages. The "Sources" page shows each copyright notice and links to its licence file.
-- Inter and Lora, added in Task 11 on 2026-11-14. Section 7.3 of `docs/DESIGN.md` names them. The site bundles them from npm, as it bundles the two fonts above. It does not load them from Google Fonts.
-  - Copyright lines in the licence files, read on 2026-11-14: "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)" and "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora"."
-  - Licence: SIL Open Font License 1.1. From line 5 to the end, each of the two licence files has the same text as `public/licenses/OFL-newsreader.txt`. I compared them with `diff`. The conditions above apply.
-  - Reserved Font Name: Lora has the Reserved Font Name "Lora". The site does not change the font, so the condition has no effect.
-  - Check, 2026-11-14: fontTools read the `name` table of `inter-latin-800-normal.woff2` and `lora-latin-400-normal.woff2`. Each keeps its copyright line (name 0) and a licence address (name 14). The licence text (name 13) is empty. So the site ships the licence files `public/licenses/OFL-inter.txt` and `public/licenses/OFL-lora.txt`, copied from the packages.
-  - The Sources page does not credit Inter and Lora yet. Section 7.8 of `docs/DESIGN.md` gives that credit to a later task.
+- Reserved Font Name: Lora has the Reserved Font Name "Lora". The site does not change the font, so the condition has no effect.
+- Check, 2026-11-14: fontTools read the `name` table of `inter-latin-800-normal.woff2` and `lora-latin-400-normal.woff2`. Each keeps its copyright line (name 0) and a licence address (name 14). The licence text (name 13) is empty. So the site ships the licence files `public/licenses/OFL-inter.txt` and `public/licenses/OFL-lora.txt`, copied from the packages.
+- Check, Task 17, 2026-11-14: `cmp` found each of the two files in `public/licenses/` the same as the `LICENSE` file of its package.
+- The Sources page shows the copyright line of each font and links to its licence file. Task 17 added this credit.
+- Task 17 removed the two fonts of the first build, Cormorant Garamond and Newsreader, because no page uses them. It removed the packages `@fontsource/cormorant-garamond` and `@fontsource/newsreader` and the licence files `public/licenses/OFL-cormorant-garamond.txt` and `public/licenses/OFL-newsreader.txt`.
 
 ## 7. Code libraries with a licence that is not open source
 

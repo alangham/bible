@@ -1,29 +1,17 @@
-/* Colors and fonts from docs/DESIGN.md section 3. */
+/* Colors and fonts from docs/DESIGN.md section 7.3. Task 17 removed the linen and the fonts of the first build. */
 :root {
-  --linen: #e7dcc6;
-  --linen-light: #f6eedd;
-  --linen-shade: #d8c9ad;
-  --ink: #2a1e12;
-  --ink-secondary: #4a3b2a;
-  --rule: #b9a888;
-  --gold: #f3dda0;
-  --title-font: 'Cormorant Garamond', Georgia, serif;
-  --body-font: 'Newsreader', Georgia, serif;
+  --ink: #1d1d1f;
+  --ink-secondary: #6e6e73;
 
-  font-family: var(--body-font);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);
-  background: var(--linen);
+  background: #fff;
 }
 
 body {
   margin: 0;
   min-height: 100svh;
-  /* Linen: light from the top left, shade at the bottom right, and a fine weave. */
-  background:
-    repeating-linear-gradient(0deg, rgba(84, 58, 20, 0.035) 0 1px, transparent 1px 3px),
-    repeating-linear-gradient(90deg, rgba(84, 58, 20, 0.03) 0 1px, transparent 1px 3px),
-    radial-gradient(1100px 800px at 18% 8%, var(--linen-light) 0%, var(--linen) 55%, var(--linen-shade) 100%);
-  background-attachment: fixed;
+  background: #fff;
 }
 
 a {
@@ -40,55 +28,11 @@ a {
 .message h1,
 .book-placeholder h1 {
   margin: 0;
-  font-family: var(--title-font);
-  font-weight: 700;
+  font-weight: 800;
+  text-transform: uppercase;
   font-size: 88px;
   line-height: 0.95;
   letter-spacing: -1px;
-}
-
-/* ---- Legend ---- */
-
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 26px;
-  border-top: 1px solid var(--rule);
-  padding-top: 6px;
-}
-
-.legend-entry {
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-family: var(--body-font);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--ink);
-  transition: color 200ms;
-}
-
-.legend-swatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid var(--ink);
-  transition: opacity 200ms;
-}
-
-/* A dimmed entry keeps a text contrast of 4.5 to 1 or more. Only the swatch fades. */
-.legend-entry[data-state='off'] {
-  color: var(--ink-secondary);
-  font-weight: 400;
-}
-
-.legend-entry[data-state='off'] .legend-swatch {
-  opacity: 0.35;
 }
 
 /* ---- Other pages ---- */
@@ -137,349 +81,6 @@ a {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* ---- Timeline: docs/DESIGN.md section 4.6, docs/TASKS.md Task 8 ---- */
-
-.timeline-page {
-  box-sizing: border-box;
-  min-height: 100svh;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 24px 72px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.timeline-bar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.timeline-bar a,
-.tl-open {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.timeline-bar a:hover,
-.tl-open:hover {
-  text-decoration: underline;
-}
-
-.timeline-header h1 {
-  margin: 8px 0 6px;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.timeline-header p {
-  margin: 0;
-  max-width: 62ch;
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--ink-secondary);
-}
-
-/* The stage of the wide layout. The SVG lies under the spines. */
-.tl-stage {
-  position: relative;
-  width: 100%;
-}
-
-.tl-lines {
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-
-.tl-axis {
-  stroke: var(--ink-secondary);
-  stroke-width: 1.5;
-}
-
-.tl-axis-unknown {
-  stroke-dasharray: 4 5;
-}
-
-.tl-tick {
-  stroke: var(--ink-secondary);
-  stroke-width: 1.5;
-}
-
-.tl-tick-label {
-  font-family: var(--body-font);
-  font-size: 15px;
-  font-weight: 600;
-  fill: var(--ink);
-  /* A halo of linen keeps the label readable over the arcs. */
-  paint-order: stroke;
-  stroke: var(--linen);
-  stroke-width: 5px;
-  stroke-linejoin: round;
-}
-
-.tl-range {
-  stroke-width: 4;
-  stroke-linecap: round;
-  transition: opacity 200ms;
-}
-
-.tl-range[data-dimmed='true'] {
-  opacity: 0.18;
-}
-
-.tl-arc {
-  fill: none;
-  stroke: var(--ink);
-  stroke-linecap: round;
-  stroke-dasharray: 1;
-  opacity: 0.32;
-  transition: opacity 200ms;
-}
-
-.tl-arc[data-state='on'] {
-  opacity: 0.9;
-}
-
-.tl-arc[data-state='off'] {
-  opacity: 0.05;
-}
-
-.tl-band,
-.tl-rows {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tl-band-heading {
-  position: absolute;
-  left: 0;
-  margin: 0;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 38px;
-}
-
-.tl-between {
-  position: absolute;
-  left: 50%;
-  margin: 0;
-  transform: translateX(-50%);
-  padding: 4px 16px;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  background: var(--linen-light);
-  font-size: 17px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* A spine: the cloth color and the name in capitals, as on the table page. */
-.tl-spine {
-  position: absolute;
-  box-sizing: border-box;
-  padding: 0;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  font: 700 14px var(--title-font);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  box-shadow:
-    inset 0 -3px 0 rgba(0, 0, 0, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.14),
-    5px 7px 9px rgba(84, 58, 20, 0.26);
-  transition:
-    opacity 200ms,
-    transform 150ms,
-    box-shadow 150ms;
-}
-
-.tl-spine:hover,
-.tl-spine:focus-visible {
-  transform: translateY(-3px);
-  box-shadow:
-    inset 0 -3px 0 rgba(0, 0, 0, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.14),
-    7px 11px 13px rgba(84, 58, 20, 0.3);
-}
-
-.tl-stage[data-reduced-motion='true'] .tl-spine {
-  transition: opacity 200ms;
-}
-
-.tl-stage[data-reduced-motion='true'] .tl-spine:hover,
-.tl-stage[data-reduced-motion='true'] .tl-spine:focus-visible {
-  transform: none;
-}
-
-.tl-spine[aria-pressed='true'] {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
-}
-
-.tl-spine[data-dimmed='true'],
-.tl-row[data-dimmed='true'] {
-  opacity: 0.22;
-}
-
-/* The sign for a book whose Written fact has a "Scholars differ" detail. */
-.tl-spine[data-differ='true']::after,
-.tl-row[data-differ='true'] .tl-row-date::after,
-.tl-ring {
-  content: '';
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-}
-
-.tl-spine[data-differ='true']::after {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-}
-
-.tl-row[data-differ='true'] .tl-row-date::after {
-  margin-left: 8px;
-  vertical-align: middle;
-}
-
-.timeline-key {
-  margin: 0;
-  font-size: 16px;
-  color: var(--ink-secondary);
-}
-
-.tl-ring {
-  color: var(--ink);
-  margin-right: 6px;
-  vertical-align: middle;
-}
-
-/* The list of the selected book: the text form of its arcs. In the wide layout it stays at the
-   bottom of the window while the reader looks at the bands. */
-.timeline-page > .tl-panel {
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
-  max-height: 38vh;
-  overflow: auto;
-  box-shadow: 0 -8px 18px rgba(84, 58, 20, 0.18);
-}
-
-/* The list of the selected book: the text form of its arcs. */
-.tl-panel {
-  padding: 14px 20px 10px;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  background: var(--linen-light);
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-.tl-panel h2,
-.tl-panel h3 {
-  margin: 0 0 4px;
-  font-family: var(--title-font);
-  font-size: 30px;
-}
-
-.tl-panel h3:not(:first-child),
-.tl-panel h4 {
-  margin: 10px 0 2px;
-  font-family: var(--body-font);
-  font-size: 17px;
-}
-
-.tl-panel p,
-.tl-panel ul {
-  margin: 0;
-}
-
-.tl-panel ul {
-  columns: 3 14em;
-  padding-left: 20px;
-}
-
-/* ---- Timeline, narrow layout: a list in date order. ---- */
-
-.tl-list h2 {
-  margin: 18px 0 8px;
-  font-family: var(--title-font);
-  font-size: 32px;
-}
-
-.tl-list section > h3 {
-  margin: 14px 0 6px;
-  font-size: 18px;
-}
-
-.tl-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.tl-row {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 44px;
-  padding: 6px 14px;
-  border: 0;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  text-align: left;
-  box-shadow:
-    inset 0 -3px 0 rgba(0, 0, 0, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.14);
-  transition: opacity 200ms;
-}
-
-.tl-row .tl-spine-name {
-  font: 700 16px var(--title-font);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.tl-row-date {
-  font-family: var(--body-font);
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.tl-row[aria-pressed='true'] {
-  outline: 3px solid var(--ink);
-  outline-offset: 2px;
-}
-
-.tl-rows .tl-panel {
-  margin: 6px 0 10px;
-}
-
-.app[data-layout='narrow'] .timeline-page {
-  padding: 16px 16px 40px;
-}
-
-.app[data-layout='narrow'] .timeline-header h1 {
-  font-size: 52px;
 }
 
 /* A long address or file name in the text breaks, so that the page does not scroll sideways on a phone. */
@@ -1947,6 +1548,165 @@ html:has(.reading) {
   background: #fff;
   color: var(--ref-ink);
   font: 500 16px Inter, system-ui, sans-serif;
+}
+
+/* The timeline. docs/TASKS.md Task 17. src/reference/timelineLayout.ts places the names. */
+.tl-line {
+  width: 100%;
+}
+
+.tl-svg {
+  display: block;
+  overflow: visible;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.tl-axis {
+  stroke: var(--ref-ink);
+  stroke-width: 1.5;
+}
+
+.tl-break {
+  fill: none;
+  stroke: var(--ref-ink-secondary);
+  stroke-width: 1.5;
+}
+
+.tl-tick {
+  stroke: var(--ref-ink);
+}
+
+.tl-tick-label,
+.tl-break-words {
+  fill: var(--ref-ink-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* The thin line from a name down to the line, in the group color. */
+.tl-stem {
+  stroke: var(--tl);
+  stroke-opacity: 0.18;
+}
+
+/* A range of years: a bar under the name. An estimate: a dashed line. */
+.tl-bar[data-estimate='false'] {
+  fill: var(--tl);
+  fill-opacity: 0.55;
+}
+
+.tl-bar[data-estimate='true'] {
+  stroke: var(--tl);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+  stroke-opacity: 0.75;
+}
+
+/* One year: a dot on the line. An estimate: an open dot. */
+.tl-dot {
+  fill: var(--tl);
+}
+
+.tl-dot[data-estimate='true'] {
+  fill: #fff;
+  stroke: var(--tl);
+  stroke-width: 1.6;
+}
+
+.tl-link {
+  outline: none;
+}
+
+.tl-hit {
+  fill: transparent;
+}
+
+.tl-link:focus-visible .tl-hit {
+  stroke: var(--ref-ink);
+  stroke-width: 1.5;
+}
+
+/* A book name: Inter, capitals, the group color. A white edge keeps it clear of the lines behind it.
+   The fill comes from `color`, so the contrast check of e2e/a11y.spec.ts reads the group color. */
+.tl-name {
+  fill: currentColor;
+  font-size: 14px;
+  text-transform: uppercase;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+@media (hover: hover) {
+  .tl-link:hover .tl-name {
+    text-decoration: underline;
+  }
+}
+
+/* The narrow layout: a list in date order. The date is in the first column. */
+.tl-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tl-row {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  align-items: baseline;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: inherit;
+  text-decoration: none;
+}
+
+.tl-row-date {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--ref-ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tl-row-name {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tl-row[data-estimate='true'] .tl-row-name {
+  font-weight: 500;
+}
+
+@media (hover: hover) {
+  .tl-row:hover .tl-row-name {
+    text-decoration: underline;
+  }
+}
+
+.tl-row:focus-visible {
+  outline: 2px solid var(--ref-ink);
+  outline-offset: 2px;
+}
+
+/* The break: one row in the list. */
+.tl-break-row {
+  margin: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: #f5f5f7;
+  color: var(--ref-ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.ref-foot p {
+  margin: 0;
 }
 
 /* The Sources page: one column of 700 px at most. */

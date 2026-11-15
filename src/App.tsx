@@ -6,7 +6,7 @@ import { ReadingPage } from './reading/ReadingPage.tsx'
 import { QuotationsPage } from './reference/QuotationsPage.tsx'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
-import { TimelinePage } from './timeline/TimelinePage.tsx'
+import { TimelinePage } from './reference/TimelinePage.tsx'
 import { WallPage } from './wall/WallPage.tsx'
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
   } else if (route.page === 'quotations') {
     page = <QuotationsPage books={books} layout={layout} />
   } else if (route.page === 'timeline') {
-    page = <TimelinePage books={books} intros={intros} layout={layout} />
+    page = <TimelinePage books={books} layout={layout} />
   } else {
     page = <WallPage books={books} layout={layout} />
   }

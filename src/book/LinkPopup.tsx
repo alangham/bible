@@ -110,7 +110,8 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
   const quotation = end.link.type === 'quotation'
   const translation = useTranslation()
 
-  // Wide layout: under the control, or above it when there is more space above. It follows the control.
+  // Wide layout: below the control when all of the content fits there. If it does not fit below, and the
+  // space above is larger, above the control. docs/DESIGN.md section 7.7, Task 21b. It follows the control.
   useLayoutEffect(() => {
     if (layout !== 'wide') return
     const place = () => {
@@ -124,9 +125,13 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
       const left = Math.max(16, Math.min(r.left - 24, screen.clientWidth - width - 16))
       const below = screen.clientHeight - r.bottom - 16
       const above = r.top - 16
-      const down = below >= 320 || below >= above
+      // The height that the box needs to show all of its content with no scroll, to 600 px: the
+      // height of the content, and the border of the box.
+      const el = box.current
+      const content = Math.min(600, el ? el.scrollHeight + el.offsetHeight - el.clientHeight : 600)
+      const down = content <= below || !(above > below)
       const maxHeight = Math.max(200, Math.min(600, down ? below : above))
-      const height = Math.min(box.current?.offsetHeight ?? maxHeight, maxHeight)
+      const height = Math.min(content, maxHeight)
       setPos({ left, top: down ? r.bottom + 8 : r.top - 8 - height, maxHeight })
     }
     place()

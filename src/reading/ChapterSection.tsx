@@ -142,7 +142,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
             <span className="sr-only">Verse{' '}</span>
             {end.here.v}
           </span>
-          <span className="sr-only">has a {end.link.type === 'quotation' ? 'quotation link' : 'echo link'} to{' '}</span>
+          <span className="sr-only">has {end.link.type === 'quotation' ? 'a quotation link' : 'an echo link'} to{' '}</span>
           <i aria-hidden="true" />
           <span className="rd-label-ref">{passageName(books, end.there)}</span>
         </button>

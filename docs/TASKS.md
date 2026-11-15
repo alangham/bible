@@ -888,7 +888,7 @@ Stop and report. A check on a real phone is still open. Only Arthur can do it.
 
 Arthur decided on 2026-11-15 that the King James Version can become a second translation of the site. The idea and its decisions are in item 6 of `docs/BACKLOG.md`. Task 19 is a report. It does not add the King James Version to the site.
 
-After the report, Arthur decided the design on 2026-11-15. It is in section 8 of `docs/DESIGN.md`. Task 20 makes the text data. Task 20b joins a split word in 13 verses. Task 21 changes the pages.
+After the report, Arthur decided the design on 2026-11-15. It is in section 8 of `docs/DESIGN.md`. Task 20 makes the text data. Task 20b joins a split word in 13 verses. Task 21 changes the pages. Task 21b corrects two small faults that the check of Task 21 found.
 
 ---
 
@@ -1191,6 +1191,54 @@ Done when:
 - The reading page and the pop-up show the selected translation, with the added words in italics.
 - The Berean Standard Bible pages are as before, except the translation switch.
 - The Sources page has the credit of step 9.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+## Task 21b. The side of the pop-up, and one word for a screen reader
+
+Status: DONE
+
+Goal: on a wide screen, the pop-up shows the buttons "Go there" and "Stay here" completely when the screen has space for them. A screen reader says "an echo link".
+
+The two faults, which the designer found in the check of Task 21 on 2026-11-15:
+
+- At 1440 by 900 px, open Hebrews 9 in the King James Version and select the margin label of verse 20, with the label about 470 px from the top of the window. The pop-up opens below the label. Its content is 415 px high, and its box is 386 px high. The button "Go there" is half visible, and the box scrolls. The space above the label is larger than the space below. The cause: the label of Task 21 step 7 adds one line, and the rule in `src/book/LinkPopup.tsx` opens the pop-up below when the space below is 320 px or more. In the Berean Standard Bible at the same place, the content is 390 px high.
+- In `src/reading/ChapterSection.tsx`, the name of a margin label for a screen reader is "Verse 1 has a echo link to Hebrews 11:3". The correct words are "has an echo link".
+
+Arthur decided on 2026-11-15 to correct the two faults. The rule for the side is in section 7.7 of `docs/DESIGN.md`.
+
+WARNING: Change only the side of the pop-up in the wide layout, and the one word for a screen reader. Do not change the look of the pop-up, its width, its content, or the narrow layout.
+
+WARNING: Do not change a data file, a source file, or a build script.
+
+Steps:
+
+1. Read the function `place` in `src/book/LinkPopup.tsx`. Now it opens the pop-up below the control when the space below is 320 px or more, or when the space below is not smaller than the space above.
+2. Change the rule for the side to this rule:
+   - The content height is the height that the pop-up needs to show all of its content with no scroll, to a maximum of 600 px.
+   - If the content height fits in the space below the control, the pop-up opens below.
+   - If it does not fit below, and the space above is larger than the space below, the pop-up opens above.
+   - In each other case, the pop-up opens below.
+   - The maximum height of the box stays the space on its side, between 200 px and 600 px, as now. If the content is taller than the box, the box scrolls, as now.
+3. The text of the passage arrives after the pop-up opens. When the text arrives, the pop-up gets its place again by the rule of step 2, as it does now when its height changes. The pop-up can change its side one time then. If you see the pop-up jump when you test it, say so in the report. Do not add a delay to correct it.
+4. In `src/reading/ChapterSection.tsx`, change the words for a screen reader so that an echo link has "has an echo link" and a quotation link has "has a quotation link". Search `src/` for other text that has "a echo", and correct each one. Give the list in the report.
+5. Add browser tests at 1440 by 900 px:
+   - The case of the fault: Hebrews 9 in the King James Version, the margin label of verse 20 with the reference Exodus 24:8, with the label 470 px from the top of the window. The pop-up opens above the label, and the buttons "Go there" and "Stay here" are completely in the box and in the window.
+   - The same label 150 px from the top of the window: the pop-up opens below the label, and the two buttons are completely in the box.
+   - The same two cases in the Berean Standard Bible: in each, the two buttons are completely in the box.
+   - The name of a margin label of an echo link has "has an echo link".
+6. Make sure that the browser tests that were there before this task pass. If an expected result of a test must change because of the new rule, give the test and the reason in the report.
+7. Take two screenshots at 1440 by 900 px, of the two cases of the King James Version in step 5. Save them in `docs/screenshots/task-21b/`.
+8. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- In the case of the fault, the pop-up opens above the label and shows the two buttons completely.
+- A screen reader gets "has an echo link".
+- The narrow layout did not change.
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. A check on a real phone is still open. Only Arthur can do it.

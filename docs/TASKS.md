@@ -881,3 +881,96 @@ Done when:
 - The report has the measurements of steps 2, 3, 6, and 7.
 
 Stop and report. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+# The King James Version: Task 19
+
+Arthur decided on 2026-11-15 that the King James Version can become a second translation of the site. The idea and its decisions are in item 6 of `docs/BACKLOG.md`. Task 19 is a report. It does not add the King James Version to the site.
+
+---
+
+## Task 19. King James Version: a report on the source files
+
+Status: DONE
+
+Goal: a report on the files of the King James Version, and on how the structure of the Berean files fits them. Arthur uses the report to decide the tasks that add the King James Version. No page and no data file of the site changes.
+
+The decision of Arthur on 2026-11-15, for your information: a translation changes only the words. The reading page of the King James Version will show the section headings and the cross-reference lines of the Berean files above the words of the King James Version. The links, the read-with lists, the introductions, and the dates will be the same for the two translations.
+
+WARNING: Do not change a file in `public/` or in `src/` in this task.
+
+WARNING: Do not put a file of the King James Version text in the repository. Download the files to a temporary folder that is not in `C:\dev\bible`. Arthur decides on the source after the report.
+
+The designer's check of edition C on 2026-11-15. Arthur gave the designer the file `kjv.docx` from `https://openbible.com/docx/kjv.docx`: 2,178,091 bytes, SHA-256 `dce0fbe6cb2aae710d3260d7e3ad3ffc44c1e33b524255fbf864e7132d1c4547`. The designer read the file with a short script and compared it with `public/data/text/*.json`. These are the results. Your script in step 4 must find them independently. If a number of your script differs, give the two numbers in the report. Do not change your script to make the numbers agree.
+
+- The file has 66 books, 1,189 chapters, and 31,102 verses. No text paragraph starts in the middle of a verse.
+- The file has each verse of the site data, and 16 more verses. The 16 verses are the verses that the main text of the Berean Standard Bible does not have. The site data has a note for each of them.
+- Main section headings: 3,016 in the file and 3,016 in the site data. 3,012 have the same words before the same verse. Four have different words at the same place: Numbers 5:5, 2 Kings 7:3, Psalm 77:1, and Ecclesiastes 5:1.
+- Cross-reference lines: 1,325 in the file and 1,325 in the site data. All have the same words before the same verse.
+- Smaller headings: the file has 42, and each is in the site data. The site data has 38 more: the speaker headings of the Song of Solomon and "Saying 20" in Proverbs 24. Six headings of the site data are in the middle of a verse. All six are speaker headings of the Song of Solomon.
+- The file has 229 headings with a Hebrew letter, in Psalms, Proverbs, and Lamentations. The site data has these headings only in Psalm 119.
+- The file has 13,212 text paragraphs. 12,799 of them start at a verse where a paragraph or a poetry line of the site data starts.
+- The file shows the words that the translators added in square brackets: 21,530 groups in 14,251 verses.
+- In Psalm 119, the words of 22 verses start with the name of a Hebrew letter, for example "ALEPH." in verse 1.
+- The file has no statement about rights. Its properties give "Bible Hub" as the creator and 2021-07-26 as the date.
+- Not checked by the designer: the words of the file against a different edition of the King James Version.
+
+WARNING: Do not write a fact about the King James Version from memory. Each number in the report must come from the output of the script of step 4. Each licence statement must come from its page, with the date on which you read the page.
+
+Steps:
+
+1. Read item 6 of `docs/BACKLOG.md` and section 2 of `docs/DATA-SOURCES.md`.
+2. Read the licence of three editions.
+   - Edition A, on eBible.org, the text of 1769 with Strong's numbers: `https://ebible.org/details.php?id=eng-kjv2006`.
+   - Edition B, on eBible.org, the Cambridge Paragraph Bible: `https://www.ebible.org/details.php?id=engkjvcpb`.
+   - Edition C, on OpenBible.com, a site of the Berean publisher: `https://openbible.com/pdfs/kjv.pdf` and `https://openbible.com/docx/kjv.docx`. The page `https://openbible.com/doc.htm` lists the downloads. Arthur found this edition on 2026-11-15. The designer read Genesis 1 to 7 of the PDF file. It has the words of the King James Version below the section headings and the cross-reference lines of the Berean files, for example "The Creation" and "(John 1:1–5; Hebrews 11:1–3)".
+   - For editions A and B, read the details page and the copyright page that the details page links to. If a page does not state that the text is in the public domain, stop and ask Arthur.
+   - For edition C, read the downloads page, the first pages and the last pages of the PDF file, and the terms page of the site if it has one. The designer found no licence statement on the downloads page or in Genesis 1 to 7 of the PDF file. If you find no statement, record "no statement" and continue.
+   - Add a section "King James Version" to `docs/DATA-SOURCES.md`. For each edition, record the addresses, the date, the licence statement, and the statement about the right to print the translation in the United Kingdom if the pages have one. Record the use as "Read for Task 19. Not used on the site."
+3. Download the files to the temporary folder: the USFM zip file of edition A, the USFM zip file of edition B, and the `.docx` file and the PDF file of edition C. For each file, record in `docs/DATA-SOURCES.md` the address, the date, the size in bytes, and the SHA-256. If a download fails, stop and ask Arthur.
+4. Write the script `scripts/kjv-report.mjs`. The script gets the path of the temporary folder as an argument. The script only reads files. It prints the numbers and the lists for steps 5 to 11.
+   - The plain words of a verse are the words that remain when the script removes the markers, the Strong's numbers, and the footnotes. Steps 5 and 6 use the plain words.
+   - For edition C, read the `.docx` file. A `.docx` file is a zip file of XML files: unpack it in the temporary folder, and read `word/document.xml`. Do not add a package to `package.json` for this. Make sure that the SHA-256 of your download is the same as that of the designer's file. If it differs, say so in the report and continue with your download.
+   - The structure of `word/document.xml`, as the designer found it: a chapter starts with a paragraph that has no style and has the text of the book name and the chapter number, and the next paragraph starts with "KJV". The paragraph styles `hdg`, `subhdg`, `suphdg`, and `acrostic` are headings. In a heading paragraph, the cross-reference line comes after a line break, with the run style `cross1`. The paragraph style `reg` is a text paragraph. A run with the style `reftext1` is a verse number. 85 text paragraphs have no paragraph style: find a text paragraph by its verse numbers, not only by its style. Make sure that this description is correct before you use it.
+5. Report the content of each edition:
+   - The number of books, chapters, and verses. If an edition has more books than the 66 books of `public/data/books.json`, list the other books and do not count them.
+   - For editions A and B: each USFM marker, with the number of times that it occurs.
+   - Each different section heading, with the number of times that it occurs. For edition C, give only the number of section headings and the number of cross-reference lines: step 11 compares them.
+   - The number of footnotes, and five examples.
+   - How the edition shows the words that the translators added. In edition C, the designer saw square brackets, for example "[was]" in Genesis 1:2.
+   - These verses, each as it is in the source file and as its plain words: Genesis 1:1, Genesis 1:2, Psalm 23:1, Matthew 5:3, and the last verse of 3 John.
+6. Compare the words of the editions. Count the verses whose plain words differ between edition A and edition B. Count the verses whose plain words differ between edition A and edition C. For each of the two comparisons, give ten examples with the words of the two editions. Say how the script handles the square brackets of edition C.
+7. Compare the verses of edition A with `sources/bsb/bsb.txt`. In that file, a verse with no words is a verse that the main text of the Berean Standard Bible does not have. Give three lists:
+   - The verses of edition A that have no line in `sources/bsb/bsb.txt`.
+   - The verses that have no words in `sources/bsb/bsb.txt`. For each, say if edition A has words for it.
+   - The verses of `sources/bsb/bsb.txt` that edition A does not have.
+8. Examine the links in `public/data/links/*.json`. Each link has two passages, `a` and `b`, with `book`, `c`, `v`, and for a range `c2` and `v2`. Count the passages whose first verse or last verse is not in edition A. List each of these passages with the `id` of its link.
+9. Examine the reason lines in `public/data/links/*.json`. Count the links with the type `quotation`. Count those whose `reason` has words between quotation marks. Give five examples. These words are from the Berean Standard Bible. Do not change a reason line.
+10. Examine where the structure of the Berean files cuts a verse. Use `public/data/text/*.json`. In a text block (`k: "p"`), an item `{ "v": n }` starts verse n, and a string is words of the current verse.
+    - Count the heading blocks (`k: "h"`) for each style. A heading is in the middle of a verse when the first item of the next text block is a string. Count these headings for each style, and list each one with its book, chapter, and verse.
+    - Count the text blocks for each style. Count for each style the text blocks that start in the middle of a verse.
+    - Count the verses that have words in more than one text block. Give the count for paragraph styles and for poetry styles, and each count as a part of all verses.
+11. Compare the section headings and the cross-reference lines of edition C with those of `public/data/text/*.json`.
+    - Give the number of section headings and the number of cross-reference lines in each of the two.
+    - Count the headings that are in one of the two and not in the other. List them, to a maximum of 50.
+    - Count the headings whose words differ. List them, to a maximum of 50.
+    - Count the headings that stand before a different verse. List them, to a maximum of 50.
+    - Count the cross-reference lines whose words differ. List them, to a maximum of 50.
+    - For each Berean heading that step 10 found in the middle of a verse, give the place of that heading in edition C.
+    - Say where edition C starts a new paragraph: at each verse, at each heading only, or at other places.
+12. Write the report `docs/reviews/task-19-kjv-report.md`. Give it one section for each of steps 2, 3, and 5 to 11, in that order. Then add a section "Proposals" with these four points. For each point, give the options and the cost of each option. Do not decide for Arthur.
+    - Which edition the site uses, and from which file the build script takes the words, the headings, and the cross-reference lines.
+    - Which paragraphs and poetry lines the reading page of the King James Version shows, where the Berean files cut a verse in the middle.
+    - What the pop-up shows for a reason line that has words of the Berean Standard Bible, when the reader reads the King James Version.
+    - Which footnotes of the King James Version the site shows, if any.
+13. Run `npm run lint`, `npm run build`, and `npm test`.
+
+Done when:
+
+- `docs/reviews/task-19-kjv-report.md` has the numbers and the lists of steps 5 to 11, and the four proposals.
+- `docs/DATA-SOURCES.md` has the licence record of the three editions and the record of the downloads.
+- No file in `public/` or in `src/` changed, and no file of the King James Version text is in the repository.
+- `npm run build` has no errors, and the tests pass.
+
+Stop and report. Give the path of the temporary folder in the report. Do not start a task that adds the King James Version. Arthur decides the next tasks from the report.

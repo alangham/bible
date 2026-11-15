@@ -181,3 +181,54 @@ The site uses two fonts, Inter and Lora. Section 7.3 of `docs/DESIGN.md` names t
 ## 8. Content sources
 
 The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthur approved them in Task 4.
+
+---
+
+## 9. King James Version
+
+- The report of Task 19 is `docs/reviews/task-19-kjv-report.md`.
+- No file of the King James Version text is in the repository. The downloads are in a temporary folder outside `C:\dev\bible`.
+
+### Edition A: eBible.org, the text of 1769 with Strong's numbers
+
+- Use: Read for Task 19. Not used on the site.
+- Details page: `https://ebible.org/details.php?id=eng-kjv2006`. Read on 2026-11-15.
+- Copyright page: `https://eBible.org/eng-kjv2006/copyright.htm`. Read on 2026-11-15. The details page does not link to this page. The HTML edition `https://eBible.org/eng-kjv2006/` links to it. The zip file holds the same page as `copr.htm`.
+- Description on the details page: the King James Version, the standardized text of 1769, the 66 books only, with Strong's numbers added.
+- Licence statement: both pages state "Public Domain". The copyright page also states that the reader may copy the text freely.
+- The right to print in the United Kingdom: both pages state that letters patent of King James have no end date. Cambridge University Press, Oxford University Press, and Collins have the exclusive right to print this translation in the United Kingdom, and to import printed copies. The pages state that this right has no effect outside the United Kingdom, where the text is in the public domain.
+
+### Edition B: eBible.org, the Cambridge Paragraph Bible
+
+- Use: Read for Task 19. Not used on the site.
+- Details page: `https://www.ebible.org/details.php?id=engkjvcpb`. Read on 2026-11-15.
+- Copyright page: `https://eBible.org/engkjvcpb/copyright.htm`. Read on 2026-11-15. The details page does not link to this page. The HTML edition `https://eBible.org/engkjvcpb/` links to it.
+- Description on the details page: the King James Version, Cambridge Paragraph Bible edition.
+- Licence statement: both pages state "Public Domain".
+- The right to print in the United Kingdom: the same statement as for edition A.
+- The zip file has 17 files that are not in the 66 books, for example the Apocrypha and the preface "The Translators to the Reader". The report does not count them.
+
+### Edition C: OpenBible.com
+
+- Use: Read for Task 19. Not used on the site.
+- Task 19 names OpenBible.com a site of the Berean publisher. I did not check this.
+- Downloads page: `https://openbible.com/doc.htm`. Read on 2026-11-15. It lists "King James Version - docx" at `https://openbible.com/docx/kjv.docx`. It has no licence statement.
+- Terms page: `https://openbible.com/terms.htm`, dated June 28, 2021. Read on 2026-11-15. The page states:
+  1. Most content and code of the site have a CC0 licence.
+  2. Exception: some Bible texts have a copyright notice. A copy of such a text must keep the notice, and the Bible text must not be changed.
+  3. Section 16 is a free licence for each file that a person downloads from the site. The person who downloads a file accepts the terms by the download. The courts of the United States have jurisdiction.
+  4. Section 16 also states that OpenBible.com claims no copyright over public-domain texts such as the King James Version, and that it gives no guarantee that a source is in the public domain.
+- The `.docx` file has no statement about rights. The script `scripts/kjv-report.mjs` searched each paragraph of `word/document.xml` for the words copyright, public domain, licence, rights, permission, and "©". It found one heading and four paragraphs of Bible text. It searched the other 10 parts of the file for the words copyright, public domain, licence, rights reserved, and "©", and found none. The file properties give "Bible Hub" as the creator and 2021-07-26 as the date.
+- The right to print in the United Kingdom: no page of edition C states it.
+- The PDF file `https://openbible.com/pdfs/kjv.pdf`: Arthur decided on 2026-11-15 that Task 19 does not need it. I did not get it and did not read it.
+
+### Downloads (Task 19 step 3)
+
+| Edition | Address | Got | Size in bytes | SHA-256 |
+|---|---|---|---|---|
+| A | `https://eBible.org/Scriptures/eng-kjv2006_usfm.zip` | Downloaded by Claude on 2026-11-15 | 2,466,537 | `b6faa67117ccaba49df9e7df224a553f11758ae7c5d58f0f7979e2b73ac4480b` |
+| B | `https://eBible.org/Scriptures/engkjvcpb_usfm.zip` | Downloaded by Claude on 2026-11-15 | 1,797,997 | `62a1ee0f996a20523663c37e3c7afbc1bb01443488049f32a8178393ac52831b` |
+| C | `https://openbible.com/docx/kjv.docx` | Downloaded by Arthur on 2026-11-15. Claude copied Arthur's file and did not download from OpenBible.com | 2,178,091 | `dce0fbe6cb2aae710d3260d7e3ad3ffc44c1e33b524255fbf864e7132d1c4547` |
+
+- The SHA-256 of the edition C file is the same as that of the file that the designer examined.
+- Arthur's download from OpenBible.com accepted the terms of section 16 of the terms page.

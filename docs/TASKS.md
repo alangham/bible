@@ -745,7 +745,10 @@ Steps:
 6. Show a list for the selected book: the books that it quotes and the books that quote it, with the number of quotation links for each. The list is the text form of the lines. A book in the list selects that book. A control in the list opens the selected book.
 7. In the narrow layout, add a list control above the diagram that selects a book.
 8. Put the line "From the Bible Quotation Database. A thicker line has more quotation links." below the diagram.
-9. Give the Sources page at `#/sources` the new look: Inter for the headings, a column of 700 px at most. Do not change its words in this task.
+9. Give the Sources page at `#/sources` the new look: Inter for the headings, a column of 700 px at most. The top bar of step 3 replaces the link "Back to the table".
+   - Do not change a statement about a source or a licence.
+   - Change only the words that name a part of the first build. The sentence "The introductions on the book covers use facts from these sources." becomes "The introductions of the books use facts from these sources."
+   - Task 17 changes the fonts section. Do not change it in this task.
 10. Add the link "Quotations" to the bottom line of the wall, between "Timeline" and "Sources".
 11. Add tests:
     - The three links in the bottom line of the wall open the three pages.
@@ -860,15 +863,21 @@ Steps:
 4. Set `prefers-reduced-motion` and use each page. No element moves.
 5. Search `src/` and `package.json` for code and packages of the old pages: the table, the stacks, the spines, the cover, the spread, the scenes, the page turn, the linen colors, and the old fonts. Remove what no page uses.
 6. Measure the size of the built JavaScript and the built styles. Give the sizes in the report, with the sizes before Task 12 from the git history.
-7. Make sure that the names in the code agree with the table of names in `CLAUDE.md`.
-8. Take one screenshot of each page at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-18/`.
-9. Items 11, 12, and 14 of `docs/POLISH.md` are about pages that the redesign replaced. Do not change their status. Ask Arthur in the report if he closes them.
+7. Measure a long scroll on the reading page at 390 by 844 px. The reading page adds chapters during the scroll and does not remove them.
+   - Open Psalm 1. Scroll to the end of Psalm 150.
+   - Measure the frame rate of the scroll in the first 10 Psalms and in the last 10 Psalms. Use `scripts/measure-fps.mjs`, or change it for this measurement.
+   - Count the elements in the page at the end.
+   - Give the two frame rates and the count in the report.
+   - If the frame rate in the last 10 Psalms is less than three quarters of the frame rate in the first 10 Psalms, do not correct it in this task. Propose a correction in the report.
+8. Make sure that the names in the code agree with the table of names in `CLAUDE.md`.
+9. Take one screenshot of each page at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-18/`.
+10. Items 11, 12, and 14 of `docs/POLISH.md` are about pages that the redesign replaced. Do not change their status. Ask Arthur in the report if he closes them.
 
 Done when:
 
 - The axe-core check passes on each page at the two sizes.
 - No control is smaller than 24 by 24 px.
 - `npm run build` has no errors, and the tests pass.
-- The report has the measurements of steps 2, 3, and 6.
+- The report has the measurements of steps 2, 3, 6, and 7.
 
 Stop and report. A check on a real phone is still open. Only Arthur can do it.

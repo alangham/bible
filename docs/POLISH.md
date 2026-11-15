@@ -4,7 +4,7 @@ Design work is paused from 2026-11-14. Arthur plans a redesign. Do not do or pro
 
 This file is the list of design problems to correct later. Arthur or the designer adds an item. Claude Code can add an item with the status `PROPOSED`. Claude Code does an item only when its status is `APPROVED`. Task 10 in `docs/TASKS.md` uses this file.
 
-Status values: `PROPOSED`, `APPROVED`, `DONE`, `REJECTED`.
+Status values: `PROPOSED`, `APPROVED`, `DONE`, `REJECTED`, `CLOSED`. `CLOSED`: the redesign removed the page of the item, so the item no longer applies.
 
 ---
 
@@ -153,7 +153,7 @@ Correction: make the marks easier to see and to select. The touch area of a mark
 
 ## 11. The travel move is plain
 
-Status: PROPOSED
+Status: CLOSED. Arthur closed this item on 2026-11-15, after Task 18: the redesign replaced its page.
 
 Waits. Arthur decided on 2026-11-14 that this item needs a design from the designer first.
 
@@ -165,7 +165,7 @@ Correction: make the move look like the books of the table page: real spines wit
 
 ## 12. The timeline page is very tall
 
-Status: PROPOSED
+Status: CLOSED. Arthur closed this item on 2026-11-15, after Task 18: the redesign replaced its page.
 
 Waits. Arthur decided on 2026-11-14 that this item needs a design from the designer first.
 
@@ -192,7 +192,7 @@ Correction: options to examine. A thickness of 24 px or more on screen for each 
 
 ## 14. The wide table spines are below 24 px in a narrow wide window
 
-Status: PROPOSED
+Status: CLOSED. Arthur closed this item on 2026-11-15, after Task 18: the redesign replaced its page.
 
 Page: table, wide layout. Measured in Task 10 on 2026-11-14 with `scripts/measure-spines.mjs`.
 

@@ -770,7 +770,7 @@ Stop and report.
 
 ## Task 16. Timeline dates: estimates for 17 books
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

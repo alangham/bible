@@ -40,7 +40,7 @@ When Arthur says "do the next task", start again at step 1.
 - Do not push a different branch, and do not use a force push.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
-- Do not change the words of a Bible text. This applies to the two translations.
+- Do not change the words of a Bible text. This applies to the two translations. The one exception is the list of 13 split words in section 8.2 of `docs/DESIGN.md`.
 - Do not write new content for the King James Version. Its headings, cross-reference lines, links, introductions, and dates are those of the site. Section 8 of `docs/DESIGN.md` has the rule.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
 - Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
@@ -72,6 +72,7 @@ Use these names in code, comments, and reports. One name for each thing.
 | band | The bar in the group color that starts a group, with the group name in white. |
 | translation | One of the two Bible texts of the site: the Berean Standard Bible and the King James Version. |
 | added words | The words that the translators of the King James Version added. The page shows them in italics. |
+| translation switch | The control with the two translation names. It is on the wall and above the chapter grid. |
 | reading page | The page with the chapter text, in one column. |
 | top bar | The bar that stays at the top of the reading page and of the Reference pages. |
 | chapter grid | The grid of chapter numbers that opens from the top bar. |

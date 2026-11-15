@@ -397,8 +397,10 @@ Arthur decided this section on 2026-11-15. The evidence is in `docs/reviews/task
 
 - Source: edition A of the report. It is the standardized text of 1769 from eBible.org, `https://eBible.org/Scriptures/eng-kjv2006_usfm.zip`. The pages of eBible.org state "Public Domain". The record is in section 9 of `docs/DATA-SOURCES.md`.
 - The site does not change a word of the source.
+- One exception, which Arthur decided on 2026-11-15: in 13 verses, the source splits one word into two, for example "can not" in 2 Timothy 2:13. The Strong's numbers of the source cause the split. The site joins the word in these 13 verses. The change removes a space and changes no letter. Task 20b has the list.
 - The site does not show these parts of the source files: the Strong's numbers, the footnotes, the paragraph signs "¶", the marks for the words of Jesus, the paragraphs and the poetry lines, and the `\s1` lines. The `\s1` lines are the letter headings of Psalm 119 and the lines at the end of 14 letters.
 - The words that the translators added show in italics, as in a printed copy. The source marks them with `\add`.
+- A Psalm title is in italics on the site. In a Psalm title, the added words show upright, so that the reader can see them.
 - A Psalm title of the source is a `\d` line. It shows as the title of its Psalm, where the Berean data has the title of that Psalm.
 - The King James Version has words for the 16 verses that the main text of the Berean Standard Bible does not have. The King James Version pages show these verses as text, with no note.
 
@@ -415,10 +417,27 @@ The structure of each chapter comes from the Berean data in `public/data/text/`.
 ### 8.4 Links and reason lines
 
 - The King James Version pages show the same marks, margin labels, and pop-ups. The pop-up shows the linked passage in the translation that the reader reads.
-- The reason line of a quotation link quotes words of the Berean Standard Bible. On the King James Version pages, the reason line shows unchanged, with a short label that the quoted words are from the Berean Standard Bible.
+- The reason line of a quotation link quotes words of the Berean Standard Bible. On the King James Version pages, the reason line shows unchanged, with a short label that the quoted words are from the Berean Standard Bible. The label: "The quoted words are from the Berean Standard Bible."
 
-### 8.5 Not decided
+### 8.5 The translation switch
 
-1. How the reader selects the translation, and where the site keeps the selection. The designer shows Arthur a render before Task 21 is written.
-2. The words of the credit on the Sources page. The terms of the Berean publisher do not permit the Berean name on a changed text. The credit must not give the King James Version pages the Berean name.
-3. Arthur asked the Berean publisher on 2026-11-15 if the site can use its set of headings for the King James Version. This section does not wait for an answer.
+Arthur decided this on 2026-11-15, from renders of three options. The renders are in `docs/screenshots/kjv-design/`.
+
+- The translation switch is a control with the two full names: "Berean Standard Bible" and "King James Version". The selected name has the ink color and an underline. The other name has the secondary ink color.
+- The switch is in two places: in the line at the bottom of the wall, and at the top of the panel of the chapter grid on the reading page. A line separates it from the chapter grid.
+- The top bar does not change. Reason: at 390 px wide, the top bar has no space for a switch.
+- The site keeps the selection in the storage of the browser. The first visit shows the Berean Standard Bible.
+- The translation is not in the address of a page. A link to a chapter opens in the translation that the reader selected.
+- When the reader changes the translation on the reading page, the panel closes and the verse at the top of the page stays at the same place.
+- Selected by the designer, without a decision by Arthur: the sizes and the spaces of the switch, and the words of the label in section 8.4.
+
+### 8.6 The credit on the Sources page
+
+- The Sources page names the source of the King James Version, its public-domain statement, and the right to print in the United Kingdom, from `sources/kjv/copr.htm`.
+- The page states what the site does not show from the source files, and the exception of section 8.2.
+- The page states that the section headings, the cross-reference lines, the paragraphs, and the lines of poetry on the King James Version pages are those of the Berean Standard Bible files, and that they are not part of the King James Version. The page does not give the King James Version pages the Berean name.
+
+### 8.7 Not decided
+
+1. Arthur asked the Berean publisher on 2026-11-15 if the site can use its set of headings for the King James Version. This section does not wait for an answer.
+2. On a phone, the top bar of the reading page breaks into two lines for five long book names. The designer found this on 2026-11-15. It is a fault of the site before the King James Version, and no task corrects it.

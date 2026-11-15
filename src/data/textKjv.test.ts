@@ -1,5 +1,6 @@
 // The King James Version data: the words of each verse are the same as in the source files, and the
 // structure is that of the Berean data. docs/TASKS.md Task 20 step 9, docs/DESIGN.md section 8.
+// The one exception: the 13 split words that Task 20b joins (docs/DESIGN.md section 8.2).
 //
 // The test reads the words of the source with code of its own, not with the code of
 // scripts/build-text-kjv.mjs.
@@ -93,6 +94,27 @@ kjv.forEach((book, bi) => {
 
 const verse = (id: string, c: number, v: number) => data.get(`${books.findIndex((b) => b.id === id)} ${c}:${v}`)?.replace(/\s+/g, ' ').trim()
 
+// ---- the 13 split words: docs/DESIGN.md section 8.2, docs/TASKS.md Task 20b ----
+
+/** The verses where the site joins a word that the source has in two parts. A list of the test's own. */
+const SPLIT: [id: string, c: number, v: number, two: string, one: string][] = [
+  ['acts', 4, 16, 'can not', 'cannot'],
+  ['acts', 4, 20, 'can not', 'cannot'],
+  ['acts', 5, 39, 'can not', 'cannot'],
+  ['colossians', 3, 17, 'what soever', 'whatsoever'],
+  ['colossians', 3, 23, 'what soever', 'whatsoever'],
+  ['1-timothy', 2, 7, 'Where unto', 'Whereunto'],
+  ['1-timothy', 5, 25, 'can not', 'cannot'],
+  ['1-timothy', 6, 12, 'where unto', 'whereunto'],
+  ['2-timothy', 1, 11, 'Where unto', 'Whereunto'],
+  ['2-timothy', 2, 9, 'Where in', 'Wherein'],
+  ['2-timothy', 2, 13, 'can not', 'cannot'],
+  ['hebrews', 6, 17, 'Where in', 'Wherein'],
+  ['hebrews', 9, 5, 'can not', 'cannot'],
+]
+const splitKeys = new Map(SPLIT.map(([id, c, v, two, one]) => [`${books.findIndex((b) => b.id === id)} ${c}:${v}`, { two, one }]))
+const count = (s: string, w: string) => s.split(w).length - 1
+
 describe('King James Version data', () => {
   it('has 66 books and 1,189 chapters, in the order of books.json, and 31,102 verses', () => {
     expect(files).toHaveLength(66)
@@ -109,9 +131,10 @@ describe('King James Version data', () => {
     expect(source.size).toBe(31102)
   })
 
-  it('has the words of each verse as in the source', () => {
+  it('has the words of each verse as in the source, except the 13 verses of the split words', () => {
     const differ: string[] = []
     for (const [key, w] of source) {
+      if (splitKeys.has(key)) continue
       const d = data.get(key)?.replace(/\s+/g, ' ').trim()
       if (d !== w) differ.push(`${key}: source "${w}", data "${d}"`)
     }
@@ -129,6 +152,19 @@ describe('King James Version data', () => {
     expect(verse('3-john', 1, 14)).toBe(
       'But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name.',
     )
+  })
+
+  it('joins the split word in each of the 13 verses, and has the words of the source with the space put back', () => {
+    expect(splitKeys.size).toBe(13)
+    for (const [key, { two, one }] of splitKeys) {
+      const src = source.get(key) ?? ''
+      const d = data.get(key)?.replace(/\s+/g, ' ').trim() ?? ''
+      expect(count(src, two), `${key} source`).toBe(1)
+      expect(count(src, one), `${key} source`).toBe(0)
+      expect(count(d, one), `${key} data`).toBe(1)
+      expect(count(d, two), `${key} data`).toBe(0)
+      expect(d.replace(one, two), key).toBe(src)
+    }
   })
 
   it('has one added-words item in Genesis 1:2, with the word "was"', () => {

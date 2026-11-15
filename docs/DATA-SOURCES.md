@@ -205,11 +205,35 @@ The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthu
 - Script: `scripts/build-text-kjv.mjs`. It reads `sources/kjv/usfm/` and `public/data/text/<id>.json`, and writes `public/data/text-kjv/<id>.json`, one file for each book.
 - What the site takes from the source files: the words of each verse, the added words (`\add`), and the Psalm titles (`\d`).
 - What the site does not take from the source files: the Strong's numbers, the 6,959 footnotes, the paragraph signs "¶", the marks of the words of Jesus (`\wj`) and of the name LORD (`\nd`), the paragraphs and the poetry lines (`\p`, `\q1`, `\b`), and the `\s1` lines. The structure of each chapter comes from the Berean data in `public/data/text/`, by `docs/DESIGN.md` section 8.3.
-- Test: `src/data/textKjv.test.ts` checks that the words of each of the 31,102 verses are the same as in the source files.
+- Test: `src/data/textKjv.test.ts` checks that the words of each of the 31,102 verses are the same as in the source files, except the 13 verses of the next section.
+
+### Exception in Task 20b: 13 split words
+
+- Arthur decided on 2026-11-15 that the site joins one word in 13 verses, where the source has the word in two parts. `docs/DESIGN.md` section 8.2 has the decision.
+- In each of the 13 verses, the site removes one space. It changes no letter. The files in `sources/kjv/usfm/` do not change.
+- Each joined word is in edition B. Task 20b confirmed each verse in the USFM files of `engkjvcpb_usfm.zip`, SHA-256 `62a1ee0f996a20523663c37e3c7afbc1bb01443488049f32a8178393ac52831b`, checked again on 2026-11-15. In two verses, edition B has a small letter at the start of the word and edition A a capital letter. The site keeps the capital letter of edition A.
+- Script: the list `SPLIT` in `scripts/build-text-kjv.mjs`. The script stops with an error if the two words are not in the verse exactly once, or not in one string.
+- Test: `src/data/textKjv.test.ts` has its own list. It checks the joined word in each verse, and that the verse equals the source when the space is put back.
+
+| Verse | Source, edition A | Site | Edition B |
+|---|---|---|---|
+| Acts 4:16 | can not | cannot | cannot |
+| Acts 4:20 | can not | cannot | cannot |
+| Acts 5:39 | can not | cannot | cannot |
+| Colossians 3:17 | what soever | whatsoever | whatsoever |
+| Colossians 3:23 | what soever | whatsoever | whatsoever |
+| 1 Timothy 2:7 | Where unto | Whereunto | Whereunto |
+| 1 Timothy 5:25 | can not | cannot | cannot |
+| 1 Timothy 6:12 | where unto | whereunto | whereunto |
+| 2 Timothy 1:11 | Where unto | Whereunto | whereunto |
+| 2 Timothy 2:9 | Where in | Wherein | wherein |
+| 2 Timothy 2:13 | can not | cannot | cannot |
+| Hebrews 6:17 | Where in | Wherein | Wherein |
+| Hebrews 9:5 | can not | cannot | cannot |
 
 ### Edition B: eBible.org, the Cambridge Paragraph Bible
 
-- Use: Read for Task 19. Not used on the site.
+- Use: Read for Task 19. Read for Task 20b, to confirm the 13 joined words. The site takes no words from this edition.
 - Details page: `https://www.ebible.org/details.php?id=engkjvcpb`. Read on 2026-11-15.
 - Copyright page: `https://eBible.org/engkjvcpb/copyright.htm`. Read on 2026-11-15. The details page does not link to this page. The HTML edition `https://eBible.org/engkjvcpb/` links to it.
 - Description on the details page: the King James Version, Cambridge Paragraph Bible edition.

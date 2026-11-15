@@ -6,7 +6,8 @@
 // Berean data in public/data/text/<id>.json: the headings, the cross-reference lines, the text blocks
 // and their styles, and the blank lines. Arthur's rule of 2026-11-15: a translation changes only the
 // words. A text block of the King James Version holds the verses that start in its Berean block. The
-// words of a verse are never cut.
+// words of a verse are never cut. The one change to the words of the source: the 13 split words of
+// docs/DESIGN.md section 8.2, joined by Task 20b (SPLIT below).
 //
 // The script stops with an error when a rule does not fit the data. It does not guess.
 //
@@ -188,6 +189,54 @@ const CODES = ('GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH 
   'EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH ' +
   '1TI 2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV').split(' ')
 
+// ---- the 13 split words: docs/DESIGN.md section 8.2, docs/TASKS.md Task 20b ----
+
+/**
+ * The verses where the source has a word in two parts and the site joins it. Arthur's decision of
+ * 2026-11-15. Each joined word is the word of edition B, the Cambridge Paragraph Bible of eBible.org
+ * (docs/DATA-SOURCES.md section 9). The script removes one space and changes nothing else.
+ * [book id, chapter, verse, the two words of the source, the joined word]
+ */
+const SPLIT = [
+  ['acts', 4, 16, 'can not', 'cannot'],
+  ['acts', 4, 20, 'can not', 'cannot'],
+  ['acts', 5, 39, 'can not', 'cannot'],
+  ['colossians', 3, 17, 'what soever', 'whatsoever'],
+  ['colossians', 3, 23, 'what soever', 'whatsoever'],
+  ['1-timothy', 2, 7, 'Where unto', 'Whereunto'],
+  ['1-timothy', 5, 25, 'can not', 'cannot'],
+  ['1-timothy', 6, 12, 'where unto', 'whereunto'],
+  ['2-timothy', 1, 11, 'Where unto', 'Whereunto'],
+  ['2-timothy', 2, 9, 'Where in', 'Wherein'],
+  ['2-timothy', 2, 13, 'can not', 'cannot'],
+  ['hebrews', 6, 17, 'Where in', 'Wherein'],
+  ['hebrews', 9, 5, 'can not', 'cannot'],
+]
+const splitByPlace = new Map()
+for (const [id, c, v, two, one] of SPLIT) {
+  const book = books.find((b) => b.id === id)
+  if (!book) throw new Error(`split word: no book ${id}`)
+  if (two.replace(' ', '') !== one || two.split(' ').length !== 2) throw new Error(`split word: "${two}" and "${one}" differ by more than one space`)
+  splitByPlace.set(`${book.name} ${c}:${v}`, { two, one, done: false })
+}
+const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+/**
+ * Joins the split word of a verse in the list. The two words must be in the verse exactly once, and in
+ * one string, not across added words.
+ */
+function joinSplit(list, where) {
+  const split = splitByPlace.get(where)
+  if (!split) return list
+  const re = new RegExp(`\\b${escape(split.two)}\\b`, 'g')
+  const all = list.map((x) => (typeof x === 'string' ? x : x.a)).join('')
+  const inVerse = (all.match(re) ?? []).length
+  const inStrings = list.filter((x) => typeof x === 'string').reduce((n, x) => n + (x.match(re) ?? []).length, 0)
+  if (inVerse !== 1 || inStrings !== 1) throw new Error(`${where}: "${split.two}" is ${inVerse} times in the verse and ${inStrings} times in one string; expected 1 and 1`)
+  split.done = true
+  return list.map((x) => (typeof x === 'string' ? x.replace(re, split.one) : x))
+}
+
 // ---- the structure, from the Berean data ----
 
 /** Appends verse items to a block: { v: n }, then the words. Adjacent strings join. */
@@ -212,7 +261,7 @@ function buildChapter(where, bsbCh, src, isSong) {
     if (!src.verses.has(n)) throw new Error(`${where}:${n}: the source has no such verse`)
     if (placed.has(n)) throw new Error(`${where}:${n}: verse placed twice`)
     placed.add(n)
-    return items(src.verses.get(n), `${where}:${n}`)
+    return joinSplit(items(src.verses.get(n), `${where}:${n}`), `${where}:${n}`)
   }
 
   for (const b of bsbBlocks) {
@@ -307,5 +356,8 @@ books.forEach((book, i) => {
   stats.chapters += chapters.length
   writeFileSync(join(OUT, `${book.id}.json`), JSON.stringify({ id: book.id, name: book.name, translation: 'King James Version', chapters }))
 })
+
+for (const [where, split] of splitByPlace) if (!split.done) throw new Error(`${where}: split word "${split.two}" not joined`)
+stats.splitWordsJoined = [...splitByPlace].map(([where, s]) => `${where}: ${s.two} -> ${s.one}`)
 
 console.log(JSON.stringify(stats, null, 1))

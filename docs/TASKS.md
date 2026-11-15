@@ -888,7 +888,7 @@ Stop and report. A check on a real phone is still open. Only Arthur can do it.
 
 Arthur decided on 2026-11-15 that the King James Version can become a second translation of the site. The idea and its decisions are in item 6 of `docs/BACKLOG.md`. Task 19 is a report. It does not add the King James Version to the site.
 
-After the report, Arthur decided the design on 2026-11-15. It is in section 8 of `docs/DESIGN.md`. Task 20 makes the text data. Task 21 changes the pages. Task 21 is not written: it waits for one design decision of Arthur.
+After the report, Arthur decided the design on 2026-11-15. It is in section 8 of `docs/DESIGN.md`. Task 20 makes the text data. Task 20b joins a split word in 13 verses. Task 21 changes the pages.
 
 ---
 
@@ -1060,3 +1060,137 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Task 21 is not written. Do not change a page before Arthur gives you Task 21.
+
+---
+
+## Task 20b. King James Version: join the split word in 13 verses
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: in 13 verses, the King James Version data has the word that a printed copy has, and not the two parts that the source has.
+
+The fault: the source, edition A, gives each part of some words its own Strong's number. So it writes one word as two words in 13 verses. Example: 2 Timothy 2:13 has `\w can|strong="G1410"\w* \w not|strong="G3756"\w*`, and the site data has "he can not deny himself". The designer found the 13 verses on 2026-11-15, by a comparison of `public/data/text-kjv/` with the file `kjv.docx` of OpenBible.com. These 13 are all the verses in which the two differ only by a space. Arthur decided on 2026-11-15 that the site joins the word in these verses. The exception is in section 8.2 of `docs/DESIGN.md`.
+
+The 13 verses:
+
+| Verse | The source has | The site must have |
+|---|---|---|
+| Acts 4:16 | can not | cannot |
+| Acts 4:20 | can not | cannot |
+| Acts 5:39 | can not | cannot |
+| Colossians 3:17 | what soever | whatsoever |
+| Colossians 3:23 | what soever | whatsoever |
+| 1 Timothy 2:7 | Where unto | Whereunto |
+| 1 Timothy 5:25 | can not | cannot |
+| 1 Timothy 6:12 | where unto | whereunto |
+| 2 Timothy 1:11 | Where unto | Whereunto |
+| 2 Timothy 2:9 | Where in | Wherein |
+| 2 Timothy 2:13 | can not | cannot |
+| Hebrews 6:17 | Where in | Wherein |
+| Hebrews 9:5 | can not | cannot |
+
+WARNING: Change only these 13 verses, and in each verse only the one space of the table. Do not change a letter, a capital letter, or a punctuation mark.
+
+WARNING: Do not change the files in `sources/kjv/usfm/`. The build script makes the change. The source files stay as eBible.org gives them.
+
+WARNING: Do not take the joined word from `resources/kjv.docx` or from memory. Confirm each verse in edition B, as step 1 says.
+
+Steps:
+
+1. Confirm each of the 13 verses in edition B, the Cambridge Paragraph Bible of eBible.org. Use the file `engkjvcpb_usfm.zip` of Task 19 if you still have it. If not, download `https://eBible.org/Scriptures/engkjvcpb_usfm.zip`, and make sure that its SHA-256 is `62a1ee0f996a20523663c37e3c7afbc1bb01443488049f32a8178393ac52831b`. For each verse, find the word of the column "The site must have" in the verse of edition B. A capital letter can differ in edition B. Do not put a file of edition B in the repository.
+2. If edition B does not have the joined word in a verse, do not change that verse. Give the verse and the words of edition B in the report.
+3. In `scripts/build-text-kjv.mjs`, add a list of the confirmed verses, each with its two words and its joined word. For each verse of the list, the script joins the two words in the words of the verse. The script stops with an error if the two words are not in the verse exactly once, or if they are not in one string of the verse.
+4. Run `node scripts/build-text-kjv.mjs`. Make sure with `git diff --stat` that only the files of Acts, Colossians, 1 Timothy, 2 Timothy, and Hebrews in `public/data/text-kjv/` changed.
+5. Change `src/data/textKjv.test.ts`. The test has a list of its own of the same verses. It checks that each verse of the list has the joined word, and that the words of the verse are the same as the source when the space is put back. It checks that the words of each other verse are the same as the source, as now.
+6. In section 9 of `docs/DATA-SOURCES.md`, under edition A, record the exception: the 13 verses, the words of the source, the words of the site, the words of edition B for each verse, and the decision of Arthur of 2026-11-15.
+7. Run the `accuracy-reviewer` agent. Its Check 1 applies to `public/data/text-kjv/` with `sources/kjv/usfm/` as the source file. Tell it that the 13 verses of this task differ from the source by one space each, by the decision of Arthur.
+8. Run `npm run lint`, `npm run build`, and `npm test`.
+
+Done when:
+
+- Each confirmed verse has the joined word in `public/data/text-kjv/`.
+- No other verse changed, and no file in `sources/` changed.
+- The record is in `docs/DATA-SOURCES.md`.
+- `npm run build` has no errors, and the tests pass.
+
+Stop and report.
+
+---
+
+## Task 21. King James Version: the pages
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the reader can select the King James Version and read it on each page that shows Bible text. The first visit shows the Berean Standard Bible, as now.
+
+The design is in section 8 of `docs/DESIGN.md`. Arthur decided the translation switch on 2026-11-15 from renders. The renders are in `docs/screenshots/kjv-design/`: the wall, the panel of the chapter grid, and Psalm 23, each at 1440 by 900 px and at 390 by 844 px. The renders are a sketch on the built site. Use their look. Do not copy code from them.
+
+The data of Task 20 is ready: `public/data/text-kjv/<id>.json` has the same form as `public/data/text/<id>.json`. A file of the King James Version has added-words items `{ "a": "<words>" }`. It has no `o` item and no note block.
+
+WARNING: Do not change a data file in `public/data/`, a source file in `sources/`, or a build script.
+
+WARNING: Do not change the top bar. Do not change a page of the Reference section, except the Sources page in step 9.
+
+WARNING: The Berean Standard Bible pages must look and work as before this task. A reader who does not use the translation switch sees no difference, except the switch.
+
+WARNING: Write no new content about the Bible. The only new words of this task are the two translation names, the label of step 7, and the text of step 9.
+
+Steps:
+
+1. Read section 8 of `docs/DESIGN.md`. Look at the six renders in `docs/screenshots/kjv-design/`.
+2. Make the translation setting. Put it in a new file `src/data/translation.ts`, in the same way as the echo links switch in `src/travel/travel.ts`.
+   - Two translations: `bsb` with the name "Berean Standard Bible", and `kjv` with the name "King James Version".
+   - The storage key is `bible-translation`. The value on the first visit is `bsb`. If the storage is not available, the setting holds for the page.
+   - The translation is not in the address of a page. Do not change `src/router.ts`.
+3. Change the text service `src/data/text.ts`. `loadBookText` gets the translation as a second argument. For `bsb`, it reads `data/text/<id>.json`. For `kjv`, it reads `data/text-kjv/<id>.json`. A book loads once for each translation.
+4. Make one component for the translation switch, and use it in the two places of steps 5 and 6.
+   - It is a group with the label "Translation" for a screen reader. It has two buttons with the full names. The button of the selected translation has `aria-pressed="true"`.
+   - The look, from the renders: Inter, weight 500, the secondary ink color. The selected name has the ink color, weight 600, and a line of 2 px below the words, 3 px from them.
+   - Each button is 24 by 24 px or more, and 44 px high in the panel of the chapter grid.
+   - Each button shows the focus, as the other controls of its page do.
+5. The wall, `src/wall/WallPage.tsx`: in the line at the bottom, put the translation switch in the place of the words "Berean Standard Bible". In the narrow layout, the switch is on a line of its own, above the links of the Reference section, as the words are now.
+6. The reading page, `src/reading/ReadingPage.tsx`: put the translation switch at the top of the panel of the chapter grid, above the chapter numbers, with a thin line between them. The switch has the width of the chapter grid.
+   - When the reader selects a translation, the panel closes, and each chapter on the page shows the words of that translation.
+   - The verse at the top of the page stays at the same place. Before the change, find the first verse number that is below the top bar. After the change, scroll so that the same verse of the same chapter is at the same distance from the top. If the new text does not have that verse number, use the verse before it.
+   - The change makes no entry in the history of the browser, and it does not change the trail.
+7. Each part that shows Bible text uses the selected translation: `src/reading/ChapterSection.tsx`, the pop-up in `src/book/LinkPopup.tsx`, and each other caller of `loadBookText`. Find the callers with a search.
+   - The line "About this book" shows the name of the translation from the data, as now.
+   - In the pop-up, the text for a screen reader names the translation of the loaded text. It has the fixed words "Berean Standard Bible" now.
+   - In the pop-up of a quotation link, when the translation is `kjv`, show this label below the reason line: "The quoted words are from the Berean Standard Bible." Give it the style of the source line of the pop-up. Do not change a reason line. Do not show the label for `bsb`.
+   - In `SOURCE_LINE` of `src/book/LinkPopup.tsx`, the words "Berean Standard Bible" name the source of a link. Do not change them.
+8. The added words, in `src/book/ChapterBody.tsx` and in the pop-up: show an added-words item in italics, with an element that has a class. In a text block with the style `d`, which is in italics, show the added words upright. In the pop-up, `passageVerses` gives plain words now: change it so that the pop-up can show the added words in italics also.
+9. The Sources page, `src/SourcesPage.tsx`, section "The Bible text". Make these changes and no other change:
+   - Change the first sentence to: "The site has two translations: the Berean Standard Bible (BSB) and the King James Version (KJV)." Keep the link on the words "Berean Standard Bible". Keep the other sentences of that paragraph.
+   - After the three paragraphs about the Berean Standard Bible, add this paragraph: "The King James Version on this site is the standardized text of 1769, from the files of eBible.org, by courtesy of the Crosswire Bible Society and eBible.org. It is in the public domain. In the United Kingdom, three publishers have the exclusive right to print this translation: Cambridge University Press, Oxford University Press, and Collins. eBible.org states that this right has no effect outside the United Kingdom." Link "eBible.org" to `https://ebible.org/eng-kjv2006` and "Crosswire Bible Society" to `https://crosswire.org/`. Make sure that each fact of this paragraph is in `sources/kjv/copr.htm`. If a fact is not there, stop and ask Arthur.
+   - Then add this paragraph: "The site does not show the Strong's numbers and the footnotes of these files. The words that the translators added show in italics. In 13 verses, the files write one word as two words, for example "can not", and the site joins the word." Use the number of verses that Task 20b corrected. If Task 20b is not `DONE`, stop and ask Arthur.
+   - Then add this paragraph: "On the King James Version pages, the section headings, the cross-reference lines, the paragraphs, and the lines of poetry are those of the Berean Standard Bible files. They are not part of the King James Version."
+10. Add unit tests: the translation setting, the address that `loadBookText` reads for each translation, and `passageVerses` with added words.
+11. Add browser tests in `e2e/`, at 1440 by 900 px and at 390 by 844 px:
+    - The first visit shows the Berean Standard Bible: Genesis 1:1 has the words "In the beginning God created the heavens and the earth."
+    - Select "King James Version" on the wall, and open Genesis. Genesis 1:1 has the words "In the beginning God created the heaven and the earth." Genesis 1:2 has the word "was" in italics. The section heading "The Creation" and its cross-reference line are on the page.
+    - Load the page again. The King James Version is still selected.
+    - On the reading page, scroll to Genesis 2. Open the panel of the chapter grid and select "Berean Standard Bible". The panel closes. The verse that was at the top is at the same place, with a tolerance of 2 px. The words are those of the Berean Standard Bible.
+    - Psalm 23 in the King James Version: the title "A Psalm of David." is on the page, and verse 1 has "The LORD" and the word "is" in italics.
+    - Matthew 17 in the King James Version: verse 21 shows as text, and the page has no note for it.
+    - Open the pop-up of a quotation link in the King James Version. The passage has King James Version words, and the label of step 7 is below the reason line. In the Berean Standard Bible, the label is not there.
+    - The Sources page has the three new paragraphs.
+    - The axe-core check passes on the wall, on the reading page with the panel open, and on the reading page with the pop-up open, with `kjv` selected.
+    - Each button of the translation switch is 24 by 24 px or more, gets the focus with the keyboard, and operates with the keyboard.
+12. Make sure that the browser tests that were there before this task pass with no change to their expected results. If a test must change because the wall line or the panel changed, give the test and the reason in the report.
+13. Take screenshots with `kjv` selected, at 1440 by 900 px and at 390 by 844 px: the wall, the reading page with the panel open, Genesis 1, Psalm 23, the pop-up of a quotation link, and the Sources page. Save them in `docs/screenshots/task-21/`. Compare the wall, the panel, and Psalm 23 with the renders, and give each difference in the report.
+14. Run the `accuracy-reviewer` agent. The Bible text on the pages comes from the data of Tasks 20 and 20b with no change. The new words are those of steps 7 and 9.
+15. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The reader can select the King James Version on the wall and in the panel of the chapter grid, and the selection stays after a reload.
+- The reading page and the pop-up show the selected translation, with the added words in italics.
+- The Berean Standard Bible pages are as before, except the translation switch.
+- The Sources page has the credit of step 9.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. A check on a real phone is still open. Only Arthur can do it.

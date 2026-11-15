@@ -189,7 +189,7 @@ test.describe('timeline page', () => {
     })
   }
 
-  // Task 13 removed the cover and the spread. The reading page gets no Timeline control: docs/DESIGN.md section 7.5.
+  // The reading page gets no Timeline control: docs/DESIGN.md section 7.5.
   test('the wall has a Timeline control', async ({ page }) => {
     await page.goto('./')
     await page.getByRole('link', { name: 'Timeline' }).click()

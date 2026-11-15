@@ -12,7 +12,7 @@ import { loadQuotationPairs, type QuotationPair } from '../data/dates.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { bandLabel } from '../wall/layout.ts'
-import { diagram, NARROW_SIZE, quotationLists, WIDE_SIZE } from './quotationLayout.ts'
+import { diagram, hitHeight, NARROW_SIZE, quotationLists, WIDE_SIZE } from './quotationLayout.ts'
 import { RefBar } from './RefBar.tsx'
 
 /** The ink of a dim line. The prototype value. */
@@ -104,8 +104,9 @@ function Diagram({ books, pairs, layout, selected, onSelect }: DiagramProps) {
       }
     return set
   }, [pairs, selected])
-  // The hit area of a name: the room of one book along the circle, 24 px at most.
-  const hit = Math.min(24, d.unit * (size.r + size.labelGap))
+  // The hit area of a name: the room of one book along the circle, 24 px at most, and 24 px at least
+  // on the wide diagram. src/reference/quotationLayout.ts, function hitHeight.
+  const hit = hitHeight(size, d.unit)
   const onKey = (e: KeyboardEvent, id: string) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()

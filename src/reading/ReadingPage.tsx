@@ -1,5 +1,5 @@
-// The reading page: the chapter text in one column, with the top bar. It replaces the cover and the
-// spread. docs/DESIGN.md sections 7.5, 7.6, and 7.7, docs/TASKS.md Tasks 13 and 14.
+// The reading page: the chapter text in one column, with the top bar. It replaces the book pages of
+// the first build. docs/DESIGN.md sections 7.5, 7.6, and 7.7, docs/TASKS.md Tasks 13 and 14.
 //
 // - The page opens at a chapter, or at a verse. #/book/<id> opens the last-read chapter, or chapter 1.
 // - The next chapter is added below when the reader comes near the end: a continuous scroll through

@@ -1,7 +1,7 @@
 // Book data and group colors.
 // The book list is in public/data/books.json. Chapter counts come from the
 // Berean Standard Bible text (see docs/DATA-SOURCES.md).
-// Group colors are from docs/DESIGN.md section 2.
+// Group colors are from docs/DESIGN.md section 7.3. Task 18 removed the colors and the fields of the first build.
 
 export type GroupName =
   | 'Law'
@@ -21,18 +21,10 @@ export interface Book {
   name: string
   group: GroupName
   chapters: number
-  /** Stack number on the table, 1 to 5. */
-  stack: number
-  /** Position in the stack. 1 is the top spine. */
-  position: number
 }
 
 export interface Group {
   name: GroupName
-  /** Cloth color of the spine. */
-  cloth: string
-  /** Text color on the cloth. */
-  text: string
   /**
    * Group color of the redesign, docs/DESIGN.md section 7.3. The book names and the band
    * of the group use it, on white. The label in a band is white.
@@ -42,30 +34,22 @@ export interface Group {
 
 /** The ten groups in Bible order. */
 export const GROUPS: readonly Group[] = [
-  { name: 'Law', cloth: '#A3214F', text: '#F7ECD3', color: '#C2255C' },
-  { name: 'History', cloth: '#7E1F26', text: '#F7ECD3', color: '#B01E35' },
-  { name: 'Poetry & Wisdom', cloth: '#A44A22', text: '#F7ECD3', color: '#CD4C26' },
-  { name: 'Major Prophets', cloth: '#C89A2B', text: '#2A1E0A', color: '#9D6E00' },
-  { name: 'Minor Prophets', cloth: '#566829', text: '#F7ECD3', color: '#667F19' },
-  { name: 'Gospels', cloth: '#FBF6EA', text: '#2A1E0A', color: '#26828B' },
-  { name: 'History (Acts)', cloth: '#5C6063', text: '#F7ECD3', color: '#6E6A66' },
-  { name: 'Letters of Paul', cloth: '#1F3350', text: '#F7ECD3', color: '#1B2A41' },
-  { name: 'General Letters', cloth: '#4B2E63', text: '#F7ECD3', color: '#4B2E57' },
-  { name: 'Prophecy', cloth: '#8A5579', text: '#F7ECD3', color: '#986694' },
+  { name: 'Law', color: '#C2255C' },
+  { name: 'History', color: '#B01E35' },
+  { name: 'Poetry & Wisdom', color: '#CD4C26' },
+  { name: 'Major Prophets', color: '#9D6E00' },
+  { name: 'Minor Prophets', color: '#667F19' },
+  { name: 'Gospels', color: '#26828B' },
+  { name: 'History (Acts)', color: '#6E6A66' },
+  { name: 'Letters of Paul', color: '#1B2A41' },
+  { name: 'General Letters', color: '#4B2E57' },
+  { name: 'Prophecy', color: '#986694' },
 ]
 
 export function groupOf(book: Book): Group {
   const group = GROUPS.find((g) => g.name === book.group)
   if (!group) throw new Error(`Unknown group "${book.group}" for book "${book.id}"`)
   return group
-}
-
-/** The least thickness of a spine, in mockup px. POLISH.md items 3 and 13: each spine of the wide table is 24 px or more on screen at 1440 by 900 px. */
-export const MIN_SPINE_THICKNESS = 40
-
-/** Spine thickness in mockup px: the mockup rule of docs/DESIGN.md section 4.1, and 40 px at least. */
-export function spineThickness(chapters: number): number {
-  return Math.max(MIN_SPINE_THICKNESS, 26 + 3.2 * Math.sqrt(chapters))
 }
 
 export async function loadBooks(): Promise<Book[]> {

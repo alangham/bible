@@ -10,8 +10,7 @@
 //    sets 24 by 24 px for these pages.
 // 4. Each visible text has a contrast of 4.5 to 1 or more, or 3 to 1 for large text. The check
 //    skips text that it cannot measure, and docs/reviews/task-9-measurements.md lists the cases:
-//    text over a background image or a canvas, text with an opacity below 1, and text in a dimmed
-//    state. Task 13 removed the scenes.
+//    text over a background image or a canvas, and text with an opacity below 1. Task 18 removed the skip of the dimmed and the "off" states: no page has them now.
 // 5. The page does not scroll sideways.
 
 import AxeBuilder from '@axe-core/playwright'
@@ -25,7 +24,7 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22
  * Task 9b step 3: the test does not fail on them, but each one must stay on this list and in POLISH.md.
  */
 const KNOWN: { rule: string; layout: string; page: string; selector: RegExp }[] = [
-  // Empty. Task 10 corrected POLISH.md item 13. Task 12 removed the table page.
+  // Empty.
 ]
 
 /** The axe-core failures on the page, as text, without the known failures. An empty list is a pass. */
@@ -115,7 +114,7 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
       // WCAG 2.5.8, the exception "Equivalent": a different control on the page does the same thing and is big enough.
       const equivalent = el.getAttribute('data-target-equivalent')
       const hasEquivalent = !!equivalent && [...document.getElementsByClassName(equivalent)].some((e) => visible(e) && e.getBoundingClientRect().height >= minTarget)
-      if (!inSentence && !hasEquivalent && (w < minTarget - 0.5 || h < minTarget - 0.5)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
+      if (!inSentence && !hasEquivalent && (w < minTarget - 0.05 || h < minTarget - 0.05)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
     }
 
     // 4. Contrast.
@@ -139,7 +138,7 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
       const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p)
       return (x + 0.05) / (y + 0.05)
     }
-    // The background of the body: white. Task 17 removed the linen.
+    // The background of the body: white. docs/DESIGN.md section 7.3.
     const PAGE_BACKGROUND = [{ r: 0xff, g: 0xff, b: 0xff }]
     const backgrounds = (el: Element): { r: number; g: number; b: number }[] | null => {
       const layers: { r: number; g: number; b: number; a: number }[] = []
@@ -161,7 +160,7 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
       const el = n.parentElement
       if (!el || seen.has(el) || !(n.textContent ?? '').trim()) continue
       seen.add(el)
-      if (!visible(el) || el.closest('canvas, script, style, [data-dimmed="true"], [data-state="off"]')) continue
+      if (!visible(el) || el.closest('canvas, script, style')) continue
       let opacity = 1
       for (let e: Element | null = el; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
       if (opacity < 1) continue

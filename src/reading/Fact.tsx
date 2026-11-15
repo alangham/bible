@@ -1,6 +1,5 @@
 // One fact of the introduction, with the "Scholars differ" control where the fact is disputed.
-// docs/DESIGN.md section 4.2, the authorship rule in two layers. The rule is the same as on the
-// built cover: one control for each disputed fact. Task 13 changes only the look.
+// docs/DESIGN.md section 4.2, the authorship rule in two layers: one control for each disputed fact.
 
 import { useId, useState } from 'react'
 import type { ScholarsDetail } from '../data/intros.ts'

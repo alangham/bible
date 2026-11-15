@@ -1,7 +1,6 @@
-/* Colors and fonts from docs/DESIGN.md section 7.3. Task 17 removed the linen and the fonts of the first build. */
+/* Colors and fonts from docs/DESIGN.md section 7.3. */
 :root {
   --ink: #1d1d1f;
-  --ink-secondary: #6e6e73;
 
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);

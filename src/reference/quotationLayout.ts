@@ -20,6 +20,21 @@ export interface DiagramSize {
   arcWidth: number
   /** The width of a line for 1 or 2 links, 3 to 9 links, and 10 links or more. */
   lineWidths: [number, number, number]
+  /**
+   * The least height of the hit area of a name. Wide: 24, the target size of docs/DESIGN.md section 7.3.
+   * Narrow: 0, because the names use the exception "Equivalent" of WCAG 2.5.8 (section 7.8).
+   */
+  minHit: number
+}
+
+/**
+ * The height of the hit area of a name: the room of one book along the circle at the start of the
+ * name, 24 px at most, and `minHit` at least. On the wide diagram the room is about 23.6 px, so the
+ * hit area is 24 px, and two hit areas next to each other overlap by less than 1 px at their inner end.
+ * docs/TASKS.md Task 18 step 2.
+ */
+export function hitHeight(size: DiagramSize, unit: number): number {
+  return Math.max(size.minHit, Math.min(24, unit * (size.r + size.labelGap)))
 }
 
 /**
@@ -27,8 +42,8 @@ export interface DiagramSize {
  * The narrow label room is 70, where the prototype has 64. With 64, the names "1 Thessalonians" and
  * "2 Thessalonians" go past the edge of the diagram and are cut. The longest name is about 70 units long.
  */
-export const WIDE_SIZE: DiagramSize = { r: 250, label: 120, labelGap: 13, fontSize: 12.5, arcWidth: 6, lineWidths: [1.1, 2.1, 3.6] }
-export const NARROW_SIZE: DiagramSize = { r: 112, label: 70, labelGap: 9, fontSize: 8.5, arcWidth: 4, lineWidths: [0.8, 1.4, 2.4] }
+export const WIDE_SIZE: DiagramSize = { r: 250, label: 120, labelGap: 13, fontSize: 12.5, arcWidth: 6, lineWidths: [1.1, 2.1, 3.6], minHit: 24 }
+export const NARROW_SIZE: DiagramSize = { r: 112, label: 70, labelGap: 9, fontSize: 8.5, arcWidth: 4, lineWidths: [0.8, 1.4, 2.4], minHit: 0 }
 
 /** The gap between two groups, in radians. */
 const GROUP_GAP = 0.035

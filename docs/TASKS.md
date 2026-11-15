@@ -851,7 +851,7 @@ Stop and report. Include the "Not verified" list of the accuracy reviewer withou
 
 ## Task 18. Checks on all pages, and removal of old code
 
-Status: TODO
+Status: DONE
 
 Goal: the redesign is complete, measured, and has no code of the old pages.
 

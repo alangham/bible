@@ -229,7 +229,7 @@ test.describe('reading page', () => {
   })
 })
 
-// The tests of the cover and the spread, moved to the reading page. Task 13 step 15.
+// The tests of the book pages of the first build, moved to the reading page. Task 13 step 15.
 test.describe('reading page: the introduction and the text', () => {
   test('Genesis: "About this book" opens the three facts and the draft label', async ({ page }) => {
     await openChapter(page, WIDE, 'genesis', 1)

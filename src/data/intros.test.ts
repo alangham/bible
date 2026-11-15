@@ -42,7 +42,7 @@ describe('intros.json', () => {
     }
   })
 
-  it('keeps the cover facts to the traditional view: no fact names scholars (docs/DESIGN.md 4.2, layer 1)', () => {
+  it('keeps the facts of About this book to the traditional view: no fact names scholars (docs/DESIGN.md 4.2, layer 1)', () => {
     for (const intro of intros) {
       expect(intro.author, `${intro.id}.author`).not.toMatch(/scholar/i)
       expect(intro.written, `${intro.id}.written`).not.toMatch(/scholar/i)

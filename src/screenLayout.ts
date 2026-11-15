@@ -13,9 +13,9 @@ export const NARROW_LIMIT_PX = 900
 
 /**
  * Decides the layout.
- * - wide, 900 px or more: five stacks in one view, as in mockup D1. Spines can be thinner than 44 px,
- *   but each is 24 px or more on screen at 1440 by 900 px. POLISH.md item 5 moved the limit from 768 px.
- * - narrow, below 900 px: one stack at a time with spines of 44 px or more.
+ * - wide, 900 px or more: the wide layout of each page, docs/DESIGN.md section 7.4 and 7.8.
+ *   POLISH.md item 5 moved the limit from 768 px.
+ * - narrow, below 900 px: the narrow layout of each page.
  */
 export function selectLayout(viewportWidthPx: number): ScreenLayout {
   return viewportWidthPx >= NARROW_LIMIT_PX ? 'wide' : 'narrow'

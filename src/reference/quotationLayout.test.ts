@@ -5,7 +5,7 @@ import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import type { Book } from '../data/books.ts'
 import type { QuotationPair } from '../data/dates.ts'
-import { diagram, lineStep, NARROW_SIZE, quotationLists, WIDE_SIZE } from './quotationLayout.ts'
+import { diagram, hitHeight, lineStep, NARROW_SIZE, quotationLists, WIDE_SIZE } from './quotationLayout.ts'
 
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
@@ -52,5 +52,14 @@ describe('quotation diagram', () => {
     expect(lists.quotedBy).toEqual([])
     const isaiah = quotationLists(books, pairs, 'isaiah')
     expect(isaiah.quotedBy.map((x) => [x.book.id, x.n]).sort()).toEqual(pairs.filter((p) => p.to === 'isaiah').map((p) => [p.from, p.n]).sort())
+  })
+
+  it('gives each name of the wide diagram a hit area 24 px high, and the narrow names the room of one book (Task 18 step 2)', () => {
+    const wide = diagram(books, pairs, WIDE_SIZE)
+    const room = wide.unit * (WIDE_SIZE.r + WIDE_SIZE.labelGap)
+    expect(room).toBeLessThan(24)
+    expect(hitHeight(WIDE_SIZE, wide.unit)).toBe(24)
+    const narrow = diagram(books, pairs, NARROW_SIZE)
+    expect(hitHeight(NARROW_SIZE, narrow.unit)).toBeCloseTo(narrow.unit * (NARROW_SIZE.r + NARROW_SIZE.labelGap))
   })
 })

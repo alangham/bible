@@ -6,12 +6,12 @@
 // 1. The page has a language, one h1, and no skipped heading level.
 // 2. Each visible link and button has an accessible name and can take focus.
 // 3. Each visible control is 44 px or more in each direction (docs/DESIGN.md section 3). An inline
-//    link in a paragraph is exempt. On the wall, the limit is 24 px: section 7.3 sets 24 by 24 px for
-//    the pages of the redesign.
+//    link in a paragraph is exempt. On the wall and the reading page, the limit is 24 px: section 7.3
+//    sets 24 by 24 px for the pages of the redesign.
 // 4. Each visible text has a contrast of 4.5 to 1 or more, or 3 to 1 for large text. The check
 //    skips text that it cannot measure, and docs/reviews/task-9-measurements.md lists the cases:
-//    text on a scene (src/scene/values.test.ts checks it), text over a background image or a
-//    canvas, text with an opacity below 1, and text in a dimmed state.
+//    text over a background image or a canvas, text with an opacity below 1, and text in a dimmed
+//    state. Task 13 removed the scenes.
 // 5. The page does not scroll sideways.
 
 import AxeBuilder from '@axe-core/playwright'
@@ -45,10 +45,11 @@ async function settled(page: Page) {
   await page.waitForTimeout(800)
 }
 
-const PAGES = [
+const PAGES: { name: string; path: string; minTarget?: number; open?: string }[] = [
   { name: 'wall', path: './', minTarget: 24 },
-  { name: 'cover', path: './#/book/ruth' },
-  { name: 'spread', path: './#/book/ruth/1' },
+  { name: 'reading', path: './#/book/ruth/1', minTarget: 24 },
+  { name: 'reading, About this book open', path: './#/book/genesis/1', minTarget: 24, open: 'About this book' },
+  { name: 'reading, poetry', path: './#/book/psalms/119', minTarget: 24 },
   { name: 'sources', path: './#/sources' },
   { name: 'timeline', path: './#/timeline' },
 ]
@@ -158,7 +159,7 @@ async function audit(page: Page, layout: string, minTarget = 44): Promise<string
       const el = n.parentElement
       if (!el || seen.has(el) || !(n.textContent ?? '').trim()) continue
       seen.add(el)
-      if (!visible(el) || el.closest('.spread-text, .page, .scene, canvas, script, style, [data-dimmed="true"], [data-state="off"]')) continue
+      if (!visible(el) || el.closest('canvas, script, style, [data-dimmed="true"], [data-state="off"]')) continue
       let opacity = 1
       for (let e: Element | null = el; e; e = e.parentElement) opacity *= Number(getComputedStyle(e).opacity)
       if (opacity < 1) continue
@@ -233,23 +234,18 @@ for (const layout of LAYOUTS) {
       await page.goto(p.path)
       await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
       await settled(page)
+      if (p.open) {
+        await page.getByRole('button', { name: p.open }).click()
+        for (const control of await page.getByRole('button', { name: 'Scholars differ' }).all()) await control.click()
+        await page.waitForTimeout(300)
+      }
       expect(await audit(page, layout.name, p.minTarget)).toEqual([])
       expect(await axe(page, { layout: layout.name, page: p.name })).toEqual([])
     })
   }
 
-  // The states that a page load does not show. Task 9b step 2.
-  test(`accessibility: the link pop-up, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    await page.goto('./#/book/hebrews/9')
-    await settled(page)
-    await page.getByRole('button', { name: /^Links of Hebrews 9:20/ }).click()
-    await expect(page.getByRole('dialog', { name: 'Links of Hebrews 9:20' })).toBeVisible()
-    await page.waitForTimeout(400)
-    expect(await audit(page, layout.name)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
-
+  // The states that a page load does not show. Task 9b step 2. Task 13 removed the tests of the link
+  // pop-up and the travel overlay: no page has links in Task 13. Task 14 adds them again.
   test(`accessibility: the list of a selected book on the timeline, ${layout.name} layout`, async ({ page }) => {
     await page.setViewportSize(layout.viewport)
     await page.goto('./#/timeline')
@@ -258,19 +254,6 @@ for (const layout of LAYOUTS) {
     await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
     await page.waitForTimeout(400)
     expect(await audit(page, layout.name)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
-
-  test(`accessibility: the travel overlay, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    // A fake clock holds the move of travel in its middle while axe-core runs.
-    await page.clock.install()
-    await page.goto('./#/book/hebrews/9')
-    await page.clock.runFor(3000)
-    await expect(page.getByRole('navigation', { name: 'Read with' })).toBeVisible()
-    await page.getByRole('navigation', { name: 'Read with' }).getByRole('link', { name: 'Leviticus 16' }).click()
-    await page.clock.runFor(900)
-    await expect(page.locator('.travel')).toBeVisible()
     expect(await axe(page)).toEqual([])
   })
 }

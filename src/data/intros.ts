@@ -1,4 +1,4 @@
-// Book introductions: the three facts on the cover page. docs/DESIGN.md section 4.2.
+// Book introductions: the three facts of "About this book" on the reading page. docs/DESIGN.md sections 4.2 and 7.5.
 // The text is in public/data/intros.json. The source of each fact is in
 // docs/CONTENT-SOURCES.md. Only Arthur changes `review` to "approved".
 

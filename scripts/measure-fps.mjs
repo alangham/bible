@@ -34,21 +34,16 @@ async function measure(name, hash, action, seconds = 3) {
   results.push({ name, avgFps: Math.round(avg), worstSecondFps: worst, frames: f.length, renderer: gl })
   await page.close()
 }
-await measure('cover: open the book', '#/book/ruth', async (p) => {
-  await p.locator('.open-book').click()
-}, 3)
-await measure('cover: idle after load', '#/book/ruth', async () => {}, 2)
-await measure('spread: scroll the text, parallax', '#/book/psalms/119', async (p) => {
-  await p.evaluate(() => { const a = document.querySelector('.spread-text'); let y = 0; const id = setInterval(() => { y += 40; a.scrollTop = y }, 16); setTimeout(() => clearInterval(id), 3000) })
+// Task 13 removed the cover, the spread, and the move of travel. The reading page scrolls the window.
+await measure('reading page: scroll the text, with chapters added below', '#/book/psalms/119', async (p) => {
+  await p.evaluate(() => { let y = 0; const id = setInterval(() => { y += 40; window.scrollTo(0, y) }, 16); setTimeout(() => clearInterval(id), 3000) })
 })
-await measure('spread: turn by swipe (cross-fade)', '#/book/ruth/1', async (p) => {
-  await p.evaluate(() => { document.querySelector('.spread-bar-turns a:last-child').click() })
+await measure('reading page: idle after load', '#/book/ruth/1', async () => {}, 2)
+await measure('wall to reading page: the move of the book name', '', async (p) => {
+  await p.locator('.wall-name[data-book="john"]').click()
 }, 2)
 await measure('timeline: scroll the list', '#/timeline', async (p) => {
   await p.evaluate(() => { let y = 0; const id = setInterval(() => { y += 40; window.scrollTo(0, y) }, 16); setTimeout(() => clearInterval(id), 3000) })
 })
-await measure('travel: read-with to the linked chapter', '#/book/ruth/1', async (p) => {
-  await p.locator('.read-with a').first().click()
-}, 3)
 console.log(JSON.stringify(results, null, 1))
 await browser.close()

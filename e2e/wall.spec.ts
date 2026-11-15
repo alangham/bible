@@ -39,13 +39,13 @@ test.describe('wall', () => {
   test('a book name opens its book, also from the keyboard', async ({ page }) => {
     await openWall(page, WIDE)
     await page.getByRole('link', { name: 'Psalms' }).click()
-    await expect(page).toHaveURL(/#\/book\/psalms$/)
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Psalms')
+    await expect(page).toHaveURL(/#\/book\/psalms\/1$/)
+    await expect(page.locator('.rd-heading').first()).toHaveText('Psalms 1')
     await page.goBack()
     await expect(page.locator('main.wall')).toHaveAttribute('data-ready', 'true')
     await page.getByRole('link', { name: 'Jude' }).focus()
     await page.keyboard.press('Enter')
-    await expect(page).toHaveURL(/#\/book\/jude$/)
+    await expect(page).toHaveURL(/#\/book\/jude\/1$/)
   })
 
   test('at 1440 by 900 px, the page is not higher than the screen, and the bottom line is in view', async ({ page }) => {

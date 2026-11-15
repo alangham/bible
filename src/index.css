@@ -47,13 +47,6 @@ a {
   letter-spacing: -1px;
 }
 
-/* 3D mode: the links lie over the spines on screen. The canvas draws the spines. */
-/*
-  The ring shows the selected spine in 3D mode. It follows the spine when the
-  spine slides out. With reduced motion the spine does not move, and the ring
-  fades in on hover also. A fade is permitted with reduced motion.
-*/
-/* Flat mode, without WebGL: the links are the spines. */
 /* ---- Legend ---- */
 
 .legend {
@@ -98,744 +91,6 @@ a {
   opacity: 0.35;
 }
 
-/* Reduced motion: the fades of opacity and color stay. They are not moves. */
-
-/* ---- Cover page: mockup D2, docs/DESIGN.md section 4.2 ---- */
-
-.cover-page {
-  position: relative;
-  min-height: 100svh;
-}
-
-/* The canvas lies over the top of the page and does not take the pointer. */
-.cover-canvas {
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: max(100svh, 760px) !important;
-  pointer-events: none;
-}
-
-.cover-inner {
-  position: relative;
-  box-sizing: border-box;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 40px 72px 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
-}
-
-.cover-bar {
-  align-self: stretch;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cover-bar a,
-.chapter-list a,
-.open-book {
-  text-decoration: none;
-}
-
-.cover-bar a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.cover-bar a:hover {
-  text-decoration: underline;
-}
-
-.cover-stage {
-  align-self: stretch;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1500px;
-}
-
-/* The flat book: mockup D2 in CSS. In 3D mode the text stays for screen readers only. */
-.cover-book {
-  width: 350px;
-  height: 480px;
-  box-sizing: border-box;
-  padding: 18px;
-  background: var(--cloth);
-  color: var(--cover-ink);
-  border-radius: 4px 8px 8px 4px;
-  transform: rotateX(26deg) rotateZ(-11deg);
-  box-shadow:
-    5px 5px 0 #f1e8d3,
-    8px 8px 0 rgba(0, 0, 0, 0.35),
-    46px 64px 54px rgba(84, 58, 20, 0.38);
-  display: flex;
-}
-
-.cover-frame {
-  flex: 1;
-  box-sizing: border-box;
-  border: 2px solid var(--cover-ink);
-  padding: 28px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.cover-group,
-.cover-chapters {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.cover-emblem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  margin-top: auto;
-}
-
-.cover-arch {
-  width: 96px;
-  height: 48px;
-  border-radius: 96px 96px 0 0;
-  background: var(--cover-ink);
-}
-
-.cover-rule {
-  width: 180px;
-  height: 2px;
-  background: var(--cover-ink);
-}
-
-.cover-title {
-  margin: 18px 0 auto;
-  font-family: var(--title-font);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 1;
-  overflow-wrap: anywhere;
-}
-
-.cover-page[data-mode='3d'] .cover-book {
-  opacity: 0;
-}
-
-.open-book {
-  min-height: 52px;
-  padding: 0 32px;
-  display: inline-flex;
-  align-items: center;
-  background: var(--ink);
-  color: #f7ecd3;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 26px;
-}
-
-.open-book:hover {
-  background: #4a3b2a;
-}
-
-/* While the book lands, the text below waits. A fade is permitted with reduced motion. */
-.cover-page .open-book,
-.cover-page .cover-facts,
-.cover-page .chapter-list {
-  transition:
-    opacity 300ms,
-    visibility 0s;
-}
-
-/* Hidden also from the keyboard and screen readers until the book lands. */
-.cover-page[data-landed='false'] .open-book,
-.cover-page[data-landed='false'] .cover-facts,
-.cover-page[data-landed='false'] .chapter-list {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.cover-facts {
-  max-width: 1040px;
-  width: 100%;
-  border-top: 1px solid var(--rule);
-  padding-top: 22px;
-}
-
-.draft-label {
-  margin: 0 0 16px;
-  font-size: 15px;
-  color: var(--ink-secondary);
-}
-
-.draft-label span {
-  display: inline-block;
-  margin-right: 8px;
-  padding: 1px 8px;
-  border: 1px solid var(--ink-secondary);
-  border-radius: 3px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.facts {
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
-}
-
-.facts .fact {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.fact-text {
-  margin: 0;
-}
-
-/* Layer 2 of the authorship rule: the "Scholars differ" control and its detail. */
-.scholars-control {
-  align-self: flex-start;
-  margin-top: 8px;
-  min-height: 44px;
-  padding: 0 14px;
-  border: 1px solid var(--ink-secondary);
-  border-radius: 22px;
-  background: transparent;
-  color: var(--ink);
-  font-family: var(--body-font);
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.scholars-control:hover {
-  background: var(--linen-light);
-}
-
-.scholars-control::after {
-  content: '';
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin-left: 9px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: translateY(-3px) rotate(45deg);
-}
-
-.scholars-control[aria-expanded='true']::after {
-  transform: translateY(1px) rotate(-135deg);
-}
-
-.scholars-detail {
-  margin-top: 10px;
-  padding: 4px 0 4px 14px;
-  border-left: 2px solid var(--rule);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.scholars-detail[hidden] {
-  display: none;
-}
-
-.scholars-part h2 {
-  margin: 0 0 2px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--ink-secondary);
-}
-
-.scholars-part p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.45;
-}
-
-.facts dt {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--ink-secondary);
-}
-
-.facts dd {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-.chapter-list {
-  max-width: 1040px;
-  width: 100%;
-}
-
-.chapter-list h2 {
-  margin: 0 0 10px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--ink-secondary);
-}
-
-.chapter-list ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.chapter-list a {
-  min-width: 44px;
-  min-height: 44px;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  font-size: 17px;
-  font-variant-numeric: tabular-nums;
-}
-
-.chapter-list a:hover {
-  background: var(--linen-light);
-}
-
-/* ---- Spread: mockup D3, docs/DESIGN.md sections 4.3 and 4.4 ---- */
-
-.spread-page {
-  box-sizing: border-box;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  padding: 8px 24px 24px;
-}
-
-.spread-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.spread-bar a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  padding-inline: 6px;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.spread-bar a:hover {
-  text-decoration: underline;
-}
-
-.spread-bar-turns {
-  display: flex;
-  gap: 18px;
-}
-
-.spread-stage {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0 18px;
-}
-
-.spread-book {
-  position: relative;
-  width: min(calc(100vw - 72px), calc((100svh - 110px) * 1.6), 1500px);
-  aspect-ratio: 1.6;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  transition: opacity 180ms ease;
-}
-
-/* The boards of the cover under the pages, and the shadow of the book on the table. */
-.spread-book::before {
-  content: '';
-  position: absolute;
-  inset: -1.6% -1.2% -2.6%;
-  border-radius: 7px;
-  background: var(--board);
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-    16px 26px 46px rgba(60, 38, 10, 0.38);
-}
-
-/* The edges of the stacked pages below the open pages. */
-.spread-book::after {
-  content: '';
-  position: absolute;
-  left: 0.4%;
-  right: 0.4%;
-  bottom: -1.3%;
-  height: 1.3%;
-  background: repeating-linear-gradient(0deg, #f1e8d4 0 1px, #d6c8aa 1px 2px);
-  border-radius: 0 0 4px 4px;
-}
-
-.page {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  background: #efe6d2;
-}
-
-.page-left {
-  border-radius: 5px 0 0 5px;
-}
-
-.page-right {
-  border-radius: 0 5px 5px 0;
-}
-
-/* The grain of the paper, over the scene. */
-.page::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0.05;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* The shade of the paper at the spine. The same values as GUTTER in src/book/turn/pageImage.ts. */
-.page::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.page-left::after {
-  background: linear-gradient(to left, rgba(40, 25, 10, 0.2), rgba(40, 25, 10, 0) 6%);
-}
-
-.page-right::after {
-  background: linear-gradient(to right, rgba(40, 25, 10, 0.2), rgba(40, 25, 10, 0) 6%);
-}
-
-/* The scene: one picture across the two pages. Each page shows its half. */
-.scene {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 200%;
-  z-index: 1;
-}
-
-.scene[data-half='left'] {
-  left: 0;
-}
-
-.scene[data-half='right'] {
-  left: -100%;
-}
-
-.scene-layer {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  will-change: transform;
-}
-
-/* Each paper layer casts a shadow on the layers behind it. The sun is at the top left. */
-.scene-layer-1,
-.scene-layer-2,
-.scene-layer-3 {
-  filter: drop-shadow(3.5px 6px 5px rgba(20, 12, 4, 0.25));
-}
-
-/*
-  The text column on the right page, on a veil. src/scene/values.ts sets the ink and the
-  veil from the scene, so that the text has a contrast of 4.5 to 1 or more.
-*/
-.spread-text {
-  position: absolute;
-  z-index: 3;
-  top: 6%;
-  bottom: 7%;
-  left: 9%;
-  right: 11%;
-  box-sizing: border-box;
-  overflow-y: auto;
-  padding: 24px 28px 28px;
-  border-radius: 10px;
-  color: var(--ink);
-  background: var(--veil-color);
-  box-shadow: 0 0 20px 8px var(--veil-edge);
-  font-size: 17px;
-  line-height: 1.6;
-  scrollbar-width: thin;
-  scrollbar-color: var(--ink) transparent;
-}
-
-.spread-ghost {
-  opacity: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.spread-header {
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--ink);
-  text-align: center;
-}
-
-.spread-header h1,
-.spread-title-ghost {
-  margin: 0;
-  font-weight: normal;
-}
-
-.spread-book-name {
-  display: block;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.spread-chapter {
-  display: block;
-  font-family: var(--title-font);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 1.15;
-}
-
-.spread-count {
-  margin: 0;
-  font-size: 14px;
-}
-
-.chapter-body p {
-  margin: 0 0 0.7em;
-}
-
-.chapter-body .sh-s1 {
-  margin: 1.1em 0 0.4em;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 1.25;
-  text-align: center;
-}
-
-.chapter-body .sh-s2 {
-  margin: 0.9em 0 0.3em;
-  font-size: 17px;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.chapter-body .sh-ms {
-  margin: 0.6em 0 0;
-  font-family: var(--title-font);
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: 0.12em;
-  text-align: center;
-}
-
-.chapter-body .sh-d {
-  margin: 0 0 0.6em;
-  font-style: italic;
-  text-align: center;
-}
-
-.chapter-body .sh-qa {
-  display: inline-block;
-  margin: 0.8em 0.5em 0.2em 0;
-  font-weight: 600;
-}
-
-.chapter-body .tb-p {
-  text-indent: 1.2em;
-}
-
-.chapter-body .tb-q1,
-.chapter-body .tb-q2,
-.chapter-body .tb-li1,
-.chapter-body .tb-li2 {
-  margin: 0;
-  text-indent: -1.2em;
-}
-
-.chapter-body .tb-q1 {
-  padding-left: 2.2em;
-}
-
-.chapter-body .tb-q2 {
-  padding-left: 3.4em;
-}
-
-.chapter-body .tb-li1 {
-  padding-left: 1.8em;
-}
-
-.chapter-body .tb-li2 {
-  padding-left: 3em;
-}
-
-.chapter-body .tb-pmo {
-  padding-left: 1.4em;
-}
-
-.chapter-body .tb-pc {
-  letter-spacing: 0.06em;
-  text-align: center;
-}
-
-.chapter-body .tb-qr,
-.chapter-body .tb-qd {
-  font-style: italic;
-  text-align: right;
-}
-
-.chapter-body .tb-d {
-  margin-bottom: 0.5em;
-  font-style: italic;
-}
-
-.chapter-body .stanza-break {
-  height: 0.7em;
-}
-
-.vn {
-  margin-right: 0.15em;
-  font-size: 0.62em;
-  font-weight: 600;
-  line-height: 0;
-  vertical-align: super;
-}
-
-.chapter-body .vn:not(:first-child) {
-  margin-left: 0.2em;
-}
-
-/* The notes about manuscripts: the passage notes, and the verses that are not in the main text. */
-.ms-note,
-.omitted {
-  display: block;
-  margin: 0.5em 0 0.9em;
-  padding: 0.35em 0 0.35em 0.8em;
-  border-left: 3px solid currentColor;
-  font-size: 15px;
-  line-height: 1.5;
-  text-indent: 0;
-}
-
-.note-verse {
-  margin-right: 0.15em;
-  font-size: 0.7em;
-}
-
-/* The corners that the reader can drag. They lie outside the text column. */
-.page-corner {
-  position: absolute;
-  z-index: 5;
-  width: 5%;
-  height: 13%;
-  min-width: 44px;
-  min-height: 44px;
-  cursor: grab;
-  touch-action: none;
-}
-
-.page-corner[data-corner='br'] {
-  right: 0;
-  bottom: 0;
-}
-
-.page-corner[data-corner='tr'] {
-  right: 0;
-  top: 0;
-}
-
-.page-corner[data-corner='bl'] {
-  left: 0;
-  bottom: 0;
-}
-
-.page-corner[data-corner='tl'] {
-  left: 0;
-  top: 0;
-}
-
-.page-corner[data-corner='br']:hover {
-  background: linear-gradient(135deg, transparent 72%, rgba(40, 25, 10, 0.12) 72%, #f3ead6 82%);
-}
-
-.page-corner[data-corner='bl']:hover {
-  background: linear-gradient(225deg, transparent 72%, rgba(40, 25, 10, 0.12) 72%, #f3ead6 82%);
-}
-
-/* The 3D leaf. The canvas reaches past the book, so that the curl can rise above it. */
-.turn-layer {
-  position: absolute;
-  z-index: 6;
-  left: -4%;
-  right: -4%;
-  top: calc(var(--turn-margin) * -100%);
-  bottom: calc(var(--turn-margin) * -100%);
-  pointer-events: none;
-}
-
-.spread-page[data-fade='out'] .spread-book {
-  opacity: 0;
-}
-
-.spread-page[data-fade='in'] .spread-book {
-  animation: spread-in 180ms ease both;
-}
-
-@keyframes spread-in {
-  from {
-    opacity: 0;
-  }
-}
-
 /* ---- Other pages ---- */
 
 .message,
@@ -871,65 +126,6 @@ a {
   font-size: 48px;
 }
 
-.app[data-layout='narrow'] .cover-inner {
-  padding: 16px 16px 32px;
-  gap: 20px;
-}
-
-.app[data-layout='narrow'] .cover-stage {
-  height: 380px;
-}
-
-.app[data-layout='narrow'] .cover-book {
-  width: 240px;
-  height: 330px;
-}
-
-.app[data-layout='narrow'] .cover-title {
-  font-size: 42px;
-}
-
-.app[data-layout='narrow'] .facts {
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-/* The spread in the narrow layout: the right page only, with the text. More rules for the phone are at the end of this file. */
-.app[data-layout='narrow'] .spread-page {
-  padding: 4px 8px 16px;
-}
-
-.app[data-layout='narrow'] .spread-book {
-  width: calc(100vw - 24px);
-  aspect-ratio: 0.72;
-  grid-template-columns: 1fr;
-}
-
-.app[data-layout='narrow'] .page-left,
-.app[data-layout='narrow'] .page-corner {
-  display: none;
-}
-
-.app[data-layout='narrow'] .page-right {
-  border-radius: 5px;
-}
-
-.app[data-layout='narrow'] .spread-text {
-  left: 6%;
-  right: 6%;
-  padding: 16px 18px 20px;
-}
-
-/* While the book opens, the text below it fades. */
-.cover-page[data-opening='true'] .open-book,
-.cover-page[data-opening='true'] .cover-facts,
-.cover-page[data-opening='true'] .chapter-list,
-.cover-page[data-opening='true'] .cover-bar {
-  opacity: 0;
-  transition: opacity 300ms ease;
-  pointer-events: none;
-}
-
 /* Text for screen readers only. */
 .sr-only {
   position: absolute;
@@ -941,14 +137,6 @@ a {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* A chapter link at the first or the last chapter: it stays in place, without a target. */
-.spread-bar a[aria-disabled='true'] {
-  color: var(--ink-secondary);
-  cursor: default;
-  text-decoration: none;
-  opacity: 0.6;
 }
 
 /* ---- Sources page: docs/TASKS.md Task 6 ---- */
@@ -1013,14 +201,6 @@ a {
   font-size: 48px;
 }
 
-/* The name of the translation on each spread. docs/DESIGN.md section 5. */
-.spread-translation {
-  margin: 2px 0 0;
-  font-size: 13px;
-  font-variant-caps: small-caps;
-  letter-spacing: 0.06em;
-}
-
 /* ---- Links, travel, and trail: docs/DESIGN.md section 4.5 ---- */
 
 /*
@@ -1073,23 +253,7 @@ a {
   font-size: 0.8em;
 }
 
-.echo-switch {
-  min-height: 44px;
-  padding: 0 12px;
-  border: 1px solid var(--ink-secondary);
-  border-radius: 22px;
-  background: transparent;
-  color: var(--ink);
-  font: 600 15px var(--body-font);
-  cursor: pointer;
-}
-
-.echo-switch[aria-pressed='false'] {
-  color: var(--ink-secondary);
-  border-style: dashed;
-}
-
-/* The verse that travel opened the spread at. */
+/* The verse that the reading page opened at: travel uses it. */
 .vn-target {
   border-radius: 3px;
   box-shadow: 0 0 0 3px currentColor;
@@ -1278,11 +442,7 @@ a {
   padding-bottom: 52px;
 }
 
-.app[data-trail='true'] .spread-book {
-  width: min(calc(100vw - 72px), calc((100svh - 162px) * 1.6), 1500px);
-}
-
-/* The move of travel: the closed book, the row of the 66 books, and the light that crosses it. */
+/* The move of travel: a fade with the two passage names. Task 14 builds the move of the redesign. */
 .travel {
   position: fixed;
   inset: 0;
@@ -1294,7 +454,6 @@ a {
   gap: 48px;
   background:
     radial-gradient(1100px 800px at 18% 8%, var(--linen-light) 0%, var(--linen) 55%, var(--linen-shade) 100%);
-  perspective: 1200px;
 }
 
 .travel-label {
@@ -1304,74 +463,9 @@ a {
   font-weight: 700;
 }
 
-.travel-stage {
-  position: relative;
-  width: 180px;
-  height: 250px;
-}
-
-.travel-book {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px 8px 8px 4px;
-  background: var(--cloth);
-  color: var(--cover-ink);
-  box-shadow: 10px 16px 30px rgba(60, 38, 10, 0.35);
-  transform-origin: left center;
-  font-family: var(--title-font);
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.travel-book span {
-  padding: 8px;
-  border: 2px solid currentColor;
-}
-
-.travel-row {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  width: min(1100px, calc(100vw - 48px));
-}
-
-.travel-spine {
-  flex: 1;
-  min-width: 2px;
-  border-radius: 2px 2px 0 0;
-  opacity: 0.55;
-}
-
-.travel-spine[data-end='true'] {
-  opacity: 1;
-}
-
-.travel-light {
-  position: absolute;
-  left: 0;
-  bottom: -14px;
-  width: 14px;
-  height: 14px;
-  margin-left: -7px;
-  border-radius: 50%;
-  background: var(--ink);
-  box-shadow: 0 0 0 4px var(--gold);
-}
-
 /* The wrapper of the page, for inert during travel. It makes no box. */
 .app-page {
   display: contents;
-}
-
-/* Close the book and Timeline, on the spread page. */
-.spread-bar-pages {
-  display: flex;
-  gap: 18px;
 }
 
 /* ---- Timeline: docs/DESIGN.md section 4.6, docs/TASKS.md Task 8 ---- */
@@ -1717,54 +811,9 @@ a {
   font-size: 52px;
 }
 
-/* ---- Spread, narrow layout: one page in view. Task 9. ---- */
-
-.app[data-layout='narrow'] .spread-bar {
-  flex-wrap: wrap;
-  column-gap: 8px;
-}
-
-.app[data-layout='narrow'] .spread-bar a,
-.app[data-layout='narrow'] .echo-switch {
-  font-size: 16px;
-  white-space: nowrap;
-}
-
-.app[data-layout='narrow'] .spread-bar-turns {
-  flex: 1 1 100%;
-  justify-content: space-between;
-  gap: 6px;
-}
-
-/* The page fills the window under the bar. */
-.app[data-layout='narrow'] .spread-stage {
-  padding: 4px 0 8px;
-}
-
-.app[data-layout='narrow'] .spread-book {
-  aspect-ratio: auto;
-  height: calc(100svh - 128px);
-  min-height: 440px;
-}
-
-/* A swipe sideways turns the page. The browser keeps the scroll up and down. */
-.app[data-layout='narrow'] .spread-text {
-  touch-action: pan-y;
-}
-
 /* A long address or file name in the text breaks, so that the page does not scroll sideways on a phone. */
 .sources-page {
   overflow-wrap: anywhere;
-}
-
-/*
-  Narrow layout: the paper-cut layers have no drop shadow. A drop shadow on three layers that move
-  in parallax costs too many frames on a phone. Task 9 step 4.
-*/
-.app[data-layout='narrow'] .scene-layer-1,
-.app[data-layout='narrow'] .scene-layer-2,
-.app[data-layout='narrow'] .scene-layer-3 {
-  filter: none;
 }
 
 /* ---- Wall: the first page. docs/DESIGN.md sections 7.3 and 7.4, docs/TASKS.md Task 12. ---- */
@@ -1897,4 +946,561 @@ a {
 .wall[data-layout='narrow'] .wall-translation {
   width: 100%;
   margin-right: 0;
+}
+
+/* ---- Reading page: docs/DESIGN.md sections 7.5 and 7.6, docs/TASKS.md Task 13. ---- */
+/* The values are those of docs/prototype/index.html. */
+
+.reading {
+  --rd-ink: #1d1d1f;
+  --rd-ink-secondary: #6e6e73;
+  --rd-line: rgba(0, 0, 0, 0.09);
+
+  min-height: 100svh;
+  background: #fff;
+  color: var(--rd-ink);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* The browser does not move the page when a chapter is added below. */
+  overflow-anchor: none;
+}
+
+.reading a {
+  text-decoration: none;
+}
+
+.reading :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* A link that takes the focus, or a scroll to an element, stops below the fixed top bar. */
+html:has(.reading) {
+  scroll-padding-top: 64px;
+}
+
+/* The top bar. */
+.rd-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--rd-line);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--rd-ink-secondary);
+}
+
+.rd-books {
+  min-width: 84px;
+  margin-left: -10px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+}
+
+.rd-bar-end {
+  min-width: 84px;
+}
+
+.rd-where {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.rd-where b {
+  margin-right: 6px;
+  color: var(--rd-ink);
+  font-weight: 600;
+}
+
+.rd-caret {
+  margin-left: 5px;
+  vertical-align: 2px;
+  transition: transform 0.2s;
+}
+
+.rd-where[aria-expanded='true'] .rd-caret {
+  transform: rotate(180deg);
+}
+
+/* The chapter grid. */
+.rd-grid-panel {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  max-height: calc(100svh - 52px);
+  overflow: auto;
+  padding: 18px 20px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--rd-line);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.rd-grid-panel[hidden] {
+  display: none;
+}
+
+.rd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  gap: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.rd-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: 8px;
+  color: var(--c);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .rd-grid a:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.rd-grid a[aria-current='page'] {
+  background: var(--c);
+  color: #fff;
+}
+
+.rd-grid a[aria-current='page']:focus-visible {
+  outline-color: var(--c);
+}
+
+.rd-shade {
+  position: fixed;
+  inset: 52px 0 0 0;
+  z-index: 8;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* The column of the text. 748 px with the padding: the text is 700 px wide at most. */
+.rd-column {
+  container-type: inline-size;
+  box-sizing: border-box;
+  max-width: 748px;
+  margin: 0 auto;
+  padding: 100px 24px 45vh;
+  font-family: Lora, Georgia, 'Times New Roman', serif;
+  font-size: 21px;
+  line-height: 1.65;
+}
+
+.rd-previous {
+  display: inline-block;
+  margin: 0 0 26px;
+  padding: 8px 0;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+}
+
+.rd-chapter {
+  position: relative;
+}
+
+.rd-chapter + .rd-chapter {
+  margin-top: 84px;
+}
+
+.rd-chapter + .rd-chapter[data-full='true'] {
+  margin-top: 132px;
+}
+
+/* The heading: the band, the book name, and the chapter number, in the group color. */
+.rd-band {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 5px 8px;
+  background: var(--c);
+  color: #fff;
+  font: 700 12px/1.2 Inter, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/*
+  The font size of the heading is 52 px, and 76 px for a new book. It is smaller when a long name
+  does not fit the column: --heading-em is the width of the heading in em (ChapterSection.tsx).
+*/
+.rd-heading {
+  --rd-heading-px: 52px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.24em;
+  margin: 0 0 30px;
+  color: var(--c);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: min(var(--rd-heading-px), calc(100cqi / var(--heading-em)));
+  line-height: 0.9;
+}
+
+.rd-chapter[data-full='true'] .rd-heading {
+  --rd-heading-px: 76px;
+}
+
+.rd-name {
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.rd-number {
+  font-weight: 300;
+}
+
+/* "About this book". */
+.rd-about {
+  margin: -12px 0 30px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--rd-line);
+  font: 400 15px/1.5 Inter, system-ui, sans-serif;
+}
+
+.rd-about-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 16px;
+}
+
+.rd-about-control,
+.rd-scholars-control {
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--c);
+  font: 600 15px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.rd-about-control span,
+.rd-scholars-control span {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.2s;
+}
+
+.rd-about-control[aria-expanded='true'] span,
+.rd-scholars-control[aria-expanded='true'] span {
+  transform: rotate(90deg);
+}
+
+.rd-translation {
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.rd-about-panel[hidden],
+.rd-scholars-detail[hidden] {
+  display: none;
+}
+
+.rd-draft {
+  margin: 6px 0 4px;
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+}
+
+.rd-draft span {
+  margin-right: 8px;
+  padding: 2px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.rd-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 6px;
+}
+
+.rd-fact {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  column-gap: 16px;
+}
+
+.rd-fact dt {
+  color: var(--rd-ink-secondary);
+}
+
+.rd-fact dd {
+  margin: 0;
+}
+
+.rd-fact-text {
+  margin: 0;
+}
+
+.rd-scholars-control {
+  font-size: 14px;
+}
+
+.rd-scholars-detail {
+  margin: 6px 0 4px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f5f5f7;
+}
+
+.rd-scholars-part h3 {
+  margin: 0 0 2px;
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rd-scholars-part p {
+  margin: 0 0 10px;
+}
+
+.rd-scholars-part:last-child p {
+  margin: 0;
+}
+
+/* The chapter text. src/book/ChapterBody.tsx keeps the built rules. Only the look is new. */
+.rd-column p {
+  margin: 0 0 0.9em;
+}
+
+.rd-column .sh-s1,
+.rd-column .sh-s2 {
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.rd-column .sh-s1 {
+  margin: 34px 0 10px;
+  color: var(--rd-ink);
+  font-size: 17px;
+}
+
+.rd-column .sh-s2 {
+  margin: 26px 0 8px;
+  color: var(--rd-ink-secondary);
+  font-size: 15px;
+}
+
+.rd-column .sh-ms {
+  margin: 10px 0 4px;
+  color: var(--c);
+  font: 700 13px Inter, system-ui, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rd-column .sh-d,
+.rd-column .tb-d,
+.rd-column .tb-qd {
+  color: #3a3a3c;
+  font-style: italic;
+}
+
+.rd-column .sh-qa {
+  margin: 28px 0 8px;
+  color: var(--c);
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.rd-column .chapter-body > :first-child {
+  margin-top: 0;
+}
+
+.rd-column .tb-q1,
+.rd-column .tb-q2,
+.rd-column .tb-li1,
+.rd-column .tb-li2,
+.rd-column .tb-qr,
+.rd-column .tb-qd {
+  margin: 0;
+}
+
+.rd-column .tb-q1 {
+  padding-left: 2.4em;
+  text-indent: -1em;
+}
+
+.rd-column .tb-q2 {
+  padding-left: 3.8em;
+  text-indent: -1em;
+}
+
+.rd-column .tb-li1 {
+  padding-left: 1.4em;
+}
+
+.rd-column .tb-li2 {
+  padding-left: 2.8em;
+}
+
+.rd-column .tb-pmo {
+  padding-left: 1.4em;
+}
+
+.rd-column .tb-qr {
+  text-align: right;
+}
+
+.rd-column .tb-pc {
+  text-align: center;
+}
+
+.rd-column .stanza-break {
+  height: 0.9em;
+}
+
+/* The verse numbers, in the group color. */
+.rd-column .vn {
+  margin-right: 0.28em;
+  color: var(--c);
+  font: 600 0.6em Inter, system-ui, sans-serif;
+  line-height: 0;
+  vertical-align: 0.6em;
+  text-indent: 0;
+}
+
+/* In a poetry line, the verse number at the start of the line hangs in the left margin. */
+.rd-column .tb-q1 > .vn-lead,
+.rd-column .tb-q2 > .vn-lead,
+.rd-column .tb-li1 > .vn-lead,
+.rd-column .tb-li2 > .vn-lead {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 2.3em;
+  margin-left: -2.3em;
+  margin-right: 0;
+  padding-right: 0.5em;
+  text-align: right;
+}
+
+/* The notes about manuscripts: the passage notes, and the verses that are not in the main text. */
+.rd-column .ms-note,
+.rd-column .omitted {
+  display: block;
+  margin: 0 0 1.1em;
+  padding: 2px 0 2px 12px;
+  border-left: 2px solid var(--rd-line);
+  color: var(--rd-ink-secondary);
+  font: 400 13px/1.5 Inter, system-ui, sans-serif;
+  text-indent: 0;
+}
+
+.rd-column .omitted .vn {
+  color: var(--rd-ink-secondary);
+}
+
+.rd-column .note-verse {
+  margin-right: 0.15em;
+  font-size: 0.75em;
+}
+
+.rd-end {
+  margin: 90px 0 0;
+  color: var(--rd-ink-secondary);
+  font: 500 14px Inter, system-ui, sans-serif;
+  text-align: center;
+}
+
+.rd-sentinel {
+  height: 1px;
+}
+
+/* Narrow layout: src/screenLayout.ts decides it. */
+.app[data-layout='narrow'] .rd-bar {
+  padding: 0 16px;
+}
+
+.app[data-layout='narrow'] .rd-books,
+.app[data-layout='narrow'] .rd-bar-end {
+  min-width: 70px;
+}
+
+.app[data-layout='narrow'] .rd-column {
+  padding-top: 84px;
+  font-size: 18px;
+  line-height: 1.62;
+}
+
+.app[data-layout='narrow'] .rd-heading {
+  --rd-heading-px: 40px;
+}
+
+.app[data-layout='narrow'] .rd-chapter[data-full='true'] .rd-heading {
+  --rd-heading-px: 56px;
+}
+
+.app[data-layout='narrow'] .rd-chapter + .rd-chapter {
+  margin-top: 60px;
+}
+
+.app[data-layout='narrow'] .rd-chapter + .rd-chapter[data-full='true'] {
+  margin-top: 96px;
+}
+
+.app[data-layout='narrow'] .rd-fact {
+  grid-template-columns: 74px 1fr;
+}
+
+/* The move of the book name between the wall and the reading page. src/bookMove.ts. */
+::view-transition-group(book-name) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-caret,
+  .rd-about-control span,
+  .rd-scholars-control span {
+    transition: none;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }

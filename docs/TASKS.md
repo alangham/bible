@@ -625,7 +625,7 @@ Stop and report. In the report, say how the wall looks at 834 px wide. The desig
 
 ## Task 13. Reading page: text and movement
 
-Status: TODO
+Status: DONE
 
 Goal: the reading page replaces the cover and the spread. In this task it has no links between passages. Task 14 adds them.
 

@@ -12,7 +12,7 @@ test.describe('timeline page', () => {
     await expect(page.locator('.tl-between')).toHaveText(/^About \d+ years or more between the last Old Testament book and the first New Testament book$/)
   })
 
-  test('a selected book shows its list, and a second action opens its cover', async ({ page }) => {
+  test('a selected book shows its list, and a second action opens the book', async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('./#/timeline')
     const hebrews = page.getByRole('button', { name: /^Hebrews,/ })
@@ -24,8 +24,8 @@ test.describe('timeline page', () => {
     await expect(page.locator('path.tl-arc[data-state="on"]').first()).toBeAttached()
 
     await hebrews.click()
-    await expect(page).toHaveURL(/#\/book\/hebrews$/)
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Hebrews')
+    await expect(page).toHaveURL(/#\/book\/hebrews\/1$/)
+    await expect(page.locator('.rd-heading').first()).toHaveText('Hebrews 1')
   })
 
   test('works from the keyboard, and Escape clears the selection', async ({ page }) => {
@@ -60,8 +60,9 @@ test.describe('timeline page', () => {
     await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
   })
 
-  test('the wall, the cover, and the spread have a Timeline control', async ({ page }) => {
-    for (const path of ['./', './#/book/ruth', './#/book/ruth/1']) {
+  // Task 13 removed the cover and the spread. The reading page gets no Timeline control: docs/DESIGN.md section 7.5.
+  test('the wall has a Timeline control', async ({ page }) => {
+    for (const path of ['./']) {
       await page.goto(path)
       await page.getByRole('link', { name: 'Timeline' }).click()
       await expect(page).toHaveURL(/#\/timeline$/)

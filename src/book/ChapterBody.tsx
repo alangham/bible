@@ -69,17 +69,17 @@ export function ChapterBody({ chapter, marks, echoOn = true, onMark, bookName = 
         const mark = ends.length ? <Mark ends={ends} title={`the section “${block.t}”`} onMark={onMark} /> : null
         if (block.s === 's1')
           return (
-            <h2 key={key} className="sh-s1">
-              {block.t}
-              {mark}
-            </h2>
-          )
-        if (block.s === 's2')
-          return (
-            <h3 key={key} className="sh-s2">
+            <h3 key={key} className="sh-s1">
               {block.t}
               {mark}
             </h3>
+          )
+        if (block.s === 's2')
+          return (
+            <h4 key={key} className="sh-s2">
+              {block.t}
+              {mark}
+            </h4>
           )
         return <p key={key} className={`sh-${block.s}`}>{block.t}</p>
       }
@@ -99,7 +99,8 @@ export function ChapterBody({ chapter, marks, echoOn = true, onMark, bookName = 
                 const ends = visible(marks?.verses.get(item.v))
                 return (
                   <Fragment key={i}>
-                    <sup className="vn" data-verse={item.v}>
+                    {/* A verse number at the start of a line hangs in the margin of a poetry line. */}
+                    <sup className={i === 0 ? 'vn vn-lead' : 'vn'} data-verse={item.v}>
                       {item.v}
                     </sup>
                     {ends.length > 0 && <Mark ends={ends} title={`${bookName} ${chapter.n}:${item.v}`} onMark={onMark} />}

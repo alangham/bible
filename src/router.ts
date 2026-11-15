@@ -5,7 +5,7 @@ import { useSyncExternalStore } from 'react'
 export type Route =
   | { page: 'wall' }
   | { page: 'book'; id: string }
-  | { page: 'spread'; id: string; chapter: number; verse?: number }
+  | { page: 'chapter'; id: string; chapter: number; verse?: number }
   | { page: 'sources' }
   | { page: 'timeline' }
 
@@ -14,10 +14,10 @@ export function parseRoute(hash: string): Route {
   if (/^#\/timeline\/?$/.test(hash)) return { page: 'timeline' }
   const book = /^#\/book\/([a-z0-9-]+)\/?$/.exec(hash)
   if (book) return { page: 'book', id: book[1] }
-  const spread = /^#\/book\/([a-z0-9-]+)\/([1-9][0-9]*)(?:\/([1-9][0-9]*))?\/?$/.exec(hash)
-  if (spread) {
-    const route: Route = { page: 'spread', id: spread[1], chapter: Number(spread[2]) }
-    if (spread[3]) route.verse = Number(spread[3])
+  const chapter = /^#\/book\/([a-z0-9-]+)\/([1-9][0-9]*)(?:\/([1-9][0-9]*))?\/?$/.exec(hash)
+  if (chapter) {
+    const route: Route = { page: 'chapter', id: chapter[1], chapter: Number(chapter[2]) }
+    if (chapter[3]) route.verse = Number(chapter[3])
     return route
   }
   return { page: 'wall' }
@@ -47,12 +47,12 @@ export function timelineHref(): string {
   return '#/timeline'
 }
 
-/** A book: the cover until Task 13 builds the reading page. */
+/** A book: the reading page at the last-read chapter of the book, or at chapter 1. */
 export function bookHref(id: string): string {
   return `#/book/${id}`
 }
 
-/** The spread of one chapter. With a verse, the spread opens at that verse: travel uses this. */
+/** The reading page at one chapter. With a verse, the page opens at that verse: travel uses this. */
 export function chapterHref(id: string, chapter: number, verse?: number): string {
   return verse ? `#/book/${id}/${chapter}/${verse}` : `#/book/${id}/${chapter}`
 }

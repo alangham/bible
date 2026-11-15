@@ -5,7 +5,7 @@ export function BookNotFound() {
     <main className="book-placeholder">
       <h1>Book not found</h1>
       <p>
-        <a href="#/">Back to the table</a>
+        <a href="#/">Books</a>
       </p>
     </main>
   )

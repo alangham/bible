@@ -8,7 +8,6 @@
 // The arcs are drawn in SVG and are hidden from screen readers. The list of the selected book is
 // their text form. Each spine is a real `button`.
 
-import gsap from 'gsap'
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react'
 import { groupOf, type Book, type GroupName } from '../data/books.ts'
 import { arcStep, dateLabel, loadDates, loadQuotationPairs, standPoint, yearsBetween, type BookDate, type QuotationPair } from '../data/dates.ts'
@@ -189,10 +188,18 @@ function Bands({ books, data, differ, selected, picked, onActivate }: ViewProps)
   useEffect(() => {
     const g = arcsRef.current
     if (!g || !drawn || reducedMotion) return
-    const tween = gsap.fromTo(g.querySelectorAll('path'), { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: 'power2.out', stagger: 0.004 })
+    // The function of the browser, with the values that the built page had with GSAP: 0.9 s,
+    // "power2.out" as the cubic-bezier curve of easeOutCubic, and 4 ms between two arcs.
+    const animations = [...g.querySelectorAll('path')].map((path, i) =>
+      path.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], {
+        duration: 900,
+        delay: i * 4,
+        easing: 'cubic-bezier(.215,.61,.355,1)',
+        fill: 'backwards',
+      }),
+    )
     return () => {
-      tween.kill()
-      gsap.set(g.querySelectorAll('path'), { clearProps: 'strokeDashoffset' })
+      for (const a of animations) a.cancel()
     }
   }, [drawn, reducedMotion])
 

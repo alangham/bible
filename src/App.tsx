@@ -1,7 +1,4 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { BookNotFound } from './book/BookNotFound.tsx'
-import { CoverPage } from './book/CoverPage.tsx'
-import { SpreadPage } from './book/SpreadPage.tsx'
 import { SourcesPage } from './SourcesPage.tsx'
 import { TrailBar } from './travel/TrailBar.tsx'
 import { TravelOverlay } from './travel/TravelOverlay.tsx'
@@ -9,6 +6,7 @@ import { useTrail } from './travel/trail.ts'
 import { useTravel } from './travel/travel.ts'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
+import { ReadingPage } from './reading/ReadingPage.tsx'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
 import { TimelinePage } from './timeline/TimelinePage.tsx'
@@ -22,7 +20,7 @@ function App() {
   const layout = useScreenLayout()
   const [books, setBooks] = useState<Book[] | null>(null)
   const [error, setError] = useState<string | null>(null)
-  // Undefined while loading. Null if the file did not load: the cover shows a message.
+  // Undefined while loading. Null if the file did not load: the reading page shows a message.
   const [intros, setIntros] = useState<Intro[] | null | undefined>(undefined)
 
   useEffect(() => {
@@ -44,19 +42,16 @@ function App() {
         <h1>Books of the Bible</h1>
       </main>
     )
-  } else if (route.page === 'book') {
-    const book = books.find((b) => b.id === route.id)
-    const intro = intros === undefined || intros === null ? intros : (intros.find((i) => i.id === route.id) ?? null)
-    // The key gives each book a new cover page, so that the landing runs again.
-    page = book ? <CoverPage key={book.id} book={book} intro={intro} layout={layout} /> : <BookNotFound />
+  } else if (route.page === 'book' || route.page === 'chapter') {
+    // One reading page for both addresses, with no key: a change of the address that the page
+    // wrote itself, during a scroll, does not start the page again.
+    const chapter = route.page === 'chapter' ? route.chapter : undefined
+    const verse = route.page === 'chapter' ? route.verse : undefined
+    page = <ReadingPage books={books} intros={intros} id={route.id} chapter={chapter} verse={verse} />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
   } else if (route.page === 'timeline') {
     page = <TimelinePage books={books} intros={intros} layout={layout} />
-  } else if (route.page === 'spread') {
-    const book = books.find((b) => b.id === route.id)
-    // The key keeps one spread page while the chapter changes, so that a page can turn.
-    page = book ? <SpreadPage key={book.id} book={book} chapter={route.chapter} verse={route.verse} layout={layout} books={books} /> : <BookNotFound />
   } else {
     page = <WallPage books={books} layout={layout} />
   }

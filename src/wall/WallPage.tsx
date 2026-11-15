@@ -1,10 +1,13 @@
 // The wall: the first page. The 66 book names in the colors of their groups. A book name is the
 // only control for a book. docs/DESIGN.md section 7.4, docs/TASKS.md Task 12.
 
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type RefObject } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent, type RefObject } from 'react'
+import { plainClick } from '../book/links.ts'
+import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
 import { bookHref, sourcesHref, timelineHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
+import { useReducedMotion } from '../useReducedMotion.ts'
 import { fitName, measureNames, NAME_FONT, type NameFit } from './fit.ts'
 import { balancedSplit, bandLabel, groupBlocks, narrowSizes, NARROW_GAP_PX, NARROW_PAD_PX, wideColumns, wideSizes } from './layout.ts'
 
@@ -75,6 +78,8 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
   const ref = useRef<HTMLElement>(null)
   const screenWidth = useScreenWidth(ref)
   const widths = useNameWidths(books)
+  const reducedMotion = useReducedMotion()
+  const ready = widths !== null && screenWidth > 0
   const fitFor = (book: Book, columnWidth: number) => {
     const w = widths?.get(book.name)
     return w === undefined ? null : fitName(w, book.name.length, columnWidth)
@@ -140,8 +145,34 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
     )
   }
 
+  // The wall opens at the top.
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  // "Books" on the reading page: the book name moves back to its place on the wall.
+  useLayoutEffect(() => {
+    const id = movingBookId()
+    if (!ready || !id) return
+    const name = ref.current?.querySelector<HTMLElement>(`.wall-name[data-book="${id}"]`) ?? null
+    name?.scrollIntoView({ block: 'nearest' })
+    arriveBookName(id, name)
+  }, [ready])
+
+  // A book name opens the reading page. The name moves into the heading of the chapter.
+  const onClick = (e: MouseEvent<HTMLElement>) => {
+    const name = (e.target as Element).closest<HTMLAnchorElement>('a.wall-name')
+    const id = name?.dataset.book
+    if (!name || !id || !plainClick(e) || !canMoveBookName(reducedMotion)) return
+    e.preventDefault()
+    moveBookName(name, id, () => {
+      window.location.hash = bookHref(id)
+    })
+  }
+
   return (
-    <main ref={ref} className="wall" data-layout={layout} data-ready={widths !== null && screenWidth > 0}>
+    // The click handler only adds the move to the links. The links work with no script also.
+    <main ref={ref} className="wall" data-layout={layout} data-ready={ready} onClick={onClick}>
       {/* The wall has no visible title. A screen reader gets this heading. */}
       <h1 className="sr-only">Books of the Bible</h1>
       {content}

@@ -22,9 +22,13 @@ export interface DiagramSize {
   lineWidths: [number, number, number]
 }
 
-/** Prototype values: the wide layout, and the narrow layout. */
+/**
+ * Prototype values: the wide layout, and the narrow layout.
+ * The narrow label room is 70, where the prototype has 64. With 64, the names "1 Thessalonians" and
+ * "2 Thessalonians" go past the edge of the diagram and are cut. The longest name is about 70 units long.
+ */
 export const WIDE_SIZE: DiagramSize = { r: 250, label: 120, labelGap: 13, fontSize: 12.5, arcWidth: 6, lineWidths: [1.1, 2.1, 3.6] }
-export const NARROW_SIZE: DiagramSize = { r: 112, label: 64, labelGap: 9, fontSize: 8.5, arcWidth: 4, lineWidths: [0.8, 1.4, 2.4] }
+export const NARROW_SIZE: DiagramSize = { r: 112, label: 70, labelGap: 9, fontSize: 8.5, arcWidth: 4, lineWidths: [0.8, 1.4, 2.4] }
 
 /** The gap between two groups, in radians. */
 const GROUP_GAP = 0.035

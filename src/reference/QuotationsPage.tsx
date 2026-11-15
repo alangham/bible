@@ -18,6 +18,9 @@ import { RefBar } from './RefBar.tsx'
 /** The ink of a dim line. The prototype value. */
 const DIM_INK = '#1D1D1F'
 
+/** The color of a book name with no line to the selected book. It keeps full opacity. docs/DESIGN.md section 7.8. */
+const GRAY_NAME = '#6E6E73'
+
 export function QuotationsPage({ books, layout }: { books: Book[]; layout: ScreenLayout }) {
   const [pairs, setPairs] = useState<QuotationPair[] | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -45,7 +48,7 @@ export function QuotationsPage({ books, layout }: { books: Book[]; layout: Scree
       <main className="ref-main">
         <h1>Quotations</h1>
         <p className="ref-lead">
-          Which books quote which books. A line joins two books that have one quotation link or more. The color of a line goes from the book
+          Which books of the New Testament quote which books of the Old Testament. A line joins two books that have one quotation link or more. The color of a line goes from the book
           that quotes to the book that it quotes. Select a book to see its lines.
         </p>
         {error && <p role="alert">The quotation links did not load. {error}</p>}
@@ -154,7 +157,9 @@ function Diagram({ books, pairs, layout, selected, onSelect }: DiagramProps) {
       </g>
       {d.books.map((b) => {
         const isSelected = selected === b.book.id
-        const dimmed = selected !== null && !isSelected && !linked.has(b.book.id)
+        // A name with no line to the selected book is gray, at full opacity, so that its text keeps a
+        // contrast of 4.5 to 1. Arthur decided this on 2026-11-14.
+        const gray = selected !== null && !isSelected && !linked.has(b.book.id)
         return (
           <g
             key={b.book.id}
@@ -164,7 +169,7 @@ function Diagram({ books, pairs, layout, selected, onSelect }: DiagramProps) {
             aria-pressed={isSelected}
             aria-label={b.book.name}
             data-book={b.book.id}
-            data-dimmed={dimmed}
+            data-gray={gray}
             // In the narrow layout, a name is smaller than 24 px. The list control above the diagram does
             // the same thing at 44 px: the exception "Equivalent" of WCAG 2.5.8.
             data-target-equivalent={layout === 'narrow' ? 'q-select' : undefined}
@@ -177,8 +182,7 @@ function Diagram({ books, pairs, layout, selected, onSelect }: DiagramProps) {
             <text
               x={b.x}
               y={b.y}
-              fill={b.color}
-              fillOpacity={dimmed ? 0.25 : 1}
+              fill={gray ? GRAY_NAME : b.color}
               fontSize={size.fontSize}
               fontWeight={isSelected ? 800 : 600}
               dominantBaseline="central"

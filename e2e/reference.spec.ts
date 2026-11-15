@@ -94,6 +94,16 @@ test.describe('Reference section', () => {
     // The lines of Romans are bright, and the other lines are dim.
     const on = await page.locator('.q-line[data-on="true"]').evaluateAll((els) => els.map((e) => `${e.getAttribute('data-from')}>${e.getAttribute('data-to')}`))
     expect(on.sort()).toEqual(pairs.filter((p) => p.from === 'romans' || p.to === 'romans').map((p) => `${p.from}>${p.to}`).sort())
+    // A name with no line to Romans is gray at full opacity. A name with a line keeps its group color.
+    const linked = new Set(pairs.flatMap((p) => (p.from === 'romans' ? [p.to] : p.to === 'romans' ? [p.from] : [])))
+    const names = await diagram(page)
+      .getByRole('button')
+      .evaluateAll((els) => els.map((g) => ({ id: g.getAttribute('data-book')!, fill: g.querySelector('text')!.getAttribute('fill'), opacity: getComputedStyle(g.querySelector('text')!).fillOpacity })))
+    for (const n of names) {
+      expect(n.opacity).toBe('1')
+      if (n.id === 'romans' || linked.has(n.id)) expect(n.fill).not.toBe('#6E6E73')
+      else expect(n.fill).toBe('#6E6E73')
+    }
     // Select it again to clear.
     await romans.click()
     await expect(romans).toHaveAttribute('aria-pressed', 'false')
@@ -133,8 +143,25 @@ test.describe('Reference section', () => {
     await expect(page.getByRole('combobox', { name: 'Select a book' })).toHaveCount(0)
   })
 
-  test('the line below the diagram names the source', async ({ page }) => {
+  test('no book name is cut at the edge of the diagram or of the screen', async ({ page }) => {
+    for (const viewport of [{ width: 320, height: 640 }, NARROW, { width: 899, height: 900 }, WIDE]) {
+      await openQuotations(page, viewport)
+      const room = await diagram(page).evaluate((svg) => {
+        const s = svg.getBoundingClientRect()
+        return Math.min(
+          ...[...svg.querySelectorAll('.q-book text')].map((t) => {
+            const r = t.getBoundingClientRect()
+            return Math.min(r.left - s.left, s.right - r.right, r.top - s.top, s.bottom - r.bottom, r.left, window.innerWidth - r.right)
+          }),
+        )
+      })
+      expect(room, `width ${viewport.width}`).toBeGreaterThanOrEqual(0)
+    }
+  })
+
+  test('the first sentence names the two Testaments, and the line below the diagram names the source', async ({ page }) => {
     await openQuotations(page, WIDE)
+    await expect(page.locator('.ref-lead')).toHaveText(/^Which books of the New Testament quote which books of the Old Testament\. /)
     await expect(page.locator('.ref-foot')).toHaveText('From the Bible Quotation Database. A thicker line has more quotation links.')
   })
 

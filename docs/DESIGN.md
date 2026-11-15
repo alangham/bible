@@ -357,6 +357,10 @@ Arthur decided the three items of this section on 2026-11-14. The design of the 
   - The color of a line goes from the color of the book that quotes to the color of the book that it quotes. Three steps of thickness show the number of quotation links.
   - A tap on a book name lights its lines, dims the other lines, and shows a list: the books that it quotes and the books that quote it, with the number of quotation links for each. The list is the text form of the lines. A control in the list opens the book.
   - On a narrow screen, a list control selects the book, because the names around the circle are small.
+- The quotation diagram on the site. Arthur decided these three rules on 2026-11-14.
+  - Gray names. When a book is selected, a book name with no line to the selected book keeps full opacity and has the color #6E6E73. This replaces the faded names of the prototype.
+  - The first sentence of the Quotations page is "Which books of the New Testament quote which books of the Old Testament."
+  - The size of the book names in the narrow diagram. In the narrow layout, a book name is smaller than the target size of 24 px. This is accepted, because the list control above the diagram selects the same book at 44 px. This is the exception "Equivalent" of WCAG 2.5.8. The accessibility test accepts it by the attribute `data-target-equivalent`.
 - The links to the section in the prototype: a line at the bottom of the wall has the name of the translation and the links "Timeline", "Quotations", and "Sources". The top bar of each Reference page has "Books" and the three page names. This is a value of the designer.
 - The timeline shows no ring where scholars differ on the date. Arthur decided this on 2026-11-14. This replaces the sign of section 4.6. Reason: 47 of the 66 books have a "Scholars differ" detail for the date, so the sign tells the reader very little. One line below the timeline says that scholars differ on many dates, and that "About this book" gives the detail.
 - The fonts section of the Sources page credits Inter and Lora, with their copyright lines and their licences. Task 17 changes it when it removes the fonts of the first build.

@@ -10,3 +10,6 @@ playwright/.cache
 
 # Prototype data, made by docs/prototype/make-data.mjs
 docs/prototype/data
+
+# Files that Arthur keeps for reference. Not part of the site, and not committed.
+resources/

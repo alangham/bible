@@ -12,7 +12,7 @@ import type { Book } from '../data/books.ts'
 import { headingKey, type LinkEnd } from '../data/links.ts'
 import { passageName } from '../data/passage.ts'
 import { endKey, linkColor } from './linkEnds.ts'
-import { isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type NoteRun } from '../data/text.ts'
+import { isAdded, isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type NoteRun } from '../data/text.ts'
 import { lineParts, type LineReference } from '../data/xrefs.ts'
 
 export interface ChapterMarks {
@@ -187,7 +187,8 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
                   </span>
                 )
               }
-              return <Fragment key={i}>{item}</Fragment>
+              // Added words show as plain words until a task adds italics. docs/TASKS.md Task 20 step 7.
+              return <Fragment key={i}>{isAdded(item) ? item.a : item}</Fragment>
             })}
           </p>
         )

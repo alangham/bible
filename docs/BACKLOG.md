@@ -117,6 +117,8 @@ What a task for this item must do:
 
 Added: 2026-11-15, by Arthur.
 
+Status on 2026-11-15: this idea is a task now. Arthur decided it after the report of Task 19. The decisions are in section 8 of `docs/DESIGN.md`, and Tasks 20 and 21 of `docs/TASKS.md` build it. Where this item and section 8 differ, section 8 is correct. The text below is the record of the idea.
+
 Idea: the reader can read the King James Version on the site, as a second translation beside the Berean Standard Bible.
 
 The facts on 2026-11-15, from a short check by the designer:

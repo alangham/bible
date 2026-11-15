@@ -5,6 +5,8 @@
 //
 // This module is the one text service of the site. A second translation can be added
 // behind the same functions without a change to the pages. docs/DESIGN.md section 5.
+// The King James Version data is in public/data/text-kjv/, in the same form, with added-words
+// items. scripts/build-text-kjv.mjs makes it. docs/DESIGN.md section 8, Task 20. No page reads it yet.
 
 /** One run of a note: plain text, quoted alternative text (q), or a verse number (v). */
 export interface NoteRun {
@@ -23,7 +25,15 @@ export interface OmittedVerse {
   note: NoteRun[]
 }
 
-export type Inline = string | VerseMark | OmittedVerse
+/**
+ * Added words: the words that the translators of the King James Version added. Only the King James
+ * Version data has them (public/data/text-kjv/). docs/DESIGN.md section 8.2.
+ */
+export interface AddedWords {
+  a: string
+}
+
+export type Inline = string | VerseMark | OmittedVerse | AddedWords
 
 /**
  * Section heading.
@@ -91,6 +101,10 @@ export function isVerseMark(x: Inline): x is VerseMark {
 
 export function isOmitted(x: Inline): x is OmittedVerse {
   return typeof x === 'object' && 'o' in x
+}
+
+export function isAdded(x: Inline): x is AddedWords {
+  return typeof x === 'object' && 'a' in x
 }
 
 const cache = new Map<string, Promise<BookText>>()

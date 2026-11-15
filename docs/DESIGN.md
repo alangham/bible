@@ -199,6 +199,7 @@ Arthur decided the two bands on 2026-11-14.
 ## 5. Bible text
 
 - Translation in version 1: the Berean Standard Bible. It is in the public domain. The full text is bundled in the repository.
+- Arthur decided on 2026-11-15 to add the King James Version as a second translation. Section 8 has the decisions.
 - The page must show the name of the translation.
 - The ESV is not in version 1. Arthur decided this on 2026-11-13. The ESV is his preferred translation, but it is not a requirement.
 - Reason: the ESV is available only through the Crossway ESV API. The terms forbid a published access key, and the terms expect server-side code. A static site on GitHub Pages cannot hold the key.
@@ -209,7 +210,7 @@ Arthur decided the two bands on 2026-11-14.
 - User accounts, notes, highlights.
 - Search.
 - Audio.
-- The ESV and other translations.
+- The ESV and other translations. Exception: the King James Version, by section 8.
 - Hand-designed scenes for specific chapters.
 - Guided routes.
 
@@ -379,3 +380,45 @@ Arthur decided the three items of this section on 2026-11-14. The design of the 
 2. The narrow layout between 520 and 900 px wide. The designer did not test it. Task 12 reports on it.
 3. The bookmark and last-read idea is item 4 of `docs/BACKLOG.md`. The last-read chapter of each book is part of section 7.5 and is not a backlog idea.
 4. A check on a real phone.
+
+## 8. The King James Version
+
+Arthur decided this section on 2026-11-15. The evidence is in `docs/reviews/task-19-kjv-report.md`. Tasks 20 and 21 in `docs/TASKS.md` build it.
+
+### 8.1 The rule
+
+- The King James Version is a second translation of the site, beside the Berean Standard Bible.
+- A translation changes only the words. The reading page of the King James Version shows the section headings and the cross-reference lines of the Berean files above the words of the King James Version.
+- The links, the read-with lists, the introductions, and the dates are the same for the two translations.
+- The site writes no new content for the King James Version.
+- The publisher of the Berean Standard Bible uses the same rule in its own file of the King James Version, `https://openbible.com/docx/kjv.docx`. The site does not use that file. The file is evidence only.
+
+### 8.2 The words
+
+- Source: edition A of the report. It is the standardized text of 1769 from eBible.org, `https://eBible.org/Scriptures/eng-kjv2006_usfm.zip`. The pages of eBible.org state "Public Domain". The record is in section 9 of `docs/DATA-SOURCES.md`.
+- The site does not change a word of the source.
+- The site does not show these parts of the source files: the Strong's numbers, the footnotes, the paragraph signs "¶", the marks for the words of Jesus, the paragraphs and the poetry lines, and the `\s1` lines. The `\s1` lines are the letter headings of Psalm 119 and the lines at the end of 14 letters.
+- The words that the translators added show in italics, as in a printed copy. The source marks them with `\add`.
+- A Psalm title of the source is a `\d` line. It shows as the title of its Psalm, where the Berean data has the title of that Psalm.
+- The King James Version has words for the 16 verses that the main text of the Berean Standard Bible does not have. The King James Version pages show these verses as text, with no note.
+
+### 8.3 The structure
+
+The structure of each chapter comes from the Berean data in `public/data/text/`.
+
+- Section headings: the same headings before the same verses. Exception: the King James Version pages do not show the 37 speaker headings of the Song of Solomon. Six of them are in the middle of a verse, and a set with holes misleads the reader.
+- Cross-reference lines: the same lines at the same places.
+- Text blocks: a text block of the King James Version has the style of its Berean block, and it holds the verses that start in that Berean block. The words of a verse are never cut. A Berean block in which no verse starts has no block in the King James Version. So a poetry verse shows as one line, and a paragraph starts only at the start of a verse.
+- Blank lines between stanzas: the same as in the Berean data.
+- Notes: the King James Version pages show no footnote and no manuscript note.
+
+### 8.4 Links and reason lines
+
+- The King James Version pages show the same marks, margin labels, and pop-ups. The pop-up shows the linked passage in the translation that the reader reads.
+- The reason line of a quotation link quotes words of the Berean Standard Bible. On the King James Version pages, the reason line shows unchanged, with a short label that the quoted words are from the Berean Standard Bible.
+
+### 8.5 Not decided
+
+1. How the reader selects the translation, and where the site keeps the selection. The designer shows Arthur a render before Task 21 is written.
+2. The words of the credit on the Sources page. The terms of the Berean publisher do not permit the Berean name on a changed text. The credit must not give the King James Version pages the Berean name.
+3. Arthur asked the Berean publisher on 2026-11-15 if the site can use its set of headings for the King James Version. This section does not wait for an answer.

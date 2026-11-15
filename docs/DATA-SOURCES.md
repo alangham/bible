@@ -187,16 +187,25 @@ The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthu
 ## 9. King James Version
 
 - The report of Task 19 is `docs/reviews/task-19-kjv-report.md`.
-- No file of the King James Version text is in the repository. The downloads are in a temporary folder outside `C:\dev\bible`.
+- Since Task 20, the USFM files of edition A are in the repository, in `sources/kjv/usfm/`, and the site data made from them is in `public/data/text-kjv/`. No file of edition B or edition C is in the repository. The other downloads of Task 19 are in a temporary folder outside `C:\dev\bible`.
 
 ### Edition A: eBible.org, the text of 1769 with Strong's numbers
 
-- Use: Read for Task 19. Not used on the site.
+- Use: Read for Task 19. Since Task 20, the source of the words of the King James Version. Arthur chose this edition on 2026-11-15 (`docs/DESIGN.md` section 8.2).
 - Details page: `https://ebible.org/details.php?id=eng-kjv2006`. Read on 2026-11-15.
 - Copyright page: `https://eBible.org/eng-kjv2006/copyright.htm`. Read on 2026-11-15. The details page does not link to this page. The HTML edition `https://eBible.org/eng-kjv2006/` links to it. The zip file holds the same page as `copr.htm`.
 - Description on the details page: the King James Version, the standardized text of 1769, the 66 books only, with Strong's numbers added.
 - Licence statement: both pages state "Public Domain". The copyright page also states that the reader may copy the text freely.
 - The right to print in the United Kingdom: both pages state that letters patent of King James have no end date. Cambridge University Press, Oxford University Press, and Collins have the exclusive right to print this translation in the United Kingdom, and to import printed copies. The pages state that this right has no effect outside the United Kingdom, where the text is in the public domain.
+
+### Use of edition A in Task 20: the King James Version data in `public/data/text-kjv/`
+
+- Source file: `eng-kjv2006_usfm.zip`, the download of Task 19. SHA-256 `b6faa67117ccaba49df9e7df224a553f11758ae7c5d58f0f7979e2b73ac4480b`, checked again on 2026-11-15.
+- In the repository: the 66 USFM files of the 66 books in `sources/kjv/usfm/`, and the copyright page of the zip file, `sources/kjv/copr.htm`. No other file of the zip file is in the repository.
+- Script: `scripts/build-text-kjv.mjs`. It reads `sources/kjv/usfm/` and `public/data/text/<id>.json`, and writes `public/data/text-kjv/<id>.json`, one file for each book.
+- What the site takes from the source files: the words of each verse, the added words (`\add`), and the Psalm titles (`\d`).
+- What the site does not take from the source files: the Strong's numbers, the 6,959 footnotes, the paragraph signs "¶", the marks of the words of Jesus (`\wj`) and of the name LORD (`\nd`), the paragraphs and the poetry lines (`\p`, `\q1`, `\b`), and the `\s1` lines. The structure of each chapter comes from the Berean data in `public/data/text/`, by `docs/DESIGN.md` section 8.3.
+- Test: `src/data/textKjv.test.ts` checks that the words of each of the 31,102 verses are the same as in the source files.
 
 ### Edition B: eBible.org, the Cambridge Paragraph Bible
 

@@ -884,9 +884,11 @@ Stop and report. A check on a real phone is still open. Only Arthur can do it.
 
 ---
 
-# The King James Version: Task 19
+# The King James Version: Tasks 19 to 21
 
 Arthur decided on 2026-11-15 that the King James Version can become a second translation of the site. The idea and its decisions are in item 6 of `docs/BACKLOG.md`. Task 19 is a report. It does not add the King James Version to the site.
+
+After the report, Arthur decided the design on 2026-11-15. It is in section 8 of `docs/DESIGN.md`. Task 20 makes the text data. Task 21 changes the pages. Task 21 is not written: it waits for one design decision of Arthur.
 
 ---
 
@@ -974,3 +976,87 @@ Done when:
 - `npm run build` has no errors, and the tests pass.
 
 Stop and report. Give the path of the temporary folder in the report. Do not start a task that adds the King James Version. Arthur decides the next tasks from the report.
+
+---
+
+## Task 20. King James Version: the text data
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the words of the King James Version are in the repository, as one JSON file for each book, in the structure of the Berean data. No page shows them in this task. Task 21 changes the pages.
+
+The rule of Arthur, from section 8 of `docs/DESIGN.md`: a translation changes only the words. The words come from edition A of the Task 19 report: the standardized text of 1769 from eBible.org. The section headings, the cross-reference lines, and the text blocks come from the Berean data in `public/data/text/`.
+
+WARNING: Do not change a word of the King James Version. Do not correct a spelling, a capital letter, or a punctuation mark.
+
+WARNING: Do not change an existing data file: `public/data/text/`, `public/data/links/`, and the other files in `public/data/`.
+
+WARNING: Do not change a page in this task. In `src/`, change only `src/data/text.ts`, `src/data/passage.ts`, and their tests, as steps 7 and 8 say.
+
+WARNING: Do not take a word, a heading, or a paragraph from `resources/kjv.docx` or from OpenBible.com. That file is evidence only.
+
+Steps:
+
+1. Read section 8 of `docs/DESIGN.md`, section 9 of `docs/DATA-SOURCES.md`, and `docs/reviews/task-19-kjv-report.md`. Read `scripts/build-text.mjs` and `src/data/text.ts` to see the form of the data.
+2. Get the source file `eng-kjv2006_usfm.zip`. Use the copy of Task 19 if you still have it. If not, download `https://eBible.org/Scriptures/eng-kjv2006_usfm.zip`. Make sure that its SHA-256 is `b6faa67117ccaba49df9e7df224a553f11758ae7c5d58f0f7979e2b73ac4480b`. If the SHA-256 differs, the source changed: stop and ask Arthur.
+3. Put the 66 USFM files of the 66 books in `sources/kjv/usfm/`. Put the copyright page of the zip file, `copr.htm`, in `sources/kjv/`. Do not put a different file of the zip file in the repository.
+4. Add the line `resources/` to `.gitignore`. Arthur keeps his copy of `kjv.docx` in that folder, and it must not go into the repository.
+5. Write the script `scripts/build-text-kjv.mjs`. It reads `sources/kjv/usfm/` and `public/data/text/<id>.json`. It writes `public/data/text-kjv/<id>.json`, one file for each book. A file has the same form as a file in `public/data/text/`, with `"translation": "King James Version"`. The script stops with an error when a rule below does not fit the data. It does not guess.
+   - The words of a verse, from the USFM line of the verse:
+     - `\w <word>|strong="…"\w*` and `\+w <word>|strong="…"\+w*`: keep the word. Remove the markers and the Strong's number.
+     - `\f … \f*`: remove the footnote.
+     - "¶": remove the sign and the space after it.
+     - `\wj`, `\wj*`, `\nd`, `\nd*`, `\+nd`, `\+nd*`: remove the markers. Keep the words.
+     - `\add <words>\add*` and `\+add <words>\+add*`: these are added words. Write them as an item `{ "a": "<words>" }` between the strings of the verse.
+     - Write the spaces as `scripts/build-text.mjs` writes them: one space between two words, and one space between the words of two verses in one block. A string has no two spaces together.
+   - Do not use these markers of the source: `\p`, `\q1`, `\b`, and `\s1`. The site takes its structure from the Berean data.
+   - The structure of a chapter, from the blocks of the same chapter in `public/data/text/<id>.json`:
+     - A heading block (`k: "h"`): copy it. Exception: do not copy an `s2` heading of the Song of Solomon. These are the 37 speaker headings.
+     - The cross-reference lines (`xrefs`): copy them.
+     - A text block (`k: "p"`): make a text block with the same style. It holds each verse that starts in the Berean block: the item `{ "v": n }`, then the words of verse n of the King James Version. A verse starts in a block when its item `{ "v": n }` or `{ "o": n }` is in that block. The words of a verse are never cut.
+     - A Berean text block in which no verse starts: make no block.
+     - An item `{ "o": n }` of the Berean data is a verse that the main Berean text does not have. Write `{ "v": n }` and the words of verse n of the King James Version at that place. The King James Version data has no `o` item.
+     - A Berean block with the style `d` holds a title. If the chapter of the source has a `\d` line, make a `d` block with `{ "v": 1 }` and the words of the `\d` line. Then the next text block holds the words of verse 1, with no item `{ "v": 1 }`, as in the Berean data. If the chapter of the source has no `\d` line, make no `d` block, and the next text block holds `{ "v": 1 }` and the words of verse 1. On 2026-11-15 the Berean data had 117 `d` blocks: 116 in Psalms and one in Zechariah 12.
+     - If a chapter of the source has a `\d` line and the Berean chapter has no `d` block, stop with an error.
+     - A break block (`k: "b"`): copy it. Where two break blocks have no text block between them, keep one. Remove a break block that has no text block after it in the chapter.
+     - A note block (`k: "n"`): do not copy it. The King James Version pages show no note.
+6. Run the script. It must print these numbers. Give them in the report, each with the number that Task 19 found for edition A:
+   - Books, chapters, and verses. Task 19: 66, 1,189, and 31,102.
+   - Added-words items, and the verses that have one or more. Task 19: 21,462 groups in 14,224 verses.
+   - Footnotes removed. Task 19: 6,959.
+   - Verses from which the script removed "¶". Task 19: 2,970.
+   - `d` blocks made. Task 19: 116 `\d` lines.
+   - Heading blocks for each style, and cross-reference lines. The Berean data has 3,016 `s1`, 80 `s2`, 5 `ms`, 5 `d`, and 44 `qa` headings, and 1,325 cross-reference lines. The King James Version data must have 37 `s2` headings fewer, and the other numbers the same.
+   - Text blocks for each style, and the Berean text blocks that have no block in the King James Version data.
+   If a number differs from Task 19, do not change the script to make the numbers agree. Find the cause and give it in the report.
+7. In `src/data/text.ts`, add the type of an added-words item, `{ a: string }`, to the type `Inline`, and add a function `isAdded`. If a file in `src/` does not compile with the new type, make the smallest change: the code reads an added-words item as its words. Do not add italics in this task.
+8. In `src/data/passage.ts`, make `passageVerses` include the words of an added-words item in the words of its verse. Add a unit test for this.
+9. Write the unit test `src/data/textKjv.test.ts`. It reads `public/data/text-kjv/` and `sources/kjv/usfm/`. It gets the words of each verse from the source with code of its own, not with code of the build script. It checks:
+   - 66 books and 1,189 chapters, in the order of `public/data/books.json`, and 31,102 verses.
+   - The words of each verse are the same as in the source. For verse 1 of a chapter with a `\d` line, the words are the title and then the words of the verse.
+   - These verses have these words:
+     - Genesis 1:1: "In the beginning God created the heaven and the earth."
+     - Genesis 1:2: "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters."
+     - Matthew 5:3: "Blessed are the poor in spirit: for theirs is the kingdom of heaven."
+     - Romans 16:24: "The grace of our Lord Jesus Christ be with you all. Amen."
+     - 3 John 1:14: "But I trust I shall shortly see thee, and we shall speak face to face. Peace be to thee. Our friends salute thee. Greet the friends by name."
+   - Genesis 1:2 has one added-words item, with the word "was".
+   - Psalm 23 has a `d` block with the words "A Psalm of David."
+   - No string has "\", "|", "¶", or two spaces together.
+   - Each text block has one verse or more. Each text block starts with an item `{ "v": n }`, except the text block after a `d` block.
+   - The heading blocks of each chapter are those of the Berean chapter, without the `s2` headings of the Song of Solomon. The cross-reference lines of each chapter are those of the Berean chapter.
+   - No file has an `o` item or a note block.
+10. Add to section 9 of `docs/DATA-SOURCES.md`, under edition A: the use in Task 20, the folder `sources/kjv/usfm/`, the script, the output folder, and what the site takes and does not take from the source files. Change the line "No file of the King James Version text is in the repository" to the true state.
+11. Run the `accuracy-reviewer` agent. Its Check 1 applies to `public/data/text-kjv/`, with `sources/kjv/usfm/` as the source file: 66 books, 1,189 chapters, 31,102 verses, and the words of each verse identical to the source.
+12. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- `public/data/text-kjv/` has 66 files, and the test of step 9 passes.
+- The numbers of step 6 are in the report, each beside the number of Task 19.
+- No file in `public/data/text/` or in `public/data/links/` changed, and no page changed.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Task 21 is not written. Do not change a page before Arthur gives you Task 21.

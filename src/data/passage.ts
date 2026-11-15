@@ -1,7 +1,7 @@
 // The text and the name of a passage, for the link pop-up and the trail.
 
 import type { Book } from './books.ts'
-import { isOmitted, isVerseMark, type BookText } from './text.ts'
+import { isAdded, isOmitted, isVerseMark, type BookText } from './text.ts'
 
 export interface PassageRange {
   book: string
@@ -49,6 +49,8 @@ export function passageVerses(text: BookText, p: PassageRange): PassageVerse[] {
           words.set(item.o, item.note.map((r) => r.t).join(''))
           notes.add(item.o)
         } else if (typeof item === 'string' && verse) words.set(verse, words.get(verse) + item)
+        // The added words of the King James Version are words of their verse.
+        else if (isAdded(item) && verse) words.set(verse, words.get(verse) + item.a)
       }
     }
     for (const [v, t] of [...words].sort((x, y) => x[0] - y[0])) {

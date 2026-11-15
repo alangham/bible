@@ -6,10 +6,12 @@ A static website for reading the Bible. The owner is Arthur.
 
 Arthur decided a redesign on 2026-11-14. The rule of the redesign: the text is the interface. The reader moves through the Bible with no friction when the reader reads. The first build had a 3D book on a table. The redesign removes it.
 
+Arthur decided on 2026-11-15 to add the King James Version as a second translation. The rule: a translation changes only the words.
+
 ## Files you must read before you do work
 
-1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign.
+1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Do not change a design decision without Arthur's approval.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version.
 3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
 4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
 5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.
@@ -31,14 +33,15 @@ When Arthur says "do the next task", start again at step 1.
 
 ## Hard rules
 
-- WARNING: Do not add ESV text or a request to the ESV API. The ESV is not in version 1. The translation is the Berean Standard Bible, which is bundled in the repository.
+- WARNING: Do not add ESV text or a request to the ESV API. The ESV is not in version 1. The site has two translations: the Berean Standard Bible, and the King James Version from Task 20. The two are bundled in the repository. Do not add a different translation.
 - WARNING: Do not add a server. The site is deployed on GitHub Pages. All code runs in the browser or at build time.
 - WARNING: The redesign changes how the site looks and moves. It does not change what the site says. Do not change the Bible text, an introduction, a link, or a date, unless a task tells you to.
 - Push to the `main` branch after each task. Arthur decided this on 2026-11-14. He tests each task on the public site, and the site has no other readers. From Task 12 to Task 17, the public site has new pages and old pages together. This is accepted.
 - Do not push a different branch, and do not use a force push.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
-- Do not change the words of a Bible text.
+- Do not change the words of a Bible text. This applies to the two translations.
+- Do not write new content for the King James Version. Its headings, cross-reference lines, links, introductions, and dates are those of the site. Section 8 of `docs/DESIGN.md` has the rule.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
 - Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
 - Do not add or remove a link between passages. Links come only from the three approved sources, by the rules in section 4.5 of `docs/DESIGN.md`.
@@ -67,6 +70,8 @@ Use these names in code, comments, and reports. One name for each thing.
 | group | One of the ten sets of books on the wall. "History" occurs two times. |
 | category | One of the nine kinds of writing. |
 | band | The bar in the group color that starts a group, with the group name in white. |
+| translation | One of the two Bible texts of the site: the Berean Standard Bible and the King James Version. |
+| added words | The words that the translators of the King James Version added. The page shows them in italics. |
 | reading page | The page with the chapter text, in one column. |
 | top bar | The bar that stays at the top of the reading page and of the Reference pages. |
 | chapter grid | The grid of chapter numbers that opens from the top bar. |

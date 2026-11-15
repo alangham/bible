@@ -325,12 +325,16 @@ Arthur decided on 2026-11-14 to design the links before the build. The rules of 
   - Narrow screen: the marks are in the text, after the verse number.
   - The margin labels start at a width of 1180 px. Below that width, the marks are in the text. The limit is a value of the designer.
 - The cross-reference line below a section heading is a set of controls, one for each linked passage.
+  - Arthur decided this on 2026-11-14. The line shows as the Berean Standard Bible files give it, for example "(Exodus 40:1–33; Acts 7:44–47)". Each reference that has a link is a control. A reference with no link is plain text.
+  - In the pop-up of a control in this line, the reference shows as the line gives it, for example "Exodus 40:1–33".
+  - Arthur decided this on 2026-11-14. The text in that pop-up is every verse of the passage that the line names, as for other links. For a reference to whole chapters or whole books, the text is the first verse, with the label "First verse". The text area of the pop-up keeps a maximum height, and a long passage scrolls inside it.
 - Pop-up. A tap on a mark, a label, or a section control opens it. It shows: the band of the linked group, the reference in capitals, the type of link and the passage that it comes from, the text of the linked passage, the reason line for a quotation link, the source, and the actions "Go there" and "Stay here". On a wide screen, it opens near the control. On a narrow screen, it opens from the bottom of the screen.
 - Travel. "Go there" opens the linked chapter at the linked verse. The change is direct, with no move between the two pages. The paragraph of the linked verse has a light background for a short time. Arthur decided this on 2026-11-14.
   - The line in section 4.5 that says "The move must show that the reader crossed the Bible" does not apply to the redesign. Arthur said that he did not miss this move.
   - Arthur's rule: after "Go there", the reader must have a way to get back.
 - Trail. After the first travel, a thin line below the top bar lists the stops. Each stop is a control in the color of its group. The current stop has an underline.
   - The way back: when the reader is not on the first stop, the trail starts with the control "Back". "Back" opens the stop before the current stop, at its verse.
+  - Arthur decided this on 2026-11-14. The trail changes only by travel: "Go there", a read-with entry, or a stop in the trail. The Back control of the browser, the chapter grid, and a scroll do not change the trail.
 - Read-with list. One line below the chapter heading, with the label "Read with". Each entry is a control for travel to that chapter. The source line "From OpenBible.info" is at the end.
 - Echo links. A control at the right of the top bar switches the echo links on and off.
 

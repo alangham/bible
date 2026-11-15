@@ -201,273 +201,6 @@ a {
   font-size: 48px;
 }
 
-/* ---- Links, travel, and trail: docs/DESIGN.md section 4.5 ---- */
-
-/*
-  A mark of links after a verse number or a heading. POLISH.md item 10: the marks are the way to
-  travel, so they are easy to see. Strong for quotation links: a filled dot inside a ring. Light for
-  echo links: a dashed ring. The touch area of each mark is 44 px (::after).
-*/
-.link-mark {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.92em;
-  height: 0.92em;
-  margin: 0 0.3em 0 0.08em;
-  padding: 0;
-  border: 2px solid var(--ink);
-  border-radius: 50%;
-  background: transparent;
-  /* A button does not take the size of the text by default. The mark follows the text size. */
-  font-size: inherit;
-  vertical-align: -0.12em;
-  cursor: pointer;
-}
-
-.link-mark[data-kind='quotation'] {
-  background: radial-gradient(circle closest-side, var(--ink) 58%, transparent 64%);
-}
-
-.link-mark[data-kind='echo'] {
-  border-style: dashed;
-}
-
-.link-mark:hover {
-  box-shadow: 0 0 0 3px var(--veil-edge, rgba(0, 0, 0, 0.1));
-}
-
-.link-mark::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 44px;
-  height: 44px;
-  transform: translate(-50%, -50%);
-}
-
-.sh-s1 .link-mark,
-.sh-s2 .link-mark {
-  margin-left: 0.4em;
-  font-size: 0.8em;
-}
-
-/* The verse that the reading page opened at: travel uses it. */
-.vn-target {
-  border-radius: 3px;
-  box-shadow: 0 0 0 3px currentColor;
-  animation: vn-target 2.4s ease-out both;
-}
-
-@keyframes vn-target {
-  to {
-    box-shadow: 0 0 0 3px transparent;
-  }
-}
-
-.link-popup {
-  position: fixed;
-  z-index: 40;
-  box-sizing: border-box;
-  width: min(440px, calc(100vw - 24px));
-  overflow-y: auto;
-  padding: 16px 18px 14px;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  background: #fbf7ee;
-  color: var(--ink);
-  box-shadow: 8px 14px 36px rgba(60, 38, 10, 0.3);
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.link-popup-title {
-  margin: 0 0 8px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-secondary);
-}
-
-.link-item {
-  padding: 10px 0 12px;
-  border-top: 1px solid var(--rule);
-}
-
-.link-item h3 {
-  margin: 0 0 4px;
-  font-family: var(--title-font);
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.link-kind {
-  margin-left: 6px;
-  font-family: var(--body-font);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-secondary);
-}
-
-.link-text {
-  max-height: 9.5em;
-  margin: 0 0 8px;
-  overflow-y: auto;
-}
-
-.link-reason {
-  margin: 0 0 6px;
-  font-style: italic;
-}
-
-.link-source {
-  margin: 0 0 8px;
-  font-size: 13px;
-  color: var(--ink-secondary);
-}
-
-.link-go,
-.link-stay {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0 16px;
-  border-radius: 22px;
-  font: 600 16px var(--body-font);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.link-go {
-  background: var(--ink);
-  color: #fbf7ee;
-}
-
-.link-stay {
-  margin-top: 4px;
-  border: 1px solid var(--ink-secondary);
-  background: transparent;
-  color: var(--ink);
-}
-
-/* The read-with list at the top of a chapter. */
-.read-with {
-  margin: 0 0 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--ink);
-}
-
-.read-with h2 {
-  margin: 0;
-  font-family: var(--title-font);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.read-with ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.read-with a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  font-weight: 600;
-}
-
-.read-with-source {
-  margin: 0;
-  font-size: 13px;
-}
-
-/* The trail: always on screen after the first travel. */
-.trail {
-  position: fixed;
-  z-index: 30;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 52px;
-  padding: 0 16px;
-  overflow-x: auto;
-  border-top: 1px solid var(--rule);
-  background: var(--linen-light);
-  box-shadow: 0 -6px 18px rgba(60, 38, 10, 0.12);
-}
-
-.trail-title {
-  font-family: var(--title-font);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.trail ol {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.trail li + li::before {
-  content: '›';
-  padding: 0 6px;
-  color: var(--ink-secondary);
-}
-
-.trail a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  white-space: nowrap;
-  font-size: 16px;
-}
-
-.trail a[aria-current='location'] {
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.app[data-trail='true'] {
-  padding-bottom: 52px;
-}
-
-/* The move of travel: a fade with the two passage names. Task 14 builds the move of the redesign. */
-.travel {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-  background:
-    radial-gradient(1100px 800px at 18% 8%, var(--linen-light) 0%, var(--linen) 55%, var(--linen-shade) 100%);
-}
-
-.travel-label {
-  margin: 0;
-  font-family: var(--title-font);
-  font-size: 26px;
-  font-weight: 700;
-}
-
-/* The wrapper of the page, for inert during travel. It makes no box. */
-.app-page {
-  display: contents;
-}
-
 /* ---- Timeline: docs/DESIGN.md section 4.6, docs/TASKS.md Task 8 ---- */
 
 .timeline-page {
@@ -1009,10 +742,6 @@ html:has(.reading) {
   box-sizing: border-box;
 }
 
-.rd-bar-end {
-  min-width: 84px;
-}
-
 .rd-where {
   padding: 10px 12px;
   border: 0;
@@ -1180,9 +909,6 @@ html:has(.reading) {
 
 /* "About this book". */
 .rd-about {
-  margin: -12px 0 30px;
-  padding: 0 0 16px;
-  border-bottom: 1px solid var(--rd-line);
   font: 400 15px/1.5 Inter, system-ui, sans-serif;
 }
 
@@ -1449,8 +1175,7 @@ html:has(.reading) {
   padding: 0 16px;
 }
 
-.app[data-layout='narrow'] .rd-books,
-.app[data-layout='narrow'] .rd-bar-end {
+.app[data-layout='narrow'] .rd-books {
   min-width: 70px;
 }
 
@@ -1503,4 +1228,536 @@ html:has(.reading) {
   ::view-transition-new(*) {
     animation: none !important;
   }
+}
+
+/* ---- Links on the reading page: docs/DESIGN.md section 7.7, docs/TASKS.md Task 14. ---- */
+/* The values are those of docs/prototype/index.html. --d is the color of the group that a link goes to. */
+
+/* The echo links switch, at the right of the top bar. */
+.rd-echo {
+  min-width: 84px;
+  padding: 12px 0;
+  border: 0;
+  background: none;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  text-align: right;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* The line below the heading: "About this book" and the read-with list. */
+.rd-meta {
+  margin: -12px 0 30px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--rd-line);
+}
+
+.rd-meta[data-full='false'] {
+  margin: -16px 0 22px;
+  padding: 0;
+  border: 0;
+}
+
+/*
+  The read-with list. The prototype puts each entry on #F5F5F7. On that gray, six group colors have a
+  contrast below 4.5 to 1, so each entry is on white with a border.
+*/
+.rd-read-with {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+  margin-top: 6px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.rd-meta[data-full='false'] .rd-read-with {
+  margin-top: 0;
+}
+
+.rd-read-with ul {
+  display: contents;
+  list-style: none;
+}
+
+.rd-read-with li {
+  display: flex;
+}
+
+.rd-read-with-label {
+  margin-right: 2px;
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rd-read-with a {
+  padding: 6px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+@media (hover: hover) {
+  .rd-read-with a:hover {
+    border-color: currentColor;
+  }
+}
+
+.rd-read-with-source {
+  margin-left: 2px;
+  color: var(--rd-ink-secondary);
+  font-size: 12px;
+}
+
+/* A mark after a verse number. 24 by 24 px: a solid dot for a quotation link, a ring for an echo link. */
+.vn-group {
+  white-space: nowrap;
+}
+
+.link-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 -6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  vertical-align: 0.12em;
+  text-indent: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Only the first mark moves near the verse number. The boxes of two marks do not cover each other. */
+.link-mark + .link-mark {
+  margin-left: 0;
+}
+
+.link-mark::before {
+  content: '';
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--d);
+}
+
+.link-mark[data-kind='echo']::before {
+  border: 1.75px solid var(--d);
+  background: none;
+}
+
+@media (hover: hover) {
+  .link-mark:hover::before {
+    transform: scale(1.35);
+  }
+}
+
+.rd-column .tb-q1 > .vn-group > .vn-lead,
+.rd-column .tb-q2 > .vn-group > .vn-lead,
+.rd-column .tb-li1 > .vn-group > .vn-lead,
+.rd-column .tb-li2 > .vn-group > .vn-lead {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 2.3em;
+  margin-left: -2.3em;
+  margin-right: 0;
+  padding-right: 0.5em;
+  text-align: right;
+}
+
+/* The cross-reference line below a section heading: one control for each linked passage. */
+.rd-column .link-line {
+  margin: -4px 0 10px;
+  color: var(--rd-ink-secondary);
+  font: 400 13px/1.45 Inter, system-ui, sans-serif;
+}
+
+.link-ref {
+  min-height: 24px;
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  font: 600 13px/16px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .link-ref:hover {
+    text-decoration: underline;
+  }
+}
+
+/* The labels in the right margin, from 1180 px wide. Each is 24 px high or more. */
+/*
+  Each label follows its verse number in the text, for the focus order. Its position is absolute in
+  the section of the chapter, the nearest positioned box.
+*/
+.rd-chapter[data-labels-ready='false'] .rd-label {
+  visibility: hidden;
+}
+
+.rd-label {
+  position: absolute;
+  left: calc(100% + 36px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  max-width: min(260px, calc((100vw - 700px) / 2 - 60px));
+  min-height: 24px;
+  padding: 3px 0;
+  border: 0;
+  background: none;
+  color: var(--d);
+  font: 600 13px Inter, system-ui, sans-serif;
+  line-height: normal;
+  text-indent: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rd-label[data-kind='echo'] {
+  font-weight: 500;
+}
+
+.rd-label i {
+  flex: none;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--d);
+}
+
+.rd-label[data-kind='echo'] i {
+  border: 1.75px solid var(--d);
+  background: none;
+}
+
+.rd-label-verse {
+  flex: none;
+  min-width: 14px;
+  color: var(--rd-ink-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.rd-label-ref {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (hover: hover) {
+  .rd-label:hover .rd-label-ref {
+    text-decoration: underline;
+  }
+}
+
+/* The paragraph of the verse that travel opened: a light background for a short time. */
+.rd-column .tb,
+.rd-column .omitted {
+  transition:
+    background-color 0.9s,
+    box-shadow 0.9s;
+}
+
+.rd-column .rd-hit {
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
+}
+
+/*
+  Five group colors have a contrast of 4.50 to 4.55 to 1 on white, and less on the light background.
+  The verse numbers in that paragraph are darker for that time.
+*/
+.rd-column .tb .vn {
+  transition: color 0.9s;
+}
+
+.rd-column .rd-hit .vn {
+  color: color-mix(in srgb, var(--c) 80%, #000);
+}
+
+/*
+  The trail: a thin line below the top bar after the first travel. The prototype puts it on #F5F5F7.
+  On that gray, six group colors have a contrast below 4.5 to 1, so the trail is on white.
+*/
+.rd-trail {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #fff;
+  border-bottom: 1px solid var(--rd-line);
+  color: var(--rd-ink-secondary);
+  font: 500 13px Inter, system-ui, sans-serif;
+  white-space: nowrap;
+}
+
+.rd-trail ol {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rd-trail li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rd-trail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  height: 39px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+.rd-trail a[aria-current='location'] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.rd-trail .rd-trail-back {
+  padding-right: 6px;
+  color: var(--rd-ink);
+}
+
+.rd-trail-rule {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  margin: 0 6px 0 2px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.rd-trail :focus-visible {
+  outline-offset: -2px;
+}
+
+.reading[data-trail='true'] .rd-column {
+  padding-top: 140px;
+}
+
+.reading[data-trail='true'] .rd-grid-panel {
+  top: 92px;
+  max-height: calc(100svh - 92px);
+}
+
+.reading[data-trail='true'] .rd-shade {
+  top: 92px;
+}
+
+/* The pop-up of a link. */
+.pop {
+  position: fixed;
+  z-index: 20;
+  box-sizing: border-box;
+  width: min(430px, calc(100vw - 32px));
+  overflow: auto;
+  padding: 18px 20px 16px;
+  border: 1px solid var(--rd-line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+  color: var(--rd-ink);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.pop[data-layout='narrow'] {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  max-height: 85svh;
+  padding: 20px 20px 26px;
+  border-bottom: 0;
+  border-radius: 18px 18px 0 0;
+}
+
+.pop-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 19;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.pop :focus-visible {
+  outline-color: var(--rd-ink);
+}
+
+.pop-band {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 7px;
+  background: var(--d);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pop-ref {
+  margin: 8px 0 4px;
+  color: var(--d);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.pop-kind {
+  margin: 0 0 12px;
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pop-heading {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pop-text {
+  max-height: 36vh;
+  overflow: auto;
+  margin: 0;
+  font: 400 17px/1.55 Lora, Georgia, serif;
+}
+
+.pop-vn {
+  margin-right: 0.2em;
+  color: var(--d);
+  font: 600 0.6em Inter, system-ui, sans-serif;
+  line-height: 0;
+  vertical-align: 0.6em;
+}
+
+.pop-omitted {
+  color: var(--rd-ink-secondary);
+}
+
+.pop-reason {
+  margin: 10px 0 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--d);
+  color: #3a3a3c;
+  font: italic 400 15px/1.5 Lora, Georgia, serif;
+}
+
+.pop-source {
+  margin: 10px 0 0;
+  color: var(--rd-ink-secondary);
+  font-size: 12px;
+}
+
+.pop-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pop-go,
+.pop-stay {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font: 600 15px Inter, system-ui, sans-serif;
+}
+
+.pop-go {
+  background: var(--d);
+  color: #fff;
+}
+
+.pop-stay {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background: none;
+  color: var(--rd-ink);
+  cursor: pointer;
+}
+
+/* Narrow layout. */
+.app[data-layout='narrow'] .rd-echo {
+  min-width: 70px;
+}
+
+/* The word "links" stays in the name of the switch. */
+.app[data-layout='narrow'] .rd-echo-wide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.app[data-layout='narrow'] .rd-trail {
+  padding: 0 16px;
+}
+
+.app[data-layout='narrow'] .reading[data-trail='true'] .rd-column {
+  padding-top: 124px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-mark:hover::before {
+    transform: none;
+  }
+
+  /* The light background of the paragraph shows and goes with no fade. */
+  .rd-column .tb,
+  .rd-column .omitted,
+  .rd-column .tb .vn {
+    transition: none;
+  }
+}
+
+/* The label above the text of a reference to whole chapters or books: the text is the first verse. */
+.pop-first {
+  margin: 0 0 4px;
+  color: var(--rd-ink-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* A long passage scrolls inside the text area, which then takes the keyboard focus. */
+.pop-text:focus-visible {
+  outline: 2px solid var(--rd-ink);
+  outline-offset: 4px;
 }

@@ -1,5 +1,5 @@
-// The trail: the passages that the reader visited by travel. docs/DESIGN.md section 4.5.
-// It is always on screen after the first travel. It lives for the browser tab (sessionStorage).
+// The trail: the passages that the reader visited by travel. docs/DESIGN.md sections 4.5 and 7.7.
+// It is on screen after the first travel. It lives for the browser tab (sessionStorage).
 
 import { useSyncExternalStore } from 'react'
 
@@ -42,14 +42,16 @@ function write(next: TrailState) {
 const same = (a: Stop, b: Stop) => a.book === b.book && a.c === b.c && (a.v ?? 0) === (b.v ?? 0)
 
 /**
- * Adds a travel: from the passage here to the passage there. If the reader went back to a stop of the
- * trail, the stops after it are dropped. Otherwise the travel goes at the end.
+ * Adds a travel: from the passage here to the passage there. The stops after the current stop are
+ * dropped. The passage here is a new stop if its chapter is not the chapter of the current stop.
  */
 export function addTravel(from: Stop, to: Stop) {
-  const at = state.stops.findLastIndex((s) => s.book === from.book && s.c === from.c)
-  const stops = at >= 0 ? state.stops.slice(0, at + 1) : [...state.stops]
-  if (!stops.length || !same(stops[stops.length - 1], from)) stops.push(from)
-  stops.push(to)
+  const stops = state.stops.slice(0, state.at + 1)
+  const last = stops[stops.length - 1]
+  // The passage here is a new stop, unless the reader is at it now. A travel from a different verse of
+  // the same chapter adds that verse, so that "Back" opens the verse that the reader left.
+  if (!last || last.book !== from.book || last.c !== from.c || (from.v !== undefined && last.v !== from.v)) stops.push(from)
+  if (!same(stops[stops.length - 1], to)) stops.push(to)
   write({ stops, at: stops.length - 1 })
 }
 
@@ -65,6 +67,11 @@ export function clearTrail() {
 function subscribe(fn: () => void) {
   listeners.add(fn)
   return () => listeners.delete(fn)
+}
+
+/** The trail now, for the tests. */
+export function trailNow(): TrailState {
+  return state
 }
 
 export function useTrail(): TrailState {

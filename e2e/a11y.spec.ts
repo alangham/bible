@@ -50,6 +50,7 @@ const PAGES: { name: string; path: string; minTarget?: number; open?: string }[]
   { name: 'reading', path: './#/book/ruth/1', minTarget: 24 },
   { name: 'reading, About this book open', path: './#/book/genesis/1', minTarget: 24, open: 'About this book' },
   { name: 'reading, poetry', path: './#/book/psalms/119', minTarget: 24 },
+  { name: 'reading, links', path: './#/book/hebrews/9', minTarget: 24 },
   { name: 'sources', path: './#/sources' },
   { name: 'timeline', path: './#/timeline' },
 ]
@@ -244,8 +245,41 @@ for (const layout of LAYOUTS) {
     })
   }
 
-  // The states that a page load does not show. Task 9b step 2. Task 13 removed the tests of the link
-  // pop-up and the travel overlay: no page has links in Task 13. Task 14 adds them again.
+  // The states that a page load does not show. Task 9b step 2, Task 14 step 13.
+  test(`accessibility: the link pop-up, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/book/hebrews/9')
+    await settled(page)
+    const name = layout.name === 'wide' ? 'Verse 20 has a quotation link to Exodus 24:8' : 'Quotation link to Exodus 24:8'
+    await page.getByRole('button', { name }).click()
+    await expect(page.getByRole('dialog', { name: 'Exodus 24:8' })).toBeVisible()
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the pop-up of a long passage, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/book/matthew/13')
+    await settled(page)
+    await page.getByRole('button', { name: 'Psalm 78:1–72' }).click()
+    await expect(page.getByRole('dialog', { name: 'Psalm 78:1–72' })).toBeVisible()
+    await page.waitForTimeout(400)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
+  test(`accessibility: the trail after travel, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/book/hebrews/9')
+    await settled(page)
+    await page.getByRole('navigation', { name: 'Read with' }).getByRole('link').first().click()
+    await expect(page.getByRole('navigation', { name: 'Trail' })).toBeVisible()
+    await settled(page)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
+
   test(`accessibility: the list of a selected book on the timeline, ${layout.name} layout`, async ({ page }) => {
     await page.setViewportSize(layout.viewport)
     await page.goto('./#/timeline')

@@ -1,9 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { SourcesPage } from './SourcesPage.tsx'
-import { TrailBar } from './travel/TrailBar.tsx'
-import { TravelOverlay } from './travel/TravelOverlay.tsx'
-import { useTrail } from './travel/trail.ts'
-import { useTravel } from './travel/travel.ts'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
 import { ReadingPage } from './reading/ReadingPage.tsx'
@@ -14,8 +10,6 @@ import { WallPage } from './wall/WallPage.tsx'
 
 function App() {
   const route = useRoute()
-  const trail = useTrail()
-  const travel = useTravel()
   // The one layout decision. CSS selects on data-layout. docs/DESIGN.md sections 4.1 and 7.4.
   const layout = useScreenLayout()
   const [books, setBooks] = useState<Book[] | null>(null)
@@ -47,7 +41,7 @@ function App() {
     // wrote itself, during a scroll, does not start the page again.
     const chapter = route.page === 'chapter' ? route.chapter : undefined
     const verse = route.page === 'chapter' ? route.verse : undefined
-    page = <ReadingPage books={books} intros={intros} id={route.id} chapter={chapter} verse={verse} />
+    page = <ReadingPage books={books} intros={intros} id={route.id} chapter={chapter} verse={verse} layout={layout} />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
   } else if (route.page === 'timeline') {
@@ -57,14 +51,8 @@ function App() {
   }
 
   return (
-    <div className="app" data-layout={layout} data-trail={trail.stops.length > 0}>
-      {/* During the move of travel, the page behind it takes no focus and no input. */}
-      <div className="app-page" inert={travel !== null}>
-        {page}
-      </div>
-      {/* The trail and the move of travel, on each page. docs/DESIGN.md section 4.5. */}
-      {books && <TrailBar books={books} />}
-      {books && <TravelOverlay books={books} />}
+    <div className="app" data-layout={layout}>
+      {page}
     </div>
   )
 }

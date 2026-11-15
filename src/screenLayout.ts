@@ -34,3 +34,22 @@ export function useScreenLayout(): ScreenLayout {
     () => 'wide',
   )
 }
+
+/**
+ * From this width in CSS px, the reading page shows the links as labels in the right margin, and the
+ * text has no marks. Below it, the marks are in the text. docs/DESIGN.md section 7.7: a value of the designer.
+ */
+export const MARGIN_LABELS_PX = 1180
+
+export function selectMarginLabels(viewportWidthPx: number): boolean {
+  return viewportWidthPx >= MARGIN_LABELS_PX
+}
+
+/** True when the links show as labels in the right margin. It changes when the window changes size. */
+export function useMarginLabels(): boolean {
+  return useSyncExternalStore(
+    subscribe,
+    () => selectMarginLabels(window.innerWidth),
+    () => true,
+  )
+}

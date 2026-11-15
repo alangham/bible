@@ -1,30 +1,59 @@
-// The trail: always on screen after the first travel. Each stop is a control that goes back to that stop
-// in one step. docs/DESIGN.md section 4.5.
+// The trail: a thin line below the top bar after the first travel. docs/DESIGN.md section 7.7.
+// Each stop is a control in the color of its group. The current stop has an underline. When the
+// reader is not on the first stop, the trail starts with "Back", which opens the stop before.
 
-import type { Book } from '../data/books.ts'
-import { passageName } from '../data/passage.ts'
+import type { MouseEvent } from 'react'
 import { plainClick } from '../book/links.ts'
-import { chapterHref, useRoute } from '../router.ts'
-import { goToStop, useTrail } from './trail.ts'
+import { groupOf, type Book } from '../data/books.ts'
+import { passageName } from '../data/passage.ts'
+import { chapterHref } from '../router.ts'
+import { goToStop, useTrail, type Stop } from './trail.ts'
 
-export function TrailBar({ books }: { books: Book[] }) {
+interface TrailBarProps {
+  books: Book[]
+  /** Opens a stop. The reading page shows its chapter at its verse. */
+  onGo: (stop: Stop) => void
+}
+
+export function TrailBar({ books, onGo }: TrailBarProps) {
   const trail = useTrail()
-  const route = useRoute()
   if (!trail.stops.length) return null
-  // The stop of the page that shows, also after the back button: the last stop with the same chapter.
-  const here = route.page === 'chapter' ? trail.stops.findLastIndex((s) => s.book === route.id && s.c === route.chapter) : -1
+  const color = (s: Stop) => {
+    const book = books.find((b) => b.id === s.book)
+    return book ? groupOf(book).color : undefined
+  }
+  const open = (i: number) => (e: MouseEvent<HTMLAnchorElement>) => {
+    if (!plainClick(e)) return
+    e.preventDefault()
+    goToStop(i)
+    onGo(trail.stops[i])
+  }
+  const before = trail.at > 0 ? trail.stops[trail.at - 1] : null
   return (
-    <nav className="trail" aria-label="Trail">
-      <span className="trail-title">Trail</span>
+    <nav className="rd-trail" aria-label="Trail">
+      {before ? (
+        <>
+          <a className="rd-trail-back" href={chapterHref(before.book, before.c, before.v)} onClick={open(trail.at - 1)}>
+            <span aria-hidden="true">‹ </span>Back<span className="sr-only"> to {passageName(books, before)}</span>
+          </a>
+          <span className="rd-trail-rule" aria-hidden="true" />
+        </>
+      ) : (
+        <span className="rd-trail-title">Trail</span>
+      )}
       <ol>
         {trail.stops.map((s, i) => (
           <li key={i}>
+            {i > 0 && (
+              <span className="rd-trail-step" aria-hidden="true">
+                ›
+              </span>
+            )}
             <a
               href={chapterHref(s.book, s.c, s.v)}
-              aria-current={i === here ? 'location' : undefined}
-              onClick={(e) => {
-                if (plainClick(e)) goToStop(i)
-              }}
+              style={{ color: color(s) }}
+              aria-current={i === trail.at ? 'location' : undefined}
+              onClick={open(i)}
             >
               {passageName(books, s)}
             </a>

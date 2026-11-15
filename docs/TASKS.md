@@ -678,7 +678,7 @@ Stop and report.
 
 ## Task 14. Links on the reading page
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

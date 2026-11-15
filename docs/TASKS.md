@@ -588,7 +588,7 @@ Stop and report.
 
 ## Task 12. The wall
 
-Status: TODO
+Status: DONE
 
 Goal: the wall replaces the table as the first page.
 

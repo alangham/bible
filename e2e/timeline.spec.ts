@@ -60,7 +60,7 @@ test.describe('timeline page', () => {
     await expect(page.locator('.tl-panel')).toContainText('Isaiah: 22 quotation links')
   })
 
-  test('the table, the cover, and the spread have a Timeline control', async ({ page }) => {
+  test('the wall, the cover, and the spread have a Timeline control', async ({ page }) => {
     for (const path of ['./', './#/book/ruth', './#/book/ruth/1']) {
       await page.goto(path)
       await page.getByRole('link', { name: 'Timeline' }).click()

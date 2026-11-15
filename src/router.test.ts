@@ -3,8 +3,8 @@ import { bookHref, chapterHref, parseRoute, sourcesHref, timelineHref } from './
 
 describe('parseRoute', () => {
   it('gives the table for an empty hash', () => {
-    expect(parseRoute('')).toEqual({ page: 'table' })
-    expect(parseRoute('#/')).toEqual({ page: 'table' })
+    expect(parseRoute('')).toEqual({ page: 'wall' })
+    expect(parseRoute('#/')).toEqual({ page: 'wall' })
   })
 
   it('gives a book for #/book/<id>', () => {
@@ -35,6 +35,6 @@ describe('parseRoute', () => {
   })
 
   it('does not accept chapter 0', () => {
-    expect(parseRoute('#/book/genesis/0')).toEqual({ page: 'table' })
+    expect(parseRoute('#/book/genesis/0')).toEqual({ page: 'wall' })
   })
 })

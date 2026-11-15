@@ -49,16 +49,6 @@ test.describe('cover page', () => {
     await expect(page.getByRole('button', { name: 'Scholars differ' })).toHaveCount(0)
   })
 
-  test('a spine on the table lands as the closed book', async ({ page }) => {
-    await page.goto('./')
-    await expect(page.locator('.spine-links')).toHaveAttribute('data-ready', 'true')
-    await page.getByRole('link', { name: 'Genesis', exact: true }).click()
-    await expect(page).toHaveURL(/#\/book\/genesis$/)
-    await expect(page.locator('.cover-page')).toHaveAttribute('data-landed', 'false')
-    await expect(page.locator('.cover-page')).toHaveAttribute('data-landed', 'true')
-    await expect(page.getByRole('link', { name: 'Open the book' })).toBeVisible()
-  })
-
   test('without WebGL, the flat book and the facts show', async ({ page }) => {
     // The page gets no WebGL context. Other canvas contexts work.
     await page.addInitScript({
@@ -76,14 +66,5 @@ test.describe('cover page', () => {
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Ruth')
     await expect(page.getByRole('link', { name: 'Open the book' })).toBeVisible()
     await expect(page.getByRole('region', { name: 'About this book' }).locator('dd').first()).toBeVisible()
-  })
-
-  test('with reduced motion, the book does not move from the table', async ({ page }) => {
-    await page.emulateMedia({ reducedMotion: 'reduce' })
-    await page.goto('./')
-    await expect(page.locator('.spine-links')).toHaveAttribute('data-ready', 'true')
-    await page.getByRole('link', { name: 'Genesis', exact: true }).click()
-    await expect(page).toHaveURL(/#\/book\/genesis$/)
-    await expect(page.locator('.cover-page')).toHaveAttribute('data-landed', 'true')
   })
 })

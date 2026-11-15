@@ -34,9 +34,6 @@ async function measure(name, hash, action, seconds = 3) {
   results.push({ name, avgFps: Math.round(avg), worstSecondFps: worst, frames: f.length, renderer: gl })
   await page.close()
 }
-await measure('table: swipe to stack 2 and 3', '', async (p) => {
-  await p.evaluate(() => { const t = document.querySelector('.spine-links'); t.scrollTo({ left: t.clientWidth, behavior: 'smooth' }); setTimeout(() => t.scrollTo({ left: 2 * t.clientWidth, behavior: 'smooth' }), 1200) })
-})
 await measure('cover: open the book', '#/book/ruth', async (p) => {
   await p.locator('.open-book').click()
 }, 3)

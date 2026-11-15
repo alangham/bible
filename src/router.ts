@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from 'react'
 
 export type Route =
-  | { page: 'table' }
+  | { page: 'wall' }
   | { page: 'book'; id: string }
   | { page: 'spread'; id: string; chapter: number; verse?: number }
   | { page: 'sources' }
@@ -20,7 +20,7 @@ export function parseRoute(hash: string): Route {
     if (spread[3]) route.verse = Number(spread[3])
     return route
   }
-  return { page: 'table' }
+  return { page: 'wall' }
 }
 
 function subscribe(onChange: () => void) {
@@ -47,7 +47,7 @@ export function timelineHref(): string {
   return '#/timeline'
 }
 
-/** The cover of a book. */
+/** A book: the cover until Task 13 builds the reading page. */
 export function bookHref(id: string): string {
   return `#/book/${id}`
 }

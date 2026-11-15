@@ -1,8 +1,15 @@
-// The table hands the selected spine to the cover page, so that the book can
+// The table handed the selected spine to the cover page, so that the book could
 // land on the cover from the place where the spine left the stack.
-// docs/TASKS.md Task 4 step 7.
+// docs/TASKS.md Task 4 step 7. Task 12 removed the table, so no page sets a handoff now.
+// Without a handoff, the cover shows the book at rest. Task 13 removes the cover and this file.
 
-import type { Rect } from '../table/TableScene.tsx'
+/** A rectangle in CSS px from the top left of the viewport. */
+export interface Rect {
+  left: number
+  top: number
+  width: number
+  height: number
+}
 
 export interface Handoff {
   id: string

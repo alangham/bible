@@ -11,14 +11,14 @@ import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
 import { useRoute } from './router.ts'
 import { useScreenLayout } from './screenLayout.ts'
-import { TablePage } from './table/TablePage.tsx'
 import { TimelinePage } from './timeline/TimelinePage.tsx'
+import { WallPage } from './wall/WallPage.tsx'
 
 function App() {
   const route = useRoute()
   const trail = useTrail()
   const travel = useTravel()
-  // The one layout decision. CSS selects on data-layout. docs/DESIGN.md section 4.1.
+  // The one layout decision. CSS selects on data-layout. docs/DESIGN.md sections 4.1 and 7.4.
   const layout = useScreenLayout()
   const [books, setBooks] = useState<Book[] | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -58,7 +58,7 @@ function App() {
     // The key keeps one spread page while the chapter changes, so that a page can turn.
     page = book ? <SpreadPage key={book.id} book={book} chapter={route.chapter} verse={route.verse} layout={layout} books={books} /> : <BookNotFound />
   } else {
-    page = <TablePage books={books} layout={layout} />
+    page = <WallPage books={books} layout={layout} />
   }
 
   return (

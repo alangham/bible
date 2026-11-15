@@ -25,7 +25,7 @@ import {
 import { groupOf, spineThickness, type Book } from '../data/books.ts'
 import { BOOK_DEPTH, PX, STACK_WIDTH } from '../table/layout.ts'
 import { makeSpineTexture } from '../table/spineTexture.ts'
-import type { Rect } from '../table/TableScene.tsx'
+import type { Rect } from './handoff.ts'
 import { drawScene } from '../scene/sceneSvg.ts'
 import { sceneValues } from '../scene/values.ts'
 import { makeCoverTexture } from './coverTexture.ts'

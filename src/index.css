@@ -35,27 +35,8 @@ a {
   outline-offset: 2px;
 }
 
-/* ---- Table page ---- */
+/* ---- Message pages: loading, an error, a book that is not found ---- */
 
-.table-page {
-  box-sizing: border-box;
-  min-height: 100svh;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 44px 72px 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.table-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 48px;
-}
-
-.table-header h1,
 .message h1,
 .book-placeholder h1 {
   margin: 0;
@@ -66,138 +47,13 @@ a {
   letter-spacing: -1px;
 }
 
-.table-header p {
-  margin: 0 0 10px;
-  max-width: 330px;
-  font-size: 20px;
-  line-height: 1.35;
-  color: var(--ink-secondary);
-}
-
-.table-scene {
-  position: relative;
-  flex: 1;
-  min-height: 560px;
-  /* The canvas reaches the page edges, so the shadows are not cut at the padding. */
-  margin-inline: -72px;
-}
-
-.table-scene[data-mode='flat'] {
-  margin-inline: 0;
-}
-
-.table-canvas {
-  position: absolute !important;
-  inset: 0;
-}
-
-.spine-links {
-  position: absolute;
-  inset: 0;
-}
-
-.stack {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.spine {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: var(--title-font);
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 /* 3D mode: the links lie over the spines on screen. The canvas draws the spines. */
-.table-scene[data-mode='3d'] .spine {
-  position: absolute;
-  border-radius: 3px;
-}
-
-.table-scene[data-mode='3d'] .spine-label {
-  opacity: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
-
 /*
   The ring shows the selected spine in 3D mode. It follows the spine when the
   spine slides out. With reduced motion the spine does not move, and the ring
   fades in on hover also. A fade is permitted with reduced motion.
 */
-.table-scene[data-mode='3d'] .spine:focus-visible {
-  outline: none;
-}
-
-.table-scene[data-mode='3d'] .spine::after {
-  content: '';
-  position: absolute;
-  left: var(--ring-left, 0);
-  top: var(--ring-top, 0);
-  width: var(--ring-width, 100%);
-  height: var(--ring-height, 100%);
-  box-sizing: border-box;
-  border-radius: 3px;
-  box-shadow:
-    0 0 0 3px var(--ink),
-    0 0 0 5px var(--linen-light);
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    opacity 200ms,
-    left 150ms,
-    top 150ms,
-    width 150ms,
-    height 150ms;
-}
-
-.table-scene[data-mode='3d'] .spine:focus-visible::after,
-.table-scene[data-mode='3d'][data-reduced-motion='true'] .spine:hover::after {
-  opacity: 1;
-}
-
-.table-scene[data-mode='3d'][data-reduced-motion='true'] .spine::after {
-  transition: opacity 200ms;
-}
-
-.spine-links[data-ready='false'] {
-  visibility: hidden;
-}
-
 /* Flat mode, without WebGL: the links are the spines. */
-.table-scene[data-mode='flat'] .spine-links {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 44px;
-  align-items: end;
-}
-
-.table-scene[data-mode='flat'] .stack {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  filter: drop-shadow(14px 18px 14px rgba(84, 58, 20, 0.28));
-}
-
-.table-scene[data-mode='flat'] .spine {
-  border-radius: 3px;
-  box-shadow:
-    inset 0 -3px 0 rgba(0, 0, 0, 0.2),
-    inset 0 2px 0 rgba(255, 255, 255, 0.14);
-  transition: opacity 200ms;
-}
-
-.table-scene[data-mode='flat'] .spine[data-dimmed='true'] {
-  opacity: 0.18;
-}
-
 /* ---- Legend ---- */
 
 .legend {
@@ -1003,33 +859,16 @@ a {
 /*
   Narrow layout: src/screenLayout.ts decides it and App sets data-layout.
   Do not add a width media query. docs/DESIGN.md section 4.1.
-  The header stacks and the padding is smaller. The narrow table, one stack
-  at a time, is at the end of this file.
+  The padding is smaller.
 */
-.app[data-layout='narrow'] .table-page,
 .app[data-layout='narrow'] .message,
 .app[data-layout='narrow'] .book-placeholder {
   padding: 24px 16px;
 }
 
-.app[data-layout='narrow'] .table-header {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.app[data-layout='narrow'] .table-header h1,
 .app[data-layout='narrow'] .message h1,
 .app[data-layout='narrow'] .book-placeholder h1 {
   font-size: 48px;
-}
-
-.app[data-layout='narrow'] .table-header p {
-  max-width: none;
-}
-
-.app[data-layout='narrow'] .table-scene {
-  margin-inline: -16px;
 }
 
 .app[data-layout='narrow'] .cover-inner {
@@ -1123,8 +962,7 @@ a {
   line-height: 1.6;
 }
 
-.sources-bar a,
-.table-header-side nav a {
+.sources-bar a {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -1133,8 +971,7 @@ a {
   text-decoration: none;
 }
 
-.sources-bar a:hover,
-.table-header-side nav a:hover {
+.sources-bar a:hover {
   text-decoration: underline;
 }
 
@@ -1168,23 +1005,12 @@ a {
   overflow-wrap: anywhere;
 }
 
-.table-header-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-}
-
 .app[data-layout='narrow'] .sources-page {
   padding: 16px 16px 40px;
 }
 
 .app[data-layout='narrow'] .sources-page h1 {
   font-size: 48px;
-}
-
-.app[data-layout='narrow'] .table-header-side {
-  align-items: flex-start;
 }
 
 /* The name of the translation on each spread. docs/DESIGN.md section 5. */
@@ -1542,12 +1368,6 @@ a {
   display: contents;
 }
 
-/* Two links in the header of the table page: Timeline and Sources. */
-.table-header-side nav {
-  display: flex;
-  gap: 28px;
-}
-
 /* Close the book and Timeline, on the spread page. */
 .spread-bar-pages {
   display: flex;
@@ -1897,74 +1717,6 @@ a {
   font-size: 52px;
 }
 
-/* ---- Table, narrow layout: one stack at a time. docs/DESIGN.md section 4.1, Task 9. ---- */
-
-.app[data-layout='narrow'] .table-scene {
-  min-height: 0;
-}
-
-/* The track: the five stacks side by side. A swipe moves to the next stack, and each stack snaps into place. */
-.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine-links {
-  position: relative;
-  display: flex;
-  gap: 0;
-  align-items: flex-end;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine-links::-webkit-scrollbar {
-  display: none;
-}
-
-.app[data-layout='narrow'] .table-scene[data-mode='flat'] .stack {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-  padding: 8px max(36px, calc(50% - 260px)) 28px;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  gap: 3px;
-}
-
-.app[data-layout='narrow'] .table-scene[data-mode='flat'] .spine {
-  letter-spacing: 1.5px;
-}
-
-.stack-pager {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.stack-pager p {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.stack-pager button {
-  min-height: 44px;
-  min-width: 44px;
-  padding: 0 14px;
-  border: 1px solid var(--ink);
-  border-radius: 22px;
-  background: transparent;
-  color: var(--ink);
-  font-family: var(--body-font);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.stack-pager button[aria-disabled='true'] {
-  border-color: var(--rule);
-  color: var(--ink-secondary);
-  cursor: default;
-}
-
 /* ---- Spread, narrow layout: one page in view. Task 9. ---- */
 
 .app[data-layout='narrow'] .spread-bar {
@@ -2013,4 +1765,136 @@ a {
 .app[data-layout='narrow'] .scene-layer-2,
 .app[data-layout='narrow'] .scene-layer-3 {
   filter: none;
+}
+
+/* ---- Wall: the first page. docs/DESIGN.md sections 7.3 and 7.4, docs/TASKS.md Task 12. ---- */
+/* The values are those of docs/prototype/index.html. src/wall/layout.ts gives the column widths. */
+
+.wall {
+  --wall-ink: #1d1d1f;
+  --wall-ink-secondary: #6e6e73;
+  --wall-line: rgba(0, 0, 0, 0.09);
+
+  min-height: 100svh;
+  background: #fff;
+  color: var(--wall-ink);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wall-inner {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.wall-columns {
+  display: flex;
+  align-items: stretch;
+}
+
+.wall[data-layout='wide'] .wall-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wall-pair {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wall-name {
+  display: block;
+  overflow: hidden;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1.03;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wall[data-ready='false'] .wall-name {
+  visibility: hidden;
+}
+
+/*
+  Hover: an underline in the full group color. The prototype lowers the opacity to 0.62, but that
+  puts each group color below the contrast of 4.5 to 1 of docs/DESIGN.md section 7.3.
+*/
+@media (hover: hover) {
+  .wall-name:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.06em;
+  }
+}
+
+.wall-name:focus-visible,
+.wall-foot a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.wall-band {
+  margin: 14px 0 6px;
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.wall-column > .wall-band:first-child {
+  margin-top: 0;
+}
+
+.wall[data-layout='narrow'] .wall-band {
+  margin-top: 22px;
+  font-size: 12px;
+}
+
+.wall[data-layout='narrow'] .wall-block:first-child .wall-band {
+  margin-top: 0;
+}
+
+.wall-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 10px;
+  border-top: 1px solid var(--wall-line);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--wall-ink-secondary);
+}
+
+.wall-translation {
+  margin-right: auto;
+}
+
+.wall-reference {
+  display: flex;
+  gap: 22px;
+}
+
+.wall-foot a {
+  padding: 6px 0;
+  color: var(--wall-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wall[data-layout='narrow'] .wall-foot {
+  margin-top: 30px;
+}
+
+.wall[data-layout='narrow'] .wall-translation {
+  width: 100%;
+  margin-right: 0;
 }

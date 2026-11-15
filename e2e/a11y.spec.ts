@@ -6,7 +6,8 @@
 // 1. The page has a language, one h1, and no skipped heading level.
 // 2. Each visible link and button has an accessible name and can take focus.
 // 3. Each visible control is 44 px or more in each direction (docs/DESIGN.md section 3). An inline
-//    link in a paragraph is exempt. The spines of the table page in the wide layout are exempt (section 4.1).
+//    link in a paragraph is exempt. On the wall, the limit is 24 px: section 7.3 sets 24 by 24 px for
+//    the pages of the redesign.
 // 4. Each visible text has a contrast of 4.5 to 1 or more, or 3 to 1 for large text. The check
 //    skips text that it cannot measure, and docs/reviews/task-9-measurements.md lists the cases:
 //    text on a scene (src/scene/values.test.ts checks it), text over a background image or a
@@ -24,7 +25,7 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22
  * Task 9b step 3: the test does not fail on them, but each one must stay on this list and in POLISH.md.
  */
 const KNOWN: { rule: string; layout: string; page: string; selector: RegExp }[] = [
-  // Empty. Task 10 corrected POLISH.md item 13, the spines of the wide table below 24 px.
+  // Empty. Task 10 corrected POLISH.md item 13. Task 12 removed the table page.
 ]
 
 /** The axe-core failures on the page, as text, without the known failures. An empty list is a pass. */
@@ -45,7 +46,7 @@ async function settled(page: Page) {
 }
 
 const PAGES = [
-  { name: 'table', path: './' },
+  { name: 'wall', path: './', minTarget: 24 },
   { name: 'cover', path: './#/book/ruth' },
   { name: 'spread', path: './#/book/ruth/1' },
   { name: 'sources', path: './#/sources' },
@@ -58,8 +59,8 @@ const LAYOUTS = [
 ]
 
 /** The problems on the page, as text. An empty list is a pass. */
-async function audit(page: Page, layout: string): Promise<string[]> {
-  return page.evaluate((layout) => {
+async function audit(page: Page, layout: string, minTarget = 44): Promise<string[]> {
+  return page.evaluate(({ layout, minTarget }) => {
     const problems: string[] = []
     const visible = (el: Element) => {
       const r = el.getBoundingClientRect()
@@ -97,7 +98,6 @@ async function audit(page: Page, layout: string): Promise<string[]> {
       const linkText = (el.textContent ?? '').trim().length
       const inSentence =
         el.tagName === 'A' && getComputedStyle(el).display === 'inline' && !!block && (block.tagName === 'P' || blockText > linkText + 20)
-      const tableSpine = layout === 'wide' && el.classList.contains('spine')
       const r = el.getBoundingClientRect()
       // A control can have a larger touch area than its mark, as a pseudo-element: the link marks do.
       let w = r.width
@@ -109,7 +109,7 @@ async function audit(page: Page, layout: string): Promise<string[]> {
           h = Math.max(h, parseFloat(ps.height) || 0)
         }
       }
-      if (!inSentence && !tableSpine && (w < 43.5 || h < 43.5)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
+      if (!inSentence && (w < minTarget - 0.5 || h < minTarget - 0.5)) problems.push(`small target ${Math.round(w)}x${Math.round(h)}: ${label(el)}`)
     }
 
     // 4. Contrast.
@@ -175,8 +175,9 @@ async function audit(page: Page, layout: string): Promise<string[]> {
 
     // 5. No sideways scroll.
     if (document.documentElement.scrollWidth > window.innerWidth + 1) problems.push(`page is ${document.documentElement.scrollWidth} px wide in a ${window.innerWidth} px window`)
+    void layout
     return problems
-  }, layout)
+  }, { layout, minTarget })
 }
 
 test('the accessibility check finds a planted problem', async ({ page }) => {
@@ -225,16 +226,6 @@ test('the accessibility check finds a planted problem', async ({ page }) => {
   expect(problems.some((x) => /^page is \d+ px wide in a 390 px window$/.test(x))).toBe(true)
 })
 
-test('each spine of the wide table is 24 px or more on screen at 1440 by 900 px (POLISH.md item 13)', async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 })
-  await page.goto('./')
-  await expect(page.locator('.spine-links')).toHaveAttribute('data-ready', 'true')
-  await settled(page)
-  const heights = await page.locator('a.spine').evaluateAll((els) => els.map((e) => e.getBoundingClientRect().height))
-  expect(heights).toHaveLength(66)
-  expect(Math.min(...heights)).toBeGreaterThanOrEqual(24)
-})
-
 for (const layout of LAYOUTS) {
   for (const p of PAGES) {
     test(`accessibility: ${p.name}, ${layout.name} layout`, async ({ page }) => {
@@ -242,7 +233,7 @@ for (const layout of LAYOUTS) {
       await page.goto(p.path)
       await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
       await settled(page)
-      expect(await audit(page, layout.name)).toEqual([])
+      expect(await audit(page, layout.name, p.minTarget)).toEqual([])
       expect(await axe(page, { layout: layout.name, page: p.name })).toEqual([])
     })
   }

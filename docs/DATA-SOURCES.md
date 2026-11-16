@@ -79,6 +79,7 @@ These are findings. Arthur must decide on them. They do not change the design.
   - `bsb.txt`: the words of each verse. The USFM words have faults, for example "vvv" in Genesis 35:18 and `[’’]` after 59 verses, so the site takes no word from the USFM files.
   - USFM: the section headings, the paragraphs, the poetry lines, the blank lines between stanzas, the 18 manuscript notes of `docs/DESIGN.md` section 4.3, and the 1,325 cross-reference lines.
 - Script: `scripts/build-text.mjs` makes one JSON file for each book. The unit test `src/data/text.test.ts` checks that the words of each of the 31,086 verses are the same as in `bsb.txt`.
+- The USFM files have the marks of the words of Jesus (`\wj`): 1,420 start markers and 1,420 end markers, in 9 books. `docs/reviews/task-25-words-of-jesus-report.md` step 3. Read for Task 25. Not used on the site.
 
 ### Check (Task 5 step 2): does the public-domain statement cover the USFM files?
 
@@ -206,6 +207,7 @@ The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthu
 - What the site takes from the source files: the words of each verse, the added words (`\add`), and the Psalm titles (`\d`).
 - What the site does not take from the source files: the Strong's numbers, the 6,959 footnotes, the paragraph signs "¶", the marks of the words of Jesus (`\wj`) and of the name LORD (`\nd`), the paragraphs and the poetry lines (`\p`, `\q1`, `\b`), and the `\s1` lines. The structure of each chapter comes from the Berean data in `public/data/text/`, by `docs/DESIGN.md` section 8.3.
 - Test: `src/data/textKjv.test.ts` checks that the words of each of the 31,102 verses are the same as in the source files, except the 13 verses of the next section.
+- The USFM files have the marks of the words of Jesus (`\wj`): 2,038 start markers and 2,038 end markers, in 8 books. `docs/reviews/task-25-words-of-jesus-report.md` step 3. Read for Task 25. Not used on the site.
 
 ### Exception in Task 20b: 13 split words
 

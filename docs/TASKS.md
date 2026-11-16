@@ -1562,3 +1562,89 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests, and the result of step 14. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+# Red letters: Task 25
+
+Arthur asked on 2026-11-16 if the site can show the words of Jesus in red, as many printed Bibles do. The two source sets in the repository have marks for these words. By Arthur's method for new data, the first task is a report.
+
+---
+
+## Task 25. The marks of the words of Jesus: a report on the source files
+
+Status: DONE
+
+Goal: a report on the marks of the words of Jesus in the two source sets, on how the two sets differ, and on how the marks fit the words that the site shows. Arthur uses the report to decide if the site gets red letters, and how. No page and no data file of the site changes.
+
+The marks are the USFM marker `\wj`. The files are in the repository already:
+
+- Berean Standard Bible: `sources/bsb/usfm/`. The site takes the structure from these files, and the words from `sources/bsb/bsb.txt`. `docs/DATA-SOURCES.md` section 2.
+- King James Version: `sources/kjv/usfm/`. The site takes the words from these files. `docs/DATA-SOURCES.md` section 9 says that the site does not take the marks of the words of Jesus.
+
+The designer's check on 2026-11-16, with `grep` on the files:
+
+- `sources/bsb/usfm/` has 2,840 marks `\wj`, in 9 files: MAT, MRK, LUK, JHN, ACT, 1CO, 2CO, HEB, REV.
+- `sources/kjv/usfm/` has 4,076 marks `\wj`, in 8 files: Matthew, Mark, Luke, John, Acts, 1 Corinthians, 2 Corinthians, Revelation. Hebrews has none.
+- In John, each set has as many start markers as end markers: 259 in the Berean file, and 422 in the King James Version file.
+- In the Berean files, a mark can start before the marker `\v`. Example, Matthew 3:15: `\p \wj \v 15 “Let it be so now,”\wj* Jesus replied. \wj “It is fitting for us to fulfill all righteousness in this way.”\wj*`
+- In the King James Version files, the marks have nested markers, `\+w` and `\+add`. Example: Matthew 3:15.
+- Not checked by the designer: why the two counts differ, and if the marks fit the words of the site.
+
+WARNING: Do not change a file in `public/`, in `src/`, or in `sources/` in this task. Do not change a build script.
+
+WARNING: Do not download a file. The task uses only files of the repository.
+
+WARNING: Do not write a fact from memory about which words Jesus spoke, or about red letter Bibles. Each number and each list in the report must come from the output of the script of step 2. Where the two source sets differ, give the difference. Do not say which set is correct.
+
+Steps:
+
+1. Read sections 2 and 9 of `docs/DATA-SOURCES.md`, and the scripts `scripts/build-text.mjs` and `scripts/build-text-kjv.mjs`.
+2. Write the script `scripts/wj-report.mjs`. It only reads files in `sources/` and `public/data/`. It prints the numbers and the lists for steps 3 to 9. Use the method of the build scripts to get the plain words of a verse: the words that remain when the script removes the markers, the Strong's numbers, and the footnotes.
+3. Report the marks of each source set.
+   - For each book that has marks: the number of start markers, the number of end markers, and the number of verses that have marked words.
+   - Each place where a start marker has no end marker, or an end marker has no start marker.
+   - The number of marks that start before a marker `\v`, the number of marks that have words of more than one verse, and the number of marks that have a paragraph marker or a poetry marker inside them.
+   - The number of marks that have no letter inside them.
+   - For the Berean files: the number of marks whose first character is an opening quotation mark, and the number whose last character is a closing quotation mark.
+   - For the King James Version files: each nested marker inside the marks, with the number of times that it occurs.
+4. Give each verse one of three classes in each source set: "all" when each word of the verse is in a mark, "part" when some words are in a mark, and "none". Report:
+   - The number of verses of each class, for each book and each source set.
+   - A table of the nine pairs of classes, Berean class by King James Version class, with the number of verses of each pair. Use the verses that the two sets have.
+   - Each verse where one set has "none" and the other set has "part" or "all". Give the book, the chapter, the verse, the two classes, and the words of the verse in the two sets, with the marked words between `[[` and `]]`. If the list has more than 150 verses, give the count for each book and the first 150 verses.
+   - The number of verses where one set has "all" and the other set has "part", for each book, and 30 examples in the same form.
+   - Each verse with marks in the King James Version files that the main text of the Berean Standard Bible does not have.
+5. Print these passages from each source set, each verse with the marked words between `[[` and `]]`. Arthur reads them. Do not add a comment to them.
+   - Matthew 3:13-17
+   - John 3:10-21
+   - John 3:27-36
+   - Acts 9:3-6
+   - Acts 20:35
+   - Acts 26:14-18
+   - 1 Corinthians 11:23-25
+   - 2 Corinthians 12:9
+   - Each verse of Hebrews that has marks in the Berean files
+   - Revelation 1:8-20
+   - Revelation 22:7-20
+6. Test if the Berean marks fit the words that the site shows. The site data is `public/data/text/<id>.json`. In a text block (`k: "p"`), an item `{ "v": n }` starts verse n, and a string is words of the current verse.
+   - For each mark, get its plain words for each verse that it has words of. Search these words in the words of that verse in the site data.
+   - Count the marks that the script finds exactly, and the marks that it does not find. List each mark that it does not find, with the words of the mark and the words of the verse in the site data. If the list has more than 50 marks, give the count for each book and the first 50.
+   - Count the marks whose words are in more than one text block of the site data, for example a speech of two paragraphs or of more than one poetry line.
+7. Do the test of step 6 for the King James Version marks and `public/data/text-kjv/<id>.json`. The site joins a word in 13 verses, by Task 20b. Say if a mark is in one of the 13 verses.
+8. Report where marked words are in the site data: the number of marked verses in paragraph blocks, in poetry blocks, and in each other block style, for each translation.
+9. Propose two forms for the marks in the site data, and give for each form the bytes that it adds to `public/data/text/` and to `public/data/text-kjv/`, as a number and as a part of the size now. Compute the bytes with the script. Do not write the data.
+10. Write the report `docs/reviews/task-25-words-of-jesus-report.md`. Give it one section for each of steps 3 to 9, in that order. Then add a section "Proposals" with these four points. For each point, give the options and the cost of each option. Do not decide for Arthur.
+    - Which marks each translation uses: its own marks, or the Berean marks for the two translations, or only the words that the two sets agree on.
+    - What the site does with a mark that does not fit the words of the site, if step 6 or step 7 found one.
+    - What the site does with the verses of step 4 where one set has "none" and the other does not.
+    - The form of the marks in the site data.
+11. In `docs/DATA-SOURCES.md`, add one line to section 2 and one line to section 9: the files have the marks of the words of Jesus, with the two counts of step 3, and "Read for Task 25. Not used on the site."
+12. Run `npm run lint`, `npm run build`, and `npm test`.
+
+Done when:
+
+- `docs/reviews/task-25-words-of-jesus-report.md` has the numbers and the lists of steps 3 to 9, and the four proposals.
+- No file in `public/`, in `src/`, or in `sources/` changed.
+- `npm run build` has no errors, and the tests pass.
+
+Stop and report. Do not start a task that adds red letters. Arthur decides the next tasks from the report.

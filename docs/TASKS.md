@@ -1456,3 +1456,109 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests.
+
+---
+
+# The text size: Task 24
+
+Arthur decided on 2026-11-16 that the reader can make the Bible text larger. The design is in section 10 of `docs/DESIGN.md`. It has no renders: Arthur looks at the built site.
+
+---
+
+## Task 24. The text size
+
+Status: DONE
+
+Goal: the reader selects one of three text sizes on the reading page: "Standard", "Large", or "Largest". The Bible text, its headings, and the passage text in the pop-up get larger. The browser keeps the selection.
+
+The design is in section 10 of `docs/DESIGN.md`. Arthur decided it on 2026-11-16.
+
+The sizes of the Bible text:
+
+| Text size | Value in the storage | Narrow layout | Wide layout |
+|---|---|---|---|
+| Standard | `standard` | 18 px | 21 px |
+| Large | `large` | 21 px | 24 px |
+| Largest | `largest` | 24 px | 27 px |
+
+WARNING: With "Standard", each element must have exactly the size that it has before this task. The 18 px and the 21 px are the values of `.rd-column` in `src/index.css` now.
+
+WARNING: Do not change a data file in `public/data/`, the Bible text, a link, the wall, or a page of the Reference section.
+
+WARNING: Do not add a smaller size, a fourth size, or a different step. Arthur decided three sizes.
+
+WARNING: Do not change the sizes of the top bar, the trail, the panels, the heading of a chapter, "About this book", the read-with list, the labels in the margin, or the marks of the links.
+
+Steps:
+
+1. Read section 10 of `docs/DESIGN.md`.
+2. Add `src/data/textSize.ts`, with the form of `src/data/translation.ts`: the three sizes with their names, the storage key `bible-text-size`, a function that sets the size, and a hook that gives it. The first visit gives `standard`. A stored value that is not one of the three values gives `standard`. Do not put the text size in the address of a page.
+3. Apply the text size on the reading page.
+   - The font size of `.rd-column` is the value of the table above, for the layout and the selected size.
+   - All text in `.chapter-body` gets larger in the same proportion as the Bible text. This includes the section headings `.sh-s1`, `.sh-s2`, and `.sh-ms`, the cross-reference line `.link-line`, the notes `.ms-note` and `.omitted-note`, and the verse numbers. Example: `.sh-s1` is 17 px with "Standard" in the wide layout, and 17 × 27 / 21 px with "Largest".
+   - Some of these rules have a size in px now. Change them so that they follow the text size. Keep each line height in the same proportion to its font size as now.
+   - The font size of `.rd-column` also applies to elements that are not in `.chapter-body`. Make sure that the elements of the last WARNING keep their sizes.
+4. Apply the text size in the pop-up: `.pop-text` and `.pop-reason` get larger in the same proportion as the Bible text of the layout. The other parts of the pop-up keep their sizes. The rules of Task 21b for the side of the pop-up stay.
+5. The text size control, wide layout only, in `src/reading/ReadingPage.tsx`.
+   - It is a button in the right part of the top bar, to the left of the echo links switch, with a space of 22 px between the two.
+   - It shows the words "Text size" and the caret of the other controls of the bar. It has the look of the echo links switch: the secondary ink color, weight 500, 15 px.
+   - For a screen reader, its name is "Text size: " and the name of the selected size, for example "Text size: Standard". Do not use parentheses in the name. It has `aria-expanded`.
+   - It opens the text size list of step 6.
+6. The text size list, wide layout only.
+   - It is a pop-up with the look of the wide translation list: 56 px from the top of the window, white, corners of 12 px, a padding of 6 px, the same shadow, rows of 44 px with corners of 8 px, weight 500, and the light gray background when the pointer is on a row.
+   - It is 220 px wide. Its center is below the center of the control, and it stays 12 px or more from each side of the window.
+   - It has three rows: "Standard", "Large", "Largest". A row has the place of 14 px for a check mark, then the name. The row of the selected size has the check mark and the weight 600.
+   - For a screen reader: a group with the label "Text size", and one button for each size, with `aria-pressed="true"` on the selected one.
+   - When the list opens, the focus goes to the button of the selected size.
+   - When the reader selects a row: the list closes, the focus goes back to the text size control, and the text has the new size. If the reader selects the size that is already selected, the list closes and nothing changes.
+   - It is a fourth panel. The rules of step 12 of Task 22 apply: only one panel is open at a time, the Escape key closes it and the focus goes back, a click outside closes it, it starts below the trail when the trail shows, and a layout change closes it.
+7. The row "Text size", narrow layout only, in the menu panel of the reading page.
+   - It is below the row "Echo links" and above the thin line.
+   - It has the words "Text size" at the left, in the look of the words "Echo links". The words are not a control.
+   - It has three buttons at the right, in a group with the label "Text size": "Standard", "Large", "Largest". Each has `aria-pressed`. Each is 36 px high or more, with 16 px text.
+   - A button that is not selected has the secondary ink color and the weight 500. The selected button has the ink color, the weight 600, and a line of 2 px below its name, 3 px from it.
+   - A tap selects the size, the text has the new size, and the panel stays open.
+   - At 320 px wide, the row has no cut and the page does not scroll sideways. If the three buttons do not fit beside the words, put them on a line below the words.
+   - The menu panel of the wall does not have this row.
+8. When the reader changes the text size, the verse at the top of the page stays at the same place. Use the code that does this for a change of the translation: `topVerse` and `keepPlace` in `src/reading/ReadingPage.tsx`.
+9. In the wide layout with labels in the margin, each label is on the line of its verse number after a change of the text size.
+10. Add a unit test file for `src/data/textSize.ts`: the first visit, the three values, and a wrong stored value.
+11. Add browser tests in a new file `e2e/textsize.spec.ts`, at 1440 by 900 px and at 390 by 844 px, if the test does not give a size.
+    - First visit: a paragraph of John 3 has the font size 21 px at 1440 px, and 18 px at 390 px.
+    - With "Standard", these have the sizes of before this task, at the two sizes: `.sh-s1`, `.sh-s2`, `.link-line`, a verse number, and `.pop-text`. Read the values from the build before your change, and write them into the test.
+    - 1440 px: the text size control opens the list with three rows, and "Standard" has `aria-pressed="true"`. Select "Large": the list closes, the focus is on the control, the name of the control is "Text size: Large", and the paragraph is 24 px. Select "Largest": the paragraph is 27 px.
+    - 390 px: "Menu" has the row "Text size". Select "Large": the paragraph is 21 px, the panel is open, and "Large" has `aria-pressed="true"`. Select "Largest": the paragraph is 24 px.
+    - The proportion: with "Largest", the font size of `.sh-s1` is its "Standard" size × 27 / 21 at 1440 px, and × 24 / 18 at 390 px, with a tolerance of 0.1 px.
+    - The pop-up: with "Largest", the font size of `.pop-text` is its "Standard" size in the same proportion, at the two sizes.
+    - These have the same font size with each of the three text sizes, at the two sizes: the text of the top bar, the heading of the chapter, "About this book", an entry of the read-with list, and at 1440 px a label in the margin.
+    - After a reload, the text size stays. The storage has the key `bible-text-size` with the value.
+    - Select "Largest" at 390 px. Set the window to 1440 by 900 px. The paragraph is 27 px.
+    - With a wrong value in the storage, the text size is "Standard".
+    - Scroll to John 3:16. Change the text size. The verse that was at the top is at the same place, with a tolerance of 2 px. Test each change between two sizes, at the two sizes.
+    - 1440 px, "Largest": each label in the margin of John 3 is on the line of its verse number, with the tolerance that the test of the labels in `e2e/links.spec.ts` uses.
+    - "Largest", at 390 px and at 320 px wide: Psalm 23, Psalm 119, John 3, and Genesis 1 do not scroll sideways.
+    - 900 by 800 px, the smallest wide layout: for "2 Thessalonians 3", the top bar is one line of 52 px, and no two items of the bar overlap.
+    - 320 px wide: the row "Text size" is completely in the window.
+    - The text size list and the translation list are not open at the same time. The Escape key closes the text size list, and the focus is on the control. After travel with "Go there", the top of the text size list is below the trail.
+    - The wall has no control with the words "Text size", at the two sizes.
+    - The axe-core check passes with "Largest": on John 3 at the two sizes, on John 3 with the text size list open at 1440 px, and on John 3 with the menu panel open at 390 px.
+    - Each new control is 24 by 24 px or more, gets the focus with the keyboard, and operates with the keyboard.
+12. If a test of an earlier task fails because the top bar or the menu panel has a new item, change the test. Do not change an expected result about the Bible text. Give each changed test and the reason in the report.
+13. Take screenshots in `docs/screenshots/task-24/`, at 1440 by 900 px and at 390 by 844 px:
+    - Psalm 23 with each of the three text sizes.
+    - John 3 with each of the three text sizes.
+    - John 3 with the text size list open, at 1440 px only.
+    - John 3 with the menu panel open, at 390 px only.
+14. Look at the screenshots of "Largest" at 390 px. Report each line of poetry in Psalm 23 that breaks into more lines than with "Standard". Do not change the text or the sizes for this.
+15. In `CLAUDE.md`, section "Names", the designer added the names for this task. Use them: text size, text size control, text size list.
+16. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies here also.
+
+Done when:
+
+- The reader selects "Standard", "Large", or "Largest" on the reading page, in the two layouts, and the selection stays after a reload.
+- With "Standard", the text has the sizes of before this task.
+- The verse at the top stays at the same place when the text size changes.
+- The wall and the pages of the Reference section did not change.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests, and the result of step 14. A check on a real phone is still open. Only Arthur can do it.

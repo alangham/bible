@@ -355,7 +355,44 @@ for (const layout of LAYOUTS) {
     expect(await audit(page, layout.name, 24)).toEqual([])
     expect(await axe(page)).toEqual([])
   })
+
+  // The text size "Largest". docs/TASKS.md Task 24 step 11.
+  test(`accessibility: John 3 with the text size "Largest", ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.addInitScript(() => localStorage.setItem('bible-text-size', 'largest'))
+    await page.goto('./#/book/john/3')
+    await settled(page)
+    await expect(page.locator('.reading')).toHaveAttribute('data-text-size', 'largest')
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
 }
+
+// The text size list, wide layout only, with "Largest". docs/TASKS.md Task 24 step 11.
+test('accessibility: John 3 with the text size "Largest" and the text size list open, wide layout', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.addInitScript(() => localStorage.setItem('bible-text-size', 'largest'))
+  await page.goto('./#/book/john/3')
+  await settled(page)
+  await page.getByRole('button', { name: 'Text size: Largest' }).click()
+  await expect(page.locator('#text-size-list')).toBeVisible()
+  await page.waitForTimeout(300)
+  expect(await audit(page, 'wide', 24)).toEqual([])
+  expect(await axe(page)).toEqual([])
+})
+
+// The menu panel with the row "Text size", narrow layout only, with "Largest". docs/TASKS.md Task 24 step 11.
+test('accessibility: John 3 with the text size "Largest" and the menu panel open, narrow layout', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.addInitScript(() => localStorage.setItem('bible-text-size', 'largest'))
+  await page.goto('./#/book/john/3')
+  await settled(page)
+  await page.getByRole('button', { name: 'Menu', exact: true }).click()
+  await expect(page.locator('#menu-panel')).toBeVisible()
+  await page.waitForTimeout(300)
+  expect(await audit(page, 'narrow', 24)).toEqual([])
+  expect(await axe(page)).toEqual([])
+})
 
 // The menu panel, in the narrow layout only. docs/TASKS.md Task 22 step 14.
 for (const [name, path] of [['the wall', './'], ['the reading page', './#/book/john/3']] as const) {

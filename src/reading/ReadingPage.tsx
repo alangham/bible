@@ -21,7 +21,8 @@ import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
-import { setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
+import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
+import { getTranslation, setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
 import { MenuButton, MenuPanel } from '../TopBarMenu.tsx'
 import { usePanelKeys } from '../usePanelKeys.ts'
 import type { ChapterRef, LinkEnd } from '../data/links.ts'
@@ -226,6 +227,18 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   )
   const closePopup = useCallback(() => setPopup(null), [])
 
+  // A change of the text size: the verse at the top of the page stays at the same place. TopBar takes the
+  // place before the change, and the page restores it after the new size is in the page, before the
+  // browser paints. docs/DESIGN.md section 10.5, docs/TASKS.md Task 24 step 8.
+  const textSize = useTextSize()
+  const sizePlace = useRef<KeptPlace | null>(null)
+  useLayoutEffect(() => {
+    const place = sizePlace.current
+    sizePlace.current = null
+    const column = document.querySelector<HTMLElement>('.rd-column')
+    if (place && column) restorePlace(column, place)
+  }, [textSize])
+
   // A chapter shows new text. After a change of the translation, the kept verse goes back to its place,
   // before the browser paints. When each chapter that was on the page shows the new translation, the
   // place is not kept.
@@ -257,7 +270,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
 
   const shown = current ?? (start ? { book: start.book, n: start.n } : null)
   return (
-    <div className="reading" data-trail={trail.stops.length > 0} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
+    <div className="reading" data-trail={trail.stops.length > 0} data-text-size={textSize} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
       {shown && (
         <TopBar
           books={books}
@@ -265,6 +278,8 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
           layout={layout}
           onOpenChapter={(p) => open({ book: p.book.id, c: p.n })}
           onTranslation={(t) => keepPlace(topVerse(t))}
+          // A change of the text size does not use the translation field of the place. topVerse needs one.
+          onTextSize={() => (sizePlace.current = topVerse(getTranslation()))}
         />
       )}
       <TrailBar books={books} onGo={open} />
@@ -283,13 +298,20 @@ interface TopBarProps {
   onOpenChapter: (p: ChapterPlace) => void
   /** The reader selected a different translation. The page still shows the old text. */
   onTranslation: (t: Translation) => void
+  /** The reader selected a different text size. The page still shows the old size. */
+  onTextSize: () => void
 }
 
-/** The three panels of the top bar. Only one is open at a time. docs/DESIGN.md section 9.7. */
-type Panel = 'grid' | 'list' | 'menu'
+/**
+ * The panels of the top bar: the chapter grid, the translation list, the menu panel, and the text size
+ * list. Only one is open at a time. docs/DESIGN.md sections 9.7 and 10.5.
+ */
+type Panel = 'grid' | 'list' | 'menu' | 'size'
 
-/** The width of the translation list in the wide layout, and its smallest distance from each side of the window, in px. */
+/** The widths of the translation list and of the text size list in the wide layout, in px. */
 const LIST_PX = 340
+const SIZE_LIST_PX = 220
+/** The smallest distance of a wide list from each side of the window, in px. */
 const LIST_SIDE_PX = 12
 
 /** The element in each panel that gets the focus when the panel opens. */
@@ -297,6 +319,7 @@ const PANEL_FOCUS: Record<Panel, string> = {
   grid: '[aria-current="page"]',
   list: '[aria-pressed="true"]',
   menu: 'button, a[href]',
+  size: '[aria-pressed="true"]',
 }
 
 function Caret() {
@@ -307,49 +330,65 @@ function Caret() {
   )
 }
 
-function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
+/** The place of 14 px for the check mark in a row of a list. The selected row has the check mark. */
+function Check({ on }: { on: boolean }) {
+  return (
+    <svg className="tr-check" aria-hidden="true" viewBox="0 0 14 14" width="14" height="14">
+      {on && <path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />}
+    </svg>
+  )
+}
+
+function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: TopBarProps) {
   const [panel, setPanel] = useState<Panel | null>(null)
   const [listLeft, setListLeft] = useState<number | null>(null)
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
   const translation = useTranslation()
+  const textSize = useTextSize()
   const whereRef = useRef<HTMLButtonElement>(null)
   const translationRef = useRef<HTMLButtonElement>(null)
   const menuRef = useRef<HTMLButtonElement>(null)
+  const sizeRef = useRef<HTMLButtonElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
   const menuPanelRef = useRef<HTMLDivElement>(null)
+  const sizeListRef = useRef<HTMLDivElement>(null)
   const { book, n } = place
   const selected = TRANSLATIONS.find((t) => t.id === translation) ?? TRANSLATIONS[0]
+  const selectedSize = TEXT_SIZES.find((s) => s.id === textSize) ?? TEXT_SIZES[0]
 
-  // A change of the layout closes the open panel. The menu panel is in the narrow layout only.
+  // A change of the layout closes the open panel. The menu panel is in the narrow layout only. The text
+  // size list is in the wide layout only.
   const [panelLayout, setPanelLayout] = useState(layout)
   if (panelLayout !== layout) {
     setPanelLayout(layout)
     setPanel(null)
   }
-  const open = panel === 'menu' && layout !== 'narrow' ? null : panel
+  const open = (panel === 'menu' && layout !== 'narrow') || (panel === 'size' && layout !== 'wide') ? null : panel
   const toggle = (p: Panel) => setPanel((o) => (o === p ? null : p))
 
   // When a panel opens, the focus goes into it. Escape closes it, and the focus goes back to its control.
-  const controlRef = open === 'list' ? translationRef : open === 'menu' ? menuRef : whereRef
-  const panelRef = open === 'list' ? listRef : open === 'menu' ? menuPanelRef : gridRef
+  const controlRef = open === 'list' ? translationRef : open === 'menu' ? menuRef : open === 'size' ? sizeRef : whereRef
+  const panelRef = open === 'list' ? listRef : open === 'menu' ? menuPanelRef : open === 'size' ? sizeListRef : gridRef
   const closeToControl = useCallback(() => {
     setPanel(null)
     controlRef.current?.focus()
   }, [controlRef])
   usePanelKeys(open !== null, panelRef, open ? PANEL_FOCUS[open] : '', closeToControl)
 
-  // Wide layout: the translation list is below the translation control, with its center below the
-  // center of the control, and 12 px or more from each side of the window. A click outside closes it.
-  const wideList = open === 'list' && layout === 'wide'
+  // Wide layout: the translation list and the text size list are below their controls, with the center
+  // below the center of the control, and 12 px or more from each side of the window. A click outside closes them.
+  const wideList = layout === 'wide' && (open === 'list' || open === 'size') ? open : null
   useLayoutEffect(() => {
     if (!wideList) return
+    const control = wideList === 'list' ? translationRef : sizeRef
+    const listPx = wideList === 'list' ? LIST_PX : SIZE_LIST_PX
     const placeList = () => {
-      const r = translationRef.current?.getBoundingClientRect()
+      const r = control.current?.getBoundingClientRect()
       if (!r) return
       const width = document.documentElement.clientWidth
-      setListLeft(Math.max(LIST_SIDE_PX, Math.min(r.left + r.width / 2 - LIST_PX / 2, width - LIST_SIDE_PX - LIST_PX)))
+      setListLeft(Math.max(LIST_SIDE_PX, Math.min(r.left + r.width / 2 - listPx / 2, width - LIST_SIDE_PX - listPx)))
     }
     placeList()
     window.addEventListener('resize', placeList)
@@ -357,9 +396,11 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
   }, [wideList, book.id, n])
   useEffect(() => {
     if (!wideList) return
+    const list = wideList === 'list' ? listRef : sizeListRef
+    const control = wideList === 'list' ? translationRef : sizeRef
     const onDown = (e: PointerEvent) => {
       const t = e.target as Node
-      if (!listRef.current?.contains(t) && !translationRef.current?.contains(t)) setPanel(null)
+      if (!list.current?.contains(t) && !control.current?.contains(t)) setPanel(null)
     }
     window.addEventListener('pointerdown', onDown)
     return () => window.removeEventListener('pointerdown', onDown)
@@ -373,6 +414,20 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
     if (t === translation) return
     onTranslation(t)
     setTranslation(t)
+  }
+
+  // A row of the text size list: the list closes, the focus goes back to the text size control, and the
+  // text has the new size. The place of the top verse is taken first.
+  const selectTextSize = (size: TextSize) => {
+    setPanel(null)
+    sizeRef.current?.focus()
+    changeTextSize(size)
+  }
+  // A size in the menu panel: the text has the new size, and the panel stays open.
+  const changeTextSize = (size: TextSize) => {
+    if (size === textSize) return
+    onTextSize()
+    setTextSize(size)
   }
 
   // "Books": the name of the book in view moves back to the wall.
@@ -391,7 +446,8 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
 
   const gridId = 'chapter-grid'
   const listId = 'translation-list'
-  // The wide translation list has no shade. The other panels have the shade of the chapter grid.
+  const sizeListId = 'text-size-list'
+  // The wide lists have no shade. The other panels have the shade of the chapter grid.
   const shade = open !== null && !wideList
   // The layout effect above places the wide list before the browser paints. The list is not hidden
   // before that, so that the focus can go to its row.
@@ -432,10 +488,25 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
         </div>
         <div className="rd-right">
           {layout === 'wide' ? (
-            // The echo links switch. Its name is "Echo links"; the state is aria-pressed.
-            <button type="button" className="rd-echo" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
-              Echo links <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>
-            </button>
+            <>
+              {/* The text size control. Its name is "Text size: " and the selected size. docs/DESIGN.md section 10.4. */}
+              <button
+                type="button"
+                ref={sizeRef}
+                className="rd-size"
+                aria-label={`Text size: ${selectedSize.name}`}
+                aria-expanded={open === 'size'}
+                aria-controls={sizeListId}
+                onClick={() => toggle('size')}
+              >
+                Text size
+                <Caret />
+              </button>
+              {/* The echo links switch. Its name is "Echo links"; the state is aria-pressed. */}
+              <button type="button" className="rd-echo" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
+                Echo links <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>
+              </button>
+            </>
           ) : (
             <MenuButton open={open === 'menu'} onToggle={() => toggle('menu')} buttonRef={menuRef} />
           )}
@@ -470,9 +541,7 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
         <div role="group" aria-label="Translation">
           {TRANSLATIONS.map((t) => (
             <button key={t.id} type="button" className="tr-row" aria-pressed={t.id === translation} onClick={() => selectTranslation(t.id)}>
-              <svg className="tr-check" aria-hidden="true" viewBox="0 0 14 14" width="14" height="14">
-                {t.id === translation && <path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />}
-              </svg>
+              <Check on={t.id === translation} />
               <span className="tr-name">{t.name}</span>
               {/* The short name is not a second name of the button. */}
               <span className="tr-short" aria-hidden="true">
@@ -482,6 +551,19 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
           ))}
         </div>
       </div>
+      {/* The text size list, wide layout only: the look of the wide translation list. A group with one button for each size. */}
+      {layout === 'wide' && (
+        <div className="tr-list ts-list" id={sizeListId} ref={sizeListRef} data-layout="wide" hidden={open !== 'size'} style={listStyle}>
+          <div role="group" aria-label="Text size">
+            {TEXT_SIZES.map((s) => (
+              <button key={s.id} type="button" className="tr-row" aria-pressed={s.id === textSize} onClick={() => selectTextSize(s.id)}>
+                <Check on={s.id === textSize} />
+                <span className="tr-name">{s.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       {layout === 'narrow' && (
         <MenuPanel open={open === 'menu'} panelRef={menuPanelRef}>
           {/* The echo links switch. A tap changes the state, and the panel stays open. */}
@@ -491,6 +573,17 @@ function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
               {echoOn ? 'On' : 'Off'}
             </span>
           </button>
+          {/* The row "Text size": the words are not a control. A tap on a size changes it, and the panel stays open. */}
+          <div className="menu-size">
+            <span>Text size</span>
+            <div className="menu-size-sizes" role="group" aria-label="Text size">
+              {TEXT_SIZES.map((s) => (
+                <button key={s.id} type="button" aria-pressed={s.id === textSize} onClick={() => changeTextSize(s.id)}>
+                  <span>{s.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="menu-rule" aria-hidden="true" />
         </MenuPanel>
       )}

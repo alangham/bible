@@ -324,6 +324,56 @@ html:has(.wall) {
   background: rgba(0, 0, 0, 0.09);
 }
 
+/*
+  The row "Text size" of the menu panel of the reading page: the words, and the three sizes at the right.
+  If the sizes do not fit beside the words, they go on a line below. docs/TASKS.md Task 24 step 7.
+*/
+.menu-size {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+  min-height: 48px;
+  color: #1d1d1f;
+  font: 500 16px Inter, system-ui, sans-serif;
+}
+
+.menu-size-sizes {
+  display: flex;
+  margin-left: auto;
+}
+
+.menu-size-sizes button {
+  min-height: 36px;
+  padding: 0 8px;
+  border: 0;
+  background: none;
+  color: #6e6e73;
+  font: 500 16px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.menu-size-sizes button:last-child {
+  padding-right: 0;
+}
+
+.menu-size-sizes span {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  line-height: 1;
+}
+
+.menu-size-sizes button[aria-pressed='true'] {
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.menu-size-sizes button[aria-pressed='true'] span {
+  border-bottom-color: currentColor;
+}
+
 /* The focus, as on the other controls of the wall and of the reading page. */
 .wall-bar .bar-menu:focus-visible,
 .menu-panel :focus-visible {
@@ -485,6 +535,31 @@ html:has(.reading) {
   margin-left: 7px;
 }
 
+/*
+  The text size control, at the left of the echo links switch, wide layout only. The look of the echo
+  links switch. docs/DESIGN.md section 10.4, docs/TASKS.md Task 24 step 5.
+*/
+.rd-size {
+  display: flex;
+  align-items: baseline;
+  margin-right: 22px;
+  padding: 12px 0;
+  border: 0;
+  background: none;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rd-size .rd-caret {
+  margin-left: 7px;
+}
+
+.rd-size[aria-expanded='true'] .rd-caret {
+  transform: rotate(180deg);
+}
+
 /* The chapter grid. */
 .rd-grid-panel {
   position: fixed;
@@ -575,6 +650,11 @@ html:has(.reading) {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07);
 }
 
+/* The text size list: the look of the wide translation list, 220 px wide. docs/TASKS.md Task 24 step 6. */
+.tr-list.ts-list[data-layout='wide'] {
+  width: 220px;
+}
+
 .tr-list[data-layout='narrow'] {
   top: 52px;
   left: 0;
@@ -635,6 +715,44 @@ html:has(.reading) {
   font-size: 16px;
 }
 
+/*
+  The text size. docs/DESIGN.md section 10.2, docs/TASKS.md Task 24 step 3. --rd-text-px is the size of
+  the Bible text. --rd-scale is that size divided by the size of "Standard" in the same layout. The text
+  of the chapter body and the passage text of the pop-up follow --rd-scale. With "Standard", --rd-scale
+  is 1, and each size is the size before Task 24.
+*/
+.reading {
+  --rd-text-px: 21px;
+  --rd-scale: 1;
+  /* The size of "Standard". The parts of a chapter that keep their size use it. */
+  --rd-base-px: 21px;
+}
+
+.reading[data-text-size='large'] {
+  --rd-text-px: 24px;
+  --rd-scale: calc(24 / 21);
+}
+
+.reading[data-text-size='largest'] {
+  --rd-text-px: 27px;
+  --rd-scale: calc(27 / 21);
+}
+
+.app[data-layout='narrow'] .reading {
+  --rd-text-px: 18px;
+  --rd-base-px: 18px;
+}
+
+.app[data-layout='narrow'] .reading[data-text-size='large'] {
+  --rd-text-px: 21px;
+  --rd-scale: calc(21 / 18);
+}
+
+.app[data-layout='narrow'] .reading[data-text-size='largest'] {
+  --rd-text-px: 24px;
+  --rd-scale: calc(24 / 18);
+}
+
 /* The column of the text. 748 px with the padding: the text is 700 px wide at most. */
 .rd-column {
   container-type: inline-size;
@@ -643,7 +761,7 @@ html:has(.reading) {
   margin: 0 auto;
   padding: 100px 24px 45vh;
   font-family: Lora, Georgia, 'Times New Roman', serif;
-  font-size: 21px;
+  font-size: var(--rd-text-px);
   line-height: 1.65;
 }
 
@@ -839,19 +957,19 @@ html:has(.reading) {
 .rd-column .sh-s1 {
   margin: 34px 0 10px;
   color: var(--rd-ink);
-  font-size: 17px;
+  font-size: calc(17px * var(--rd-scale));
 }
 
 .rd-column .sh-s2 {
   margin: 26px 0 8px;
   color: var(--rd-ink-secondary);
-  font-size: 15px;
+  font-size: calc(15px * var(--rd-scale));
 }
 
 .rd-column .sh-ms {
   margin: 10px 0 4px;
   color: var(--c);
-  font: 700 13px Inter, system-ui, sans-serif;
+  font: 700 calc(13px * var(--rd-scale)) Inter, system-ui, sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
@@ -962,7 +1080,7 @@ html:has(.reading) {
   padding: 2px 0 2px 12px;
   border-left: 2px solid var(--rd-line);
   color: var(--rd-ink-secondary);
-  font: 400 13px/1.5 Inter, system-ui, sans-serif;
+  font: 400 calc(13px * var(--rd-scale)) / 1.5 Inter, system-ui, sans-serif;
   text-indent: 0;
 }
 
@@ -997,7 +1115,6 @@ html:has(.reading) {
 
 .app[data-layout='narrow'] .rd-column {
   padding-top: 84px;
-  font-size: 18px;
   line-height: 1.62;
 }
 
@@ -1067,6 +1184,8 @@ html:has(.reading) {
   margin: -12px 0 30px;
   padding: 0 0 16px;
   border-bottom: 1px solid var(--rd-line);
+  /* "About this book" and the read-with list keep their size with each text size. docs/DESIGN.md section 10.3. */
+  font-size: var(--rd-base-px);
 }
 
 .rd-meta[data-full='false'] {
@@ -1193,7 +1312,7 @@ html:has(.reading) {
 .rd-column .link-line {
   margin: -4px 0 10px;
   color: var(--rd-ink-secondary);
-  font: 400 13px/1.45 Inter, system-ui, sans-serif;
+  font: 400 calc(13px * var(--rd-scale)) / 1.45 Inter, system-ui, sans-serif;
 }
 
 .link-ref {
@@ -1201,7 +1320,7 @@ html:has(.reading) {
   padding: 4px 0;
   border: 0;
   background: none;
-  font: 600 13px/16px Inter, system-ui, sans-serif;
+  font: 600 calc(13px * var(--rd-scale)) / calc(16px * var(--rd-scale)) Inter, system-ui, sans-serif;
   cursor: pointer;
 }
 
@@ -1473,7 +1592,7 @@ html:has(.reading) {
   max-height: 36vh;
   overflow: auto;
   margin: 0;
-  font: 400 17px/1.55 Lora, Georgia, serif;
+  font: 400 calc(17px * var(--rd-scale)) / 1.55 Lora, Georgia, serif;
 }
 
 .pop-vn {
@@ -1493,7 +1612,7 @@ html:has(.reading) {
   padding-left: 12px;
   border-left: 2px solid var(--d);
   color: #3a3a3c;
-  font: italic 400 15px/1.5 Lora, Georgia, serif;
+  font: italic 400 calc(15px * var(--rd-scale)) / 1.5 Lora, Georgia, serif;
 }
 
 .pop-source,

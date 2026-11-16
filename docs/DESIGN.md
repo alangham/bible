@@ -6,6 +6,8 @@ WARNING: Section 7 is a redesign that Arthur decided on 2026-11-14. Section 7 re
 
 WARNING: Section 9 is the top bar that Arthur decided on 2026-11-15. It changes the bottom line of the wall in section 7.4, the top bar in section 7.5, and the translation switch in section 8.5. Task 22 in `docs/TASKS.md` builds section 9. Where section 9 and an older section differ, section 9 is correct.
 
+Section 10 is the text size that Arthur decided on 2026-11-16. Task 24 in `docs/TASKS.md` builds it. It adds one control to the top bar and one row to the menu panel of section 9.
+
 ## 1. Goal
 
 The reader feels that they are inside the Bible. The reference is "The Long Light" template from scrolltide.co: a real 3D book on a sunlit linen table, pages that curl when you drag them, and a layered paper-cut scene on each spread. Use the idea. Do not copy the template's code, text, or art.
@@ -540,7 +542,62 @@ The three panels are the panel of the chapter grid, the translation list, and th
 
 ### 9.9 Not decided
 
-1. The items that Arthur will add to the bar. He did not name them.
+1. The items that Arthur will add to the bar. He did not name them. The first item is the text size control of section 10.
 2. More translations. Arthur said on 2026-11-15 that this comes later. The rule in `CLAUDE.md` that the site has two translations stays until he changes it.
 3. The top bar of the pages of the Reference section. It does not change in this section.
 4. Links to the Reference section on the wide reading page.
+
+## 10. The text size of 2026-11-16
+
+Arthur decided this section on 2026-11-16, with no renders. He will look at the built site, and a size is easy to change. Task 24 in `docs/TASKS.md` builds this section.
+
+### 10.1 Reason
+
+- The size of the Bible text is fixed. On a phone, a reader has no good way to make it larger: a pinch makes the text wider than the screen.
+- Arthur will share the site with church members. Some of them need larger text.
+
+### 10.2 The three sizes
+
+- The site has three text sizes: "Standard", "Large", and "Largest". "Standard" is the size before this section. The site has no smaller size. Arthur decided this.
+- Each step adds 3 px to the Bible text.
+
+| Text size | Narrow layout | Wide layout |
+|---|---|---|
+| Standard | 18 px | 21 px |
+| Large | 21 px | 24 px |
+| Largest | 24 px | 27 px |
+
+- The first visit shows "Standard".
+- With "Standard", each page looks exactly as before this section, apart from the new control.
+
+### 10.3 What changes with the text size
+
+- All text of a chapter below its heading area: the paragraphs, the poetry lines, the verse numbers, the section headings, the cross-reference line, and the notes. Each of them gets larger in the same proportion as the Bible text.
+- In the pop-up: the passage text and the reason line, in the same proportion.
+
+These do not change: the top bar, the trail, the three panels, the heading of a chapter with its band, "About this book" and the introduction, the name of the translation, the read-with list, the labels in the margin, the marks of the links, the other parts of the pop-up, the wall, and the pages of the Reference section.
+
+### 10.4 The control
+
+- Wide layout: the text size control is in the right part of the top bar of the reading page, to the left of the echo links switch. It shows the words "Text size" and a caret. It opens the text size list: a pop-up with three rows, with the look of the translation list. The row of the selected size has the check mark and the weight 600.
+- Narrow layout: the menu panel of the reading page has the row "Text size", below the row "Echo links". The row has the words "Text size" and three controls with the names of the sizes. One tap selects a size, and the panel stays open. The selected size has the ink color, the weight 600, and a line below its name.
+- The wall has no control for the text size.
+- The name of each control for a screen reader contains the words that the reader sees, by the rule of section 9.7.
+
+### 10.5 Rules
+
+- The browser keeps the selection in its storage, with the key `bible-text-size`. One selection applies to the two layouts. The text size is not in the address of a page.
+- When the reader changes the text size on the reading page, the verse at the top of the page stays at the same place, as for a change of the translation.
+- In the wide layout, the labels in the margin stay on the lines of their verses after a change.
+- The text size list is a fourth panel. The rules of section 9.7 apply to it.
+
+### 10.6 Selected by the designer, without a decision by Arthur
+
+- The names "Standard", "Large", and "Largest", and the words "Text size".
+- The step of 3 px.
+- The list of what changes in section 10.3.
+- The form of the control in each layout.
+
+### 10.7 Not decided
+
+1. At 24 px on a phone, poetry lines break more. Arthur looks at the built site. If a size is wrong, the correction is one number.

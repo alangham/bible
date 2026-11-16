@@ -1723,7 +1723,7 @@ Stop and report. Give the size of `public/data/text/` and of `public/data/text-k
 
 ## Task 27. Red letters: the pages and the switch
 
-Status: TODO
+Status: DONE
 
 Goal: the reading page and the pop-up show the words of Jesus in red. The reader switches red letters on and off. The Sources page says where the red letters are from.
 
@@ -1737,6 +1737,11 @@ The design is in section 11 of `docs/DESIGN.md`. The five renders are in `docs/s
 The renders are a sketch on the built site of Task 24. Use their look. Do not copy code from them.
 
 WARNING: Do this task only when Task 26 is `DONE`.
+
+Changed on 2026-11-16, after the report of Task 26:
+
+- The name. In `CLAUDE.md`, "mark" alone is the dot or ring of a link. The mark of the source files on words of Jesus is the "words-of-Jesus mark". In the site data, it is an item `j`. Use these names in code comments, tests, and the report. The code name `isMarked` stays.
+- The look with red letters off. Task 26 found that a separate text node at the edge of a words-of-Jesus mark moves the edges of some letters by less than 1 px. In this task, the words of an item `j` are in an element of their own, so such small differences are permitted. The words must stay at the same places, with a tolerance of 1 px, and each line must break at the same word as before this task.
 
 WARNING: Do not change a data file, a build script, or a file in `sources/`.
 
@@ -1752,7 +1757,7 @@ Steps:
    - In `src/book/ChapterBody.tsx`, the words of an item `j` are in an element with a class for red letters. Added words with `"j": 1` are in that class also, and stay in italics.
    - With red letters on, the element has the color `#8B1A1A`. With red letters off, it has the color of the text around it. Do this with one attribute on `.reading` and one style rule, so that a change of the switch does not build the page again.
    - The verse numbers, the marks and the labels of the links, the headings, the cross-reference lines, and the notes do not become red.
-   - In the pop-up, the passage text `.pop-text` shows the marked words in the same color, by the same switch. The reason line and the other parts of the pop-up do not become red.
+   - In the pop-up, the passage text `.pop-text` shows the words of the items `j` in the same color, by the same switch. The reason line and the other parts of the pop-up do not become red.
    - The light background of the linked verse after travel stays. Make sure that the red letters have a contrast of 4.5 to 1 or more on it.
 4. The text control, wide layout. It is the text size control of Task 24.
    - It shows the word "Text", not "Text size". For a screen reader, its name is "Text settings".
@@ -1775,14 +1780,15 @@ Steps:
    - The verse number of Matthew 4:4 has the color of its group, not `#8B1A1A`.
    - King James Version, John 3:3: "Verily, verily, I say unto thee" is red, and "Jesus answered and said unto him," is not.
    - King James Version, Mark 12:37: "And the common people heard him gladly." is not red.
-   - King James Version, a verse where added words are in a mark: the added words are red and in italics. Find such a verse in the data. Do not write one from memory.
+   - King James Version, a verse where added words are in a words-of-Jesus mark: the added words are red and in italics. Find such a verse in the data. Do not write one from memory.
    - Genesis 1 and Romans 1 have no red element.
    - 390 px: "Menu" has the row "Red letters" with "On". A tap gives "Off", `aria-pressed="false"`, no red element in Matthew 4, and the panel is open. A second tap gives red letters again.
    - 1440 px: the text control shows "Text", and its name is "Text settings". Its list has the row "Red letters". A click gives "Off", the list is open, and Matthew 4 has no red element.
    - After a reload, the selection stays. The storage has the key `bible-red-letters`.
    - Switch red letters off at 390 px. Set the window to 1440 by 900 px. Matthew 4 has no red element.
    - The switch does not move the page: the place of Matthew 4:7 on the screen is the same before and after a change, with a tolerance of 1 px.
-   - The pop-up: open a link whose passage has words of Jesus, and find it in the data. The marked words in `.pop-text` are red with red letters on, and have the ink color with red letters off.
+   - With red letters off, Matthew 4 and John 14 have the same line breaks as the screenshots of Task 26 show for Matthew 4, and as the build of Task 26 gives for John 14: compare the number of lines of each paragraph.
+   - The pop-up: open a link whose passage has words of Jesus, and find it in the data. The words of Jesus in `.pop-text` are red with red letters on, and have the ink color with red letters off.
    - The Sources page has the paragraph of step 7.
    - The wall has no control with the words "Red letters".
    - The axe-core check passes on Matthew 4 and on John 14 with red letters on, at the two sizes, with each translation, and on Matthew 4 with the text list open at 1440 px.
@@ -1794,7 +1800,7 @@ Steps:
 
 Done when:
 
-- The reading page and the pop-up show the marked words in `#8B1A1A`, with each translation.
+- The reading page and the pop-up show the words of the items `j` in `#8B1A1A`, with each translation.
 - The reader switches red letters on and off in the two layouts, and the selection stays after a reload.
 - With red letters off, the text is as before Task 26.
 - The Sources page has the paragraph.

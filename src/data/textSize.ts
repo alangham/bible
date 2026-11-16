@@ -7,7 +7,7 @@ import { useSyncExternalStore } from 'react'
 
 export type TextSize = 'standard' | 'large' | 'largest'
 
-/** The three text sizes, in the order of the text size list. */
+/** The three text sizes, in the order of the text list. */
 export const TEXT_SIZES: readonly { id: TextSize; name: string }[] = [
   { id: 'standard', name: 'Standard' },
   { id: 'large', name: 'Large' },

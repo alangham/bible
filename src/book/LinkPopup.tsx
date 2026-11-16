@@ -83,12 +83,17 @@ function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageR
       {verses.map((v) => (
         <span key={`${v.c}:${v.v}`} className={v.omitted ? 'pop-omitted' : undefined}>
           <sup className="pop-vn">{v.v}</sup>
-          {/* The added words of the King James Version, in italics. docs/DESIGN.md section 8.2. */}
+          {/* The added words of the King James Version, in italics. docs/DESIGN.md section 8.2. The words of a
+              words-of-Jesus mark have the class of red letters. docs/DESIGN.md section 11.4. */}
           {v.parts.map((part, i) =>
             part.a ? (
-              <i key={i} className="added">
+              <i key={i} className={part.j ? 'added red-letters' : 'added'}>
                 {part.t}
               </i>
+            ) : part.j ? (
+              <span key={i} className="red-letters">
+                {part.t}
+              </span>
             ) : (
               <Fragment key={i}>{part.t}</Fragment>
             ),

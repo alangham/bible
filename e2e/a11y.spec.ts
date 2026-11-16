@@ -368,14 +368,14 @@ for (const layout of LAYOUTS) {
   })
 }
 
-// The text size list, wide layout only, with "Largest". docs/TASKS.md Task 24 step 11.
-test('accessibility: John 3 with the text size "Largest" and the text size list open, wide layout', async ({ page }) => {
+// The text list, wide layout only, with "Largest". docs/TASKS.md Task 24 step 11. Its name was "text size list" until Task 27.
+test('accessibility: John 3 with the text size "Largest" and the text list open, wide layout', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   await page.addInitScript(() => localStorage.setItem('bible-text-size', 'largest'))
   await page.goto('./#/book/john/3')
   await settled(page)
-  await page.getByRole('button', { name: 'Text size: Largest' }).click()
-  await expect(page.locator('#text-size-list')).toBeVisible()
+  await page.getByRole('button', { name: 'Text settings', exact: true }).click()
+  await expect(page.locator('#text-list')).toBeVisible()
   await page.waitForTimeout(300)
   expect(await audit(page, 'wide', 24)).toEqual([])
   expect(await axe(page)).toEqual([])

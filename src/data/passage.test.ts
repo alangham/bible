@@ -55,14 +55,17 @@ describe('passageVerses', () => {
     expect(verse.parts.map((x) => x.t).join('')).toBe(verse.text)
   })
 
-  it('gives the marked words of Mark 12:37 of the King James Version data as words of the verse (Task 26)', () => {
+  it('gives the words of the words-of-Jesus mark in Mark 12:37 of the King James Version data as words of the verse, with j (Tasks 26 and 27)', () => {
     const text = JSON.parse(readFileSync(join(root, 'public/data/text-kjv/mark.json'), 'utf8')) as BookText
     const [verse] = passageVerses(text, { book: 'mark', c: 12, v: 37 })
     expect(verse.text).toBe('David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.')
+    // Task 27: the parts of a words-of-Jesus mark have j, so the pop-up shows them as red letters. The last
+    // sentence is not in the words-of-Jesus mark. docs/DESIGN.md section 11.3.
     expect(verse.parts).toEqual([
-      { t: 'David therefore himself calleth him Lord; and whence is he ' },
-      { t: 'then', a: true },
-      { t: ' his son? And the common people heard him gladly.' },
+      { t: 'David therefore himself calleth him Lord; and whence is he ', j: true },
+      { t: 'then', a: true, j: true },
+      { t: ' his son?', j: true },
+      { t: ' And the common people heard him gladly.' },
     ])
   })
 

@@ -21,6 +21,7 @@ import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
+import { setRedLetters, useRedLetters } from '../data/redLetters.ts'
 import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
 import { getTranslation, setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
 import { MenuButton, MenuPanel } from '../TopBarMenu.tsx'
@@ -231,6 +232,9 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   // place before the change, and the page restores it after the new size is in the page, before the
   // browser paints. docs/DESIGN.md section 10.5, docs/TASKS.md Task 24 step 8.
   const textSize = useTextSize()
+  // Red letters: one attribute on .reading, and one style rule. A change of the switch does not build the
+  // page again. docs/DESIGN.md section 11.5, docs/TASKS.md Task 27 step 3.
+  const redOn = useRedLetters()
   const sizePlace = useRef<KeptPlace | null>(null)
   useLayoutEffect(() => {
     const place = sizePlace.current
@@ -270,7 +274,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
 
   const shown = current ?? (start ? { book: start.book, n: start.n } : null)
   return (
-    <div className="reading" data-trail={trail.stops.length > 0} data-text-size={textSize} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
+    <div className="reading" data-trail={trail.stops.length > 0} data-text-size={textSize} data-red-letters={redOn ? 'on' : 'off'} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
       {shown && (
         <TopBar
           books={books}
@@ -303,12 +307,12 @@ interface TopBarProps {
 }
 
 /**
- * The panels of the top bar: the chapter grid, the translation list, the menu panel, and the text size
- * list. Only one is open at a time. docs/DESIGN.md sections 9.7 and 10.5.
+ * The panels of the top bar: the chapter grid, the translation list, the menu panel, and the text list
+ * ('size'). Only one is open at a time. docs/DESIGN.md sections 9.7, 10.5, and 11.5.
  */
 type Panel = 'grid' | 'list' | 'menu' | 'size'
 
-/** The widths of the translation list and of the text size list in the wide layout, in px. */
+/** The widths of the translation list and of the text list in the wide layout, in px. */
 const LIST_PX = 340
 const SIZE_LIST_PX = 220
 /** The smallest distance of a wide list from each side of the window, in px. */
@@ -344,6 +348,7 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
   const [listLeft, setListLeft] = useState<number | null>(null)
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
+  const redOn = useRedLetters()
   const translation = useTranslation()
   const textSize = useTextSize()
   const whereRef = useRef<HTMLButtonElement>(null)
@@ -356,7 +361,6 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
   const sizeListRef = useRef<HTMLDivElement>(null)
   const { book, n } = place
   const selected = TRANSLATIONS.find((t) => t.id === translation) ?? TRANSLATIONS[0]
-  const selectedSize = TEXT_SIZES.find((s) => s.id === textSize) ?? TEXT_SIZES[0]
 
   // A change of the layout closes the open panel. The menu panel is in the narrow layout only. The text
   // size list is in the wide layout only.
@@ -377,7 +381,7 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
   }, [controlRef])
   usePanelKeys(open !== null, panelRef, open ? PANEL_FOCUS[open] : '', closeToControl)
 
-  // Wide layout: the translation list and the text size list are below their controls, with the center
+  // Wide layout: the translation list and the text list are below their controls, with the center
   // below the center of the control, and 12 px or more from each side of the window. A click outside closes them.
   const wideList = layout === 'wide' && (open === 'list' || open === 'size') ? open : null
   useLayoutEffect(() => {
@@ -416,8 +420,8 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
     setTranslation(t)
   }
 
-  // A row of the text size list: the list closes, the focus goes back to the text size control, and the
-  // text has the new size. The place of the top verse is taken first.
+  // A size in the text list: the list closes, the focus goes back to the text control, and the text has
+  // the new size. The place of the top verse is taken first. The row "Red letters" does not close the list.
   const selectTextSize = (size: TextSize) => {
     setPanel(null)
     sizeRef.current?.focus()
@@ -446,7 +450,7 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
 
   const gridId = 'chapter-grid'
   const listId = 'translation-list'
-  const sizeListId = 'text-size-list'
+  const sizeListId = 'text-list'
   // The wide lists have no shade. The other panels have the shade of the chapter grid.
   const shade = open !== null && !wideList
   // The layout effect above places the wide list before the browser paints. The list is not hidden
@@ -489,17 +493,18 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
         <div className="rd-right">
           {layout === 'wide' ? (
             <>
-              {/* The text size control. Its name is "Text size: " and the selected size. docs/DESIGN.md section 10.4. */}
+              {/* The text control. It shows "Text", and its name is "Text settings". It opens the text list.
+                  docs/DESIGN.md section 11.5, docs/TASKS.md Task 27 step 4. */}
               <button
                 type="button"
                 ref={sizeRef}
                 className="rd-size"
-                aria-label={`Text size: ${selectedSize.name}`}
+                aria-label="Text settings"
                 aria-expanded={open === 'size'}
                 aria-controls={sizeListId}
                 onClick={() => toggle('size')}
               >
-                Text size
+                Text
                 <Caret />
               </button>
               {/* The echo links switch. Its name is "Echo links"; the state is aria-pressed. */}
@@ -551,7 +556,8 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
           ))}
         </div>
       </div>
-      {/* The text size list, wide layout only: the look of the wide translation list. A group with one button for each size. */}
+      {/* The text list, wide layout only: the look of the wide translation list. A group with one button for each
+          size, a thin line, and the red letters switch. docs/DESIGN.md section 11.5. */}
       {layout === 'wide' && (
         <div className="tr-list ts-list" id={sizeListId} ref={sizeListRef} data-layout="wide" hidden={open !== 'size'} style={listStyle}>
           <div role="group" aria-label="Text size">
@@ -562,6 +568,16 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
               </button>
             ))}
           </div>
+          <div className="menu-rule ts-rule" aria-hidden="true" />
+          {/* The red letters switch. Its name is "Red letters"; the state is aria-pressed. The word "On" or "Off" is not
+              a second name. A click changes the state, and the list stays open. */}
+          <button type="button" className="tr-row ts-red" aria-pressed={redOn} onClick={() => setRedLetters(!redOn)}>
+            <Check on={false} />
+            <span className="tr-name">Red letters</span>
+            <span className="ts-state" aria-hidden="true">
+              {redOn ? 'On' : 'Off'}
+            </span>
+          </button>
         </div>
       )}
       {layout === 'narrow' && (
@@ -584,6 +600,14 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
               ))}
             </div>
           </div>
+          {/* The red letters switch, with the form of the row "Echo links". A tap changes the state, and the panel
+              stays open. docs/DESIGN.md section 11.5. */}
+          <button type="button" className="menu-row" aria-pressed={redOn} onClick={() => setRedLetters(!redOn)}>
+            Red letters
+            <span className="menu-state" aria-hidden="true">
+              {redOn ? 'On' : 'Off'}
+            </span>
+          </button>
           <div className="menu-rule" aria-hidden="true" />
         </MenuPanel>
       )}

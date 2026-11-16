@@ -41,7 +41,7 @@ When Arthur says "do the next task", start again at step 1.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
 - Do not change the words of a Bible text. This applies to the two translations. The one exception is the list of 13 split words in section 8.2 of `docs/DESIGN.md`.
-- Do not add or remove a mark of the words of Jesus. The marks are those of the source files. The one exception is Mark 12:37 of the King James Version, in section 11.3 of `docs/DESIGN.md`.
+- Do not add or remove a words-of-Jesus mark. These marks are those of the source files. The one exception is Mark 12:37 of the King James Version, in section 11.3 of `docs/DESIGN.md`.
 - Do not write new content for the King James Version. Its headings, cross-reference lines, links, introductions, and dates are those of the site. Section 8 of `docs/DESIGN.md` has the rule.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
 - Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
@@ -88,7 +88,8 @@ Use these names in code, comments, and reports. One name for each thing.
 | link | A connection from one passage to a different passage. |
 | quotation link | A link where one passage quotes a different passage. |
 | echo link | A link by theme or wording. Weaker than a quotation link. |
-| mark | The dot or ring in the text that shows a link, in the narrow layout. |
+| mark | The dot or ring in the text that shows a link, in the narrow layout. The word "mark" alone always has this meaning. |
+| words-of-Jesus mark | A mark `\wj` of the source files on words that Jesus spoke. In the site data, it is an item `j`. On the page, its words are red letters. The designer added this name on 2026-11-16, after Task 26, so that "mark" has one meaning. The code name `isMarked` of Task 26 stays. |
 | margin label | The label in the right margin that shows a link, on a wide screen. |
 | pop-up | The panel that shows a linked passage, with "Go there" and "Stay here". |
 | travel | The move from one passage to a linked passage. |

@@ -20,10 +20,14 @@ export function passageName(books: Book[], p: { book: string; c: number; v?: num
   return s
 }
 
-/** A part of the words of a verse: plain words, or the added words of the King James Version (`a`). */
+/**
+ * A part of the words of a verse: plain words, or the added words of the King James Version (`a`). `j`: the
+ * words are in a words-of-Jesus mark, and show as red letters. docs/DESIGN.md section 11.
+ */
 export interface VersePart {
   t: string
   a?: true
+  j?: true
 }
 
 export interface PassageVerse {
@@ -59,7 +63,7 @@ export function passageVerses(text: BookText, p: PassageRange): PassageVerse[] {
     const push = (part: VersePart) => {
       const list = words.get(verse)!
       const last = list.at(-1)
-      if (last && !last.a && !part.a) last.t += part.t
+      if (last && !last.a && !part.a && !last.j === !part.j) last.t += part.t
       else list.push(part)
     }
     for (const block of ch.blocks) {
@@ -73,9 +77,9 @@ export function passageVerses(text: BookText, p: PassageRange): PassageVerse[] {
           notes.add(item.o)
         } else if (typeof item === 'string' && verse) push({ t: item })
         // The added words of the King James Version are words of their verse.
-        else if (isAdded(item) && verse) push({ t: item.a, a: true })
-        // The marked words of the words of Jesus are words of their verse. docs/DESIGN.md section 11.
-        else if (isMarked(item) && verse) push({ t: item.j })
+        else if (isAdded(item) && verse) push(item.j === 1 ? { t: item.a, a: true, j: true } : { t: item.a, a: true })
+        // The words of a words-of-Jesus mark are words of their verse. docs/DESIGN.md section 11.
+        else if (isMarked(item) && verse) push({ t: item.j, j: true })
       }
     }
     for (const [v, list] of [...words].sort((x, y) => x[0] - y[0])) {

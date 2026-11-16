@@ -12,24 +12,8 @@ import type { Book } from '../data/books.ts'
 import { headingKey, type LinkEnd } from '../data/links.ts'
 import { passageName } from '../data/passage.ts'
 import { endKey, linkColor } from './linkEnds.ts'
-import { isAdded, isMarked, isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type Inline, type MarkedWords, type NoteRun } from '../data/text.ts'
+import { isAdded, isMarked, isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type NoteRun } from '../data/text.ts'
 import { lineParts, type LineReference } from '../data/xrefs.ts'
-
-/**
- * The items of a text block, with each item of marked words (the words of Jesus, Task 26) as a plain string,
- * and the plain strings next to each other joined. So the words between two other items are one text node,
- * as before Task 26, and the page looks the same. Added words in a mark stay added words. Task 27 shows the
- * red letters.
- */
-function plainWords(items: Inline[]): Exclude<Inline, MarkedWords>[] {
-  const out: Exclude<Inline, MarkedWords>[] = []
-  for (const x of items) {
-    const t = isMarked(x) ? x.j : x
-    if (typeof t === 'string' && typeof out.at(-1) === 'string') out[out.length - 1] += t
-    else out.push(t)
-  }
-  return out
-}
 
 export interface ChapterMarks {
   verses: Map<number, LinkEnd[]>
@@ -170,7 +154,7 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
       case 'p':
         return (
           <p key={key} className={`tb tb-${block.s}`}>
-            {plainWords(block.c).map((item, i) => {
+            {block.c.map((item, i) => {
               if (isVerseMark(item)) {
                 const ends = visible(marks?.verses.get(item.v))
                 // A verse number at the start of a line hangs in the margin of a poetry line.
@@ -203,12 +187,21 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
                   </span>
                 )
               }
-              // The added words of the King James Version, in italics. docs/DESIGN.md section 8.2.
+              // The added words of the King James Version, in italics. docs/DESIGN.md section 8.2. In a
+              // words-of-Jesus mark, they also have the class of red letters.
               if (isAdded(item))
                 return (
-                  <i key={i} className="added">
+                  <i key={i} className={item.j === 1 ? 'added red-letters' : 'added'}>
                     {item.a}
                   </i>
+                )
+              // The words of a words-of-Jesus mark. The attribute data-red-letters of .reading gives them
+              // their color. docs/DESIGN.md section 11.4.
+              if (isMarked(item))
+                return (
+                  <span key={i} className="red-letters">
+                    {item.j}
+                  </span>
                 )
               return <Fragment key={i}>{item}</Fragment>
             })}

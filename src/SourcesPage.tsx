@@ -51,6 +51,11 @@ export function SourcesPage() {
             On the King James Version pages, the section headings, the cross-reference lines, the paragraphs, and the lines of poetry are those of
             the Berean Standard Bible files. They are not part of the King James Version.
           </p>
+          <p>
+            The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The two translations do
+            not mark the same words in each verse. The site changes one mark: in Mark 12:37 of the King James Version, the file also marks the
+            sentence "And the common people heard him gladly.", and the site does not.
+          </p>
         </section>
 
         <section aria-labelledby="sources-links">

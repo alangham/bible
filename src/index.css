@@ -536,7 +536,7 @@ html:has(.reading) {
 }
 
 /*
-  The text size control, at the left of the echo links switch, wide layout only. The look of the echo
+  The text control, at the left of the echo links switch, wide layout only. The look of the echo
   links switch. docs/DESIGN.md section 10.4, docs/TASKS.md Task 24 step 5.
 */
 .rd-size {
@@ -650,9 +650,23 @@ html:has(.reading) {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07);
 }
 
-/* The text size list: the look of the wide translation list, 220 px wide. docs/TASKS.md Task 24 step 6. */
+/* The text list: the look of the wide translation list, 220 px wide. docs/TASKS.md Task 24 step 6. */
 .tr-list.ts-list[data-layout='wide'] {
   width: 220px;
+}
+
+/* The thin line of the text list, with the look of the line in the menu panel. docs/TASKS.md Task 27 step 4. */
+.ts-list .ts-rule {
+  margin: 6px 8px;
+}
+
+/* The row "Red letters" of the text list: the weight of a row that is not selected, and "On" or "Off" at the right. */
+.ts-list .tr-row.ts-red {
+  font-weight: 500;
+}
+
+.ts-state {
+  color: var(--rd-ink-secondary);
 }
 
 .tr-list[data-layout='narrow'] {
@@ -992,6 +1006,15 @@ html:has(.reading) {
 
 .rd-column .tb-d .added {
   font-style: normal;
+}
+
+/*
+  Red letters: the words of the words-of-Jesus marks, in the chapter text and in the passage text of the
+  pop-up. One attribute on .reading switches them. With red letters off, the words have the color of the
+  text around them. Only this rule uses the color #8b1a1a. docs/DESIGN.md section 11.4, Task 27 step 3.
+*/
+.reading[data-red-letters='on'] .red-letters {
+  color: #8b1a1a;
 }
 
 .rd-column .sh-qa {

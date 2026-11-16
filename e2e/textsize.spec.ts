@@ -31,8 +31,18 @@ const BEFORE = {
 
 const chapter = (page: Page, book: string, n: number) => page.locator(`section.rd-chapter[data-book="${book}"][data-chapter="${n}"]`)
 const paragraph = (page: Page) => chapter(page, 'john', 3).locator('.chapter-body p.tb-p').first()
-const sizeControl = (page: Page) => page.getByRole('button', { name: /^Text size: / })
-const sizeList = (page: Page) => page.locator('#text-size-list')
+// The text control and the text list. From Task 27, the control shows "Text", and its name is "Text settings".
+const sizeControl = (page: Page) => page.getByRole('button', { name: 'Text settings', exact: true })
+const sizeList = (page: Page) => page.locator('#text-list')
+/** The size button of the text list that has aria-pressed "true". The name of the control does not name the size from Task 27. */
+const listedSize = async (page: Page) => {
+  await sizeControl(page).click()
+  const pressed = sizeList(page).getByRole('group', { name: 'Text size' }).locator('button[aria-pressed="true"]')
+  const name = await pressed.textContent()
+  await page.keyboard.press('Escape')
+  await expect(sizeList(page)).toBeHidden()
+  return name
+}
 const menu = (page: Page) => page.getByRole('button', { name: 'Menu', exact: true })
 const menuPanel = (page: Page) => page.locator('#menu-panel')
 const menuSizes = (page: Page) => menuPanel(page).getByRole('group', { name: 'Text size' })
@@ -47,7 +57,7 @@ async function openChapter(page: Page, size: { width: number; height: number }, 
 
 const px = (locator: Locator) => locator.evaluate((el) => parseFloat(getComputedStyle(el).fontSize))
 
-/** Selects a text size: in the text size list in the wide layout, in the menu panel in the narrow layout. */
+/** Selects a text size: in the text list in the wide layout, in the menu panel in the narrow layout. */
 async function selectSize(page: Page, name: SizeName) {
   if ((page.viewportSize()?.width ?? 0) >= 900) {
     await sizeControl(page).click()
@@ -137,7 +147,7 @@ for (const vp of VIEWPORTS) {
       await expect(chapter(page, 'john', 3)).toHaveAttribute('data-loaded', 'true')
       expect(await px(paragraph(page))).toBe(TEXT_PX[layout].Large)
       expect(await page.evaluate((key) => localStorage.getItem(key), KEY)).toBe('large')
-      if (layout === 'wide') await expect(sizeControl(page)).toHaveAccessibleName('Text size: Large')
+      if (layout === 'wide') expect(await listedSize(page)).toBe('Large')
       else {
         await menu(page).click()
         await expect(menuSizes(page).getByRole('button', { name: 'Large', exact: true })).toHaveAttribute('aria-pressed', 'true')
@@ -180,12 +190,12 @@ for (const vp of VIEWPORTS) {
   })
 }
 
-test.describe('the text size control and the text size list, wide layout', () => {
+test.describe('the text control and the text list, wide layout', () => {
   test('the control opens the list with three rows; a row closes the list and changes the size', async ({ page }) => {
     await openChapter(page, WIDE, 'john', 3)
     const control = sizeControl(page)
-    await expect(control).toHaveText('Text size')
-    await expect(control).toHaveAccessibleName('Text size: Standard')
+    await expect(control).toHaveText('Text')
+    await expect(control).toHaveAccessibleName('Text settings')
     await expect(control).toHaveAttribute('aria-expanded', 'false')
     await control.click()
     await expect(control).toHaveAttribute('aria-expanded', 'true')
@@ -196,7 +206,7 @@ test.describe('the text size control and the text size list, wide layout', () =>
     await group.getByRole('button', { name: 'Large', exact: true }).click()
     await expect(sizeList(page)).toBeHidden()
     await expect(control).toBeFocused()
-    await expect(control).toHaveAccessibleName('Text size: Large')
+    await expect(control).toHaveAccessibleName('Text settings')
     expect(await px(paragraph(page))).toBe(24)
     await selectSize(page, 'Largest')
     expect(await px(paragraph(page))).toBe(27)
@@ -230,7 +240,7 @@ test.describe('the text size control and the text size list, wide layout', () =>
     await expect(sizeList(page)).toBeHidden()
   })
 
-  test('the text size list and the translation list are not open at the same time, and Escape closes the list', async ({ page }) => {
+  test('the text list and the translation list are not open at the same time, and Escape closes the list', async ({ page }) => {
     await openChapter(page, WIDE, 'john', 3)
     await sizeControl(page).click()
     await expect(sizeList(page)).toBeVisible()
@@ -245,7 +255,7 @@ test.describe('the text size control and the text size list, wide layout', () =>
     await expect(sizeControl(page)).toBeFocused()
   })
 
-  test('after travel with "Go there", the text size list starts below the trail', async ({ page }) => {
+  test('after travel with "Go there", the text list starts below the trail', async ({ page }) => {
     await openChapter(page, WIDE, 'hebrews', 9)
     await page.getByRole('button', { name: 'Verse 20 has a quotation link to Exodus 24:8', exact: true }).click()
     await page.getByRole('dialog', { name: 'Exodus 24:8' }).getByRole('link', { name: 'Go there' }).click()
@@ -331,9 +341,9 @@ test.describe('the row "Text size" of the menu panel, narrow layout', () => {
     await menu(page).click()
     const panel = menuPanel(page)
     await expect(panel.locator('.menu-size')).toContainText('Text size')
-    // The order: "Echo links", "Text size", the line, the links.
+    // The order: "Echo links", "Text size", "Red letters" from Task 27, the line, the links.
     const order = await panel.evaluate((el) => [...el.children].map((c) => c.className))
-    expect(order.slice(0, 3)).toEqual(['menu-row', 'menu-size', 'menu-rule'])
+    expect(order.slice(0, 4)).toEqual(['menu-row', 'menu-size', 'menu-row', 'menu-rule'])
     const sizes = menuSizes(page).getByRole('button')
     await expect(sizes).toHaveText(['Standard', 'Large', 'Largest'])
     await expect(sizes.nth(0)).toHaveAttribute('aria-pressed', 'true')
@@ -417,7 +427,7 @@ test.describe('the row "Text size" of the menu panel, narrow layout', () => {
     await page.setViewportSize(WIDE)
     await expect(page.locator('.app')).toHaveAttribute('data-layout', 'wide')
     expect(await px(paragraph(page))).toBe(27)
-    await expect(sizeControl(page)).toHaveAccessibleName('Text size: Largest')
+    expect(await listedSize(page)).toBe('Largest')
   })
 })
 

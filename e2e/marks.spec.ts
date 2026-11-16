@@ -1,6 +1,7 @@
 /// <reference lib="dom" />
-// The marks of the words of Jesus in the data change no page. docs/TASKS.md Task 26 step 9.
-// Task 27 shows the red letters. Until then, no element of a chapter has the color of red letters.
+// The words-of-Jesus marks in the data change no word of a page. docs/TASKS.md Task 26 step 9.
+// From Task 27, the page shows red letters when the red letters switch is on. This test runs with red letters
+// off: then no element of a chapter has the color of red letters. e2e/redletters.spec.ts tests red letters on.
 
 import { readFileSync } from 'node:fs'
 import { expect, test, type Locator, type Page } from '@playwright/test'
@@ -13,7 +14,7 @@ interface TextFile {
 /** The color of red letters, docs/DESIGN.md section 11.4, as the browser gives it. */
 const RED = 'rgb(139, 26, 26)'
 
-/** The words of each verse of a chapter in a data file: strings, added words, and marked words. */
+/** The words of each verse of a chapter in a data file: strings, added words, and the words of a words-of-Jesus mark. */
 function dataVerses(folder: 'text' | 'text-kjv', book: string, c: number): Map<number, string> {
   const text = JSON.parse(readFileSync(new URL(`../public/data/${folder}/${book}.json`, import.meta.url), 'utf8')) as TextFile
   const out = new Map<number, string>()
@@ -60,7 +61,7 @@ function pageVerses(section: Locator): Promise<[number, string][]> {
   })
 }
 
-test('the marks change no word and no color: Matthew 4 and John 3 in the two translations', async ({ page }) => {
+test('the words-of-Jesus marks change no word, and with red letters off no color: Matthew 4 and John 3 in the two translations', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   for (const [translation, folder] of [
     ['bsb', 'text'],
@@ -68,6 +69,7 @@ test('the marks change no word and no color: Matthew 4 and John 3 in the two tra
   ] as const) {
     await page.goto('./#/')
     await page.evaluate((t) => localStorage.setItem('bible-translation', t), translation)
+    await page.evaluate(() => localStorage.setItem('bible-red-letters', 'off'))
     for (const [book, n] of [
       ['matthew', 4],
       ['john', 3],
@@ -81,9 +83,9 @@ test('the marks change no word and no color: Matthew 4 and John 3 in the two tra
       const shown = await pageVerses(section)
       expect(shown.map(([v]) => v), `${translation} ${book} ${n}: the verse numbers`).toEqual([...data.keys()])
       for (const [v, words] of shown) expect(words, `${translation} ${book} ${n}:${v}`).toBe(data.get(v))
-      // The data has marks in each of these chapters.
-      const marked = JSON.stringify(JSON.parse(readFileSync(new URL(`../public/data/${folder}/${book}.json`, import.meta.url), 'utf8')).chapters[n - 1])
-      expect(marked, `${translation} ${book} ${n}: the data has marks`).toContain('"j":')
+      // The data has words-of-Jesus marks in each of these chapters.
+      const chapterData = JSON.stringify(JSON.parse(readFileSync(new URL(`../public/data/${folder}/${book}.json`, import.meta.url), 'utf8')).chapters[n - 1])
+      expect(chapterData, `${translation} ${book} ${n}: the data has words-of-Jesus marks`).toContain('"j":')
       const red = await section.evaluate(
         (el, red) => [el, ...el.querySelectorAll('*')].filter((x) => getComputedStyle(x).color === red).map((x) => x.outerHTML.slice(0, 80)),
         RED,

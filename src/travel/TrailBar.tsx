@@ -1,6 +1,7 @@
 // The trail: a thin line below the top bar after the first travel. docs/DESIGN.md section 7.7.
-// Each stop is a control in the color of its group. The current stop has an underline. When the
-// reader is not on the first stop, the trail starts with "Back", which opens the stop before.
+// Each stop is a control in the color of its group. The last stop is the current stop, and it has an
+// underline. When the trail has two stops or more, it starts with "Back", which opens the stop before
+// the last stop. A selected stop, and "Back", remove the stops after the stop that opens.
 
 import type { MouseEvent } from 'react'
 import { plainClick } from '../book/links.ts'
@@ -28,12 +29,13 @@ export function TrailBar({ books, onGo }: TrailBarProps) {
     goToStop(i)
     onGo(trail.stops[i])
   }
-  const before = trail.at > 0 ? trail.stops[trail.at - 1] : null
+  const last = trail.stops.length - 1
+  const before = last > 0 ? trail.stops[last - 1] : null
   return (
     <nav className="rd-trail" aria-label="Trail">
       {before ? (
         <>
-          <a className="rd-trail-back" href={chapterHref(before.book, before.c, before.v)} onClick={open(trail.at - 1)}>
+          <a className="rd-trail-back" href={chapterHref(before.book, before.c, before.v)} onClick={open(last - 1)}>
             <span aria-hidden="true">‹ </span>Back<span className="sr-only"> to {passageName(books, before)}</span>
           </a>
           <span className="rd-trail-rule" aria-hidden="true" />
@@ -52,7 +54,7 @@ export function TrailBar({ books, onGo }: TrailBarProps) {
             <a
               href={chapterHref(s.book, s.c, s.v)}
               style={{ color: color(s) }}
-              aria-current={i === trail.at ? 'location' : undefined}
+              aria-current={i === last ? 'location' : undefined}
               onClick={open(i)}
             >
               {passageName(books, s)}

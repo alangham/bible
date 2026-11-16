@@ -1387,3 +1387,72 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+# The trail: Task 23
+
+Arthur found two faults of the trail on 2026-11-16, and decided the rules that correct them. The rules are in section 7.7 of `docs/DESIGN.md`, in the item "Trail".
+
+---
+
+## Task 23. The trail: clear it on the wall, and remove the stops after a selected stop
+
+Status: DONE
+
+Goal: the trail is empty after the reader opens the wall. When the reader selects a stop in the trail, or "Back", the stops after that stop are removed. The last stop of the trail is always the stop with the underline.
+
+The rules are in section 7.7 of `docs/DESIGN.md`, in the item "Trail". Arthur decided them on 2026-11-16.
+
+The two faults, as the designer reproduced them on the build of Task 22 at 1440 by 900 px:
+
+- Fault 1. Open Matthew 1. Select the read-with entry "Luke 1". Select the stop "Matthew 1". Select "Books". Open Romans on the wall. The page of Romans shows the trail "Matthew 1 > Luke 1", with the underline on "Matthew 1". Cause: no code clears the trail. Only a unit test calls `clearTrail` in `src/travel/trail.ts`.
+- Fault 2. Then open the link from Romans 1:16 to Mark 8:38, and select "Go there". The trail shows "Matthew 1 > Romans 1:16 > Mark 8:38". Then select the stop "Romans 1:16". The trail still shows the three stops. Cause: `goToStop` in `src/travel/trail.ts` moves only the index `at`.
+
+WARNING: Do not change the look of the trail: the colors, the sizes, the place, and the words.
+
+WARNING: Do not change a link, a data file in `public/data/`, the pop-up, "Go there", the read-with list, or the top bar.
+
+WARNING: The Back control of the browser, the chapter grid, and a scroll must not change the trail on a reading page. This rule of 2026-11-14 stays.
+
+Steps:
+
+1. Read the item "Trail" in section 7.7 of `docs/DESIGN.md`.
+2. In `src/travel/trail.ts`, change `goToStop`: it removes the stops after the selected stop. The selected stop is then the last stop.
+3. The last stop is always the current stop. Remove the field `at` from the state of the trail, if no code needs it after step 2. Change `src/travel/TrailBar.tsx` to agree:
+   - The last stop has the underline and `aria-current="location"`.
+   - "Back" shows when the trail has two stops or more. It opens the stop before the last stop, at its verse, and the last stop is removed.
+   - When the reader selects the last stop, the page opens that stop, and no stop is removed.
+   - A trail with one stop shows that stop, with the word "Trail" before it, and with no "Back". This is as now.
+4. A browser tab can have a stored trail of the old form, with the field `at`. Read it as the stops up to and including the stop `at`. Do not show the stops after it.
+5. Clear the trail when the wall opens. This applies to each way to the wall: "Books", the Back control of the browser, a link, and the address. Use `clearTrail`. The storage of the browser tab then has no stop.
+6. A page of the Reference section does not clear the trail.
+7. Do not change `addTravel`, unless step 3 makes a change necessary. A travel from a place that is not the last stop adds that place and then the target, as now.
+8. Change the unit tests in `src/travel/trail.test.ts` to agree, and add these tests:
+   - `goToStop` removes the stops after the selected stop.
+   - `goToStop` on the last stop removes no stop.
+   - A stored trail of the old form with three stops and `at` 0 reads as one stop.
+   - `clearTrail` leaves no stop in the storage.
+9. Add browser tests in `e2e/links.spec.ts`, at 1440 by 900 px and at 390 by 844 px. Use links and read-with entries that are in the data. Do not add a link.
+   - Fault 1: do the steps of fault 1 above. After "Books", the storage of the tab has no stop. The page of Romans has no trail.
+   - Fault 2: after fault 1, do "Go there" from Romans 1:16 to Mark 8:38. The trail is "Romans 1:16 > Mark 8:38", with the underline on "Mark 8:38".
+   - Make a trail of three stops. Select the second stop: the trail has two stops, the second has `aria-current="location"`, and the page shows that passage. Select the first stop: the trail has one stop and no "Back".
+   - Make a trail of two stops. Select "Back": the page shows the first stop at its verse, and the trail has one stop.
+   - Make a trail of two stops. Use the Back control of the browser to go to the reading page before: the trail does not change.
+   - Make a trail of two stops. Load the page again: the trail does not change.
+   - Make a trail of two stops. Open the Timeline page, then use the Back control of the browser: the trail does not change.
+   - Make a trail of two stops. Use the Back control of the browser until the wall shows. Then use the Forward control of the browser: the reading page has no trail.
+10. Other tests expect that "Back" and a selected stop keep the later stops. Change them to the new rule. Give each changed test and the reason in the report.
+11. The axe-core check passes on a reading page with a trail of one stop, at the two sizes.
+12. Take screenshots at 1440 by 900 px and at 390 by 844 px: a trail of three stops, and the same page after the reader selects the second stop. Save them in `docs/screenshots/task-23/`.
+13. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The steps of fault 1 give a page of Romans with no trail.
+- A selected stop, and "Back", remove the stops after the stop that opens.
+- The last stop always has the underline.
+- The Back control of the browser, the chapter grid, a scroll, and a reload do not change the trail on a reading page.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests.

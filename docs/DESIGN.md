@@ -337,9 +337,15 @@ Arthur decided on 2026-11-14 to design the links before the build. The rules of 
 - Travel. "Go there" opens the linked chapter at the linked verse. The change is direct, with no move between the two pages. The paragraph of the linked verse has a light background for a short time. Arthur decided this on 2026-11-14.
   - The line in section 4.5 that says "The move must show that the reader crossed the Bible" does not apply to the redesign. Arthur said that he did not miss this move.
   - Arthur's rule: after "Go there", the reader must have a way to get back.
-- Trail. After the first travel, a thin line below the top bar lists the stops. Each stop is a control in the color of its group. The current stop has an underline.
-  - The way back: when the reader is not on the first stop, the trail starts with the control "Back". "Back" opens the stop before the current stop, at its verse.
-  - Arthur decided this on 2026-11-14. The trail changes only by travel: "Go there", a read-with entry, or a stop in the trail. The Back control of the browser, the chapter grid, and a scroll do not change the trail.
+- Trail. After the first travel, a thin line below the top bar lists the stops. Each stop is a control in the color of its group. The last stop is the current stop, and it has an underline.
+  - The way back: when the trail has two stops or more, the trail starts with the control "Back". "Back" opens the stop before the last stop, at its verse, and removes the last stop.
+  - Arthur decided this on 2026-11-14. The trail changes only by travel: "Go there", a read-with entry, or a stop in the trail. The Back control of the browser, the chapter grid, and a scroll do not change the trail on a reading page.
+  - Arthur decided these rules on 2026-11-16, after he found two faults of the trail as built. Task 23 builds them.
+    - When the reader selects a stop in the trail, the stops after it are removed. Example: the trail is "Matthew 1 > Romans 1:16 > Mark 8:38". The reader selects "Romans 1:16": the trail is "Matthew 1 > Romans 1:16". The reader selects "Matthew 1": the trail is "Matthew 1".
+    - A trail with one stop shows that stop, with no "Back".
+    - The trail clears when the wall opens, by each way to the wall: "Books", the Back control of the browser, a link, or the address.
+    - A page of the Reference section does not clear the trail. A reload does not clear the trail.
+    - A travel from a place that is not the last stop adds that place and then the target. This is as built, and it is a true record: the reader went to that place by the chapter grid, by a scroll, or by the Back control of the browser.
 - Read-with list. One line below the chapter heading, with the label "Read with". Each entry is a control for travel to that chapter. The source line "From OpenBible.info" is at the end.
 - Echo links. A control at the right of the top bar switches the echo links on and off.
 

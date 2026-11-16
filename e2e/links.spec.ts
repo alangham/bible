@@ -148,7 +148,7 @@ test.describe('links on the reading page', () => {
     await expect(page).toHaveURL(/#\/book\/hebrews\/9$/)
   })
 
-  test('"Go there" opens Exodus 24:8, the trail has the two stops, and "Back" opens Hebrews 9 at verse 20', async ({ page }) => {
+  test('"Go there" opens Exodus 24:8, the trail has the two stops, and "Back" opens Hebrews 9 at verse 20 and removes the last stop', async ({ page }) => {
     await openChapter(page, WIDE, 'hebrews/9')
     await chapter(page, 'hebrews', 9).getByRole('button', { name: 'Verse 20 has a quotation link to Exodus 24:8' }).click()
     await page.getByRole('dialog', { name: 'Exodus 24:8' }).getByRole('link', { name: 'Go there' }).click()
@@ -175,7 +175,8 @@ test.describe('links on the reading page', () => {
     await expect(page).toHaveURL(/#\/book\/hebrews\/9\/20$/)
     await expect(chapter(page, 'hebrews', 9)).toHaveAttribute('data-loaded', 'true')
     await expect(chapter(page, 'hebrews', 9).locator('.vn[data-verse="20"]')).toBeInViewport()
-    // On the first stop, the trail has no "Back".
+    // "Back" removed the last stop. The trail has one stop, and no "Back". docs/TASKS.md Task 23.
+    await expect(stops).toHaveText(['Hebrews 9:20'])
     await expect(stops.nth(0)).toHaveAttribute('aria-current', 'location')
     await expect(trail.getByRole('link', { name: /^Back/ })).toHaveCount(0)
   })
@@ -283,3 +284,155 @@ test.describe('links on the reading page', () => {
     await expect(line.getByRole('button', { name: 'Acts 7:1–8' })).toHaveCount(0)
   })
 })
+
+// The trail. docs/DESIGN.md section 7.7, item "Trail", docs/TASKS.md Task 23 step 9. The last stop is the
+// current stop. A selected stop, and "Back", remove the stops after the stop that opens. The wall clears
+// the trail. The Back control of the browser, a reload, and a page of the Reference section do not change it.
+const TRAIL_KEY = 'bible-trail'
+const trail = (page: Page) => page.getByRole('navigation', { name: 'Trail' })
+const trailStops = (page: Page) => trail(page).getByRole('list').getByRole('link')
+const storedTrail = (page: Page) => page.evaluate((key) => sessionStorage.getItem(key), TRAIL_KEY)
+
+/** Selects a read-with entry of a chapter, and waits for its chapter. */
+async function readWith(page: Page, from: [string, number], name: string, to: [string, number]) {
+  await chapter(page, from[0], from[1]).getByRole('navigation', { name: 'Read with' }).getByRole('link', { name, exact: true }).click()
+  await expect(page).toHaveURL(new RegExp(`#/book/${to[0]}/${to[1]}$`))
+  await expect(chapter(page, to[0], to[1])).toHaveAttribute('data-loaded', 'true')
+}
+
+/** Opens the link at a verse, then selects "Go there". The wide layout has margin labels, the narrow layout has marks. */
+async function goThere(page: Page, viewport: { width: number }, from: [string, number], v: number, type: 'quotation' | 'echo', to: string) {
+  const kind = type === 'quotation' ? 'a quotation link' : 'an echo link'
+  const name = viewport.width >= 1180 ? `Verse ${v} has ${kind} to ${to}` : `${type === 'quotation' ? 'Quotation' : 'Echo'} link to ${to}`
+  await chapter(page, from[0], from[1]).getByRole('button', { name, exact: true }).first().click()
+  await page.getByRole('dialog', { name: to }).getByRole('link', { name: 'Go there' }).click()
+}
+
+/** Matthew 1, then the read-with entry "Luke 1": a trail of two stops. */
+async function twoStops(page: Page, viewport: { width: number; height: number }) {
+  await openChapter(page, viewport, 'matthew/1')
+  await readWith(page, ['matthew', 1], 'Luke 1', ['luke', 1])
+  await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+}
+
+for (const [name, viewport] of [
+  ['1440 by 900 px', WIDE],
+  ['390 by 844 px', NARROW],
+] as const) {
+  test.describe(`the trail, at ${name}`, () => {
+    test('fault 1 and fault 2: the wall clears the trail, and a travel after it starts a new trail', async ({ page }) => {
+      await twoStops(page, viewport)
+      await trailStops(page).getByText('Matthew 1', { exact: true }).click()
+      await expect(page).toHaveURL(/#\/book\/matthew\/1$/)
+      await expect(trailStops(page)).toHaveText(['Matthew 1'])
+      await page.getByRole('link', { name: 'Books', exact: true }).click()
+      await expect(page.locator('main.wall')).toHaveAttribute('data-ready', 'true')
+      await expect.poll(() => storedTrail(page)).toBeNull()
+      await page.getByRole('navigation', { name: 'Books' }).getByRole('link', { name: 'Romans', exact: true }).click()
+      await expect(chapter(page, 'romans', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trail(page)).toHaveCount(0)
+
+      // Fault 2.
+      await goThere(page, viewport, ['romans', 1], 16, 'echo', 'Mark 8:38')
+      await expect(page).toHaveURL(/#\/book\/mark\/8\/38$/)
+      await expect(trailStops(page)).toHaveText(['Romans 1:16', 'Mark 8:38'])
+      await expect(trailStops(page).nth(1)).toHaveAttribute('aria-current', 'location')
+      await expect(trailStops(page).nth(0)).not.toHaveAttribute('aria-current', /.*/)
+    })
+
+    test('a selected stop removes the stops after it, and the last stop is the current stop', async ({ page }) => {
+      await twoStops(page, viewport)
+      await readWith(page, ['luke', 1], 'Jeremiah 32', ['jeremiah', 32])
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1', 'Jeremiah 32'])
+      await expect(trailStops(page).nth(2)).toHaveAttribute('aria-current', 'location')
+
+      await trailStops(page).nth(1).click()
+      await expect(page).toHaveURL(/#\/book\/luke\/1$/)
+      await expect(chapter(page, 'luke', 1).locator('.rd-heading')).toBeInViewport()
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+      await expect(trailStops(page).nth(1)).toHaveAttribute('aria-current', 'location')
+      await expect(trail(page).getByRole('link', { name: 'Back to Matthew 1' })).toHaveCount(1)
+
+      await trailStops(page).nth(0).click()
+      await expect(page).toHaveURL(/#\/book\/matthew\/1$/)
+      await expect(trailStops(page)).toHaveText(['Matthew 1'])
+      await expect(trailStops(page).nth(0)).toHaveAttribute('aria-current', 'location')
+      await expect(trail(page).getByRole('link', { name: /^Back/ })).toHaveCount(0)
+      await expect(trail(page)).toContainText('Trail')
+      expect(JSON.parse((await storedTrail(page))!)).toEqual({ stops: [{ book: 'matthew', c: 1 }] })
+    })
+
+    test('the last stop opens its passage, and no stop is removed', async ({ page }) => {
+      await twoStops(page, viewport)
+      await page.evaluate(() => window.scrollBy(0, 600))
+      await trailStops(page).nth(1).click()
+      await expect(chapter(page, 'luke', 1).locator('.rd-heading')).toBeInViewport()
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+    })
+
+    test('"Back" opens the stop before at its verse, and the trail has one stop', async ({ page }) => {
+      await openChapter(page, viewport, 'hebrews/9')
+      await goThere(page, viewport, ['hebrews', 9], 20, 'quotation', 'Exodus 24:8')
+      await expect(chapter(page, 'exodus', 24)).toHaveAttribute('data-loaded', 'true')
+      await expect(trailStops(page)).toHaveText(['Hebrews 9:20', 'Exodus 24:8'])
+      await trail(page).getByRole('link', { name: 'Back to Hebrews 9:20' }).click()
+      await expect(page).toHaveURL(/#\/book\/hebrews\/9\/20$/)
+      await expect(chapter(page, 'hebrews', 9)).toHaveAttribute('data-loaded', 'true')
+      await expect(chapter(page, 'hebrews', 9).locator('.vn[data-verse="20"]')).toBeInViewport()
+      await expect(trailStops(page)).toHaveText(['Hebrews 9:20'])
+      await expect(trail(page).getByRole('link', { name: /^Back/ })).toHaveCount(0)
+    })
+
+    test('the Back control of the browser does not change the trail', async ({ page }) => {
+      await twoStops(page, viewport)
+      await page.goBack()
+      await expect(page).toHaveURL(/#\/book\/matthew\/1$/)
+      await expect(chapter(page, 'matthew', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+      await expect(trailStops(page).nth(1)).toHaveAttribute('aria-current', 'location')
+    })
+
+    test('a reload does not change the trail', async ({ page }) => {
+      await twoStops(page, viewport)
+      await page.reload()
+      await expect(chapter(page, 'luke', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+      await expect(trailStops(page).nth(1)).toHaveAttribute('aria-current', 'location')
+    })
+
+    test('the Timeline page does not change the trail', async ({ page }) => {
+      await twoStops(page, viewport)
+      if (viewport === NARROW) {
+        await page.getByRole('button', { name: 'Menu', exact: true }).click()
+        await page.locator('#menu-panel').getByRole('link', { name: 'Timeline' }).click()
+      } else {
+        // The wide reading page has no link to the Reference section. docs/DESIGN.md section 9.6.
+        await page.evaluate(() => (window.location.hash = '#/timeline'))
+      }
+      await expect(page.locator('header.ref-bar')).toBeVisible()
+      expect(JSON.parse((await storedTrail(page))!).stops).toHaveLength(2)
+      await page.goBack()
+      await expect(chapter(page, 'luke', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+    })
+
+    test('the Back control of the browser to the wall clears the trail, and the Forward control shows no trail', async ({ page }) => {
+      await page.setViewportSize(viewport)
+      await page.goto('./')
+      await expect(page.locator('main.wall')).toHaveAttribute('data-ready', 'true')
+      await page.getByRole('navigation', { name: 'Books' }).getByRole('link', { name: 'Matthew', exact: true }).click()
+      await expect(chapter(page, 'matthew', 1)).toHaveAttribute('data-loaded', 'true')
+      await readWith(page, ['matthew', 1], 'Luke 1', ['luke', 1])
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+      await page.goBack()
+      await expect(chapter(page, 'matthew', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trailStops(page)).toHaveText(['Matthew 1', 'Luke 1'])
+      await page.goBack()
+      await expect(page.locator('main.wall')).toHaveAttribute('data-ready', 'true')
+      await expect.poll(() => storedTrail(page)).toBeNull()
+      await page.goForward()
+      await expect(chapter(page, 'matthew', 1)).toHaveAttribute('data-loaded', 'true')
+      await expect(trail(page)).toHaveCount(0)
+    })
+  })
+}

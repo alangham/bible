@@ -340,6 +340,21 @@ for (const layout of LAYOUTS) {
     expect(await audit(page, layout.name, 24)).toEqual([])
     expect(await axe(page)).toEqual([])
   })
+
+  // A trail of one stop: the word "Trail", the stop, and no "Back". docs/TASKS.md Task 23 step 11.
+  test(`accessibility: the trail with one stop, ${layout.name} layout`, async ({ page }) => {
+    await page.setViewportSize(layout.viewport)
+    await page.goto('./#/book/matthew/1')
+    await settled(page)
+    await page.getByRole('navigation', { name: 'Read with' }).getByRole('link', { name: 'Luke 1', exact: true }).click()
+    const trail = page.getByRole('navigation', { name: 'Trail' })
+    await expect(trail.getByRole('list').getByRole('link')).toHaveText(['Matthew 1', 'Luke 1'])
+    await trail.getByRole('list').getByRole('link', { name: 'Matthew 1' }).click()
+    await expect(trail.getByRole('list').getByRole('link')).toHaveText(['Matthew 1'])
+    await settled(page)
+    expect(await audit(page, layout.name, 24)).toEqual([])
+    expect(await axe(page)).toEqual([])
+  })
 }
 
 // The menu panel, in the narrow layout only. docs/TASKS.md Task 22 step 14.

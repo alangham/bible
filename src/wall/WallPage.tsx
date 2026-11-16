@@ -10,6 +10,7 @@ import { groupOf, type Book } from '../data/books.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { MenuButton, MenuPanel, ReferenceLinks } from '../TopBarMenu.tsx'
+import { clearTrail } from '../travel/trail.ts'
 import { usePanelKeys } from '../usePanelKeys.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { fitName, measureNames, NAME_FONT, type NameFit } from './fit.ts'
@@ -84,6 +85,9 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
   const widths = useNameWidths(books)
   const reducedMotion = useReducedMotion()
   const ready = widths !== null && screenWidth > 0
+  // The wall clears the trail, by each way to the wall: "Books", the Back control of the browser, a link,
+  // or the address. docs/DESIGN.md section 7.7, docs/TASKS.md Task 23 step 5.
+  useEffect(() => clearTrail(), [])
   const fitFor = (book: Book, columnWidth: number) => {
     const w = widths?.get(book.name)
     return w === undefined ? null : fitName(w, book.name.length, columnWidth)

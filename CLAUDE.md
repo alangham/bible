@@ -11,7 +11,7 @@ Arthur decided on 2026-11-15 to add the King James Version as a second translati
 ## Files you must read before you do work
 
 1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Section 9 is the top bar of 2026-11-15. Where section 9 and an older section differ, section 9 is correct. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9. Task 23 corrects the trail.
 3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
 4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
 5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.
@@ -86,7 +86,7 @@ Use these names in code, comments, and reports. One name for each thing.
 | margin label | The label in the right margin that shows a link, on a wide screen. |
 | pop-up | The panel that shows a linked passage, with "Go there" and "Stay here". |
 | travel | The move from one passage to a linked passage. |
-| trail | The list of passages that the reader visited by travel, with the control "Back". |
+| trail | The list of passages that the reader visited by travel, with the control "Back". The last stop is the current stop. The wall clears the trail. |
 | read-with list | The list at the top of a chapter that names the chapters in other books with the most cross-references to it. |
 | Reference section | The three pages Timeline, Quotations, and Sources. |
 | timeline | The page that shows when each book was written. |

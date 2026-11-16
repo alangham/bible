@@ -1807,3 +1807,80 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+# The name and the icon: Task 28
+
+Arthur decided on 2026-11-16 that the name of the site is "Bible Wall", and he selected a new icon. The design is in section 12 of `docs/DESIGN.md`.
+
+---
+
+## Task 28. The name "Bible Wall", the title of the browser tab, and the icon
+
+Status: DONE
+
+Goal: the name of the site is "Bible Wall". The title of the browser tab starts with the place of the reader. The site has the new icon for a browser tab and for a phone home screen.
+
+The design is in section 12 of `docs/DESIGN.md`. The sheet that Arthur decided from is `docs/screenshots/icon-design/icon-options.png`, option B2.
+
+The designer made the icon files. They are in `public/` now, and they are not in git:
+
+- `favicon.svg`. It replaces the file of the same name, which was the icon of Vite.
+- `favicon-32.png`, `favicon-16.png`
+- `apple-touch-icon.png`, 180 by 180 px
+- `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`
+- `manifest.webmanifest`
+
+WARNING: Do not change the eight files of the designer in `public/`. If a file has a fault, stop and report.
+
+WARNING: Do not change the address of the site, the value `base` in `vite.config.ts`, or `src/router.ts`.
+
+WARNING: Do not change a page in a way that a reader can see, apart from the title of the browser tab and the icon. No page shows the name.
+
+WARNING: Do not change the words "Books of the Bible" in a document where they are the name of the wall image.
+
+Steps:
+
+1. Read section 12 of `docs/DESIGN.md`. Look at the row B2 of `docs/screenshots/icon-design/icon-options.png`.
+2. Check the eight files in `public/`:
+   - Each PNG file has the size that its name or the table of section 12.3 gives.
+   - `favicon.svg` has ten `rect` elements with the ten group colors of `src/data/books.ts`, in the order of `GROUPS`. It does not have the color `#863bff` of the old icon.
+   - `manifest.webmanifest` is correct JSON, with the name "Bible Wall", the short name "Bible Wall", and the three icons.
+3. Change `index.html`:
+   - The title is "Bible Wall".
+   - Keep the link to `favicon.svg`. Add links to `favicon-32.png` and `favicon-16.png` with their sizes, to `apple-touch-icon.png`, and to `manifest.webmanifest`.
+   - Add `<meta name="apple-mobile-web-app-title" content="Bible Wall" />` and `<meta name="theme-color" content="#ffffff" />`.
+   - After the build, each address in `dist/index.html` and in the manifest must be correct below `/bible/`. The manifest has `"start_url": "/bible/"` and `"scope": "/bible/"`, and its icon addresses are relative to the manifest.
+4. Change the name in the code: the two headings in `src/App.tsx` and the hidden heading in `src/wall/WallPage.tsx` say "Bible Wall". Search `src/`, `index.html`, and `e2e/` for "Books of the Bible", and change each place where it is the name of the site.
+5. Set the title of the browser tab, by section 12.2:
+   - The wall: "Bible Wall".
+   - The reading page: the book name and the chapter number that the top bar shows, then " · ", then "Bible Wall". Example: "John 3 · Bible Wall". The character is the middle dot, U+00B7, with one space before it and one space after it.
+   - The title of the reading page follows the chapter of the top bar when the reader scrolls, and after travel.
+   - The Reference pages: "Timeline · Bible Wall", "Quotations · Bible Wall", and "Sources · Bible Wall".
+   - The page for a book that the site does not have, and each other page: "Bible Wall".
+   - Put the name "Bible Wall" in one place in the code, and make each title from it.
+6. Add browser tests in a new file `e2e/title.spec.ts`:
+   - The wall has the title "Bible Wall".
+   - John 3 has the title "John 3 · Bible Wall". After a scroll to John 4, the title is "John 4 · Bible Wall". After "Books", the title is "Bible Wall".
+   - After travel with "Go there", the title has the linked chapter.
+   - "Psalms 23 · Bible Wall" for Psalm 23, with the book name as the top bar shows it.
+   - The three Reference pages have their titles.
+   - The hidden heading of the wall is "Bible Wall".
+   - The page has the links to `favicon.svg`, to the two PNG icons, to `apple-touch-icon.png`, and to the manifest, and each address gives a file: the answer has the status 200.
+   - The manifest that the page links to has the name "Bible Wall", and each of its three icon addresses gives a file with the status 200.
+   - No element of the wall, of John 3, or of the Sources page has the words "Books of the Bible".
+7. If a test of an earlier task uses the old title or the old heading, change it. Give each changed test and the reason in the report.
+8. In `docs/DATA-SOURCES.md`, section 7 or the section that fits: the icon is a drawing of the designer for this site, from the ten group colors. It has no other source and no licence of a third person. Remove a record of the Vite icon, if the file has one.
+9. Take two screenshots of the browser tests at 1440 by 900 px, John 3 and the wall, and save them in `docs/screenshots/task-28/`. Say in the report that a screenshot of the page does not show the tab, and give the title that each test read.
+10. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+11. After the push and the deploy, check that these addresses of the public site give a file: `favicon.svg`, `apple-touch-icon.png`, and `manifest.webmanifest`, below `https://alangham.github.io/bible/`. Give each status in the report.
+
+Done when:
+
+- The title of the browser tab is "Bible Wall" on the wall, and it starts with the place on a reading page and on a Reference page.
+- The site has the new icon, and no file has the icon of Vite.
+- The words "Books of the Bible" are not on a page.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests. Arthur checks the icon on a real phone: the browser tab, and the home screen after "Add to Home Screen".

@@ -283,3 +283,13 @@ The sources of the facts about the Bible are in `docs/CONTENT-SOURCES.md`. Arthu
 
 - The SHA-256 of the edition C file is the same as that of the file that the designer examined.
 - Arthur's download from OpenBible.com accepted the terms of section 16 of the terms page.
+
+---
+
+## 10. The icon of the site
+
+Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for code libraries, so the icon has this section of its own.
+
+- The icon is a drawing of the designer for this site: ten blocks in the ten group colors of `src/data/books.ts`, in the order of `GROUPS`, with white lines between them. It has no other source and no licence of a third person.
+- The files are in `public/`: `favicon.svg`, `favicon-32.png`, `favicon-16.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, and `manifest.webmanifest`. Task 28 did not change them.
+- `favicon.svg` replaces the icon of Vite, the build tool, which came with the project setup. This file had no record of the Vite icon.

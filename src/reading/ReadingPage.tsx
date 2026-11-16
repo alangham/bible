@@ -24,6 +24,7 @@ import type { Intro } from '../data/intros.ts'
 import { setRedLetters, useRedLetters } from '../data/redLetters.ts'
 import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
 import { getTranslation, setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
+import { usePageTitle } from '../pageTitle.ts'
 import { MenuButton, MenuPanel } from '../TopBarMenu.tsx'
 import { usePanelKeys } from '../usePanelKeys.ts'
 import type { ChapterRef, LinkEnd } from '../data/links.ts'
@@ -142,6 +143,10 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   const written = useRef<string | null>(null)
   const [start, setStart] = useState<Start | null>(null)
   const [current, setCurrent] = useState<ChapterPlace | null>(null)
+  // The title of the browser tab: the book name and the chapter number of the top bar, as "John 3 · Bible Wall".
+  // It follows the chapter of the top bar during a scroll and after travel. docs/DESIGN.md section 12.2.
+  const titlePlace = valid ? (current ?? start) : null
+  usePageTitle(titlePlace ? `${titlePlace.book.name} ${titlePlace.n}` : undefined)
   const [popup, setPopup] = useState<{ end: LinkEnd; anchor: HTMLElement; reference?: LineReference } | null>(null)
   const trail = useTrail()
   const kept = useRef<KeptPlace | null>(null)

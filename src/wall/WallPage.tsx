@@ -9,6 +9,7 @@ import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../
 import { groupOf, type Book } from '../data/books.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
+import { SITE_NAME } from '../pageTitle.ts'
 import { MenuButton, MenuPanel, ReferenceLinks } from '../TopBarMenu.tsx'
 import { clearTrail } from '../travel/trail.ts'
 import { usePanelKeys } from '../usePanelKeys.ts'
@@ -182,7 +183,7 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
       {/* The click handler only adds the move to the links. The links work with no script also. */}
       <main ref={ref} className="wall" data-layout={layout} data-ready={ready} onClick={onClick}>
         {/* The wall has no visible title. A screen reader gets this heading. */}
-        <h1 className="sr-only">Books of the Bible</h1>
+        <h1 className="sr-only">{SITE_NAME}</h1>
         {content}
       </main>
     </>

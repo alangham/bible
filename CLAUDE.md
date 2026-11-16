@@ -1,5 +1,7 @@
 # Bible site: instructions for Claude Code
 
+The name of the site is "Bible Wall", from 2026-11-16. Section 12 of `docs/DESIGN.md`. "Books of the Bible" is the name of the wall image that Arthur likes, and it was the name of the site before.
+
 ## What this project is
 
 A static website for reading the Bible. The owner is Arthur.
@@ -11,7 +13,7 @@ Arthur decided on 2026-11-15 to add the King James Version as a second translati
 ## Files you must read before you do work
 
 1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Section 9 is the top bar of 2026-11-15. Where section 9 and an older section differ, section 9 is correct. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9. Task 23 corrects the trail. Task 24 adds the text size of section 10. Task 25 is a report on the marks of the words of Jesus in the source files. It changes no page. Tasks 26 and 27 build the red letters of section 11.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9. Task 23 corrects the trail. Task 24 adds the text size of section 10. Task 25 is a report on the marks of the words of Jesus in the source files. It changes no page. Tasks 26 and 27 build the red letters of section 11. Task 28 changes the name of the site to "Bible Wall" and adds the icon of section 12.
 3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
 4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
 5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.

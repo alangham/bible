@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { SourcesPage } from './SourcesPage.tsx'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
+import { SITE_NAME, usePageTitle } from './pageTitle.ts'
 import { ReadingPage } from './reading/ReadingPage.tsx'
 import { QuotationsPage } from './reference/QuotationsPage.tsx'
 import { useRoute } from './router.ts'
@@ -18,6 +19,13 @@ function App() {
   // Undefined while loading. Null if the file did not load: the reading page shows a message.
   const [intros, setIntros] = useState<Intro[] | null | undefined>(undefined)
 
+  // The title of the browser tab, docs/DESIGN.md section 12.2. The reading page sets its own title from the
+  // chapter of its top bar. Each other page has the name of its Reference page, or no place. While the book
+  // list loads, or when it did not load, the page shows a message, and the title is the name only.
+  const reading = route.page === 'book' || route.page === 'chapter'
+  const refPlace = { sources: 'Sources', timeline: 'Timeline', quotations: 'Quotations' } as Record<string, string | undefined>
+  usePageTitle(error || !books ? undefined : reading ? null : refPlace[route.page])
+
   useEffect(() => {
     loadBooks().then(setBooks, (e: unknown) => setError(String(e)))
     loadIntros().then(setIntros, () => setIntros(null))
@@ -27,14 +35,14 @@ function App() {
   if (error) {
     page = (
       <main className="message">
-        <h1>Books of the Bible</h1>
+        <h1>{SITE_NAME}</h1>
         <p role="alert">The book list did not load. {error}</p>
       </main>
     )
   } else if (!books) {
     page = (
       <main className="message">
-        <h1>Books of the Bible</h1>
+        <h1>{SITE_NAME}</h1>
       </main>
     )
   } else if (route.page === 'book' || route.page === 'chapter') {

@@ -10,6 +10,8 @@ Section 10 is the text size that Arthur decided on 2026-11-16. Task 24 in `docs/
 
 Section 11 is the red letters that Arthur decided on 2026-11-16. Tasks 26 and 27 in `docs/TASKS.md` build it. It changes the word on the control of section 10.4 to "Text", and it adds one sentence to the rule of section 8.1.
 
+Section 12 is the name "Bible Wall" and the icon that Arthur decided on 2026-11-16. Task 28 in `docs/TASKS.md` builds it.
+
 ## 1. Goal
 
 The reader feels that they are inside the Bible. The reference is "The Long Light" template from scrolltide.co: a real 3D book on a sunlit linen table, pages that curl when you drag them, and a layered paper-cut scene on each spread. Use the idea. Do not copy the template's code, text, or art.
@@ -664,3 +666,52 @@ Arthur decided this section on 2026-11-16, from the report of Task 25 and from r
 1. The report compares the two sets verse by verse. In the 613 verses where each set marks a part of the verse, no one compared the marked parts.
 2. The designer found the fault of Mark 12:37 in a list of the report. No one searched all marks for a fault of the same kind.
 3. No test with a reader who does not see red and green well. The switch gives black text.
+
+## 12. The name and the icon of 2026-11-16
+
+Arthur decided this section on 2026-11-16. The sheet of the icon options that he decided from is `docs/screenshots/icon-design/icon-options.png`. Task 28 in `docs/TASKS.md` builds this section.
+
+### 12.1 The name
+
+- The name of the site is "Bible Wall". Before this section, it was "Books of the Bible".
+- Reason: "Books of the Bible" has 18 characters. It is too long for a browser tab on a phone, and for the label below an icon on a phone home screen. "Bible Wall" has 10 characters, it has the word "Bible", and it names the wall, which only this site has.
+- No page shows the name to the eye. The name is in the title of the browser tab, in the label of a home screen icon, and in a hidden heading on the wall for a screen reader.
+- The address of the site and the name of the repository do not change.
+- The words "Books of the Bible" stay where they are the name of the wall image that Arthur likes, in the documents.
+
+### 12.2 The title of the browser tab
+
+- The wall: "Bible Wall".
+- The reading page: the book name and the chapter number of the top bar, then " · ", then the name. Example: "John 3 · Bible Wall". The title follows the chapter of the top bar when the reader scrolls.
+- The pages of the Reference section: "Timeline · Bible Wall", "Quotations · Bible Wall", and "Sources · Bible Wall".
+- Each other page: "Bible Wall".
+- Reason: on a phone, a tab shows only the start of its title. The place is the useful part.
+
+### 12.3 The icon
+
+- The icon is option B2 of the sheet: ten blocks in three columns, one block for each group, in Bible order and in the group colors of section 7.3, with white lines between them. The blocks fill a tile to its edges.
+- It replaces the icon of Vite, the build tool, which came with the project setup.
+- The blocks are on the pixel grid of a 16 px icon: the tile is 16 units wide, the columns are 5, 4, and 5 units wide, and each line is 1 unit.
+- The designer made the files. They are in `public/`:
+
+| File | Use |
+|---|---|
+| `favicon.svg` | The browser tab. The tile has round corners. |
+| `favicon-32.png`, `favicon-16.png` | The browser tab, for a browser that does not use the SVG file. |
+| `apple-touch-icon.png` | The home screen of an iPhone, 180 px. A full square: the phone cuts the corners. |
+| `icon-192.png`, `icon-512.png` | The home screen of an Android phone. Full squares. |
+| `icon-maskable-512.png` | An Android phone that cuts the icon to a circle. The blocks are smaller, on white, so that the circle cuts no block. |
+| `manifest.webmanifest` | The name "Bible Wall" and the icons, for a phone home screen. |
+
+- The manifest has `"display": "browser"`. A home screen icon opens the site in the browser, as a bookmark does. The site does not become an app with no browser controls.
+
+### 12.4 Selected by the designer, without a decision by Arthur
+
+- The titles of the browser tab in section 12.2, and the sign " · ".
+- The hidden heading on the wall gets the new name.
+- The files of section 12.3, the white color of the theme, and `"display": "browser"`.
+
+### 12.5 Not checked
+
+1. The designer made the icon images with Chrome. No one tested Safari, an iPhone, or an Android phone.
+2. Two quick web searches on 2026-11-16 found no app or site with the name "Bible Wall". The search was not complete.

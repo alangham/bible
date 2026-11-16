@@ -1648,3 +1648,156 @@ Done when:
 - `npm run build` has no errors, and the tests pass.
 
 Stop and report. Do not start a task that adds red letters. Arthur decides the next tasks from the report.
+
+---
+
+# Red letters: Tasks 26 and 27
+
+Arthur decided on 2026-11-16 that the site shows the words of Jesus in red. The design is in section 11 of `docs/DESIGN.md`. Task 26 puts the marks in the site data, and no page changes. Task 27 shows the red letters and adds the switch.
+
+---
+
+## Task 26. Red letters: the marks in the site data
+
+Status: DONE
+
+Goal: the site data of the two translations has the marks of the words of Jesus. The pages show the same words as before, with no red letters and no other change that a reader can see.
+
+The design is in section 11 of `docs/DESIGN.md`, and the facts are in `docs/reviews/task-25-words-of-jesus-report.md`. Arthur decided on 2026-11-16:
+
+- Each translation uses the marks of its own source files.
+- The site shows all 1,420 Berean marks. The 47 marks that do not fit the words of the site exactly go in place with a search that ignores the spaces and the fault characters `[’’]`.
+- The form of the marks in the site data is Form A of the report.
+- One exception: Mark 12:37 of the King James Version.
+
+WARNING: Do not change the words of a verse. After this task, the words of each verse in `public/data/text/` and in `public/data/text-kjv/` must be the same as before this task, character by character.
+
+WARNING: Do not change a file in `sources/`.
+
+WARNING: Do not add or remove a mark. The one exception is step 4. Do not write a fact from memory about which words Jesus spoke.
+
+WARNING: No page shows red letters in this task. Task 27 does that.
+
+Steps:
+
+1. Read section 11 of `docs/DESIGN.md`, and steps 3, 6, 7, and 9 of `docs/reviews/task-25-words-of-jesus-report.md`.
+2. The form of the marks in the site data, Form A:
+   - In a text block (`k: "p"`), a run of marked words is an item `{ "j": "words" }`, in place of a plain string. The words before the mark and after the mark in the same string stay plain strings.
+   - In the King James Version data, added words inside a mark keep their item and get `"j": 1`, for example `{ "a": "it", "j": 1 }`.
+   - An item `{ "v": n }` is never inside an item `j`. A mark that has words of more than one verse, or words in more than one text block, gives one item `j` for each part.
+   - The quotation marks and the other characters that the source has inside a mark are in the item `j`. A space at the start or at the end of a mark stays where it is in the words of the verse now.
+3. Change `scripts/build-text.mjs`: it reads the marks `\wj` of `sources/bsb/usfm/` and writes them in Form A.
+   - The words of the site are from `sources/bsb/bsb.txt`, as now. A mark gives the place of its words in the words of the verse.
+   - If the words of a mark are not in the words of the verse exactly, search with each space removed from the two texts, and with the characters `[’’]` removed from the words of the mark. The report found all 47 such marks with this search.
+   - If the script does not find a mark, or finds it at more than one place and cannot decide by the order of the marks in the verse, the script stops with an error that names the book, the chapter, and the verse.
+   - Expected: the script places 1,420 marks.
+4. Change `scripts/build-text-kjv.mjs`: it reads the marks `\wj` of `sources/kjv/usfm/` and writes them in Form A.
+   - Expected: the script places 2,038 marks, each found exactly.
+   - The one exception, Mark 12:37. The source file marks "David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly." On the site, the mark ends after "his son?". The words " And the common people heard him gladly." are not marked. Arthur decided this on 2026-11-16: the last sentence is words of the writer.
+   - Make the exception a list in the script, with the form of the list `SPLIT`. The script stops with an error if the words of the exception are not in the mark exactly once.
+5. Run the two scripts. Write the data files again.
+6. Change the code that reads the text data, so that an item `j` is words. Add the type and a function `isMarked` in `src/data/text.ts`, with the form of `isAdded`. Each place that reads the items of a text block must read the new item: `src/book/ChapterBody.tsx`, `src/data/passage.ts`, `src/book/linkEnds.ts`, and each other file that reads the items. The page shows the words of an item `j` as it shows a plain string, with no new element that changes the look.
+7. Change the unit tests that compare the words of each verse with the sources, `src/data/text.test.ts` and `src/data/textKjv.test.ts`: they read an item `j` as words. Their expected words do not change. They must pass for all 31,086 and all 31,102 verses.
+8. Add unit tests for the marks, for each translation:
+   - The data has the marks of each mark of the source: the test reads the source files, and compares the marked words of each verse in the data with the marked words of that verse in the source, with the spaces and `[’’]` ignored for the Berean Standard Bible.
+   - The number of verses with marked words, by the classes of the report: Berean Standard Bible, 1,405 verses "all" and 642 verses "part". King James Version, 1,401 verses "all" and 627 verses "part". These are the numbers of the report, with Mark 12:37 of the King James Version moved from "all" to "part". If your numbers differ, stop and report. Do not change the expected numbers to make the test pass.
+   - No book has a mark, apart from these: Berean Standard Bible, 9 books: Matthew, Mark, Luke, John, Acts, 1 Corinthians, 2 Corinthians, Hebrews, Revelation. King James Version, the same without Hebrews.
+   - John 3:16 is "all" in the two translations. Matthew 3:17 is "none" in the two translations.
+   - Mark 12:37 of the King James Version: "And the common people heard him gladly." is not in a mark, and "David therefore himself calleth him Lord" is in a mark.
+   - No item `j` has an item `v` inside it, and no item `j` is empty.
+9. Add one browser test: with each translation, the text of Matthew 4 and of John 3 on the page is the same as the words of the data, and no element of the chapter has the color `#8B1A1A`.
+10. Take screenshots of Matthew 4 with each translation, at 1440 by 900 px and at 390 by 844 px, before your change and after it. Compare them. They must be the same. Save the four screenshots of after in `docs/screenshots/task-26/`.
+11. In `docs/DATA-SOURCES.md`, in sections 2 and 9: the site now takes the marks of the words of Jesus. Record the 47 Berean marks and the search that places them. Record the exception of Mark 12:37 in section 9, with the words of the source and the words that the site marks, next to the record of the 13 split words.
+12. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The data of the two translations has the marks in Form A: 1,420 marks of the Berean files and 2,038 marks of the King James Version files, with the one exception.
+- The words of each verse did not change, and the tests of the words pass.
+- No page looks different.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the size of `public/data/text/` and of `public/data/text-kjv/` before and after. Do not start Task 27.
+
+---
+
+## Task 27. Red letters: the pages and the switch
+
+Status: TODO
+
+Goal: the reading page and the pop-up show the words of Jesus in red. The reader switches red letters on and off. The Sources page says where the red letters are from.
+
+The design is in section 11 of `docs/DESIGN.md`. The five renders are in `docs/screenshots/red-design/`:
+
+- `matthew-4-1440.png`, `matthew-4-390.png`: Matthew 4 with red letters, Berean Standard Bible.
+- `john-14-390.png`: a long speech.
+- `john-3-kjv-text-list-1440.png`: John 3 of the King James Version, with the text list open.
+- `john-14-menu-390.png`: the menu panel with the row "Red letters".
+
+The renders are a sketch on the built site of Task 24. Use their look. Do not copy code from them.
+
+WARNING: Do this task only when Task 26 is `DONE`.
+
+WARNING: Do not change a data file, a build script, or a file in `sources/`.
+
+WARNING: The color of red letters is `#8B1A1A`. Do not use this color for a different element. Do not change a group color.
+
+WARNING: Do not change the look of a page with red letters off, apart from the control of step 4 and the row of step 5.
+
+Steps:
+
+1. Read section 11 of `docs/DESIGN.md`. Look at the five renders.
+2. Add `src/data/redLetters.ts`, with the form of the echo links setting in `src/travel/travel.ts`: the storage key `bible-red-letters`, the values `on` and `off`, a function that sets it, and a hook that gives it. The first visit gives on. A stored value that is not `off` gives on.
+3. Show the red letters.
+   - In `src/book/ChapterBody.tsx`, the words of an item `j` are in an element with a class for red letters. Added words with `"j": 1` are in that class also, and stay in italics.
+   - With red letters on, the element has the color `#8B1A1A`. With red letters off, it has the color of the text around it. Do this with one attribute on `.reading` and one style rule, so that a change of the switch does not build the page again.
+   - The verse numbers, the marks and the labels of the links, the headings, the cross-reference lines, and the notes do not become red.
+   - In the pop-up, the passage text `.pop-text` shows the marked words in the same color, by the same switch. The reason line and the other parts of the pop-up do not become red.
+   - The light background of the linked verse after travel stays. Make sure that the red letters have a contrast of 4.5 to 1 or more on it.
+4. The text control, wide layout. It is the text size control of Task 24.
+   - It shows the word "Text", not "Text size". For a screen reader, its name is "Text settings".
+   - Its list, the text list, has the three text sizes as now. Below them, add a thin line with the look of the line in the menu panel, then the row "Red letters".
+   - The row "Red letters" is a button with the name "Red letters" and `aria-pressed`, with the look of a row of the list. It has the place for the check mark, empty, then the words "Red letters", then the word "On" or "Off" at the right, in the secondary ink color. The word is hidden from a screen reader, as in the row "Echo links".
+   - A click on the row changes the state, and the list stays open. A click on a text size closes the list, as now.
+   - The group of the three text sizes keeps the label "Text size".
+5. The row "Red letters", narrow layout, in the menu panel of the reading page.
+   - It is below the row "Text size" and above the thin line.
+   - It has the form and the look of the row "Echo links": a button with the name "Red letters" and `aria-pressed`, and the word "On" or "Off" at the right.
+   - A tap changes the state, and the panel stays open.
+   - The menu panel of the wall does not have this row.
+6. A change of the switch does not move the page. The text has the same width with red letters on and off.
+7. The Sources page, `src/SourcesPage.tsx`. Add this paragraph after the paragraph about the headings of the King James Version pages. Do not change its words:
+   - "The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The two translations do not mark the same words in each verse. The site changes one mark: in Mark 12:37 of the King James Version, the file also marks the sentence "And the common people heard him gladly.", and the site does not."
+8. Add a unit test file for `src/data/redLetters.ts`: the first visit, the two values, and a wrong stored value.
+9. Add browser tests in a new file `e2e/redletters.spec.ts`, at 1440 by 900 px and at 390 by 844 px, if the test does not give a size.
+   - First visit, Berean Standard Bible, Matthew 4:4: the words "It is written:" have the color `#8B1A1A`, and the words "But Jesus answered," have the ink color.
+   - Matthew 4:3, the words of the tempter, have the ink color.
+   - The verse number of Matthew 4:4 has the color of its group, not `#8B1A1A`.
+   - King James Version, John 3:3: "Verily, verily, I say unto thee" is red, and "Jesus answered and said unto him," is not.
+   - King James Version, Mark 12:37: "And the common people heard him gladly." is not red.
+   - King James Version, a verse where added words are in a mark: the added words are red and in italics. Find such a verse in the data. Do not write one from memory.
+   - Genesis 1 and Romans 1 have no red element.
+   - 390 px: "Menu" has the row "Red letters" with "On". A tap gives "Off", `aria-pressed="false"`, no red element in Matthew 4, and the panel is open. A second tap gives red letters again.
+   - 1440 px: the text control shows "Text", and its name is "Text settings". Its list has the row "Red letters". A click gives "Off", the list is open, and Matthew 4 has no red element.
+   - After a reload, the selection stays. The storage has the key `bible-red-letters`.
+   - Switch red letters off at 390 px. Set the window to 1440 by 900 px. Matthew 4 has no red element.
+   - The switch does not move the page: the place of Matthew 4:7 on the screen is the same before and after a change, with a tolerance of 1 px.
+   - The pop-up: open a link whose passage has words of Jesus, and find it in the data. The marked words in `.pop-text` are red with red letters on, and have the ink color with red letters off.
+   - The Sources page has the paragraph of step 7.
+   - The wall has no control with the words "Red letters".
+   - The axe-core check passes on Matthew 4 and on John 14 with red letters on, at the two sizes, with each translation, and on Matthew 4 with the text list open at 1440 px.
+   - The row "Red letters" is 24 by 24 px or more in each layout, gets the focus with the keyboard, and operates with the keyboard.
+10. The tests of Task 24 use the name "Text size: Standard" and the words "Text size" of the control. Change them to the new name and the new word. Give each changed test and the reason in the report.
+11. Take screenshots of the five views of the renders, with the same file names, at the same sizes. Save them in `docs/screenshots/task-27/`. Compare each with its render, and give each difference in the report.
+12. In `CLAUDE.md`, section "Names", the designer added the names for this task. Use them: text control, text list, red letters, red letters switch.
+13. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The reading page and the pop-up show the marked words in `#8B1A1A`, with each translation.
+- The reader switches red letters on and off in the two layouts, and the selection stays after a reload.
+- With red letters off, the text is as before Task 26.
+- The Sources page has the paragraph.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.

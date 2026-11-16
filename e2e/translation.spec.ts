@@ -12,12 +12,12 @@ const VIEWPORTS = [
 ]
 const KEY = 'bible-translation'
 
-type Item = string | { v?: number; a?: string; o?: number }
+type Item = string | { v?: number; a?: string; o?: number; j?: string | 1 }
 interface TextFile {
   chapters: { blocks: { k: string; c?: Item[] }[] }[]
 }
 
-/** The words of one verse in a data file: its strings and its added words. */
+/** The words of one verse in a data file: its strings, its added words, and its marked words (Task 26). */
 function dataVerse(folder: 'text' | 'text-kjv', book: string, c: number, v: number): string {
   const text = JSON.parse(readFileSync(new URL(`../public/data/${folder}/${book}.json`, import.meta.url), 'utf8')) as TextFile
   let verse = 0
@@ -29,6 +29,7 @@ function dataVerse(folder: 'text' | 'text-kjv', book: string, c: number, v: numb
         if (verse === v) out += item
       } else if (item.v !== undefined) verse = item.v
       else if (item.a !== undefined && verse === v) out += item.a
+      else if (typeof item.j === 'string' && verse === v) out += item.j
     }
   }
   return out.replace(/\s+/g, ' ').trim()

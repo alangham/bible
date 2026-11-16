@@ -8,6 +8,8 @@ WARNING: Section 9 is the top bar that Arthur decided on 2026-11-15. It changes 
 
 Section 10 is the text size that Arthur decided on 2026-11-16. Task 24 in `docs/TASKS.md` builds it. It adds one control to the top bar and one row to the menu panel of section 9.
 
+Section 11 is the red letters that Arthur decided on 2026-11-16. Tasks 26 and 27 in `docs/TASKS.md` build it. It changes the word on the control of section 10.4 to "Text", and it adds one sentence to the rule of section 8.1.
+
 ## 1. Goal
 
 The reader feels that they are inside the Bible. The reference is "The Long Light" template from scrolltide.co: a real 3D book on a sunlit linen table, pages that curl when you drag them, and a layered paper-cut scene on each spread. Use the idea. Do not copy the template's code, text, or art.
@@ -401,7 +403,7 @@ Arthur decided this section on 2026-11-15. The evidence is in `docs/reviews/task
 ### 8.1 The rule
 
 - The King James Version is a second translation of the site, beside the Berean Standard Bible.
-- A translation changes only the words. The reading page of the King James Version shows the section headings and the cross-reference lines of the Berean files above the words of the King James Version.
+- A translation changes only the words. From section 11, the marks of the words of Jesus go with the words: each translation has its own red letters. The reading page of the King James Version shows the section headings and the cross-reference lines of the Berean files above the words of the King James Version.
 - The links, the read-with lists, the introductions, and the dates are the same for the two translations.
 - The site writes no new content for the King James Version.
 - The publisher of the Berean Standard Bible uses the same rule in its own file of the King James Version, `https://openbible.com/docx/kjv.docx`. The site does not use that file. The file is evidence only.
@@ -590,6 +592,7 @@ These do not change: the top bar, the trail, the three panels, the heading of a 
 - When the reader changes the text size on the reading page, the verse at the top of the page stays at the same place, as for a change of the translation.
 - In the wide layout, the labels in the margin stay on the lines of their verses after a change.
 - The text size list is a fourth panel. The rules of section 9.7 apply to it.
+- Section 11.5 changes the word on the control to "Text", and adds the row "Red letters" to its list. From then, the names are the text control and the text list.
 
 ### 10.6 Selected by the designer, without a decision by Arthur
 
@@ -601,3 +604,63 @@ These do not change: the top bar, the trail, the three panels, the heading of a 
 ### 10.7 Not decided
 
 1. At 24 px on a phone, poetry lines break more. Arthur looks at the built site. If a size is wrong, the correction is one number.
+
+## 11. Red letters of 2026-11-16
+
+Arthur decided this section on 2026-11-16, from the report of Task 25 and from renders. The report is `docs/reviews/task-25-words-of-jesus-report.md`. The renders are in `docs/screenshots/red-design/`. Tasks 26 and 27 in `docs/TASKS.md` build this section.
+
+### 11.1 Reason
+
+- Many readers know Bibles that print the words of Jesus in red.
+- The King James Version has no quotation marks. Red letters show where Jesus starts to speak and where He stops.
+- The source files of the two translations have marks for the words of Jesus. The site writes no content for this.
+
+### 11.2 Which words are red
+
+- Each translation uses the marks of its own source files: `sources/bsb/usfm/` for the Berean Standard Bible, and `sources/kjv/usfm/` for the King James Version. The marker is `\wj`.
+- So the rule of section 8.1 gets one addition: a translation changes the words, and the marks of the words of Jesus with them. All other structure stays that of the Berean data.
+- The two sets give the same class to all but 46 of the 31,086 verses that the two have. In those 46 verses, each translation shows its own marks. The report lists them.
+- The King James Version files mark 8 verses that the main text of the Berean Standard Bible does not have. They are red on the King James Version pages.
+- No person and no agent adds a mark or removes a mark, with the one exception of section 11.3.
+- The Berean files have 1,420 marks. 47 of them do not fit the words of the site exactly, because of spaces and the fault characters `[’’]`. The build puts each of them in place with a search that ignores the spaces and these characters. The site shows all 1,420 marks.
+- The King James Version files have 2,038 marks. All of them fit the words of the site exactly.
+
+### 11.3 One exception: Mark 12:37 in the King James Version
+
+- The source file marks all words of the verse: "David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly."
+- The last sentence, "And the common people heard him gladly.", is words of the writer.
+- On the site, the mark ends after "his son?". The source file does not change. `docs/DATA-SOURCES.md` records the exception, as it records the 13 split words.
+
+### 11.4 The look
+
+- The color of red letters is `#8B1A1A`. Its contrast against white is 9.3 to 1. It is darker than each group color, so a reader does not mistake it for a link.
+- Arthur selected this color on 2026-11-16, over the bright red `#C8102E`, which is almost the Law color `#C2255C`.
+- Red letters show in the text of a chapter, and in the passage text of the pop-up.
+- These do not become red: the verse numbers, which keep the color of their group, the marks and the labels of the links, the headings, the cross-reference lines, and the notes.
+- The quotation marks that the Berean marks have inside them are red. The words that the King James Version translators added stay in italics, and are red inside a mark.
+- With red letters off, all words have the ink color, as before this section.
+
+### 11.5 The switch
+
+- The reader switches red letters on and off with the red letters switch. The first visit has red letters on.
+- Narrow layout: the menu panel of the reading page has the row "Red letters", with "On" or "Off" at the right, below the row "Text size". A tap changes the state, and the panel stays open.
+- Wide layout: the control of section 10.4 now shows the word "Text", not "Text size". Its list has the three text sizes, then a thin line, then the row "Red letters" with "On" or "Off" at the right. A click on the row changes the state, and the list stays open.
+- The names from this section: the control is the text control, and its list is the text list.
+- The browser keeps the selection in its storage, with the key `bible-red-letters`. One selection applies to the two layouts and the two translations.
+
+### 11.6 The credit on the Sources page
+
+- The Sources page gets one paragraph: the red letters are the words of Jesus as the files of each translation mark them, the two translations differ in some verses, and the one exception of section 11.3.
+
+### 11.7 Selected by the designer, without a decision by Arthur
+
+- Red letters are on at the first visit.
+- The place of the switch in each layout, and the word "Text" on the control.
+- The list of what does not become red, in section 11.4.
+- The form of the marks in the site data: Form A of the report.
+
+### 11.8 Not decided and not checked
+
+1. The report compares the two sets verse by verse. In the 613 verses where each set marks a part of the verse, no one compared the marked parts.
+2. The designer found the fault of Mark 12:37 in a list of the report. No one searched all marks for a fault of the same kind.
+3. No test with a reader who does not see red and green well. The switch gives black text.

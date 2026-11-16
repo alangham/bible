@@ -12,8 +12,24 @@ import type { Book } from '../data/books.ts'
 import { headingKey, type LinkEnd } from '../data/links.ts'
 import { passageName } from '../data/passage.ts'
 import { endKey, linkColor } from './linkEnds.ts'
-import { isAdded, isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type NoteRun } from '../data/text.ts'
+import { isAdded, isMarked, isOmitted, isVerseMark, type Block, type ChapterText, type CrossRefLine, type Inline, type MarkedWords, type NoteRun } from '../data/text.ts'
 import { lineParts, type LineReference } from '../data/xrefs.ts'
+
+/**
+ * The items of a text block, with each item of marked words (the words of Jesus, Task 26) as a plain string,
+ * and the plain strings next to each other joined. So the words between two other items are one text node,
+ * as before Task 26, and the page looks the same. Added words in a mark stay added words. Task 27 shows the
+ * red letters.
+ */
+function plainWords(items: Inline[]): Exclude<Inline, MarkedWords>[] {
+  const out: Exclude<Inline, MarkedWords>[] = []
+  for (const x of items) {
+    const t = isMarked(x) ? x.j : x
+    if (typeof t === 'string' && typeof out.at(-1) === 'string') out[out.length - 1] += t
+    else out.push(t)
+  }
+  return out
+}
 
 export interface ChapterMarks {
   verses: Map<number, LinkEnd[]>
@@ -154,7 +170,7 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
       case 'p':
         return (
           <p key={key} className={`tb tb-${block.s}`}>
-            {block.c.map((item, i) => {
+            {plainWords(block.c).map((item, i) => {
               if (isVerseMark(item)) {
                 const ends = visible(marks?.verses.get(item.v))
                 // A verse number at the start of a line hangs in the margin of a poetry line.

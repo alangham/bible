@@ -410,7 +410,7 @@ function siteVerses(dir) {
             v = x.v
             continue
           }
-          const t = typeof x === 'string' ? x : 'a' in x ? x.a : null
+          const t = typeof x === 'string' ? x : 'a' in x ? x.a : typeof x.j === 'string' ? x.j : null
           if (t === null) continue
           const key = `${book.id} ${ch.n}:${v}`
           if (!map.has(key)) map.set(key, { text: '', pieces: [] })
@@ -629,8 +629,11 @@ say('## Step 9. Two forms for the marks in the site data', '')
 say('The script makes each form in memory for each book, and counts the bytes of `JSON.stringify` in UTF-8. It writes no file. The marks that the script does not find in step 6 or step 7 are not in the counts.', '')
 say('- Form A, inline items: each run of marked words in a text block becomes an item `{"j":"words"}` in place of the plain string. Added words in a mark get `"j":1`, for example `{"a":"it","j":1}`. A mark that has words in two blocks gives one item in each block.')
 say('- Form B, ranges per chapter: each chapter gets a list `"j":[[verse,from,to],...]`. `from` and `to` are positions in the words of the verse, as the site data has them now. The text blocks do not change.', '')
-say('| Data | Size now | Form A adds | Form B adds |', '|---|---:|---:|---:|')
-for (const [dir, key] of [['text', 'bsb'], ['text-kjv', 'kjv']]) {
+// Since Task 26 the site data has the marks in Form A. The forms are counted on data without marks only.
+const hasMarks = ['text', 'text-kjv'].some((dir) => books.some((book) => readFileSync(join(ROOT, 'public', 'data', dir, `${book.id}.json`), 'utf8').includes('"j":')))
+if (hasMarks) say('The site data has marks since Task 26. The script does not count the two forms again. The counts of Task 25 are in `docs/reviews/task-25-words-of-jesus-report.md`.')
+else say('| Data | Size now | Form A adds | Form B adds |', '|---|---:|---:|---:|')
+for (const [dir, key] of hasMarks ? [] : [['text', 'bsb'], ['text-kjv', 'kjv']]) {
   let size = 0
   let a = 0
   let b = 0

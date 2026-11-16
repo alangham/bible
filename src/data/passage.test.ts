@@ -55,6 +55,17 @@ describe('passageVerses', () => {
     expect(verse.parts.map((x) => x.t).join('')).toBe(verse.text)
   })
 
+  it('gives the marked words of Mark 12:37 of the King James Version data as words of the verse (Task 26)', () => {
+    const text = JSON.parse(readFileSync(join(root, 'public/data/text-kjv/mark.json'), 'utf8')) as BookText
+    const [verse] = passageVerses(text, { book: 'mark', c: 12, v: 37 })
+    expect(verse.text).toBe('David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.')
+    expect(verse.parts).toEqual([
+      { t: 'David therefore himself calleth him Lord; and whence is he ' },
+      { t: 'then', a: true },
+      { t: ' his son? And the common people heard him gladly.' },
+    ])
+  })
+
   it('gives verse 1 of Psalm 23 of the King James Version data as the title and the verse', () => {
     const text = JSON.parse(readFileSync(join(root, 'public/data/text-kjv/psalms.json'), 'utf8')) as BookText
     const [verse] = passageVerses(text, { book: 'psalms', c: 23, v: 1 })

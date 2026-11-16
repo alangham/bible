@@ -17,10 +17,10 @@ interface End {
 }
 const hebrews = JSON.parse(readFileSync(new URL('../public/data/links/hebrews.json', import.meta.url), 'utf8')) as { links: { id: string; type: string; a: End; b: End }[] }
 
-/** The text of one verse in the bundled Berean Standard Bible. */
+/** The text of one verse in the bundled Berean Standard Bible: its strings and its marked words (Task 26). */
 function verseText(book: string, c: number, v: number): string {
   const text = JSON.parse(readFileSync(new URL(`../public/data/text/${book}.json`, import.meta.url), 'utf8')) as {
-    chapters: { blocks: { k: string; c?: (string | { v?: number })[] }[] }[]
+    chapters: { blocks: { k: string; c?: (string | { v?: number; j?: string })[] }[] }[]
   }
   let verse = 0
   let out = ''
@@ -30,6 +30,7 @@ function verseText(book: string, c: number, v: number): string {
       if (typeof item === 'string') {
         if (verse === v) out += item
       } else if (item.v !== undefined) verse = item.v
+      else if (item.j !== undefined && verse === v) out += item.j
     }
   }
   return out.replace(/\s+/g, ' ').trim()

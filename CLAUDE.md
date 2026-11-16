@@ -6,12 +6,12 @@ A static website for reading the Bible. The owner is Arthur.
 
 Arthur decided a redesign on 2026-11-14. The rule of the redesign: the text is the interface. The reader moves through the Bible with no friction when the reader reads. The first build had a 3D book on a table. The redesign removes it.
 
-Arthur decided on 2026-11-15 to add the King James Version as a second translation. The rule: a translation changes only the words.
+Arthur decided on 2026-11-15 to add the King James Version as a second translation. The rule: a translation changes only the words. From section 11 of `docs/DESIGN.md`, the marks of the words of Jesus go with the words: each translation has its own red letters.
 
 ## Files you must read before you do work
 
 1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Section 9 is the top bar of 2026-11-15. Where section 9 and an older section differ, section 9 is correct. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9. Task 23 corrects the trail. Task 24 adds the text size of section 10. Task 25 is a report on the marks of the words of Jesus in the source files. It changes no page.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9. Task 23 corrects the trail. Task 24 adds the text size of section 10. Task 25 is a report on the marks of the words of Jesus in the source files. It changes no page. Tasks 26 and 27 build the red letters of section 11.
 3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
 4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
 5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.
@@ -41,6 +41,7 @@ When Arthur says "do the next task", start again at step 1.
 - Do not add a data source until you have read its licence. Record the licence in `docs/DATA-SOURCES.md`.
 - Do not invent facts about a book: author, date, place. Mark each book introduction as `review: "draft"` until Arthur approves it.
 - Do not change the words of a Bible text. This applies to the two translations. The one exception is the list of 13 split words in section 8.2 of `docs/DESIGN.md`.
+- Do not add or remove a mark of the words of Jesus. The marks are those of the source files. The one exception is Mark 12:37 of the King James Version, in section 11.3 of `docs/DESIGN.md`.
 - Do not write new content for the King James Version. Its headings, cross-reference lines, links, introductions, and dates are those of the site. Section 8 of `docs/DESIGN.md` has the rule.
 - Do not write a fact about the Bible from memory. Each fact in an introduction, a date, or a reason line must have a named source in `docs/CONTENT-SOURCES.md`.
 - Use only the sources that Arthur approved. Write the site's text in your own words. Do not copy a sentence from a source that is under copyright.
@@ -75,8 +76,10 @@ Use these names in code, comments, and reports. One name for each thing.
 | translation control | The control in the top bar of the reading page that shows the short name of the selected translation. It opens the translation list. |
 | translation list | The list of the translations, with the full name and the short name of each. The reader selects the translation there. From Task 22, it replaces the translation switch of Task 21. |
 | text size | One of the three sizes of the Bible text: "Standard", "Large", "Largest". Section 10 of `docs/DESIGN.md`. |
-| text size control | The control "Text size" in the top bar of the reading page, in the wide layout. It opens the text size list. |
-| text size list | The list of the three text sizes. In the narrow layout, the menu panel has the row "Text size" in its place. |
+| text control | The control in the top bar of the reading page, in the wide layout, that opens the text list. Until Task 27 its name is the text size control, and it shows "Text size". From Task 27 it shows "Text". |
+| text list | The list that the text control opens: the three text sizes and, from Task 27, the red letters switch. Until Task 27 its name is the text size list. In the narrow layout, the menu panel has the rows "Text size" and "Red letters" in its place. |
+| red letters | The words of Jesus in the color `#8B1A1A`, as the source files of each translation mark them. Section 11 of `docs/DESIGN.md`. |
+| red letters switch | The control that switches red letters on and off: a row in the text list, and a row in the menu panel. |
 | reading page | The page with the chapter text, in one column. |
 | top bar | The bar that stays at the top of the wall, of the reading page, and of the Reference pages. |
 | "Menu" | The control at the right of the top bar in the narrow layout, on the wall and on the reading page. |

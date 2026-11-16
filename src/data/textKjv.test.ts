@@ -9,7 +9,7 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import type { Book } from './books.ts'
-import { isAdded, isOmitted, isVerseMark, type BookText, type Inline } from './text.ts'
+import { isAdded, isMarked, isOmitted, isVerseMark, type BookText, type Inline } from './text.ts'
 
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
@@ -66,8 +66,9 @@ files.forEach((f, bi) => {
 
 // ---- the data: the words of each verse ----
 
+/** The words of an item. Marked words (Task 26) and added words are words of their verse. */
 function itemWords(x: Inline): string {
-  return typeof x === 'string' ? x : isAdded(x) ? x.a : ''
+  return typeof x === 'string' ? x : isAdded(x) ? x.a : isMarked(x) ? x.j : ''
 }
 
 const data = new Map<string, string>()
@@ -186,7 +187,7 @@ describe('King James Version data', () => {
         for (const b of ch.blocks) {
           if (b.k !== 'p') continue
           for (const x of b.c) {
-            const s = typeof x === 'string' ? x : isAdded(x) ? x.a : null
+            const s = typeof x === 'string' ? x : isAdded(x) ? x.a : isMarked(x) ? x.j : null
             if (s !== null && /[\\|¶]| {2}/.test(s)) bad.push(`${t.id} ${ch.n}: ${s}`)
           }
         }
@@ -201,7 +202,7 @@ describe('King James Version data', () => {
         let afterD = false
         for (const b of ch.blocks) {
           if (b.k !== 'p') continue
-          const ok = afterD ? typeof b.c[0] === 'string' || isAdded(b.c[0]) : isVerseMark(b.c[0])
+          const ok = afterD ? typeof b.c[0] === 'string' || isAdded(b.c[0]) || isMarked(b.c[0]) : isVerseMark(b.c[0])
           if (!ok || b.c.length === 0) bad.push(`${t.id} ${ch.n} [${b.s}] ${JSON.stringify(b.c[0])}`)
           if (b.s === 'd' && !(b.c.length >= 2 && isVerseMark(b.c[0]) && b.c[0].v === 1)) bad.push(`${t.id} ${ch.n}: d block`)
           afterD = b.s === 'd'

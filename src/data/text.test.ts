@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import type { Book } from './books.ts'
-import { isAdded, isOmitted, isVerseMark, type BookText } from './text.ts'
+import { isAdded, isMarked, isOmitted, isVerseMark, type BookText } from './text.ts'
 
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
@@ -41,7 +41,8 @@ function versesFromJson() {
           } else {
             const key = `${bi} ${ch.n}:${verse}`
             if (!verses.has(key)) throw new Error(`text before a verse number in ${key}`)
-            verses.set(key, verses.get(key) + (isAdded(item) ? item.a : item))
+            // Marked words (Task 26) are words of their verse.
+            verses.set(key, verses.get(key) + (isAdded(item) ? item.a : isMarked(item) ? item.j : item))
           }
         }
       }

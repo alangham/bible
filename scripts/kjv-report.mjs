@@ -314,7 +314,9 @@ function siteStructure(site) {
         }
         if (b.k !== 'p') continue
         const first = b.c[0]
-        const mid = typeof first === 'string'
+        // Since Task 26 the Berean data has marked words, items { j }: words, as a plain string is.
+        const isWords = (it) => typeof it === 'string' || (typeof it === 'object' && typeof it.j === 'string')
+        const mid = isWords(first)
         const nextV = mid ? verse : (b.c.find((it) => typeof it === 'object' && 'v' in it)?.v ?? verse)
         for (const hd of pending.splice(0)) {
           hd.mid = mid
@@ -324,7 +326,7 @@ function siteStructure(site) {
         blocks.push({ id: book.id, c: ch.n, style: b.s, mid, v: verse })
         for (const it of b.c) {
           if (typeof it === 'object' && 'v' in it) verse = it.v
-          else if (typeof it === 'string' && verse > 0 && it.trim()) {
+          else if (isWords(it) && verse > 0 && (typeof it === 'string' ? it : it.j).trim()) {
             const k = key(book.id, ch.n, verse)
             if (!blocksOfVerse.has(k)) blocksOfVerse.set(k, new Set())
             blocksOfVerse.get(k).add(index)

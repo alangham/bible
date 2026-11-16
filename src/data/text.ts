@@ -33,9 +33,21 @@ export interface OmittedVerse {
  */
 export interface AddedWords {
   a: string
+  /** 1 when the added words are inside a mark of the words of Jesus. docs/DESIGN.md section 11. */
+  j?: 1
 }
 
-export type Inline = string | VerseMark | OmittedVerse | AddedWords
+/**
+ * Marked words: a run of the words of Jesus, as the source files of the translation mark them. The words
+ * are words of their verse, as a plain string is. docs/DESIGN.md section 11, Form A of
+ * docs/reviews/task-25-words-of-jesus-report.md. scripts/build-text.mjs and scripts/build-text-kjv.mjs
+ * write them.
+ */
+export interface MarkedWords {
+  j: string
+}
+
+export type Inline = string | VerseMark | OmittedVerse | AddedWords | MarkedWords
 
 /**
  * Section heading.
@@ -107,6 +119,11 @@ export function isOmitted(x: Inline): x is OmittedVerse {
 
 export function isAdded(x: Inline): x is AddedWords {
   return typeof x === 'object' && 'a' in x
+}
+
+/** Marked words of the words of Jesus. Added words in a mark are AddedWords with "j": 1, not MarkedWords. */
+export function isMarked(x: Inline): x is MarkedWords {
+  return typeof x === 'object' && 'j' in x && !('a' in x)
 }
 
 const cache = new Map<string, Promise<BookText>>()

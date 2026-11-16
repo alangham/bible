@@ -8,6 +8,8 @@
 // words. A text block of the King James Version holds the verses that start in its Berean block. The
 // words of a verse are never cut. The one change to the words of the source: the 13 split words of
 // docs/DESIGN.md section 8.2, joined by Task 20b (SPLIT below).
+// Since Task 26, the marks of the words of Jesus (\wj) of the source go with the words, as items { j }, with
+// one exception: Mark 12:37 (MARK_EXCEPTIONS below, docs/DESIGN.md section 11.3).
 //
 // The script stops with an error when a rule does not fit the data. It does not guess.
 //
@@ -42,6 +44,8 @@ const stats = {
   songHeadingsLeftOut: 0,
   addedWithSpaceAtEnd: [],
   titles: { footnotes: 0, pilcrowVerses: 0, added: 0, versesWithAdded: 0 },
+  marks: 0,
+  markedAdded: 0,
 }
 const add = (o, k, n = 1) => (o[k] = (o[k] ?? 0) + n)
 
@@ -237,6 +241,158 @@ function joinSplit(list, where) {
   return list.map((x) => (typeof x === 'string' ? x.replace(re, split.one) : x))
 }
 
+// ---- the marks of the words of Jesus: docs/DESIGN.md section 11, docs/TASKS.md Task 26 ----
+
+/**
+ * The marks where the site marks fewer words than the source. Arthur's decision of 2026-11-16, docs/DESIGN.md
+ * section 11.3. The source file does not change.
+ * [book id, chapter, verse, the words of the mark in the source, the words that the site marks]
+ */
+const MARK_EXCEPTIONS = [
+  [
+    'mark', 12, 37,
+    'David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.',
+    'David therefore himself calleth him Lord; and whence is he then his son?',
+  ],
+]
+const exceptionByPlace = new Map()
+for (const [id, c, v, source, site] of MARK_EXCEPTIONS) {
+  const book = books.find((b) => b.id === id)
+  if (!book) throw new Error(`mark exception: no book ${id}`)
+  if (!source.startsWith(site) || site === source) throw new Error(`mark exception ${id} ${c}:${v}: the words of the site are not the start of the words of the source`)
+  exceptionByPlace.set(`${book.name} ${c}:${v}`, { source, site, done: false })
+}
+
+/** The plain words of a part of a verse: the method of items(), as one string with single spaces. */
+function plainWords(raw) {
+  return raw
+    .replace(/\\f [\s\S]*?\\f\*/g, '')
+    .replace(/¶ ?/g, '')
+    .replace(/\\(\+?)w ([^|\\]*)\|strong="[^"]*"\\\1w\*/g, '$2')
+    .replace(/\\\+?(wj|nd)\*/g, '')
+    .replace(/\\\+?(wj|nd) /g, '')
+    .replace(/\\(\+?)add ([^\\]*)\\\1add\*/g, '$2')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+/** The words of each mark of a verse, in order. A mark of the King James Version files ends in its verse. */
+function markWords(raw, where) {
+  const out = []
+  let open = -1
+  for (const m of raw.matchAll(/\\\+?wj(\*?)/g)) {
+    if (!m[1]) {
+      if (open >= 0) throw new Error(`${where}: a start marker \\wj inside an open mark`)
+      open = m.index + m[0].length
+    } else {
+      if (open < 0) throw new Error(`${where}: an end marker \\wj* with no start marker`)
+      const words = plainWords(raw.slice(open, m.index))
+      if (/[\\|]/.test(words)) throw new Error(`${where}: marker left in a mark: ${words}`)
+      if (!words) throw new Error(`${where}: a mark with no words`)
+      out.push(words)
+      open = -1
+    }
+  }
+  if (open >= 0) throw new Error(`${where}: a mark is open at the end of the verse`)
+  return out
+}
+
+/** The text with each run of spaces as one space, and the position in the text of each character. */
+function squashMap(text) {
+  let s = ''
+  const pos = []
+  for (let i = 0; i < text.length; i++) {
+    if (/\s/.test(text[i])) {
+      if (s.endsWith(' ')) continue
+      s += ' '
+    } else s += text[i]
+    pos.push(i)
+  }
+  return { s, pos }
+}
+
+/**
+ * The places of the marks of one verse in its words, in their order: [start, end). Each mark must be in the
+ * words exactly. Stops with an error when a mark has no place, or when more than one choice of places fits
+ * the order of the marks.
+ */
+function placeMarks(where, text, list) {
+  const sq = squashMap(text)
+  const options = list.map((words) => {
+    const o = []
+    for (let i = sq.s.indexOf(words); i >= 0; i = sq.s.indexOf(words, i + 1)) o.push({ start: sq.pos[i], end: sq.pos[i + words.length - 1] + 1 })
+    if (!o.length) throw new Error(`${where}: the words of a mark are not in the verse exactly: ${words}`)
+    return o
+  })
+  const memo = new Map()
+  const count = (i, from) => {
+    if (i === list.length) return 1
+    const k = `${i} ${from}`
+    if (memo.has(k)) return memo.get(k)
+    let n = 0
+    for (const p of options[i]) if (p.start >= from && n < 2) n += count(i + 1, p.end)
+    n = Math.min(n, 2)
+    memo.set(k, n)
+    return n
+  }
+  const n = count(0, 0)
+  if (n === 0) throw new Error(`${where}: the marks of the verse do not fit the verse in their order`)
+  if (n > 1) throw new Error(`${where}: a mark is at more than one place, and the order of the marks does not decide`)
+  const chosen = []
+  let from = 0
+  for (let i = 0; i < list.length; i++) {
+    const p = options[i].find((x) => x.start >= from && count(i + 1, x.end) === 1)
+    chosen.push([p.start, p.end])
+    from = p.end
+  }
+  return chosen
+}
+
+/**
+ * The inline items of a verse with the marks of the source in Form A of docs/DESIGN.md section 11.7: a run of
+ * marked words is { j: "words" }, and added words in a mark get "j": 1. The words do not change.
+ */
+function withMarks(list, raw, where) {
+  let words = markWords(raw, where)
+  const exception = exceptionByPlace.get(where)
+  if (exception) {
+    const hits = words.filter((w) => w.split(exception.source).length === 2)
+    if (hits.length !== 1 || words.join('\n').split(exception.source).length !== 2) throw new Error(`${where}: the words of the mark exception are not in a mark exactly once`)
+    words = words.map((w) => (w === hits[0] ? w.replace(exception.source, exception.site) : w))
+    exception.done = true
+  }
+  if (!words.length) return list
+  const text = list.map((x) => (typeof x === 'string' ? x : x.a)).join('')
+  const ranges = placeMarks(where, text, words)
+  stats.marks += words.length
+  const out = []
+  let at = 0
+  for (const x of list) {
+    const t = typeof x === 'string' ? x : x.a
+    const start = at
+    at += t.length
+    const rs = ranges.filter(([s, e]) => s < at && e > start)
+    if (typeof x !== 'string') {
+      if (!rs.length) out.push(x)
+      else if (rs[0][0] <= start && rs[0][1] >= at) {
+        out.push({ ...x, j: 1 })
+        stats.markedAdded++
+      } else throw new Error(`${where}: a mark starts or ends inside added words`)
+      continue
+    }
+    let from = 0
+    for (const [s, e] of rs) {
+      const a = Math.max(0, s - start)
+      const b = Math.min(t.length, e - start)
+      if (a > from) out.push(x.slice(from, a))
+      out.push({ j: x.slice(a, b) })
+      from = b
+    }
+    if (from < t.length) out.push(x.slice(from))
+  }
+  return out
+}
+
 // ---- the structure, from the Berean data ----
 
 /** Appends verse items to a block: { v: n }, then the words. Adjacent strings join. */
@@ -261,7 +417,8 @@ function buildChapter(where, bsbCh, src, isSong) {
     if (!src.verses.has(n)) throw new Error(`${where}:${n}: the source has no such verse`)
     if (placed.has(n)) throw new Error(`${where}:${n}: verse placed twice`)
     placed.add(n)
-    return joinSplit(items(src.verses.get(n), `${where}:${n}`), `${where}:${n}`)
+    const raw = src.verses.get(n)
+    return withMarks(joinSplit(items(raw, `${where}:${n}`), `${where}:${n}`), raw, `${where}:${n}`)
   }
 
   for (const b of bsbBlocks) {
@@ -280,7 +437,7 @@ function buildChapter(where, bsbCh, src, isSong) {
     }
     if (b.k !== 'p') throw new Error(`${where}: unknown block ${JSON.stringify(b)}`)
     // The verses that start in this Berean block.
-    const starts = b.c.filter((x) => typeof x === 'object').map((x) => ('v' in x ? x.v : x.o))
+    const starts = b.c.filter((x) => typeof x === 'object' && ('v' in x || 'o' in x)).map((x) => ('v' in x ? x.v : x.o))
     if (b.s === 'd') {
       if (src.title === null) {
         // No title in the source: no d block. Verse 1 goes in the next text block.
@@ -359,5 +516,6 @@ books.forEach((book, i) => {
 
 for (const [where, split] of splitByPlace) if (!split.done) throw new Error(`${where}: split word "${split.two}" not joined`)
 stats.splitWordsJoined = [...splitByPlace].map(([where, s]) => `${where}: ${s.two} -> ${s.one}`)
+for (const [where, e] of exceptionByPlace) if (!e.done) throw new Error(`${where}: mark exception not used`)
 
 console.log(JSON.stringify(stats, null, 1))

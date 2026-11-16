@@ -4,6 +4,8 @@
 // The words come from sources/bsb/bsb.txt. The structure comes from the USFM files of the
 // same publisher in sources/bsb/usfm/: section headings, paragraphs, poetry lines, the
 // manuscript notes, and the cross-reference lines. Arthur decided this on 2026-11-14.
+// Since Task 26, the USFM files also give the marks of the words of Jesus (\wj). Each mark goes in place
+// in the bsb.txt words of its verse, as items { j } (docs/DESIGN.md section 11, docs/TASKS.md Task 26).
 // The USFM files have faults in the words (docs/DATA-SOURCES.md section 2), so the script
 // never takes a word from them. It aligns the USFM text with bsb.txt, character by
 // character with spaces removed, and cuts the bsb.txt text where the USFM structure changes.
@@ -80,7 +82,7 @@ const TEXT_BLOCKS = new Set(['p', 'pmo', 'q1', 'q2', 'qr', 'pc', 'li1', 'li2'])
 const HEADINGS = new Set(['s1', 's2', 'ms', 'qa'])
 const SKIP = new Set(['id', 'usfm', 'h', 'toc1', 'toc2', 'toc3', 'mt1', 'mt2'])
 
-const stats = { blocks: {}, headings: {}, xrefs: 0, passageNotes: 0, omitted: 0, verses: 0, realigned: [], dropped: [] }
+const stats = { blocks: {}, headings: {}, xrefs: 0, passageNotes: 0, omitted: 0, verses: 0, realigned: [], dropped: [], marks: 0, marksExact: 0, marksBySearch: [] }
 
 const usfmFiles = readdirSync(join(SRC, 'usfm')).filter((f) => f.endsWith('.usfm'))
 const usfmByName = new Map()
@@ -101,11 +103,14 @@ bsbOrder.forEach((bsbName, bookIndex) => {
   let pendingRefs = [] // cross-reference lines that wait for their next verse
   // Pieces of verse text, in order: { verse, block, index, usfm }
   let pieces = []
+  // The marks of the words of Jesus in this chapter, in order: { parts: Map verse -> USFM words }.
+  let marks = []
+  let mark = null
 
   const finishChapter = () => {
     if (!ch) return
     for (const r of pendingRefs) throw new Error(`${bsbName} ${ch.n}: cross-reference line with no verse after it: ${r.t}`)
-    alignChapter(bsbName, ch, pieces)
+    alignChapter(bsbName, ch, pieces, marks)
     chapters.push(ch)
   }
 
@@ -121,6 +126,7 @@ bsbOrder.forEach((bsbName, bookIndex) => {
       ch = { n: Number(rest), blocks: [], xrefs: [] }
       pendingRefs = []
       pieces = []
+      marks = []
       if (ch.n !== chapters.length + 1) throw new Error(`${bsbName}: chapter ${rest} out of order`)
       continue
     }
@@ -157,7 +163,7 @@ bsbOrder.forEach((bsbName, bookIndex) => {
     // quotation mark of that verse, as in Mark 11:25.
     const omittedHere = []
     let verse = pieces.length ? pieces.at(-1).verse : 0
-    // Tokens: verse number, footnote, words of Jesus marker (dropped), text.
+    // Tokens: verse number, footnote, words of Jesus marker, text.
     const re = /\\v (\d+) |\\f \+ \\fr (\d+):(\d+)([\s\S]*?)\\f\*|\\wj\*?|([^\\]+)/g
     let consumed = 0
     for (const t of rest.matchAll(re)) {
@@ -183,8 +189,14 @@ bsbOrder.forEach((bsbName, bookIndex) => {
           stats.passageNotes++
         }
         // Other footnotes are not in version 1.
-      } else if (t[0].startsWith('\\wj')) {
-        // The words of Jesus are not marked in version 1.
+      } else if (t[0] === '\\wj') {
+        // The start of the words of Jesus. docs/DESIGN.md section 11.2, docs/TASKS.md Task 26.
+        if (mark) throw new Error(`${bsbName} ${ch.n}:${verse}: a start marker \\wj inside an open mark`)
+        mark = { parts: new Map() }
+        marks.push(mark)
+      } else if (t[0] === '\\wj*') {
+        if (!mark) throw new Error(`${bsbName} ${ch.n}:${verse}: an end marker \\wj* with no start marker`)
+        mark = null
       } else {
         // Spaces between markers carry no words. The alignment ignores spaces.
         if (!t[5].trim()) continue
@@ -192,9 +204,12 @@ bsbOrder.forEach((bsbName, bookIndex) => {
         const piece = { verse, usfm: t[5] }
         block.c.push(piece)
         pieces.push(piece)
+        if (mark) mark.parts.set(verse, (mark.parts.get(verse) ?? '') + t[5])
       }
     }
     if (consumed !== rest.length) throw new Error(`${bsbName} ${ch.n}: unparsed text: ${rest.slice(consumed)}`)
+    // A mark ends in its line. The report of Task 25 found no mark with a paragraph or poetry marker inside.
+    if (mark) throw new Error(`${bsbName} ${ch.n}:${verse}: a mark is open at the end of a line`)
     block.c.push(...omittedHere.splice(0))
     // An empty line, for example "\p" before "\pc" in Acts 17:23, makes no block.
     if (block.c.length) {
@@ -260,7 +275,96 @@ function mapCuts(a, b, cuts) {
   return cuts.map((c) => aBefore[c])
 }
 
-function alignChapter(bookName, ch, pieces) {
+// ---- The marks of the words of Jesus: docs/DESIGN.md section 11.2, docs/TASKS.md Task 26 ----
+
+/** The text with each run of spaces as one space, and the position in the text of each character. */
+function squashMap(text) {
+  let s = ''
+  const pos = []
+  for (let i = 0; i < text.length; i++) {
+    if (/\s/.test(text[i])) {
+      if (s.endsWith(' ')) continue
+      s += ' '
+    } else s += text[i]
+    pos.push(i)
+  }
+  return { s, pos }
+}
+
+/** Each place of the needle in the haystack, as indexes. */
+function indexesOf(hay, needle) {
+  const out = []
+  for (let i = hay.indexOf(needle); i >= 0; i = hay.indexOf(needle, i + 1)) out.push(i)
+  return out
+}
+
+/**
+ * The places in the words of a verse where the words of one mark can be: [start, end) in the verse text.
+ * First the exact words, with a run of spaces as one space. If there is none: a search with each space
+ * removed from the two texts, and with the fault characters [’’] removed from the words of the mark.
+ */
+function markPlaces(text, words) {
+  const sq = squashMap(text)
+  const exact = indexesOf(sq.s, words).map((i) => ({ start: sq.pos[i], end: sq.pos[i + words.length - 1] + 1, exact: true }))
+  if (exact.length) return exact
+  const vis = visible(text)
+  const hay = vis.chars.join('')
+  const needle = words.replace(/\s+/g, '').replaceAll('[’’]', '')
+  if (!needle) return []
+  return indexesOf(hay, needle).map((i) => ({ start: vis.pos[i], end: vis.pos[i + needle.length - 1] + 1, exact: false }))
+}
+
+/**
+ * The places of the marks of one verse, in their order. The marks do not overlap. Stops with an error when
+ * a mark has no place, or when more than one choice of places fits the order of the marks.
+ */
+function placeMarks(key, text, list) {
+  const options = list.map((words) => markPlaces(text, words))
+  options.forEach((o, i) => {
+    if (!o.length) throw new Error(`${key}: the words of a mark are not in the verse: ${list[i]}`)
+  })
+  // The count of choices from mark i on, with each place at or after `from`. Two is enough to stop.
+  const memo = new Map()
+  const count = (i, from) => {
+    if (i === list.length) return 1
+    const k = `${i} ${from}`
+    if (memo.has(k)) return memo.get(k)
+    let n = 0
+    for (const p of options[i]) if (p.start >= from && n < 2) n += count(i + 1, p.end)
+    n = Math.min(n, 2)
+    memo.set(k, n)
+    return n
+  }
+  const n = count(0, 0)
+  if (n === 0) throw new Error(`${key}: the marks of the verse do not fit the verse in their order`)
+  if (n > 1) throw new Error(`${key}: a mark is at more than one place, and the order of the marks does not decide`)
+  const chosen = []
+  let from = 0
+  for (let i = 0; i < list.length; i++) {
+    const p = options[i].find((x) => x.start >= from && count(i + 1, x.end) === 1)
+    chosen.push(p)
+    from = p.end
+  }
+  return chosen
+}
+
+/** Splits a string at [offset, offset + length) of a verse into plain strings and items { j }. */
+function splitMarked(text, offset, ranges) {
+  const out = []
+  let at = 0
+  for (const [s, e] of ranges) {
+    const from = Math.max(0, s - offset)
+    const to = Math.min(text.length, e - offset)
+    if (to <= from) continue
+    if (from > at) out.push(text.slice(at, from))
+    out.push({ j: text.slice(from, to) })
+    at = to
+  }
+  if (at < text.length) out.push(text.slice(at))
+  return out
+}
+
+function alignChapter(bookName, ch, pieces, marks) {
   const byVerse = new Map()
   for (const p of pieces) {
     if (!byVerse.has(p.verse)) byVerse.set(p.verse, [])
@@ -296,12 +400,47 @@ function alignChapter(bookName, ch, pieces) {
     // that character stay with the earlier piece. The first piece starts at 0.
     const starts = aCuts.map((c, i) => (i === 0 ? 0 : c >= a.pos.length ? text.length : a.pos[c]))
     list.forEach((p, i) => {
+      p.start = starts[i]
       p.text = text.slice(starts[i], i + 1 < list.length ? starts[i + 1] : text.length)
     })
     if (list.map((p) => p.text).join('') !== text) throw new Error(`${key}: the pieces do not join to the bsb.txt text`)
   }
+
+  // The place of each mark in the bsb.txt words of its verses. A mark with words of two verses has one part
+  // in each verse. The words of a part: the USFM words, with a run of spaces as one space, and no space at
+  // the start or the end. So a space at the start or the end of a mark stays outside the mark.
+  const partsByVerse = new Map()
+  const markOfPart = []
+  marks.forEach((m, mi) => {
+    for (const [v, words] of m.parts) {
+      const w = words.replace(/\s+/g, ' ').trim()
+      if (!w) continue
+      if (!partsByVerse.has(v)) partsByVerse.set(v, [])
+      partsByVerse.get(v).push(w)
+      markOfPart.push({ v, mi })
+    }
+  })
+  const ranges = new Map() // verse -> [[start, end], ...]
+  const bySearch = new Set()
+  for (const [v, list] of partsByVerse) {
+    const key = `${bookName} ${ch.n}:${v}`
+    const places = placeMarks(key, bsb.get(key), list)
+    ranges.set(v, places.map((p) => [p.start, p.end]))
+    const mis = markOfPart.filter((x) => x.v === v).map((x) => x.mi)
+    places.forEach((p, i) => {
+      if (!p.exact) bySearch.add(mis[i])
+    })
+  }
+  marks.forEach((m, mi) => {
+    if (![...m.parts.values()].some((w) => w.trim())) throw new Error(`${bookName} ${ch.n}: a mark with no words`)
+    stats.marks++
+    if (bySearch.has(mi)) stats.marksBySearch.push(`${bookName} ${ch.n}:${[...m.parts.keys()][0]}`)
+    else stats.marksExact++
+  })
+
   // Put the bsb.txt text in place of each piece. Join the text of neighbouring pieces in a block.
-  // Remove empty pieces and empty blocks.
+  // Remove empty pieces and empty blocks. Then cut out the marked words as items { j }.
+  const marked = new Map() // verse -> count of marked characters written
   for (const block of ch.blocks) {
     if (block.k !== 'p') continue
     const before = block.c
@@ -309,11 +448,23 @@ function alignChapter(bookName, ch, pieces) {
     for (const item of before) {
       if (!('usfm' in item)) c.push(item)
       else if (item.text === '') continue
-      else if (typeof c.at(-1) === 'string') c[c.length - 1] += item.text
-      else c.push(item.text)
+      else if (c.at(-1)?.usfm !== undefined) {
+        const last = c.at(-1)
+        if (last.verse !== item.verse || last.start + last.text.length !== item.start) throw new Error(`${bookName} ${ch.n}:${item.verse}: pieces that do not follow each other`)
+        last.text += item.text
+      } else c.push({ usfm: true, verse: item.verse, start: item.start, text: item.text })
     }
-    block.c = c
-    if (c.length === 0) stats.dropped.push(`${bookName} ${ch.n} [${block.s}] ${before.map((x) => x.usfm ?? JSON.stringify(x)).join(' | ')}`)
+    block.c = c.flatMap((x) => {
+      if (x.usfm === undefined) return [x]
+      const parts = splitMarked(x.text, x.start, ranges.get(x.verse) ?? [])
+      for (const p of parts) if (typeof p === 'object') marked.set(x.verse, (marked.get(x.verse) ?? 0) + p.j.length)
+      return parts
+    })
+    if (block.c.length === 0) stats.dropped.push(`${bookName} ${ch.n} [${block.s}] ${before.map((x) => x.usfm ?? JSON.stringify(x)).join(' | ')}`)
+  }
+  for (const [v, rs] of ranges) {
+    const want = rs.reduce((n, [s, e]) => n + e - s, 0)
+    if (marked.get(v) !== want) throw new Error(`${bookName} ${ch.n}:${v}: ${want} marked characters, ${marked.get(v) ?? 0} written`)
   }
   ch.blocks = ch.blocks.filter((b) => b.k !== 'p' || b.c.length > 0)
 }
@@ -329,6 +480,9 @@ console.log(
       blocks: stats.blocks,
       realigned: stats.realigned.length,
       dropped: stats.dropped,
+      marks: stats.marks,
+      marksExact: stats.marksExact,
+      marksBySearch: stats.marksBySearch,
     },
     null,
     1,

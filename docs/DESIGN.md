@@ -390,6 +390,7 @@ Arthur decided the three items of this section on 2026-11-14. The design of the 
 2. The narrow layout between 520 and 900 px wide. The designer did not test it. Task 12 reports on it.
 3. The bookmark and last-read idea is item 4 of `docs/BACKLOG.md`. The last-read chapter of each book is part of section 7.5 and is not a backlog idea.
 4. A check on a real phone.
+5. The keyboard focus after "Back" in the trail. When "Back" leaves one stop, the control "Back" goes away, and no control has the focus. A keyboard user must start again from "Books". The fault is older than Task 23. The designer confirmed it on the build of Task 23, at 1440 by 900 px and at 390 by 844 px. Arthur decided on 2026-11-16 to keep this as built. A possible correction for a later task: the focus goes to the last stop of the trail.
 
 ## 8. The King James Version
 

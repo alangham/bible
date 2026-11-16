@@ -497,7 +497,7 @@ Arthur decided this section on 2026-11-15, from renders. The renders are in `doc
 - Center: the control that opens the chapter grid, as built. Then a thin vertical line. Then the translation control.
 - Right part, wide layout: the echo links switch, as built.
 - Right part, narrow layout: "Menu".
-- The translation control shows the short name of the selected translation and a caret. The short names are "BSB" and "KJV". For a screen reader, the name of the control is the word "Translation", the full name, a comma, and the short name. Example: "Translation: Berean Standard Bible, BSB". The short name is not in parentheses: axe-core 4.14 removes text in parentheses before it compares the name with the words on the control. Arthur decided this name on 2026-11-16.
+- The translation control shows the short name of the selected translation and a caret. The short names are "BSB" and "KJV", and "WEB" from section 13. For a screen reader, the name of the control is the word "Translation", the full name, a comma, and the short name. Example: "Translation: Berean Standard Bible, BSB". The short name is not in parentheses: axe-core 4.14 removes text in parentheses before it compares the name with the words on the control. Arthur decided this name on 2026-11-16.
 - Narrow layout: the control that opens the chapter grid shows the book name and the chapter number, without the word "Chapter". Example: "John 3". For a screen reader, its name is the same words, without the word "Chapter".
 - In the two layouts, the text of that control in the page has a space character between its parts: "John Chapter 3" and "John 3". Then its name for a screen reader does not depend on the browser. The look does not change.
 - Narrow layout: the bar is always one line. If the items do not fit, the book name ends with "…". "Books", the chapter number, the translation control, and "Menu" are never cut.
@@ -547,7 +547,7 @@ The three panels are the panel of the chapter grid, the translation list, and th
 ### 9.9 Not decided
 
 1. The items that Arthur will add to the bar. He did not name them. The first item is the text size control of section 10.
-2. More translations. Arthur said on 2026-11-15 that this comes later. The rule in `CLAUDE.md` that the site has two translations stays until he changes it.
+2. More translations. Arthur decided on 2026-11-16 to add the World English Bible as a third translation. Section 13 has the decisions.
 3. The top bar of the pages of the Reference section. It does not change in this section.
 4. Links to the Reference section on the wide reading page.
 
@@ -715,3 +715,90 @@ Arthur decided this section on 2026-11-16. The sheet of the icon options that he
 
 1. The designer made the icon images with Chrome. No one tested Safari, an iPhone, or an Android phone.
 2. Two quick web searches on 2026-11-16 found no app or site with the name "Bible Wall". The search was not complete.
+
+## 13. The World English Bible of 2026-11-16
+
+Arthur decided this section on 2026-11-16, from the report of Task 29. The report is `docs/reviews/task-29-web-report.md`. The renders are in `docs/screenshots/web-design/`: the translation list with three rows at 1440 by 900 px and at 390 by 844 px, and the top bar with "WEB" at 390 px and at 375 px. The renders are a sketch on the built site of Task 28. Tasks 30 and 31 in `docs/TASKS.md` build this section.
+
+### 13.1 The rule
+
+- The World English Bible is a third translation of the site, beside the Berean Standard Bible and the King James Version.
+- Arthur asked first for the New American Standard Bible. Its publisher permits no complete book of it on a site without written permission. So Arthur selected a translation in the public domain.
+- The rule of section 8.1 applies: a translation changes only the words, and the words-of-Jesus marks with them. The reading page shows the section headings, the cross-reference lines, and the text blocks of the Berean data. The links, the read-with lists, the introductions, and the dates are the same for each translation. The site writes no new content for the World English Bible.
+- Where sections 8, 9, and 11 say "the two translations", the rule now applies to the three translations.
+
+### 13.2 The words
+
+- Source: edition A of the report. It is the edition `engwebp` of eBible.org, the World English Bible with no Deuterocanon, `https://eBible.org/Scriptures/engwebp_usfm.zip`. The pages of eBible.org state that the World English Bible is in the public domain, and that "World English Bible" is a trademark of eBible.org. The record is in section 11 of `docs/DATA-SOURCES.md`.
+- This edition has "LORD" and "GOD" for the name of God. Edition B has "Yahweh". Arthur selected "LORD" on 2026-11-16. Reason: the Berean headings of the site say "LORD", for example "The LORD Is My Shepherd" above Psalm 23, and the two other translations use "LORD".
+- The site does not change a word of the source. The World English Bible has no list of exceptions. Reason: the pages of eBible.org ask that a text with a changed word does not have the name "World English Bible".
+- The site does not show these parts of the source files: the Strong's numbers, the footnotes, the cross-reference notes, the paragraphs and the poetry lines, the 33 speaker lines of the Song of Solomon, and the 5 lines "BOOK 1" to "BOOK 5" of the Psalms. The Berean data has the headings "BOOK I" to "BOOK V".
+- The source files do not mark the words that the translators added. So the World English Bible pages have no words in italics, apart from a Psalm title.
+- A Psalm title of the source is a `\d` line. It shows as the title of its Psalm, where the Berean data has the title of that Psalm. That is in 116 Psalms.
+- Psalm 119 has 22 `\d` lines in the source. They are the names of the Hebrew letters, for example "ALEPH" before verse 1. The site does not show them. The Berean headings of the site have the letter names already.
+- Zechariah 12: the Berean data has a title block, and the source has no `\d` line. The World English Bible page has no title block there, and verse 1 is in the next text block. The King James Version page does the same.
+- The World English Bible has words for 12 of the 16 verses that the main text of the Berean Standard Bible does not have. The pages show these verses as text, with no note.
+
+### 13.3 The verse numbers
+
+Arthur decided on 2026-11-16: the site keeps the verse numbers of the source, and changes nothing.
+
+- Five verse numbers have no words in the source: Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25. Each has a footnote in place of words. The World English Bible pages show nothing for them: no verse number and no note. The site data has no item for them. So the site data has 31,098 verses: the 31,103 verse numbers of the source, less these 5.
+- Romans 14 has verses 24 to 26 in the source. The Berean Standard Bible has these words as Romans 16:25 to 16:27. On the World English Bible page, the three verses are one text block of the paragraph style, after the last text block of Romans 14. They have no heading of their own.
+- Romans 16 ends at verse 24 on the World English Bible page.
+- The Berean data has the heading "Doxology" before Romans 16:25, with the cross-reference line "(Jude 1:24–25)". On the World English Bible page, no verse is after that heading. The rule: a section heading with no verse after it in its chapter does not show, and its cross-reference line does not show. This applies to one heading.
+
+### 13.4 Links
+
+- The World English Bible pages show the same marks, margin labels, and pop-ups. The pop-up shows the linked passage in the translation that the reader reads.
+- The label of section 8.4 shows on the World English Bible pages also: "The quoted words are from the Berean Standard Bible."
+- One rule is new: on the pages of a translation, a link does not show when one of its two passages starts at a verse that the data of that translation does not have. The link data does not change. No person and no agent removes a link.
+- The rule applies to 3 of the 3,866 links, on the World English Bible pages only. All 3 are echo links to Romans 16:25: `o3385` from Matthew 13:35, `o3515` from 1 Timothy 3:16, and `h1733` between the heading "Doxology" of Romans 16 and the heading "Doxology" of Jude.
+- What the reader sees on the World English Bible pages: Matthew 13:35 and 1 Timothy 3:16 have one echo link fewer. In Jude, the cross-reference line "(Romans 16:25–27)" shows as words, with no control. The designer ran the built site of Task 28 with the link `h1733` left out of the link data of Jude, and the line showed in this form.
+- The rule applies to no link on the pages of the two other translations. The designer checked this on 2026-11-16 against the site data. In the Berean data, 2 links start at a verse that the main text does not have, Mark 9:44 and Mark 15:28. The Berean data has an item with a note for each, so these links show, as before.
+- A page address with a verse that the translation does not have opens its chapter at the top. Example: `#/book/romans/16/25`.
+- When the reader changes the translation and the new text does not have the verse at the top of the page, the page keeps the verse before it. Task 21 has this rule.
+- The designer ran the first of these two on the built site of Task 28, with the address `#/book/romans/14/25` and the Berean Standard Bible: the chapter opened at the top, with no error. The designer read the second in the code and did not run it. Task 31 tests the two.
+
+### 13.5 Red letters
+
+- The World English Bible uses the words-of-Jesus marks of its own source files, by section 11.2. The source has 2,290 marks in 2,059 verses, and the report found no fault in them.
+- The site shows all of them. The World English Bible has no exception.
+- In 27 verses, the World English Bible or the Berean Standard Bible has marks and the other has none. The report lists them. Example: the Berean Standard Bible marks Hebrews 10:5 to 10:9, and the World English Bible does not.
+- One red letters selection applies to the three translations.
+
+### 13.6 The name, the translation control, and the translation list
+
+- The full name is "World English Bible". The short name is "WEB". eBible.org gives this edition the abbreviation "WEBP", and gives "WEB" to edition B. Arthur decided on 2026-11-16 to use "WEB": no reader knows "WEBP". The Sources page names the exact edition.
+- The value in the storage of the browser is `web`. The data folder is `public/data/text-web/`.
+- The translation list has three rows, in this order: "Berean Standard Bible", "King James Version", "World English Bible". The first visit shows the Berean Standard Bible, as before.
+- For a screen reader, the name of the translation control is "Translation: World English Bible, WEB".
+- The look of the list is that of section 9.5, with one more row. Measured in the sketch: the pop-up of the wide layout is 340 px wide and 144 px high. A row of the narrow layout is 48 px high.
+- Measured in the sketch: with "WEB", the translation control is 4.6 px wider than with "BSB". At 390 px, "2 Thessalonians 3" and "Song of Solomon 8" show with no cut. At 375 px, "2 Thessalonians 3" shows with no cut, and "Song of Solomon" ends with "…". The rule of section 9.4 applies: the bar is one line, and only the book name is cut.
+
+### 13.7 The credit on the Sources page
+
+- The first sentence names the three translations.
+- The page names the edition and its source, the public domain statement, the trademark statement, and the abbreviation "WEBP".
+- The page states that the site shows the words without change, and what the site does not show from the source files.
+- The page states the verse numbers of section 13.3.
+- The statement of section 8.6 about the structure of the Berean Standard Bible files applies to the World English Bible pages also.
+- The paragraph of section 11.6 says "the three translations".
+- Task 31 has the words.
+
+### 13.8 Selected by the designer, without a decision by Arthur
+
+- The form of Romans 14:24 to 14:26 on the page: one text block of the paragraph style.
+- The rule for the heading "Doxology" of Romans 16, in section 13.3.
+- The rule for the 3 links, in section 13.4.
+- The value `web` and the name of the data folder.
+- The words of the credit on the Sources page.
+
+### 13.9 Not decided and not checked
+
+1. An option that the designer did not take: the World English Bible pages show the heading "Doxology", its cross-reference line, and the 3 links at Romans 14:24, where the words are. This needs a rule that moves a heading of the Berean data, and a map of the verse numbers 16:25 to 16:27 to 14:24 to 14:26. Arthur can ask for it.
+2. The pages of eBible.org do not say whether the name "World English Bible" can go with the headings and the paragraphs of a different source. Arthur did not ask eBible.org.
+3. The designer did not read the source files. Each number of this section about the source is from the report of Task 29.
+4. The report did not count the words-of-Jesus marks that go on over a verse number. Task 30 gives the number.
+5. As in section 11.8: no one compared the marked parts of the verses where each translation marks a part of the verse.
+6. No test on a real phone.

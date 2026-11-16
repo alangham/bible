@@ -298,14 +298,14 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 
 ## 11. World English Bible
 
-- Use: Read for Task 29. Not used on the site.
+- Use: Read for Task 29. Since Task 30, edition A is the source of the words of the World English Bible. Arthur selected it on 2026-11-16 (`docs/DESIGN.md` section 13.2).
 - The report of Task 29 is `docs/reviews/task-29-web-report.md`.
-- No file of the World English Bible text is in the repository. The downloads of Task 29 are in a temporary folder outside `C:\dev\bible`.
-- Arthur selected the World English Bible on 2026-11-16 as a possible third translation. The rule of `CLAUDE.md` that the site has two translations stays until Arthur decides the build tasks from the report.
+- Since Task 30, the USFM files of edition A are in the repository, in `sources/web/usfm/`, and the site data made from them is in `public/data/text-web/`. No file of edition B or edition C is in the repository. The other downloads of Task 29 are in a temporary folder outside `C:\dev\bible`.
+- Arthur decided on 2026-11-16 to add the World English Bible as a third translation (`docs/DESIGN.md` section 13).
 
 ### Edition A: eBible.org, `engwebp`, with no Deuterocanon
 
-- Use: Read for Task 29. Not used on the site.
+- Use: Read for Task 29. Since Task 30, the source of the words of the World English Bible.
 - Details page: `https://ebible.org/details.php?id=engwebp`. Read on 2026-11-16. The page shows "Last updated 2026-10-30".
 - Copyright page: `https://eBible.org/engwebp/copyright.htm`. Read on 2026-11-16. The details page does not link to this page. The HTML edition `https://eBible.org/engwebp/` links to it. The zip file holds the same words as `copr.htm`.
 - Title and abbreviation on the details page: "World English Bible", "WEBP".
@@ -315,6 +315,22 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 - Trademark statement, on both pages: "However, "World English Bible" is a Trademark of eBible.org."
 - Terms of use of the name, on both pages, in short: the reader may copy, publish, distribute, post on the Internet, and use the World English Bible as much as the reader wants. The one request: if a person changes the actual text in any way, that person must not call the result the World English Bible. The pages give the reason: to avoid confusion.
 - The pages say nothing about headings, paragraphs, or notes from a different source next to the text.
+
+### Use of edition A in Task 30: the World English Bible data in `public/data/text-web/`
+
+- Source file: `engwebp_usfm.zip`, the download of Task 29. SHA-256 `3bb1ac4fe06e9adf50fe6659237fa0b3743bf651ce15cc9acebc36c5070ae62d`, checked again on 2026-11-16.
+- In the repository: the 66 USFM files of the 66 books in `sources/web/usfm/`, and the copyright page of the zip file, `sources/web/copr.htm`. No other file of the zip file is in the repository: not the preface, the glossary, the style sheet, or the signature files.
+- Script: `scripts/build-text-web.mjs`. It reads `sources/web/usfm/` and `public/data/text/<id>.json`, and writes `public/data/text-web/<id>.json`, one file for each book.
+- What the site takes from the source files: the words of each verse, the Psalm titles (`\d`) of 116 Psalms, and the words-of-Jesus marks (`\wj`): 2,290 marks in 2,059 verses, with no exception.
+- What the site does not take from the source files: the Strong's numbers, the 1,231 footnotes, the 340 cross-reference notes, the paragraphs and the poetry lines, the 33 speaker lines `\sp` of the Song of Solomon, the 5 lines `\ms1` "BOOK 1" to "BOOK 5" of the Psalms, and the 22 `\d` lines of Psalm 119, which are the names of the Hebrew letters. The structure of each chapter comes from the Berean data in `public/data/text/`, by `docs/DESIGN.md` section 13.1.
+- The site changes no word of this translation. It has no list of exceptions, by `docs/DESIGN.md` section 13.2.
+- Five verse numbers have no words in the source, only a footnote: Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25. The data has no item for them. So the data has 31,098 verses: the 31,103 verse numbers of the source, less these 5.
+- Romans 14:24 to 14:26: the source has these verses, and no Berean block starts them. The data puts them in one new text block of the style `p`, after the last text block of Romans 14.
+- Romans 16:26 and 16:27: a Berean block starts these verses, and the source does not have them. The data has nothing for them. Romans 16 ends at verse 24 in the data.
+- The heading "Doxology" of Romans 16 has no verse after it in the data. The data does not have this heading, nor its cross-reference line "(Jude 1:24–25)".
+- Spaces: a run of spaces, tabs, and line breaks in the source becomes one space. The source has three no-break spaces U+00A0, in John 5:11, Acts 20:35, and Acts 22:21. Each is between `’` and `”`. The data keeps them.
+- Each words-of-Jesus mark of the source is one item `j` in the data. In 6 verses, two marks are next to each other with no space between them, for example Luke 12:6. The data keeps the two items. So the data has 2,290 items `j`, the same number as the marks of the source.
+- Tests: `src/data/textWeb.test.ts` checks that the words of each of the 31,098 verses are the same as in the source files. `src/data/marks.test.ts` checks the words-of-Jesus marks.
 
 ### Edition B: eBible.org, `eng-web`, the World English Bible Classic
 

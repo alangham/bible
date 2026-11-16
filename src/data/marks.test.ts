@@ -1,7 +1,7 @@
 // The marks of the words of Jesus in the site data. docs/TASKS.md Task 26 step 8, docs/DESIGN.md section 11.
 //
 // The test reads the marks of the source files with code of its own, not with the code of
-// scripts/build-text.mjs or scripts/build-text-kjv.mjs.
+// scripts/build-text.mjs, scripts/build-text-kjv.mjs, or scripts/build-text-web.mjs. The World English Bible: Task 30 step 8.
 
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
@@ -12,7 +12,7 @@ import { isAdded, isMarked, isOmitted, isVerseMark, type BookText } from './text
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
 const load = (dir: string) => books.map((b) => JSON.parse(readFileSync(join(root, 'public/data', dir, `${b.id}.json`), 'utf8')) as BookText)
-const DATA = { bsb: load('text'), kjv: load('text-kjv') }
+const DATA = { bsb: load('text'), kjv: load('text-kjv'), web: load('text-web') }
 type Key = keyof typeof DATA
 
 // The King James Version files are in Bible order by name, and their names hold the USFM code of the book.
@@ -55,7 +55,7 @@ function dataVerses(texts: BookText[]): Map<string, Seg[]> {
   })
   return out
 }
-const VERSES = { bsb: dataVerses(DATA.bsb), kjv: dataVerses(DATA.kjv) }
+const VERSES = { bsb: dataVerses(DATA.bsb), kjv: dataVerses(DATA.kjv), web: dataVerses(DATA.web) }
 
 /** The runs of marked words of a verse in the data: the marked items next to each other make one run. */
 function runs(segs: Seg[]): string[] {
@@ -154,7 +154,48 @@ function kjvSource(): Map<string, string[]> {
   return out
 }
 
-const SOURCE = { bsb: bsbSource(), kjv: kjvSource() }
+/** The words of a piece of USFM of the World English Bible: no footnote, no cross-reference note, no Strong's number, no marker. */
+function webWords(usfm: string): string {
+  return usfm
+    .replace(/\|strong="[^"]*"/g, '')
+    .replace(/\\\+?[a-z]+\d?\*/g, '')
+    .replace(/\\\+?[a-z]+\d?(\s|$)/g, '')
+    .replace(/[ \t\r\n]+/g, ' ')
+    .replace(/^ | $/g, '')
+}
+
+/**
+ * The words of each words-of-Jesus mark of each verse of the World English Bible files: "<book id> <c>:<v>" ->
+ * marks. The files are in Bible order by name. No mark of these files goes on over a verse number: the test
+ * checks this.
+ */
+const webFiles = readdirSync(join(root, 'sources/web/usfm'))
+  .filter((f) => f.endsWith('.usfm'))
+  .sort()
+function webSource(): Map<string, string[]> {
+  const out = new Map<string, string[]>()
+  webFiles.forEach((f, bi) => {
+    const body = readFileSync(join(root, 'sources/web/usfm', f), 'utf8')
+    const parts = body.split(/\\c (\d+)\s/)
+    for (let i = 1; i < parts.length; i += 2) {
+      const c = Number(parts[i])
+      const chapter = parts[i + 1]
+      const verses = chapter.slice(chapter.indexOf('\\v ')).split(/\\v (\d+)\s/)
+      for (let k = 1; k < verses.length; k += 2) {
+        const key = `${books[bi].id} ${c}:${verses[k]}`
+        const raw = verses[k + 1].replace(/\\f [\s\S]*?\\f\*/g, '').replace(/\\x [\s\S]*?\\x\*/g, '')
+        const starts = (raw.match(/\\\+?wj /g) ?? []).length
+        const ends = (raw.match(/\\\+?wj\*/g) ?? []).length
+        if (starts !== ends) throw new Error(`${key}: a words-of-Jesus mark goes on over a verse number`)
+        const marks = [...raw.matchAll(/\\wj ([\s\S]*?)\\wj\*/g)].map((m) => webWords(m[1]))
+        if (marks.length) out.set(key, marks)
+      }
+    }
+  })
+  return out
+}
+
+const SOURCE = { bsb: bsbSource(), kjv: kjvSource(), web: webSource() }
 
 // ---- the tests ----
 
@@ -186,6 +227,21 @@ describe('marks of the words of Jesus', () => {
     expect([...SOURCE.kjv.values()].reduce((n, l) => n + l.length, 0)).toBe(2038)
   })
 
+  it('has the words-of-Jesus marks of each verse of the World English Bible files, mark by mark, with no exception', () => {
+    const differ: string[] = []
+    const keys = new Set([...SOURCE.web.keys(), ...[...VERSES.web].filter(([, s]) => s.some((x) => x.m)).map(([k]) => k)])
+    for (const key of keys) {
+      const source = SOURCE.web.get(key) ?? []
+      // One item j for each mark. In 6 verses, two marks are next to each other with no space, for example
+      // Luke 12:6, so the test does not join the items into runs.
+      const data = (VERSES.web.get(key) ?? []).filter((s) => s.m).map((s) => s.t.replace(/[ \t\r\n]+/g, ' ').replace(/^ | $/g, ''))
+      if (JSON.stringify(source) !== JSON.stringify(data)) differ.push(`${key}: source ${JSON.stringify(source)}, data ${JSON.stringify(data)}`)
+    }
+    expect(differ).toEqual([])
+    expect([...SOURCE.web.values()].reduce((n, l) => n + l.length, 0)).toBe(2290)
+    expect(SOURCE.web.size).toBe(2059)
+  })
+
   it('has the numbers of verses "all" and "part" of the report of Task 25, with Mark 12:37 of the King James Version as "part"', () => {
     const count = (k: Key) => {
       const n = { all: 0, part: 0, none: 0 }
@@ -198,15 +254,27 @@ describe('marks of the words of Jesus', () => {
     expect({ all: kjv.all, part: kjv.part }).toEqual({ all: 1401, part: 627 })
   })
 
+  it('has the numbers of verses "all" and "part" of the report of Task 29 for the World English Bible', () => {
+    const n = { all: 0, part: 0, none: 0 }
+    for (const segs of VERSES.web.values()) n[classOf(segs)]++
+    expect({ all: n.all, part: n.part }).toEqual({ all: 1405, part: 654 })
+  })
+
   it('has marks only in the books of the report', () => {
     const marked = (k: Key) => DATA[k].filter((t) => t.chapters.some((ch) => ch.blocks.some((b) => b.k === 'p' && b.c.some((x) => isMarked(x) || (isAdded(x) && x.j === 1))))).map((t) => t.id)
     const nine = ['matthew', 'mark', 'luke', 'john', 'acts', '1-corinthians', '2-corinthians', 'hebrews', 'revelation']
     expect(marked('bsb')).toEqual(nine)
     expect(marked('kjv')).toEqual(nine.filter((id) => id !== 'hebrews'))
+    expect(marked('web')).toEqual(['matthew', 'mark', 'luke', 'john', 'acts', '1-corinthians', '2-corinthians', '1-timothy', 'revelation'])
   })
 
-  it('has John 3:16 as "all" and Matthew 3:17 as "none" in the two translations', () => {
-    for (const k of ['bsb', 'kjv'] as Key[]) {
+  it('has words-of-Jesus marks in Matthew 5:3, John 3:16, and Revelation 1:8 of the World English Bible, and none in Hebrews 10:5', () => {
+    for (const key of ['matthew 5:3', 'john 3:16', 'revelation 1:8']) expect(VERSES.web.get(key)!.some((s) => s.m), key).toBe(true)
+    expect(VERSES.web.get('hebrews 10:5')!.some((s) => s.m)).toBe(false)
+  })
+
+  it('has John 3:16 as "all" and Matthew 3:17 as "none" in the three translations', () => {
+    for (const k of ['bsb', 'kjv', 'web'] as Key[]) {
       expect(classOf(VERSES[k].get('john 3:16')!), k).toBe('all')
       expect(classOf(VERSES[k].get('matthew 3:17')!), k).toBe('none')
     }
@@ -224,7 +292,7 @@ describe('marks of the words of Jesus', () => {
 
   it('has no verse number inside an item j, and no empty item j', () => {
     const bad: string[] = []
-    for (const k of ['bsb', 'kjv'] as Key[])
+    for (const k of ['bsb', 'kjv', 'web'] as Key[])
       for (const t of DATA[k])
         for (const ch of t.chapters)
           for (const b of ch.blocks) {

@@ -1982,3 +1982,206 @@ Done when:
 - `npm run build` has no errors, and the tests pass.
 
 Stop and report. Give the path of the temporary folder in the report. Do not start a task that adds the World English Bible. Arthur decides the next tasks from the report.
+
+---
+
+# The World English Bible: Tasks 30 and 31
+
+Arthur decided the build on 2026-11-16, from the report of Task 29. The design is in section 13 of `docs/DESIGN.md`. Task 30 makes the text data. Task 31 changes the pages. The site gets a third translation only with Task 31.
+
+---
+
+## Task 30. World English Bible: the text data
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the words of the World English Bible are in the repository, as one JSON file for each book, in the structure of the Berean data, with the words-of-Jesus marks of the source. No page shows them in this task. Task 31 changes the pages.
+
+Arthur's decisions of 2026-11-16, from section 13 of `docs/DESIGN.md`:
+
+- The source is edition A of the report of Task 29: the edition `engwebp` of eBible.org, with "LORD" and "GOD" for the name of God.
+- The site keeps the verse numbers of the source, and changes no word.
+- The structure comes from the Berean data in `public/data/text/`, as for the King James Version.
+- The words-of-Jesus marks are those of the source.
+
+WARNING: Do not change a word of the World English Bible. Do not correct a spelling, a capital letter, or a punctuation mark. Do not join a word and do not split a word. This translation has no list of exceptions: the pages of eBible.org ask that a text with a changed word does not have the name "World English Bible". If the build finds a fault in the source, stop and ask Arthur.
+
+WARNING: Do not add or remove a words-of-Jesus mark. This translation has no mark exception.
+
+WARNING: Do not change an existing data file: `public/data/text/`, `public/data/text-kjv/`, `public/data/links/`, and the other files in `public/data/`. If you change `scripts/build-text-kjv.mjs` to share code, its output must be the same, byte for byte.
+
+WARNING: Do not change a page in this task. In `src/`, add or change test files only. Do not add the third translation to `src/data/translation.ts`. Task 31 does that.
+
+WARNING: Do not take a word, a heading, or a paragraph from `resources/web.docx`. That file is evidence only. Do not download a file from OpenBible.com.
+
+Steps:
+
+1. Read section 13 of `docs/DESIGN.md`, section 11 of `docs/DATA-SOURCES.md`, and `docs/reviews/task-29-web-report.md`. Read `scripts/build-text-kjv.mjs`: this task uses its method, with the new rules of step 5.
+2. Get the source file `engwebp_usfm.zip`. Use the copy of Task 29 if you still have it. If not, download `https://eBible.org/Scriptures/engwebp_usfm.zip` from this address directly. The SHA-256 of Task 29 is `3bb1ac4fe06e9adf50fe6659237fa0b3743bf651ce15cc9acebc36c5070ae62d`.
+   - If the SHA-256 is the same, continue.
+   - If the SHA-256 differs, run `node scripts/web-report.mjs` on the new files. Compare each count of steps 5, 7, 9, and 10 of the report for edition A. If each count is the same, continue, and record the two SHA-256 values and the dates in `docs/DATA-SOURCES.md` and in your report. If a count differs, stop and ask Arthur.
+3. Put the 66 USFM files of the 66 books in `sources/web/usfm/`. Put the copyright page of the zip file, `copr.htm`, in `sources/web/`. Do not put a different file of the zip file in the repository. The preface and the glossary stay out.
+4. Write the script `scripts/build-text-web.mjs`. It reads `sources/web/usfm/` and `public/data/text/<id>.json`. It writes `public/data/text-web/<id>.json`, one file for each book. A file has the form of a file in `public/data/text-kjv/`, with `"translation": "World English Bible"`. The script stops with an error when a rule does not fit the data. It does not guess. You can put the functions that the two scripts share in one module.
+5. The rules of the script.
+   - The words of a verse, from the USFM lines of the verse:
+     - `\w <word>|strong="…"\w*` and `\+w <word>|strong="…"\+w*`: keep the word. Remove the markers and the Strong's number. If a `\w` has a different attribute form, stop and report.
+     - `\f … \f*`: remove the footnote. `\x … \x*`: remove the cross-reference note.
+     - `\wj … \wj*`: these are the words-of-Jesus marks. Write them in Form A of section 11 of `docs/DESIGN.md`, as `scripts/build-text-kjv.mjs` does: a run of marked words is an item `{ "j": "words" }`.
+     - `\qs … \qs*` and `\bk … \bk*`: keep the words. Remove the markers. Example: the word "Selah".
+     - The markers `\fr`, `\ft`, `\fq`, `\fqa`, `\xo`, `\xt`, and `\+wh` are inside a footnote or a cross-reference note, and go with it. If one of them is outside, stop with an error.
+     - The source has no marker for added words. The data has no item `a`.
+     - Write the spaces as `scripts/build-text-kjv.mjs` writes them: one space between two words, and one space between the words of two verses in one block. A string has no two spaces together.
+   - Do not use these markers of the source: `\p`, `\m`, `\mi`, `\pi1`, `\nb`, `\q1`, `\q2`, `\li1`, and `\b`. Words on the same line are words of their verse. The site takes its structure from the Berean data.
+   - Do not use these lines of the source: the lines of the book head (`\id`, `\ide`, `\h`, `\toc1` to `\toc3`, `\mt1` to `\mt3`), `\cl`, the 5 lines `\ms1`, and the 33 lines `\sp`.
+   - If the source has a marker that this step does not name, stop with an error.
+   - The structure of a chapter comes from the blocks of the same chapter in `public/data/text/<id>.json`, by the rules of `scripts/build-text-kjv.mjs`:
+     - A heading block: copy it. Do not copy an `s2` heading of the Song of Solomon.
+     - The cross-reference lines (`xrefs`): copy them.
+     - A text block: a text block with the same style, with each verse that starts in the Berean block. The words of a verse are never cut. A Berean text block in which no verse starts gives no block.
+     - An item `{ "o": n }` of the Berean data: write `{ "v": n }` and the words of verse n at that place. The data has no `o` item.
+     - A break block: copy it, with the rules of the King James Version script. A note block: do not copy it.
+     - A Berean block with the style `d`, and a `\d` line of the source: the rules of the King James Version script. Zechariah 12 has a Berean `d` block and no `\d` line: make no `d` block, and the next text block holds `{ "v": 1 }` and the words of verse 1.
+   - New rule, Psalm 119: the source has 22 `\d` lines in this chapter, the names of the Hebrew letters. Do not use them. If a `\d` line is after a verse in a different chapter, or a chapter has a `\d` line and no Berean `d` block, stop with an error.
+   - New rule, a verse number with no words: five verses have a number and no words after the footnote is removed: Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25. Write no item for them: no `{ "v": n }` and no words. Make this a list in the script. If one of the five has words, or a different verse has no words, stop with an error.
+   - New rule, Romans 14:24 to 14:26: no Berean block starts these verses. Put them in one new text block with the style `p`, after the last text block of Romans 14. Make this a list in the script. If a different verse of the source has no place in the Berean structure, stop with an error.
+   - New rule, Romans 16:26 and 16:27: a Berean block starts these verses, and the source does not have them. Write nothing for them. Make this a list in the script. If the source does not have a different verse that a Berean block starts, stop with an error.
+   - New rule, a heading with no verse after it: when a chapter has a heading block after its last text block, do not copy that heading block, and do not copy the cross-reference line of that heading. Expected: one heading, "Doxology" in Romans 16, with the line "(Jude 1:24–25)" of verse 25. If the script finds a different one, stop with an error.
+   - The words-of-Jesus marks:
+     - Find the words of each mark in the words of its verse exactly. If the words are not there exactly, use the search of Task 26 that ignores the spaces. If the script does not find a mark, or finds it at more than one place and the order of the marks in the verse does not decide, stop with an error that names the book, the chapter, and the verse.
+     - A mark that goes on over a verse number gives one item `j` for each verse. An item `{ "v": n }` is never inside an item `j`. Count these marks and give the number in the report.
+     - A mark in one of the five verses with no words, or a mark with no words: stop with an error.
+6. Run the script. It must print these numbers. Give them in the report, each beside the number of the report of Task 29 for edition A:
+   - Books, chapters, and verses in the data. Expected: 66, 1,189, and 31,098. The source has 31,103 verse numbers, and 5 have no words.
+   - Footnotes removed. Task 29: 1,231. Cross-reference notes removed. Task 29: 340.
+   - `d` blocks made, and `\d` lines not used. Expected: 116 and 22. Task 29: 138 `\d` lines.
+   - Heading blocks for each style, and cross-reference lines. Expected: 3,015 `s1`, 43 `s2`, 5 `ms`, 5 `d`, 44 `qa`, and 1,324 cross-reference lines. That is the Berean data less the 37 `s2` headings of the Song of Solomon, less the heading "Doxology" of Romans 16 and its line.
+   - Start markers `\wj` read, verses with marked words, and items `j` written. Task 29: 2,290 start markers in 2,059 verses.
+   - Text blocks for each style, and the Berean text blocks that have no block in this data.
+   - The marker of the source line before Romans 14:24, for example `\p`.
+   If a number differs from the expected number or from Task 29, do not change the script to make the numbers agree. Find the cause and give it in the report.
+7. Write the unit test `src/data/textWeb.test.ts`, with the form of `src/data/textKjv.test.ts`. It reads `public/data/text-web/` and `sources/web/usfm/`. It gets the words of each verse from the source with code of its own, not with code of the build script. It checks:
+   - 66 books and 1,189 chapters, in the order of `public/data/books.json`, and 31,098 verses.
+   - The words of each verse are the same as in the source. For verse 1 of a chapter with a `d` block, the words are the title and then the words of the verse.
+   - The data has no item for Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25. Romans 14 has verses 1 to 26, and verses 24 to 26 are in the last text block. The last verse of Romans 16 is 24.
+   - These verses have these words. They are from the report of Task 29:
+     - Genesis 1:1: "In the beginning, God created the heavens and the earth."
+     - Psalm 3:1, after the title: "LORD, how my adversaries have increased! Many are those who rise up against me."
+     - Psalm 23:1, after the title: "The LORD is my shepherd; I shall lack nothing."
+     - Matthew 17:21: "But this kind doesn’t go out except by prayer and fasting.”"
+     - Romans 16:24: "The grace of our Lord Jesus Christ be with you all! Amen."
+   - Psalm 23 has a `d` block with the words "A Psalm by David." Psalm 119 has no `d` block. Zechariah 12 has no `d` block, and its first text block starts with `{ "v": 1 }`.
+   - The whole word "Yahweh" does not occur. The whole word "LORD" occurs 6,570 times in the words of the verses, with the Psalm titles not counted. This is the number of the report of Task 29. If your count differs, find the cause and give it in the report.
+   - No string has "\", "|", or two spaces together.
+   - Each text block has one verse or more. Each text block starts with an item `{ "v": n }`, except the text block after a `d` block.
+   - The heading blocks of each chapter are those of the Berean chapter, without the `s2` headings of the Song of Solomon and without the heading "Doxology" of Romans 16. The cross-reference lines of each chapter are those of the Berean chapter, without the line of Romans 16:25.
+   - No file has an `a` item, an `o` item, or a note block.
+8. Add the World English Bible to the tests of the words-of-Jesus marks in `src/data/marks.test.ts`, with the checks that the two other translations have:
+   - The marked words of each verse in the data are the marked words of that verse in the source.
+   - The classes of the report: 1,405 verses "all" and 654 verses "part". If your numbers differ, stop and report. Do not change the expected numbers to make the test pass.
+   - No book has a words-of-Jesus mark, apart from these 9 books: Matthew, Mark, Luke, John, Acts, 1 Corinthians, 2 Corinthians, 1 Timothy, Revelation.
+   - Matthew 5:3, John 3:16, and Revelation 1:8 have marked words. Hebrews 10:5 has none.
+   - No item `j` has an item `v` inside it, and no item `j` is empty.
+9. Add one unit test for the links, in a test file of `src/data/`. For each of the three data folders, it finds the links of `public/data/links/` with a passage that starts at a verse that the data does not have. An item `{ "v": n }` or `{ "o": n }` means that the data has verse n. Expected: none for `text` and `text-kjv`, and these three for `text-web`: `h1733`, `o3385`, `o3515`. Task 31 uses this list. If your result differs, stop and report.
+10. Change section 11 of `docs/DATA-SOURCES.md`: the use of edition A in Task 30, the folder `sources/web/usfm/`, the script, the output folder, what the site takes and does not take from the source files, the five verse numbers with no words, and the rules for Romans 14 and Romans 16. Change the line "No file of the World English Bible text is in the repository" to the true state. Editions B and C stay "Not used on the site".
+11. Run the `accuracy-reviewer` agent. Its Check 1 applies to `public/data/text-web/`, with `sources/web/usfm/` as the source file: 66 books, 1,189 chapters, 31,098 verses, and the words of each verse identical to the source.
+12. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- `public/data/text-web/` has 66 files, and the tests of steps 7, 8, and 9 pass.
+- The numbers of step 6 are in the report, each beside its expected number.
+- No file in `public/data/text/`, `public/data/text-kjv/`, or `public/data/links/` changed, and no page changed.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the size of `public/data/text-web/`. Do not start Task 31.
+
+---
+
+## Task 31. World English Bible: the pages
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the reader can select the World English Bible in the translation list and read it on each page that shows Bible text. The first visit shows the Berean Standard Bible, as now.
+
+The design is in section 13 of `docs/DESIGN.md`. The renders are in `docs/screenshots/web-design/`: the translation list with three rows at 1440 by 900 px and at 390 by 844 px, and the top bar with "WEB" at 390 px and at 375 px. The renders are a sketch on the built site of Task 28. Use their look. Do not copy code from them.
+
+The data of Task 30 is ready: `public/data/text-web/<id>.json` has the form of `public/data/text-kjv/<id>.json`. It has items `j`. It has no `a` item, no `o` item, and no note block. If Task 30 is not `DONE`, stop.
+
+WARNING: Do not change a data file in `public/data/`, a source file in `sources/`, or a build script.
+
+WARNING: The pages of the Berean Standard Bible and of the King James Version must look and work as before this task. The one difference is the third row of the translation list.
+
+WARNING: Write no new content about the Bible. The only new words of this task are the name "World English Bible", the short name "WEB", and the text of step 8.
+
+WARNING: Do not add or remove a link in `public/data/links/`. Step 6 changes which links a page shows. It does not change the link data.
+
+Steps:
+
+1. Read section 13 of `docs/DESIGN.md`, and step 12 of `docs/reviews/task-29-web-report.md`. Step 12 lists the places in the code and in the tests that are written for two translations. Look at the four renders.
+2. `src/data/translation.ts`:
+   - The type `Translation` gets the value `web`.
+   - The list `TRANSLATIONS` gets a third row: the id `web`, the name "World English Bible", the short name "WEB".
+   - `readTranslation` gives the stored value when it is the id of a row of `TRANSLATIONS`, and `bsb` for each other value.
+3. `src/data/text.ts`: the folder of `web` is `text-web`.
+4. The translation control and the translation list, in `src/reading/ReadingPage.tsx`. The report expects that the list gets its third row from `TRANSLATIONS`, with no change in this file. Make sure of this on the page:
+   - The list has three rows in this order: "Berean Standard Bible", "King James Version", "World English Bible". The look is that of the renders.
+   - With the World English Bible selected, the translation control shows "WEB", and its name for a screen reader is "Translation: World English Bible, WEB".
+   - The wall has no translation control and no translation name, as now.
+5. The pop-up, `src/book/LinkPopup.tsx`: the label "The quoted words are from the Berean Standard Bible." shows in the pop-up of a quotation link for each translation that is not the Berean Standard Bible. Do not change a reason line.
+6. The links that a page does not show. The rule of section 13.4 of `docs/DESIGN.md`: on the pages of a translation, a link does not show when one of its two passages starts at a verse that the data of that translation does not have.
+   - Make a list of link ids for each translation in the code: none for `bsb`, none for `kjv`, and `h1733`, `o3385`, `o3515` for `web`. Change the unit test of step 9 of Task 30 so that it compares its result with this list. Then the list is a result of the rule, and no person selects a link.
+   - Where the page makes the marks of a chapter from the links, leave out the two ends of each link in the list of the selected translation. `marksOf` in `src/data/links.ts` is such a place. Find each other place with a search: the marks, the margin labels, the cross-reference lines under a heading, and the pop-up.
+   - Result on the World English Bible pages: Matthew 13:35 and 1 Timothy 3:16 have no control for Romans 16:25. In Jude, the cross-reference line "(Romans 16:25–27)" under the heading "Doxology" shows as words, with no control. The designer ran the built site of Task 28 with the link `h1733` left out of the link data of Jude: the line showed as words, with no control and no page error.
+   - The read-with lists, the timeline, and the quotation diagram do not change.
+7. The places with no verse. Make sure of this behavior with the tests of step 11, and change the code only if a test fails:
+   - A page address with a verse that the selected translation does not have opens its chapter at the top, with no error. Examples: `#/book/romans/16/25` and `#/book/luke/17/36` with the World English Bible. The designer ran this on the built site of Task 28, with `#/book/romans/14/25` and the Berean Standard Bible.
+   - When the reader changes the translation and the new text does not have the verse at the top of the page, the page keeps the verse before it. The designer read this in the code and did not run it.
+8. The Sources page, `src/SourcesPage.tsx`, section "The Bible text". Make these changes and no other change:
+   - Change the first sentence to: "The site has three translations: the Berean Standard Bible (BSB), the King James Version (KJV), and the World English Bible (WEB)." Keep the link on the words "Berean Standard Bible". Keep the other sentences of that paragraph.
+   - After the paragraph about the 13 verses of the King James Version, add this paragraph: "The World English Bible on this site is the edition that does not have the books of the Apocrypha, from the files of eBible.org. eBible.org names it the 2020 stable text edition, and gives it the abbreviation "WEBP". The World English Bible is in the public domain. "World English Bible" is a trademark of eBible.org." Link the first "eBible.org" to `https://ebible.org/details.php?id=engwebp`. Make sure that each fact of this paragraph is in `sources/web/copr.htm` or in section 11 of `docs/DATA-SOURCES.md`. If a fact is not there, stop and ask Arthur.
+   - Then add this paragraph: "The site shows the words of these files without change. It does not show the Strong's numbers, the footnotes, and the cross-reference notes of these files."
+   - Then add this paragraph: "The verse numbers of the World English Bible are those of the files. Romans 14 has 26 verses, and Romans 16 ends at verse 24. In the two other translations of this site, the words of the last three verses of Romans 14 are Romans 16:25 to 16:27. Five verse numbers have no words in the files, and the site does not show them: Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25." Make sure of the third sentence with the footnote of Romans 16:25 in `sources/web/usfm/` and with the words of these verses in the three data folders. If you are not sure, stop and ask Arthur.
+   - Change the paragraph about the structure to: "On the King James Version pages and the World English Bible pages, the section headings, the cross-reference lines, the paragraphs, and the lines of poetry are those of the Berean Standard Bible files. They are not part of these translations." Put it after the new paragraphs.
+   - In the paragraph about the words of Jesus, change "The two translations do not mark" to "The three translations do not mark". Keep the other sentences.
+9. Change each comment in `src/` that says "the two translations" to the true state.
+10. Change the unit tests that step 12 of the report lists, so that they test three translations: `src/data/translation.test.ts` and `src/data/marks.test.ts`. Add: the stored value `web` gives `web`, a stored value that is not an id gives `bsb`, and `loadBookText` reads `data/text-web/<id>.json` for `web`.
+11. Change and add browser tests in `e2e/`, at 1440 by 900 px and at 390 by 844 px. Step 12 of the report lists the places of the tests that are written for two translations. New checks:
+    - Open John 3. Open the translation list. It has three rows. Select "World English Bible". The list closes, the translation control shows "WEB", and John 3:16 has the words "only born Son". The verse that was at the top is at the same place, with a tolerance of 2 px.
+    - Load the page again. The World English Bible is still selected, and the third row has the check mark.
+    - The keyboard test of the translation list goes through the three rows.
+    - Genesis 1:1 has the words "In the beginning, God created the heavens and the earth." The section heading "The Creation" and its cross-reference line are on the page.
+    - Psalm 23: the title "A Psalm by David." is on the page, and verse 1 has the words "The LORD is my shepherd; I shall lack nothing." The chapter has no element of added words.
+    - Psalm 119: the words "ALEPH" are on the page one time.
+    - Matthew 17: verse 21 shows as text, and the page has no note for it.
+    - Luke 17: the page has the verse numbers 35 and 37, and no verse number 36. The page has no note.
+    - Romans 14: the verse numbers 24, 25, and 26 are on the page, after verse 23, in one paragraph. The chapter has no heading "Doxology".
+    - Romans 16: the last verse number is 24. The chapter has no heading "Doxology" and no line "(Jude 1:24–25)". With the Berean Standard Bible, the chapter has the two.
+    - Jude: under the heading "Doxology", the line "(Romans 16:25–27)" has no control. With the Berean Standard Bible, it has a control.
+    - Matthew 13 with the echo links on: verse 35 has no control for Romans 16:25. With the Berean Standard Bible, it has one.
+    - The address `#/book/romans/16/25` and the address `#/book/luke/17/36` open their chapters with no page error.
+    - On Romans 14, scroll until verse 25 is the first verse below the top bar. Select "Berean Standard Bible". No page error occurs, and the top bar shows "Romans 14".
+    - Open the pop-up of a quotation link. The passage has the words of the World English Bible, and the label of step 5 is below the reason line.
+    - Red letters: in John 3, the words of verse 16 have the color `#8B1A1A`. With red letters off, they have the ink color. Add `web` to the list of translations in `e2e/redletters.spec.ts`, and add its four keys to `e2e/redletters-breaks.json`, measured on the build of this task.
+    - The top bar is one line at 390 px and at 375 px with "WEB", for "2 Thessalonians 3" and for "Song of Solomon 8". "Books", the chapter number, the translation control, and "Menu" are not cut. At 375 px, the name "Song of Solomon" can end with "…".
+    - The Sources page has the new words of step 8.
+    - The axe-core checks that `e2e/a11y.spec.ts` has with the King James Version stored run with the World English Bible stored also.
+    - The wall has no text with the name of a translation.
+12. Make sure that the browser tests that were there before this task pass. Where a test must change because the site has three translations, give the test and the reason in the report.
+13. Take screenshots with the World English Bible selected, at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, Genesis 1, Psalm 23, John 3, the end of Romans 14, the end of Romans 16, the pop-up of a quotation link, and the Sources page. Save them in `docs/screenshots/task-31/`. Compare the translation list with the renders, and give each difference in the report.
+14. Run the `accuracy-reviewer` agent. The Bible text on the pages comes from the data of Task 30 with no change. The new words are those of steps 2 and 8.
+15. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The reader can select the World English Bible in the translation list, and the selection stays after a reload.
+- The reading page and the pop-up show the words of the World English Bible, with its red letters.
+- The 3 links of step 6 do not show on the World English Bible pages, and show on the pages of the two other translations.
+- The pages of the two other translations are as before.
+- The Sources page has the words of step 8.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.

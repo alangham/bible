@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest'
 import { readOpenBible, readWithLists } from '../../scripts/links-common.mjs'
 import type { Book } from './books.ts'
 import { marksOf, type BookLinks } from './links.ts'
+import { isOmitted, isVerseMark, type BookText } from './text.ts'
 
 const root = join(import.meta.dirname, '..', '..')
 const books = JSON.parse(readFileSync(join(root, 'public/data/books.json'), 'utf8')) as Book[]
@@ -91,5 +92,45 @@ describe('read-with lists', () => {
   it('give Hebrews 9 the read-with list with Leviticus 16', () => {
     const data = JSON.parse(readFileSync(join(root, 'public/data/links/hebrews.json'), 'utf8')) as BookLinks
     expect(data.readWith['9']).toContainEqual({ book: 'leviticus', c: 16 })
+  })
+})
+
+// The links whose passage starts at a verse that the data of a translation does not have. docs/TASKS.md Task 30
+// step 9, docs/DESIGN.md section 13.4. Task 31 uses this list.
+describe('links and the verses of each translation', () => {
+  /** "<book id> <c>:<v>" of each verse that a data folder has: an item { v: n } or { o: n }. */
+  const versesOf = (folder: string) => {
+    const out = new Set<string>()
+    for (const book of books) {
+      const text = JSON.parse(readFileSync(join(root, 'public/data', folder, `${book.id}.json`), 'utf8')) as BookText
+      for (const ch of text.chapters)
+        for (const b of ch.blocks) {
+          if (b.k !== 'p') continue
+          for (const x of b.c) {
+            if (isVerseMark(x)) out.add(`${book.id} ${ch.n}:${x.v}`)
+            else if (isOmitted(x)) out.add(`${book.id} ${ch.n}:${x.o}`)
+          }
+        }
+    }
+    return out
+  }
+  const links = new Map<string, BookLinks['links'][number]>()
+  for (const book of books) {
+    const data = JSON.parse(readFileSync(join(root, 'public/data/links', `${book.id}.json`), 'utf8')) as BookLinks
+    for (const l of data.links) links.set(l.id, l)
+  }
+  const missing = (folder: string) => {
+    const has = versesOf(folder)
+    return [...links.values()]
+      .filter((l) => [l.a, l.b].some((p) => !has.has(`${p.book} ${p.c}:${p.v}`)))
+      .map((l) => l.id)
+      .sort()
+  }
+
+  it('finds no such link for the Berean Standard Bible and the King James Version, and three for the World English Bible', () => {
+    expect(links.size).toBe(3866)
+    expect(missing('text')).toEqual([])
+    expect(missing('text-kjv')).toEqual([])
+    expect(missing('text-web')).toEqual(['h1733', 'o3385', 'o3515'])
   })
 })

@@ -4,6 +4,8 @@ Agreed with Arthur on 2026-11-13. Mockups D1, D2, and D3 are in the Claude desig
 
 WARNING: Section 7 is a redesign that Arthur decided on 2026-11-14. Section 7 replaces sections 1, 3, and 4.1 to 4.4 for the first page and the reading page. Tasks 11 to 18 in `docs/TASKS.md` build section 7. Claude Code builds a part of section 7 only when its task says so. Where section 7 and an older section differ, section 7 is correct.
 
+WARNING: Section 9 is the top bar that Arthur decided on 2026-11-15. It changes the bottom line of the wall in section 7.4, the top bar in section 7.5, and the translation switch in section 8.5. Task 22 in `docs/TASKS.md` builds section 9. Where section 9 and an older section differ, section 9 is correct.
+
 ## 1. Goal
 
 The reader feels that they are inside the Bible. The reference is "The Long Light" template from scrolltide.co: a real 3D book on a sunlit linen table, pages that curl when you drag them, and a layered paper-cut scene on each spread. Use the idea. Do not copy the template's code, text, or art.
@@ -274,7 +276,7 @@ Arthur decided each item in this section on 2026-11-14, in a design chat. The se
 - Wide layout, 900 px or more: five columns with the book counts of section 4.1. All 66 names and the bottom line fit in one view at 1440 by 900 px.
 - Narrow layout, below 900 px: each group is a block. A band is at the top of the block, and the names are in two columns below it. The wall is 520 px wide at most, in the center. NOT VERIFIED: the designer tested the narrow layout at 390 px wide only. The prototype has its limit at 700 px.
 - Each book name is 24 px high or more.
-- A line at the bottom of the wall has the name of the translation and the links to the pages of the Reference section.
+- A line at the bottom of the wall has the name of the translation and the links to the pages of the Reference section. Section 9.3 replaces this line with a top bar, and puts the wall in the center of the space below the bar.
 - On a phone, the names of a block are divided so that the two columns have almost the same height. A group with one book fills the full width. Arthur decided this on 2026-11-14.
 - The wall has no title.
 - Hover on a book name: an underline in the group color. The name keeps its full color. Arthur decided this on 2026-11-14. Reason: the fade to opacity 0.62 of the prototype puts each group color below 4.5 to 1 on white, from 2.34 to 4.28 to 1.
@@ -290,7 +292,7 @@ Arthur decided each item in this section on 2026-11-14, in a design chat. The se
 - The verse numbers are in the group color.
 - The introduction: one control below the book heading, "About this book". It opens the three facts: What it is, Author, Written. "Scholars differ" opens the detail of section 4.2. The "Draft" label shows there until Arthur approves the introduction.
 - The cross-reference line of the Berean Standard Bible files shows as a small line below its section heading.
-- A thin bar stays at the top. It has two controls:
+- A thin bar stays at the top. Section 9.4 adds the translation control to this bar, and changes the bar in the narrow layout. It has two controls:
   - "Books" goes back to the wall.
   - The book name and chapter number open a grid of the chapter numbers of that book. A tap on a number opens that chapter.
 
@@ -331,6 +333,7 @@ Arthur decided on 2026-11-14 to design the links before the build. The rules of 
   - Arthur decided this on 2026-11-14. The text in that pop-up is every verse of the passage that the line names, as for other links. For a reference to whole chapters or whole books, the text is the first verse, with the label "First verse". The text area of the pop-up keeps a maximum height, and a long passage scrolls inside it.
 - Pop-up. A tap on a mark, a label, or a section control opens it. It shows: the band of the linked group, the reference in capitals, the type of link and the passage that it comes from, the text of the linked passage, the reason line for a quotation link, the source, and the actions "Go there" and "Stay here". On a wide screen, it opens near the control. On a narrow screen, it opens from the bottom of the screen.
   - The side on a wide screen, which Arthur decided on 2026-11-15: the pop-up opens below the control when all of its content fits there. If the content does not fit below, and the space above is larger, the pop-up opens above the control. Reason: the label of section 8.4 makes the pop-up taller, and the button "Go there" was half visible in some positions. Task 21b has the rule.
+  - The pop-up opens before the text of the passage arrives. When the text arrives, the pop-up can move one time from below the control to above it. Arthur decided on 2026-11-15 to keep this as built. The site adds no wait before the pop-up shows.
 - Travel. "Go there" opens the linked chapter at the linked verse. The change is direct, with no move between the two pages. The paragraph of the linked verse has a light background for a short time. Arthur decided this on 2026-11-14.
   - The line in section 4.5 that says "The move must show that the reader crossed the Bible" does not apply to the redesign. Arthur said that he did not miss this move.
   - Arthur's rule: after "Go there", the reader must have a way to get back.
@@ -402,6 +405,7 @@ Arthur decided this section on 2026-11-15. The evidence is in `docs/reviews/task
 - The site does not show these parts of the source files: the Strong's numbers, the footnotes, the paragraph signs "¶", the marks for the words of Jesus, the paragraphs and the poetry lines, and the `\s1` lines. The `\s1` lines are the letter headings of Psalm 119 and the lines at the end of 14 letters.
 - The words that the translators added show in italics, as in a printed copy. The source marks them with `\add`.
 - A Psalm title is in italics on the site. In a Psalm title, the added words show upright, so that the reader can see them.
+- In the pop-up, all the words of a verse are upright, and a Psalm title is part of verse 1. So the pop-up shows a Psalm title upright, with its added words in italics. Arthur decided on 2026-11-15 to keep this as built.
 - A Psalm title of the source is a `\d` line. It shows as the title of its Psalm, where the Berean data has the title of that Psalm.
 - The King James Version has words for the 16 verses that the main text of the Berean Standard Bible does not have. The King James Version pages show these verses as text, with no note.
 
@@ -424,6 +428,8 @@ The structure of each chapter comes from the Berean data in `public/data/text/`.
 
 Arthur decided this on 2026-11-15, from renders of three options. The renders are in `docs/screenshots/kjv-design/`.
 
+Sections 9.3 to 9.5 replace the form and the two places of the translation switch: the reader selects the translation in the translation list, which opens from the top bar of the reading page. The rules of this section for the storage, the first visit, the address of a page, and the verse at the top of the page stay.
+
 - The translation switch is a control with the two full names: "Berean Standard Bible" and "King James Version". The selected name has the ink color and an underline. The other name has the secondary ink color.
 - The switch is in two places: in the line at the bottom of the wall, and at the top of the panel of the chapter grid on the reading page. A line separates it from the chapter grid.
 - The top bar does not change. Reason: at 390 px wide, the top bar has no space for a switch.
@@ -441,4 +447,93 @@ Arthur decided this on 2026-11-15, from renders of three options. The renders ar
 ### 8.7 Not decided
 
 1. Arthur asked the Berean publisher on 2026-11-15 if the site can use its set of headings for the King James Version. This section does not wait for an answer.
-2. On a phone, the top bar of the reading page breaks into two lines for five long book names. The designer found this on 2026-11-15. It is a fault of the site before the King James Version, and no task corrects it.
+2. On a phone, the top bar of the reading page breaks into two lines for five long book names. The designer found this on 2026-11-15. It is a fault of the site before the King James Version. Section 9.4 corrects it, and Task 22 builds the correction.
+
+## 9. The top bar of 2026-11-15
+
+Arthur decided this section on 2026-11-15, from renders. The renders are in `docs/screenshots/bar-design/`: the wall at 1440 by 900 px, at 1920 by 1080 px, and at 390 by 844 px, and the reading page at 1440 by 900 px and at 390 by 844 px. The renders are a sketch on the built site of Task 21b. Task 22 in `docs/TASKS.md` builds this section.
+
+### 9.1 Reason
+
+- Arthur will add items to the line at the bottom of the wall. A bar at the top has a place for them.
+- On a phone, the reader must scroll to the bottom of the wall to change the translation.
+- The site will possibly get more translations at a later time. A row of full names has space for two names only.
+- The reader changes the translation on the page that shows the words.
+
+### 9.2 The rule
+
+- The wall and the reading page each have a top bar. The bar is 52 px high. It has the look of the top bar of the reading page as built. It stays at the top of the window when the reader scrolls.
+- The bar has three parts: left, center, and right.
+- In the wide layout, the right part shows its items. In the narrow layout, the right part is one control with the word "Menu".
+- `src/screenLayout.ts` decides the layout, as built. The limit stays at 900 px.
+
+### 9.3 The wall
+
+- The line at the bottom of the wall is removed.
+- The wall has no translation control. Arthur decided this on 2026-11-15. Reason: the wall shows only the book names, and the book names are the same in each translation.
+- Wide layout: the right part of the bar has the links "Timeline", "Quotations", and "Sources". The left part and the center are empty.
+- Narrow layout: the right part of the bar has "Menu". The left part and the center are empty.
+- Wide layout: the wall is in the center of the space below the bar. The space above the columns is equal to the space below them, and each is 24 px or more. When the window is lower than the bar and the wall together, the wall starts 24 px below the bar and the page scrolls.
+- Measured in the sketch: the columns are 761 px high. At 1440 by 900 px, the space is 44 px above and below, and the bar and all 66 names are in one view. At 1920 by 1080 px, the space is 134 px above and below.
+- Narrow layout: the wall starts below the bar and the page scrolls, as built.
+- When the page scrolls to a book name, the name stops below the bar.
+
+### 9.4 The top bar of the reading page
+
+- Left part: "Books", as built.
+- Center: the control that opens the chapter grid, as built. Then a thin vertical line. Then the translation control.
+- Right part, wide layout: the echo links switch, as built.
+- Right part, narrow layout: "Menu".
+- The translation control shows the short name of the selected translation and a caret. The short names are "BSB" and "KJV". For a screen reader, the name of the control is the word "Translation", the full name, a comma, and the short name. Example: "Translation: Berean Standard Bible, BSB". The short name is not in parentheses: axe-core 4.14 removes text in parentheses before it compares the name with the words on the control. Arthur decided this name on 2026-11-16.
+- Narrow layout: the control that opens the chapter grid shows the book name and the chapter number, without the word "Chapter". Example: "John 3". For a screen reader, its name is the same words, without the word "Chapter".
+- In the two layouts, the text of that control in the page has a space character between its parts: "John Chapter 3" and "John 3". Then its name for a screen reader does not depend on the browser. The look does not change.
+- Narrow layout: the bar is always one line. If the items do not fit, the book name ends with "…". "Books", the chapter number, the translation control, and "Menu" are never cut.
+- Measured in the sketch: "2 Thessalonians 3" and "Song of Solomon 8" show with no cut at 390 px and at 375 px. At 360 px and at 320 px, the book name ends with "…".
+- This corrects item 2 of section 8.7.
+- The translation switch of section 8.5 is removed from the panel of the chapter grid. The panel has only the chapter grid.
+
+### 9.5 The translation list
+
+- The translation control opens the translation list.
+- The list has one row for each translation, in the order of the translations in the code. A row has a place for a check mark, the full name, and the short name at the right in the secondary ink color.
+- A row has the weight 500, as the renders show. The row of the selected translation has the check mark and the weight 600. The selection does not show by color only.
+- Wide layout: the list is a pop-up below the control. It starts 4 px below the bar, 56 px from the top of the window. The render shows it at 48 px, where it covers the line of the bar. Arthur decided on 2026-11-16 to keep 56 px, as built. It is 340 px wide, with its center below the center of the control, and it stays 12 px or more from each side of the window. It is white, with round corners of 12 px and a shadow. A row is 44 px high. A row has a light gray background when the pointer is on it. The page has no shade. A click outside the list closes it.
+- Narrow layout: the list is a panel below the bar, with the full width, and with the shade of the panel of the chapter grid. A row is 48 px high.
+- When the reader selects a row, the list closes, the focus goes back to the translation control, and the page shows the words of that translation. The rule of section 8.5 for the verse at the top of the page applies. If the reader selects the translation that is already selected, the list closes and nothing changes.
+- The storage, the first visit, and the address of a page are as in section 8.5.
+
+### 9.6 "Menu"
+
+- "Menu" is in the narrow layout only. It opens the menu panel: a panel below the bar, with the full width, and with the shade of the panel of the chapter grid. A row is 48 px high and has the weight 500.
+- On the wall, the menu panel has three rows: "Timeline", "Quotations", and "Sources". Each row is a link to its page.
+- On the reading page, the menu panel has the row "Echo links" with the word "On" or "Off" at the right, then a thin line, then the three links.
+- The row "Echo links" is the echo links switch. A tap changes the state, and the panel stays open.
+- This gives the narrow reading page links to the Reference section. The wide reading page has no such links. Arthur accepted this on 2026-11-15.
+- The cost that Arthur accepted on 2026-11-15: in the narrow layout, the echo links switch is two taps away.
+
+### 9.7 Rules for the three panels
+
+The three panels are the panel of the chapter grid, the translation list, and the menu panel.
+
+- Only one of them is open at a time. When one opens, the open one closes.
+- When the layout changes between wide and narrow, the open panel closes. A panel does not open again without an action of the reader.
+- The Escape key closes the open panel, and the focus goes back to the control that opened it. A tap on the shade closes it.
+- The caret of a control points up when its panel is open, as the caret of the chapter grid control does.
+- When the trail shows below the top bar, a panel starts below the trail, as the panel of the chapter grid does.
+- Each control and each row is 24 by 24 px or more, shows the focus, and operates with the keyboard.
+- The name of a control for a screen reader contains the words that the reader sees on the control. This is WCAG 2.5.3. Arthur decided this on 2026-11-16, after the axe-core check of Task 22 failed on the translation control. The rule applies to the translation control and to the control that opens the chapter grid.
+
+### 9.8 Selected by the designer, without a decision by Arthur
+
+- The sizes and the spaces of the bar, the list, and the menu panel.
+- The words "Menu", "On", and "Off".
+- The pop-up form of the translation list in the wide layout, and its panel form in the narrow layout.
+- The empty left part and center of the bar of the wall.
+- The words for a screen reader.
+
+### 9.9 Not decided
+
+1. The items that Arthur will add to the bar. He did not name them.
+2. More translations. Arthur said on 2026-11-15 that this comes later. The rule in `CLAUDE.md` that the site has two translations stays until he changes it.
+3. The top bar of the pages of the Reference section. It does not change in this section.
+4. Links to the Reference section on the wide reading page.

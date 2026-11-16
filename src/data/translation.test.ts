@@ -33,8 +33,8 @@ describe('translation setting', () => {
   it('has the two translations with their full names', async () => {
     const t = await load()
     expect(t.TRANSLATIONS).toEqual([
-      { id: 'bsb', name: 'Berean Standard Bible' },
-      { id: 'kjv', name: 'King James Version' },
+      { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
+      { id: 'kjv', name: 'King James Version', short: 'KJV' },
     ])
   })
 
@@ -68,6 +68,17 @@ describe('translation setting', () => {
     expect(t.getTranslation()).toBe('bsb')
     t.setTranslation('kjv')
     expect(t.getTranslation()).toBe('kjv')
+  })
+})
+
+describe('short names', () => {
+  // docs/TASKS.md Task 22 step 13. The translation control shows the short name.
+  it('each translation has a short name, and the short names are different', async () => {
+    vi.stubGlobal('localStorage', memoryStorage())
+    const { TRANSLATIONS } = await load()
+    for (const t of TRANSLATIONS) expect(t.short).toMatch(/\S/)
+    expect(new Set(TRANSLATIONS.map((t) => t.short)).size).toBe(TRANSLATIONS.length)
+    expect(TRANSLATIONS.map((t) => t.short)).toEqual(['BSB', 'KJV'])
   })
 })
 

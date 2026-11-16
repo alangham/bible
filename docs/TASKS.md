@@ -1242,3 +1242,148 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+# The top bar: Task 22
+
+Arthur decided on 2026-11-15 to move the bottom line of the wall to a top bar, to put the wall in the center of the window, and to make the translation a list that opens from the top bar of the reading page. The design is in section 9 of `docs/DESIGN.md`.
+
+---
+
+## Task 22. The top bar, the wall in the center, and the translation list
+
+Status: DONE
+
+Goal: the wall and the reading page each have one top bar. The wall is in the center of the space below its bar. The reader selects the translation in a list that opens from the top bar of the reading page. In the narrow layout, the other items of a bar are in "Menu".
+
+The design is in section 9 of `docs/DESIGN.md`. Arthur decided it on 2026-11-15 from renders. The nine renders are in `docs/screenshots/bar-design/`:
+
+- `wall-1440.png`, `wall-1920.png`, `wall-390.png`: the wall with its top bar.
+- `wall-menu-390.png`: the wall with the menu panel open.
+- `reading-1440.png`, `reading-390.png`: the reading page with its top bar. `reading-390.png` shows the longest book name.
+- `reading-list-1440.png`, `reading-list-390.png`: the reading page with the translation list open.
+- `reading-menu-390.png`: the reading page with the menu panel open.
+
+The renders are a sketch on the built site of Task 21b. Use their look. Do not copy code from them. The sizes are 1440 by 900 px, 1920 by 1080 px, and 390 by 844 px.
+
+Changed on 2026-11-16, after Claude Code stopped on a failed axe-core check. Arthur decided these five items:
+
+- Step 7: the name of the translation control for a screen reader has the short name also.
+- Step 8: in the narrow layout, the name of the chapter grid control for a screen reader is the words that the control shows. It has no hidden word "Chapter".
+- Step 10: the wide translation list stays 56 px from the top of the window, as built.
+- Step 15: the change to `e2e/links.spec.ts` is accepted.
+- Step 18 is new: lint ignores `.claude/` and `.github/`.
+
+Changed a second time on 2026-11-16, after the name with "(BSB)" failed the axe-core check. Arthur decided these five items:
+
+- Step 7: the name of the translation control is "Translation: Berean Standard Bible, BSB", with a comma and no parentheses.
+- Step 8: the text of the chapter grid control has a space character between its parts.
+- Steps 10 and 11: a row has the weight 500. Arthur accepted this as built.
+- Step 12: a layout change closes the open panel. Arthur accepted this as built.
+- Step 19: the rule for the test "the accessibility check finds a planted problem".
+
+WARNING: Do not add a translation. The site has two translations, and the translation list has two rows.
+
+WARNING: Do not change a data file in `public/data/`, a source file in `sources/`, or a build script.
+
+WARNING: Do not change a page of the Reference section or its top bar, `src/reference/RefBar.tsx`.
+
+WARNING: Do not change the Bible text, the links, the pop-up, the trail, the chapter grid, or "About this book". The one change to the panel of the chapter grid is step 9.
+
+WARNING: The rule of Task 21 for the verse at the top of the page must stay: when the reader changes the translation, the verse at the top stays at the same place.
+
+Steps:
+
+1. Read section 9 of `docs/DESIGN.md`. Look at the nine renders in `docs/screenshots/bar-design/`.
+2. In `src/data/translation.ts`, give each translation a short name: "BSB" for `bsb`, and "KJV" for `kjv`. Change nothing else in this file.
+3. The top bar of the wall, in `src/wall/WallPage.tsx`.
+   - Remove the line at the bottom of the wall, the function `WallFoot`, and its styles.
+   - Add a top bar at the top of the wall. Give it the look of the top bar of the reading page, `.rd-bar` in `src/index.css`: 52 px high, the white background with the blur, the thin line below, Inter, weight 500, 15 px, the secondary ink color.
+   - The bar stays at the top of the window when the reader scrolls.
+   - The left part and the center of the bar are empty.
+   - Wide layout: the right part has the links "Timeline", "Quotations", and "Sources", in a `nav` with the label "Reference". They have the look of the links in the top bar of the Reference pages, with no link marked as the current page.
+   - Narrow layout: the right part has the control "Menu" of step 11.
+   - The wall has no translation control.
+4. The wall in the center, wide layout only.
+   - The space above the columns, below the bar, is equal to the space below the columns. Each is 24 px or more.
+   - When the window is lower than the bar and the wall together, the wall starts 24 px below the bar, and the page scrolls.
+   - Expected: at 1440 by 900 px, the columns are approximately 761 px high, the space is approximately 44 px above and below, and the page does not scroll. At 1920 by 1080 px, the space is approximately 134 px above and below.
+   - Do not change `src/wall/layout.ts` or `src/wall/fit.ts`. The sizes of the names stay.
+5. The narrow wall starts below the bar, as now. Keep its top padding of 28 px and its bottom padding of 48 px.
+6. When the page scrolls to a book name on the wall, the name stops below the bar. This applies to the move of the book name after "Books", and to the focus from the keyboard. The move of a book name between the wall and the reading page must work as before this task.
+7. The top bar of the reading page, in `src/reading/ReadingPage.tsx`.
+   - The left part is "Books", as now.
+   - The center has the control that opens the chapter grid, as now. Then a line of 1 px by 18 px in the color `rgba(0, 0, 0, 0.14)`. Then the translation control.
+   - The translation control is a button. It opens the translation list of step 10. It shows the short name of the selected translation and a caret of the same form as the caret of the chapter grid control. It has the secondary ink color and the weight 500.
+   - For a screen reader, the name of the translation control is "Translation: ", the full name, a comma, and the short name, for example "Translation: Berean Standard Bible, BSB". Do not put the short name in parentheses: axe-core 4.14 removes text in parentheses before it compares. The name must contain the short name that the control shows: this is the axe-core rule `label-content-name-mismatch`, WCAG 2.5.3. It has `aria-expanded`.
+   - The center of the bar is in the center of the window when the items fit.
+   - Wide layout: the right part is the echo links switch, as now.
+   - Narrow layout: the right part is the control "Menu" of step 11. The bar does not show the echo links switch.
+8. The top bar of the reading page in the narrow layout.
+   - In the two layouts, put a space character in the code between the book name and the element that has the chapter number. The `textContent` of the control is then "John Chapter 3" in the wide layout and "John 3" in the narrow layout, not "JohnChapter 3" and "John3". Chromium adds the space to the name by itself, but a different browser possibly does not. The look must not change.
+   - The control that opens the chapter grid shows the book name and the chapter number, without the word "Chapter". Example: "John 3". For a screen reader, the name of the control is the same words, for example "John 3". Do not keep a hidden word "Chapter" in the control in the narrow layout: the name must contain the words that the control shows, in the same order, by WCAG 2.5.3. In the wide layout, the control shows "John Chapter 3" and has that name, as before this task.
+   - The bar is always one line, 52 px high.
+   - If the items do not fit, the book name ends with "…". "Books", the chapter number, the caret, the translation control, and "Menu" are never cut and never go out of the window.
+   - Expected: "2 Thessalonians 3" and "Song of Solomon 8" show with no cut at 390 px and at 375 px. At 360 px and at 320 px, the book name ends with "…".
+9. Remove the translation switch from the panel of the chapter grid, with the line below it. The panel has only the chapter grid. If no code uses `src/TranslationSwitch.tsx` after steps 3 and 9, delete the file and the styles `.tr-switch`, `.wall-translation`, and `.rd-translation-switch`.
+10. The translation list. The translation control of step 7 opens it.
+    - One row for each translation, in the order of `TRANSLATIONS`. A row has a place of 14 px for a check mark, then the full name, then the short name at the right, in the secondary ink color, 13 px.
+    - A row has the weight 500. The row of the selected translation has the check mark and the weight 600.
+    - For a screen reader, keep the form of the translation switch of Task 21: a group with the label "Translation", and one button for each translation, with `aria-pressed="true"` on the selected one. The name of a button is the full name. The short name in a row is not a second name.
+    - Wide layout: a pop-up below the control, 4 px from the bar. Its top is 56 px from the top of the window. The render shows 48 px. Keep 56 px. It is 340 px wide. Its center is below the center of the control, and it stays 12 px or more from each side of the window. White, corners of 12 px, a padding of 6 px, the shadow `0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07)`. A row is 44 px high, with corners of 8 px, and with the background `rgba(0, 0, 0, 0.05)` when the pointer is on it. The page has no shade. A click outside the list closes it.
+    - Narrow layout: a panel below the bar, with the full width, with the look and the shade of the panel of the chapter grid. A row is 48 px high, and the text is 16 px.
+    - When the list opens, the focus goes to the button of the selected translation.
+    - When the reader selects a row: the list closes, the focus goes back to the translation control, and the page shows the words of that translation. Use the code of Task 21 that keeps the verse at the top of the page at the same place. If the reader selects the translation that is already selected, the list closes and nothing changes.
+    - Do not change the storage key, the value of the first visit, or `src/router.ts`.
+11. "Menu", in the narrow layout only. It is a button with the word "Menu" at the right of the bar, with `aria-expanded`. It opens the menu panel: a panel below the bar, with the full width, with the look and the shade of the panel of the chapter grid. A row is 48 px high, and the text is 16 px, weight 500, in the ink color.
+    - On the wall, the menu panel has three rows: the links "Timeline", "Quotations", and "Sources", in a `nav` with the label "Reference".
+    - On the reading page, the menu panel has the row "Echo links", then a thin line, then the same three links.
+    - The row "Echo links" is the echo links switch: a button with the name "Echo links" and `aria-pressed`, as the switch in the bar now. It shows the word "On" or "Off" at the right, in the secondary ink color. A tap changes the state, and the panel stays open.
+    - A link row opens its page.
+    - When the panel opens, the focus goes to its first row.
+12. The rules for the three panels: the panel of the chapter grid, the translation list, and the menu panel.
+    - Only one is open at a time. When one opens, the open one closes.
+    - When the layout changes between wide and narrow, the open panel closes. A panel does not open again without an action of the reader.
+    - The Escape key closes the open panel, and the focus goes back to the control that opened it. A tap on the shade closes it.
+    - The caret of the translation control points up when the list is open.
+    - When the trail shows below the top bar, the translation list and the menu panel start below the trail, as the panel of the chapter grid does.
+    - Each new control and each row is 24 by 24 px or more, and shows the focus as the other controls of its page do.
+13. Add a unit test: each translation has a short name, and the short names are different.
+14. Add or change browser tests in `e2e/`, at 1440 by 900 px and at 390 by 844 px, if the test does not give a size.
+    - The wall has no line at the bottom and no translation control.
+    - Wall, 1440 by 900 px: the bar has the three links, and each link opens its page. The bar and all 66 book names are in the window, and the page does not scroll. The space between the bar and the top of the columns is equal to the space between the bottom of the columns and the bottom of the window, with a tolerance of 2 px.
+    - Wall, 1920 by 1080 px: the same test of the two spaces.
+    - Wall, 1440 by 700 px: the page scrolls, and the top of the first band is 24 px below the bar, with a tolerance of 2 px.
+    - Wall, 390 by 844 px: "Menu" opens the menu panel with the three links. A link opens its page. The Escape key closes the panel, and the focus is on "Menu". After a scroll of 900 px, the bar is at the top of the window.
+    - Wall, 390 by 844 px: open John, select "Books". The book name "JOHN" on the wall is completely below the bar.
+    - Reading page: the translation control shows "BSB" on the first visit. Open the list: it has two rows, and the button "Berean Standard Bible" has `aria-pressed="true"`. Select "King James Version": the list closes, the focus is on the translation control, the control shows "KJV", and Genesis 1:1 has the words "In the beginning God created the heaven and the earth." Load the page again: the control shows "KJV".
+    - Reading page: scroll to Genesis 2. Select the other translation in the translation list. The verse that was at the top is at the same place, with a tolerance of 2 px.
+    - Reading page: the panel of the chapter grid has no translation switch.
+    - Reading page, 1440 by 900 px: the translation list is 340 px wide, and it is completely in the window.
+    - Reading page, at 390 px and at 320 px wide: for the last chapter of each of the 66 books, the bar is 52 px high, the page does not scroll sideways, and "Books", the chapter number, the translation control, and "Menu" are completely in the window.
+    - Reading page, 390 px: for "2 Thessalonians 3" and "Song of Solomon 8", the book name is not cut.
+    - Reading page, 390 px: the name of the chapter grid control for a screen reader is "John 3" for John 3, and the control has no hidden word. At 1440 px, the name is "John Chapter 3".
+    - Reading page, at the two sizes: the name of the translation control for a screen reader is "Translation: Berean Standard Bible, BSB" on the first visit, and "Translation: King James Version, KJV" after the reader selects the King James Version.
+    - Reading page: the `textContent` of the chapter grid control for John 3 starts with "John Chapter 3" at 1440 px, and with "John 3" at 390 px.
+    - Reading page, 390 px: "Menu" opens the menu panel. The row "Echo links" changes the echo links setting, the word at the right changes, and the panel stays open. Each of the three links opens its page.
+    - Reading page: when the chapter grid is open and the reader selects the translation control, the chapter grid closes and the translation list opens. At 390 px, test "Menu" in the same way.
+    - Reading page: after travel with "Go there", when the trail shows, the top of the translation list is below the trail. At 390 px, test the menu panel in the same way.
+    - The axe-core check passes on the wall at the two sizes, on the wall with the menu panel open at 390 px, on the reading page with the translation list open at the two sizes, and on the reading page with the menu panel open at 390 px.
+    - Each new control and each row is 24 by 24 px or more, gets the focus with the keyboard, and operates with the keyboard.
+15. The tests of Task 21 select the translation on the wall and in the panel of the chapter grid. Change them to select it in the translation list. Do not change an expected result about the Bible text. Give each changed test and the reason in the report. The test of the echo links switch in `e2e/links.spec.ts` opens "Menu" first in the narrow layout: Arthur accepted this change on 2026-11-16.
+16. Take screenshots of the nine views of the renders, with the same file names, at the same sizes. Save them in `docs/screenshots/task-22/`. Compare each with its render, and give each difference in the report.
+17. In `CLAUDE.md`, section "Names", the designer changed the names for this task. Use them: top bar, translation control, translation list, "Menu", menu panel.
+18. Make `npm run lint` ignore the folders `.claude/` and `.github/`. They have files of tools, not of the site. Change only the configuration of lint. Do not change a file in the two folders.
+19. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+    - The test "the accessibility check finds a planted problem" in `e2e/a11y.spec.ts` failed one time in a full run on 2026-11-16, and passed 5 of 5 times alone. It is a test of the Sources page, which this task does not change. If all tests pass in the full run, continue, and record that one failure in the report. If that test fails again in the full run, stop and report. Do not change that test.
+
+Done when:
+
+- The wall has a top bar and no line at the bottom, and it is in the center of the space below the bar in the wide layout.
+- The reader selects the translation in the translation list on the reading page, and the selection stays after a reload.
+- In the narrow layout, the top bar of the reading page is one line for each book, and "Menu" has the echo links switch and the links to the Reference section.
+- The pages of the Reference section did not change.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.

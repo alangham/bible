@@ -1,13 +1,16 @@
 // The wall: the first page. The 66 book names in the colors of their groups. A book name is the
 // only control for a book. docs/DESIGN.md section 7.4, docs/TASKS.md Task 12.
+// The top bar of the wall, and the wall in the center of the space below it: docs/DESIGN.md section 9.3,
+// docs/TASKS.md Task 22 steps 3 to 6.
 
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent, type RefObject } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent, type RefObject } from 'react'
 import { plainClick } from '../book/links.ts'
 import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
-import { bookHref, quotationsHref, sourcesHref, timelineHref } from '../router.ts'
+import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
-import { TranslationSwitch } from '../TranslationSwitch.tsx'
+import { MenuButton, MenuPanel, ReferenceLinks } from '../TopBarMenu.tsx'
+import { usePanelKeys } from '../usePanelKeys.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import { fitName, measureNames, NAME_FONT, type NameFit } from './fit.ts'
 import { balancedSplit, bandLabel, groupBlocks, narrowSizes, NARROW_GAP_PX, NARROW_PAD_PX, wideColumns, wideSizes } from './layout.ts'
@@ -92,7 +95,7 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
     // A band starts each group. A group that goes on in the next column has no second band.
     const bandBefore = new Set(books.filter((b, i) => i === 0 || books[i - 1].group !== b.group).map((b) => b.id))
     content = (
-      <div className="wall-inner" style={{ width: s.inner + s.pad * 2, padding: `24px ${s.pad}px 20px` }}>
+      <div className="wall-inner" style={{ width: s.inner + s.pad * 2, padding: `24px ${s.pad}px` }}>
         <nav className="wall-columns" aria-label="Books" style={{ gap: s.gap }}>
           {wideColumns(books).map((column) => (
             <div className="wall-column" key={column[0].id} style={{ width: s.column }}>
@@ -103,7 +106,6 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
             </div>
           ))}
         </nav>
-        <WallFoot />
       </div>
     )
   } else {
@@ -141,7 +143,6 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
             )
           })}
         </nav>
-        <WallFoot />
       </div>
     )
   }
@@ -172,28 +173,50 @@ export function WallPage({ books, layout }: { books: Book[]; layout: ScreenLayou
   }
 
   return (
-    // The click handler only adds the move to the links. The links work with no script also.
-    <main ref={ref} className="wall" data-layout={layout} data-ready={ready} onClick={onClick}>
-      {/* The wall has no visible title. A screen reader gets this heading. */}
-      <h1 className="sr-only">Books of the Bible</h1>
-      {content}
-    </main>
+    <>
+      <WallBar layout={layout} />
+      {/* The click handler only adds the move to the links. The links work with no script also. */}
+      <main ref={ref} className="wall" data-layout={layout} data-ready={ready} onClick={onClick}>
+        {/* The wall has no visible title. A screen reader gets this heading. */}
+        <h1 className="sr-only">Books of the Bible</h1>
+        {content}
+      </main>
+    </>
   )
 }
 
 /**
- * The bottom line: the translation switch, and the links to the pages of the Reference section.
- * docs/DESIGN.md sections 7.8 and 8.5.
+ * The top bar of the wall. The left part and the center are empty. Wide layout: the links to the pages
+ * of the Reference section. Narrow layout: "Menu", which opens the menu panel with the same links.
+ * The wall has no translation control. docs/DESIGN.md section 9.3.
  */
-function WallFoot() {
+function WallBar({ layout }: { layout: ScreenLayout }) {
+  const [menu, setMenu] = useState(false)
+  const menuRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+  // A change of the layout closes the menu panel. The menu panel is in the narrow layout only.
+  const [menuLayout, setMenuLayout] = useState(layout)
+  if (menuLayout !== layout) {
+    setMenuLayout(layout)
+    setMenu(false)
+  }
+  const open = menu && layout === 'narrow'
+  const close = useCallback(() => {
+    setMenu(false)
+    menuRef.current?.focus()
+  }, [])
+  usePanelKeys(open, panelRef, 'a[href]', close)
   return (
-    <footer className="wall-foot">
-      <TranslationSwitch className="wall-translation" />
-      <nav className="wall-reference" aria-label="Reference">
-        <a href={timelineHref()}>Timeline</a>
-        <a href={quotationsHref()}>Quotations</a>
-        <a href={sourcesHref()}>Sources</a>
-      </nav>
-    </footer>
+    <>
+      <header className="wall-bar">
+        {layout === 'wide' ? (
+          <ReferenceLinks className="bar-links" />
+        ) : (
+          <MenuButton open={open} onToggle={() => setMenu((m) => !m)} buttonRef={menuRef} />
+        )}
+      </header>
+      {open && <div className="bar-shade" onClick={() => setMenu(false)} />}
+      {layout === 'narrow' && <MenuPanel open={open} panelRef={panelRef} />}
+    </>
   )
 }

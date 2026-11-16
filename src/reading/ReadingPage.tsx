@@ -8,8 +8,11 @@
 //   no entry to the browser history.
 // - The links: a control opens the pop-up. "Go there" is travel: a direct change to the linked
 //   verse, which has a light background for a short time. The trail shows below the top bar.
-// - The translation switch is at the top of the panel of the chapter grid. A change of the translation
-//   keeps the verse at the top of the page at its place. docs/DESIGN.md section 8.5, Task 21 step 6.
+// - The translation control in the top bar opens the translation list. A change of the translation
+//   keeps the verse at the top of the page at its place. docs/DESIGN.md sections 8.5 and 9.5, Task 21
+//   step 6, Task 22 step 10.
+// - The top bar has three panels: the chapter grid, the translation list, and, in the narrow layout,
+//   the menu panel. docs/DESIGN.md sections 9.4 to 9.7, Task 22 steps 7 to 12.
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
@@ -18,8 +21,9 @@ import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
-import type { Translation } from '../data/translation.ts'
-import { TranslationSwitch } from '../TranslationSwitch.tsx'
+import { setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
+import { MenuButton, MenuPanel } from '../TopBarMenu.tsx'
+import { usePanelKeys } from '../usePanelKeys.ts'
 import type { ChapterRef, LinkEnd } from '../data/links.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { bookHref, chapterHref } from '../router.ts'
@@ -258,6 +262,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
         <TopBar
           books={books}
           place={shown}
+          layout={layout}
           onOpenChapter={(p) => open({ book: p.book.id, c: p.n })}
           onTranslation={(t) => keepPlace(topVerse(t))}
         />
@@ -274,32 +279,101 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
 interface TopBarProps {
   books: Book[]
   place: ChapterPlace
+  layout: ScreenLayout
   onOpenChapter: (p: ChapterPlace) => void
   /** The reader selected a different translation. The page still shows the old text. */
   onTranslation: (t: Translation) => void
 }
 
-function TopBar({ place, onOpenChapter, onTranslation }: TopBarProps) {
-  const [open, setOpen] = useState(false)
+/** The three panels of the top bar. Only one is open at a time. docs/DESIGN.md section 9.7. */
+type Panel = 'grid' | 'list' | 'menu'
+
+/** The width of the translation list in the wide layout, and its smallest distance from each side of the window, in px. */
+const LIST_PX = 340
+const LIST_SIDE_PX = 12
+
+/** The element in each panel that gets the focus when the panel opens. */
+const PANEL_FOCUS: Record<Panel, string> = {
+  grid: '[aria-current="page"]',
+  list: '[aria-pressed="true"]',
+  menu: 'button, a[href]',
+}
+
+function Caret() {
+  return (
+    <svg className="rd-caret" aria-hidden="true" viewBox="0 0 8 5" width="8" height="5">
+      <path d="M0 0h8L4 5z" fill="currentColor" />
+    </svg>
+  )
+}
+
+function TopBar({ place, layout, onOpenChapter, onTranslation }: TopBarProps) {
+  const [panel, setPanel] = useState<Panel | null>(null)
+  const [listLeft, setListLeft] = useState<number | null>(null)
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
+  const translation = useTranslation()
   const whereRef = useRef<HTMLButtonElement>(null)
+  const translationRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLButtonElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef<HTMLDivElement>(null)
+  const menuPanelRef = useRef<HTMLDivElement>(null)
   const { book, n } = place
+  const selected = TRANSLATIONS.find((t) => t.id === translation) ?? TRANSLATIONS[0]
 
-  // When the grid opens, the focus goes to the current chapter. Escape closes the grid.
-  useEffect(() => {
-    if (!open) return
-    gridRef.current?.querySelector<HTMLElement>('[aria-current="page"]')?.focus()
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setOpen(false)
-        whereRef.current?.focus()
-      }
+  // A change of the layout closes the open panel. The menu panel is in the narrow layout only.
+  const [panelLayout, setPanelLayout] = useState(layout)
+  if (panelLayout !== layout) {
+    setPanelLayout(layout)
+    setPanel(null)
+  }
+  const open = panel === 'menu' && layout !== 'narrow' ? null : panel
+  const toggle = (p: Panel) => setPanel((o) => (o === p ? null : p))
+
+  // When a panel opens, the focus goes into it. Escape closes it, and the focus goes back to its control.
+  const controlRef = open === 'list' ? translationRef : open === 'menu' ? menuRef : whereRef
+  const panelRef = open === 'list' ? listRef : open === 'menu' ? menuPanelRef : gridRef
+  const closeToControl = useCallback(() => {
+    setPanel(null)
+    controlRef.current?.focus()
+  }, [controlRef])
+  usePanelKeys(open !== null, panelRef, open ? PANEL_FOCUS[open] : '', closeToControl)
+
+  // Wide layout: the translation list is below the translation control, with its center below the
+  // center of the control, and 12 px or more from each side of the window. A click outside closes it.
+  const wideList = open === 'list' && layout === 'wide'
+  useLayoutEffect(() => {
+    if (!wideList) return
+    const placeList = () => {
+      const r = translationRef.current?.getBoundingClientRect()
+      if (!r) return
+      const width = document.documentElement.clientWidth
+      setListLeft(Math.max(LIST_SIDE_PX, Math.min(r.left + r.width / 2 - LIST_PX / 2, width - LIST_SIDE_PX - LIST_PX)))
     }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [open])
+    placeList()
+    window.addEventListener('resize', placeList)
+    return () => window.removeEventListener('resize', placeList)
+  }, [wideList, book.id, n])
+  useEffect(() => {
+    if (!wideList) return
+    const onDown = (e: PointerEvent) => {
+      const t = e.target as Node
+      if (!listRef.current?.contains(t) && !translationRef.current?.contains(t)) setPanel(null)
+    }
+    window.addEventListener('pointerdown', onDown)
+    return () => window.removeEventListener('pointerdown', onDown)
+  }, [wideList])
+
+  // A row of the translation list: the list closes, the focus goes back to the translation control,
+  // and the page shows the words of that translation. The place of the top verse is taken first.
+  const selectTranslation = (t: Translation) => {
+    setPanel(null)
+    translationRef.current?.focus()
+    if (t === translation) return
+    onTranslation(t)
+    setTranslation(t)
+  }
 
   // "Books": the name of the book in view moves back to the wall.
   const onBooks = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -316,34 +390,59 @@ function TopBar({ place, onOpenChapter, onTranslation }: TopBarProps) {
   }
 
   const gridId = 'chapter-grid'
+  const listId = 'translation-list'
+  // The wide translation list has no shade. The other panels have the shade of the chapter grid.
+  const shade = open !== null && !wideList
+  // The layout effect above places the wide list before the browser paints. The list is not hidden
+  // before that, so that the focus can go to its row.
+  const listStyle: CSSProperties = layout === 'wide' && listLeft !== null ? { left: listLeft } : {}
   return (
     <>
       <header className="rd-bar">
-        <a className="rd-books" href="#/" onClick={onBooks}>
-          <span aria-hidden="true">‹ </span>Books
-        </a>
-        <button type="button" ref={whereRef} className="rd-where" aria-expanded={open} aria-controls={gridId} onClick={() => setOpen((o) => !o)}>
-          <b>{book.name}</b> Chapter {n}{' '}
-          <svg className="rd-caret" aria-hidden="true" viewBox="0 0 8 5" width="8" height="5">
-            <path d="M0 0h8L4 5z" fill="currentColor" />
-          </svg>
-        </button>
-        {/* The echo links switch. Its name is "Echo links"; the state is aria-pressed. */}
-        <button type="button" className="rd-echo" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
-          Echo<span className="rd-echo-wide">{' '}links</span> <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>
-        </button>
+        <div className="rd-left">
+          <a className="rd-books" href="#/" onClick={onBooks}>
+            <span aria-hidden="true">‹ </span>Books
+          </a>
+        </div>
+        <div className="rd-center">
+          {/* The control shows "John Chapter 3" in the wide layout and "John 3" in the narrow layout. Its name for a
+              screen reader is the words that it shows, by WCAG 2.5.3. A space character is between the parts, so the
+              name does not depend on the browser. docs/DESIGN.md sections 9.4 and 9.7. */}
+          <button type="button" ref={whereRef} className="rd-where" aria-expanded={open === 'grid'} aria-controls={gridId} onClick={() => toggle('grid')}>
+            <b>{book.name}</b>{' '}
+            <span className="rd-where-n">
+              {layout === 'wide' ? 'Chapter ' : null}
+              {n}
+            </span>
+            <Caret />
+          </button>
+          <span className="rd-bar-rule" aria-hidden="true" />
+          <button
+            type="button"
+            ref={translationRef}
+            className="rd-tr"
+            aria-label={`Translation: ${selected.name}, ${selected.short}`}
+            aria-expanded={open === 'list'}
+            aria-controls={listId}
+            onClick={() => toggle('list')}
+          >
+            {selected.short}
+            <Caret />
+          </button>
+        </div>
+        <div className="rd-right">
+          {layout === 'wide' ? (
+            // The echo links switch. Its name is "Echo links"; the state is aria-pressed.
+            <button type="button" className="rd-echo" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
+              Echo links <span aria-hidden="true">{echoOn ? 'on' : 'off'}</span>
+            </button>
+          ) : (
+            <MenuButton open={open === 'menu'} onToggle={() => toggle('menu')} buttonRef={menuRef} />
+          )}
+        </div>
       </header>
-      {open && <div className="rd-shade" onClick={() => setOpen(false)} />}
-      <div className="rd-grid-panel" id={gridId} ref={gridRef} hidden={!open}>
-        {/* A selection closes the panel. The focus goes back to the control that opens the panel. */}
-        <TranslationSwitch
-          className="rd-translation-switch"
-          onSelect={(t, changed) => {
-            if (changed) onTranslation(t)
-            setOpen(false)
-            whereRef.current?.focus()
-          }}
-        />
+      {shade && <div className="rd-shade" onClick={() => setPanel(null)} />}
+      <div className="rd-grid-panel" id={gridId} ref={gridRef} hidden={open !== 'grid'}>
         <nav aria-label={`Chapters of ${book.name}`}>
           <ol className="rd-grid">
             {Array.from({ length: book.chapters }, (_, i) => i + 1).map((c) => (
@@ -355,7 +454,7 @@ function TopBar({ place, onOpenChapter, onTranslation }: TopBarProps) {
                   onClick={(e) => {
                     if (!plainClick(e)) return
                     e.preventDefault()
-                    setOpen(false)
+                    setPanel(null)
                     onOpenChapter({ book, n: c })
                   }}
                 >
@@ -366,6 +465,35 @@ function TopBar({ place, onOpenChapter, onTranslation }: TopBarProps) {
           </ol>
         </nav>
       </div>
+      {/* The translation list. For a screen reader, the form that Task 21 gave: a group with one button for each translation. */}
+      <div className="tr-list" id={listId} ref={listRef} data-layout={layout} hidden={open !== 'list'} style={listStyle}>
+        <div role="group" aria-label="Translation">
+          {TRANSLATIONS.map((t) => (
+            <button key={t.id} type="button" className="tr-row" aria-pressed={t.id === translation} onClick={() => selectTranslation(t.id)}>
+              <svg className="tr-check" aria-hidden="true" viewBox="0 0 14 14" width="14" height="14">
+                {t.id === translation && <path d="M2 7.5l3.2 3.2L12 3.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />}
+              </svg>
+              <span className="tr-name">{t.name}</span>
+              {/* The short name is not a second name of the button. */}
+              <span className="tr-short" aria-hidden="true">
+                {t.short}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+      {layout === 'narrow' && (
+        <MenuPanel open={open === 'menu'} panelRef={menuPanelRef}>
+          {/* The echo links switch. A tap changes the state, and the panel stays open. */}
+          <button type="button" className="menu-row" aria-pressed={echoOn} onClick={() => setEchoLinks(!echoOn)}>
+            Echo links
+            <span className="menu-state" aria-hidden="true">
+              {echoOn ? 'On' : 'Off'}
+            </span>
+          </button>
+          <div className="menu-rule" aria-hidden="true" />
+        </MenuPanel>
+      )}
     </>
   )
 }

@@ -1,6 +1,7 @@
 /// <reference lib="dom" />
-// The King James Version and the translation switch. docs/DESIGN.md section 8, docs/TASKS.md Task 21
-// step 11. The axe-core checks with the King James Version selected are in a11y.spec.ts.
+// The King James Version and the translation list. docs/DESIGN.md sections 8 and 9.5, docs/TASKS.md Task 21
+// step 11 and Task 22 step 15. The axe-core checks with the King James Version selected are in a11y.spec.ts.
+// The translation list opens from the translation control in the top bar of the reading page.
 
 import { readFileSync } from 'node:fs'
 import { expect, test, type Locator, type Page } from '@playwright/test'
@@ -79,31 +80,44 @@ async function openKjv(page: Page, size: { width: number; height: number }, book
   await settled(page)
 }
 
-const switchOn = (scope: Page | Locator) => scope.getByRole('group', { name: 'Translation' })
+const translationControl = (page: Page) => page.getByRole('button', { name: /^Translation: / })
+const translationList = (page: Page) => page.locator('#translation-list').getByRole('group', { name: 'Translation' })
+
+/** Opens the translation list and selects a translation. */
+async function selectTranslation(page: Page, name: 'Berean Standard Bible' | 'King James Version') {
+  await translationControl(page).click()
+  await expect(translationList(page)).toBeVisible()
+  await translationList(page).getByRole('button', { name }).click()
+}
 
 for (const vp of VIEWPORTS) {
   test.describe(`the translation, at ${vp.name}`, () => {
     test('the first visit shows the Berean Standard Bible', async ({ page }) => {
       await page.setViewportSize(vp.size)
-      await page.goto('./')
-      const wall = switchOn(page)
-      await expect(wall.getByRole('button', { name: 'Berean Standard Bible' })).toHaveAttribute('aria-pressed', 'true')
-      await expect(wall.getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'false')
       await page.goto('./#/book/genesis/1')
       const genesis = chapter(page, 'genesis', 1)
       await expect(genesis).toHaveAttribute('data-translation', 'bsb')
+      await expect(translationControl(page)).toHaveText('BSB')
+      await translationControl(page).click()
+      await expect(translationList(page).getByRole('button')).toHaveCount(2)
+      await expect(translationList(page).getByRole('button', { name: 'Berean Standard Bible' })).toHaveAttribute('aria-pressed', 'true')
+      await expect(translationList(page).getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'false')
+      await page.keyboard.press('Escape')
       expect(await pageVerse(genesis, 1)).toBe('In the beginning God created the heavens and the earth.')
       await expect(genesis.locator('.rd-translation')).toHaveText('Berean Standard Bible')
     })
 
-    test('the wall selects the King James Version, and the selection stays after a reload', async ({ page }) => {
+    test('the translation list selects the King James Version, and the selection stays after a reload', async ({ page }) => {
       await page.setViewportSize(vp.size)
-      await page.goto('./')
-      await switchOn(page).getByRole('button', { name: 'King James Version' }).click()
-      await expect(switchOn(page).getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'true')
-      expect(await page.evaluate((key) => localStorage.getItem(key), KEY)).toBe('kjv')
-      await page.getByRole('link', { name: 'Genesis', exact: true }).click()
+      await page.goto('./#/book/genesis/1')
       const genesis = chapter(page, 'genesis', 1)
+      await expect(genesis).toHaveAttribute('data-loaded', 'true')
+      await selectTranslation(page, 'King James Version')
+      await expect(page.locator('#translation-list')).toBeHidden()
+      await expect(translationControl(page)).toBeFocused()
+      await expect(translationControl(page)).toHaveText('KJV')
+      await expect(translationControl(page)).toHaveAccessibleName('Translation: King James Version, KJV')
+      expect(await page.evaluate((key) => localStorage.getItem(key), KEY)).toBe('kjv')
       await expect(genesis).toHaveAttribute('data-translation', 'kjv')
       await expect(genesis).toHaveAttribute('data-loaded', 'true')
       expect(await pageVerse(genesis, 1)).toBe('In the beginning God created the heaven and the earth.')
@@ -121,14 +135,12 @@ for (const vp of VIEWPORTS) {
       await page.reload()
       await expect(chapter(page, 'genesis', 1)).toHaveAttribute('data-translation', 'kjv')
       expect(await pageVerse(chapter(page, 'genesis', 1), 1)).toBe('In the beginning God created the heaven and the earth.')
-      // The switch is in the panel of the chapter grid, which is closed.
-      await expect(page.getByRole('group', { name: 'Translation', includeHidden: true }).getByRole('button', { name: 'King James Version', includeHidden: true })).toHaveAttribute(
-        'aria-pressed',
-        'true',
-      )
+      await expect(translationControl(page)).toHaveText('KJV')
+      await translationControl(page).click()
+      await expect(translationList(page).getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'true')
     })
 
-    test('the panel of the chapter grid changes the translation, and the verse at the top stays at its place', async ({ page }) => {
+    test('the translation list changes the translation, and the verse at the top stays at its place', async ({ page }) => {
       await openKjv(page, vp.size, 'genesis', 1)
       // Scroll to Genesis 2: verse 5 near the top of the page. The page adds Genesis 2 near the end of Genesis 1.
       await expect(async () => {
@@ -153,11 +165,8 @@ for (const vp of VIEWPORTS) {
       expect(before?.c).toBe(2)
       const historyLength = await page.evaluate(() => history.length)
 
-      await page.locator('.rd-where').click()
-      const panel = page.locator('.rd-grid-panel')
-      await expect(panel).toBeVisible()
-      await switchOn(panel).getByRole('button', { name: 'Berean Standard Bible' }).click()
-      await expect(panel).toBeHidden()
+      await selectTranslation(page, 'Berean Standard Bible')
+      await expect(page.locator('#translation-list')).toBeHidden()
       for (const s of await page.locator('section.rd-chapter').all()) await expect(s).toHaveAttribute('data-translation', 'bsb')
       await page.waitForTimeout(300)
 
@@ -180,8 +189,7 @@ for (const vp of VIEWPORTS) {
         await new Promise((r) => setTimeout(r, 1500))
         await route.continue()
       })
-      await page.locator('.rd-where').click()
-      await switchOn(page.locator('.rd-grid-panel')).getByRole('button', { name: 'Berean Standard Bible' }).click()
+      await selectTranslation(page, 'Berean Standard Bible')
       await page.mouse.move(vp.size.width / 2, vp.size.height / 2)
       await page.mouse.wheel(0, 600)
       await page.waitForTimeout(300)
@@ -257,47 +265,32 @@ for (const vp of VIEWPORTS) {
       await expect(text.getByRole('link', { name: 'Berean Standard Bible' })).toHaveAttribute('href', 'https://berean.bible/')
     })
 
-    test('each button of the translation switch is 24 by 24 px or more, and works with the keyboard', async ({ page }) => {
+    test('each row of the translation list is 24 by 24 px or more, and works with the keyboard', async ({ page }) => {
       await page.setViewportSize(vp.size)
-      await page.goto('./')
-      await settled(page)
-      const wall = switchOn(page)
-      for (const b of await wall.getByRole('button').all()) {
-        const box = await b.boundingBox()
-        expect(box!.width).toBeGreaterThanOrEqual(24)
-        expect(box!.height).toBeGreaterThanOrEqual(24)
-      }
-      // The last book name, then the Tab key: the two buttons of the switch, in order.
-      await page.getByRole('link', { name: 'Revelation', exact: true }).focus()
-      await page.keyboard.press('Tab')
-      await expect(wall.getByRole('button', { name: 'Berean Standard Bible' })).toBeFocused()
-      await page.keyboard.press('Tab')
-      await expect(wall.getByRole('button', { name: 'King James Version' })).toBeFocused()
-      await page.keyboard.press('Enter')
-      await expect(wall.getByRole('button', { name: 'King James Version' })).toHaveAttribute('aria-pressed', 'true')
-
-      // The panel of the chapter grid: the switch is before the chapter numbers, and each button is 44 px high.
       await page.goto('./#/book/ruth/1')
-      await expect(chapter(page, 'ruth', 1)).toHaveAttribute('data-translation', 'kjv')
+      await expect(chapter(page, 'ruth', 1)).toHaveAttribute('data-translation', 'bsb')
+      await settled(page)
+      // The control of the chapter grid, then the Tab key: the translation control.
       await page.locator('.rd-where').focus()
+      await page.keyboard.press('Tab')
+      await expect(translationControl(page)).toBeFocused()
       await page.keyboard.press('Enter')
-      const panel = page.locator('.rd-grid-panel')
-      await expect(panel).toBeVisible()
-      for (const b of await switchOn(panel).getByRole('button').all()) {
+      const list = translationList(page)
+      await expect(list).toBeVisible()
+      for (const b of await list.getByRole('button').all()) {
         const box = await b.boundingBox()
         expect(box!.width).toBeGreaterThanOrEqual(24)
         expect(box!.height).toBeGreaterThanOrEqual(44)
       }
-      await expect(panel.getByRole('link', { name: 'Ruth chapter 1' })).toBeFocused()
-      await page.keyboard.press('Shift+Tab')
-      await expect(switchOn(panel).getByRole('button', { name: 'King James Version' })).toBeFocused()
-      await page.keyboard.press('Shift+Tab')
-      await expect(switchOn(panel).getByRole('button', { name: 'Berean Standard Bible' })).toBeFocused()
+      // The focus is on the selected translation. The Tab key goes to the next row.
+      await expect(list.getByRole('button', { name: 'Berean Standard Bible' })).toBeFocused()
+      await page.keyboard.press('Tab')
+      await expect(list.getByRole('button', { name: 'King James Version' })).toBeFocused()
       await page.keyboard.press('Space')
-      await expect(panel).toBeHidden()
-      await expect(page.locator('.rd-where')).toBeFocused()
-      await expect(chapter(page, 'ruth', 1)).toHaveAttribute('data-translation', 'bsb')
-      expect(await page.evaluate((key) => localStorage.getItem(key), KEY)).toBe('bsb')
+      await expect(page.locator('#translation-list')).toBeHidden()
+      await expect(translationControl(page)).toBeFocused()
+      await expect(chapter(page, 'ruth', 1)).toHaveAttribute('data-translation', 'kjv')
+      expect(await page.evaluate((key) => localStorage.getItem(key), KEY)).toBe('kjv')
     })
   })
 }

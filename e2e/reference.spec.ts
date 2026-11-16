@@ -32,7 +32,7 @@ function rows(items: Pair[], key: 'from' | 'to') {
 }
 
 test.describe('Reference section', () => {
-  test('the three links in the bottom line of the wall open the three pages', async ({ page }) => {
+  test('the three links in the top bar of the wall open the three pages', async ({ page }) => {
     await page.setViewportSize(WIDE)
     for (const [name, hash, heading] of [
       ['Timeline', '#/timeline', /timeline/i],

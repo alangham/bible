@@ -10,8 +10,8 @@ Arthur decided on 2026-11-15 to add the King James Version as a second translati
 
 ## Files you must read before you do work
 
-1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Do not change a design decision without Arthur's approval.
-2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version.
+1. `docs/DESIGN.md`. The agreed design. Section 7 is the redesign. It replaces sections 1, 3, and 4.1 to 4.4. Sections 2, 4.5, 4.6, 5, and 6 apply where section 7 does not replace them. Section 8 is the King James Version. Section 9 is the top bar of 2026-11-15. Where section 9 and an older section differ, section 9 is correct. Do not change a design decision without Arthur's approval.
+2. `docs/TASKS.md`. The numbered task list. It is in run order. Tasks 11 to 18 build the redesign. Tasks 19 to 21 are for the King James Version. Task 22 builds the top bar of section 9.
 3. `docs/prototype/README.md`. It tells you how to use the prototype of the redesign. The prototype is a reference for the look and the movement. It is not code for the site.
 4. `docs/DATA-SOURCES.md`. It records each data source and its licence.
 5. `docs/CONTENT-SOURCES.md`. It records the source of each fact about the Bible. It is a large file. Read the part that the task needs.
@@ -72,9 +72,12 @@ Use these names in code, comments, and reports. One name for each thing.
 | band | The bar in the group color that starts a group, with the group name in white. |
 | translation | One of the two Bible texts of the site: the Berean Standard Bible and the King James Version. |
 | added words | The words that the translators of the King James Version added. The page shows them in italics. |
-| translation switch | The control with the two translation names. It is on the wall and above the chapter grid. |
+| translation control | The control in the top bar of the reading page that shows the short name of the selected translation. It opens the translation list. |
+| translation list | The list of the translations, with the full name and the short name of each. The reader selects the translation there. From Task 22, it replaces the translation switch of Task 21. |
 | reading page | The page with the chapter text, in one column. |
-| top bar | The bar that stays at the top of the reading page and of the Reference pages. |
+| top bar | The bar that stays at the top of the wall, of the reading page, and of the Reference pages. |
+| "Menu" | The control at the right of the top bar in the narrow layout, on the wall and on the reading page. |
+| menu panel | The panel that "Menu" opens. It has the links to the Reference section. On the reading page, it also has the echo links switch. |
 | chapter grid | The grid of chapter numbers that opens from the top bar. |
 | link | A connection from one passage to a different passage. |
 | quotation link | A link where one passage quotes a different passage. |

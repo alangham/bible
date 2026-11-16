@@ -48,11 +48,10 @@ test.describe('wall', () => {
     await expect(page).toHaveURL(/#\/book\/jude\/1$/)
   })
 
-  test('at 1440 by 900 px, the page is not higher than the screen, and the bottom line is in view', async ({ page }) => {
+  test('at 1440 by 900 px, the page is not higher than the screen, and the links of the top bar are in view', async ({ page }) => {
     await openWall(page, WIDE)
     await expect(page.locator('main.wall')).toHaveAttribute('data-layout', 'wide')
     expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeLessThanOrEqual(WIDE.height)
-    await expect(page.getByText('Berean Standard Bible')).toBeInViewport()
     await expect(page.getByRole('navigation', { name: 'Reference' }).getByRole('link', { name: 'Sources' })).toBeInViewport()
   })
 
@@ -89,7 +88,7 @@ test.describe('wall', () => {
     expect(await width('Genesis')).toBeCloseTo(168, 0)
   })
 
-  test('the bottom line has the translation and the links Timeline, Quotations, and Sources', async ({ page }) => {
+  test('the top bar has the links Timeline, Quotations, and Sources', async ({ page }) => {
     await openWall(page, WIDE)
     const reference = page.getByRole('navigation', { name: 'Reference' })
     await expect(reference.getByRole('link')).toHaveText(['Timeline', 'Quotations', 'Sources'])

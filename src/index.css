@@ -92,10 +92,11 @@ a {
 
 .wall {
   --wall-ink: #1d1d1f;
-  --wall-ink-secondary: #6e6e73;
-  --wall-line: rgba(0, 0, 0, 0.09);
 
+  box-sizing: border-box;
   min-height: 100svh;
+  /* The top bar is fixed. docs/DESIGN.md section 9.3. */
+  padding-top: 52px;
   background: #fff;
   color: var(--wall-ink);
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -105,6 +106,23 @@ a {
 .wall-inner {
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+/*
+  Wide layout: the wall is in the center of the space below the bar. The inline padding of 24 px above
+  and below is the smallest space. When the window is too low, the wall starts 24 px below the bar and
+  the page scrolls. docs/DESIGN.md section 9.3, docs/TASKS.md Task 22 step 4.
+*/
+.wall[data-layout='wide'] .wall-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - 52px);
+}
+
+/* A scroll to a book name, and the focus from the keyboard, stop below the fixed top bar. Task 22 step 6. */
+html:has(.wall) {
+  scroll-padding-top: 64px;
 }
 
 .wall-columns {
@@ -150,8 +168,7 @@ a {
   }
 }
 
-.wall-name:focus-visible,
-.wall-foot a:focus-visible {
+.wall-name:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
   border-radius: 2px;
@@ -181,90 +198,135 @@ a {
   margin-top: 0;
 }
 
-.wall-foot {
+/* ---- The top bar of the wall, "Menu", and the menu panel. docs/DESIGN.md sections 9.2, 9.3, and 9.6. ---- */
+/* The look of the top bar of the reading page, .rd-bar. The values of the menu panel are those of the renders in docs/screenshots/bar-design/. */
+
+.wall-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  height: 52px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 22px;
   align-items: center;
-  margin-top: 24px;
-  padding-top: 10px;
-  border-top: 1px solid var(--wall-line);
-  font-size: 14px;
+  justify-content: flex-end;
+  padding: 0 20px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
   font-weight: 500;
-  color: var(--wall-ink-secondary);
+  color: #6e6e73;
+  -webkit-font-smoothing: antialiased;
 }
 
-.wall-translation {
-  margin-right: auto;
+.app[data-layout='narrow'] .wall-bar {
+  padding: 0 16px;
 }
 
-.wall-reference {
+/* The links of the wide layout: the look of the links in the top bar of the Reference pages, .ref-tabs. */
+.bar-links {
   display: flex;
   gap: 22px;
+  height: 100%;
 }
 
-.wall-foot a {
-  padding: 6px 0;
-  color: var(--wall-ink);
-  font-weight: 600;
+.bar-links a {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: inherit;
   text-decoration: none;
 }
 
-.wall[data-layout='narrow'] .wall-foot {
-  margin-top: 30px;
-}
-
-.wall[data-layout='narrow'] .wall-translation {
-  width: 100%;
-  margin-right: 0;
-}
-
-/* ---- The translation switch: docs/DESIGN.md section 8.5, docs/TASKS.md Task 21 step 4. ---- */
-/* The look of the renders in docs/screenshots/kjv-design/. */
-
-.tr-switch {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 10px;
-}
-
-.tr-switch button {
-  box-sizing: border-box;
-  min-width: 24px;
-  min-height: 24px;
-  margin: 0;
-  padding: 6px 0;
-  border: 0;
-  background: none;
-  color: var(--tr-ink-secondary);
-  font: inherit;
-  font-family: Inter, system-ui, sans-serif;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.tr-switch button[aria-pressed='true'] {
-  color: var(--tr-ink);
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-skip-ink: none;
-  text-underline-position: under;
-  text-underline-offset: 3px;
-}
-
 @media (hover: hover) {
-  .tr-switch button:hover {
-    color: var(--tr-ink);
+  .bar-links a:hover {
+    color: #1d1d1f;
   }
 }
 
-.wall-foot .tr-switch {
-  --tr-ink: var(--wall-ink);
-  --tr-ink-secondary: var(--wall-ink-secondary);
+.bar-links a:focus-visible {
+  outline: 2px solid #1d1d1f;
+  outline-offset: -2px;
+  border-radius: 4px;
 }
 
-.wall-foot button:focus-visible {
+/* "Menu", at the right of the bar in the narrow layout. */
+.bar-menu {
+  box-sizing: border-box;
+  min-width: 24px;
+  margin: 0;
+  padding: 12px 0 12px 4px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* The menu panel: below the bar, with the full width, with the look of the panel of the chapter grid. */
+.menu-panel {
+  position: fixed;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  box-sizing: border-box;
+  max-height: calc(100svh - 52px);
+  overflow: auto;
+  padding: 8px 16px 14px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.menu-panel[hidden] {
+  display: none;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #1d1d1f;
+  font: 500 16px Inter, system-ui, sans-serif;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-state {
+  color: #6e6e73;
+}
+
+.menu-rule {
+  height: 1px;
+  margin: 6px 0;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+/* The focus, as on the other controls of the wall and of the reading page. */
+.wall-bar .bar-menu:focus-visible,
+.menu-panel :focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
   border-radius: 2px;
@@ -311,9 +373,13 @@ html:has(.reading) {
   z-index: 10;
   box-sizing: border-box;
   height: 52px;
+  /*
+    Left, center, and right. docs/DESIGN.md section 9.2. The left part and the right part grow by the same
+    amount, so that the center is in the center of the window when the items fit. They do not shrink.
+    When the items do not fit, only the center shrinks, and the book name ends with "…".
+  */
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 20px;
   background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
@@ -324,37 +390,99 @@ html:has(.reading) {
   color: var(--rd-ink-secondary);
 }
 
+.rd-left,
+.rd-right {
+  flex: 1 0 0;
+  display: flex;
+}
+
+.rd-right {
+  justify-content: flex-end;
+}
+
 .rd-books {
   min-width: 84px;
   margin-left: -10px;
   padding: 12px 10px;
   box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* The center: the control of the chapter grid, a thin line, and the translation control. docs/DESIGN.md section 9.4. */
+.rd-center {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  min-width: 0;
 }
 
 .rd-where {
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
   padding: 10px 12px;
   border: 0;
   border-radius: 8px;
   background: none;
   color: var(--rd-ink-secondary);
   font: 500 15px Inter, system-ui, sans-serif;
+  white-space: nowrap;
   cursor: pointer;
 }
 
+/* If the items do not fit, the book name ends with "…". The chapter number and the caret are never cut. */
 .rd-where b {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-right: 6px;
   color: var(--rd-ink);
   font-weight: 600;
 }
 
+.rd-where-n {
+  flex: none;
+  margin-left: 4px;
+}
+
 .rd-caret {
-  margin-left: 5px;
-  vertical-align: 2px;
+  flex: none;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
   transition: transform 0.2s;
 }
 
-.rd-where[aria-expanded='true'] .rd-caret {
+.rd-where[aria-expanded='true'] .rd-caret,
+.rd-tr[aria-expanded='true'] .rd-caret {
   transform: rotate(180deg);
+}
+
+.rd-bar-rule {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  margin: 0 2px;
+  background: rgba(0, 0, 0, 0.14);
+}
+
+/* The translation control: the short name of the selected translation, and a caret. */
+.rd-tr {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.rd-tr .rd-caret {
+  margin-left: 7px;
 }
 
 /* The chapter grid. */
@@ -375,24 +503,6 @@ html:has(.reading) {
 
 .rd-grid-panel[hidden] {
   display: none;
-}
-
-/* The translation switch at the top of the panel, with a line between it and the chapter grid. */
-.rd-translation-switch {
-  --tr-ink: var(--rd-ink);
-  --tr-ink-secondary: var(--rd-ink-secondary);
-
-  column-gap: 14px;
-  max-width: 700px;
-  margin: 0 auto 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--rd-line);
-  font-size: 15px;
-}
-
-.rd-translation-switch button {
-  min-height: 44px;
-  padding: 0;
 }
 
 .rd-grid {
@@ -431,11 +541,98 @@ html:has(.reading) {
   outline-color: var(--c);
 }
 
-.rd-shade {
+.rd-shade,
+.bar-shade {
   position: fixed;
   inset: 52px 0 0 0;
   z-index: 8;
   background: rgba(0, 0, 0, 0.18);
+}
+
+/*
+  The translation list. docs/DESIGN.md section 9.5, docs/TASKS.md Task 22 step 10. The values are those
+  of the renders in docs/screenshots/bar-design/. Wide layout: a list below the translation control,
+  with no shade. The script sets its left side. Narrow layout: a panel below the bar, as the panel of
+  the chapter grid.
+*/
+.tr-list {
+  position: fixed;
+  z-index: 9;
+  box-sizing: border-box;
+  background: #fff;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tr-list[hidden] {
+  display: none;
+}
+
+.tr-list[data-layout='wide'] {
+  top: 56px;
+  width: 340px;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07);
+}
+
+.tr-list[data-layout='narrow'] {
+  top: 52px;
+  left: 0;
+  right: 0;
+  max-height: calc(100svh - 52px);
+  overflow: auto;
+  padding: 8px 16px 14px;
+  border-bottom: 1px solid var(--rd-line);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tr-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin: 0;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--rd-ink);
+  font: 500 15px Inter, system-ui, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tr-row[aria-pressed='true'] {
+  font-weight: 600;
+}
+
+.tr-check {
+  flex: none;
+}
+
+.tr-name {
+  flex: 1;
+}
+
+.tr-short {
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (hover: hover) {
+  .tr-list[data-layout='wide'] .tr-row:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.tr-list[data-layout='narrow'] .tr-row {
+  gap: 10px;
+  height: 48px;
+  padding: 0;
+  font-size: 16px;
 }
 
 /* The column of the text. 748 px with the padding: the text is 700 px wide at most. */
@@ -1184,9 +1381,15 @@ html:has(.reading) {
   padding-top: 140px;
 }
 
-.reading[data-trail='true'] .rd-grid-panel {
+.reading[data-trail='true'] .rd-grid-panel,
+.reading[data-trail='true'] .menu-panel,
+.reading[data-trail='true'] .tr-list[data-layout='narrow'] {
   top: 92px;
   max-height: calc(100svh - 92px);
+}
+
+.reading[data-trail='true'] .tr-list[data-layout='wide'] {
+  top: 96px;
 }
 
 .reading[data-trail='true'] .rd-shade {
@@ -1330,19 +1533,29 @@ html:has(.reading) {
 }
 
 /* Narrow layout. */
-.app[data-layout='narrow'] .rd-echo {
-  min-width: 70px;
+/* The narrow paddings give "2 Thessalonians 3" and "Song of Solomon 8" space at 375 px. Task 22 step 8. */
+.app[data-layout='narrow'] .rd-books {
+  padding-right: 6px;
 }
 
-/* The word "links" stays in the name of the switch. */
-.app[data-layout='narrow'] .rd-echo-wide {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
+.app[data-layout='narrow'] .rd-where {
+  padding: 10px 8px 10px 10px;
+}
+
+.app[data-layout='narrow'] .rd-where-n {
+  margin-left: 0;
+}
+
+.app[data-layout='narrow'] .rd-where .rd-caret {
+  margin-left: 6px;
+}
+
+.app[data-layout='narrow'] .rd-bar-rule {
+  margin: 0;
+}
+
+.app[data-layout='narrow'] .rd-tr {
+  padding: 10px 9px;
 }
 
 .app[data-layout='narrow'] .rd-trail {

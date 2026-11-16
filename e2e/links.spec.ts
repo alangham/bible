@@ -194,7 +194,12 @@ test.describe('links on the reading page', () => {
 
   test('with the echo links off, no echo link control is visible, and the setting stays after a reload', async ({ page }) => {
     for (const viewport of [NARROW, WIDE]) {
+      // In the narrow layout, the echo links switch is in the menu panel. docs/DESIGN.md section 9.6.
+      const openMenu = async () => {
+        if (viewport === NARROW) await page.getByRole('button', { name: 'Menu', exact: true }).click()
+      }
       await openChapter(page, viewport, 'hebrews/9')
+      await openMenu()
       const echo = page.getByRole('button', { name: 'Echo links' })
       await expect(echo).toHaveAttribute('aria-pressed', 'true')
       const echoControls = page.locator('[data-kind="echo"]:visible')
@@ -205,6 +210,7 @@ test.describe('links on the reading page', () => {
       await expect(page.locator('[data-kind="quotation"]:visible').first()).toBeVisible()
       await page.reload()
       await expect(chapter(page, 'hebrews', 9)).toHaveAttribute('data-loaded', 'true')
+      await openMenu()
       await expect(page.getByRole('button', { name: 'Echo links' })).toHaveAttribute('aria-pressed', 'false')
       await expect(echoControls).toHaveCount(0)
       await page.getByRole('button', { name: 'Echo links' }).click()

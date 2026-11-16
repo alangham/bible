@@ -6,10 +6,10 @@ import { useSyncExternalStore } from 'react'
 
 export type Translation = 'bsb' | 'kjv'
 
-/** The two translations of the site, in the order of the translation switch. */
-export const TRANSLATIONS: readonly { id: Translation; name: string }[] = [
-  { id: 'bsb', name: 'Berean Standard Bible' },
-  { id: 'kjv', name: 'King James Version' },
+/** The two translations of the site, in the order of the translation list. */
+export const TRANSLATIONS: readonly { id: Translation; name: string; short: string }[] = [
+  { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
+  { id: 'kjv', name: 'King James Version', short: 'KJV' },
 ]
 
 export const TRANSLATION_KEY = 'bible-translation'

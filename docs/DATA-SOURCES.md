@@ -293,3 +293,53 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 - The icon is a drawing of the designer for this site: ten blocks in the ten group colors of `src/data/books.ts`, in the order of `GROUPS`, with white lines between them. It has no other source and no licence of a third person.
 - The files are in `public/`: `favicon.svg`, `favicon-32.png`, `favicon-16.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`, and `manifest.webmanifest`. Task 28 did not change them.
 - `favicon.svg` replaces the icon of Vite, the build tool, which came with the project setup. This file had no record of the Vite icon.
+
+---
+
+## 11. World English Bible
+
+- Use: Read for Task 29. Not used on the site.
+- The report of Task 29 is `docs/reviews/task-29-web-report.md`.
+- No file of the World English Bible text is in the repository. The downloads of Task 29 are in a temporary folder outside `C:\dev\bible`.
+- Arthur selected the World English Bible on 2026-11-16 as a possible third translation. The rule of `CLAUDE.md` that the site has two translations stays until Arthur decides the build tasks from the report.
+
+### Edition A: eBible.org, `engwebp`, with no Deuterocanon
+
+- Use: Read for Task 29. Not used on the site.
+- Details page: `https://ebible.org/details.php?id=engwebp`. Read on 2026-11-16. The page shows "Last updated 2026-10-30".
+- Copyright page: `https://eBible.org/engwebp/copyright.htm`. Read on 2026-11-16. The details page does not link to this page. The HTML edition `https://eBible.org/engwebp/` links to it. The zip file holds the same words as `copr.htm`.
+- Title and abbreviation on the details page: "World English Bible", "WEBP".
+- Description on the details page: "This edition omits the Deuterocanon/Apocrypha, but is otherwise identical to the World English Bible Updated."
+- The copyright page states "2020 stable text edition". The HTML edition states that it uses "LORD" or "GOD" for God's Proper Name in the Old Testament.
+- Public domain statement, on both pages: "The World English Bible is in the Public Domain. That means that it is not copyrighted."
+- Trademark statement, on both pages: "However, "World English Bible" is a Trademark of eBible.org."
+- Terms of use of the name, on both pages, in short: the reader may copy, publish, distribute, post on the Internet, and use the World English Bible as much as the reader wants. The one request: if a person changes the actual text in any way, that person must not call the result the World English Bible. The pages give the reason: to avoid confusion.
+- The pages say nothing about headings, paragraphs, or notes from a different source next to the text.
+
+### Edition B: eBible.org, `eng-web`, the World English Bible Classic
+
+- Use: Read for Task 29. Not used on the site.
+- Details page: `https://ebible.org/details.php?id=eng-web`. Read on 2026-11-16. The page shows "Last updated 2026-11-13".
+- Copyright page: `https://eBible.org/eng-web/copyright.htm`. Read on 2026-11-16. The details page does not link to this page. The HTML edition `https://eBible.org/eng-web/` links to it. The zip file holds the same words as `copr.htm`.
+- Title and abbreviation on the details page: "World English Bible Classic", "WEB".
+- Description on the details page: "Includes Apocrypha/Deuterocanon. The Classic edition is in American English. It uses "Yahweh" for God's proper name in the Old Testament."
+- The copyright page states: "This is the 2020 stable text edition of the World English Bible."
+- Public domain statement, trademark statement, and terms of use of the name: the same words as for edition A, on both pages.
+- The zip file has 17 files that are not in the 66 books: the preface, the glossary, and 15 books of the Apocrypha and the Deuterocanon. The report lists them.
+
+### Edition C: `resources/web.docx`
+
+- Use: Read for Task 29. Not used on the site.
+- Arthur downloaded the file from OpenBible.com. Claude did not download a file from OpenBible.com. The terms page of OpenBible.com is in section 9, edition C.
+- The file properties give "Bible Hub" as the creator and 2021-07-26 as the date.
+- The file has no statement about rights. `scripts/web-report.mjs` searched each paragraph of `word/document.xml` for the words copyright, public domain, licence, rights, permission, trademark, eBible, and "©". It found two headings and eight paragraphs of Bible text. It searched the other 10 parts of the file and found none of the words.
+
+### Downloads (Task 29 step 3)
+
+| Edition | Address | Got | Size in bytes | SHA-256 |
+|---|---|---|---|---|
+| A | `https://eBible.org/Scriptures/engwebp_usfm.zip` | Downloaded by Claude on 2026-11-16 from this address directly. No page came before the download. | 2,907,972 | `3bb1ac4fe06e9adf50fe6659237fa0b3743bf651ce15cc9acebc36c5070ae62d` |
+| B | `https://eBible.org/Scriptures/eng-web_usfm.zip` | Downloaded by Claude on 2026-11-16 from this address directly. No page came before the download. | 3,249,697 | `107c0c220a67b9e43baa18e849e19076d41b8e169a0c71d4b9fd2d77db94c152` |
+| C | `resources/web.docx` | Arthur's copy. Claude copied it to the temporary folder. | 2,133,656 | `949f67d0f965eda1d048a696bc7ef69549fab10bdb7bbe8aaec161a3bb140312` |
+
+- The size and the SHA-256 of `resources/web.docx` are the values of Task 29.

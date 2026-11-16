@@ -1884,3 +1884,101 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests. Arthur checks the icon on a real phone: the browser tab, and the home screen after "Add to Home Screen".
+
+---
+
+# The World English Bible: Task 29
+
+Arthur decided on 2026-11-16 to add a third translation. He wanted the NASB first. The NASB is under copyright of The Lockman Foundation, and its free limit is 1,000 verses, so the site cannot show it without written permission. Arthur selected the World English Bible in its place. By Arthur's method for new data, the first task is a report.
+
+---
+
+## Task 29. World English Bible: a report on the source files
+
+Status: DONE
+
+Goal: a report on the files of the World English Bible, on its editions, and on how the structure and the red letters of the site fit them. Arthur uses the report to decide the tasks that add the World English Bible. No page and no data file of the site changes.
+
+The rules of the site that the report must test against, for your information:
+
+- A translation changes only the words, and the words-of-Jesus marks with them. The reading page shows the section headings, the cross-reference lines, and the text blocks of the Berean data. `docs/DESIGN.md` sections 8 and 11.
+- The site writes no content, and changes no word of a Bible text.
+
+The three editions of this task:
+
+- Edition A, on eBible.org: `engwebp`, the World English Bible with no Deuterocanon. Details page: `https://ebible.org/details.php?id=engwebp`.
+- Edition B, on eBible.org: `eng-web`, the World English Bible Classic. Details page: `https://ebible.org/details.php?id=eng-web`.
+- Edition C: `resources/web.docx`, a file that Arthur downloaded from OpenBible.com, a site of the Berean publisher. It is on the computer now. `.gitignore` names the folder `resources/`.
+
+The designer's check on 2026-11-16. Read these as facts to confirm, not as results:
+
+- Edition C: 2,133,656 bytes, SHA-256 `949f67d0f965eda1d048a696bc7ef69549fab10bdb7bbe8aaec161a3bb140312`. Its properties give "Bible Hub" as the creator and 2021-07-26 as the date. These are the values of `resources/kjv.docx` also.
+- Edition C has the form of `resources/kjv.docx`: a chapter starts with a paragraph that has no style and has the book name and the chapter number. The designer found 1,189 of these paragraphs, 31,102 runs with the style `reftext1` for the verse numbers, and these paragraph styles: 13,131 `reg`, 3,016 `hdg`, 229 `acrostic`, 42 `subhdg`, and 5 `suphdg`. The site data has 3,016 main headings also.
+- Edition C has the name "Yahweh" more than 6,800 times, and the word "LORD" 2 times.
+- The text of edition C has none of these words: "public domain", "copyright", "trademark", "eBible".
+- In edition C, John 3:16 has the words "his one and only Son". On 2026-11-16, the details page of edition A showed John 3:16 with the words "his only born Son". So edition C is possibly an older text.
+- In edition C, some verses have a number and no words, for example Acts 8:37 and Romans 16:25. The script of the designer was not exact: it read 30,836 of the 31,102 verses.
+- From the eBible.org pages, read by the designer in search results only: the two editions are marked "public domain", the name "World English Bible" is a trademark of eBible.org, edition A has no Deuterocanon and has "LORD" or "GOD" where edition B has "Yahweh", and edition A is the "2020 stable text edition".
+
+WARNING: Do not change a file in `public/` or in `src/` in this task.
+
+WARNING: Do not put a file of the World English Bible text in the repository. Download the files to a temporary folder that is not in `C:\dev\bible`. Arthur decides on the source after the report.
+
+WARNING: Do not download a file from OpenBible.com. Its terms say that a download can be an acceptance of terms. Use Arthur's copy, `resources/web.docx`.
+
+WARNING: Do not write a fact about the World English Bible from memory. Each number in the report must come from the output of the script of step 4. Each licence statement must come from its page, with the date on which you read the page.
+
+Steps:
+
+1. Read sections 8 and 11 of `docs/DESIGN.md`, section 9 of `docs/DATA-SOURCES.md`, and `docs/reviews/task-19-kjv-report.md`. The report of Task 19 is the model for this report.
+2. Read the licence of editions A and B on eBible.org: the details page and the copyright page that it links to.
+   - Record the statement about the public domain, in the words of the page.
+   - Record all that the page says about the trademark "World English Bible": who can use the name, and for which text. The site will show the text with no changed word, and with the headings and the paragraphs of the Berean data.
+   - If a page does not state that the text is in the public domain, stop and ask Arthur.
+   - Add a section "World English Bible" to `docs/DATA-SOURCES.md`. For each edition, record the addresses, the date, and the statements. Record the use as "Read for Task 29. Not used on the site."
+3. Download the USFM zip file of edition A and of edition B to the temporary folder. If a page asks you to accept terms before the download, stop and ask Arthur. For each file, record in `docs/DATA-SOURCES.md` the address, the date, the size in bytes, and the SHA-256. Make sure that the SHA-256 of `resources/web.docx` is the value above. If it differs, say so in the report and continue.
+4. Write the script `scripts/web-report.mjs`. It gets the path of the temporary folder as an argument. It only reads files. It prints the numbers and the lists for steps 5 to 12. Use the method of `scripts/kjv-report.mjs` for the plain words of a verse, and for the `.docx` file. Do not add a package to `package.json`.
+5. Report the content of each edition:
+   - The number of books, chapters, and verses. If an edition has more books than the 66 books of `public/data/books.json`, list the other books and do not count them.
+   - For editions A and B: each USFM marker, with the number of times that it occurs.
+   - The number of verses that have a number and no words, with the list.
+   - The number of footnotes and of cross-reference notes, and five examples of each.
+   - How the edition shows words that the translators added, if it does.
+   - How the edition gives the title of a Psalm: in a marker of its own, or in verse 1. Give Psalm 3 and Psalm 23 as examples.
+   - The number of times that each of these occurs in the plain words: "Yahweh", "Yah", "LORD", "GOD", "Jehovah".
+   - These verses, each as it is in the source file and as its plain words: Genesis 1:1, Genesis 2:4, Psalm 23:1, Isaiah 12:2, Matthew 5:3, John 3:16, and the last verse of 3 John.
+6. Compare the words of the editions.
+   - Edition A against edition B: count the verses whose plain words differ. Put each in one of two classes: "the name of God only", when the verses are the same after the script replaces "Yahweh", "Yah", "LORD", and "GOD" with one sign, and "other". Give the count of each class, and 15 examples of the class "other".
+   - Edition A against edition C, and edition B against edition C: count the verses whose plain words differ, and give 15 examples of each comparison. Say which of A and B is nearer to C.
+7. Compare the verses of editions A and B with `sources/bsb/bsb.txt`. In that file, a verse with no words is a verse that the main text of the Berean Standard Bible does not have. Give these lists for each edition:
+   - The verses of the edition that have no line in `sources/bsb/bsb.txt`.
+   - The 16 verses that have no words in `sources/bsb/bsb.txt`. For each, say if the edition has words for it.
+   - The verses of `sources/bsb/bsb.txt` that the edition does not have, or has with no words.
+   - Each chapter whose number of verses differs between the edition and `sources/bsb/bsb.txt`.
+8. Examine the links in `public/data/links/*.json`, as step 8 of Task 19: count the passages whose first verse or last verse is not in edition A, or has no words in edition A. List each of these passages with the `id` of its link.
+9. Examine the fit of the text blocks. The King James Version data of Task 20 puts each verse in the Berean block where the verse starts. Count the verses of edition A that this method cannot place, with the list. Say what the method does with a verse that edition A has and the Berean data does not have.
+10. Report the words-of-Jesus marks, `\wj`, of editions A and B.
+    - For each book: the number of start markers, of end markers, and of verses with marked words.
+    - The class of each verse, as in the report of Task 25: "all", "part", "none".
+    - A table of the classes of edition A against the classes of the Berean Standard Bible, and a table against the King James Version. Read the classes of those two from the site data, where a words-of-Jesus mark is an item `j`.
+    - Each verse where edition A has "none" and the Berean Standard Bible has marks, and each verse where edition A has marks and the Berean Standard Bible has "none". If a list has more than 100 verses, give the count for each book and the first 100.
+    - If the files have no marker `\wj`, say so. Then red letters need a different decision.
+11. Compare the section headings and the cross-reference lines of edition C with those of `public/data/text/*.json`, as step 11 of Task 19: the counts, and the headings that differ, to a maximum of 50.
+12. List each place in `src/`, `scripts/`, and `e2e/` that is written for two translations and must change for a third. Examples: the type `Translation`, the list `TRANSLATIONS`, the label "The quoted words are from the Berean Standard Bible.", and the tests that go through the two translations. Give the file and the line of each. Do not change them.
+13. Write the report `docs/reviews/task-29-web-report.md`. Give it one section for each of steps 2, 3, and 5 to 12, in that order. Then add a section "Proposals" with these six points. For each point, give the options and the cost of each option. Do not decide for Arthur.
+    - Which edition the site uses: edition A with "LORD", or edition B with "Yahweh". Say which books of edition B the site must leave out.
+    - What the pages show for a verse that the edition has with no words, and for a chapter whose number of verses differs from the Berean data.
+    - Red letters: the marks of the edition, by the rule of section 11.2 of `docs/DESIGN.md`, and what the site does if the edition has no marks.
+    - The name and the short name of the translation on the site, and what the trademark terms of step 2 permit.
+    - The words of the credit on the Sources page.
+    - The work for a third translation in the code, from step 12, and the rule of `CLAUDE.md` that the site has two translations.
+14. Run `npm run lint`, `npm run build`, and `npm test`.
+
+Done when:
+
+- `docs/reviews/task-29-web-report.md` has the numbers and the lists of steps 5 to 12, and the six proposals.
+- `docs/DATA-SOURCES.md` has the licence record of editions A and B and the record of the downloads.
+- No file in `public/` or in `src/` changed, and no file of the World English Bible text is in the repository.
+- `npm run build` has no errors, and the tests pass.
+
+Stop and report. Give the path of the temporary folder in the report. Do not start a task that adds the World English Bible. Arthur decides the next tasks from the report.

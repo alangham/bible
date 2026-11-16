@@ -1,4 +1,5 @@
-// The translation setting and the address of the text of each translation. docs/TASKS.md Task 21 step 10.
+// The translation setting and the address of the text of each translation. docs/TASKS.md Task 21 step 10,
+// and Task 31 step 10 for the World English Bible.
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
@@ -30,12 +31,29 @@ describe('translation setting', () => {
     expect(t.getTranslation()).toBe('bsb')
   })
 
-  it('has the two translations with their full names', async () => {
+  it('has the three translations with their full names, in the order of the translation list', async () => {
     const t = await load()
     expect(t.TRANSLATIONS).toEqual([
       { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
       { id: 'kjv', name: 'King James Version', short: 'KJV' },
+      { id: 'web', name: 'World English Bible', short: 'WEB' },
     ])
+  })
+
+  it('reads the stored value web as web', async () => {
+    vi.stubGlobal('localStorage', memoryStorage({ 'bible-translation': 'web' }))
+    const t = await load()
+    expect(t.getTranslation()).toBe('web')
+  })
+
+  it('keeps the selection web in the storage', async () => {
+    const storage = memoryStorage()
+    vi.stubGlobal('localStorage', storage)
+    const t = await load()
+    t.setTranslation('web')
+    expect(storage.data.get('bible-translation')).toBe('web')
+    const again = await load()
+    expect(again.getTranslation()).toBe('web')
   })
 
   it('keeps the selection in the storage, with the key bible-translation', async () => {
@@ -49,10 +67,12 @@ describe('translation setting', () => {
     expect(again.getTranslation()).toBe('kjv')
   })
 
-  it('reads a value that it does not know as bsb', async () => {
-    vi.stubGlobal('localStorage', memoryStorage({ 'bible-translation': 'esv' }))
-    const t = await load()
-    expect(t.getTranslation()).toBe('bsb')
+  it('reads a value that is not the id of a translation as bsb', async () => {
+    for (const value of ['esv', 'WEB', 'World English Bible', 'webp', '', 'short', 'toString']) {
+      vi.stubGlobal('localStorage', memoryStorage({ 'bible-translation': value }))
+      const t = await load()
+      expect(t.getTranslation(), value).toBe('bsb')
+    }
   })
 
   it('holds the setting for the page when the storage is not available', async () => {
@@ -78,7 +98,7 @@ describe('short names', () => {
     const { TRANSLATIONS } = await load()
     for (const t of TRANSLATIONS) expect(t.short).toMatch(/\S/)
     expect(new Set(TRANSLATIONS.map((t) => t.short)).size).toBe(TRANSLATIONS.length)
-    expect(TRANSLATIONS.map((t) => t.short)).toEqual(['BSB', 'KJV'])
+    expect(TRANSLATIONS.map((t) => t.short)).toEqual(['BSB', 'KJV', 'WEB'])
   })
 })
 
@@ -95,14 +115,16 @@ describe('loadBookText', () => {
     )
   })
 
-  it('reads data/text/ for bsb and data/text-kjv/ for kjv, one time for each translation', async () => {
+  it('reads data/text/ for bsb, data/text-kjv/ for kjv, and data/text-web/ for web, one time for each translation', async () => {
     vi.resetModules()
     const { loadBookText } = await import('./text.ts')
     await loadBookText('ruth', 'bsb')
     await loadBookText('ruth', 'kjv')
+    await loadBookText('ruth', 'web')
     await loadBookText('ruth', 'bsb')
     await loadBookText('ruth', 'kjv')
+    await loadBookText('ruth', 'web')
     const base = import.meta.env.BASE_URL
-    expect(urls).toEqual([`${base}data/text/ruth.json`, `${base}data/text-kjv/ruth.json`])
+    expect(urls).toEqual([`${base}data/text/ruth.json`, `${base}data/text-kjv/ruth.json`, `${base}data/text-web/ruth.json`])
   })
 })

@@ -217,7 +217,7 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
         <LinkedText books={books} passage={reference?.passage ?? end.there} name={reference?.shown ?? passageName(books, end.there)} />
         {end.link.reason && <p className="pop-reason">{end.link.reason}</p>}
         {/* The reason line quotes the Berean Standard Bible. docs/DESIGN.md section 8.4. */}
-        {quotation && translation === 'kjv' && <p className="pop-quoted-from">The quoted words are from the Berean Standard Bible.</p>}
+        {quotation && translation !== 'bsb' && <p className="pop-quoted-from">The quoted words are from the Berean Standard Bible.</p>}
         <p className="pop-source">{SOURCE_LINE[end.link.source]}</p>
         <div className="pop-actions">
           <a

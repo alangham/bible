@@ -75,4 +75,16 @@ describe('passageVerses', () => {
     expect(verse.text).toBe('A Psalm of David. The LORD is my shepherd; I shall not want.')
     expect(verse.parts.filter((x) => x.a)).toEqual([{ t: 'is', a: true }])
   })
+
+  it('keeps the no-break spaces of John 5:11, Acts 20:35, and Acts 22:21 of the World English Bible data (Task 31)', () => {
+    const read = (id: string) => JSON.parse(readFileSync(join(root, 'public/data/text-web', `${id}.json`), 'utf8')) as BookText
+    const john = passageVerses(read('john'), { book: 'john', c: 5, v: 8, v2: 14 })
+    const acts = read('acts')
+    for (const verse of [john.find((x) => x.v === 11)!, ...passageVerses(acts, { book: 'acts', c: 20, v: 35 }), ...passageVerses(acts, { book: 'acts', c: 22, v: 1, v2: 21 }).filter((x) => x.v === 21)]) {
+      expect(verse.text, `${verse.c}:${verse.v}`).toContain('’ ”')
+      expect(verse.parts.map((x) => x.t).join(''), `${verse.c}:${verse.v}`).toContain('’ ”')
+    }
+    // The other verses of the passage have no no-break space.
+    expect(john.filter((x) => x.text.includes(' ')).map((x) => x.v)).toEqual([11])
+  })
 })

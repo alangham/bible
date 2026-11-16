@@ -35,7 +35,7 @@ describe('cross-reference lines', () => {
 
   it('show the line of Hebrews 9 as the publisher gives it, with a link for each reference', () => {
     const text = read<BookText>('public/data/text/hebrews.json')
-    const marks = marksOf(read<BookLinks>('public/data/links/hebrews.json'), 'hebrews', 9)
+    const marks = marksOf(read<BookLinks>('public/data/links/hebrews.json'), 'hebrews', 9, 'bsb')
     const line = text.chapters[8].xrefs[0]
     expect(line.t).toBe('(Exodus 40:1–33; Acts 7:44–47)')
     const parts = lineParts(books, line, marks.headings.get(headingKey('The Earthly Tabernacle', line.v)) ?? [])
@@ -59,7 +59,7 @@ describe('cross-reference lines', () => {
       const text = read<BookText>(`public/data/text/${book.id}.json`)
       const links = read<BookLinks>(`public/data/links/${book.id}.json`)
       for (const chapter of text.chapters) {
-        const marks = marksOf(links, book.id, chapter.n)
+        const marks = marksOf(links, book.id, chapter.n, 'bsb')
         for (const [key, list] of marks.headings) {
           ends += list.length
           const v = Number(key.split('|')[0])

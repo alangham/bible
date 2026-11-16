@@ -15,7 +15,7 @@ interface TextFile {
 const RED = 'rgb(139, 26, 26)'
 
 /** The words of each verse of a chapter in a data file: strings, added words, and the words of a words-of-Jesus mark. */
-function dataVerses(folder: 'text' | 'text-kjv', book: string, c: number): Map<number, string> {
+function dataVerses(folder: 'text' | 'text-kjv' | 'text-web', book: string, c: number): Map<number, string> {
   const text = JSON.parse(readFileSync(new URL(`../public/data/${folder}/${book}.json`, import.meta.url), 'utf8')) as TextFile
   const out = new Map<number, string>()
   let verse = 0
@@ -61,11 +61,12 @@ function pageVerses(section: Locator): Promise<[number, string][]> {
   })
 }
 
-test('the words-of-Jesus marks change no word, and with red letters off no color: Matthew 4 and John 3 in the two translations', async ({ page }) => {
+test('the words-of-Jesus marks change no word, and with red letters off no color: Matthew 4 and John 3 in the three translations', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
   for (const [translation, folder] of [
     ['bsb', 'text'],
     ['kjv', 'text-kjv'],
+    ['web', 'text-web'],
   ] as const) {
     await page.goto('./#/')
     await page.evaluate((t) => localStorage.setItem('bible-translation', t), translation)

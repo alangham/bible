@@ -73,8 +73,8 @@ test.describe('the top bar of the wall', () => {
       await expect(page.locator('header.wall-bar')).toBeVisible()
       await expect(page.locator('.wall-foot, footer')).toHaveCount(0)
       await expect(page.getByRole('group', { name: 'Translation', includeHidden: true })).toHaveCount(0)
-      await expect(page.getByRole('button', { name: /Translation|Berean|King James/, includeHidden: true })).toHaveCount(0)
-      await expect(page.getByText(/Berean Standard Bible|King James Version|BSB|KJV/)).toHaveCount(0)
+      await expect(page.getByRole('button', { name: /Translation|Berean|King James|World English/, includeHidden: true })).toHaveCount(0)
+      await expect(page.getByText(/Berean Standard Bible|King James Version|World English Bible|BSB|KJV|\bWEB\b/)).toHaveCount(0)
     })
   }
 
@@ -257,12 +257,18 @@ test.describe('the top bar of the reading page', () => {
       await page.keyboard.press('Enter')
       const group = translationList(page).getByRole('group', { name: 'Translation' })
       const rows = await group.getByRole('button').all()
-      expect(rows).toHaveLength(2)
+      expect(rows).toHaveLength(3)
       await bigEnough(rows)
       // A row is 44 px high in the wide layout, and 48 px high in the narrow layout.
       for (const row of rows) expect((await row.boundingBox())!.height).toBe(vp.size.width >= 900 ? 44 : 48)
       await expect(rows[0]).toBeFocused()
+      // The Tab key goes through the three rows, and Shift+Tab goes back.
       await page.keyboard.press('Tab')
+      await expect(rows[1]).toBeFocused()
+      await page.keyboard.press('Tab')
+      await expect(rows[2]).toBeFocused()
+      await expect(rows[2]).toHaveAccessibleName('World English Bible')
+      await page.keyboard.press('Shift+Tab')
       await expect(rows[1]).toBeFocused()
       await page.keyboard.press('Enter')
       await expect(translationList(page)).toBeHidden()
@@ -275,8 +281,10 @@ test.describe('the top bar of the reading page', () => {
       await expect(rows[1]).toHaveAccessibleName('King James Version')
       await expect(rows[1].locator('.tr-check path')).toHaveCount(1)
       await expect(rows[0].locator('.tr-check path')).toHaveCount(0)
+      await expect(rows[2].locator('.tr-check path')).toHaveCount(0)
       expect(await rows[1].evaluate((el) => getComputedStyle(el).fontWeight)).toBe('600')
       expect(await rows[0].evaluate((el) => getComputedStyle(el).fontWeight)).toBe('500')
+      expect(await rows[2].evaluate((el) => getComputedStyle(el).fontWeight)).toBe('500')
       // The row of the translation that is already selected: the list closes, and nothing changes.
       await page.keyboard.press('Space')
       await expect(translationList(page)).toBeHidden()
@@ -394,6 +402,54 @@ test.describe('the top bar of the reading page', () => {
       expect(await name.evaluate((el) => el.scrollWidth <= el.clientWidth), `${book} ${n}`).toBe(true)
     }
   })
+
+  // The World English Bible: the translation control shows "WEB". docs/DESIGN.md section 13.6, docs/TASKS.md Task 31 step 11.
+  for (const width of [390, 375]) {
+    test(`at ${width} px wide with "WEB", the bar of "2 Thessalonians 3" and "Song of Solomon 8" is one line, and only the book name can be cut`, async ({ page }) => {
+      await page.addInitScript(() => localStorage.setItem('bible-translation', 'web'))
+      for (const [book, n] of [
+        ['2-thessalonians', 3],
+        ['song-of-solomon', 8],
+      ] as const) {
+        await openChapter(page, { width, height: 844 }, book, n)
+        await expect(chapter(page, book, n)).toHaveAttribute('data-translation', 'web')
+        await expect(translationControl(page)).toHaveText('WEB')
+        const label = `${book} ${n} at ${width} px`
+        const r = await page.evaluate(() => {
+          const box = (s: string) => {
+            const el = document.querySelector(s)!
+            const b = el.getBoundingClientRect()
+            return { left: b.left, right: b.right, top: b.top, bottom: b.bottom, cut: el.scrollWidth > el.clientWidth + 0.5 }
+          }
+          return {
+            bar: document.querySelector('.rd-bar')!.getBoundingClientRect().height,
+            scrollWidth: document.documentElement.scrollWidth,
+            books: box('.rd-books'),
+            name: box('.rd-where b'),
+            n: box('.rd-where-n'),
+            tr: box('.rd-tr'),
+            menu: box('.bar-menu'),
+            nameOverflow: getComputedStyle(document.querySelector('.rd-where b')!).textOverflow,
+          }
+        })
+        expect(r.bar, label).toBe(BAR_PX)
+        expect(r.scrollWidth, label).toBeLessThanOrEqual(width)
+        for (const [part, b] of Object.entries({ books: r.books, n: r.n, tr: r.tr, menu: r.menu })) {
+          expect(b.cut, `${label}: ${part}`).toBe(false)
+          expect(b.left, `${label}: ${part}`).toBeGreaterThanOrEqual(0)
+          expect(b.right, `${label}: ${part}`).toBeLessThanOrEqual(width)
+          expect(b.top, `${label}: ${part}`).toBeGreaterThanOrEqual(0)
+          expect(b.bottom, `${label}: ${part}`).toBeLessThanOrEqual(BAR_PX)
+        }
+        expect(r.n.left, label).toBeGreaterThanOrEqual(r.books.right - 0.5)
+        expect(r.tr.left, label).toBeGreaterThanOrEqual(r.n.right - 0.5)
+        expect(r.menu.left, label).toBeGreaterThanOrEqual(r.tr.right - 0.5)
+        // At 390 px, the two names show with no cut. At 375 px, "Song of Solomon" can end with "…".
+        if (width === 390 || book === '2-thessalonians') expect(r.name.cut, label).toBe(false)
+        else if (r.name.cut) expect(r.nameOverflow, label).toBe('ellipsis')
+      }
+    })
+  }
 
   test('at 320 px wide, the name "Song of Solomon" ends with "…"', async ({ page }) => {
     await openChapter(page, { width: 320, height: 844 }, 'song-of-solomon', 8)

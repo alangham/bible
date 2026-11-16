@@ -4,12 +4,13 @@
 
 import { useSyncExternalStore } from 'react'
 
-export type Translation = 'bsb' | 'kjv'
+export type Translation = 'bsb' | 'kjv' | 'web'
 
-/** The two translations of the site, in the order of the translation list. */
+/** The three translations of the site, in the order of the translation list. docs/DESIGN.md section 13.6. */
 export const TRANSLATIONS: readonly { id: Translation; name: string; short: string }[] = [
   { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
   { id: 'kjv', name: 'King James Version', short: 'KJV' },
+  { id: 'web', name: 'World English Bible', short: 'WEB' },
 ]
 
 export const TRANSLATION_KEY = 'bible-translation'
@@ -18,7 +19,9 @@ const listeners = new Set<() => void>()
 
 function readTranslation(): Translation {
   try {
-    return localStorage.getItem(TRANSLATION_KEY) === 'kjv' ? 'kjv' : 'bsb'
+    // The stored value when it is the id of a translation of the list, and else the Berean Standard Bible.
+    const stored = localStorage.getItem(TRANSLATION_KEY)
+    return TRANSLATIONS.find((t) => t.id === stored)?.id ?? 'bsb'
   } catch {
     return 'bsb'
   }

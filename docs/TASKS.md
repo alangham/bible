@@ -2101,7 +2101,7 @@ Stop and report. Give the size of `public/data/text-web/`. Do not start Task 31.
 
 ## Task 31. World English Bible: the pages
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 
@@ -2109,7 +2109,7 @@ Goal: the reader can select the World English Bible in the translation list and 
 
 The design is in section 13 of `docs/DESIGN.md`. The renders are in `docs/screenshots/web-design/`: the translation list with three rows at 1440 by 900 px and at 390 by 844 px, and the top bar with "WEB" at 390 px and at 375 px. The renders are a sketch on the built site of Task 28. Use their look. Do not copy code from them.
 
-The data of Task 30 is ready: `public/data/text-web/<id>.json` has the form of `public/data/text-kjv/<id>.json`. It has items `j`. It has no `a` item, no `o` item, and no note block. If Task 30 is not `DONE`, stop.
+The data of Task 30 is ready: `public/data/text-web/<id>.json` has the form of `public/data/text-kjv/<id>.json`. It has items `j`. It has no `a` item, no `o` item, and no note block. If Task 30 is not `DONE`, stop. Three verses of the data have a no-break space, U+00A0, as the source has: John 5:11, Acts 20:35, and Acts 22:21. Do not change it on the page.
 
 WARNING: Do not change a data file in `public/data/`, a source file in `sources/`, or a build script.
 
@@ -2171,7 +2171,7 @@ Steps:
     - The axe-core checks that `e2e/a11y.spec.ts` has with the King James Version stored run with the World English Bible stored also.
     - The wall has no text with the name of a translation.
 12. Make sure that the browser tests that were there before this task pass. Where a test must change because the site has three translations, give the test and the reason in the report.
-13. Take screenshots with the World English Bible selected, at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, Genesis 1, Psalm 23, John 3, the end of Romans 14, the end of Romans 16, the pop-up of a quotation link, and the Sources page. Save them in `docs/screenshots/task-31/`. Compare the translation list with the renders, and give each difference in the report.
+13. Take screenshots with the World English Bible selected, at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, Genesis 1, Psalm 23, John 3, the end of Romans 14, the end of Romans 16, the pop-up of a quotation link, and the Sources page. Save them in `docs/screenshots/task-31/`. Compare the translation list with the renders, and give each difference in the report. Commit the folder `docs/screenshots/web-design/` with this task. It has the four renders of the designer, and Task 30 did not commit it.
 14. Run the `accuracy-reviewer` agent. The Bible text on the pages comes from the data of Task 30 with no change. The new words are those of steps 2 and 8.
 15. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
 

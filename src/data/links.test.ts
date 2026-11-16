@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest'
 // @ts-expect-error: a plain JavaScript module of the build scripts, with no types.
 import { readOpenBible, readWithLists } from '../../scripts/links-common.mjs'
 import type { Book } from './books.ts'
-import { marksOf, type BookLinks } from './links.ts'
+import { HIDDEN_LINKS, marksOf, type BookLinks } from './links.ts'
 import { isOmitted, isVerseMark, type BookText } from './text.ts'
 
 const root = join(import.meta.dirname, '..', '..')
@@ -38,7 +38,7 @@ describe('links', () => {
         expect(l.type, `${l.id}: fit ${fit}`).toBe('echo')
         expect(l.reason, `${l.id}: fit ${fit}`).toBeUndefined()
         // The mark of a verse is strong only if one of its links is a quotation link.
-        const marks = marksOf(JSON.parse(readFileSync(join(root, 'public/data/links', `${l.a.book}.json`), 'utf8')) as BookLinks, l.a.book, l.a.c)
+        const marks = marksOf(JSON.parse(readFileSync(join(root, 'public/data/links', `${l.a.book}.json`), 'utf8')) as BookLinks, l.a.book, l.a.c, 'bsb')
         const end = marks.verses.get(l.a.v)?.find((e) => e.link.id === l.id)
         expect(end?.link.type, l.id).toBe('echo')
       } else expect(l.type, `${l.id}: fit ${fit}`).toBe('quotation')
@@ -127,10 +127,23 @@ describe('links and the verses of each translation', () => {
       .sort()
   }
 
-  it('finds no such link for the Berean Standard Bible and the King James Version, and three for the World English Bible', () => {
+  it('finds the links of HIDDEN_LINKS for each translation: none for the Berean Standard Bible and the King James Version, and three for the World English Bible', () => {
     expect(links.size).toBe(3866)
-    expect(missing('text')).toEqual([])
-    expect(missing('text-kjv')).toEqual([])
+    expect(missing('text')).toEqual([...HIDDEN_LINKS.bsb].sort())
+    expect(missing('text-kjv')).toEqual([...HIDDEN_LINKS.kjv].sort())
+    expect(missing('text-web')).toEqual([...HIDDEN_LINKS.web].sort())
     expect(missing('text-web')).toEqual(['h1733', 'o3385', 'o3515'])
+  })
+
+  it('gives no mark to a link of HIDDEN_LINKS on the pages of its translation, and a mark on the pages of the two other translations', () => {
+    const at = (book: string, c: number, t: 'bsb' | 'kjv' | 'web') => {
+      const m = marksOf(JSON.parse(readFileSync(join(root, 'public/data/links', `${book}.json`), 'utf8')) as BookLinks, book, c, t)
+      return [...m.verses.values(), ...m.headings.values()].flat().map((e) => e.link.id)
+    }
+    for (const [book, c, id] of [['matthew', 13, 'o3385'], ['1-timothy', 3, 'o3515'], ['jude', 1, 'h1733'], ['romans', 16, 'h1733']] as const) {
+      expect(at(book, c, 'web'), `${book} ${c} web`).not.toContain(id)
+      expect(at(book, c, 'bsb'), `${book} ${c} bsb`).toContain(id)
+      expect(at(book, c, 'kjv'), `${book} ${c} kjv`).toContain(id)
+    }
   })
 })

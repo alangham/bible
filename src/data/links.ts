@@ -2,6 +2,8 @@
 // scripts/build-links.mjs makes one file for each book in public/data/links/: the links that have an end
 // in the book, and the read-with list of each chapter of the book.
 
+import type { Translation } from './translation.ts'
+
 export type LinkSource = 'Bible Quotation Database' | 'OpenBible.info' | 'Berean Standard Bible'
 
 /** One end of a link. `heading` is set when the mark is on the section heading. */
@@ -66,8 +68,24 @@ export function headingKey(text: string, verse: number): string {
   return `${verse}|${text}`
 }
 
-/** The marks of one chapter: the link ends on each verse, and on each section heading. Quotation links first. */
-export function marksOf(data: BookLinks, book: string, chapter: number) {
+/**
+ * The links that do not show on the pages of a translation. docs/DESIGN.md section 13.4: one of the two
+ * passages of the link starts at a verse that the data of that translation does not have. The link data does
+ * not change. The unit test in src/data/links.test.ts finds the links by this rule in the data of each
+ * translation, and compares them with this list.
+ */
+export const HIDDEN_LINKS: Readonly<Record<Translation, readonly string[]>> = {
+  bsb: [],
+  kjv: [],
+  web: ['h1733', 'o3385', 'o3515'],
+}
+
+/**
+ * The marks of one chapter: the link ends on each verse, and on each section heading. Quotation links first.
+ * The links of HIDDEN_LINKS for the translation have no mark.
+ */
+export function marksOf(data: BookLinks, book: string, chapter: number, translation: Translation) {
+  const hidden = HIDDEN_LINKS[translation]
   const verses = new Map<number, LinkEnd[]>()
   const headings = new Map<string, LinkEnd[]>()
   const add = (map: Map<number, LinkEnd[]> | Map<string, LinkEnd[]>, key: number | string, end: LinkEnd) => {
@@ -76,6 +94,7 @@ export function marksOf(data: BookLinks, book: string, chapter: number) {
     m.get(key)!.push(end)
   }
   for (const link of data.links) {
+    if (hidden.includes(link.id)) continue
     for (const [here, there] of [
       [link.a, link.b],
       [link.b, link.a],

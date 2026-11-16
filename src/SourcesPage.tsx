@@ -23,8 +23,8 @@ export function SourcesPage() {
         <section aria-labelledby="sources-text">
           <h2 id="sources-text">The Bible text</h2>
           <p>
-            The site has two translations: the <a href="https://berean.bible/">Berean Standard Bible</a> (BSB) and the King James Version (KJV). The
-            Berean Standard Bible is in the public domain. The publisher placed it in the public domain on April 30, 2023, with the{' '}
+            The site has three translations: the <a href="https://berean.bible/">Berean Standard Bible</a> (BSB), the King James Version (KJV), and
+            the World English Bible (WEB). The Berean Standard Bible is in the public domain. The publisher placed it in the public domain on April 30, 2023, with the{' '}
             <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> dedication. The site shows the words without change.
           </p>
           <p>
@@ -47,12 +47,28 @@ export function SourcesPage() {
             The site does not show the Strong's numbers and the footnotes of these files. The words that the translators added show in italics. In
             13 verses, the files write one word as two words, for example "can not", and the site joins the word.
           </p>
+          {/* The World English Bible: docs/DESIGN.md section 13.7, docs/TASKS.md Task 31 step 8. The facts are from sources/web/copr.htm
+              and section 11 of docs/DATA-SOURCES.md. */}
           <p>
-            On the King James Version pages, the section headings, the cross-reference lines, the paragraphs, and the lines of poetry are those of
-            the Berean Standard Bible files. They are not part of the King James Version.
+            The World English Bible on this site is the edition that does not have the books of the Apocrypha, from the files of{' '}
+            <a href="https://ebible.org/details.php?id=engwebp">eBible.org</a>. eBible.org names it the 2020 stable text edition, and gives it the
+            abbreviation "WEBP". The World English Bible is in the public domain. "World English Bible" is a trademark of eBible.org.
           </p>
           <p>
-            The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The two translations do
+            The site shows the words of these files without change. It does not show the Strong's numbers, the footnotes, and the cross-reference
+            notes of these files.
+          </p>
+          <p>
+            The verse numbers of the World English Bible are those of the files. Romans 14 has 26 verses, and Romans 16 ends at verse 24. In the two
+            other translations of this site, the words of the last three verses of Romans 14 are Romans 16:25 to 16:27. Five verse numbers have no
+            words in the files, and the site does not show them: Luke 17:36, Acts 8:37, Acts 15:34, Acts 24:7, and Romans 16:25.
+          </p>
+          <p>
+            On the King James Version pages and the World English Bible pages, the section headings, the cross-reference lines, the paragraphs, and
+            the lines of poetry are those of the Berean Standard Bible files. They are not part of these translations.
+          </p>
+          <p>
+            The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The three translations do
             not mark the same words in each verse. The site changes one mark: in Mark 12:37 of the King James Version, the file also marks the
             sentence "And the common people heard him gladly.", and the site does not.
           </p>

@@ -281,42 +281,47 @@ for (const layout of LAYOUTS) {
     expect(await axe(page)).toEqual([])
   })
 
-  // The King James Version stored. The wall has no translation control since Task 22, so the wall looks the same.
-  // docs/TASKS.md Task 21 step 11.
-  test(`accessibility: the wall with the King James Version stored, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
-    await page.goto('./')
-    await settled(page)
-    expect(await audit(page, layout.name, 24)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
+  // The King James Version stored, and the World English Bible stored. The wall has no translation control since
+  // Task 22, so the wall looks the same. docs/TASKS.md Task 21 step 11 and Task 31 step 11.
+  for (const [id, name] of [
+    ['kjv', 'King James Version'],
+    ['web', 'World English Bible'],
+  ] as const) {
+    test(`accessibility: the wall with the ${name} stored, ${layout.name} layout`, async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+      await page.addInitScript((t) => localStorage.setItem('bible-translation', t), id)
+      await page.goto('./')
+      await settled(page)
+      expect(await audit(page, layout.name, 24)).toEqual([])
+      expect(await axe(page)).toEqual([])
+    })
 
-  test(`accessibility: the reading page with the panel of the chapter grid open, King James Version, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
-    await page.goto('./#/book/psalms/23')
-    await settled(page)
-    await page.locator('.rd-where').click()
-    await expect(page.locator('.rd-grid-panel')).toBeVisible()
-    await page.waitForTimeout(300)
-    expect(await audit(page, layout.name, 24)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
+    test(`accessibility: the reading page with the panel of the chapter grid open, ${name}, ${layout.name} layout`, async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+      await page.addInitScript((t) => localStorage.setItem('bible-translation', t), id)
+      await page.goto('./#/book/psalms/23')
+      await settled(page)
+      await page.locator('.rd-where').click()
+      await expect(page.locator('.rd-grid-panel')).toBeVisible()
+      await page.waitForTimeout(300)
+      expect(await audit(page, layout.name, 24)).toEqual([])
+      expect(await axe(page)).toEqual([])
+    })
 
-  test(`accessibility: the link pop-up, King James Version, ${layout.name} layout`, async ({ page }) => {
-    await page.setViewportSize(layout.viewport)
-    await page.addInitScript(() => localStorage.setItem('bible-translation', 'kjv'))
-    await page.goto('./#/book/hebrews/9')
-    await settled(page)
-    const name = layout.name === 'wide' ? 'Verse 20 has a quotation link to Exodus 24:8' : 'Quotation link to Exodus 24:8'
-    await page.getByRole('button', { name }).click()
-    await expect(page.getByRole('dialog', { name: 'Exodus 24:8' })).toBeVisible()
-    await expect(page.locator('.pop-quoted-from')).toBeVisible()
-    await page.waitForTimeout(400)
-    expect(await audit(page, layout.name, 24)).toEqual([])
-    expect(await axe(page)).toEqual([])
-  })
+    test(`accessibility: the link pop-up, ${name}, ${layout.name} layout`, async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+      await page.addInitScript((t) => localStorage.setItem('bible-translation', t), id)
+      await page.goto('./#/book/hebrews/9')
+      await settled(page)
+      const control = layout.name === 'wide' ? 'Verse 20 has a quotation link to Exodus 24:8' : 'Quotation link to Exodus 24:8'
+      await page.getByRole('button', { name: control }).click()
+      await expect(page.getByRole('dialog', { name: 'Exodus 24:8' })).toBeVisible()
+      await expect(page.locator('.pop-quoted-from')).toBeVisible()
+      await page.waitForTimeout(400)
+      expect(await audit(page, layout.name, 24)).toEqual([])
+      expect(await axe(page)).toEqual([])
+    })
+  }
 
   // The translation list. docs/TASKS.md Task 22 step 14.
   test(`accessibility: the reading page with the translation list open, ${layout.name} layout`, async ({ page }) => {

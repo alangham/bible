@@ -106,7 +106,9 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   }, [first, book.id])
 
   const chapter = text?.chapters[n - 1]
-  const marks = useMemo(() => (links ? marksOf(links, book.id, n) : undefined), [links, book.id, n])
+  // The marks go with the text on the page: until the text of a new translation loads, the marks of the old one.
+  const shownTranslation = shown?.translation ?? translation
+  const marks = useMemo(() => (links ? marksOf(links, book.id, n, shownTranslation) : undefined), [links, book.id, n, shownTranslation])
   const readWith = links?.readWith[n] ?? []
   const style = { '--c': groupOf(book).color, '--heading-em': headingWidthEm(book.name, n) } as CSSProperties
   const headingId = `chapter-${key}`

@@ -2,7 +2,7 @@
 // The red letters are the words of the words-of-Jesus marks, the items `j` of the site data. The reader
 // switches them on and off. The first visit has red letters on. The browser keeps the selection in its
 // storage, with the form of the echo links switch in src/travel/travel.ts. One selection applies to the
-// two layouts and the two translations.
+// two layouts and the three translations.
 
 import { useSyncExternalStore } from 'react'
 

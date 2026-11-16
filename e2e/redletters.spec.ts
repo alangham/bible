@@ -12,7 +12,7 @@ const VIEWPORTS = [
   { name: '1440 by 900 px', size: WIDE },
   { name: '390 by 844 px', size: NARROW },
 ] as const
-const TRANSLATIONS = ['bsb', 'kjv'] as const
+const TRANSLATIONS = ['bsb', 'kjv', 'web'] as const
 type Translation = (typeof TRANSLATIONS)[number]
 const KEY = 'bible-red-letters'
 
@@ -29,6 +29,8 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22
  * The line breaks of the Task 26 build, before red letters, for each paragraph of Matthew 4 and John 14. One
  * list for each paragraph: for each line after the first, the number of characters before its first word,
  * without the spaces. I measured them on the build of commit 63ee575 with the method of lineStarts below.
+ * The four keys "web" are of the build of Task 31, with red letters off. With red letters on, that build gave
+ * the same line starts. The World English Bible has no build before red letters.
  */
 const BREAKS = JSON.parse(readFileSync(new URL('./redletters-breaks.json', import.meta.url), 'utf8')) as Record<string, number[][]>
 
@@ -214,7 +216,18 @@ for (const vp of VIEWPORTS) {
       expect(added.fontStyle).toBe('italic')
     })
 
-    test('Genesis 1 and Romans 1 have no red element, in the two translations', async ({ page }) => {
+    test('World English Bible: the words of John 3:16 are red, and have the ink color with red letters off', async ({ page }) => {
+      await openChapter(page, vp.size, 'john', 3, { translation: 'web' })
+      // The data has two items j in this verse, split before "Son". Each text node of the verse with a word is checked.
+      const colors = async () => (await verseNodes(chapter(page, 'john', 3), 16)).filter((n) => /\w/.test(n.text)).map((n) => n.color)
+      expect((await verseNodes(chapter(page, 'john', 3), 16)).map((n) => n.text).join('')).toContain('he gave his only born Son')
+      expect(new Set(await colors())).toEqual(new Set([RED]))
+      await toggleRed(page)
+      await expect(page.locator('.reading')).toHaveAttribute('data-red-letters', 'off')
+      expect(new Set(await colors())).toEqual(new Set([INK]))
+    })
+
+    test('Genesis 1 and Romans 1 have no red element, in the three translations', async ({ page }) => {
       for (const translation of TRANSLATIONS) {
         for (const [book, n] of [
           ['genesis', 1],
@@ -332,7 +345,7 @@ for (const vp of VIEWPORTS) {
       expect(ratio).toBeGreaterThanOrEqual(4.5)
     })
 
-    test('axe-core: Matthew 4 and John 14 with red letters on, in the two translations', async ({ page }) => {
+    test('axe-core: Matthew 4 and John 14 with red letters on, in the three translations', async ({ page }) => {
       for (const translation of TRANSLATIONS) {
         for (const [book, n] of [
           ['matthew', 4],
@@ -443,7 +456,7 @@ test('the Sources page has the paragraph about the words of Jesus', async ({ pag
   await expect(
     page.locator('p').filter({
       hasText:
-        'The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The two translations do not mark the same words in each verse. The site changes one mark: in Mark 12:37 of the King James Version, the file also marks the sentence "And the common people heard him gladly.", and the site does not.',
+        'The words of Jesus are in red. They are the words that the files of each translation mark as words of Jesus. The three translations do not mark the same words in each verse. The site changes one mark: in Mark 12:37 of the King James Version, the file also marks the sentence "And the common people heard him gladly.", and the site does not.',
     }),
   ).toHaveCount(1)
 })

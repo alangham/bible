@@ -41,9 +41,12 @@ export interface PassageVerse {
   omitted?: boolean
 }
 
-/** One space between words, and no space at the start or the end of the verse. Empty parts go. */
+/**
+ * One space between words, and no space at the start or the end of the verse. Empty parts go. A no-break space
+ * U+00A0 is a character of the text and stays: the World English Bible data has three, docs/TASKS.md Task 31.
+ */
 function tidy(parts: VersePart[]): VersePart[] {
-  const out = parts.map((x) => ({ ...x, t: x.t.replace(/\s+/g, ' ') }))
+  const out = parts.map((x) => ({ ...x, t: x.t.replace(/[ \t\r\n]+/g, ' ') }))
   if (out.length) out[0].t = out[0].t.replace(/^ /, '')
   if (out.length) out[out.length - 1].t = out[out.length - 1].t.replace(/ $/, '')
   return out.filter((x) => x.t !== '')

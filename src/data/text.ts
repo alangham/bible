@@ -129,7 +129,7 @@ export function isMarked(x: Inline): x is MarkedWords {
 const cache = new Map<string, Promise<BookText>>()
 
 /** The folder in public/data/ of each translation. */
-const FOLDER: Record<Translation, string> = { bsb: 'text', kjv: 'text-kjv' }
+const FOLDER: Record<Translation, string> = { bsb: 'text', kjv: 'text-kjv', web: 'text-web' }
 
 /**
  * The text of one book in one translation. The same promise is returned for each call, so a book

@@ -875,7 +875,7 @@ Selected by the designer, without a decision by Arthur:
 
 ## 15. The map of the places of a book, of 2026-11-17
 
-This section is not complete. Arthur decided the direction and the look on 2026-11-17. The open points of section 15.6 are not designed. Task 36 in `docs/TASKS.md` is a report on the data, with no change to the site. Do not build a map from this section.
+Arthur decided the direction and the look on 2026-11-17, then the six points of section 15.7, then the page of section 15.8, then the rule of section 15.10. Task 36 in `docs/TASKS.md` is a report on the data. Task 37 builds the map data from section 15.9. Tasks 38 to 40 build the map page from sections 15.8, 15.10, and 15.11: Task 38 the page with its first view, Task 39 the zoom, and Task 40 the line "Where". Where a later section differs from an earlier one, the later section is the rule.
 
 The sketches are in `docs/screenshots/map-design/`: the map of Exodus and of Acts at 1440 by 900 px and at 390 by 844 px, and the line "Where" in "About this book". The sketches are made on the built site of Task 35, with the real data. The page around the map in the sketches is not designed: the top bar is that of the Sources page.
 
@@ -917,6 +917,8 @@ The sketches are in `docs/screenshots/map-design/`: the map of Exodus and of Act
 
 ### 15.6 Not decided and not designed
 
+Status on 2026-11-17: this list is the list of the first sketches. Points 1, 2, 3, 5, 6, and 9 are decided in sections 15.7 to 15.9. Point 4 is decided in section 15.8, and its details are in section 15.10. Points 7 and 8 are as they were. Points 10 and 11 are open.
+
 1. The set of regions. A printed Bible has about ten maps, not 66. The plan is a small set of regions, and each book opens one. Task 36 proposes the set from the data.
 2. A book with no place, and a book with one place. Five books have none.
 3. A book with very many places, for example Joshua with 432.
@@ -937,18 +939,147 @@ The report is `docs/reviews/task-36-map-report.md`. Its step 10 has six proposal
 2. The set of regions is that of step 6 of the report. The rule that gives a book its region is not that of the report. The rule: a book opens the smallest region that holds 90% of its verses that name a place. Reason: with a count of places, one place in one verse moves a book. Example: Matthew names Babylon and Egypt, and the rule of the report gives it the region from Egypt to Persia. With the count of verses, Matthew opens the land of Israel. The designer ran the rule on the data: 14 books change their region.
 3. The map leaves out the places that the data puts inside a settlement, by the rule of step 7 of the report. The report counts 50. The map does not use a list of types.
 4. The name on the map is the name of the data, with no number, the same in each translation. The cost: the map and the text differ for some places. Example: the map has "Lod", and Acts has "Lydda" in the three translations. The other choice of the report, the name of the selected translation, needs a list of name forms that a person makes.
-5. A book with no place has no line "Where": Philemon, James, 1 John, 2 John, and 3 John. A book with one place has the line and a map with one dot. Example: Proverbs names Egypt in one verse.
+5. A book with no place has no line "Where": Philemon, James, 1 John, 2 John, and 3 John. A book with one place has the line and a map with that place. Example: Proverbs names Egypt in one verse. Egypt is a region, so its map has one name and no dot.
 6. The site keeps the 19 positions that come from an OpenStreetMap node, and it gives a credit to OpenStreetMap on the Sources page and below the map. The designer read a guideline of the OpenStreetMap Foundation, `https://osmfoundation.org/wiki/Licence/Community_Guidelines/Geocoding_-_Guideline`: a single geocoding result is an insubstantial extract with no share-alike duty, and a credit is necessary. The designer is not a lawyer, and no person read the text of the ODbL.
 
-### 15.8 The map page: a proposal of the designer, not decided
+### 15.8 The map page: approved by Arthur on 2026-11-17
 
-The sketches are in `docs/screenshots/map-design/`, with names that start with `page-`. They use the rules of section 15.7, with one difference: the sketch finds the places inside a settlement with a rule of the designer, which gives 54 places and not 50.
+Arthur approved this section from the sketches, with five regions and with one dot for each point. The sketches are in `docs/screenshots/map-design/`, with names that start with `page-`. They use the rules of section 15.7, with one difference: the sketch finds the places inside a settlement with a rule of the designer, which gives 54 places and not 50.
 
 1. The address of the map page is that of the book with the word `map`. The top bar has one control at the left, the name of the book with the sign "‹". It returns to the last-read chapter of the book.
 2. Wide layout: two columns. The left column, 340 px wide, has the band, the name of the book, "The places of this book", the name of the region, the signs with their meaning, the number of places, the places outside the map, and the credit. The right column is the map, 960 px wide, as high as the window permits.
 3. Narrow layout: the same parts, one below the other. The map has the full width. It is 300 px to 520 px high: as high as its region needs, and 520 px at most.
 4. The map fills its frame. The region of the book is in the center, and the frame shows more land around it when the frame has a different shape.
 5. Zoom: two controls, "+" and "−", at the lower right of the map, each 36 by 36 px. The reader moves the map with a drag. On a phone, two fingers zoom also. At each step of the zoom, the map shows the names that have space. The sketches show a zoom of 3 and of 4.
-6. Five regions, not six. In the sketch, the region "the world of the Bible" shows Europe and Africa, and the places of Judah are on top of each other. The proposal: remove it. A book that has no region with 90% of its verses opens the region with the most of its verses. The designer computed the five books: Esther 88%, Ezekiel 87%, Jonah 82%, and Nahum 81% of their verses are in the region from Egypt to Persia, and Job 43%.
+6. Five regions, not six. In the sketch, the region "the world of the Bible" shows Europe and Africa, and the places of Judah are on top of each other. The site does not have this region. A book that has no region with 90% of its verses opens the region with the most of its verses. The designer computed the five books: Esther 88%, Ezekiel 87%, Jonah 82%, and Nahum 81% of their verses are in the region from Egypt to Persia, and Job 43%.
 7. A place of the book that is outside the first view of the map is in the list "outside this map". The list shows 8 names and then the number of the others.
-8. Not solved in the sketches: the places at one point. Example: Jerusalem, Jebus, and Zion have one point, and a sketch of Joshua shows the name "Jebus" and not "Jerusalem". The proposal: one dot for the places at one point, with the name that has the most verses in the book.
+8. The places at one point. Example: Jerusalem, Jebus, and Zion have one point, and a sketch of Joshua shows the name "Jebus" and not "Jerusalem". The rule: one dot for the places at one point, with the name that has the most verses in the book. The rule is for the places with a dot or a triangle. A region and a water have a name and no dot, and they keep their name.
+
+### 15.9 The map data: the rules of Task 37
+
+These rules come from sections 15.7 and 15.8. The details are of the designer. No person selects a place, a position, a name, or a kind: a rule does.
+
+**The five regions.** The boxes are those of step 6 of the report of Task 36. The names are of the designer. Arthur saw three of them in the sketches: "The land of Israel", "Egypt to Persia", and "Rome to Jerusalem".
+
+| Id | Name on the page | Longitude east | Latitude north |
+|---|---|---|---|
+| `r1` | The land of Israel | 34.0 to 36.7 | 29.4 to 33.7 |
+| `r2` | Egypt, Sinai, and Canaan | 29.5 to 37.0 | 27.5 to 34.2 |
+| `r3` | Greece and Asia Minor | 20.5 to 31.5 | 35.0 to 42.0 |
+| `r4` | Egypt to Persia | 29.0 to 49.0 | 27.5 to 38.5 |
+| `r5` | Rome to Jerusalem | 12.0 to 38.0 | 30.0 to 44.0 |
+
+**The places of a book.**
+
+1. A place of a book is an entry of `ancient.jsonl` with one verse or more in that book. The number of verses of a place in a book is the number of its entries in `verses` for that book.
+2. The location of a place is the entry of its `modern_associations` with the highest score. If two have the highest score, it is the first of them in the file. The readme of the data says that `custom_lonlat` is a position that the makers of the data made independently when the coordinates come from a commercial source. So the position of the place is the `custom_lonlat` of its location if the location has one, and its `lonlat` if not. If the location has no position, the place has no position. The designer counted 5 places with a `custom_lonlat`. Arthur did not decide this rule: the designer added it on 2026-11-17, for the rules of use.
+3. A place with a score below 500 is "not certain".
+4. The map leaves out a place that the data puts inside a settlement, by the rule of step 7 of the report.
+5. The name is the `friendly_id` of the place with no number at its end.
+6. The kind of a place comes from its `types`, by the first of these rules that applies:
+   - "water": it has the type "body of water", "river", "spring", or "wadi", and it does not have the type "settlement".
+   - "region": it has the type "region" and not the type "settlement", or it has the type "people group".
+   - "mountain": it has the type "mountain", "mountain range", or "hill".
+   - "place": each other place.
+
+**The region of a book.** Use the places of the book with a position. Include the places inside a settlement: without them, Nehemiah moves from the land of Israel to the second region, because most of its places are gates of Jerusalem. A place is in a region if its position is in the box, with the limits. The area of a region is its width in degrees, times the cosine of its middle latitude, times its height in degrees. The book opens the smallest region that holds 90% or more of the sum of the verses of these places. If no region does, the book opens the region that holds the most of that sum.
+
+The result of the designer, from the same files:
+
+| Region | Books |
+|---|---|
+| `r1` | 15: Joshua, Ruth, 1 Samuel, 2 Samuel, 1 Chronicles, Nehemiah, Ecclesiastes, Song of Solomon, Lamentations, Obadiah, Matthew, Mark, Luke, John, 2 Peter |
+| `r2` | 14: Exodus, Leviticus, Numbers, Deuteronomy, Judges, 1 Kings, Psalms, Proverbs, Joel, Amos, Haggai, Malachi, Hebrews, Jude |
+| `r3` | 7: Ephesians, Philippians, Colossians, 1 Thessalonians, 2 Thessalonians, 1 Timothy, Titus |
+| `r4` | 18: Genesis, 2 Kings, 2 Chronicles, Ezra, Esther, Job, Isaiah, Jeremiah, Ezekiel, Daniel, Hosea, Jonah, Micah, Nahum, Habakkuk, Zephaniah, Zechariah, Galatians |
+| `r5` | 7: Acts, Romans, 1 Corinthians, 2 Corinthians, 2 Timothy, 1 Peter, Revelation |
+| none | 5: Philemon, James, 1 John, 2 John, 3 John |
+
+Five books have no region with 90%: Esther, Job, Ezekiel, Jonah, and Nahum. Each opens `r4`.
+
+**The coast, the rivers, and the lakes.**
+
+1. The map fills its frame, so the frame shows land outside the box of the region. The frame of the page has a ratio of width to height from 0.75 to 2.0. The data box of a region is the smallest box with the same center that holds the first view at each ratio in this range, with 0.2 degrees more on each side. With `c` the cosine of the middle latitude, `w` the width of the box times `c`, and `h` its height: the data box has the width `max(w, 2.0 × h) ÷ c` and the height `max(h, w ÷ 0.75)`, before the 0.2 degrees.
+2. Land: `ne_10m_land` and `ne_10m_minor_islands`. Lakes: `ne_10m_lakes`, with no feature of the class "Reservoir". Rivers: the features of the class "River" of `ne_10m_rivers_lake_centerlines`, with no name that has "Canal" or "Channel". Each river keeps its `scalerank`.
+3. No simplification. The reader can zoom in, and a simplification that the eye does not see in the first view is clear after a zoom.
+4. The numbers of the designer for the five data boxes, with no margin and with a different file format: approximately 5,000, 10,000, 37,000, 54,000, and 107,000 bytes with gzip.
+
+**The credit.** The Sources page gets a section for the places data, OpenStreetMap, and Natural Earth when the data files go on the site, before the map page is there. The licence of the places data asks for a credit and for a statement of the changes.
+
+### 15.10 The map on the page: approved by Arthur on 2026-11-17
+
+Arthur approved the priority rule of item 2 and the changes of items 4, 6, and 7, from the new sketches. Item 5 is a value of the designer. Arthur saw the words of item 8 in the first sketches.
+
+The designer found two defects in the sketches of section 15.8 and made new sketches. They are in `docs/screenshots/map-design/`, with names that start with `page2-`: Acts at two sizes, Joshua with and without zoom, Matthew, and Ezekiel.
+
+1. The defect: in the first sketches, each dot keeps its space, and then the names get the space that stays. A place with many small places around it gets no name. Example: Matthew names Jerusalem in 15 verses, and the sketch of Matthew by this rule has no name "Jerusalem". The phone sketch of Acts has no name "Rome".
+2. The priority rule: the map takes the places in the order of their verses in the book, most first. A place gets its dot and its name if they do not touch a dot or a name that is there. A place whose dot would be on a dot or below a name is not shown at this zoom. A zoom shows it. The first view of Joshua then shows 87 dots, not 312, and the first view of Matthew shows "Jerusalem".
+3. The cost: the first view does not show a dot for each place. The line "421 are on this map" stays true for the map with its zoom.
+4. The zoom controls move to the upper right of the map. At the lower right, they are on Jerusalem in the phone map of Acts.
+5. Each step of the zoom doubles the scale. The last step is the first one where one mile is 20 px or more.
+6. Two colors change for the contrast of 4.5 to 1 that the site keeps for text. The names of the waters are `#4a6f84`, not `#6f8fa0`. The name of a region that is not certain has the secondary color in the weight 400, not a lighter color.
+7. Two sentences more below the counts, when they apply: the places inside a city that the map leaves out, by name, and the places with no position, by name. Example: Acts names 107 places, 100 are in the first view, 5 are outside it, and 2 are inside a city.
+8. The line "Where" in "About this book" has one link, "The places of this book ›".
+9. Known limits. At a large zoom, the coast and the lakes of Natural Earth are lines with clear corners: the data is made for the scale 1:10 million. A finer coast needs a new source. The page has no list of the places for a reader who cannot see the map. No test on a real phone.
+
+### 15.11 The map page: the rules of Tasks 38 to 40
+
+These rules give the details of sections 15.8 and 15.10. They are of the designer, from the script of the sketches. The sketches with names that start with `page2-` show the result.
+
+**The address and the bar.**
+
+1. The address is `#/book/<book id>/map`. The title of the browser tab is "Places of", the name of the book, and the name of the site. Example: "Places of Acts · Bible Wall".
+2. The bar is 52 px high, with the look of the top bar. It has one control at the left: the sign "‹" and the name of the book. It opens the book as the wall does: at the last-read chapter, or at chapter 1.
+3. An address of a book with no place shows the bar and one sentence. Example: "Philemon names no place." An address of no book shows the page of a book that the site does not have, as the reading page does.
+
+**The parts of the page.** In this order: the band of the group, the name of the book as the reading page shows it, the heading "The places of this book", the line "Map:" with the name of the region, the map, the three signs with their meaning, the counts, and the credit.
+
+1. The three signs, in the group color: a solid dot with "A place that the book names", an open dot with "The position is not certain", and a triangle with "A mountain or a hill".
+2. The counts. "On this map" means in the first view. A list of names has the order of the data file of the book. A list shows 8 names at most, and then ", and 3 more." with the number of the others.
+   - "Acts names 107 places. 100 are on this map." For one place: "Proverbs names 1 place. It is on this map."
+   - If places are outside the first view: "5 places are outside this map: Haran, Mesopotamia, Babylon, Chaldea, Ethiopia." For one: "1 place is outside this map: Egypt."
+   - If the file has places inside a settlement: "2 places are inside a city, and the map does not show them: Beautiful Gate, Solomon’s Portico." For one: "1 place is inside a city, and the map does not show it: Uzza."
+   - If the file has places with no position: "The data has no position for 2 places: Hobah, Kedesh." For one: "The data has no position for 1 place: Hobah."
+   - The names in these examples are examples. The numbers and the names come from the data.
+3. The credit: "Places: OpenBible.info. Coast and rivers: Natural Earth. Some positions: © OpenStreetMap contributors." The three names are links, to the same addresses as on the Sources page.
+
+**The layout.**
+
+1. The frame of the map has a ratio of width to height from 0.75 to 2.0. If a rule below gives a height outside this range, the height is the nearest limit.
+2. Wide layout: the text column is 340 px wide and starts 80 px from the left. The map starts 40 px to the right of it and is 960 px wide at most, with 20 px to the right of it. In a window wider than 1440 px, the two columns together are in the center. The map starts 28 px below the bar, and its height is the height of the window below the bar minus 56 px. The text column scrolls with the page if it is higher than the window.
+3. Narrow layout: the text parts have the margins of the reading page. The map has the full width of the window. Its height is its width divided by the ratio of its region, but not more than 62% of the height of the window, and not less than 300 px. Example at 390 by 844 px: Joshua 520 px, Acts 300 px.
+4. The ratio of a region is its width in degrees, times the cosine of its middle latitude, divided by its height in degrees.
+
+**The drawing.**
+
+1. The projection: x is the longitude times the cosine of the middle latitude of the region, and y is the latitude. The first view has the box of the region in its center, as large as the frame permits. The frame shows the land around the box.
+2. The sea is white. The land is `#f4f1eb`, with a coast line of 0.9 px in `#cfc8bb`. The rivers are lines of 1.1 px in `#a9c0cc`. The lakes are white, with a line of 0.9 px in `#a9c0cc`. The lines keep their width at each zoom. The frame has a line of 1 px in the color of the lines of the site, in the wide layout on its four sides and in the narrow layout above and below.
+3. The rivers with a `scalerank` of 6 or less show always. The other rivers show when one degree of latitude is 80 px or more.
+4. A dot has a radius of 3.5 px in the wide layout and 3 px in the narrow layout. A solid dot has the group color and a white line of 1 px. An open dot is white, with a line of 1.4 px in the group color. A triangle has the size of the dot: solid if the position is sure, and white with a line in the group color if not.
+5. The names. Each name has a white edge of 3 px, so that a line of the map does not cut it.
+   - A place and a mountain: Inter, 12.5 px in the wide layout and 11 px in the narrow layout, weight 500, in the ink color. If the position is not certain, in `#6b6b6b`. The three places with a dot that the book names most are 1 px larger, in the weight 700.
+   - A region: capitals, Inter, 10.5 px and 9.5 px, weight 600, 1.6 px between the letters, in `#6b6b6b`. If the position is not certain, weight 400.
+   - A water: Lora italic, 13.5 px and 12 px, in `#4a6f84`.
+   - Reason for `#6b6b6b` and `#4a6f84`: a contrast of 4.5 to 1 or more on the land color and on white. The designer computed 4.73 and 4.78 on the land color.
+6. The scale bar is at the lower left, 14 px from the edges. Its length is 5, 10, 25, 50, 100, 200, 300, 500, or 1000 miles: the first of these that is 50 px or more. One degree of latitude is 69.09 miles.
+
+**Which places show: the priority rule.** The site computes this one time for each scale, for the whole first view. A move of the map does not change it.
+
+1. First, the places at one position: of the places with a dot or a triangle that have the same position, only the one with the most verses stays. The others do not show at any zoom. If two have the same number of verses, the first in the file stays.
+2. Take the places in the order of the file: the most verses first.
+3. A place with a dot or a triangle does not show at this scale if its center is nearer than two radii plus 2 px to the center of a dot that shows, or if its dot touches a name that shows.
+4. If it shows, it gets its name at the first of these positions that is free: right, left, above, below, upper right, lower right, upper left, lower left. The name is 5 px from the edge of the dot. If no position is free, the dot shows with no name.
+5. A region gets its name at the first of these positions that is free: on its point, above, below, right, left. A water: on its point, above, below. If no position is free, the name does not show at this scale.
+6. A position is free if the name, with 2 px around it, is in the first view and touches no dot that shows and no name that shows. In the first view with no zoom, the name must not be below the zoom controls or the scale bar. After a zoom, the controls and the scale bar can cover a name, and the reader moves the map.
+7. The site measures the width of a name in the browser. The script of the sketches used an estimate, so the built page can differ from the sketches in small ways.
+
+**The zoom, Task 39.**
+
+1. Two controls at the upper right of the map, 12 px from the edges, each 36 by 36 px, with 4 px between them: "+" above "−". The names for a screen reader are "Zoom in" and "Zoom out". Each step doubles the scale, with the center of the view fixed. The last step is the first one where one mile is 20 px or more. A control that can do nothing is off.
+2. The reader moves the map with a drag. The view stays in the first view: the reader cannot move to a part that the first view does not show.
+3. On a touch screen, two fingers zoom, and the map goes to the nearest step when the fingers lift. In the first view with no zoom, a drag with one finger scrolls the page. After a zoom, it moves the map.
+4. The mouse wheel scrolls the page and does not zoom.
+5. With the keyboard: the map takes the focus, the arrow keys move it by 80 px, and the keys "+" and "−" zoom.
+6. A change of the zoom has no animation when the reader asked for less motion.
+
+**Not in these tasks.** A link from a place name in the text to the map. A list of the places for a reader who cannot see the map. A route. A finer coast.

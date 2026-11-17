@@ -2469,3 +2469,175 @@ Done when:
 - No file in `src/`, `public/`, or `e2e/` changed.
 
 Stop and report. Commit the folder `docs/screenshots/map-design/` with this task. It has the six sketches of the designer.
+
+## Task 37. The map data
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the site has the data for a map of the places of each book, and the Sources page gives the credit for it. This task builds no map. A reader sees one change: a new section on the Sources page.
+
+Read section 15 of `docs/DESIGN.md` first. Section 15.9 has the rules of this task. Section 15.10 is a proposal that Arthur did not decide.
+
+WARNING: Do not build the map page, the line "Where", or a map component. Do not change a file in `src/` but the Sources page and the new test of step 7.
+
+WARNING: Do not select or correct a place, a position, a name, or a kind by your own judgment. The rules of section 15.9 make each one. If a rule gives a result that looks wrong, report it and keep it.
+
+WARNING: Do not put a download in the repository. Keep the downloads in a temporary folder, as in Task 36.
+
+Steps:
+
+1. Download the files of Task 36 at the same commits: the places data at `7eb18a5`, and Natural Earth at `ca96624`. Compare the SHA-256 of each file with the table "Downloads (Task 36 step 1)" of `docs/DATA-SOURCES.md`. If one differs, stop and ask Arthur.
+2. Write the script `scripts/build-map.mjs`. It reads the downloads from a folder that you give it, and it writes the folder `public/data/map/`. Two runs give the same bytes. It prints each number of step 6.
+3. `public/data/map/index.json`:
+   - `regions`: the five regions of section 15.9, each with `id`, `name`, `box`, and `dataBox`. A box is `[west, east, south, north]` in degrees.
+   - `books`: for each book with a region, the id of the book in `public/data/books.json` and the id of its region. The five books with no place are not in it.
+4. `public/data/map/books/<book id>.json`, for each book with a region:
+   - `book`, `region`, and `named`: the number of places of the book.
+   - `places`: the places with a position that are not inside a settlement. Each has `name`, `lon` and `lat` with 5 decimal places, `verses`, `kind`, and `sure`. `sure` is false for a score below 500. The order: the most verses first, then the order of `ancient.jsonl`.
+   - `inSettlement`: the names of the places that the map leaves out by rule 4 of section 15.9.
+   - `noPosition`: the names of the other places with no position.
+   - `named` is the sum of the three lists.
+5. `public/data/map/regions/<region id>.json`, for each region: the land, the lakes, and the rivers of rule "The coast, the rivers, and the lakes" of section 15.9, cut to the data box. You select the form of the coordinates. An error of the form must be less than 0.0001 degrees. Each river has its `scalerank`. Record the form in `docs/DATA-SOURCES.md`.
+6. Report these numbers, and compare them with the numbers of the designer. If your numbers differ, find the cause and give it. Do not change the script to make the numbers agree.
+   - The region of each book. The designer: the table of section 15.9.
+   - For the five books with no region at 90%: the part of the verses in `r4`. The designer: Esther 29 of 33, Job 6 of 14, Ezekiel 335 of 385, Jonah 9 of 11, Nahum 22 of 27.
+   - For Exodus, Joshua, Ezekiel, Matthew, Acts, and Proverbs: `named`, the places with a position, and the places with a score below 500. The designer: Exodus 33, 31, and 15. Joshua 432, 431, and 196. Ezekiel 107, 106, and 23. Matthew 38, 38, and 6. Acts 107, 107, and 4. Proverbs 1, 1, and 0.
+   - The places inside a settlement in all books. The report of Task 36: 50. The names in Acts: Beautiful Gate and Solomon’s Portico.
+   - The places with a `custom_lonlat`. The designer: 5.
+   - The places with two locations at the highest score. The designer: 5.
+   - The number of places of each kind, for the places with a position that are not inside a settlement. The designer, with 54 places inside a settlement and not 50: 973 "place", 133 "region", 68 "mountain", and 50 "water".
+   - The data box of each region before the 0.2 degrees. The designer: `r1` 30.3 to 40.4 E and 29.4 to 33.7 N. `r2` 25.4 to 41.1 E and 26.6 to 35.1 N. `r3` 17.1 to 34.9 E and 32.8 to 44.2 N. `r4` 25.9 to 52.1 E and 21.8 to 44.2 N. `r5` 7.5 to 42.5 E and 23.2 to 50.8 N.
+   - The bytes of each file of step 5 and of the largest and the smallest file of step 4, with and without gzip. The designer for step 5: section 15.9.
+   - The places of the kind "place" that have a type which is not "settlement": the types, the number of each, and three examples of each. The designer did not check them.
+7. Write `src/data/mapData.test.ts`. It reads the files of `public/data/map/` and checks:
+   - `index.json` has five regions and 61 books, and each book id is in `public/data/books.json`. Philemon, James, 1 John, 2 John, and 3 John are not in it.
+   - Each book of the index has a file, and its `region` agrees with the index. No other file is in `books/`.
+   - In each book file: `named` is the sum of the three lists, each place has a `kind` of the four kinds, the order is the order of step 4, and each position is in the range from -10 to 70 degrees east and from 10 to 50 degrees north. If a position is outside this range, report it. Do not change the range to make the test pass.
+   - The numbers of step 6 for Exodus, Acts, and Proverbs.
+   - Each region file has land, and each coordinate is in its data box.
+8. The Sources page: a new section before "Fonts", with the heading "Places" and the id `sources-places`. Use these words, with the links:
+   - "The places that each book names, the verses that name them, and their positions come from the Bible Geocoding Data of OpenBible.info, with a Creative Commons Attribution 4.0 licence. The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city." Links: `https://www.openbible.info/geo/` on "Bible Geocoding Data of OpenBible.info", and `https://creativecommons.org/licenses/by/4.0/` on the name of the licence.
+   - "Some positions in that data come from OpenStreetMap. © OpenStreetMap contributors. That data has the Open Database License." Link: `https://www.openstreetmap.org/copyright` on "© OpenStreetMap contributors".
+   - "The coast, the rivers, and the lakes come from Natural Earth, which is in the public domain." Link: `https://www.naturalearthdata.com/` on "Natural Earth".
+   - Add the section to the tests of the Sources page in `e2e/`, with the axe check.
+9. `docs/DATA-SOURCES.md`, section 12: change the use of each file from "Read for Task 36. Not used on the site." to its use on the site. Add the script, the rules of section 15.9 by reference, the form of step 5, the number of files in `public/data/map/`, and their sum of bytes.
+10. Run the `accuracy-reviewer` agent: each number of the report against the script, the three paragraphs of step 8 against the licence pages, and the rules of the script against section 15.9.
+11. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- `public/data/map/` has `index.json`, 61 book files, and 5 region files.
+- The report has each number of step 6, with the cause of each difference.
+- The Sources page has the section "Places".
+- No map page, no line "Where", and no map component is in `src/`.
+
+Stop and report. Commit the six sketches of the designer with this task: the files of `docs/screenshots/map-design/` with names that start with `page2-`.
+
+## Task 38. The map page: the first view
+
+Status: TODO
+
+Accuracy review: yes
+
+Goal: the address `#/book/<book id>/map` shows the map of the places of a book, in its first view. No page has a link to it: Arthur and the designer open it by its address and review it. Task 39 adds the zoom, and Task 40 adds the link.
+
+Read section 15 of `docs/DESIGN.md` first. Sections 15.8, 15.10, and 15.11 are the rules. The sketches with names that start with `page2-` in `docs/screenshots/map-design/` show the result. The script of the sketches used an estimate for the width of a name, so small differences are correct.
+
+WARNING: Do not add a link to the map page. Do not add the line "Where". Do not add the zoom controls, the drag, or a key for the map. Task 39 adds the zoom: write the functions of steps 3 and 4 with the scale as an input.
+
+WARNING: Do not change a file in `public/data/map/`. If the data looks wrong, report it.
+
+WARNING: Do not select or correct a place, a position, a name, or a kind. If the priority rule hides a place that you think is important, report it and keep the rule.
+
+Steps:
+
+1. The route. Add the page `map` to `src/router.ts`, with the function `mapHref`. The address of step 3 of "The address and the bar" in section 15.11 shows its sentence or the page of a book that the site does not have.
+2. The data. Load `index.json`, the file of the book, and the file of its region only when the map page opens. If a file did not load, the page shows "The map did not load." as an alert.
+3. Write the functions with no browser in them, with tests in Vitest: the projection and the first view, the ratio of a region, the scale bar, the counts with their sentences, the places at one position, and the priority rule. The priority rule gets the function that measures a name as an input.
+4. The page, by section 15.11: the address and the bar, the parts of the page, the layout, and the drawing. `src/screenLayout.ts` decides the layout. The page is at the top when it opens.
+5. For a screen reader: the map is one image with the name "Map of the places of", the name of the book, a comma, and the name of the region. Example: "Map of the places of Acts, Rome to Jerusalem". The heading "The places of this book" is a heading of level 2.
+6. End-to-end tests in a new file of `e2e/`, at 1440 by 900 px and at 390 by 844 px:
+   - Acts: the name of the region is "Rome to Jerusalem", and the first view shows the names "Jerusalem" and "Rome".
+   - Matthew: the first view shows the name "Jerusalem".
+   - Proverbs: the page shows the sentence for one place, and the map shows the name of Egypt and no dot. Egypt has the kind "region".
+   - Philemon: the page shows "Philemon names no place."
+   - The control of the bar opens the book.
+   - No name touches a different name or a dot of a different place. Test this for Acts and for Joshua from the boxes of the elements.
+   - The axe check for Acts and for Joshua.
+   - If a test of this list fails because of the rule or the data, report it. Do not change the rule, the data, or the test to make it pass.
+7. Make screenshots in `docs/screenshots/task-38/`, at the two sizes: Acts, Joshua, Matthew, Ezekiel, Exodus, Ephesians, and Proverbs.
+8. Report, at 1440 by 900 px and at 390 by 844 px, for Acts, Joshua, Matthew, and Ezekiel: the places of the file, the places in the first view, the dots that show, and the names that show. The designer at 1440 by 900 px, with an estimate for the width of a name: Joshua 87 dots, Acts 41 dots, and Matthew 10 dots.
+9. Report the bytes that the map page adds to the JavaScript and to the CSS of the site, with gzip.
+10. Run the `accuracy-reviewer` agent: the sentences of the counts against the data for the seven books of step 7, and the rules of the code against section 15.11.
+11. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The seven addresses of step 7 show a map at the two sizes.
+- The tests of steps 3 and 6 pass, or the report gives the cause of each one that does not.
+- No page has a link to the map page.
+
+Stop and report.
+
+## Task 39. The map page: the zoom
+
+Status: TODO
+
+Accuracy review: no
+
+Goal: the reader zooms in and moves the map, and each step of the zoom shows more names.
+
+Read "The zoom, Task 39" in section 15.11 of `docs/DESIGN.md` first.
+
+WARNING: Do not add a link to the map page. Do not add the line "Where".
+
+Steps:
+
+1. Add the zoom controls, the drag, the two fingers, and the keys, by section 15.11.
+2. At each step of the zoom, compute the places and the names again with the priority rule of Task 38, for the whole first view at the new scale.
+3. Tests in Vitest: the number of steps for each region at a frame of 960 by 792 px and of 390 by 520 px, and the limits of a move.
+4. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+   - "Zoom out" is off in the first view, and "Zoom in" is off at the last step.
+   - Joshua: the number of names that show is larger after each of the first two steps.
+   - A drag after a zoom moves the map, and the view stays in the first view.
+   - At 390 by 844 px in the first view, a drag with one finger on the map scrolls the page.
+   - The keys move and zoom the map when it has the focus.
+   - The axe check for Joshua after a zoom.
+5. Make screenshots in `docs/screenshots/task-39/`, at the two sizes: Joshua and Acts after two steps, and at the last step. For the last step, keep the center of the first view.
+6. Report for each region, at the two frames of step 3: the number of steps, and the number of px for one mile at the last step. Report for Joshua and for Acts at each step: the dots and the names that show, and the places that show at no step with the cause.
+7. Report how the coast and the lakes look at the last step. The data is made for the scale 1:10 million. Do not change the data.
+8. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 3 and 4 pass, or the report gives the cause of each one that does not.
+- The report has the numbers of step 6.
+
+Stop and report.
+
+## Task 40. The line "Where" in "About this book"
+
+Status: TODO
+
+Accuracy review: no
+
+Goal: a reader goes from "About this book" to the map of the book.
+
+WARNING: Do this task only after Arthur approved the map page of Tasks 38 and 39. If `docs/TASKS.md` does not say so below this line, stop and ask.
+
+Steps:
+
+1. "About this book" gets a fourth line after "Written": the label "Where", and one link with the words "The places of this book" and the sign "›". The link opens the map page of the book. The line has no other words.
+2. The line shows only for a book in `public/data/map/index.json`. Philemon, James, 1 John, 2 John, and 3 John do not have it. If the index did not load, no book has it.
+3. The Sources page, section "Places": add a first sentence, "Each book with places has a map of them. The link is in “About this book”."
+4. End-to-end tests: the line is in Acts and not in Philemon, the link opens the map page of Acts, the control of the bar of the map page returns to the chapter that the reader was in, and the axe check with "About this book" open.
+5. Make screenshots in `docs/screenshots/task-40/`: "About this book" open in Acts, at 1440 by 900 px and at 390 by 844 px.
+6. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of step 4 pass.
+
+Stop and report.

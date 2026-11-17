@@ -388,16 +388,17 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 
 ---
 
-## 12. Map data, read for Task 36
+## 12. Map data, read for Task 36, on the site from Task 37
 
-- Use: Read for Task 36. Not used on the site.
-- The report of Task 36 is `docs/reviews/task-36-map-report.md`. Section 15 of `docs/DESIGN.md` has the direction of the map. It is not complete.
-- No file of the two data sets is in the repository. The downloads are in a temporary folder outside `C:\dev\bible`.
+- Use: Task 36 read the data for a report. From Task 37, the site has the map data of `public/data/map/`, which `scripts/build-map.mjs` makes from the files of the table "Downloads (Task 36 step 1)". The section "The map data of the site (Task 37)" below gives the use of each file.
+- The report of Task 36 is `docs/reviews/task-36-map-report.md`. The report of Task 37 is `docs/reviews/task-37-map-data.md`. Section 15 of `docs/DESIGN.md` has the design of the map.
+- No downloaded file of the two data sets is in the repository. The downloads are in a temporary folder outside `C:\dev\bible`. The files of `public/data/map/` are made from them.
 - Claude read the licence page of each source before the download. The pages ask for a credit for the places data. The OpenStreetMap parts of the places data have the ODbL, which the readme compares to CC-BY-SA. Claude did not read the ODbL. No download had a page of terms to accept. Each file came directly from its address on `raw.githubusercontent.com`.
 
 ### Places: Bible Geocoding Data of OpenBible.info
 
-- Use: Read for Task 36. Not used on the site.
+- Use: on the site from Task 37. `data/ancient.jsonl` and `data/modern.jsonl` give the places of each book, the number of their verses, and their positions in `public/data/map/books/`. The other files of this source in the table below were read for Task 36 and are not used on the site.
+- Credit on the site: the section "Places" of the Sources page, from Task 37. It names the source, links the licence, and states the changes of the site.
 - Repository: `https://github.com/openbibleinfo/Bible-Geocoding-Data`. Commit `7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f`, of 2021-11-01, "Add link to interface in readme." On 2026-11-17 this commit is also the newest commit of the branch `main`.
 - The file `readme.md` of the commit, section "License". Read on 2026-11-17:
   - "This data is licensed under a Creative Commons Attribution 4.0 license."
@@ -412,14 +413,15 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 
 ### Coast, rivers, and lakes: Natural Earth
 
-- Use: Read for Task 36. Not used on the site.
+- Use: on the site from Task 37. `ne_10m_land`, `ne_10m_minor_islands`, `ne_10m_lakes`, and `ne_10m_rivers_lake_centerlines` give the land, the lakes, and the rivers of `public/data/map/regions/`. `README.md` and `LICENSE.md` were read for Task 36.
+- Credit on the site: the section "Places" of the Sources page, from Task 37. No credit is necessary.
 - Repository: `https://github.com/nvkelso/natural-earth-vector`. Commit `ca96624a56bd078437bca8184e78163e5039ad19`, of 2022-06-02, "marine for both #697 and #735". On 2026-11-17 this commit is also the newest commit of the branch `master`.
 - The file `LICENSE.md` of the commit, and the page `https://www.naturalearthdata.com/about/terms-of-use/`. Read on 2026-11-17. The page refused a request of `curl`, so Claude read it in the browser pane. The two have the same statement:
   - "All versions of Natural Earth raster + vector map data found on this website are in the public domain."
   - "No permission is needed to use Natural Earth. Crediting the authors is unnecessary."
   - If a person wants to cite the data, the page gives two texts. Short text: "Made with Natural Earth." Long text: "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com."
 - The file `README.md` of the commit. Read on 2026-11-17. It says that Natural Earth is a public domain map data set, and it refers to the terms page below.
-- The page also lists releases from other bodies to Natural Earth, for the creation of a world base map: The Washington Post, the European Commission Joint Research Centre for the rivers and lakes of Europe, XNR Productions for the roads of North America, and International Mapping Associates for the time zones. The site would use no roads and no time zones.
+- The page also lists releases from other bodies to Natural Earth, for the creation of a world base map: The Washington Post, the European Commission Joint Research Centre for the rivers and lakes of Europe, XNR Productions for the roads of North America, and International Mapping Associates for the time zones. The site uses no roads and no time zones. From Task 37, the region files `r3` and `r5` have rivers and lakes of Europe, from `ne_10m_lakes` and `ne_10m_rivers_lake_centerlines`. The record of their licence is the statement of the terms page and of `LICENSE.md` above: all versions of the map data are in the public domain. The page names no other condition for a release of another body.
 
 ### Downloads (Task 36 step 1)
 
@@ -447,3 +449,13 @@ All files were downloaded by Claude on 2026-11-17 from `https://raw.githubuserco
 - Claude downloaded `schemas/ancient.json` and `schemas/modern.json` and did not read them. The report uses no statement from them.
 - The pages of this section are not in the table. They change, so a hash of a page would not identify a version of its text. The dates of reading are above.
 - `scripts/map-report.mjs` prints the size and the SHA-256 of the seven data files again when it runs.
+- Claude downloaded the seven data files again for Task 37 on 2026-11-17, from the same addresses. The size and the SHA-256 of each are the values of the table. `scripts/build-map.mjs` reads six of them. It prints their size and SHA-256, and it stops if one differs from the table. Claude compared `data/geometry.jsonl` by hand.
+
+### The map data of the site (Task 37)
+
+- Script: `scripts/build-map.mjs <folder>`. It reads `data/ancient.jsonl` and `data/modern.jsonl` of the places data, and the four GeoJSON files of Natural Earth, from a folder outside the repository. It writes `public/data/map/`. Two runs give the same bytes.
+- Rules: section 15.9 of `docs/DESIGN.md`. They select each place, position, name, kind, and region. No person selects them.
+- Files: 67. `index.json`, 61 files in `books/`, and 5 files in `regions/`. Sum: 822,263 bytes, 270,850 bytes with gzip.
+- The form of the coordinates of a region file: an integer in units of 0.0001 degrees. A ring or a line is one flat array: the first point as longitude and latitude, then each next point as the difference from the point before it. A ring is closed, and the array does not repeat its first point. The rounding error is 0.00005 degrees at most. The limits of the data box of a region are on the same grid of 0.0001 degrees.
+- A position of a place in a book file is in degrees with 5 decimal places.
+- The OpenStreetMap parts: 19 places of the books have a position from an OpenStreetMap node, by the report of Task 36. Arthur decided to keep them, with a credit, in section 15.7 of `docs/DESIGN.md`. The region files have no OpenStreetMap data.

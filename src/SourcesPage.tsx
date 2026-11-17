@@ -5,6 +5,7 @@
 // The fonts section names the fonts that the site uses, Inter and Lora: docs/TASKS.md Task 17 step 11.
 // The credit of the King James Version: docs/TASKS.md Task 21 step 9.
 // The first section, "The three translations": docs/DESIGN.md section 14.4, docs/TASKS.md Task 33 step 5.
+// The section "Places", the credit of the map data: docs/DESIGN.md section 15.9, docs/TASKS.md Task 37 step 8.
 
 import { Fragment, useEffect } from 'react'
 import { SAMPLE_PARTS } from './data/sampleVerse.ts'
@@ -155,6 +156,26 @@ export function SourcesPage() {
           <p>
             The source of each fact is in the file{' '}
             <a href="https://github.com/alangham/bible/blob/main/docs/CONTENT-SOURCES.md">CONTENT-SOURCES.md</a> of this site.
+          </p>
+        </section>
+
+        {/* The map data: docs/DESIGN.md section 15.9 "The credit", docs/TASKS.md Task 37 step 8. The licences are in
+            section 12 of docs/DATA-SOURCES.md. */}
+        <section aria-labelledby="sources-places">
+          <h2 id="sources-places">Places</h2>
+          <p>
+            The places that each book names, the verses that name them, and their positions come from the{' '}
+            <a href="https://www.openbible.info/geo/">Bible Geocoding Data of OpenBible.info</a>, with a{' '}
+            <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 licence</a>. The site changed the data: it keeps
+            one position for each place, and it leaves out the places that are inside a city.
+          </p>
+          <p>
+            Some positions in that data come from OpenStreetMap. <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>.
+            That data has the Open Database License.
+          </p>
+          <p>
+            The coast, the rivers, and the lakes come from <a href="https://www.naturalearthdata.com/">Natural Earth</a>, which is in the public
+            domain.
           </p>
         </section>
 

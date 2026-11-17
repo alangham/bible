@@ -1,4 +1,8 @@
+import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
+
+/** The WCAG rules of a11y.spec.ts: WCAG 2.0, 2.1, and 2.2, levels A and AA. */
+const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22a', 'wcag22aa']
 
 test.describe('sources page', () => {
   test('opens from the wall and credits OpenBible.info with a link to CC BY 4.0', async ({ page }) => {
@@ -30,4 +34,41 @@ test.describe('sources page', () => {
       expect(await response.text()).toContain('SIL OPEN FONT LICENSE Version 1.1')
     }
   })
+
+  // docs/TASKS.md Task 37 step 8: the credit of the map data, before the fonts, with the axe check.
+  for (const layout of [
+    { name: 'wide', viewport: { width: 1440, height: 900 } },
+    { name: 'narrow', viewport: { width: 390, height: 844 } },
+  ]) {
+    test(`the section "Places" credits the map data, before the fonts, ${layout.name} layout`, async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+      await page.goto('./#/sources')
+      const places = page.locator('section[aria-labelledby="sources-places"]')
+      await expect(places.getByRole('heading', { level: 2 })).toHaveText('Places')
+      await expect(places.locator('h2')).toHaveAttribute('id', 'sources-places')
+      const ids = await page.locator('main section h2').evaluateAll((els) => els.map((e) => e.id))
+      expect(ids.indexOf('sources-places')).toBe(ids.indexOf('sources-fonts') - 1)
+
+      const paragraphs = places.locator('p')
+      await expect(paragraphs).toHaveCount(3)
+      await expect(paragraphs.nth(0)).toHaveText(
+        'The places that each book names, the verses that name them, and their positions come from the Bible Geocoding Data of OpenBible.info, with a Creative Commons Attribution 4.0 licence. The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city.',
+      )
+      await expect(paragraphs.nth(1)).toHaveText('Some positions in that data come from OpenStreetMap. © OpenStreetMap contributors. That data has the Open Database License.')
+      await expect(paragraphs.nth(2)).toHaveText('The coast, the rivers, and the lakes come from Natural Earth, which is in the public domain.')
+
+      const links = await places.getByRole('link').evaluateAll((els) => els.map((e) => [e.textContent, (e as HTMLAnchorElement).getAttribute('href')]))
+      expect(links).toEqual([
+        ['Bible Geocoding Data of OpenBible.info', 'https://www.openbible.info/geo/'],
+        ['Creative Commons Attribution 4.0 licence', 'https://creativecommons.org/licenses/by/4.0/'],
+        ['© OpenStreetMap contributors', 'https://www.openstreetmap.org/copyright'],
+        ['Natural Earth', 'https://www.naturalearthdata.com/'],
+      ])
+
+      await page.waitForLoadState('networkidle')
+      await page.evaluate(() => document.fonts.ready)
+      const result = await new AxeBuilder({ page }).include('section[aria-labelledby="sources-places"]').withTags(AXE_TAGS).analyze()
+      expect(result.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`)).toEqual([])
+    })
+  }
 })

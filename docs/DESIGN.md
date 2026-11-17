@@ -830,7 +830,7 @@ The source of each part of a line:
 - "in the text of 1769": `sources/kjv/copr.htm` says "using the standardized text of 1769".
 - "thee, thou, believeth": these words are in the King James Version data of the site.
 - "spoken English" and "An update of the American Standard Version of 1901": the preface of the edition, `https://ebible.org/engwebp/FRT01.htm`, says that the World English Bible is an update of the American Standard Version, published in 1901, and that its style "is in informal, spoken English". The designer read the page on 2026-11-17.
-- "Today’s English" and "Older English" are a description of the words that the reader sees. They have no source page. The page of the Berean publisher does not have the words "modern English".
+- "Today’s English", "Older English", and the word "Today’s" in the line of the World English Bible are a description of the words that the reader sees. They have no source page. The page of the Berean publisher does not have the words "modern English". The preface of the World English Bible says "spoken English", and it does not say "today’s". The accuracy reviewer of Task 33 found that the first text of this section did not name the word "Today’s" of the World English Bible line. The designer corrected this on 2026-11-17.
 - The lines do not have the year 1611. The source files of the site do not have it.
 
 ### 14.3 The translation list
@@ -848,10 +848,12 @@ The source of each part of a line:
 - The words of the verse are those of the site data, with no change. The added word of the King James Version is in italics, as on the reading page. A unit test compares the words on the page with the site data.
 - The section writes nothing about the Bible. The verse is the content.
 
-### 14.5 Selected by the designer, without a decision by Arthur
+### 14.5 Approved by Arthur, and selected by the designer
 
-- The final words of the three lines. Arthur saw a draft in the first sketch. The designer changed the words after it read the pages of the publishers, so that each part has a source.
-- The words of the section in 14.4.
+- Arthur approved the three lines of section 14.2 and the words of the section in 14.4 on 2026-11-17, as Task 33 built them. He saw a draft in the first sketch. The designer changed the words after it read the pages of the publishers, so that each part has a source or is a description of the words that the reader sees.
+
+Selected by the designer, without a decision by Arthur:
+
 - The verse 1 Corinthians 13:4. Arthur saw it in the sketch.
 - The sizes and the spaces.
 

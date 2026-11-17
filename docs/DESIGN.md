@@ -278,6 +278,7 @@ Arthur decided each item in this section on 2026-11-14, in a design chat. The se
 - The wall shows the 66 book names in Bible order. A book name is the only control for a book. It has no box and no picture.
 - Poster form: each name fills the width of its column, as on the wall photo. The length of the name sets its size. The space between letters has a limit, so that a short name such as "JOB" grows in size and does not spread too far.
 - A band starts each group. The band is a solid bar in the group color with the group name in white capitals. There is no legend.
+- The band has round corners of 3 px in each of its four places: the wall, the heading of a book on the reading page, the pop-up, and the Quotations page. Arthur decided this on 2026-11-16, from the sheet `docs/screenshots/band-design/band-corners.png`, over 0, 2, 4, and 6 px. Reason: the band was the only shape with sharp corners, and a larger corner makes it look like a button. Task 32 builds it.
 - Two layouts, selected by screen width. One function in the code decides, as built. The limit stays at 900 px.
 - Wide layout, 900 px or more: five columns with the book counts of section 4.1. All 66 names and the bottom line fit in one view at 1440 by 900 px.
 - Narrow layout, below 900 px: each group is a block. A band is at the top of the block, and the names are in two columns below it. The wall is 520 px wide at most, in the center. NOT VERIFIED: the designer tested the narrow layout at 390 px wide only. The prototype has its limit at 700 px.

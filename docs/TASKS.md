@@ -2224,3 +2224,39 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report.
+
+---
+
+## Task 32. The band: round corners of 3 px
+
+Status: DONE
+
+Goal: the band has round corners of 3 px in each of its four places. Nothing else changes.
+
+Arthur decided this on 2026-11-16, from the sheet `docs/screenshots/band-design/band-corners.png`. The sheet shows the band with corners of 0, 2, 3, 4, and 6 px. It is a sketch on the built site of Task 31b. The rule is in section 7.4 of `docs/DESIGN.md`.
+
+The four places of the band, in `src/index.css`:
+
+- `.wall-band`: the wall.
+- `.rd-band`: the heading of a book on the reading page.
+- `.pop-band`: the pop-up.
+- `.q-band`: the Quotations page.
+
+WARNING: Change only the corners of the band. Do not change its size, its spaces, its color, or its words. Do not change a different shape of the site.
+
+Steps:
+
+1. Read the line about the corners of the band in section 7.4 of `docs/DESIGN.md`. Look at the sheet.
+2. In `src/index.css`, give each of the four rules `border-radius: 3px`. Use one value in one place if the style file has a place for such values.
+3. Make sure that the band has no different size and no different place: measure its box in the four places before and after the change, at 1440 by 900 px and at 390 by 844 px. The boxes must be the same.
+4. Add one browser test: in each of the four places, the band has corners of 3 px, at 1440 by 900 px and at 390 by 844 px.
+5. Take screenshots at 1440 by 900 px and at 390 by 844 px: the wall, Genesis 1, a pop-up, and the Quotations page. Save them in `docs/screenshots/task-32/`.
+6. Commit the folder `docs/screenshots/band-design/` with this task. It has the sheet of the designer.
+7. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The band has corners of 3 px in the four places, and its box is the same as before.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report.

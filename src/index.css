@@ -1,6 +1,9 @@
 /* Colors and fonts from docs/DESIGN.md section 7.3. */
 :root {
   --ink: #1d1d1f;
+  /* The corners of the band in its four places: .wall-band, .rd-band, .pop-band, and .q-band.
+     docs/DESIGN.md section 7.4, docs/TASKS.md Task 32. */
+  --band-radius: 3px;
 
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);
@@ -177,6 +180,7 @@ html:has(.wall) {
 .wall-band {
   margin: 14px 0 6px;
   padding: 5px 8px;
+  border-radius: var(--band-radius);
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -804,6 +808,7 @@ html:has(.reading) {
   display: inline-block;
   margin: 0 0 8px;
   padding: 5px 8px;
+  border-radius: var(--band-radius);
   background: var(--c);
   color: #fff;
   font: 700 12px/1.2 Inter, system-ui, sans-serif;
@@ -1580,6 +1585,7 @@ html:has(.reading) {
   display: inline-block;
   margin: 0;
   padding: 4px 7px;
+  border-radius: var(--band-radius);
   background: var(--d);
   color: #fff;
   font-size: 11px;
@@ -1902,6 +1908,7 @@ html:has(.reading) {
   display: inline-block;
   margin: 0;
   padding: 4px 7px;
+  border-radius: var(--band-radius);
   background: var(--q);
   color: #fff;
   font-size: 11px;

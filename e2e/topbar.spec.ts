@@ -261,8 +261,8 @@ test.describe('the top bar of the reading page', () => {
       await bigEnough(rows)
       // Since Task 33, a row is as high as its content: the name, and the line of the translation below it. It is
       // 44 px or more in the wide layout, and 48 px or more in the narrow layout. docs/DESIGN.md section 14.3: a row
-      // with a line of two lines of text is 74 px high. With the lines of Task 34, each of the three rows has a line of
-      // two lines of text.
+      // with a line of two lines of text is 74 px high. With the lines of Task 34 and of Task 35, each of the three rows
+      // has a line of two lines of text.
       const heights = await Promise.all(rows.map(async (row) => (await row.boundingBox())!.height))
       for (const h of heights) expect(h).toBeGreaterThanOrEqual(vp.size.width >= 900 ? 44 : 48)
       expect(heights).toEqual([74, 74, 74])

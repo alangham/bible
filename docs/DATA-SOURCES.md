@@ -96,13 +96,17 @@ These are findings. Arthur must decide on them. They do not change the design.
 - Result: PASS. The statement covers the Berean Standard Bible, and the publisher offers the USFM file as that Bible, with its headings and footnotes.
 - Limit: no page names headings, footnotes, or cross-reference lines one by one. The result rests on the publisher's label of the file and the words "the full Berean Bible" and "any use".
 
-### The line of the translation (Task 33 step 2, Task 34 step 2)
+### The line of the translation (Task 33 step 2, Task 34 step 2, Task 35 step 2)
 
-- The line, from Task 34: "Today’s English, in a literary style. A new translation." The line of Task 33 was "Today’s English. A new translation." `docs/DESIGN.md` section 14.2.
+- The line, from Task 35: "Today’s English, in a literary style. Between literal and thought for thought." The line of Task 34 was "Today’s English, in a literary style. A new translation." The line of Task 33 was "Today’s English. A new translation." `docs/DESIGN.md` section 14.2.
 - Use: The line of the translation in the translation list and on the Sources page.
+- Page: `https://bereanbibles.com/about-berean-study-bible/compare-translations/`, the page "Compare Translations" of the publisher. `https://berean.bible/print.htm` has the link to it. Read on 2026-11-17 for Task 34 and again on 2026-11-17 for Task 35.
+  - The words of the page: "The Berean Bible lies somewhere near the middle of the range from “Word for Word” (Literal) Translations to “Thought for Thought” (Dynamic) Translations."
+  - The chart of the page, an image with the alt text "Compare Translations", has three parts: "WORD FOR WORD (Formal)", "THOUGHT FOR THOUGHT (Dynamic)", and "PARAPHRASE (Restatement)". The chart has 12 short names in one row, below the three headings: BIB, BLB, KJV, NAS, ESV, BSB, CSB, NIV, GNT, NLT, TLB, MSG. The BSB is the first name below the words "THOUGHT FOR THOUGHT (Dynamic)". The name before it is the ESV, and the name after it is the CSB. The chart has no line between the groups: the ESV is in the space between the words "WORD FOR WORD" and the words "THOUGHT FOR THOUGHT".
+  - Supports: "Between literal and thought for thought."
 - Page: `https://berean.bible/`. Read on 2026-11-17 for Task 33.
   - The words of the page: "The Berean Standard Bible (BSB) is a completely new English translation of the Holy Bible based on the best available manuscripts and sources." The same page also says "The Berean Standard Bible is a completely new translation based on the best available manuscripts and sources."
-  - Supports: "A new translation."
+  - Supported "A new translation." in the lines of Task 33 and Task 34. The line of Task 35 does not have the words "A new translation." This record keeps the sentence of the page as a record of Task 33.
 - Page: `https://berean.bible/print.htm`. Read on 2026-11-17 for Task 34.
   - The words of the page, under the heading "Elegance": "The Berean Standard Bible text is the result of a careful translation and styling process to maintain core meanings and produce an English text of high literary quality, effective for public reading, study, memorization, and evangelism."
   - Supports: "in a literary style".

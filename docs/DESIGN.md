@@ -820,17 +820,19 @@ Each translation has one short line. The line is in one place in the code, and t
 
 | Translation | The line |
 |---|---|
-| Berean Standard Bible | Today’s English, in a literary style. A new translation. |
+| Berean Standard Bible | Today’s English, in a literary style. Between literal and thought for thought. |
 | King James Version | Older English, in the text of 1769: thee, thou, believeth. |
 | World English Bible | Today’s English, in an informal, spoken style. A fairly literal translation. |
 
 Arthur decided the lines of the Berean Standard Bible and of the World English Bible on 2026-11-17, after Task 33. Task 34 builds them. The lines of Task 33 were "Today’s English. A new translation." and "Today’s spoken English. An update of the American Standard Version of 1901." Arthur read them on the site as a lay reader: a reader who does not know the American Standard Version does not see the difference between the two translations. He asked for the word "literal" in the line of the World English Bible.
 
-The two lines have the same form, so that the reader can compare them: the style of each translation in the words of its publisher, "literary" and "informal, spoken".
+The two lines have the same form, so that the reader can compare them: the style of each translation in the words of its publisher, "literary" and "informal, spoken", and then the place of the translation between a literal translation and a thought for thought translation.
+
+Arthur decided the second part of the line of the Berean Standard Bible on 2026-11-17, after Task 34, from the report of Claude Code on the page "Compare Translations" of the publisher. Task 35 builds it. The line of Task 34 was "Today’s English, in a literary style. A new translation." The words "A new translation." are not in the new line: with them, the line is three lines of text in the translation list.
 
 The source of each part of a line:
 
-- "A new translation": the page `https://berean.bible/` says "a completely new English translation of the Holy Bible". The designer read the page on 2026-11-17.
+- "Between literal and thought for thought": the page `https://bereanbibles.com/about-berean-study-bible/compare-translations/` says: "The Berean Bible lies somewhere near the middle of the range from “Word for Word” (Literal) Translations to “Thought for Thought” (Dynamic) Translations." Its chart has the BSB as the first name under "THOUGHT FOR THOUGHT (Dynamic)", next to the ESV, which is the last name under "WORD FOR WORD (Formal)". Claude Code read the page in Task 34 and gave these words in its report. The designer cannot open this page.
 - "in a literary style": the page `https://berean.bible/print.htm` says that the text is "the result of a careful translation and styling process to maintain core meanings and produce an English text of high literary quality, effective for public reading, study, memorization, and evangelism." The designer read the page on 2026-11-17.
 - "in the text of 1769": `sources/kjv/copr.htm` says "using the standardized text of 1769".
 - "thee, thou, believeth": these words are in the King James Version data of the site.
@@ -839,12 +841,12 @@ The source of each part of a line:
 - The lines do not have the year 1611. The source files of the site do not have it.
 - The line of the World English Bible does not have the American Standard Version. The Sources page does not have it also. `docs/DATA-SOURCES.md` keeps the record.
 
-Not checked, and a risk: the line of the Berean Standard Bible does not say how literal that translation is. The own words of its publisher on the two pages above do not use the words "literal" or "word for word". The publisher has a page "Compare Translations", `https://bereanbibles.com/about-berean-study-bible/compare-translations/`, which the designer did not read. With "fairly literal" only in the line of the World English Bible, a reader can think that the Berean Standard Bible is not literal. Task 34 reports what that page says. Arthur decides from the report if the line of the Berean Standard Bible changes.
+The line of the Berean Standard Bible of Task 34 did not say how literal that translation is. With "fairly literal" only in the line of the World English Bible, a reader can think that the Berean Standard Bible is not literal. The line of Task 35 corrects this.
 
 ### 14.3 The translation list
 
 - Each row shows the name and the short name, as before, and the line of the translation below the name. The line is in the secondary ink color, at 13 px.
-- A row is as high as its content. Measured in the sketch: a row with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high. The pop-up of the wide layout is 340 px wide, as before. With the lines of Task 34, each of the three rows is 74 px high at 1440 px and at 390 px.
+- A row is as high as its content. Measured in the sketch: a row with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high. The pop-up of the wide layout is 340 px wide, as before. With the lines of Task 34 and of Task 35, each of the three rows is 74 px high at 1440 px and at 390 px.
 - Below the three rows, after a thin line, the list has the row "About the translations" with the sign "›". It is a link to the Sources page. It is 44 px high or more.
 - The rules of section 9.7 for the panels do not change.
 
@@ -858,7 +860,7 @@ Not checked, and a risk: the line of the Berean Standard Bible does not say how 
 
 ### 14.5 Approved by Arthur, and selected by the designer
 
-- Arthur approved the three lines and the words of the section in 14.4 on 2026-11-17, as Task 33 built them. Then he read the site, and he changed two lines the same day. The three lines of section 14.2 are his decision. The words of the section in 14.4 are approved, with no change.
+- Arthur approved the three lines and the words of the section in 14.4 on 2026-11-17, as Task 33 built them. Then he read the site, and he changed two lines the same day, and the line of the Berean Standard Bible a second time. The three lines of section 14.2 are his decision. The words of the section in 14.4 are approved, with no change.
 
 Selected by the designer, without a decision by Arthur:
 

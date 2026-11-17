@@ -18,7 +18,7 @@ const TRANSLATIONS = [
   {
     name: 'Berean Standard Bible',
     short: 'BSB',
-    line: 'Today’s English, in a literary style. A new translation.',
+    line: 'Today’s English, in a literary style. Between literal and thought for thought.',
     verse: 'Love is patient, love is kind. It does not envy, it does not boast, it is not proud.',
   },
   {

@@ -17,7 +17,7 @@ const FOLDER = { bsb: 'text', kjv: 'text-kjv', web: 'text-web' } as const
 describe('the line of each translation', () => {
   it('each row of TRANSLATIONS has a line, and the three lines are the words of docs/DESIGN.md section 14.2', () => {
     expect(TRANSLATIONS.map((t) => [t.id, t.line])).toEqual([
-      ['bsb', 'Today’s English, in a literary style. A new translation.'],
+      ['bsb', 'Today’s English, in a literary style. Between literal and thought for thought.'],
       ['kjv', 'Older English, in the text of 1769: thee, thou, believeth.'],
       ['web', 'Today’s English, in an informal, spoken style. A fairly literal translation.'],
     ])

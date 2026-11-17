@@ -2378,3 +2378,37 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report.
+
+---
+
+## Task 35. About the translations: the line of the Berean Standard Bible
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the line of the Berean Standard Bible says where the translation is between a literal translation and a thought for thought translation. Then the reader can compare it with "fairly literal" in the line of the World English Bible. Nothing else changes.
+
+Arthur decided this on 2026-11-17, from step 5 of your report of Task 34. The reason and the source are in section 14.2 of `docs/DESIGN.md`.
+
+WARNING: Change only the line of step 3, the tests that have its words, and the record in `docs/DATA-SOURCES.md`. Do not change the two other lines, the look of the translation list, the section "The three translations", or the verse.
+
+WARNING: Do not change a word of the line of step 3. If the source of step 1 does not support the line, stop and ask Arthur.
+
+Steps:
+
+1. Open `https://bereanbibles.com/about-berean-study-bible/compare-translations/` again. Make sure that it says: "The Berean Bible lies somewhere near the middle of the range from “Word for Word” (Literal) Translations to “Thought for Thought” (Dynamic) Translations." If you cannot open the page, stop and report.
+2. Change the record "The line of the translation" of the Berean Standard Bible in `docs/DATA-SOURCES.md`: the new line, this page with its address and the date, the sentence of step 1, and the place of the BSB on the chart of the page. Keep the record of `https://berean.bible/print.htm` for "in a literary style". The words "A new translation." are not in the line now: say so in the record, and keep the sentence of the page as a record of Task 33.
+3. In `src/data/translation.ts`, change the line of the Berean Standard Bible to: "Today’s English, in a literary style. Between literal and thought for thought." The apostrophe in "Today’s" is the character U+2019. The two other lines stay.
+4. Change the unit tests and the browser tests that have the old words of this line. With the new words, each of the three rows of the translation list is 74 px high at 1440 by 900 px and at 390 by 844 px, as now. The designer measured this on the build of Task 33. Give each changed test in the report.
+5. Take screenshots at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, and the top of the Sources page. Save them in `docs/screenshots/task-35/`.
+6. Run the `accuracy-reviewer` agent on the line, with the source of step 1.
+7. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The translation list and the Sources page show the new line of the Berean Standard Bible.
+- The source of the new words is in `docs/DATA-SOURCES.md`.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report.

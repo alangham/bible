@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { SourcesPage } from './SourcesPage.tsx'
 import { loadBooks, type Book } from './data/books.ts'
 import { loadIntros, type Intro } from './data/intros.ts'
+import { MapPage } from './map/MapPage.tsx'
 import { SITE_NAME, usePageTitle } from './pageTitle.ts'
 import { ReadingPage } from './reading/ReadingPage.tsx'
 import { QuotationsPage } from './reference/QuotationsPage.tsx'
@@ -24,7 +25,10 @@ function App() {
   // list loads, or when it did not load, the page shows a message, and the title is the name only.
   const reading = route.page === 'book' || route.page === 'chapter'
   const refPlace = { sources: 'Sources', timeline: 'Timeline', quotations: 'Quotations' } as Record<string, string | undefined>
-  usePageTitle(error || !books ? undefined : reading ? null : refPlace[route.page])
+  // The map page, section 15.11: "Places of Acts". A book that the site does not have: the name only.
+  const mapBook = route.page === 'map' ? books?.find((b) => b.id === route.id) : undefined
+  const place = route.page === 'map' ? (mapBook ? `Places of ${mapBook.name}` : undefined) : refPlace[route.page]
+  usePageTitle(error || !books ? undefined : reading ? null : place)
 
   useEffect(() => {
     loadBooks().then(setBooks, (e: unknown) => setError(String(e)))
@@ -51,6 +55,8 @@ function App() {
     const chapter = route.page === 'chapter' ? route.chapter : undefined
     const verse = route.page === 'chapter' ? route.verse : undefined
     page = <ReadingPage books={books} intros={intros} id={route.id} chapter={chapter} verse={verse} layout={layout} />
+  } else if (route.page === 'map') {
+    page = <MapPage books={books} id={route.id} layout={layout} />
   } else if (route.page === 'sources') {
     page = <SourcesPage />
   } else if (route.page === 'quotations') {

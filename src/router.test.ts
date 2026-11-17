@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { bookHref, chapterHref, parseRoute, quotationsHref, sourcesHref, timelineHref } from './router.ts'
+import { bookHref, chapterHref, mapHref, parseRoute, quotationsHref, sourcesHref, timelineHref } from './router.ts'
 
 describe('parseRoute', () => {
   it('gives the wall for an empty hash', () => {
@@ -23,6 +23,13 @@ describe('parseRoute', () => {
   it('gives a chapter at a verse for #/book/<id>/<chapter>/<verse>', () => {
     expect(parseRoute('#/book/exodus/24/8')).toEqual({ page: 'chapter', id: 'exodus', chapter: 24, verse: 8 })
     expect(parseRoute(chapterHref('exodus', 24, 8))).toEqual({ page: 'chapter', id: 'exodus', chapter: 24, verse: 8 })
+  })
+
+  // docs/TASKS.md Task 38 step 1.
+  it('gives the map of a book for #/book/<id>/map', () => {
+    expect(mapHref('acts')).toBe('#/book/acts/map')
+    expect(parseRoute(mapHref('1-samuel'))).toEqual({ page: 'map', id: '1-samuel' })
+    expect(parseRoute('#/book/acts/map/')).toEqual({ page: 'map', id: 'acts' })
   })
 
   it('gives the quotation diagram for #/quotations', () => {

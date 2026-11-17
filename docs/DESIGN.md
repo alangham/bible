@@ -1006,6 +1006,8 @@ Five books have no region with 90%: Esther, Job, Ezekiel, Jonah, and Nahum. Each
 
 **The credit.** The Sources page gets a section for the places data, OpenStreetMap, and Natural Earth when the data files go on the site, before the map page is there. The licence of the places data asks for a credit and for a statement of the changes.
 
+Decided by Arthur on 2026-11-17, from the report of Task 37: the Sources page names the Open Database License and has no link to its text. The copyright page of OpenStreetMap asks for a direct link to the licence from a person who distributes its data "in data form". The attribution guideline of OpenStreetMap says that a group of geocoding results does not need a credit attached to it. 19 positions of the book files come from OpenStreetMap. No person on the project read the text of the licence.
+
 ### 15.10 The map on the page: approved by Arthur on 2026-11-17
 
 Arthur approved the priority rule of item 2 and the changes of items 4, 6, and 7, from the new sketches. Item 5 is a value of the designer. Arthur saw the words of item 8 in the first sketches.
@@ -1035,12 +1037,13 @@ These rules give the details of sections 15.8 and 15.10. They are of the designe
 **The parts of the page.** In this order: the band of the group, the name of the book as the reading page shows it, the heading "The places of this book", the line "Map:" with the name of the region, the map, the three signs with their meaning, the counts, and the credit.
 
 1. The three signs, in the group color: a solid dot with "A place that the book names", an open dot with "The position is not certain", and a triangle with "A mountain or a hill".
-2. The counts. "On this map" means in the first view. A list of names has the order of the data file of the book. A list shows 8 names at most, and then ", and 3 more." with the number of the others.
+2. The counts. "On this map" means in the first view. A list of names has the order of the data file of the book. A list shows 8 names at most, and then ", and 3 more." with the number of the others. A name that is in a list two times shows one time, and the number of the sentence stays the number of the places. The data has different places with one name. Example: Joshua has three places with the name "Hazor".
    - "Acts names 107 places. 100 are on this map." For one place: "Proverbs names 1 place. It is on this map."
    - If places are outside the first view: "5 places are outside this map: Haran, Mesopotamia, Babylon, Chaldea, Ethiopia." For one: "1 place is outside this map: Egypt."
    - If the file has places inside a settlement: "2 places are inside a city, and the map does not show them: Beautiful Gate, Solomon’s Portico." For one: "1 place is inside a city, and the map does not show it: Uzza."
    - If the file has places with no position: "The data has no position for 2 places: Hobah, Kedesh." For one: "The data has no position for 1 place: Hobah."
    - The names in these examples are examples. The numbers and the names come from the data.
+   - The lists `inSettlement` and `noPosition` of a book file have the order of the places of the file: the most verses first. The designer compared the 61 book files of Task 37 with a script of the designer: each field agrees.
 3. The credit: "Places: OpenBible.info. Coast and rivers: Natural Earth. Some positions: © OpenStreetMap contributors." The three names are links, to the same addresses as on the Sources page.
 
 **The layout.**
@@ -1065,7 +1068,7 @@ These rules give the details of sections 15.8 and 15.10. They are of the designe
 
 **Which places show: the priority rule.** The site computes this one time for each scale, for the whole first view. A move of the map does not change it.
 
-1. First, the places at one position: of the places with a dot or a triangle that have the same position, only the one with the most verses stays. The others do not show at any zoom. If two have the same number of verses, the first in the file stays.
+1. First, the places at one position. Of the places with a dot or a triangle that have the same position, only the one with the most verses stays. Of the places that have the same name and the same position, of the same kind or of different kinds, only the one with the most verses stays. Example: Joshua has a region "Galilee" and a place "Galilee" at one position, and the region has more verses, so the map shows the name of the region and no dot. The others do not show at any zoom. If two have the same number of verses, the first in the file stays. The second rule is from the report of Task 37: the data has a name two times at one position in 24 cases. Example: Exodus has "Red Sea" two times at one position, and without the rule the map shows the name two times.
 2. Take the places in the order of the file: the most verses first.
 3. A place with a dot or a triangle does not show at this scale if its center is nearer than two radii plus 2 px to the center of a dot that shows, or if its dot touches a name that shows.
 4. If it shows, it gets its name at the first of these positions that is free: right, left, above, below, upper right, lower right, upper left, lower left. The name is 5 px from the edge of the dot. If no position is free, the dot shows with no name.

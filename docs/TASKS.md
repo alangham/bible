@@ -2537,7 +2537,7 @@ Stop and report. Commit the six sketches of the designer with this task: the fil
 
 ## Task 38. The map page: the first view
 
-Status: TODO
+Status: DONE
 
 Accuracy review: yes
 

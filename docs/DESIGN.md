@@ -455,6 +455,7 @@ Sections 9.3 to 9.5 replace the form and the two places of the translation switc
 
 - The Sources page names the source of the King James Version, its public-domain statement, and the right to print in the United Kingdom, from `sources/kjv/copr.htm`.
 - The page states what the site does not show from the source files, and the exception of section 8.2.
+- From Task 31b, the page names each kind of line of the source files that the site does not show: the title lines of the books, the names of the Hebrew letters in Psalm 119, and the line at the end of 14 letters. It names the paragraph signs also. Arthur decided this on 2026-11-16, after the accuracy reviewer of Task 31 found the gap. The lines of the file head with the name of the book are not in the list: the site names the book from its own list of books.
 - The page states that the section headings, the cross-reference lines, the paragraphs, and the lines of poetry on the King James Version pages are those of the Berean Standard Bible files, and that they are not part of the King James Version. The page does not give the King James Version pages the Berean name.
 
 ### 8.7 Not decided
@@ -780,11 +781,11 @@ Arthur decided on 2026-11-16: the site keeps the verse numbers of the source, an
 
 - The first sentence names the three translations.
 - The page names the edition and its source, the public domain statement, the trademark statement, and the abbreviation "WEBP".
-- The page states that the site shows the words without change, and what the site does not show from the source files.
+- The page states that the site shows the words without change, and what the site does not show from the source files. From Task 31b, this is each kind of line also: the title lines of the books, the names of the speakers in the Song of Solomon, the lines "BOOK 1" to "BOOK 5", and the names of the Hebrew letters in Psalm 119. The rule of section 8.6 applies.
 - The page states the verse numbers of section 13.3.
 - The statement of section 8.6 about the structure of the Berean Standard Bible files applies to the World English Bible pages also.
 - The paragraph of section 11.6 says "the three translations".
-- Task 31 has the words.
+- Tasks 31 and 31b have the words.
 
 ### 13.8 Selected by the designer, without a decision by Arthur
 

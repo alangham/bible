@@ -43,9 +43,13 @@ export function SourcesPage() {
             Cambridge University Press, Oxford University Press, and Collins. eBible.org states that this right has no effect outside the United
             Kingdom.
           </p>
+          {/* Task 31b: the lines of the files that the site does not show. docs/DESIGN.md section 8.6. */}
           <p>
-            The site does not show the Strong's numbers and the footnotes of these files. The words that the translators added show in italics. In
-            13 verses, the files write one word as two words, for example "can not", and the site joins the word.
+            The site does not show the Strong's numbers, the footnotes, and the paragraph signs of these files. It also does not show these lines of
+            the files: the title lines of the books, for example "The First Book of Moses, called Genesis", the names of the Hebrew letters in Psalm
+            119, and the line at the end of 14 letters, for example "Written from Rome unto the Ephesians by Tychicus". The words that the
+            translators added show in italics. In 13 verses, the files write one word as two words, for example "can not", and the site joins the
+            word.
           </p>
           {/* The World English Bible: docs/DESIGN.md section 13.7, docs/TASKS.md Task 31 step 8. The facts are from sources/web/copr.htm
               and section 11 of docs/DATA-SOURCES.md. */}
@@ -54,9 +58,12 @@ export function SourcesPage() {
             <a href="https://ebible.org/details.php?id=engwebp">eBible.org</a>. eBible.org names it the 2020 stable text edition, and gives it the
             abbreviation "WEBP". The World English Bible is in the public domain. "World English Bible" is a trademark of eBible.org.
           </p>
+          {/* Task 31b: the lines of the files that the site does not show. docs/DESIGN.md section 13.7. */}
           <p>
             The site shows the words of these files without change. It does not show the Strong's numbers, the footnotes, and the cross-reference
-            notes of these files.
+            notes of these files. It also does not show these lines of the files: the title lines of the books, for example "Paul’s Letter to the
+            Romans", the names of the speakers in the Song of Solomon, the lines "BOOK 1" to "BOOK 5" in the Psalms, and the names of the Hebrew
+            letters in Psalm 119.
           </p>
           <p>
             The verse numbers of the World English Bible are those of the files. Romans 14 has 26 verses, and Romans 16 ends at verse 24. In the two

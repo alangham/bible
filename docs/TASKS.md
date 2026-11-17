@@ -2185,3 +2185,42 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give the list of the changed tests. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+## Task 31b. The Sources page: the lines of the source files that the site does not show
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the Sources page names each kind of line that the site does not show from the files of the King James Version and of the World English Bible.
+
+The accuracy reviewer of Task 31 found the gap. The sentence about the World English Bible names the Strong's numbers, the footnotes, and the cross-reference notes. The site also leaves out some lines of the files. The sentence about the King James Version has the same gap, from Task 21. Arthur decided on 2026-11-16 to correct the two sentences. The rule is in sections 8.6 and 13.7 of `docs/DESIGN.md`.
+
+WARNING: Change only the two paragraphs of step 2 in `src/SourcesPage.tsx`, and the tests that have their words. Do not change a different page, a data file, a source file, or a build script.
+
+WARNING: Each number and each example of step 2 must agree with the source files. Step 1 gives the checks. If one does not agree, stop and ask Arthur. Do not change the words to make them agree.
+
+Steps:
+
+1. Make sure of these facts in the source files:
+   - `sources/kjv/usfm/`: each file has a title line `\mt1`. The title line of Genesis is "The First Book of Moses, called Genesis". The files have 36 lines `\s1`: 22 in the Psalms, which are the names of the Hebrew letters in Psalm 119, and 14 in 14 files, from Romans to Hebrews, each at the end of its letter. The line of Ephesians is "Written from Rome unto the Ephesians by Tychicus." The files have the sign "¶".
+   - `sources/web/usfm/`: each file has title lines `\mt1`, `\mt2`, or `\mt3`. The title lines of Romans are "Paul’s Letter to the" and "Romans". The files have 33 lines `\sp` in the Song of Solomon, the 5 lines `\ms1` "BOOK 1" to "BOOK 5" in the Psalms, and 22 lines `\d` in Psalm 119 with the names of the Hebrew letters.
+   - No page of the site shows one of these lines. The build scripts do not use them.
+2. In `src/SourcesPage.tsx`, section "The Bible text":
+   - Change the paragraph about the King James Version that starts with "The site does not show the Strong's numbers and the footnotes of these files." to: "The site does not show the Strong's numbers, the footnotes, and the paragraph signs of these files. It also does not show these lines of the files: the title lines of the books, for example "The First Book of Moses, called Genesis", the names of the Hebrew letters in Psalm 119, and the line at the end of 14 letters, for example "Written from Rome unto the Ephesians by Tychicus". The words that the translators added show in italics. In 13 verses, the files write one word as two words, for example "can not", and the site joins the word."
+   - Change the paragraph about the World English Bible that starts with "The site shows the words of these files without change." to: "The site shows the words of these files without change. It does not show the Strong's numbers, the footnotes, and the cross-reference notes of these files. It also does not show these lines of the files: the title lines of the books, for example "Paul’s Letter to the Romans", the names of the speakers in the Song of Solomon, the lines "BOOK 1" to "BOOK 5" in the Psalms, and the names of the Hebrew letters in Psalm 119."
+   - The lines of the file head with the name of the book, and the line `\cl` of the World English Bible, are not in the two lists. They name the book and the chapter, and the site names these from its own list of books. Do not add them.
+3. Change the browser tests that have the old words of the two paragraphs. `e2e/translation.spec.ts` has them. Find each other place with a search.
+4. Take screenshots of the Sources page at 1440 by 900 px and at 390 by 844 px. Save them in `docs/screenshots/task-31b/`.
+5. Run the `accuracy-reviewer` agent on the two paragraphs, with the facts of step 1.
+6. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The Sources page has the words of step 2, and no other change.
+- Each fact of step 1 agrees with the source files.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report.

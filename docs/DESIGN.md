@@ -928,3 +928,27 @@ The sketches are in `docs/screenshots/map-design/`: the map of Exodus and of Act
 9. The limit for "not certain".
 10. A link from a place name in the text to the map. Not planned.
 11. No test on a real phone.
+
+### 15.7 Decided by Arthur on 2026-11-17, from the report of Task 36
+
+The report is `docs/reviews/task-36-map-report.md`. Its step 10 has six proposals. Arthur approved these decisions:
+
+1. The limit for "not certain" is a score of 500. A place with a score below 500 has the open dot.
+2. The set of regions is that of step 6 of the report. The rule that gives a book its region is not that of the report. The rule: a book opens the smallest region that holds 90% of its verses that name a place. Reason: with a count of places, one place in one verse moves a book. Example: Matthew names Babylon and Egypt, and the rule of the report gives it the region from Egypt to Persia. With the count of verses, Matthew opens the land of Israel. The designer ran the rule on the data: 14 books change their region.
+3. The map leaves out the places that the data puts inside a settlement, by the rule of step 7 of the report. The report counts 50. The map does not use a list of types.
+4. The name on the map is the name of the data, with no number, the same in each translation. The cost: the map and the text differ for some places. Example: the map has "Lod", and Acts has "Lydda" in the three translations. The other choice of the report, the name of the selected translation, needs a list of name forms that a person makes.
+5. A book with no place has no line "Where": Philemon, James, 1 John, 2 John, and 3 John. A book with one place has the line and a map with one dot. Example: Proverbs names Egypt in one verse.
+6. The site keeps the 19 positions that come from an OpenStreetMap node, and it gives a credit to OpenStreetMap on the Sources page and below the map. The designer read a guideline of the OpenStreetMap Foundation, `https://osmfoundation.org/wiki/Licence/Community_Guidelines/Geocoding_-_Guideline`: a single geocoding result is an insubstantial extract with no share-alike duty, and a credit is necessary. The designer is not a lawyer, and no person read the text of the ODbL.
+
+### 15.8 The map page: a proposal of the designer, not decided
+
+The sketches are in `docs/screenshots/map-design/`, with names that start with `page-`. They use the rules of section 15.7, with one difference: the sketch finds the places inside a settlement with a rule of the designer, which gives 54 places and not 50.
+
+1. The address of the map page is that of the book with the word `map`. The top bar has one control at the left, the name of the book with the sign "‹". It returns to the last-read chapter of the book.
+2. Wide layout: two columns. The left column, 340 px wide, has the band, the name of the book, "The places of this book", the name of the region, the signs with their meaning, the number of places, the places outside the map, and the credit. The right column is the map, 960 px wide, as high as the window permits.
+3. Narrow layout: the same parts, one below the other. The map has the full width. It is 300 px to 520 px high: as high as its region needs, and 520 px at most.
+4. The map fills its frame. The region of the book is in the center, and the frame shows more land around it when the frame has a different shape.
+5. Zoom: two controls, "+" and "−", at the lower right of the map, each 36 by 36 px. The reader moves the map with a drag. On a phone, two fingers zoom also. At each step of the zoom, the map shows the names that have space. The sketches show a zoom of 3 and of 4.
+6. Five regions, not six. In the sketch, the region "the world of the Bible" shows Europe and Africa, and the places of Judah are on top of each other. The proposal: remove it. A book that has no region with 90% of its verses opens the region with the most of its verses. The designer computed the five books: Esther 88%, Ezekiel 87%, Jonah 82%, and Nahum 81% of their verses are in the region from Egypt to Persia, and Job 43%.
+7. A place of the book that is outside the first view of the map is in the list "outside this map". The list shows 8 names and then the number of the others.
+8. Not solved in the sketches: the places at one point. Example: Jerusalem, Jebus, and Zion have one point, and a sketch of Joshua shows the name "Jebus" and not "Jerusalem". The proposal: one dot for the places at one point, with the name that has the most verses in the book.

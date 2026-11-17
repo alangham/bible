@@ -18,7 +18,7 @@ const TRANSLATIONS = [
   {
     name: 'Berean Standard Bible',
     short: 'BSB',
-    line: 'Today’s English. A new translation.',
+    line: 'Today’s English, in a literary style. A new translation.',
     verse: 'Love is patient, love is kind. It does not envy, it does not boast, it is not proud.',
   },
   {
@@ -30,7 +30,7 @@ const TRANSLATIONS = [
   {
     name: 'World English Bible',
     short: 'WEB',
-    line: 'Today’s spoken English. An update of the American Standard Version of 1901.',
+    line: 'Today’s English, in an informal, spoken style. A fairly literal translation.',
     verse: 'Love is patient and is kind. Love doesn’t envy. Love doesn’t brag, is not proud,',
   },
 ]

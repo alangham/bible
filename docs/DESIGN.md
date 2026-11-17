@@ -820,23 +820,31 @@ Each translation has one short line. The line is in one place in the code, and t
 
 | Translation | The line |
 |---|---|
-| Berean Standard Bible | Today’s English. A new translation. |
+| Berean Standard Bible | Today’s English, in a literary style. A new translation. |
 | King James Version | Older English, in the text of 1769: thee, thou, believeth. |
-| World English Bible | Today’s spoken English. An update of the American Standard Version of 1901. |
+| World English Bible | Today’s English, in an informal, spoken style. A fairly literal translation. |
+
+Arthur decided the lines of the Berean Standard Bible and of the World English Bible on 2026-11-17, after Task 33. Task 34 builds them. The lines of Task 33 were "Today’s English. A new translation." and "Today’s spoken English. An update of the American Standard Version of 1901." Arthur read them on the site as a lay reader: a reader who does not know the American Standard Version does not see the difference between the two translations. He asked for the word "literal" in the line of the World English Bible.
+
+The two lines have the same form, so that the reader can compare them: the style of each translation in the words of its publisher, "literary" and "informal, spoken".
 
 The source of each part of a line:
 
 - "A new translation": the page `https://berean.bible/` says "a completely new English translation of the Holy Bible". The designer read the page on 2026-11-17.
+- "in a literary style": the page `https://berean.bible/print.htm` says that the text is "the result of a careful translation and styling process to maintain core meanings and produce an English text of high literary quality, effective for public reading, study, memorization, and evangelism." The designer read the page on 2026-11-17.
 - "in the text of 1769": `sources/kjv/copr.htm` says "using the standardized text of 1769".
 - "thee, thou, believeth": these words are in the King James Version data of the site.
-- "spoken English" and "An update of the American Standard Version of 1901": the preface of the edition, `https://ebible.org/engwebp/FRT01.htm`, says that the World English Bible is an update of the American Standard Version, published in 1901, and that its style "is in informal, spoken English". The designer read the page on 2026-11-17.
-- "Today’s English", "Older English", and the word "Today’s" in the line of the World English Bible are a description of the words that the reader sees. They have no source page. The page of the Berean publisher does not have the words "modern English". The preface of the World English Bible says "spoken English", and it does not say "today’s". The accuracy reviewer of Task 33 found that the first text of this section did not name the word "Today’s" of the World English Bible line. The designer corrected this on 2026-11-17.
+- "in an informal, spoken style" and "A fairly literal translation": the preface of the edition, `https://ebible.org/engwebp/FRT01.htm`, says: "The style of the World English Bible, while fairly literally translated, is in informal, spoken English." The designer read the page on 2026-11-17.
+- "Today’s English" and "Older English" are a description of the words that the reader sees. They have no source page. The page of the Berean publisher does not have the words "modern English". The preface of the World English Bible says that the update changed old words to "contemporary equivalents".
 - The lines do not have the year 1611. The source files of the site do not have it.
+- The line of the World English Bible does not have the American Standard Version. The Sources page does not have it also. `docs/DATA-SOURCES.md` keeps the record.
+
+Not checked, and a risk: the line of the Berean Standard Bible does not say how literal that translation is. The own words of its publisher on the two pages above do not use the words "literal" or "word for word". The publisher has a page "Compare Translations", `https://bereanbibles.com/about-berean-study-bible/compare-translations/`, which the designer did not read. With "fairly literal" only in the line of the World English Bible, a reader can think that the Berean Standard Bible is not literal. Task 34 reports what that page says. Arthur decides from the report if the line of the Berean Standard Bible changes.
 
 ### 14.3 The translation list
 
 - Each row shows the name and the short name, as before, and the line of the translation below the name. The line is in the secondary ink color, at 13 px.
-- A row is as high as its content. Measured in the sketch: a row with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high. The pop-up of the wide layout is 340 px wide, as before.
+- A row is as high as its content. Measured in the sketch: a row with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high. The pop-up of the wide layout is 340 px wide, as before. With the lines of Task 34, each of the three rows is 74 px high at 1440 px and at 390 px.
 - Below the three rows, after a thin line, the list has the row "About the translations" with the sign "›". It is a link to the Sources page. It is 44 px high or more.
 - The rules of section 9.7 for the panels do not change.
 
@@ -850,7 +858,7 @@ The source of each part of a line:
 
 ### 14.5 Approved by Arthur, and selected by the designer
 
-- Arthur approved the three lines of section 14.2 and the words of the section in 14.4 on 2026-11-17, as Task 33 built them. He saw a draft in the first sketch. The designer changed the words after it read the pages of the publishers, so that each part has a source or is a description of the words that the reader sees.
+- Arthur approved the three lines and the words of the section in 14.4 on 2026-11-17, as Task 33 built them. Then he read the site, and he changed two lines the same day. The three lines of section 14.2 are his decision. The words of the section in 14.4 are approved, with no change.
 
 Selected by the designer, without a decision by Arthur:
 

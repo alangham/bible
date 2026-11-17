@@ -17,9 +17,9 @@ const FOLDER = { bsb: 'text', kjv: 'text-kjv', web: 'text-web' } as const
 describe('the line of each translation', () => {
   it('each row of TRANSLATIONS has a line, and the three lines are the words of docs/DESIGN.md section 14.2', () => {
     expect(TRANSLATIONS.map((t) => [t.id, t.line])).toEqual([
-      ['bsb', 'Today’s English. A new translation.'],
+      ['bsb', 'Today’s English, in a literary style. A new translation.'],
       ['kjv', 'Older English, in the text of 1769: thee, thou, believeth.'],
-      ['web', 'Today’s spoken English. An update of the American Standard Version of 1901.'],
+      ['web', 'Today’s English, in an informal, spoken style. A fairly literal translation.'],
     ])
     // The apostrophe of "Today’s" is U+2019.
     for (const t of [TRANSLATIONS[0], TRANSLATIONS[2]]) expect(t.line).toContain('Today’s')

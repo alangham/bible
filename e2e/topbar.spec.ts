@@ -261,10 +261,11 @@ test.describe('the top bar of the reading page', () => {
       await bigEnough(rows)
       // Since Task 33, a row is as high as its content: the name, and the line of the translation below it. It is
       // 44 px or more in the wide layout, and 48 px or more in the narrow layout. docs/DESIGN.md section 14.3: a row
-      // with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high.
+      // with a line of two lines of text is 74 px high. With the lines of Task 34, each of the three rows has a line of
+      // two lines of text.
       const heights = await Promise.all(rows.map(async (row) => (await row.boundingBox())!.height))
       for (const h of heights) expect(h).toBeGreaterThanOrEqual(vp.size.width >= 900 ? 44 : 48)
-      expect(heights).toEqual([57, 74, 74])
+      expect(heights).toEqual([74, 74, 74])
       await expect(rows[0]).toBeFocused()
       // The Tab key goes through the three rows and then the link "About the translations", and Shift+Tab goes back.
       // docs/TASKS.md Task 33 step 4.
@@ -272,7 +273,7 @@ test.describe('the top bar of the reading page', () => {
       await expect(rows[1]).toBeFocused()
       await page.keyboard.press('Tab')
       await expect(rows[2]).toBeFocused()
-      await expect(rows[2]).toHaveAccessibleName('World English Bible Today’s spoken English. An update of the American Standard Version of 1901.')
+      await expect(rows[2]).toHaveAccessibleName('World English Bible Today’s English, in an informal, spoken style. A fairly literal translation.')
       await page.keyboard.press('Tab')
       await expect(translationList(page).getByRole('link', { name: 'About the translations' })).toBeFocused()
       await page.keyboard.press('Shift+Tab')

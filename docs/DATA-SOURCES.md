@@ -96,12 +96,17 @@ These are findings. Arthur must decide on them. They do not change the design.
 - Result: PASS. The statement covers the Berean Standard Bible, and the publisher offers the USFM file as that Bible, with its headings and footnotes.
 - Limit: no page names headings, footnotes, or cross-reference lines one by one. The result rests on the publisher's label of the file and the words "the full Berean Bible" and "any use".
 
-### The line of the translation (Task 33 step 2)
+### The line of the translation (Task 33 step 2, Task 34 step 2)
 
-- Page: `https://berean.bible/`. Read on 2026-11-17.
-- The words of the page: "The Berean Standard Bible (BSB) is a completely new English translation of the Holy Bible based on the best available manuscripts and sources." The same page also says "The Berean Standard Bible is a completely new translation based on the best available manuscripts and sources."
-- Supports: "A new translation." in the line "Today’s English. A new translation." `docs/DESIGN.md` section 14.2.
+- The line, from Task 34: "Today’s English, in a literary style. A new translation." The line of Task 33 was "Today’s English. A new translation." `docs/DESIGN.md` section 14.2.
 - Use: The line of the translation in the translation list and on the Sources page.
+- Page: `https://berean.bible/`. Read on 2026-11-17 for Task 33.
+  - The words of the page: "The Berean Standard Bible (BSB) is a completely new English translation of the Holy Bible based on the best available manuscripts and sources." The same page also says "The Berean Standard Bible is a completely new translation based on the best available manuscripts and sources."
+  - Supports: "A new translation."
+- Page: `https://berean.bible/print.htm`. Read on 2026-11-17 for Task 34.
+  - The words of the page, under the heading "Elegance": "The Berean Standard Bible text is the result of a careful translation and styling process to maintain core meanings and produce an English text of high literary quality, effective for public reading, study, memorization, and evangelism."
+  - Supports: "in a literary style".
+- "Today’s English" has no source page. It is a description of the words that the reader sees, by `docs/DESIGN.md` section 14.2.
 
 ---
 
@@ -367,9 +372,12 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 
 - The size and the SHA-256 of `resources/web.docx` are the values of Task 29.
 
-### The line of the translation (Task 33 step 2)
+### The line of the translation (Task 33 step 2, Task 34 step 2)
 
-- Page: `https://ebible.org/engwebp/FRT01.htm`, the preface of edition A. Its title is "World English Bible Preface". Read on 2026-11-17.
-- The words of the page: "The World English Bible is an update of the American Standard Version (ASV) of the Holy Bible, published in 1901." And: "The style of the World English Bible, while fairly literally translated, is in informal, spoken English."
-- Supports: "spoken English" and "An update of the American Standard Version of 1901." in the line "Today’s spoken English. An update of the American Standard Version of 1901." `docs/DESIGN.md` section 14.2.
+- The line, from Task 34: "Today’s English, in an informal, spoken style. A fairly literal translation." The line of Task 33 was "Today’s spoken English. An update of the American Standard Version of 1901." `docs/DESIGN.md` section 14.2.
 - Use: The line of the translation in the translation list and on the Sources page.
+- Page: `https://ebible.org/engwebp/FRT01.htm`, the preface of edition A. Its title is "World English Bible Preface". Read on 2026-11-17 for Task 33, and again on 2026-11-17 for Task 34.
+  - The words of the page: "The World English Bible is an update of the American Standard Version (ASV) of the Holy Bible, published in 1901." And: "The style of the World English Bible, while fairly literally translated, is in informal, spoken English." The same page also says: "A custom computer program updated the archaic words and word forms to contemporary equivalents".
+  - Supports "in an informal, spoken style" and "A fairly literal translation": the sentence "The style of the World English Bible, while fairly literally translated, is in informal, spoken English."
+  - The sentence about the American Standard Version supported the line of Task 33. The line of Task 34 does not have the American Standard Version. This record keeps the sentence, by `docs/DESIGN.md` section 14.2.
+- "Today’s English" has no source page. It is a description of the words that the reader sees, by `docs/DESIGN.md` section 14.2. The words "contemporary equivalents" of the preface are about the update of old words.

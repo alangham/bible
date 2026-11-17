@@ -13,9 +13,9 @@ export type Translation = 'bsb' | 'kjv' | 'web'
  * are in docs/DATA-SOURCES.md.
  */
 export const TRANSLATIONS: readonly { id: Translation; name: string; short: string; line: string }[] = [
-  { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB', line: 'Today’s English. A new translation.' },
+  { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB', line: 'Today’s English, in a literary style. A new translation.' },
   { id: 'kjv', name: 'King James Version', short: 'KJV', line: 'Older English, in the text of 1769: thee, thou, believeth.' },
-  { id: 'web', name: 'World English Bible', short: 'WEB', line: 'Today’s spoken English. An update of the American Standard Version of 1901.' },
+  { id: 'web', name: 'World English Bible', short: 'WEB', line: 'Today’s English, in an informal, spoken style. A fairly literal translation.' },
 ]
 
 export const TRANSLATION_KEY = 'bible-translation'

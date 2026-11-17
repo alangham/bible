@@ -2336,3 +2336,45 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. A check on a real phone is still open. Only Arthur can do it.
+
+---
+
+## Task 34. About the translations: new lines for two translations
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the line of the Berean Standard Bible and the line of the World English Bible have new words, so that a lay reader sees the difference between these two translations. Nothing else changes.
+
+Arthur decided this on 2026-11-17, after he read the site with Task 33. The reason and the sources are in section 14.2 of `docs/DESIGN.md`.
+
+WARNING: Change only the two lines of step 3, the tests that have their words, and the record in `docs/DATA-SOURCES.md`. Do not change the line of the King James Version, the look of the translation list, the section "The three translations", or the verse.
+
+WARNING: Do not change a word of the two lines of step 3. If a source of step 1 does not support a line, stop and ask Arthur.
+
+Steps:
+
+1. Read section 14.2 of `docs/DESIGN.md`. Then make sure of the sources of the new words:
+   - Open `https://berean.bible/print.htm`. Make sure that the own words of the publisher say that the Berean Standard Bible is an English text of high literary quality. If this page does not have the words, look for them on `https://berean.bible/`.
+   - Open `https://ebible.org/engwebp/FRT01.htm`. Make sure that it says: "The style of the World English Bible, while fairly literally translated, is in informal, spoken English."
+   - If you cannot open a page, stop and report. Do not use a different page.
+2. Change the two records "The line of the translation" in `docs/DATA-SOURCES.md`: the new line, the address, the date, and the words of the page that support each part of the line. Keep the words of the pages that Task 33 recorded.
+3. In `src/data/translation.ts`, change two lines:
+   - Berean Standard Bible: "Today’s English, in a literary style. A new translation."
+   - World English Bible: "Today’s English, in an informal, spoken style. A fairly literal translation."
+   The line of the King James Version stays: "Older English, in the text of 1769: thee, thou, believeth." The apostrophe in "Today’s" is the character U+2019.
+4. Change the unit tests and the browser tests that have the old words of the two lines, or the height of the first row of the translation list. With the new words, each of the three rows is 74 px high at 1440 by 900 px and at 390 by 844 px. The designer measured this on the build of Task 33. Give each changed test in the report.
+5. A report only, with no change to the site: open the page "Compare Translations" of the Berean publisher, `https://bereanbibles.com/about-berean-study-bible/compare-translations/`. The page `https://berean.bible/print.htm` has the link. Give in your report, in the words of the page, where the publisher puts the Berean Standard Bible between a word for word translation and a thought for thought translation, and which translations it names beside it. If you cannot open the page, say so. Do not change a line from this page. Arthur decides from the report.
+6. Take screenshots at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, and the top of the Sources page. Save them in `docs/screenshots/task-34/`.
+7. Run the `accuracy-reviewer` agent on the two lines, with the sources of step 1.
+8. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The translation list and the Sources page show the two new lines.
+- The sources of the new words are in `docs/DATA-SOURCES.md`.
+- The report has the result of step 5.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report.

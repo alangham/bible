@@ -371,9 +371,9 @@ for (const vp of VIEWPORTS) {
       const rows = translationList(page).getByRole('button')
       await expect(rows).toHaveCount(3)
       // Since Task 33, the name of a row is the name of the translation and its line. docs/TASKS.md Task 33 step 4.
-      await expect(rows.nth(0)).toHaveAccessibleName('Berean Standard Bible Today’s English. A new translation.')
+      await expect(rows.nth(0)).toHaveAccessibleName('Berean Standard Bible Today’s English, in a literary style. A new translation.')
       await expect(rows.nth(1)).toHaveAccessibleName('King James Version Older English, in the text of 1769: thee, thou, believeth.')
-      await expect(rows.nth(2)).toHaveAccessibleName('World English Bible Today’s spoken English. An update of the American Standard Version of 1901.')
+      await expect(rows.nth(2)).toHaveAccessibleName('World English Bible Today’s English, in an informal, spoken style. A fairly literal translation.')
       await rows.nth(2).click()
       await expect(page.locator('#translation-list')).toBeHidden()
       await expect(translationControl(page)).toHaveText('WEB')

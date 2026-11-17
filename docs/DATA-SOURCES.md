@@ -385,3 +385,65 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
   - Supports "in an informal, spoken style" and "A fairly literal translation": the sentence "The style of the World English Bible, while fairly literally translated, is in informal, spoken English."
   - The sentence about the American Standard Version supported the line of Task 33. The line of Task 34 does not have the American Standard Version. This record keeps the sentence, by `docs/DESIGN.md` section 14.2.
 - "Today’s English" has no source page. It is a description of the words that the reader sees, by `docs/DESIGN.md` section 14.2. The words "contemporary equivalents" of the preface are about the update of old words.
+
+---
+
+## 12. Map data, read for Task 36
+
+- Use: Read for Task 36. Not used on the site.
+- The report of Task 36 is `docs/reviews/task-36-map-report.md`. Section 15 of `docs/DESIGN.md` has the direction of the map. It is not complete.
+- No file of the two data sets is in the repository. The downloads are in a temporary folder outside `C:\dev\bible`.
+- Claude read the licence page of each source before the download. The pages ask for a credit for the places data. The OpenStreetMap parts of the places data have the ODbL, which the readme compares to CC-BY-SA. Claude did not read the ODbL. No download had a page of terms to accept. Each file came directly from its address on `raw.githubusercontent.com`.
+
+### Places: Bible Geocoding Data of OpenBible.info
+
+- Use: Read for Task 36. Not used on the site.
+- Repository: `https://github.com/openbibleinfo/Bible-Geocoding-Data`. Commit `7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f`, of 2021-11-01, "Add link to interface in readme." On 2026-11-17 this commit is also the newest commit of the branch `main`.
+- The file `readme.md` of the commit, section "License". Read on 2026-11-17:
+  - "This data is licensed under a Creative Commons Attribution 4.0 license."
+  - "OpenStreetMap data is licensed under ODbL 1.0, which is similar to CC-BY-SA."
+  - The licences of the images vary. The site would use no image.
+- The file `license.txt` of the commit is the text of the licence "Attribution 4.0 International" of Creative Commons. Its section 3(a)(1) asks for these items, if the licensor supplies them: the name of the creator, a copyright notice, a notice that refers to the licence, a notice that refers to the disclaimer of warranties, and a link to the material where practical. It also asks for a statement if the material was changed, with any earlier changes, and for the text of the licence or a link to it. Its section 3(a)(2) says that "it may be reasonable" to satisfy these conditions with a link to a page that has the information.
+- Page: `https://www.openbible.info/geo/`, section "Can I Use These Files?". Read on 2026-11-17. The page says that the data set has the Creative Commons Attribution licence, that a person can use the files for any purpose "as long as you credit OpenBible.info", and that some data is from OpenStreetMap, with its own open licence.
+- Page: `https://www.openbible.info/blog/2021/11/rethinking-the-bible-atlas/`. Read on 2026-11-17. The page says the same: a CC-BY licence for the data, and the ODbL licence for the OpenStreetMap data.
+- Credit words: the pages ask for a credit to OpenBible.info. They give no exact words.
+- Page: `https://www.openbible.info/geo/ancient/a079b21/rameses`. Read on 2026-11-17, for one example of the report: the page shows a percentage for each modern location, not the score of the data.
+- The parts with the OpenStreetMap licence that the readme names: the geometry with the role `precise` and `local`, and the secondary sources of type "osm" and "osm_group". The data has three more parts with the mark "osm" that the readme does not name: `geometry_credit` "osm", the format "osm" of `geometry.jsonl`, and a modern location with `coordinates_source` of type "osm". The report gives the numbers, and the places of the sketches that use these parts.
+
+### Coast, rivers, and lakes: Natural Earth
+
+- Use: Read for Task 36. Not used on the site.
+- Repository: `https://github.com/nvkelso/natural-earth-vector`. Commit `ca96624a56bd078437bca8184e78163e5039ad19`, of 2022-06-02, "marine for both #697 and #735". On 2026-11-17 this commit is also the newest commit of the branch `master`.
+- The file `LICENSE.md` of the commit, and the page `https://www.naturalearthdata.com/about/terms-of-use/`. Read on 2026-11-17. The page refused a request of `curl`, so Claude read it in the browser pane. The two have the same statement:
+  - "All versions of Natural Earth raster + vector map data found on this website are in the public domain."
+  - "No permission is needed to use Natural Earth. Crediting the authors is unnecessary."
+  - If a person wants to cite the data, the page gives two texts. Short text: "Made with Natural Earth." Long text: "Made with Natural Earth. Free vector and raster map data @ naturalearthdata.com."
+- The file `README.md` of the commit. Read on 2026-11-17. It says that Natural Earth is a public domain map data set, and it refers to the terms page below.
+- The page also lists releases from other bodies to Natural Earth, for the creation of a world base map: The Washington Post, the European Commission Joint Research Centre for the rivers and lakes of Europe, XNR Productions for the roads of North America, and International Mapping Associates for the time zones. The site would use no roads and no time zones.
+
+### Downloads (Task 36 step 1)
+
+All files were downloaded by Claude on 2026-11-17 from `https://raw.githubusercontent.com/<repository>/<commit>/<path>`.
+
+| Source | Path in the repository | Size in bytes | SHA-256 |
+|---|---|---:|---|
+| Places | `data/ancient.jsonl` | 11,550,193 | `b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2` |
+| Places | `data/modern.jsonl` | 3,224,520 | `da731f6e110bac4ea66a9f037a0a31cfb11c4f1efc1206aa9e109092b2c60087` |
+| Places | `data/geometry.jsonl` | 155,985 | `e44b10ae46f92eb43a5fca2edf012f8fe19090e1c8488d7dfe1bf47ca222f3b7` |
+| Places | `geometry/g2e7540.geometry.geojson`, the outline "Salt Sea" | 33,083 | `3ef356adc7afeeedf83efa5732b428f90c16a343a8a1cb3fbe1f7faadd0bca78` |
+| Places | `geometry/gb1a444.geometry.geojson`, the outline "Lake Huleh" | 413 | `283ad58cbb091756ecc44261fd42e141a97d904dc8123fd8136e98af46bf3919` |
+| Places | `readme.md` | 53,774 | `dfd6e967ffdd139ea2cf3222ed2ca0f56d44da6653247a624aece279ad85e782` |
+| Places | `license.txt` | 18,658 | `f5b745ef98087f531e719ee8ca6a96809444573ecc7173c6fa68eaad39b3cc3f` |
+| Natural Earth | `geojson/ne_10m_land.geojson` | 10,157,965 | `1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416` |
+| Natural Earth | `geojson/ne_10m_minor_islands.geojson` | 1,320,514 | `8c933ca7a4760256bdc46408355706e39764b0fa01c160c28888b90b4faec29f` |
+| Natural Earth | `geojson/ne_10m_lakes.geojson` | 5,043,554 | `2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9` |
+| Natural Earth | `geojson/ne_10m_rivers_lake_centerlines.geojson` | 7,307,743 | `bb854a900ecbd3b408df46d5e16e3e0f974ba55993f9d8b5c26e855273c0905a` |
+| Places | `schemas/ancient.json` | 26,316 | `a552ac194d6975cc1a3f82b4992e19beecd697b14849bcfa601ed430b7fb8ef7` |
+| Places | `schemas/modern.json` | 18,858 | `91ebeeb20672c593df96c840a5696e9ae842c2a2c61f994d897dc628086fca7f` |
+| Natural Earth | `README.md` | 4,692 | `28b7c031e45c88d7ce20b7782373aaac378f459e9460001dadc8cfd824c3173b` |
+| Natural Earth | `LICENSE.md` | 4,636 | `2631b5b39b6d1acc56de75235109b5af2dbb4b0ac5a127b6f06185977247fd4b` |
+
+- The SHA-256 of `data/ancient.jsonl` and of `data/modern.jsonl` are the values of the designer in Task 36.
+- Claude downloaded `schemas/ancient.json` and `schemas/modern.json` and did not read them. The report uses no statement from them.
+- The pages of this section are not in the table. They change, so a hash of a page would not identify a version of its text. The dates of reading are above.
+- `scripts/map-report.mjs` prints the size and the SHA-256 of the seven data files again when it runs.

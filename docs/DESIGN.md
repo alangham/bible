@@ -872,3 +872,59 @@ Selected by the designer, without a decision by Arthur:
 1. The way back. After "About the translations", the reader returns to the chapter with the Back control of the browser. The Sources page has no control that goes back to the chapter.
 2. In the King James Version and in the World English Bible, 1 Corinthians 13:4 ends with a comma, because the sentence goes on in verse 5. The section shows the verse as it is.
 3. No test on a real phone.
+
+## 15. The map of the places of a book, of 2026-11-17
+
+This section is not complete. Arthur decided the direction and the look on 2026-11-17. The open points of section 15.6 are not designed. Task 36 in `docs/TASKS.md` is a report on the data, with no change to the site. Do not build a map from this section.
+
+The sketches are in `docs/screenshots/map-design/`: the map of Exodus and of Acts at 1440 by 900 px and at 390 by 844 px, and the line "Where" in "About this book". The sketches are made on the built site of Task 35, with the real data. The page around the map in the sketches is not designed: the top bar is that of the Sources page.
+
+### 15.1 Reason
+
+- Arthur asked on 2026-11-17 for a line "Where" in "About this book", with one link to a map. This is item 1 of `docs/BACKLOG.md`, from 2026-11-13.
+- A link to Google Maps does not fit the site: the standard view and the satellite view do not look good.
+- Beautiful design is a principle of this project. The map is drawn by the site, in the look of the site, as a map at the back of a printed Bible.
+
+### 15.2 Decided by Arthur
+
+- "About this book" gets a fourth line, "Where", with one link to the map of the book. The line has no words about the book.
+- The map shows the places that the book names. It is not a map of where the author wrote the book.
+- The place of writing stays in the line "Written". That line has it now for the letters that Paul wrote in prison. Example: Ephesians, "while Paul was in prison in Rome". Arthur asked for this fact, and the site has it there. The designer did not count the books whose line "Written" names a place of writing.
+- The look of the sketches: white sea, land in a light paper color, a thin coast line, the rivers and the lakes, and no roads, borders, or satellite picture. The places of the book are in the group color of the book.
+
+### 15.3 The signs of the sketches
+
+- A solid dot: a place with a sure position. An open dot: a place with a position that is not certain. This is the sign of the timeline for an estimate.
+- A triangle: a mountain. A name in capitals with spaces between the letters: a region, with no dot. A name in italics, in the font of the Bible text: a sea, a river, or a spring.
+- The three places that the book names most have a name in bold.
+- A scale bar in miles.
+- Below the map: the two signs with their meaning, the number of places, the places that are outside the map, and the credit.
+
+### 15.4 The data of the sketches
+
+- Places: the Bible Geocoding Data of OpenBible.info, `https://github.com/openbibleinfo/Bible-Geocoding-Data`, the files `data/ancient.jsonl` and `data/modern.jsonl`, at commit `7eb18a5` on 2026-11-17. Its page says that the data has a Creative Commons Attribution 4.0 licence, and that its OpenStreetMap data has the ODbL 1.0 licence.
+- Coast, rivers, and lakes: Natural Earth, at the scale 1:10 million, from `https://github.com/nvkelso/natural-earth-vector`, at commit `ca96624` on 2026-11-17. Its site says that all versions of its map data are in the public domain.
+- The designer read these two statements on 2026-11-17. No licence check is complete, and no record is in `docs/DATA-SOURCES.md`. Task 36 does this.
+- The rule of the sketches: a place of a book is a place of `ancient.jsonl` with a verse in that book. Its position is the position of its modern location with the highest score. A score below 500 gives the open dot. The designer selected 500. The data has a different meaning or a better limit possibly: Task 36 reports.
+- No person selected a place or a position.
+- Numbers of the designer, from the same files: the data has 1,342 ancient places, and 1,285 have verses. Exodus names 33 places, 31 have a position, and 15 of these have a score below 500. Acts names 107 places, all have a position, and 4 have a score below 500. Joshua names 432 places. Five books name no place: Philemon, James, 1 John, 2 John, and 3 John.
+
+### 15.5 What the sketches do not have
+
+- No route. The path of the Exodus and the journeys of Paul are a statement of a person, and the data does not have them. A route needs a source and a decision of Arthur.
+- No hills. A map in a printed Bible has shaded hills.
+- No places in a city, for example the Beautiful Gate. The sketches leave out the types of place that are a room, a gate, a structure, a field, or a hill.
+
+### 15.6 Not decided and not designed
+
+1. The set of regions. A printed Bible has about ten maps, not 66. The plan is a small set of regions, and each book opens one. Task 36 proposes the set from the data.
+2. A book with no place, and a book with one place. Five books have none.
+3. A book with very many places, for example Joshua with 432.
+4. The phone. At 390 px, the map of Acts shows 28 names of 95. A phone needs a zoom, or a higher map that moves sideways.
+5. Where the map page is, its top bar, and how the reader returns to the chapter.
+6. The name on the map when the three translations use different names for a place.
+7. A region has one point in the data. In the sketches, the name of a region is at that point. Example: the point of Judea is the point of Jerusalem.
+8. The coast and the rivers are those of today. Example: the Dead Sea is in two parts. The sketches leave out the canals and the reservoirs.
+9. The limit for "not certain".
+10. A link from a place name in the text to the map. Not planned.
+11. No test on a real phone.

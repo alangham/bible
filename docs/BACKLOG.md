@@ -10,6 +10,8 @@ Design fixes for pages that exist are in `docs/POLISH.md`, not here.
 
 Added: 2026-11-13, by Arthur.
 
+In work from 2026-11-17. Arthur decided the direction and the look from sketches. Section 15 of `docs/DESIGN.md` has the decisions and the open points, and Task 36 of `docs/TASKS.md` is a report on the data. Where this item and section 15 differ, section 15 is correct.
+
 Idea: each book has a map that shows the places of that book.
 
 What the map can show. These are options, not decisions:

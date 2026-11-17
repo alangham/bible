@@ -2412,3 +2412,60 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report.
+
+---
+
+## Task 36. The map of the places of a book: a report on the data
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: Arthur and the designer know what the two data sets give for a map of the places of each book, and what the rules of use are. This task changes no page and adds no data file to the site.
+
+Arthur decided the direction and the look of the map on 2026-11-17, from sketches. Read section 15 of `docs/DESIGN.md` first. The sketches are in `docs/screenshots/map-design/`. Arthur decides the build tasks from your report.
+
+WARNING: This task is a report. Do not change a file in `src/`, `public/`, or `e2e/`. Do not put a file of the two data sets in the repository. Keep the downloads in a temporary folder, as in Task 29.
+
+WARNING: Do not select a place, a position, or a route by your own judgment. Report what the data gives.
+
+WARNING: A download can be an acceptance of terms. Read the licence page of each source before you download. If a page asks for more than a credit, stop and ask Arthur.
+
+Steps:
+
+1. The sources. For each one, read the licence statement, and record it in a new section of `docs/DATA-SOURCES.md`, with the address, the date, the commit of the repository, the SHA-256 and the size of each file that you read, and the use "Read for Task 36. Not used on the site."
+   - Places: `https://github.com/openbibleinfo/Bible-Geocoding-Data`. The designer used commit `7eb18a5` and the files `data/ancient.jsonl` (SHA-256 `b8187aa4737e8517ccc090f765d2be11da4c548cd2a59d3cdcb62e952cb8c0f2`) and `data/modern.jsonl` (SHA-256 `da731f6e110bac4ea66a9f037a0a31cfb11c4f1efc1206aa9e109092b2c60087`). Use the same commit if you can.
+   - Coast, rivers, and lakes: Natural Earth, `https://github.com/nvkelso/natural-earth-vector`, commit `ca96624`, the 1:10 million files of the land, the minor islands, the lakes, and the rivers and lake centerlines.
+   - Report which parts of the places data have the OpenStreetMap licence, and if a map of the site needs these parts. The sketches use only the names, the verses, the scores, and one position for each place.
+   - Report the credit words that each source asks for.
+2. Write the script `scripts/map-report.mjs`. It reads the downloads from a folder that you give it, and it prints each number of this report. Write the report as `docs/reviews/task-36-map-report.md`.
+3. The places data. Read its documentation, and report in plain words:
+   - What an ancient place is, what a modern location is, and what the score of a link between them means. What limit of the score does the documentation give for "sure" and "not certain", if it gives one? The sketches use 500, which the designer selected.
+   - The number of ancient places, the number with verses, and the number for each type.
+   - How a region, a river, and a sea have their position: one point, a line, or an area.
+4. The verses. The data names its verses in a form such as `Exod.1.11`.
+   - Report which verse numbers the data uses, and if they agree with the verse numbers of the three translations of the site. Give each book where they differ.
+   - Report the names: the data has a name for each place, and the count of each name in ten translations. For the places of Exodus and of Acts, give the name in the data and the name in the same verse in each of the three translations of the site, where they differ. Example to check: Rameses.
+5. A table of the 66 books, with these columns: the places that the book names, the places with a position, the places with a score below 500, and the box of longitude and latitude that holds the places with a position. Mark the books with no place.
+   - The numbers of the designer, to compare: Exodus 33, 31, and 15. Acts 107, 107, and 4. Joshua 432 places. No place: Philemon, James, 1 John, 2 John, and 3 John. If your numbers differ, find the cause and give it. Do not change your script to make the numbers agree.
+6. A proposal for a set of regions. The plan of section 15.6 is a small set of regions, about ten or less, and each book opens one.
+   - Propose the set from the boxes of step 5, with the box of each region and the books of each region.
+   - For each book, give the number of its places that are outside its region, and their names.
+   - Say which books do not fit a region well, and why.
+7. The places that are not for a map of a region: give the types of place that are in a city or in a building, the number of each, and examples. The sketches leave out these types: room, gate, structure, field, hill, and those like them.
+8. The places at the same position. Example: the point of Judea is the point of Jerusalem. Give the number of places that have the same position as a different place, and the ten positions with the most places.
+9. Natural Earth, for the boxes of your regions:
+   - The size of the land, the lakes, and the rivers after a cut to each box, as SVG path data or as JSON, with and without a simplification that the eye does not see at 960 px wide. Arthur needs the number of bytes that a map adds to the site.
+   - The features of today that the ancient world did not have: canals and reservoirs. List those in the boxes. The sketches leave them out.
+   - The places where the coast or a lake of today differs clearly from a printed Bible map. Example: the Dead Sea is in two parts. Report only what a source states. Do not write a fact from memory.
+10. Proposals for Arthur, each with its reason and its cost: the limit for "not certain", the set of regions, the types of place that the map leaves out, the name on the map when the translations differ, and what a book with no place shows.
+11. Run the `accuracy-reviewer` agent on the report: each number against the script, and each statement about a licence against its page.
+12. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`, to make sure that the site did not change.
+
+Done when:
+
+- `docs/reviews/task-36-map-report.md` has the result of steps 1 and 3 to 10.
+- `docs/DATA-SOURCES.md` has the record of step 1.
+- No file in `src/`, `public/`, or `e2e/` changed.
+
+Stop and report. Commit the folder `docs/screenshots/map-design/` with this task. It has the six sketches of the designer.

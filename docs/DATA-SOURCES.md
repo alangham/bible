@@ -96,6 +96,13 @@ These are findings. Arthur must decide on them. They do not change the design.
 - Result: PASS. The statement covers the Berean Standard Bible, and the publisher offers the USFM file as that Bible, with its headings and footnotes.
 - Limit: no page names headings, footnotes, or cross-reference lines one by one. The result rests on the publisher's label of the file and the words "the full Berean Bible" and "any use".
 
+### The line of the translation (Task 33 step 2)
+
+- Page: `https://berean.bible/`. Read on 2026-11-17.
+- The words of the page: "The Berean Standard Bible (BSB) is a completely new English translation of the Holy Bible based on the best available manuscripts and sources." The same page also says "The Berean Standard Bible is a completely new translation based on the best available manuscripts and sources."
+- Supports: "A new translation." in the line "Today’s English. A new translation." `docs/DESIGN.md` section 14.2.
+- Use: The line of the translation in the translation list and on the Sources page.
+
 ---
 
 ## 3. OpenBible.info cross-references
@@ -359,3 +366,10 @@ Task 28 added the icon of section 12.3 of `docs/DESIGN.md`. Section 7 is for cod
 | C | `resources/web.docx` | Arthur's copy. Claude copied it to the temporary folder. | 2,133,656 | `949f67d0f965eda1d048a696bc7ef69549fab10bdb7bbe8aaec161a3bb140312` |
 
 - The size and the SHA-256 of `resources/web.docx` are the values of Task 29.
+
+### The line of the translation (Task 33 step 2)
+
+- Page: `https://ebible.org/engwebp/FRT01.htm`, the preface of edition A. Its title is "World English Bible Preface". Read on 2026-11-17.
+- The words of the page: "The World English Bible is an update of the American Standard Version (ASV) of the Holy Bible, published in 1901." And: "The style of the World English Bible, while fairly literally translated, is in informal, spoken English."
+- Supports: "spoken English" and "An update of the American Standard Version of 1901." in the line "Today’s spoken English. An update of the American Standard Version of 1901." `docs/DESIGN.md` section 14.2.
+- Use: The line of the translation in the translation list and on the Sources page.

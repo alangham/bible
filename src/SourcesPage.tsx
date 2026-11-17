@@ -4,8 +4,11 @@
 // The look of the Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15 step 9.
 // The fonts section names the fonts that the site uses, Inter and Lora: docs/TASKS.md Task 17 step 11.
 // The credit of the King James Version: docs/TASKS.md Task 21 step 9.
+// The first section, "The three translations": docs/DESIGN.md section 14.4, docs/TASKS.md Task 33 step 5.
 
-import { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
+import { SAMPLE_PARTS } from './data/sampleVerse.ts'
+import { TRANSLATIONS } from './data/translation.ts'
 import { RefBar } from './reference/RefBar.tsx'
 
 const LICENSES = `${import.meta.env.BASE_URL}licenses/`
@@ -19,6 +22,37 @@ export function SourcesPage() {
       <RefBar current="sources" />
       <main className="ref-main sources-page">
         <h1>Sources</h1>
+
+        {/* The three translations: the line of each translation and one verse in each. docs/DESIGN.md section 14.4,
+            docs/TASKS.md Task 33 step 5. The verse has no red letters. */}
+        <section aria-labelledby="sources-translations">
+          <h2 id="sources-translations">The three translations</h2>
+          <p>
+            The site has three translations of the Bible into English. The translation list in the top bar of a chapter selects one. Here is one
+            verse, 1 Corinthians 13:4, in each translation.
+          </p>
+          <ul className="sources-versions">
+            {TRANSLATIONS.map((t) => (
+              <li key={t.id} data-translation={t.id}>
+                <p className="sources-version-name">
+                  <b>{t.name}</b> <span className="sources-version-short">{t.short}</span>
+                </p>
+                <p className="sources-version-line">{t.line}</p>
+                <p className="sources-version-verse" lang="en">
+                  {SAMPLE_PARTS[t.id].map((part, i) =>
+                    part.a ? (
+                      <i key={i} className="added">
+                        {part.t}
+                      </i>
+                    ) : (
+                      <Fragment key={i}>{part.t}</Fragment>
+                    ),
+                  )}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section aria-labelledby="sources-text">
           <h2 id="sources-text">The Bible text</h2>

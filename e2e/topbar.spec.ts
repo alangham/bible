@@ -259,15 +259,24 @@ test.describe('the top bar of the reading page', () => {
       const rows = await group.getByRole('button').all()
       expect(rows).toHaveLength(3)
       await bigEnough(rows)
-      // A row is 44 px high in the wide layout, and 48 px high in the narrow layout.
-      for (const row of rows) expect((await row.boundingBox())!.height).toBe(vp.size.width >= 900 ? 44 : 48)
+      // Since Task 33, a row is as high as its content: the name, and the line of the translation below it. It is
+      // 44 px or more in the wide layout, and 48 px or more in the narrow layout. docs/DESIGN.md section 14.3: a row
+      // with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high.
+      const heights = await Promise.all(rows.map(async (row) => (await row.boundingBox())!.height))
+      for (const h of heights) expect(h).toBeGreaterThanOrEqual(vp.size.width >= 900 ? 44 : 48)
+      expect(heights).toEqual([57, 74, 74])
       await expect(rows[0]).toBeFocused()
-      // The Tab key goes through the three rows, and Shift+Tab goes back.
+      // The Tab key goes through the three rows and then the link "About the translations", and Shift+Tab goes back.
+      // docs/TASKS.md Task 33 step 4.
       await page.keyboard.press('Tab')
       await expect(rows[1]).toBeFocused()
       await page.keyboard.press('Tab')
       await expect(rows[2]).toBeFocused()
-      await expect(rows[2]).toHaveAccessibleName('World English Bible')
+      await expect(rows[2]).toHaveAccessibleName('World English Bible Today’s spoken English. An update of the American Standard Version of 1901.')
+      await page.keyboard.press('Tab')
+      await expect(translationList(page).getByRole('link', { name: 'About the translations' })).toBeFocused()
+      await page.keyboard.press('Shift+Tab')
+      await expect(rows[2]).toBeFocused()
       await page.keyboard.press('Shift+Tab')
       await expect(rows[1]).toBeFocused()
       await page.keyboard.press('Enter')
@@ -278,7 +287,7 @@ test.describe('the top bar of the reading page', () => {
       // The row of the selected translation has the check mark and the weight 600. The short name is not a second name.
       await page.keyboard.press('Enter')
       await expect(rows[1]).toBeFocused()
-      await expect(rows[1]).toHaveAccessibleName('King James Version')
+      await expect(rows[1]).toHaveAccessibleName('King James Version Older English, in the text of 1769: thee, thou, believeth.')
       await expect(rows[1].locator('.tr-check path')).toHaveCount(1)
       await expect(rows[0].locator('.tr-check path')).toHaveCount(0)
       await expect(rows[2].locator('.tr-check path')).toHaveCount(0)

@@ -29,7 +29,7 @@ import { MenuButton, MenuPanel } from '../TopBarMenu.tsx'
 import { usePanelKeys } from '../usePanelKeys.ts'
 import type { ChapterRef, LinkEnd } from '../data/links.ts'
 import type { LineReference } from '../data/xrefs.ts'
-import { bookHref, chapterHref } from '../router.ts'
+import { bookHref, chapterHref, sourcesHref } from '../router.ts'
 import { useMarginLabels, type ScreenLayout } from '../screenLayout.ts'
 import { addTravel, useTrail, type Stop } from '../travel/trail.ts'
 import { TrailBar } from '../travel/TrailBar.tsx'
@@ -546,13 +546,19 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
           </ol>
         </nav>
       </div>
-      {/* The translation list. For a screen reader, the form that Task 21 gave: a group with one button for each translation. */}
+      {/* The translation list. For a screen reader, the form that Task 21 gave: a group with one button for each translation.
+          Each row has the line of its translation below the name, and the list ends with the link "About the translations".
+          docs/DESIGN.md section 14.3, docs/TASKS.md Task 33 step 4. */}
       <div className="tr-list" id={listId} ref={listRef} data-layout={layout} hidden={open !== 'list'} style={listStyle}>
         <div role="group" aria-label="Translation">
           {TRANSLATIONS.map((t) => (
-            <button key={t.id} type="button" className="tr-row" aria-pressed={t.id === translation} onClick={() => selectTranslation(t.id)}>
+            <button key={t.id} type="button" className="tr-row tr-line-row" aria-pressed={t.id === translation} onClick={() => selectTranslation(t.id)}>
               <Check on={t.id === translation} />
-              <span className="tr-name">{t.name}</span>
+              {/* The name of the button is the name of the translation and its line. The space keeps the two apart. */}
+              <span className="tr-name">
+                {t.name}{' '}
+                <span className="tr-line">{t.line}</span>
+              </span>
               {/* The short name is not a second name of the button. */}
               <span className="tr-short" aria-hidden="true">
                 {t.short}
@@ -560,6 +566,13 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
             </button>
           ))}
         </div>
+        <div className="menu-rule tr-about-rule" aria-hidden="true" />
+        <a className="tr-about" href={sourcesHref()} onClick={() => setPanel(null)}>
+          About the translations
+          <span className="tr-about-sign" aria-hidden="true">
+            ›
+          </span>
+        </a>
       </div>
       {/* The text list, wide layout only: the look of the wide translation list. A group with one button for each
           size, a thin line, and the red letters switch. docs/DESIGN.md section 11.5. */}

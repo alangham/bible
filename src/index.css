@@ -734,6 +734,75 @@ html:has(.reading) {
 }
 
 /*
+  The rows of the translation list: the name, and the line of the translation below it. A row is as high as
+  its content, and 44 px or more, 48 px or more in the narrow layout. The check mark, the name, and the short
+  name are at the top of the row. The rows of the text list do not have the class tr-line-row, and do not change.
+  docs/DESIGN.md section 14.3, docs/TASKS.md Task 33 step 4.
+*/
+.tr-row.tr-line-row {
+  align-items: flex-start;
+  height: auto;
+  min-height: 44px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  line-height: 20px;
+}
+
+.tr-list[data-layout='narrow'] .tr-row.tr-line-row {
+  height: auto;
+  min-height: 48px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.tr-line-row .tr-check {
+  margin-top: 3px;
+}
+
+.tr-line {
+  display: block;
+  margin-top: 2px;
+  color: var(--rd-ink-secondary);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* The link "About the translations", after a thin line. It opens the Sources page. */
+.tr-list .tr-about-rule {
+  margin: 6px 8px;
+}
+
+.tr-list[data-layout='narrow'] .tr-about-rule {
+  margin: 6px 0;
+}
+
+.tr-about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: var(--rd-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.tr-list[data-layout='narrow'] .tr-about {
+  min-height: 48px;
+  padding: 0;
+  font-size: 16px;
+}
+
+@media (hover: hover) {
+  .tr-list[data-layout='wide'] .tr-about:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+/*
   The text size. docs/DESIGN.md section 10.2, docs/TASKS.md Task 24 step 3. --rd-text-px is the size of
   the Bible text. --rd-scale is that size divided by the size of "Standard" in the same layout. The text
   of the chapter body and the passage text of the pop-up follow --rd-scale. With "Standard", --rd-scale
@@ -2178,6 +2247,58 @@ html:has(.reading) {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/*
+  The section "The three translations": for each translation, the name, the short name, the line, and
+  1 Corinthians 13:4 in the font of the Bible text, with a thin line at the left. The values are those of
+  the renders in docs/screenshots/translations-design/. docs/DESIGN.md section 14.4, docs/TASKS.md Task 33 step 5.
+*/
+.ref-main.sources-page .sources-versions {
+  margin: 22px 0 70px;
+  padding: 0;
+  list-style: none;
+}
+
+.ref-main.sources-page .sources-versions li {
+  margin: 0 0 22px;
+  padding: 0 0 0 16px;
+  border-left: 3px solid #e3e3e6;
+}
+
+.ref-main.sources-page .sources-versions li:last-child {
+  margin-bottom: 0;
+}
+
+.ref-main.sources-page .sources-version-name {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.sources-version-name b {
+  font-weight: 600;
+}
+
+.sources-version-short {
+  margin-left: 4px;
+  color: #6e6e73;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ref-main.sources-page .sources-version-line {
+  margin: 0;
+  color: #6e6e73;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ref-main.sources-page .sources-version-verse {
+  margin: 8px 0 0;
+  font-family: Lora, Georgia, 'Times New Roman', serif;
+  font-size: 19px;
+  line-height: 1.5;
 }
 
 /* Narrow layout. */

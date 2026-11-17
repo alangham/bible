@@ -6,11 +6,16 @@ import { useSyncExternalStore } from 'react'
 
 export type Translation = 'bsb' | 'kjv' | 'web'
 
-/** The three translations of the site, in the order of the translation list. docs/DESIGN.md section 13.6. */
-export const TRANSLATIONS: readonly { id: Translation; name: string; short: string }[] = [
-  { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
-  { id: 'kjv', name: 'King James Version', short: 'KJV' },
-  { id: 'web', name: 'World English Bible', short: 'WEB' },
+/**
+ * The three translations of the site, in the order of the translation list. docs/DESIGN.md section 13.6.
+ * `line`: the line of the translation, in the translation list and on the Sources page. This is the one place in
+ * the code that has the lines. docs/DESIGN.md section 14.2, docs/TASKS.md Task 33 step 3. The sources of the lines
+ * are in docs/DATA-SOURCES.md.
+ */
+export const TRANSLATIONS: readonly { id: Translation; name: string; short: string; line: string }[] = [
+  { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB', line: 'Today’s English. A new translation.' },
+  { id: 'kjv', name: 'King James Version', short: 'KJV', line: 'Older English, in the text of 1769: thee, thou, believeth.' },
+  { id: 'web', name: 'World English Bible', short: 'WEB', line: 'Today’s spoken English. An update of the American Standard Version of 1901.' },
 ]
 
 export const TRANSLATION_KEY = 'bible-translation'

@@ -804,3 +804,59 @@ Arthur decided on 2026-11-16: the site keeps the verse numbers of the source, an
 4. The report did not count the words-of-Jesus marks that go on over a verse number. Task 30 gives the number.
 5. As in section 11.8: no one compared the marked parts of the verses where each translation marks a part of the verse.
 6. No test on a real phone.
+
+## 14. About the translations of 2026-11-17
+
+Arthur decided this section on 2026-11-17, from renders. The renders are in `docs/screenshots/translations-design/`: the translation list at 1440 by 900 px and at 390 by 844 px, and the top of the Sources page at the same two sizes. The renders are a sketch on the built site of Task 32. Task 33 in `docs/TASKS.md` builds this section.
+
+### 14.1 Reason
+
+- Arthur read the site as a lay reader. The translation list gives three names, and a lay reader does not know the difference between them.
+- The answer has two parts. Part 1 is in the translation list, because the reader has the question at the moment of the selection. Part 2 shows the same verse in the three translations, because a lay reader sees the difference faster in the text than in a description.
+
+### 14.2 The line of each translation
+
+Each translation has one short line. The line is in one place in the code, and the translation list and the Sources page show the same words.
+
+| Translation | The line |
+|---|---|
+| Berean Standard Bible | Today’s English. A new translation. |
+| King James Version | Older English, in the text of 1769: thee, thou, believeth. |
+| World English Bible | Today’s spoken English. An update of the American Standard Version of 1901. |
+
+The source of each part of a line:
+
+- "A new translation": the page `https://berean.bible/` says "a completely new English translation of the Holy Bible". The designer read the page on 2026-11-17.
+- "in the text of 1769": `sources/kjv/copr.htm` says "using the standardized text of 1769".
+- "thee, thou, believeth": these words are in the King James Version data of the site.
+- "spoken English" and "An update of the American Standard Version of 1901": the preface of the edition, `https://ebible.org/engwebp/FRT01.htm`, says that the World English Bible is an update of the American Standard Version, published in 1901, and that its style "is in informal, spoken English". The designer read the page on 2026-11-17.
+- "Today’s English" and "Older English" are a description of the words that the reader sees. They have no source page. The page of the Berean publisher does not have the words "modern English".
+- The lines do not have the year 1611. The source files of the site do not have it.
+
+### 14.3 The translation list
+
+- Each row shows the name and the short name, as before, and the line of the translation below the name. The line is in the secondary ink color, at 13 px.
+- A row is as high as its content. Measured in the sketch: a row with a line of one line of text is 57 px high, and a row with a line of two lines of text is 74 px high. The pop-up of the wide layout is 340 px wide, as before.
+- Below the three rows, after a thin line, the list has the row "About the translations" with the sign "›". It is a link to the Sources page. It is 44 px high or more.
+- The rules of section 9.7 for the panels do not change.
+
+### 14.4 The section "The three translations" on the Sources page
+
+- It is the first section of the Sources page, before "The Bible text".
+- Its words: "The site has three translations of the Bible into English. The translation list in the top bar of a chapter selects one. Here is one verse, 1 Corinthians 13:4, in each translation."
+- Then, for each translation in the order of the translation list: the name, the short name, the line of section 14.2, and the words of 1 Corinthians 13:4 in that translation, in the font of the Bible text.
+- The words of the verse are those of the site data, with no change. The added word of the King James Version is in italics, as on the reading page. A unit test compares the words on the page with the site data.
+- The section writes nothing about the Bible. The verse is the content.
+
+### 14.5 Selected by the designer, without a decision by Arthur
+
+- The final words of the three lines. Arthur saw a draft in the first sketch. The designer changed the words after it read the pages of the publishers, so that each part has a source.
+- The words of the section in 14.4.
+- The verse 1 Corinthians 13:4. Arthur saw it in the sketch.
+- The sizes and the spaces.
+
+### 14.6 Not decided and not checked
+
+1. The way back. After "About the translations", the reader returns to the chapter with the Back control of the browser. The Sources page has no control that goes back to the chapter.
+2. In the King James Version and in the World English Bible, 1 Corinthians 13:4 ends with a comma, because the sentence goes on in verse 5. The section shows the verse as it is.
+3. No test on a real phone.

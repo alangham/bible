@@ -33,7 +33,8 @@ describe('translation setting', () => {
 
   it('has the three translations with their full names, in the order of the translation list', async () => {
     const t = await load()
-    expect(t.TRANSLATIONS).toEqual([
+    // The line of each translation, from Task 33, is checked in sampleVerse.test.ts.
+    expect(t.TRANSLATIONS.map(({ id, name, short }) => ({ id, name, short }))).toEqual([
       { id: 'bsb', name: 'Berean Standard Bible', short: 'BSB' },
       { id: 'kjv', name: 'King James Version', short: 'KJV' },
       { id: 'web', name: 'World English Bible', short: 'WEB' },

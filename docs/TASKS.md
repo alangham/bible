@@ -2260,3 +2260,79 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report.
+
+---
+
+## Task 33. About the translations: a line in the translation list, and a section on the Sources page
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: a lay reader can see the difference between the three translations. Each row of the translation list has one short line. The Sources page starts with a section that shows the same verse in the three translations.
+
+Arthur decided this on 2026-11-17, from renders. The design is in section 14 of `docs/DESIGN.md`. The renders are in `docs/screenshots/translations-design/`: `list-1440.png`, `list-390.png`, `section-1440.png`, and `section-390.png`. The renders are a sketch on the built site of Task 32. Use their look. Do not copy code from them.
+
+WARNING: Do not change a word of the three lines of step 3, or of the section of step 5. If a source of step 1 does not support a line, stop and ask Arthur. Do not change the words to make them agree.
+
+WARNING: Do not change a word of 1 Corinthians 13:4. The words are those of the site data.
+
+WARNING: Do not change a data file, a source file, or a build script. Do not change the paragraphs of the section "The Bible text" of the Sources page.
+
+WARNING: Write no new content about the Bible. The only new words are those of steps 3, 4, and 5.
+
+Steps:
+
+1. Read section 14 of `docs/DESIGN.md`. Look at the four renders. Then make sure of the sources of section 14.2:
+   - Open `https://berean.bible/`. Make sure that the page says that the Berean Standard Bible is a completely new English translation.
+   - Read `sources/kjv/copr.htm`. Make sure that it says "the standardized text of 1769".
+   - Make sure that the words "thee", "thou", and "believeth" are in `public/data/text-kjv/`.
+   - Open `https://ebible.org/engwebp/FRT01.htm`, the preface of the edition of the site. Make sure that it says that the World English Bible is an update of the American Standard Version, published in 1901, and that its style is in informal, spoken English.
+   - If you cannot open a page, stop and report. Do not use a different page.
+2. Record the two pages in `docs/DATA-SOURCES.md`, each in the section of its translation: the address, the date, the words of the page that support the line, and the use "The line of the translation in the translation list and on the Sources page".
+3. In `src/data/translation.ts`, give each row of `TRANSLATIONS` its line. This is the one place in the code that has the lines:
+   - Berean Standard Bible: "Today’s English. A new translation."
+   - King James Version: "Older English, in the text of 1769: thee, thou, believeth."
+   - World English Bible: "Today’s spoken English. An update of the American Standard Version of 1901."
+   The apostrophe in "Today’s" is the character U+2019.
+4. The translation list, in `src/reading/ReadingPage.tsx` and `src/index.css`:
+   - Each row shows its line below the name, in the secondary ink color, at 13 px. The name, the short name, and the check mark stay at the top of the row.
+   - A row is as high as its content, and 44 px or more. In the narrow layout, 48 px or more.
+   - Below the three rows, after a thin line, add the row "About the translations" with the sign "›" at the right. It is a link to the Sources page, `sourcesHref()`. It is 44 px high or more. The list closes when the reader selects it.
+   - For a screen reader, the name of a row has the name of the translation and its line. The sign "›" is hidden from a screen reader.
+   - The keyboard goes through the three rows and then the link. The rules of section 9.7 of `docs/DESIGN.md` do not change.
+   - The text list uses the style class of these rows. Make sure that the rows of the text list and of the "Menu" panel do not change: measure them before and after.
+5. The Sources page, `src/SourcesPage.tsx`: add the section "The three translations" as the first section, before "The Bible text".
+   - The heading: "The three translations".
+   - The paragraph: "The site has three translations of the Bible into English. The translation list in the top bar of a chapter selects one. Here is one verse, 1 Corinthians 13:4, in each translation."
+   - Then one item for each row of `TRANSLATIONS`, in order: the name, the short name, the line, and the words of 1 Corinthians 13:4 in that translation, in the font of the Bible text.
+   - Put the words of the verse in the code as a list of parts for each translation, so that the page needs no data file. The words, from the site data:
+     - Berean Standard Bible: "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
+     - King James Version: "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up," with the word "and" in italics. It is an added word in the data.
+     - World English Bible: "Love is patient and is kind. Love doesn’t envy. Love doesn’t brag, is not proud,"
+   - The words of this verse are not words of Jesus in the data. The section has no red letters.
+6. Add unit tests:
+   - Each row of `TRANSLATIONS` has a line, and the three lines are the words of step 3.
+   - For each translation, the parts of the verse in the code are the same as the result of `passageVerses` for 1 Corinthians 13:4 from the data file of that translation: the same words, and the same added word.
+7. Add and change browser tests, at 1440 by 900 px and at 390 by 844 px:
+   - The translation list has three rows, and each row shows its line.
+   - The row "About the translations" opens the Sources page, and the first heading of a section there is "The three translations".
+   - The Sources page shows the three names, the three lines, and the three verses. The word "and" of the King James Version verse is in italics.
+   - The keyboard test of the translation list goes through the three rows and the link.
+   - The selection of a translation still works, the list closes, and the kept verse stays, as before.
+   - The axe-core checks pass with the translation list open, and on the Sources page.
+   - The rows of the text list and of the "Menu" panel have the same size as before this task.
+   - Where a test of the size of the translation list must change, give the test and the reason in the report.
+8. Take screenshots at 1440 by 900 px and at 390 by 844 px: the reading page with the translation list open, and the top of the Sources page. Save them in `docs/screenshots/task-33/`. Compare them with the renders, and give each difference in the report.
+9. Commit the folder `docs/screenshots/translations-design/` with this task. It has the four renders of the designer.
+10. Run the `accuracy-reviewer` agent on the three lines and on the section, with the sources of step 1.
+11. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- Each row of the translation list shows its line, and the list has the link "About the translations".
+- The Sources page starts with the section "The three translations", with 1 Corinthians 13:4 in the three translations.
+- The sources of the three lines are in `docs/DATA-SOURCES.md`.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. A check on a real phone is still open. Only Arthur can do it.

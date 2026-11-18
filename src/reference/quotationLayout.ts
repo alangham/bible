@@ -5,7 +5,7 @@
 // - A curved line joins two books with one quotation link or more. It bends toward the middle of the
 //   circle, through the middles of the two groups.
 
-import { groupOf, type Book, type GroupName } from '../data/books.ts'
+import { groupOf, groupVar, type Book, type GroupName } from '../data/books.ts'
 import type { QuotationPair } from '../data/dates.ts'
 import { groupBlocks } from '../wall/layout.ts'
 
@@ -112,7 +112,7 @@ export function diagram(books: Book[], pairs: QuotationPair[], s: DiagramSize): 
       const flip = Math.cos(a) < 0
       const [x, y] = at(a, s.r + s.labelGap)
       const deg = (a * 180) / Math.PI
-      placed.set(book.id, { book, color: groupOf(book).color, angle: a, flip, x: round(x), y: round(y), rotate: round(flip ? deg + 180 : deg) })
+      placed.set(book.id, { book, color: groupVar(groupOf(book)), angle: a, flip, x: round(x), y: round(y), rotate: round(flip ? deg + 180 : deg) })
       angle += unit
     }
     const a1 = angle
@@ -121,7 +121,7 @@ export function diagram(books: Book[], pairs: QuotationPair[], s: DiagramSize): 
     const [ex, ey] = at(a1, s.r + 4)
     arcs.push({
       group: block.group,
-      color: groupOf(block.books[0]).color,
+      color: groupVar(groupOf(block.books[0])),
       d: `M${round(sx)} ${round(sy)} A ${s.r + 4} ${s.r + 4} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${round(ex)} ${round(ey)}`,
     })
     angle += GROUP_GAP

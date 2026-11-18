@@ -26,7 +26,7 @@ const ROW = {
 /** The credit of section 17.3, with no change. */
 const CREDIT = 'BibleProject is the author and owner of this content. To find more BibleProject resources, visit bibleproject.com.'
 const CREDIT_HREF = 'https://www.bibleproject.com/'
-/** The secondary ink color of the reading page, --rd-ink-secondary. */
+/** The secondary ink color of the reading page, --ink-secondary. */
 const SECONDARY = 'rgb(110, 110, 115)'
 
 /** Opens a chapter and "About this book" of its first heading. */

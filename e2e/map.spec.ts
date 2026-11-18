@@ -435,14 +435,14 @@ for (const layout of LAYOUTS) {
       const button = page.getByRole('switch', { name: SWITCH })
       await expect(button).toHaveAttribute('aria-checked', 'true')
       const before = await firstViewState(page)
-      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBeGreaterThan(0)
+      expect(await page.locator('.map-dots [fill="var(--map-dot-open)"]').count()).toBeGreaterThan(0)
       await expect(page.locator('.map-counts p').filter({ hasText: NEW_SENTENCE })).toHaveCount(0)
 
       await button.click()
       await expect(button).toHaveAttribute('aria-checked', 'false')
       await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
       // An open dot and an open triangle are white inside.
-      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
+      expect(await page.locator('.map-dots [fill="var(--map-dot-open)"]').count()).toBe(0)
       await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
 
       await button.click()
@@ -460,7 +460,7 @@ for (const layout of LAYOUTS) {
       await openMap(page, 'exodus')
       await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
       await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
-      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
+      expect(await page.locator('.map-dots [fill="var(--map-dot-open)"]').count()).toBe(0)
     })
 
     test('Ephesians has no switch', async ({ page }) => {
@@ -657,8 +657,8 @@ for (const layout of LAYOUTS) {
       await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
       await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
       // An open dot is a white circle, and an open triangle is a white path.
-      expect(await page.locator('.map-dots circle[fill="#fff"]').count()).toBe(0)
-      expect(await page.locator('.map-dots path[fill="#fff"]').count()).toBe(0)
+      expect(await page.locator('.map-dots circle[fill="var(--map-dot-open)"]').count()).toBe(0)
+      expect(await page.locator('.map-dots path[fill="var(--map-dot-open)"]').count()).toBe(0)
       expect(await page.locator('.map-dots > *').count()).toBeGreaterThan(0)
     })
   })

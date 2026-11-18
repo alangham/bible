@@ -5,7 +5,7 @@
 // The text of the linked passage is in the selected translation. docs/DESIGN.md section 8.4.
 
 import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { LinkEnd } from '../data/links.ts'
 import { passageName, passageVerses, type PassageRange } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
@@ -195,7 +195,7 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
     }
   }, [anchor, onClose, layout])
 
-  const style = { '--d': there ? groupOf(there).color : undefined } as CSSProperties
+  const style = { '--d': there ? groupVar(groupOf(there)) : undefined } as CSSProperties
   if (layout === 'wide') {
     if (pos) Object.assign(style, { left: pos.left, top: pos.top, maxHeight: pos.maxHeight })
     else style.visibility = 'hidden'

@@ -372,10 +372,13 @@ export interface NameFont {
   color: string
 }
 
-/** The ink color of the site, and the secondary color of the map: a contrast of 4.5 to 1 or more on the land color. */
-export const INK = '#1d1d1f'
-export const MAP_SECONDARY = '#6b6b6b'
-export const WATER_NAME = '#4a6f84'
+/**
+ * The colors of the names of the map: a place, a secondary name, and a water. Each has a contrast of 4.5 to 1 or more on
+ * the land color. The values are in src/index.css, with the names of Task 44.
+ */
+export const INK = 'var(--map-place-name)'
+export const MAP_SECONDARY = 'var(--map-secondary)'
+export const WATER_NAME = 'var(--map-water-name)'
 
 /** The font of a name, in the wide or the narrow layout. "The drawing", rule 5. */
 export function nameFont(style: NameStyle, sure: boolean, wide: boolean): NameFont {

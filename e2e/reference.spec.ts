@@ -74,8 +74,8 @@ test.describe('Reference section', () => {
     const widths = await page.locator('.q-line').evaluateAll((els) => els.map((e) => [Number(e.getAttribute('data-n')), Number(e.getAttribute('stroke-width'))]))
     const step = (n: number) => (n >= 10 ? 2 : n >= 3 ? 1 : 0)
     for (const [n, w] of widths) expect(w).toBe([1.1, 2.1, 3.6][step(n)])
-    // Each name is in the color of its group.
-    await expect(diagram(page).getByRole('button', { name: 'Genesis', exact: true }).locator('text')).toHaveAttribute('fill', '#C2255C')
+    // Each name is in the color of its group: Law, #C2255C. From Task 44, the attribute has the name of the color, so the test reads the color that the page shows.
+    await expect(diagram(page).getByRole('button', { name: 'Genesis', exact: true }).locator('text')).toHaveCSS('fill', 'rgb(194, 37, 92)')
   })
 
   test('with Romans selected, the list has the books and counts of quotation-pairs.json, and the other lines are dim', async ({ page }) => {
@@ -98,11 +98,12 @@ test.describe('Reference section', () => {
     const linked = new Set(pairs.flatMap((p) => (p.from === 'romans' ? [p.to] : p.to === 'romans' ? [p.from] : [])))
     const names = await diagram(page)
       .getByRole('button')
-      .evaluateAll((els) => els.map((g) => ({ id: g.getAttribute('data-book')!, fill: g.querySelector('text')!.getAttribute('fill'), opacity: getComputedStyle(g.querySelector('text')!).fillOpacity })))
+      .evaluateAll((els) => els.map((g) => ({ id: g.getAttribute('data-book')!, fill: getComputedStyle(g.querySelector('text')!).fill, opacity: getComputedStyle(g.querySelector('text')!).fillOpacity })))
     for (const n of names) {
       expect(n.opacity).toBe('1')
-      if (n.id === 'romans' || linked.has(n.id)) expect(n.fill).not.toBe('#6E6E73')
-      else expect(n.fill).toBe('#6E6E73')
+      // The gray is #6E6E73, the name --quote-name-dim from Task 44.
+      if (n.id === 'romans' || linked.has(n.id)) expect(n.fill).not.toBe('rgb(110, 110, 115)')
+      else expect(n.fill).toBe('rgb(110, 110, 115)')
     }
     // Select it again to clear.
     await romans.click()

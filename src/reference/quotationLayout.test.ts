@@ -39,9 +39,10 @@ describe('quotation diagram', () => {
     expect(d.lines).toHaveLength(pairs.length)
     expect([1, 2, 3, 9, 10, 25].map(lineStep)).toEqual([0, 0, 1, 1, 2, 2])
     for (const l of d.lines) expect(l.width).toBe(WIDE_SIZE.lineWidths[lineStep(l.pair.n)])
-    // The color goes from the book that quotes to the book that it quotes.
+    // The color goes from the book that quotes to the book that it quotes. From Task 44, a color is the name of the
+    // group color, so that one attribute on the root element can change it: Letters of Paul #1B2A41, Poetry & Wisdom #CD4C26.
     const line = d.lines.find((l) => l.pair.from === 'romans' && l.pair.to === 'psalms')!
-    expect([line.from.color, line.to.color]).toEqual(['#1B2A41', '#CD4C26'])
+    expect([line.from.color, line.to.color]).toEqual(['var(--group-letters-of-paul)', 'var(--group-poetry-wisdom)'])
   })
 
   it('gives the lists of a book from quotation-pairs.json, most links first', () => {

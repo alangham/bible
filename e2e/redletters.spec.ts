@@ -18,7 +18,7 @@ const KEY = 'bible-red-letters'
 
 /** The color of red letters, docs/DESIGN.md section 11.4, as the browser gives it. */
 const RED = 'rgb(139, 26, 26)'
-/** The ink color of the Bible text, --rd-ink. */
+/** The ink color of the Bible text, --ink. */
 const INK = 'rgb(29, 29, 31)'
 /** The color of the group "Gospels". */
 const GOSPELS = 'rgb(38, 130, 139)'

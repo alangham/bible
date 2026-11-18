@@ -6,7 +6,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent, type RefObject } from 'react'
 import { plainClick } from '../book/links.ts'
 import { arriveBookName, canMoveBookName, moveBookName, movingBookId } from '../bookMove.ts'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { SITE_NAME } from '../pageTitle.ts'
@@ -59,7 +59,7 @@ function useNameWidths(books: Book[]): Map<string, number> | null {
 }
 
 function BookName({ book, fit }: { book: Book; fit: NameFit | null }) {
-  const style: CSSProperties = { color: groupOf(book).color }
+  const style: CSSProperties = { color: groupVar(groupOf(book)) }
   if (fit) {
     style.fontSize = `${fit.fontSize.toFixed(2)}px`
     style.letterSpacing = `${fit.letterSpacing.toFixed(2)}px`
@@ -74,7 +74,7 @@ function BookName({ book, fit }: { book: Book; fit: NameFit | null }) {
 
 function Band({ book }: { book: Book }) {
   return (
-    <h2 className="wall-band" style={{ background: groupOf(book).color }}>
+    <h2 className="wall-band" style={{ background: groupVar(groupOf(book)) }}>
       {bandLabel(book.group)}
     </h2>
   )

@@ -11,7 +11,7 @@ import { arriveBookName } from '../bookMove.ts'
 import { ChapterBody } from '../book/ChapterBody.tsx'
 import { endKey, linkColor } from '../book/linkEnds.ts'
 import { ReadWith } from '../book/ReadWith.tsx'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { loadBookLinks, marksOf, type BookLinks, type ChapterRef, type LinkEnd } from '../data/links.ts'
 import type { LineReference } from '../data/xrefs.ts'
@@ -110,7 +110,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   const shownTranslation = shown?.translation ?? translation
   const marks = useMemo(() => (links ? marksOf(links, book.id, n, shownTranslation) : undefined), [links, book.id, n, shownTranslation])
   const readWith = links?.readWith[n] ?? []
-  const style = { '--c': groupOf(book).color, '--heading-em': headingWidthEm(book.name, n) } as CSSProperties
+  const style = { '--c': groupVar(groupOf(book)), '--heading-em': headingWidthEm(book.name, n) } as CSSProperties
   const headingId = `chapter-${key}`
 
   // The ends at verses, in verse order, for the labels in the margin.

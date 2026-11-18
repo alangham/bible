@@ -1523,3 +1523,130 @@ From the report of Claude Code, not checked by the designer:
 - 7 chapters have no read-with list: Judges 12, Psalms 61, 70, 117, 124, and 134, and Jeremiah 45. With "About this book" open, the line below the chapter heading is 33 px below the list of the facts there. Before Task 42, it was 23 px.
 - The contrast against white: the text of the credit, 5.07 to 1. The link of the credit in the group color of Prophecy, `#986694`, 4.503 to 1, and in that of Major Prophets, `#9D6E00`, 4.502 to 1. These two are the lowest.
 - 243 unit tests and 437 browser tests pass.
+
+## 18. Dark mode, of 2026-11-18
+
+Arthur asked for a dark mode on 2026-11-18. He approved the direction from sketches, and then the control. The sketches are in `docs/screenshots/dark-design/`. They are the built site of Task 43 with the colors replaced in the workspace of the designer. Nothing of this section is built when Task 44 starts.
+
+- `dark-palette.png`: the ten group colors as built and as proposed, each with its contrast.
+- `dark-wall-1440.png`, `dark-read-red-1440.png`, `dark-read-top-1440.png`, and `dark-map-1440.png`: the wall, Matthew 5, Matthew 1 with "About this book" open, and the map of Acts.
+- `dark-phone-390.png`: the same four views at 390 by 844 px.
+- `control-options-1440.png` and `control-options-390.png`: the two controls that Arthur selected from. Option A is the decision.
+
+### 18.1 Reason
+
+- A reader reads at night and on a phone. A white page is hard on the eyes in a dark room.
+- The risk, from Arthur's principle of 2026-11-17: beautiful design is what makes this project different. A dark mode where the ten groups look weak, or look like different groups, breaks the wall. So the sketches came before a task.
+
+### 18.2 Decided by Arthur on 2026-11-18
+
+1. The site gets a dark mode, in the look of the sketches.
+2. The reader selects it with one switch, "Dark mode", with the states "On" and "Off". Section 18.3.
+3. At the first visit, the site follows the setting of the device. After the reader uses the switch, the site keeps the selection of the reader.
+
+### 18.3 The switch "Dark mode"
+
+- It is a row with the words "Dark mode" and the state "On" or "Off", in the form of the red letters switch.
+- It is in the two places that have the red letters switch: the text list in the wide layout, and the menu panel of the reading page in the narrow layout. In each place it is the row below "Red letters". In the text list, a thin line is between the two rows.
+- The mode is for the complete site: the wall, the reading page, the map page, and the pages of the Reference section.
+- The site keeps the selection in the storage of the browser, with the key `bible-dark-mode`, in the form of the key `bible-red-letters`.
+- With no value for that key, the site follows the device: the media feature `prefers-color-scheme`. If the device changes while the page is open, the page changes.
+- With a value for that key, the site does not follow the device.
+- The page must not show the light mode for a moment before the dark mode. The mode is set before the first paint.
+- The wall has no text list. In the wide layout, the reader changes the mode from a reading page, as for the translation. This is a value of the designer. Arthur read it and gave no change.
+
+### 18.4 The colors of the page
+
+The rule of the dark mode: each color has one name, and the dark mode gives each name a second value. No part gets a new shape, a new size, or a new position.
+
+| Name | Light, as built | Dark |
+|---|---|---|
+| Page | `#FFFFFF` | `#1C1C1E` |
+| Ink | `#1D1D1F` | `#F5F5F7` |
+| Secondary ink | `#6E6E73` | `#A1A1A6` |
+| A thin line | black at 9% | white at 15% |
+| The surface of a panel with no text in a group color | `#FFFFFF` | `#2C2C2E` |
+| The surface of a panel with text in a group color | `#FFFFFF` | `#1C1C1E`, with a border of white at 16% |
+| A light gray surface | `#F5F5F7` | `#2C2C2E` |
+| Red letters | `#8B1A1A` | `#EE766C` |
+
+- The page is near black, not full black. White text on full black is hard on the eyes in a long text.
+- Contrast against `#1C1C1E`: ink 15.6 to 1, secondary ink 6.6 to 1, red letters 6.0 to 1.
+- A text in a group color is only on the page color `#1C1C1E`. On `#2C2C2E`, the group color of History has a contrast of 3.7 to 1. So a panel with such a text keeps the page color and gets a border.
+- The text of the band has the color of the page. In the light mode that is white on the group color, as built. In the dark mode that is `#1C1C1E` on the dark group color. The rule is the same in the two modes.
+- A shadow stays black. A part that the light mode makes darker on hover, with a mix of the group color and black, is made lighter in the dark mode, with a mix of the group color and white.
+- This table has the main names only. Task 44 gives the list of each color of the site. The designer then gives each name its dark value, by the rule of this section, before Task 45.
+
+### 18.5 The ten group colors
+
+Each dark color keeps the hue of its group and is lighter. Each has a contrast of 4.5 to 1 or more against `#1C1C1E`.
+
+| Group | Light, as built | Contrast against white | Dark | Contrast against `#1C1C1E` |
+|---|---|---|---|---|
+| Law | `#C2255C` | 5.7 | `#F26A90` | 5.9 |
+| History | `#B01E35` | 6.8 | `#E74D54` | 4.5 |
+| Poetry & Wisdom | `#CD4C26` | 4.5 | `#EB7443` | 5.8 |
+| Major Prophets | `#9D6E00` | 4.5 | `#CD9C34` | 6.8 |
+| Minor Prophets | `#667F19` | 4.6 | `#86A645` | 6.1 |
+| Gospels | `#26828B` | 4.5 | `#49A8B3` | 6.1 |
+| History (Acts) | `#6E6A66` | 5.4 | `#9C9793` | 5.9 |
+| Letters of Paul | `#1B2A41` | 14.4 | `#8DB3EA` | 7.9 |
+| General Letters | `#4B2E57` | 11.5 | `#C0A1E4` | 7.7 |
+| Prophecy | `#986694` | 4.5 | `#B274A4` | 4.8 |
+
+- The exact contrast of History in the dark mode is 4.53 to 1. A unit test keeps each dark color at 4.5 to 1 or more.
+- Letters of Paul and General Letters are the two darkest colors on white. They are the two lightest colors on the dark page. This keeps General Letters apart from Prophecy, which is the same family of purple.
+- The designer computed the colors in the OKLCH color space: the hue of the group, and a lightness between 0.64 and 0.76.
+
+### 18.6 The map in the dark mode
+
+| Part | Light, as built | Dark |
+|---|---|---|
+| Sea and lakes | `#FFFFFF` | `#1C1C1E`, the page color |
+| Land | `#F4F1EB` | `#2B2A28` |
+| Coast line | `#CFC8BB` | `#55514A` |
+| Line of a river and of a lake | `#A9C0CC` | `#456072` |
+| Name of a water | `#4A6F84` | `#86AEC6` |
+| Name of a place | `#1D1D1F` | `#F5F5F7` |
+| Secondary text of the map | `#6B6B6B` | `#A1A1A6` |
+| Edge of a dot, and the inside of an open dot | `#FFFFFF` | `#1C1C1E` |
+| Dot, triangle, and ring | the group color | the dark group color |
+
+WARNING: The map has an SVG mask that stops the coast, river, and lake lines at each name. In a mask, white is "show" and black is "hide". These two values are not colors of the look. They do not change in the dark mode. In the sketch, a change of the white of the mask made the lines go away.
+
+### 18.7 What does not change
+
+- The light mode. After each task of this section, each page in the light mode is the same as before, pixel for pixel.
+- The words, the data, the sizes, the spaces, and the positions.
+- The icon of the site.
+- The red letters switch, the text size, and each other setting.
+
+### 18.8 The tasks
+
+1. Task 44: each color of the site gets one name in one place, and a report gives the list. It changes nothing on the site.
+2. The dark wall and the dark reading page, with the top bar, the panels, the pop-up, and the trail, and the switch. In this task, the first state of the switch is "Off", and the site does not follow the device.
+3. The dark map page and the dark pages of the Reference section.
+4. The first visit follows the device. Only after Arthur approves the dark pages on the built site.
+
+The designer writes tasks 2, 3, and 4 of this list into `docs/TASKS.md` after the report of Task 44, because they need the list of the colors.
+
+### 18.9 Selected by the designer, without a decision by Arthur
+
+Arthur saw these in the sketches and approved the direction.
+
+- The page color `#1C1C1E`, the ink colors, and the ten dark group colors.
+- The rule for the text of the band.
+- The dark red of the red letters.
+- The colors of the dark map.
+- The key `bible-dark-mode`, and the place of the switch.
+- The order of the tasks, and the rule that the site does not follow the device until Arthur approves the dark pages.
+
+### 18.10 Weak points, not decided, and not checked
+
+1. The red letters are near the dark colors of History and of Poetry & Wisdom. In Matthew 5, the red text and the label "Psalms 37:11" in the margin are close. On white, the dark red is clearly different.
+2. On the dark map, the land is only a little lighter than the sea. The coast line carries the shape.
+3. Law, History, and Poetry & Wisdom are three warm colors. They are distinct on the dark wall, but less than on white.
+4. Not in the sketches: the timeline, the quotation diagram, the Sources page, the pop-up, the chapter grid, the translation list, the trail, and each hover state. The designer saw the text list and the menu panel in the dark mode only with the same color as the page.
+5. The words of the Sources page do not name the modes. No decision.
+6. The line `theme-color` of `index.html` is white. The dark mode needs the page color there. Task 4 of the list in section 18.8.
+7. No test on a real phone.

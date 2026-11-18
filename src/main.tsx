@@ -6,6 +6,14 @@ import '@fontsource/lora/400.css'
 import '@fontsource/lora/400-italic.css'
 import './index.css'
 import App from './App.tsx'
+import { groupColorsCss } from './data/books.ts'
+
+// The names of the ten group colors on the root element, before the first render: docs/TASKS.md Task 44.
+// The other colors have their names in src/index.css.
+const groupColors = document.createElement('style')
+groupColors.id = 'group-colors'
+groupColors.textContent = groupColorsCss()
+document.head.append(groupColors)
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

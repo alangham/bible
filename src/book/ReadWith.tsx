@@ -3,7 +3,7 @@
 // Each entry is a control for travel to that chapter, in the color of its group.
 
 import { useId } from 'react'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { ChapterRef } from '../data/links.ts'
 import { passageName } from '../data/passage.ts'
 import { chapterHref } from '../router.ts'
@@ -30,7 +30,7 @@ export function ReadWith({ books, list, onTravel }: ReadWithProps) {
             <li key={`${r.book}:${r.c}`}>
               <a
                 href={chapterHref(r.book, r.c)}
-                style={{ color: book ? groupOf(book).color : undefined }}
+                style={{ color: book ? groupVar(groupOf(book)) : undefined }}
                 onClick={(e) => {
                   if (!plainClick(e)) return
                   e.preventDefault()

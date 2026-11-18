@@ -8,7 +8,7 @@
 //
 // All sizes are in CSS px. The page measures the width of the line and of each name.
 
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { lineYear, standPoint, yearsBetween, type BookDate } from '../data/dates.ts'
 
 /** The number of books of the Old Testament. */
@@ -125,7 +125,7 @@ export function timelineLayout(books: Book[], dates: Map<string, BookDate>, widt
     let row = 0
     while (rows[row]?.some(([a, b]) => !(r <= a || l >= b))) row++
     ;(rows[row] ??= []).push([l, r])
-    return { book, date, color: groupOf(book).color, x, x1, x2, row, width: w }
+    return { book, date, color: groupVar(groupOf(book)), x, x1, x2, row, width: w }
   })
 
   return {

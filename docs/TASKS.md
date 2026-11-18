@@ -3060,3 +3060,64 @@ Done when:
 - `npm run build` has no errors.
 
 Stop and report. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 44. Dark mode: one name for each color, and a report
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: each color of the site has one name in one place, so that a later task can give each name a second value for the dark mode. A report gives the list of the colors.
+
+Arthur decided on 2026-11-18 to add a dark mode. Read section 18 of `docs/DESIGN.md` first. This task is the first of four. It builds no dark mode.
+
+This task shows nothing on the site. Each page is the same as before, pixel for pixel.
+
+WARNING: Do not change the value of a color. Do not add a dark value, a switch, a media query for `prefers-color-scheme`, or the key `bible-dark-mode`. Those are for the next tasks, which the designer writes after your report.
+
+WARNING: Do not change a size, a space, a position, a word, or a data file.
+
+WARNING: The ten group colors in `src/data/books.ts` stay the one source of a group color. Do not change a value. The unit test of their contrast against white stays.
+
+WARNING: In `src/map/MapDrawing.tsx`, the white and the black inside the SVG mask are not colors of the look. They mean "show" and "hide". Give them no name, and do not change them. Add a comment that says so.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make screenshots of the built site in a folder outside the repository, at 1440 by 900 px and at 390 by 844 px:
+   - The wall.
+   - Matthew 1 with "About this book" open, and Matthew 5.
+   - A reading page with the pop-up of a link open.
+   - A reading page with a trail of two stops.
+   - The chapter grid open, the translation list open, and the text list or the menu panel open.
+   - The map of Acts, and the map of Joshua with the switch off.
+   - The timeline, the Quotations page with one book selected, and the Sources page.
+2. Make the list of each color value in `src/`, with no test file: in `src/index.css`, and in each `.ts` and `.tsx` file. Include a color with an alpha value, a `color-mix`, a gradient, a shadow, and a `fill` or a `stroke` of an SVG.
+3. Give each color a name by its role, not by its value. Examples of a role: the page, the ink, the secondary ink, a thin line, the surface of a panel, the text of the band, the land of the map. Two parts with the same value and different roles get two names. Example: white is the page, the text of the band, and the edge of a dot of the map. In the dark mode, these get different values or follow different rules. Section 18.4 has the reason.
+4. Put each name in one place. A CSS custom property on the root element is the usual form. Change each use in the CSS to the name.
+5. Change each color in a `.ts` or `.tsx` file to the name. These files have them now: `src/map/MapDrawing.tsx`, `src/map/MapPage.tsx`, `src/map/mapLayout.ts`, and `src/reference/QuotationsPage.tsx`. Find the others.
+6. Build so that a later task changes the value of each name with one attribute on the root element, with no new render by React and no change in a component. This includes the group colors: a component gets the color of a group through a name, not through a value in a `style`. If a place needs the value in the code and cannot use a name, do not force it: give the place and the reason in the report. Possible examples are the gradient of the quotation diagram and the code that measures a contrast.
+7. Add a unit test that reads the files of `src/` and fails if a file has a color value outside the one place of the names, `src/data/books.ts`, the mask of the fourth warning, and the places of step 6 that the report gives.
+8. Make the screenshots of step 1 again. Compare each pair, pixel for pixel. The number of different pixels must be 0. If a pair differs, find the cause and correct it. Do not accept a small difference.
+9. Write the report `docs/reviews/task-44-colors.md`:
+   - A table with one row for each name: the name, the value, the role, and the parts of the site that use it.
+   - The ten group colors, and each part that uses a group color: as text, as a background, as a line, or in a mix.
+   - Each place where a text in a group color is on a surface that is not the page. Section 18.4 has a rule for these.
+   - Each part that the light mode makes darker or lighter on hover or on focus, and how.
+   - Each shadow.
+   - The places of step 6 that need a value in the code.
+   - Each color that you think is a mistake or is the same role as a different name with a different value. Do not correct it. Give it.
+   - The result of step 8 for each pair.
+10. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The test of step 7 passes.
+- Each pair of step 8 has 0 different pixels.
+- `docs/reviews/task-44-colors.md` has each part of step 9.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Commit the eight sketches of the designer in `docs/screenshots/dark-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.

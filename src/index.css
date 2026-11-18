@@ -1,19 +1,106 @@
 /* Colors and fonts from docs/DESIGN.md section 7.3. */
 :root {
+  /*
+    The colors of the site: one name for each role, in this one place. docs/DESIGN.md section 18.4, docs/TASKS.md Task 44.
+    A later task gives each name a second value for the dark mode, with one attribute on this element. Two parts with
+    the same value and a different role have two names. docs/reviews/task-44-colors.md gives the parts of each name.
+    The ten group colors are not here: src/data/books.ts is their one source, and src/main.tsx gives each one its
+    name on this element, from --group-law to --group-prophecy.
+  */
+
+  /* The page, and the text on it. */
+  --page: #fff;
   --ink: #1d1d1f;
+  --ink-secondary: #6e6e73;
+  /* The text in italics of a superscription, of a heading of Psalm 119, and of the reason line of the pop-up. */
+  --ink-italic: #3a3a3c;
+  /* The words of Jesus, with red letters on. docs/DESIGN.md section 11.4. */
+  --red-letters: #8b1a1a;
+  /* The text on a group color: the band, the current chapter of the chapter grid, and "Go there". */
+  --on-group: #fff;
+
+  /* Lines. */
+  --line: rgba(0, 0, 0, 0.09);
+  /* The line between two rows of the timeline list and of the list of the quotation diagram. */
+  --line-faint: rgba(0, 0, 0, 0.05);
+  /* The short upright line between two controls of the top bar, and in the trail. */
+  --divider: rgba(0, 0, 0, 0.14);
+  /* The line at the left of a verse of the section "The three translations" of the Sources page. */
+  --sample-line: #e3e3e6;
+  /* The line at the left of the credit of the line "Video". */
+  --credit-line: rgba(0, 0, 0, 0.2);
+  /* The border of an entry of the read-with list, and of a zoom button of the map. */
+  --border-chip: rgba(0, 0, 0, 0.14);
+  /* The border of the label "Draft". */
+  --border-draft: rgba(0, 0, 0, 0.15);
+  /* The border of "Stay here" in the pop-up. */
+  --border-button: rgba(0, 0, 0, 0.18);
+  /* The border of the select control of the quotation diagram. */
+  --border-select: rgba(0, 0, 0, 0.2);
+
+  /* Surfaces. */
+  /* The top bar of the wall, of the reading page, and of the Reference section. */
+  --bar: rgba(255, 255, 255, 0.9);
+  /* A panel with no text in a group color: the menu panel, the translation list, the select control, a zoom button. */
+  --panel: #fff;
+  /* A panel with text in a group color: the chapter grid, the trail, the pop-up, an entry of the read-with list. */
+  --panel-group: #fff;
+  /* A light gray surface: the detail of "Scholars differ", and a row of the timeline list for a break. */
+  --surface-gray: #f5f5f7;
+  /* A row or a cell under the pointer: the chapter grid and the translation list. */
+  --hover: rgba(0, 0, 0, 0.05);
+  /* A zoom button of the map under the pointer. */
+  --button-hover: #f5f5f7;
+  /* The shade below an open panel of the top bar, and below the pop-up. */
+  --shade-bar: rgba(0, 0, 0, 0.18);
+  --shade-pop: rgba(0, 0, 0, 0.22);
+  /* The verse that travel opens: its background and its ring, and the color mixed into the group color of its number. */
+  --hit: rgba(0, 0, 0, 0.06);
+  --hit-mix: #000;
+
+  /* Shadows. */
+  --shadow-panel: 0 14px 30px rgba(0, 0, 0, 0.08);
+  --shadow-list: 0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  --shadow-pop: 0 18px 50px rgba(0, 0, 0, 0.16);
+  --shadow-button: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  /* The map page: the switch and the zoom buttons. */
+  --switch-off: #8e8e93;
+  --switch-knob: #fff;
+  --disabled: #b0b0b5;
+
+  /* The timeline: the inside of the dot of an estimate, and the line around a book name. */
+  --timeline-dot-open: #fff;
+  --timeline-halo: #fff;
+
+  /* The map. docs/DESIGN.md section 18.6. */
+  --map-sea: #fff;
+  --map-land: #f4f1eb;
+  --map-coast: #cfc8bb;
+  --map-water-line: #a9c0cc;
+  --map-water-name: #4a6f84;
+  --map-place-name: #1d1d1f;
+  --map-secondary: #6b6b6b;
+  --map-dot-edge: #fff;
+  --map-dot-open: #fff;
+
+  /* The quotation diagram: a line that is not selected, and a book name with no line to the selected book. */
+  --quote-line-dim: #1d1d1f;
+  --quote-name-dim: #6e6e73;
+
   /* The corners of the band in its four places: .wall-band, .rd-band, .pop-band, and .q-band.
      docs/DESIGN.md section 7.4, docs/TASKS.md Task 32. */
   --band-radius: 3px;
 
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);
-  background: #fff;
+  background: var(--page);
 }
 
 body {
   margin: 0;
   min-height: 100svh;
-  background: #fff;
+  background: var(--page);
 }
 
 a {
@@ -94,14 +181,12 @@ a {
 /* The values are those of docs/prototype/index.html. src/wall/layout.ts gives the column widths. */
 
 .wall {
-  --wall-ink: #1d1d1f;
-
   box-sizing: border-box;
   min-height: 100svh;
   /* The top bar is fixed. docs/DESIGN.md section 9.3. */
   padding-top: 52px;
-  background: #fff;
-  color: var(--wall-ink);
+  background: var(--page);
+  color: var(--ink);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -181,7 +266,7 @@ html:has(.wall) {
   margin: 14px 0 6px;
   padding: 5px 8px;
   border-radius: var(--band-radius);
-  color: #fff;
+  color: var(--on-group);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -217,14 +302,14 @@ html:has(.wall) {
   align-items: center;
   justify-content: flex-end;
   padding: 0 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bar);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+  border-bottom: 1px solid var(--line);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #6e6e73;
+  color: var(--ink-secondary);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -252,12 +337,12 @@ html:has(.wall) {
 
 @media (hover: hover) {
   .bar-links a:hover {
-    color: #1d1d1f;
+    color: var(--ink);
   }
 }
 
 .bar-links a:focus-visible {
-  outline: 2px solid #1d1d1f;
+  outline: 2px solid var(--ink);
   outline-offset: -2px;
   border-radius: 4px;
 }
@@ -289,9 +374,9 @@ html:has(.wall) {
   max-height: calc(100svh - 52px);
   overflow: auto;
   padding: 8px 16px 14px;
-  background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-panel);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -311,7 +396,7 @@ html:has(.wall) {
   padding: 0;
   border: 0;
   background: none;
-  color: #1d1d1f;
+  color: var(--ink);
   font: 500 16px Inrond, system-ui, sans-serif;
   text-align: left;
   text-decoration: none;
@@ -319,13 +404,13 @@ html:has(.wall) {
 }
 
 .menu-state {
-  color: #6e6e73;
+  color: var(--ink-secondary);
 }
 
 .menu-rule {
   height: 1px;
   margin: 6px 0;
-  background: rgba(0, 0, 0, 0.09);
+  background: var(--line);
 }
 
 /*
@@ -339,7 +424,7 @@ html:has(.wall) {
   justify-content: space-between;
   column-gap: 12px;
   min-height: 48px;
-  color: #1d1d1f;
+  color: var(--ink);
   font: 500 16px Inrond, system-ui, sans-serif;
 }
 
@@ -353,7 +438,7 @@ html:has(.wall) {
   padding: 0 8px;
   border: 0;
   background: none;
-  color: #6e6e73;
+  color: var(--ink-secondary);
   font: 500 16px Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
@@ -370,7 +455,7 @@ html:has(.wall) {
 }
 
 .menu-size-sizes button[aria-pressed='true'] {
-  color: #1d1d1f;
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -390,13 +475,9 @@ html:has(.wall) {
 /* The values are those of docs/prototype/index.html. */
 
 .reading {
-  --rd-ink: #1d1d1f;
-  --rd-ink-secondary: #6e6e73;
-  --rd-line: rgba(0, 0, 0, 0.09);
-
   min-height: 100svh;
-  background: #fff;
-  color: var(--rd-ink);
+  background: var(--page);
+  color: var(--ink);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   /* The browser does not move the page when a chapter is added below. */
@@ -435,13 +516,13 @@ html:has(.reading) {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bar);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid var(--rd-line);
+  border-bottom: 1px solid var(--line);
   font-size: 15px;
   font-weight: 500;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .rd-left,
@@ -478,7 +559,7 @@ html:has(.reading) {
   border: 0;
   border-radius: 8px;
   background: none;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
@@ -490,7 +571,7 @@ html:has(.reading) {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 6px;
-  color: var(--rd-ink);
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -517,7 +598,7 @@ html:has(.reading) {
   width: 1px;
   height: 18px;
   margin: 0 2px;
-  background: rgba(0, 0, 0, 0.14);
+  background: var(--divider);
 }
 
 /* The translation control: the short name of the selected translation, and a caret. */
@@ -529,7 +610,7 @@ html:has(.reading) {
   border: 0;
   border-radius: 8px;
   background: none;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
@@ -550,7 +631,7 @@ html:has(.reading) {
   padding: 12px 0;
   border: 0;
   background: none;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
@@ -575,9 +656,9 @@ html:has(.reading) {
   max-height: calc(100svh - 52px);
   overflow: auto;
   padding: 18px 20px 24px;
-  background: #fff;
-  border-bottom: 1px solid var(--rd-line);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  background: var(--panel-group);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-panel);
 }
 
 .rd-grid-panel[hidden] {
@@ -607,13 +688,13 @@ html:has(.reading) {
 
 @media (hover: hover) {
   .rd-grid a:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--hover);
   }
 }
 
 .rd-grid a[aria-current='page'] {
   background: var(--c);
-  color: #fff;
+  color: var(--on-group);
 }
 
 .rd-grid a[aria-current='page']:focus-visible {
@@ -625,7 +706,7 @@ html:has(.reading) {
   position: fixed;
   inset: 52px 0 0 0;
   z-index: 8;
-  background: rgba(0, 0, 0, 0.18);
+  background: var(--shade-bar);
 }
 
 /*
@@ -638,7 +719,7 @@ html:has(.reading) {
   position: fixed;
   z-index: 9;
   box-sizing: border-box;
-  background: #fff;
+  background: var(--panel);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -651,7 +732,7 @@ html:has(.reading) {
   width: 340px;
   padding: 6px;
   border-radius: 12px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-list);
 }
 
 /* The text list: the look of the wide translation list, 220 px wide. docs/TASKS.md Task 24 step 6. */
@@ -670,7 +751,7 @@ html:has(.reading) {
 }
 
 .ts-state {
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .tr-list[data-layout='narrow'] {
@@ -680,8 +761,8 @@ html:has(.reading) {
   max-height: calc(100svh - 52px);
   overflow: auto;
   padding: 8px 16px 14px;
-  border-bottom: 1px solid var(--rd-line);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-panel);
 }
 
 .tr-row {
@@ -696,7 +777,7 @@ html:has(.reading) {
   border: 0;
   border-radius: 8px;
   background: none;
-  color: var(--rd-ink);
+  color: var(--ink);
   font: 500 15px Inrond, system-ui, sans-serif;
   text-align: left;
   cursor: pointer;
@@ -715,14 +796,14 @@ html:has(.reading) {
 }
 
 .tr-short {
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 500;
 }
 
 @media (hover: hover) {
   .tr-list[data-layout='wide'] .tr-row:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--hover);
   }
 }
 
@@ -762,7 +843,7 @@ html:has(.reading) {
 .tr-line {
   display: block;
   margin-top: 2px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 400;
   line-height: 17px;
@@ -785,7 +866,7 @@ html:has(.reading) {
   min-height: 44px;
   padding: 0 12px;
   border-radius: 8px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
   text-decoration: none;
 }
@@ -798,7 +879,7 @@ html:has(.reading) {
 
 @media (hover: hover) {
   .tr-list[data-layout='wide'] .tr-about:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--hover);
   }
 }
 
@@ -856,7 +937,7 @@ html:has(.reading) {
   display: inline-block;
   margin: 0 0 26px;
   padding: 8px 0;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
 }
 
@@ -879,7 +960,7 @@ html:has(.reading) {
   padding: 5px 8px;
   border-radius: var(--band-radius);
   background: var(--c);
-  color: #fff;
+  color: var(--on-group);
   font: 700 12px/1.2 Inrond, system-ui, sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -958,14 +1039,14 @@ html:has(.reading) {
 
 .rd-draft {
   margin: 6px 0 4px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
 }
 
 .rd-draft span {
   margin-right: 8px;
   padding: 2px 6px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-draft);
   border-radius: 4px;
   font-size: 11px;
   font-weight: 600;
@@ -988,7 +1069,7 @@ html:has(.reading) {
 }
 
 .rd-fact dt {
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .rd-fact dd {
@@ -1037,8 +1118,8 @@ html:has(.reading) {
 .rd-fact .rd-video-credit {
   margin: 10px 0 0;
   padding-left: 10px;
-  border-left: 2px solid rgba(0, 0, 0, 0.2);
-  color: var(--rd-ink-secondary);
+  border-left: 2px solid var(--credit-line);
+  color: var(--ink-secondary);
   font: 400 14px/21px Inrond, system-ui, sans-serif;
 }
 
@@ -1051,12 +1132,12 @@ html:has(.reading) {
   margin: 6px 0 4px;
   padding: 12px 14px;
   border-radius: 10px;
-  background: #f5f5f7;
+  background: var(--surface-gray);
 }
 
 .rd-scholars-part h3 {
   margin: 0 0 2px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 600;
 }
@@ -1083,13 +1164,13 @@ html:has(.reading) {
 
 .rd-column .sh-s1 {
   margin: 34px 0 10px;
-  color: var(--rd-ink);
+  color: var(--ink);
   font-size: calc(17px * var(--rd-scale));
 }
 
 .rd-column .sh-s2 {
   margin: 26px 0 8px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: calc(15px * var(--rd-scale));
 }
 
@@ -1105,7 +1186,7 @@ html:has(.reading) {
 .rd-column .sh-d,
 .rd-column .tb-d,
 .rd-column .tb-qd {
-  color: #3a3a3c;
+  color: var(--ink-italic);
   font-style: italic;
 }
 
@@ -1124,10 +1205,10 @@ html:has(.reading) {
 /*
   Red letters: the words of the words-of-Jesus marks, in the chapter text and in the passage text of the
   pop-up. One attribute on .reading switches them. With red letters off, the words have the color of the
-  text around them. Only this rule uses the color #8b1a1a. docs/DESIGN.md section 11.4, Task 27 step 3.
+  text around them. Only this rule uses the name --red-letters. docs/DESIGN.md section 11.4, Task 27 step 3.
 */
 .reading[data-red-letters='on'] .red-letters {
-  color: #8b1a1a;
+  color: var(--red-letters);
 }
 
 .rd-column .sh-qa {
@@ -1214,14 +1295,14 @@ html:has(.reading) {
   display: block;
   margin: 0 0 1.1em;
   padding: 2px 0 2px 12px;
-  border-left: 2px solid var(--rd-line);
-  color: var(--rd-ink-secondary);
+  border-left: 2px solid var(--line);
+  color: var(--ink-secondary);
   font: 400 calc(13px * var(--rd-scale)) / 1.5 Inrond, system-ui, sans-serif;
   text-indent: 0;
 }
 
 .rd-column .omitted .vn {
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .rd-column .note-verse {
@@ -1231,7 +1312,7 @@ html:has(.reading) {
 
 .rd-end {
   margin: 90px 0 0;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 14px Inrond, system-ui, sans-serif;
   text-align: center;
 }
@@ -1308,7 +1389,7 @@ html:has(.reading) {
   padding: 12px 0;
   border: 0;
   background: none;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 500 15px Inrond, system-ui, sans-serif;
   text-align: right;
   white-space: nowrap;
@@ -1319,7 +1400,7 @@ html:has(.reading) {
 .rd-meta {
   margin: -12px 0 30px;
   padding: 0 0 16px;
-  border-bottom: 1px solid var(--rd-line);
+  border-bottom: 1px solid var(--line);
   /* "About this book" and the read-with list keep their size with each text size. docs/DESIGN.md section 10.3. */
   font-size: var(--rd-base-px);
 }
@@ -1358,16 +1439,16 @@ html:has(.reading) {
 
 .rd-read-with-label {
   margin-right: 2px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 600;
 }
 
 .rd-read-with a {
   padding: 6px 12px;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  border: 1px solid var(--border-chip);
   border-radius: 999px;
-  background: #fff;
+  background: var(--panel-group);
   font-size: 14px;
   font-weight: 600;
   line-height: 18px;
@@ -1381,7 +1462,7 @@ html:has(.reading) {
 
 .rd-read-with-source {
   margin-left: 2px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 12px;
 }
 
@@ -1447,7 +1528,7 @@ html:has(.reading) {
 /* The cross-reference line below a section heading: one control for each linked passage. */
 .rd-column .link-line {
   margin: -4px 0 10px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font: 400 calc(13px * var(--rd-scale)) / 1.45 Inrond, system-ui, sans-serif;
 }
 
@@ -1516,7 +1597,7 @@ html:has(.reading) {
 .rd-label-verse {
   flex: none;
   min-width: 14px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 11px;
   font-weight: 600;
   text-align: right;
@@ -1543,8 +1624,8 @@ html:has(.reading) {
 
 .rd-column .rd-hit {
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.06);
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
+  background-color: var(--hit);
+  box-shadow: 0 0 0 8px var(--hit);
 }
 
 /*
@@ -1556,7 +1637,7 @@ html:has(.reading) {
 }
 
 .rd-column .rd-hit .vn {
-  color: color-mix(in srgb, var(--c) 80%, #000);
+  color: color-mix(in srgb, var(--c) 80%, var(--hit-mix));
 }
 
 /*
@@ -1577,9 +1658,9 @@ html:has(.reading) {
   padding: 0 20px;
   overflow-x: auto;
   overflow-y: hidden;
-  background: #fff;
-  border-bottom: 1px solid var(--rd-line);
-  color: var(--rd-ink-secondary);
+  background: var(--panel-group);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-secondary);
   font: 500 13px Inrond, system-ui, sans-serif;
   white-space: nowrap;
 }
@@ -1617,7 +1698,7 @@ html:has(.reading) {
 
 .rd-trail .rd-trail-back {
   padding-right: 6px;
-  color: var(--rd-ink);
+  color: var(--ink);
 }
 
 .rd-trail-rule {
@@ -1625,7 +1706,7 @@ html:has(.reading) {
   width: 1px;
   height: 18px;
   margin: 0 6px 0 2px;
-  background: rgba(0, 0, 0, 0.14);
+  background: var(--divider);
 }
 
 .rd-trail :focus-visible {
@@ -1659,11 +1740,11 @@ html:has(.reading) {
   width: min(430px, calc(100vw - 32px));
   overflow: auto;
   padding: 18px 20px 16px;
-  border: 1px solid var(--rd-line);
+  border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
-  color: var(--rd-ink);
+  background: var(--panel-group);
+  box-shadow: var(--shadow-pop);
+  color: var(--ink);
   font-family: Inrond, system-ui, sans-serif;
 }
 
@@ -1682,11 +1763,11 @@ html:has(.reading) {
   position: fixed;
   inset: 0;
   z-index: 19;
-  background: rgba(0, 0, 0, 0.22);
+  background: var(--shade-pop);
 }
 
 .pop :focus-visible {
-  outline-color: var(--rd-ink);
+  outline-color: var(--ink);
 }
 
 .pop-band {
@@ -1695,7 +1776,7 @@ html:has(.reading) {
   padding: 4px 7px;
   border-radius: var(--band-radius);
   background: var(--d);
-  color: #fff;
+  color: var(--on-group);
   font-size: 11px;
   font-weight: 700;
   line-height: 1.2;
@@ -1714,7 +1795,7 @@ html:has(.reading) {
 
 .pop-kind {
   margin: 0 0 12px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 500;
 }
@@ -1741,21 +1822,21 @@ html:has(.reading) {
 }
 
 .pop-omitted {
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .pop-reason {
   margin: 10px 0 0;
   padding-left: 12px;
   border-left: 2px solid var(--d);
-  color: #3a3a3c;
+  color: var(--ink-italic);
   font: italic 400 calc(15px * var(--rd-scale)) / 1.5 Lora, Georgia, serif;
 }
 
 .pop-source,
 .pop-quoted-from {
   margin: 10px 0 0;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 12px;
 }
 
@@ -1778,13 +1859,13 @@ html:has(.reading) {
 
 .pop-go {
   background: var(--d);
-  color: #fff;
+  color: var(--on-group);
 }
 
 .pop-stay {
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--border-button);
   background: none;
-  color: var(--rd-ink);
+  color: var(--ink);
   cursor: pointer;
 }
 
@@ -1838,7 +1919,7 @@ html:has(.reading) {
 /* The label above the text of a reference to whole chapters or books: the text is the first verse. */
 .pop-first {
   margin: 0 0 4px;
-  color: var(--rd-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -1847,7 +1928,7 @@ html:has(.reading) {
 
 /* A long passage scrolls inside the text area, which then takes the keyboard focus. */
 .pop-text:focus-visible {
-  outline: 2px solid var(--rd-ink);
+  outline: 2px solid var(--ink);
   outline-offset: 4px;
 }
 
@@ -1855,13 +1936,9 @@ html:has(.reading) {
 /* The values are those of docs/prototype/index.html. Task 17 moves the timeline into this section. */
 
 .ref-page {
-  --ref-ink: #1d1d1f;
-  --ref-ink-secondary: #6e6e73;
-  --ref-line: rgba(0, 0, 0, 0.09);
-
   min-height: 100svh;
-  background: #fff;
-  color: var(--ref-ink);
+  background: var(--page);
+  color: var(--ink);
   font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -1877,13 +1954,13 @@ html:has(.reading) {
   align-items: center;
   gap: 20px;
   padding: 0 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bar);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
-  border-bottom: 1px solid var(--ref-line);
+  border-bottom: 1px solid var(--line);
   font-size: 15px;
   font-weight: 500;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
 }
 
 .ref-bar a {
@@ -1915,19 +1992,19 @@ html:has(.reading) {
 }
 
 .ref-tabs a[aria-current='page'] {
-  color: var(--ref-ink);
+  color: var(--ink);
   font-weight: 600;
-  border-bottom-color: var(--ref-ink);
+  border-bottom-color: var(--ink);
 }
 
 @media (hover: hover) {
   .ref-bar a:hover {
-    color: var(--ref-ink);
+    color: var(--ink);
   }
 }
 
 .ref-bar a:focus-visible {
-  outline: 2px solid var(--ref-ink);
+  outline: 2px solid var(--ink);
   outline-offset: -2px;
   border-radius: 4px;
 }
@@ -1951,14 +2028,14 @@ html:has(.reading) {
 .ref-lead {
   max-width: 640px;
   margin: 0 0 28px;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 16px;
   line-height: 1.5;
 }
 
 .ref-foot {
   margin-top: 18px;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   line-height: 1.6;
 }
@@ -1989,7 +2066,7 @@ html:has(.reading) {
 }
 
 .q-book:focus-visible .q-hit {
-  stroke: var(--ref-ink);
+  stroke: var(--ink);
   stroke-width: 1.5;
 }
 
@@ -2018,7 +2095,7 @@ html:has(.reading) {
   padding: 4px 7px;
   border-radius: var(--band-radius);
   background: var(--q);
-  color: #fff;
+  color: var(--on-group);
   font-size: 11px;
   font-weight: 700;
   line-height: 1.2;
@@ -2041,7 +2118,7 @@ html:has(.reading) {
 
 .q-list h3 {
   margin: 16px 0 4px;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 600;
 }
@@ -2056,7 +2133,7 @@ html:has(.reading) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--line-faint);
 }
 
 .q-list li button {
@@ -2094,10 +2171,10 @@ html:has(.reading) {
   height: 44px;
   margin: 0 0 14px;
   padding: 0 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-select);
   border-radius: 10px;
-  background: #fff;
-  color: var(--ref-ink);
+  background: var(--panel);
+  color: var(--ink);
   font: 500 16px Inrond, system-ui, sans-serif;
 }
 
@@ -2113,23 +2190,23 @@ html:has(.reading) {
 }
 
 .tl-axis {
-  stroke: var(--ref-ink);
+  stroke: var(--ink);
   stroke-width: 1.5;
 }
 
 .tl-break {
   fill: none;
-  stroke: var(--ref-ink-secondary);
+  stroke: var(--ink-secondary);
   stroke-width: 1.5;
 }
 
 .tl-tick {
-  stroke: var(--ref-ink);
+  stroke: var(--ink);
 }
 
 .tl-tick-label,
 .tl-break-words {
-  fill: var(--ref-ink-secondary);
+  fill: var(--ink-secondary);
   font-size: 12px;
   font-weight: 500;
 }
@@ -2159,7 +2236,7 @@ html:has(.reading) {
 }
 
 .tl-dot[data-estimate='true'] {
-  fill: #fff;
+  fill: var(--timeline-dot-open);
   stroke: var(--tl);
   stroke-width: 1.6;
 }
@@ -2173,7 +2250,7 @@ html:has(.reading) {
 }
 
 .tl-link:focus-visible .tl-hit {
-  stroke: var(--ref-ink);
+  stroke: var(--ink);
   stroke-width: 1.5;
 }
 
@@ -2184,7 +2261,7 @@ html:has(.reading) {
   font-size: 14px;
   text-transform: uppercase;
   paint-order: stroke;
-  stroke: #fff;
+  stroke: var(--timeline-halo);
   stroke-width: 5px;
   stroke-linejoin: round;
 }
@@ -2207,7 +2284,7 @@ html:has(.reading) {
   grid-template-columns: 136px 1fr;
   align-items: baseline;
   padding: 7px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--line-faint);
   color: inherit;
   text-decoration: none;
 }
@@ -2215,7 +2292,7 @@ html:has(.reading) {
 .tl-row-date {
   grid-column: 1;
   grid-row: 1;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 500;
 }
@@ -2240,7 +2317,7 @@ html:has(.reading) {
 }
 
 .tl-row:focus-visible {
-  outline: 2px solid var(--ref-ink);
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
@@ -2248,9 +2325,9 @@ html:has(.reading) {
 .tl-break-row {
   margin: 0;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  background: #f5f5f7;
-  color: var(--ref-ink-secondary);
+  border-bottom: 1px solid var(--line-faint);
+  background: var(--surface-gray);
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 500;
   text-align: center;
@@ -2307,7 +2384,7 @@ html:has(.reading) {
 .ref-main.sources-page .sources-versions li {
   margin: 0 0 22px;
   padding: 0 0 0 16px;
-  border-left: 3px solid #e3e3e6;
+  border-left: 3px solid var(--sample-line);
 }
 
 .ref-main.sources-page .sources-versions li:last-child {
@@ -2326,14 +2403,14 @@ html:has(.reading) {
 
 .sources-version-short {
   margin-left: 4px;
-  color: #6e6e73;
+  color: var(--ink-secondary);
   font-size: 13px;
   font-weight: 500;
 }
 
 .ref-main.sources-page .sources-version-line {
   margin: 0;
-  color: #6e6e73;
+  color: var(--ink-secondary);
   font-size: 14px;
   line-height: 20px;
 }
@@ -2425,7 +2502,7 @@ html:has(.reading) {
 
 .map-heading {
   margin: 22px 0 4px;
-  color: var(--ref-ink);
+  color: var(--ink);
   font-size: 20px;
   font-weight: 600;
   line-height: 1.3;
@@ -2433,7 +2510,7 @@ html:has(.reading) {
 
 .map-region {
   margin: 0;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 15px;
 }
 
@@ -2450,7 +2527,7 @@ html:has(.reading) {
   padding: 8px 0;
   border: 0;
   background: none;
-  color: var(--ref-ink);
+  color: var(--ink);
   font: 500 15px/22px Inrond, system-ui, sans-serif;
   text-align: left;
   cursor: pointer;
@@ -2462,7 +2539,7 @@ html:has(.reading) {
   width: 38px;
   height: 22px;
   border-radius: 11px;
-  background: #8e8e93;
+  background: var(--switch-off);
   transition: background-color 120ms ease;
 }
 
@@ -2477,7 +2554,7 @@ html:has(.reading) {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--switch-knob);
   transition: transform 120ms ease;
 }
 
@@ -2510,7 +2587,7 @@ html:has(.reading) {
 .map-frame {
   position: relative;
   box-sizing: border-box;
-  border: 1px solid var(--ref-line);
+  border: 1px solid var(--line);
   overflow: hidden;
 }
 
@@ -2522,7 +2599,7 @@ html:has(.reading) {
 
 /* The map takes the focus for the keys. The frame cuts an outline outside the map, so the outline is inside. */
 .map-svg:focus-visible {
-  outline: 3px solid var(--ref-ink);
+  outline: 3px solid var(--ink);
   outline-offset: -3px;
 }
 
@@ -2551,28 +2628,28 @@ html:has(.reading) {
   width: 36px;
   height: 36px;
   padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.14);
+  border: 1px solid var(--border-chip);
   border-radius: 6px;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  color: var(--ref-ink);
+  background: var(--panel);
+  box-shadow: var(--shadow-button);
+  color: var(--ink);
   font: 400 22px/1 Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
 
 .map-zoom button:disabled {
-  color: #b0b0b5;
+  color: var(--disabled);
   cursor: default;
 }
 
 .map-zoom button:focus-visible {
-  outline: 3px solid var(--ref-ink);
+  outline: 3px solid var(--ink);
   outline-offset: 2px;
 }
 
 @media (hover: hover) {
   .map-zoom button:not(:disabled):hover {
-    background: #f5f5f7;
+    background: var(--button-hover);
   }
 }
 
@@ -2615,7 +2692,7 @@ html:has(.reading) {
   margin: 30px 0 0;
   padding: 0;
   list-style: none;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 14px;
   line-height: 24px;
 }
@@ -2633,7 +2710,7 @@ html:has(.reading) {
 .map-counts p,
 .map-credit {
   margin: 14px 0 0;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 15px;
   line-height: 1.5;
 }
@@ -2651,7 +2728,7 @@ html:has(.reading) {
   max-width: 1440px;
   margin: 0 auto;
   padding: 44px 80px;
-  color: var(--ref-ink-secondary);
+  color: var(--ink-secondary);
   font-size: 17px;
 }
 

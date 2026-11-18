@@ -7,7 +7,7 @@
 // - In the narrow layout, a list control above the diagram selects a book.
 
 import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type RefObject } from 'react'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { loadQuotationPairs, type QuotationPair } from '../data/dates.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
@@ -15,11 +15,11 @@ import { bandLabel } from '../wall/layout.ts'
 import { diagram, hitHeight, NARROW_SIZE, quotationLists, WIDE_SIZE } from './quotationLayout.ts'
 import { RefBar } from './RefBar.tsx'
 
-/** The ink of a dim line. The prototype value. */
-const DIM_INK = '#1D1D1F'
+/** The ink of a dim line: the prototype value #1D1D1F. The value is in src/index.css, with the names of Task 44. */
+const DIM_INK = 'var(--quote-line-dim)'
 
-/** The color of a book name with no line to the selected book. It keeps full opacity. docs/DESIGN.md section 7.8. */
-const GRAY_NAME = '#6E6E73'
+/** The color of a book name with no line to the selected book, #6E6E73. It keeps full opacity. docs/DESIGN.md section 7.8. */
+const GRAY_NAME = 'var(--quote-name-dim)'
 
 export function QuotationsPage({ books, layout }: { books: Book[]; layout: ScreenLayout }) {
   const [pairs, setPairs] = useState<QuotationPair[] | null>(null)
@@ -209,13 +209,13 @@ interface BookListProps {
 /** The text form of the lines of the selected book. */
 function BookList({ books, pairs, book, headingRef, onSelect }: BookListProps) {
   const lists = quotationLists(books, pairs, book.id)
-  const color = groupOf(book).color
+  const color = groupVar(groupOf(book))
   const list = (items: { book: Book; n: number }[], label: string) =>
     items.length ? (
       <ul aria-label={label}>
         {items.map((it) => (
           <li key={it.book.id}>
-            <button type="button" style={{ color: groupOf(it.book).color }} onClick={() => onSelect(it.book.id)}>
+            <button type="button" style={{ color: groupVar(groupOf(it.book)) }} onClick={() => onSelect(it.book.id)}>
               {it.book.name}
             </button>
             <span>

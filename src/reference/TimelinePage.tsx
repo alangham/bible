@@ -7,7 +7,7 @@
 //   "estimated date".
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { dateLabel, loadDates, yearsBetween, type BookDate } from '../data/dates.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
@@ -211,7 +211,7 @@ function TimelineList({ books, dates }: { books: Book[]; dates: Map<string, Book
       {list.map(({ b, d }) => (
         <li key={b.id}>
           <a className="tl-row" href={bookHref(b.id)} data-book={b.id} data-estimate={!!d.estimate}>
-            <span className="tl-row-name" style={{ color: groupOf(b).color }}>
+            <span className="tl-row-name" style={{ color: groupVar(groupOf(b)) }}>
               {b.name}
               {d.estimate && <span className="sr-only">, estimated date</span>}
             </span>

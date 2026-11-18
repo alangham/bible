@@ -46,6 +46,27 @@ export const GROUPS: readonly Group[] = [
   { name: 'Prophecy', color: '#986694' },
 ]
 
+/**
+ * The name of the CSS custom property of a group color, on the root element: for example --group-poetry-wisdom.
+ * docs/TASKS.md Task 44. This file stays the one source of the value: src/main.tsx gives each name its value.
+ */
+export function groupProperty(group: Group): string {
+  return `--group-${group.name.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}`
+}
+
+/**
+ * A group color as a CSS value: its name, not its value. A component uses this, so that one attribute on the root
+ * element can change each group color with no new render. The value is for code that computes with a color.
+ */
+export function groupVar(group: Group): string {
+  return `var(${groupProperty(group)})`
+}
+
+/** The CSS rule that gives each group color its name on the root element. src/main.tsx adds it before the first render. */
+export function groupColorsCss(): string {
+  return `:root {\n${GROUPS.map((g) => `  ${groupProperty(g)}: ${g.color};`).join('\n')}\n}\n`
+}
+
 export function groupOf(book: Book): Group {
   const group = GROUPS.find((g) => g.name === book.group)
   if (!group) throw new Error(`Unknown group "${book.group}" for book "${book.id}"`)

@@ -394,12 +394,12 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
         onMouseDown={onMouseDown}
         onDoubleClick={onDoubleClick}
       >
-        <rect width={W} height={H} fill="#fff" />
+        <rect width={W} height={H} fill="var(--map-sea)" />
         <g key={step} className={zoom.anim && !pinch ? `map-zoom-${zoom.anim}` : undefined} style={contentStyle}>
           <g transform={`translate(${-offset.x} ${-offset.y})`}>
             {/* The colors of the land and of the lakes. A name does not change them. */}
-            <path d={paths.land} fill="#f4f1eb" fillRule="evenodd" />
-            <path d={paths.lakes} fill="#fff" fillRule="evenodd" />
+            <path d={paths.land} fill="var(--map-land)" fillRule="evenodd" />
+            <path d={paths.lakes} fill="var(--map-sea)" fillRule="evenodd" />
             {/* The lines stop at each name: the mask has a hole for the box of each name. "The drawing", rule 5. */}
             {/* The mask is larger than the canvas: during a pinch or the animation of a zoom, the frame can show the
                 land past the edge of the canvas, and its lines too. */}
@@ -411,23 +411,25 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
               width={canvas.width + 2 * maskMargin}
               height={canvas.height + 2 * maskMargin}
             >
+              {/* In this mask, the white means "show" and the black means "hide". They are not colors of the look,
+                  so they have no name, and the dark mode does not change them. docs/DESIGN.md section 18.6, Task 44. */}
               <rect x={-maskMargin} y={-maskMargin} width={canvas.width + 2 * maskMargin} height={canvas.height + 2 * maskMargin} fill="#fff" />
               {cuts.map((c) => (
                 <rect key={c.i} x={c.x} y={c.y} width={c.w} height={c.h} rx={NAME_CUT_RADIUS} fill="#000" />
               ))}
             </mask>
             <g className="map-lines" mask={`url(#${maskId})`} fill="none" strokeLinejoin="round">
-              <path d={paths.land} stroke="#cfc8bb" strokeWidth="0.9" />
-              <path d={paths.lakes} stroke="#a9c0cc" strokeWidth="0.9" />
-              <path d={paths.rivers} stroke="#a9c0cc" strokeWidth="1.1" strokeLinecap="round" />
+              <path d={paths.land} stroke="var(--map-coast)" strokeWidth="0.9" />
+              <path d={paths.lakes} stroke="var(--map-water-line)" strokeWidth="0.9" />
+              <path d={paths.rivers} stroke="var(--map-water-line)" strokeWidth="1.1" strokeLinecap="round" />
             </g>
             {shown && (
               <g className="map-dots">
                 {shown.dots.map((d) => {
                   const p = places[d.i]
                   const solid = p.sure
-                  const fill = solid ? color : '#fff'
-                  const stroke = solid ? '#fff' : color
+                  const fill = solid ? color : 'var(--map-dot-open)'
+                  const stroke = solid ? 'var(--map-dot-edge)' : color
                   const sw = solid ? 1 : 1.4
                   return p.kind === 'mountain' ? (
                     <path key={d.i} data-place={d.i} d={trianglePath(d.x, d.y, r)} fill={fill} stroke={stroke} strokeWidth={sw} />

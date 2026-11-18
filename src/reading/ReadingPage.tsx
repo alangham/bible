@@ -19,7 +19,7 @@ import { BookNotFound } from '../book/BookNotFound.tsx'
 import { LinkPopup } from '../book/LinkPopup.tsx'
 import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { setRedLetters, useRedLetters } from '../data/redLetters.ts'
 import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
@@ -279,7 +279,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
 
   const shown = current ?? (start ? { book: start.book, n: start.n } : null)
   return (
-    <div className="reading" data-trail={trail.stops.length > 0} data-text-size={textSize} data-red-letters={redOn ? 'on' : 'off'} style={{ '--c': groupOf(shown?.book ?? book).color } as CSSProperties}>
+    <div className="reading" data-trail={trail.stops.length > 0} data-text-size={textSize} data-red-letters={redOn ? 'on' : 'off'} style={{ '--c': groupVar(groupOf(shown?.book ?? book)) } as CSSProperties}>
       {shown && (
         <TopBar
           books={books}

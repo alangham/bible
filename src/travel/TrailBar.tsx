@@ -5,7 +5,7 @@
 
 import type { MouseEvent } from 'react'
 import { plainClick } from '../book/links.ts'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { passageName } from '../data/passage.ts'
 import { chapterHref } from '../router.ts'
 import { goToStop, useTrail, type Stop } from './trail.ts'
@@ -21,7 +21,7 @@ export function TrailBar({ books, onGo }: TrailBarProps) {
   if (!trail.stops.length) return null
   const color = (s: Stop) => {
     const book = books.find((b) => b.id === s.book)
-    return book ? groupOf(book).color : undefined
+    return book ? groupVar(groupOf(book)) : undefined
   }
   const open = (i: number) => (e: MouseEvent<HTMLAnchorElement>) => {
     if (!plainClick(e)) return

@@ -3,7 +3,7 @@
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
-import { groupOf, type Book } from '../data/books.ts'
+import { groupOf, groupVar, type Book } from '../data/books.ts'
 import { bookHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { bandLabel } from '../wall/layout.ts'
@@ -129,7 +129,7 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
   const showSwitch = hasUncertain(places)
   const uncertainOff = showSwitch && !uncertainOn
   const drawn = useMemo(() => (uncertainOff ? withoutUncertain(places) : places), [places, uncertainOff])
-  const color = groupOf(book).color
+  const color = groupVar(groupOf(book))
   const nameEm = book.name.length * 0.8
 
   return (
@@ -201,9 +201,9 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
 function Sign({ kind, color, r }: { kind: 'dot' | 'open' | 'triangle'; color: string; r: number }) {
   return (
     <svg className="map-sign" width="14" height="14" viewBox="-7 -7 14 14" aria-hidden="true">
-      {kind === 'dot' && <circle r={r} fill={color} stroke="#fff" strokeWidth="1" />}
-      {kind === 'open' && <circle r={r} fill="#fff" stroke={color} strokeWidth="1.4" />}
-      {kind === 'triangle' && <path d={trianglePath(0, 0, r)} fill={color} stroke="#fff" strokeWidth="1" />}
+      {kind === 'dot' && <circle r={r} fill={color} stroke="var(--map-dot-edge)" strokeWidth="1" />}
+      {kind === 'open' && <circle r={r} fill="var(--map-dot-open)" stroke={color} strokeWidth="1.4" />}
+      {kind === 'triangle' && <path d={trianglePath(0, 0, r)} fill={color} stroke="var(--map-dot-edge)" strokeWidth="1" />}
     </svg>
   )
 }

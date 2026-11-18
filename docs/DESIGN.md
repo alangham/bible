@@ -1499,3 +1499,27 @@ Not checked:
 1. If BibleProject accepts this credit for a text link. Only BibleProject can say. Arthur can ask.
 2. The help pages, in a browser.
 3. The designer is not a lawyer. This section is not legal advice.
+
+### 17.11 Task 42 as built, checked on 2026-11-18
+
+Claude Code completed Task 42 in commit `9146072`. The designer ran the build in a browser at 1440 by 900 px and at 390 by 844 px, in Mark, Matthew, 1 Kings, 2 Kings, and Philemon, and on the Sources page.
+
+1. For each of the 66 books, the video ids and the sentence of the shared video in `src/data/videos.ts` are those of section 17.5.
+2. Each link to a video has the words and the address of sections 17.3 and 17.5, and it opens in a new tab.
+3. The credit has the words of section 17.3, with no change. It is 10 px below the last link, at 14 px, in the secondary ink color, with the line of 2 px at its left.
+4. With "About this book" open, the read-with list is 16 px below the list of the facts. With "About this book" closed, it is 6 px below the control.
+5. Philemon has the line "Video" below the line "Written", and no line "Where".
+6. No page made a request to a different server.
+7. The Sources page has the section "Videos" between "Places" and "Fonts", with the words of section 17.6, the two links, and the credit.
+
+Three points are different from the task. Arthur decided on 2026-11-18 to keep them as built:
+
+- The name of a link for a screen reader is an `aria-label`, not hidden text. The name is the one of section 17.3.
+- On the Sources page, the two summary links are a list with bullets. Each link is as high as its line of 27 px, because the accessibility test of the site counts a link that is alone on its line as a control.
+- Five older tests changed, so that their lists have "Video" and "Videos".
+
+From the report of Claude Code, not checked by the designer:
+
+- 7 chapters have no read-with list: Judges 12, Psalms 61, 70, 117, 124, and 134, and Jeremiah 45. With "About this book" open, the line below the chapter heading is 33 px below the list of the facts there. Before Task 42, it was 23 px.
+- The contrast against white: the text of the credit, 5.07 to 1. The link of the credit in the group color of Prophecy, `#986694`, 4.503 to 1, and in that of Major Prophets, `#9D6E00`, 4.502 to 1. These two are the lowest.
+- 243 unit tests and 437 browser tests pass.

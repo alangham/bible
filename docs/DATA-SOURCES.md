@@ -173,23 +173,25 @@ These are findings. Arthur must decide on them. They do not change the design.
 
 ## 6. Fonts
 
-The site uses two fonts, Inter and Lora. Section 7.3 of `docs/DESIGN.md` names them. The site bundles them from npm. It does not load them from Google Fonts.
+The site uses two fonts, Inrond and Lora. Section 16 of `docs/DESIGN.md` names Inrond, and section 7.3 names Lora. Task 41 replaced Inter with Inrond. The site bundles the fonts. It does not load them from a different server.
 
-| Font | Package | Licence | Licence file |
+| Font | Source | Licence | Licence file |
 |---|---|---|---|
-| Inter, weights 300, 400, 500, 600, 700, and 800, for the redesign (Task 11) | `@fontsource/inter` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/inter/LICENSE` |
+| Inrond, weights 300, 400, 500, 600, 700, and 800, upright, Latin and Latin Extended, at a roundness of 20, for the sans-serif text (Task 41) | Files in `src/fonts/`. The designer made them on 2026-11-17 from `Inrond[ROND,opsz,wght].ttf` of Inrond 1.0, https://github.com/Hairline-UI/inrond. Section 16.3 of `docs/DESIGN.md`. | SIL Open Font License 1.1 | `public/licenses/OFL-inrond.txt` |
 | Lora, weight 400, regular and italic, for the Bible text of the redesign (Task 11) | `@fontsource/lora` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/lora/LICENSE` |
 
-- Copyright lines in the licence files, read on 2026-11-14: "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)" and "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora"."
-- Conditions, from OFL 1.1 sections 1 to 3:
+- Copyright lines in the licence files. Inrond, read on 2026-11-17: "Copyright 2026 The Inrond Project Authors" and "Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)". Lora, read on 2026-11-14: "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora"."
+- Conditions, from OFL 1.1 conditions 1 to 5:
   1. The fonts must not be sold alone.
   2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
-  3. A changed font must not use a Reserved Font Name. The site does not change the fonts.
-- Reserved Font Name: Lora has the Reserved Font Name "Lora". The site does not change the font, so the condition has no effect.
-- Check, 2026-11-14: fontTools read the `name` table of `inter-latin-800-normal.woff2` and `lora-latin-400-normal.woff2`. Each keeps its copyright line (name 0) and a licence address (name 14). The licence text (name 13) is empty. So the site ships the licence files `public/licenses/OFL-inter.txt` and `public/licenses/OFL-lora.txt`, copied from the packages.
-- Check, Task 17, 2026-11-14: `cmp` found each of the two files in `public/licenses/` the same as the `LICENSE` file of its package.
-- The Sources page shows the copyright line of each font and links to its licence file. Task 17 added this credit.
-- Task 17 removed the two fonts of the first build, Cormorant Garamond and Newsreader, because no page uses them. It removed the packages `@fontsource/cormorant-garamond` and `@fontsource/newsreader` and the licence files `public/licenses/OFL-cormorant-garamond.txt` and `public/licenses/OFL-newsreader.txt`.
+  3. A changed font must not use a Reserved Font Name.
+  4. The names of the copyright holders and the authors must not promote a changed font, except to acknowledge their work.
+  5. A changed font must be distributed under this licence only.
+- The site's copy of Inrond is a changed font. The licence files of Inrond and of Inter name no Reserved Font Name. The README of Inter says that "Inter" is a Reserved Font Name. The site does not use the name "Inter" for a font.
+- Each file in `src/fonts/` keeps the copyright line (name 0), the licence text (name 13), and the licence address (name 14) of Inrond. The designer checked this with fontTools on 2026-11-17. The site also ships `public/licenses/OFL-inrond.txt`, the file `OFL.txt` of Inrond with no change.
+- Lora has the Reserved Font Name "Lora". The site does not change Lora, so the condition has no effect. The site ships `public/licenses/OFL-lora.txt`, copied from its package.
+- The Sources page shows the copyright lines of each font and links to its licence file.
+- History. Task 11 added Inter from `@fontsource/inter` 5.3.0. Task 17 removed the two fonts of the first build, Cormorant Garamond and Newsreader, with their packages and their licence files. Task 41 removed the package `@fontsource/inter` and `public/licenses/OFL-inter.txt`. The copyright line of Inter is in `OFL-inrond.txt` and in each file of Inrond.
 
 ## 7. Code libraries with a licence that is not open source
 

@@ -1108,3 +1108,140 @@ These rules give the details of sections 15.8 and 15.10. They are of the designe
 **The approval.** Arthur reviewed the built map page on 2026-11-17, at commit `87d16da`, and approved it. Task 40 adds the line "Where" with the link.
 
 **Not in these tasks.** A link from a place name in the text to the map. A list of the places for a reader who cannot see the map. A route. A finer coast.
+
+## 16. The font Inrond of 2026-11-17
+
+Arthur decided this section on 2026-11-17. Task 41 in `docs/TASKS.md` builds it. Where an older section names Inter, this section makes it Inrond. Lora stays the font of the Bible text.
+
+### 16.1 Reason
+
+- Arthur wanted the sans-serif text of the site to have corners that are rounded a small amount. The band has round corners of 3 px from section 7.4, and the letters of the wall had sharp corners.
+- He first made a proof of concept of his own, "Langham Sans POC": five letters of Inter Bold with round corners. It had only five letters, and it changed the diagonal of the N.
+- Inrond is a published font, made from Inter, with an axis for the roundness of the corners. It has all the characters and all the weights of Inter. Its rule rounds the ends of strokes and the outer corners only. The joins and the counters stay as in Inter.
+
+### 16.2 Decided by Arthur on 2026-11-17
+
+1. The font is Inrond 1.0, from `https://github.com/Hairline-UI/inrond`, at a roundness of 20 of 100. Arthur selected 20 from the two sheets in `docs/screenshots/font-design/`. They show the wall in Inter and in Inrond at a roundness of 10, 20, and 35. Arthur did not select 10, 35, or "keep Inter".
+2. The sizes that Arthur looked at:
+   - `wall-roundness-1440.png`: the first two columns of the wall at 1440 by 900 px, at a pixel density of 2.
+   - `wall-roundness-390.png`: the wall at 390 by 844 px, at a pixel density of 3.
+   - Before the sheets: a comparison page with "GENESIS" at 76 px, "EN" at 150 px, and "GENESIS · Genesis 1:1" at 20 px. At 20 px, the designer saw no difference from Inter at a roundness of 10, 20, or 35.
+3. The name of the font on the site is "Inrond". Arthur did not want a new name for a copy of Inrond. Section 16.5 has the licence facts.
+4. Inrond is in each place that uses Inter before Task 41: the wall, the headings, the bands, the controls, the top bar, the pop-up, the Reference section, and the map. The site has one sans-serif font.
+5. The weights are 300, 400, 500, 600, 700, and 800, the six weights of Inter on the site before Task 41. Upright only. Each file has the same characters and the same layout features as the matching file of `@fontsource/inter` 5.3.0.
+6. The site uses files made for it (option A), not the published variable file of Inrond (option B). Reason: no published file of Inrond has a roundness of 20, and the published Latin variable file is 263,300 bytes. Section 16.6 has the numbers.
+7. The font files go in `src/fonts/`. The site does not keep the package `@fontsource/inter`. While the font loads, and if it does not load, the system font of the fallback list shows.
+8. The script that makes the files goes in `scripts/fonts/`, as a record. The build of the site does not run it.
+
+### 16.3 How the files are made
+
+- Source file: `Inrond[ROND,opsz,wght].ttf`, from the repository `Hairline-UI/inrond`, at the reference `v1.0`, read on 2026-11-17. 2,453,556 bytes. SHA-256 `8075515a0e237e6bd7991714c49e79dfc82eff8938a56b4aee7affc1542d4c0f`.
+- Its name table says "Version 1.000; based on Inter 4.1". Its axes: `opsz` 14 to 32, `wght` 100 to 900, `ROND` 0 to 100. It has 2,937 glyphs and 2,852 characters.
+- The values for each file: `ROND` 20 and `opsz` 14. The weight is the weight of the file.
+- Reason for `opsz` 14: the files of `@fontsource/inter` are the text design of Inter. With the optical size set by the browser, the book names on the wall were 1 to 3.5% narrower than in Inter, and they did not fill their columns. With `opsz` 14, the widths are the same. The designer measured this on the public site on 2026-11-17.
+- The tools: fontTools 4.67.0 with the module brotli. For each weight, the script fixes the three axes. Then it cuts the font to the characters of the matching Latin file and Latin Extended file of `@fontsource/inter` 5.3.0, and keeps only the layout features of those files: `calt`, `ccmp`, `dnom`, `frac`, `locl`, `numr`, `pnum`, `tnum`, `kern`, `mark`, and `mkmk`. The files have no hinting.
+- The name table: the family name is "Inrond", and the style name is the name of the weight, for example "ExtraBold". The copyright line (name 0), the licence text (name 13), and the licence address (name 14) are those of Inrond. The version line (name 5) adds "Inrond 1.0 with ROND 20 and opsz 14, cut to latin and latin-ext".
+- The script is `build_font.py`. Its arguments: the source file, the folder `files` of `@fontsource/inter` 5.3.0, the output folder, and the family name "Inrond".
+
+### 16.4 The files
+
+The designer put the files in `resources/fonts/task-41/` on 2026-11-17. That folder is not in git. `SHA256SUMS.txt` in the same folder has the SHA-256 of each file.
+
+| File | Bytes | SHA-256 |
+|---|---|---|
+| `inrond-latin-300-normal.woff2` | 25,912 | `0730ce3fcb98a11baf41f11a07724b308b9ba3bb3c2fa61c6031448c1a161bb4` |
+| `inrond-latin-400-normal.woff2` | 25,576 | `7bbedfde3782d0c13acbb7ecb6b4cbd37ce3f41b748d0ad0591667062d0cabd0` |
+| `inrond-latin-500-normal.woff2` | 26,592 | `ccdd587678ff3f1a460c0c8af5cee5f8e1d69780f157a0e99e7ef0455c6ab4fb` |
+| `inrond-latin-600-normal.woff2` | 26,760 | `2a1b99422c0894cc86538365919be74903ff7872a7f2516dad643a08cba8a96f` |
+| `inrond-latin-700-normal.woff2` | 26,924 | `7ce6d65790945b4d4871509e0ae367a6bff9115dbdb2d33968cec4317eab0514` |
+| `inrond-latin-800-normal.woff2` | 26,992 | `fba22e8b54c50fb3260d0f9ff8005cd324f0f06b40d14944dfb5e24d44dc6653` |
+| `inrond-latin-ext-300-normal.woff2` | 40,676 | `fc3be9418e6c8ab5c2aef529326246c21b0cec3364bd36787909aff09607bdd7` |
+| `inrond-latin-ext-400-normal.woff2` | 39,248 | `a0ec1d39142a14735d4a23fdc1524a19b7cfa5e4ee49e78ebea5a2f3782ee7cb` |
+| `inrond-latin-ext-500-normal.woff2` | 41,528 | `accb43feae1b0d466358bcddcea1dc8e1000786c4eb5f6ebbffecaeb1d5c5693` |
+| `inrond-latin-ext-600-normal.woff2` | 42,008 | `91be3119ac14d21c51f6b28bb0bf72c6b6586e1f99f6be498b9d6d2fe3eb4781` |
+| `inrond-latin-ext-700-normal.woff2` | 42,460 | `52428ff3899b0a82f3c3fbee8db5ad0137cb2ce83f8bde7cf558ee1ed9fb4852` |
+| `inrond-latin-ext-800-normal.woff2` | 42,352 | `9461b12339eb412c48b21f7c654f4dd77aa7c438b9cf2f3450539fad68a7e778` |
+| `OFL-inrond.txt` | 4,422 | `9d5dae427f6da313c066c2fc9a6954c6921f12275f370e7f496a4d8693d1eb33` |
+| `build_font.py` | 4,067 | `696824e5faeb2ae8b6b48a457831cada2492beb1abb21b5b6346541ca33a2b2f` |
+| `Inrond[ROND,opsz,wght].ttf` | 2,453,556 | `8075515a0e237e6bd7991714c49e79dfc82eff8938a56b4aee7affc1542d4c0f` |
+
+- `OFL-inrond.txt` is the file `OFL.txt` of the repository `Hairline-UI/inrond` at `v1.0`, with no change.
+- The source file is in the folder so that the script can run again. The site does not use it.
+
+### 16.5 The licence
+
+The designer read `OFL.txt` of Inrond and `LICENSE.txt` of Inter on 2026-11-17.
+
+- Both are the SIL Open Font License, Version 1.1.
+- The copyright lines of Inrond: "Copyright 2026 The Inrond Project Authors" and "Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)". Apart from its first line, the Inrond file is the same as the Inter file.
+- Neither file names a Reserved Font Name.
+- The files of the site are a "Modified Version" in the words of the licence: the script changes the axes, removes characters, and changes the format.
+- What the licence asks of a changed copy:
+  1. It must not be sold by itself.
+  2. Each copy must contain the copyright notice and the licence. The site serves `public/licenses/OFL-inrond.txt`. Each font file also keeps the copyright line and the licence text in its name table.
+  3. It must not use a Reserved Font Name. The licence files name none.
+  4. The names of the copyright holders and the authors must not promote the changed copy, except to acknowledge their work. The credit on the Sources page only acknowledges.
+  5. It must be distributed under this licence only.
+- The README of Inter says that "Inter" is a Reserved Font Name of Rasmus Andersson. The licence file of Inter does not name it. The site does not use the name "Inter" for a font, so the difference has no effect here.
+
+### 16.6 Compared with Inter
+
+The designer compared each file with the matching file of `@fontsource/inter` 5.3.0, with fontTools, on 2026-11-17.
+
+- Characters: the same. 230 in each Latin file, 733 in each Latin Extended file.
+- Advance widths: the same for each character, with one exception. At weight 700, `"`, `2`, and U+0323 in the Latin file, and U+01BB, U+0264, U+029C, U+0323, and U+1EFB in the Latin Extended file, differ by 1 unit of 2,048 em. At 13 px, that is about 0.006 px.
+- Glyphs: 518 in each Latin file of both fonts. 872 in each Latin Extended file of Inrond, against 879 in Inter.
+- The version of Inter: the files of `@fontsource/inter` 5.3.0 say "Version 4.001;git-66647c0bb". Inrond says "based on Inter 4.1".
+- Bytes, woff2. A woff2 file is already compressed, and gzip makes it no smaller.
+
+| | Inter, `@fontsource/inter` 5.3.0 | Inrond, files of section 16.4 |
+|---|---|---|
+| Latin files, weights 300 to 800, each | 23,664 to 24,452 | 25,576 to 26,992 |
+| The three Latin files that the wall downloads: 500, 700, 800 | 73,028 | 80,508 |
+| All 12 files | 360,596 | 407,028 |
+| Published Inrond, Latin variable file, option B | | 263,300 |
+
+- The rounded corners add points to the outlines, so the files are about 10% larger.
+- The weights that the wall downloads are 500, 700, and 800. The first text of this section said 400, 500, 700, and 800, with 96,692 and 106,084 bytes. The first run of Task 41 measured the wall on the local build and on the public site: no visible text of the wall uses the weight 400.
+- The wall with the files of section 16.4: the designer rendered the wall from the public site at 1440 by 900 px and at 390 by 844 px. It looked the same as the approved sheets. Each book name filled its column within 0.14 px, the same as with Inter.
+
+### 16.7 Selected by the designer, without a decision by Arthur
+
+- Only woff2 files, with no woff file. The package `@fontsource/inter` also had woff files.
+- `font-display: swap` and the `unicode-range` values of `@fontsource/inter` 5.3.0, as before.
+- The names of the files.
+- The words of the credit on the Sources page and in section 6 of `docs/DATA-SOURCES.md`. Task 41 has them.
+- Task 41 removes `public/licenses/OFL-inter.txt`. The copyright line of Inter is in `OFL-inrond.txt` and in each font file. Task 17 removed the licence files of the fonts that the site stopped using, by the same rule.
+
+### 16.8 Not decided and not checked
+
+1. The designer could not check which commit the reference `v1.0` of `Hairline-UI/inrond` points to. The file list of jsDelivr for version 1.0 gives other sizes: 2,303,152 bytes for the variable file and 242,308 bytes for the Latin variable file, against 2,453,556 and 263,300 from GitHub. The approved sheets and the files of section 16.4 use the files from GitHub.
+2. The kerning of Inrond was not compared with the kerning of Inter. The fit of the wall names suggests that it is the same.
+3. Which weights the reading page, the Reference section, and the map page download. Task 41 measures this.
+4. Safari, an iPhone, and an Android phone. The designer used Chrome only.
+5. Inrond has known issues from its README: the corners are made by a rule, not by hand, and some joins of a cap and a curve change direction by a few degrees. The designer saw none at the sizes of section 16.2.
+
+### 16.9 Checked by a second chat on 2026-11-17
+
+The chat that wrote sections 13 to 15 checked this section and Task 41 before the first run of the task. In section 16, "the designer" is the chat that made the font files.
+
+1. The 15 files of `resources/fonts/task-41/` agree with `SHA256SUMS.txt` and with the table of section 16.4.
+2. Point 1 of section 16.8 is solved in part. The reference `v1.0` of `Hairline-UI/inrond` is a tag that points to the commit `5e6b991dbec38bd184377cf661205a02c4d0b6ec`. At that commit, `fonts/variable/Inrond[ROND,opsz,wght].ttf` has 2,453,556 bytes and the SHA-256 of section 16.3, and `OFL.txt` has the SHA-256 of `OFL-inrond.txt`. The different sizes in the file list of jsDelivr are not explained.
+3. Section 16.6, with fontTools: for each of the 12 files, the characters, the layout features, and the units of the em are the same as in the matching file of `@fontsource/inter` 5.3.0. The advance widths are the same, with the 3 and the 5 exceptions of 1 unit at weight 700 that section 16.6 names. The sums of bytes are 407,028 and 360,596 for the 12 files.
+4. Point 2 of section 16.8, the kerning. In Chrome, the width of a text is the same in Inter and in Inrond for each text that the chat measured: the 66 book names in capitals at weight 800, the 1,046 names of the map data at the weights 500 and 700 and in capitals at weight 600, and the 509 texts of the introductions at weight 400. The README of Inrond says that the advance widths and the kerning are those of Inter at each roundness.
+5. The characters. The chat searched 210 files for a character that is not in the two character sets of the font files: the book list, the introductions, the periods, the dates, the quotation pairs, the map data, the link data, and the source code. It found none. The Bible text is in Lora and was not part of the search.
+6. The licence. The first lines of `OFL-inrond.txt` are the two copyright lines of section 16.5, and the file names no Reserved Font Name. The file `LICENSE.txt` of Inter names none. The README of Inter says: "Inter" is a Reserved Font Name by Rasmus Andersson. Each font file has the family name "Inrond", the copyright line, the licence text, and the licence address in its name table.
+7. Not checked by the second chat: the two sheets against the files, the script `build_font.py`, and the look of the font on a real page. The chat is not a lawyer.
+
+### 16.10 The fallback list, decided by Arthur on 2026-11-17
+
+The first run of Task 41 stopped at a test of the task: with the font files stopped, 21 book names of the wall were wider than their columns, and 39 were narrower.
+
+1. The defect is older than Inrond. It was on the site with Inter. In three places, the code measures a name on a canvas with a font name that has no fallback list: the wall, the timeline, and the map. The CSS of the page has a list.
+2. What a reader sees when the font files do not load, from the build of Task 40 with Inter, with the font files stopped in the browser of the second chat:
+   - The wall: the names do not fill their columns.
+   - The timeline: "Genesis" is measured at 46 px and shown at 60 px.
+   - The map: the names do not touch, and they show in a serif font, not in the system font of the other text.
+3. The decision: the font that measures a name has the same list of font families as the CSS of the text that it measures. The map uses `Inrond, system-ui, sans-serif` for its names and its scale label. With Inrond loaded, nothing changes: the map records of Task 41 must stay the same.
+4. Arthur did not select these options: a correction of the wall only, and a change of the test with no change of the code.
+5. This is the one change of Task 41 that is more than the name of the font. Step 13a of the task has it.

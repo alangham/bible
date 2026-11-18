@@ -2819,3 +2819,131 @@ Done when:
 - The tests of step 4 pass.
 
 Stop and report.
+
+---
+
+## Task 41. The font Inrond in place of Inter
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: each text of the site that was in Inter is in Inrond, a font made from Inter with corners that are rounded a small amount. The Bible text stays in Lora. No text changes its size, its space, or its position.
+
+Arthur decided this on 2026-11-17: Inrond 1.0 at a roundness of 20, with the name "Inrond", in each place that uses Inter, from files made for the site. He selected the roundness from the sheets in `docs/screenshots/font-design/`. Read section 16 of `docs/DESIGN.md` first. The designer made the font files on 2026-11-17 and put them in `resources/fonts/task-41/`. That folder is not in git.
+
+WARNING: Do not make the font files again, and do not change them. Use the files in `resources/fonts/task-41/` only after the check of step 1 passes.
+
+WARNING: Do not change the font of the Bible text. Lora stays, and its package and its imports do not change.
+
+WARNING: Do not change a size, a space, a weight, a color, a line height, or a position of text. Change only the name of the font family. The one exception is step 13a.
+
+WARNING: Do not load a font from a different server. The site bundles the font files.
+
+WARNING: Do not use the name "Inter" for a font family. The README of Inter says that "Inter" is a Reserved Font Name. The name of the font on the site is "Inrond".
+
+WARNING: Do not change a word of the credit in step 14 or of the section in step 16. The accuracy reviewer checks these words.
+
+WARNING: Do not run `build_font.py` in this task. It is a record.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+The chat that wrote Tasks 30 to 40 checked this task on 2026-11-17, before the first run. It changed three points: the address of Inrond in the credit of step 14 is not in the copyright line, because the licence file has no address in that line. Step 11 names the comment in `src/SourcesPage.tsx`. Step 18 names the test in `e2e/reference.spec.ts`. Section 16.9 of `docs/DESIGN.md` has what that chat verified.
+
+Steps:
+
+1. Check the files. In `resources/fonts/task-41/`, run `sha256sum -c SHA256SUMS.txt`. Each of the 15 lines must end with "OK". If a line does not, stop and report. Section 16.4 of `docs/DESIGN.md` has the same values.
+2. Before you change a file, take the screenshots "before" with the site as it is. Use 1440 by 900 px and 390 by 844 px. Take the wall, Genesis 1, the Sources page, and the map page of Acts (`#/book/acts/map`). Save them in `docs/screenshots/task-41/` with the names `before-wall-1440.png`, `before-genesis-1-1440.png`, `before-sources-1440.png`, `before-map-acts-1440.png`, and the same four names with `390`.
+3. Before you change a file, record the table of the map. For Acts, Joshua, and Matthew, at 1440 by 900 px and at 390 by 844 px, in the first view with the switch in its first state, record:
+   - the attribute `data-place` of each element in `.map-dots > *`, in document order;
+   - the text of each element in `.map-names text`, in document order.
+   Save the 6 records in `docs/screenshots/task-41/map-before.json`.
+4. Before you change a file, record the font bytes. For the 4 pages of step 2, at the 2 sizes, record the name and the bytes of each font file that the browser downloads, and the total. Use the responses of Playwright. Save the records in `docs/screenshots/task-41/font-bytes-before.json`.
+5. Copy the 12 files `inrond-*.woff2` from `resources/fonts/task-41/` to `src/fonts/`. Keep the names.
+6. Copy `resources/fonts/task-41/OFL-inrond.txt` to `public/licenses/OFL-inrond.txt`.
+7. Copy `resources/fonts/task-41/build_font.py` to `scripts/fonts/build_font.py`. Add one comment at the top: the script is a record of how the designer made the files in `src/fonts/` on 2026-11-17, the build of the site does not run it, and section 16.3 of `docs/DESIGN.md` gives the source file and its SHA-256.
+8. Make `src/fonts/inrond.css` with 12 `@font-face` rules, one for each file of step 5. Each rule has:
+   - `font-family: 'Inrond'`;
+   - `font-style: normal`;
+   - `font-display: swap`;
+   - `font-weight`: the weight in the file name;
+   - `src: url(./inrond-<subset>-<weight>-normal.woff2) format('woff2')`;
+   - `unicode-range`: for a `latin` file, `U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD`. For a `latin-ext` file, `U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF`.
+   These are the values of `node_modules/@fontsource/inter/800.css` of `@fontsource/inter` 5.3.0. Before step 10, compare them with that file. If they are different, stop and report.
+9. In `src/main.tsx`, replace the six imports of `@fontsource/inter` with one import of `./fonts/inrond.css`. Keep the two imports of `@fontsource/lora`. Change the comment to name section 16 of `docs/DESIGN.md`.
+10. Remove the package: run `npm uninstall @fontsource/inter`.
+11. In `src/`, change each font family name "Inter" to "Inrond". Keep the fallback fonts after it. The places:
+    - each `font-family` and each `font` value in `src/index.css`;
+    - `NAME_FONT` in `src/wall/fit.ts`;
+    - the type and the values of `family` in `src/map/mapLayout.ts`;
+    - `SCALE_FONT` and the attribute `fontFamily` in `src/map/MapDrawing.tsx`;
+    - `NAME_FONT` in `src/reference/TimelinePage.tsx`;
+    - each comment that names Inter as the font of the site, for example "Inter ExtraBold" in `src/wall/fit.ts`, `src/wall/WallPage.tsx`, and `src/reading/heading.ts`. Write "Inrond ExtraBold".
+    - the comment at the top of `src/SourcesPage.tsx` that names the fonts of the site.
+12. Run `grep -rnw "Inter" src`. The only result must be the credit of step 14 in `src/SourcesPage.tsx`. `IntersectionObserver` is a different word, and the search does not find it.
+13. How the site loads the font. Check that it is as before, and change nothing but step 13a:
+    - While Inrond loads, the text shows in the first fallback font, and then changes to Inrond (`font-display: swap`).
+    - The wall keeps its book names hidden until `src/wall/WallPage.tsx` measures them after `document.fonts.load`. If the font does not load, the wall measures with the fallback font, and the names show.
+    - The map page and the timeline wait for `document.fonts.load` with the new font name.
+13a. The fallback list in the code that measures a name. Arthur decided this on 2026-11-17, after the first run of this task stopped at step 19. Read section 16.10 of `docs/DESIGN.md`.
+    - The defect is older than this task. In three places, the code measures a name on a canvas with a font name that has no fallback list. When the font files do not load, the canvas measures in a serif font, and the page shows the name in the system font of its CSS.
+    - The rule: the font that measures a name has the same list of font families as the CSS of the text that it measures. With Inrond loaded, nothing changes.
+    - The wall: `NAME_FONT` in `src/wall/fit.ts` gets the list of the CSS of a book name.
+    - The timeline: `NAME_FONT` in `src/reference/TimelinePage.tsx` gets the list of the CSS of `.tl-name`.
+    - The map: the names and the label of the scale bar get one list, `Inrond, system-ui, sans-serif`, for the canvas and for the `fontFamily` of the text in the drawing. Lora for the names of the waters gets the list of the CSS of the Bible text.
+    - If a font file does not load, each of the three pages still measures and shows its names. Check what the code does when `document.fonts.load` fails, and correct it if a page waits with no end.
+14. On the Sources page, section "Fonts", replace the item of Inter with this item. Keep the item of Lora. The words "SIL Open Font License, Version 1.1" are a link to `OFL-inrond.txt`, as the item of Lora links to its file.
+
+    > Inrond (https://github.com/Hairline-UI/inrond), based on Inter. Copyright 2026 The Inrond Project Authors. Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter). The site uses a changed copy of Inrond: the roundness of the corners is set to 20 of 100, and the files have only the Latin characters. Under the SIL Open Font License, Version 1.1.
+
+15. Remove `public/licenses/OFL-inter.txt`. Section 16.7 of `docs/DESIGN.md` gives the reason.
+16. In `docs/DATA-SOURCES.md`, replace section 6 "Fonts" with this text. Keep the heading.
+
+    > The site uses two fonts, Inrond and Lora. Section 16 of `docs/DESIGN.md` names Inrond, and section 7.3 names Lora. Task 41 replaced Inter with Inrond. The site bundles the fonts. It does not load them from a different server.
+    >
+    > | Font | Source | Licence | Licence file |
+    > |---|---|---|---|
+    > | Inrond, weights 300, 400, 500, 600, 700, and 800, upright, Latin and Latin Extended, at a roundness of 20, for the sans-serif text (Task 41) | Files in `src/fonts/`. The designer made them on 2026-11-17 from `Inrond[ROND,opsz,wght].ttf` of Inrond 1.0, https://github.com/Hairline-UI/inrond. Section 16.3 of `docs/DESIGN.md`. | SIL Open Font License 1.1 | `public/licenses/OFL-inrond.txt` |
+    > | Lora, weight 400, regular and italic, for the Bible text of the redesign (Task 11) | `@fontsource/lora` 5.3.0 | SIL Open Font License 1.1 | `node_modules/@fontsource/lora/LICENSE` |
+    >
+    > - Copyright lines in the licence files. Inrond, read on 2026-11-17: "Copyright 2026 The Inrond Project Authors" and "Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)". Lora, read on 2026-11-14: "Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora"."
+    > - Conditions, from OFL 1.1 conditions 1 to 5:
+    >   1. The fonts must not be sold alone.
+    >   2. The fonts can be bundled and redistributed with the site. Each copy must contain the copyright notice and the licence. These can be text files, readable headers, or machine-readable metadata fields in the font files.
+    >   3. A changed font must not use a Reserved Font Name.
+    >   4. The names of the copyright holders and the authors must not promote a changed font, except to acknowledge their work.
+    >   5. A changed font must be distributed under this licence only.
+    > - The site's copy of Inrond is a changed font. The licence files of Inrond and of Inter name no Reserved Font Name. The README of Inter says that "Inter" is a Reserved Font Name. The site does not use the name "Inter" for a font.
+    > - Each file in `src/fonts/` keeps the copyright line (name 0), the licence text (name 13), and the licence address (name 14) of Inrond. The designer checked this with fontTools on 2026-11-17. The site also ships `public/licenses/OFL-inrond.txt`, the file `OFL.txt` of Inrond with no change.
+    > - Lora has the Reserved Font Name "Lora". The site does not change Lora, so the condition has no effect. The site ships `public/licenses/OFL-lora.txt`, copied from its package.
+    > - The Sources page shows the copyright lines of each font and links to its licence file.
+    > - History. Task 11 added Inter from `@fontsource/inter` 5.3.0. Task 17 removed the two fonts of the first build, Cormorant Garamond and Newsreader, with their packages and their licence files. Task 41 removed the package `@fontsource/inter` and `public/licenses/OFL-inter.txt`. The copyright line of Inter is in `OFL-inrond.txt` and in each file of Inrond.
+
+17. In `CLAUDE.md`, section "Stack", change the line about fonts to: "Fonts as bundled files: Inrond in `src/fonts/` from section 16 of `docs/DESIGN.md`, and Lora from its package. The site gets no font from a different server."
+18. Change `e2e/sources.spec.ts` for the new credit: the item of step 14, and the licence files `OFL-inrond.txt` and `OFL-lora.txt`. Change each test in `e2e/` that expects the font family "Inter" to "Inrond". The chat that checked this task found one: the heading of level 2 in `e2e/reference.spec.ts`.
+19. Add the file `e2e/font.spec.ts`. At 1440 by 900 px and at 390 by 844 px:
+    - On the wall, Genesis 1, and the map page of Acts: after `document.fonts.ready`, the computed font family of a book name, of the top bar, and of a map name starts with "Inrond", and `document.fonts.check('800 20px Inrond')` is true on the wall.
+    - On the same pages: the browser downloads no file with "inter-" in its name.
+    - On Genesis 1: the computed font family of the Bible text starts with "Lora".
+    - On the wall, with each request for an Inrond file stopped by the test: the book names show, and each name fills its column as in `e2e/wall.spec.ts`.
+    - On the timeline, with each request for an Inrond file stopped: for each book name, the width that the page shows and the width that the canvas measures with `NAME_FONT` differ by 0.5 px at most.
+    - On the map page of Acts, with each request for a font file stopped: the map is ready, no name touches a different name, and the list of font families of a place name has "system-ui".
+    - The map: the 6 records of step 3, made again, are the same as `docs/screenshots/task-41/map-before.json`. Reason: the advance widths of Inrond are the same as those of Inter, except 1 unit of 2,048 em on 5 characters at weight 700. Section 16.6 of `docs/DESIGN.md` has the list.
+    - The link to `OFL-inrond.txt` on the Sources page returns the file.
+    - The axe check, as in `e2e/a11y.spec.ts`, on the wall, Genesis 1, and the map page of Acts.
+20. Record the font bytes again, as in step 4. Save them in `docs/screenshots/task-41/font-bytes-after.json`. Section 16.6 of `docs/DESIGN.md` expects 73,028 bytes before and 80,508 bytes after for the wall. The first run of this task found these numbers: the wall downloads the weights 500, 700, and 800, and not 400. If the result is more than 10% different from these numbers, record the cause in the report.
+21. Take the screenshots "after", as in step 2, with the names `after-...`.
+22. Run the `reviewer` agent and the `accuracy-reviewer` agent. The accuracy reviewer checks the words of steps 14 and 16 against `public/licenses/OFL-inrond.txt` and section 16 of `docs/DESIGN.md`.
+23. Commit the folder `docs/screenshots/font-design/` with this task. It has the two sheets that Arthur decided from.
+24. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. The rule of step 19 of Task 22 for the test "the accessibility check finds a planted problem" applies.
+
+Done when:
+
+- The check of step 1 has 15 lines that end with "OK".
+- `grep -rnw "Inter" src` finds only the credit in `src/SourcesPage.tsx`.
+- `package.json` has no `@fontsource/inter`.
+- The tests of `e2e/font.spec.ts` pass, and the map records are the same as `map-before.json`.
+- `npm run build` has no errors, and all tests pass.
+- The report gives, for each page and size of step 4, the font files and the bytes before and after.
+
+Stop and report.

@@ -174,7 +174,7 @@ test.describe('Reference section', () => {
       await expect(page.getByText('The introductions of the books use facts from these sources.')).toBeVisible()
       await expect(page.getByText('book covers')).toHaveCount(0)
       for (const section of await page.locator('.sources-page > section').all()) expect((await section.boundingBox())!.width).toBeLessThanOrEqual(700)
-      await expect(page.getByRole('heading', { level: 2 }).first()).toHaveCSS('font-family', /Inter/)
+      await expect(page.getByRole('heading', { level: 2 }).first()).toHaveCSS('font-family', /^Inrond/)
     }
   })
 })

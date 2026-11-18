@@ -2,7 +2,7 @@
 
 /**
  * The width of the heading in em of its font size: the name in capitals, the gap, and the number.
- * An Inter ExtraBold capital is about 0.8 em wide at most on average. The heading font size is
+ * An Inrond ExtraBold capital is about 0.8 em wide at most on average. The heading font size is
  * limited so that a long name, such as "1 Thessalonians", fits the column.
  */
 export function headingWidthEm(name: string, chapter: number): number {

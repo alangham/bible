@@ -14,8 +14,11 @@ import type { ScreenLayout } from '../screenLayout.ts'
 import { RefBar } from './RefBar.tsx'
 import { OLD_TESTAMENT_BOOKS, ROW_PX, timelineLayout, type TimelineItem } from './timelineLayout.ts'
 
-/** The font of a book name. The CSS of `.tl-name` uses the same values. Weight 500 for an estimate. */
-const NAME_FONT = (estimate: boolean) => `${estimate ? 500 : 800} 14px Inter`
+/**
+ * The font of a book name. The CSS of `.tl-name` uses the same values, and the same list of families: docs/DESIGN.md section 16.10.
+ * Weight 500 for an estimate.
+ */
+const NAME_FONT = (estimate: boolean) => `${estimate ? 500 : 800} 14px Inrond, system-ui, sans-serif`
 /** The space below the line for the tick labels and the words of the break. */
 const BELOW_PX = 52
 /** The space above the highest row. */

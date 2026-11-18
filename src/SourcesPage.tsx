@@ -2,7 +2,7 @@
 // The conditions of each licence are in docs/DATA-SOURCES.md. The sources of the book
 // introductions are in docs/CONTENT-SOURCES.md.
 // The look of the Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15 step 9.
-// The fonts section names the fonts that the site uses, Inter and Lora: docs/TASKS.md Task 17 step 11.
+// The fonts section names the fonts that the site uses, Inrond and Lora: docs/TASKS.md Task 17 step 11 and Task 41 step 14.
 // The credit of the King James Version: docs/TASKS.md Task 21 step 9.
 // The first section, "The three translations": docs/DESIGN.md section 14.4, docs/TASKS.md Task 33 step 5.
 // The section "Places", the credit of the map data: docs/DESIGN.md section 15.9, docs/TASKS.md Task 37 step 8.
@@ -185,8 +185,10 @@ export function SourcesPage() {
           <h2 id="sources-fonts">Fonts</h2>
           <ul>
             <li>
-              Inter. Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter). Under the{' '}
-              <a href={`${LICENSES}OFL-inter.txt`}>SIL Open Font License, Version 1.1</a>.
+              Inrond (https://github.com/Hairline-UI/inrond), based on Inter. Copyright 2026 The Inrond Project Authors. Copyright (c) 2016
+              The Inter Project Authors (https://github.com/rsms/inter). The site uses a changed copy of Inrond: the roundness of the corners
+              is set to 20 of 100, and the files have only the Latin characters. Under the{' '}
+              <a href={`${LICENSES}OFL-inrond.txt`}>SIL Open Font License, Version 1.1</a>.
             </li>
             <li>
               Lora. Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora". Under the{' '}

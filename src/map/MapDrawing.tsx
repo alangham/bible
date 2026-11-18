@@ -14,6 +14,7 @@ import {
   nameCut,
   TAP_MOVE,
   resizeOffset,
+  MAP_SANS,
   MAP_SECONDARY,
   nameFont,
   pathData,
@@ -40,7 +41,7 @@ const ZOOM_GAP = 4
 /** The scale bar, at the lower left: 14 px from the edges. The label is to the right of the line. */
 const SCALE_EDGE = 14
 const SCALE_LABEL_GAP = 6
-const SCALE_FONT = '500 11px Inter'
+const SCALE_FONT = `500 11px ${MAP_SANS}`
 const SCALE_HEIGHT = 16
 /** The arrow keys move the map by 80 px. "The zoom", rule 5. */
 const KEY_MOVE = 80
@@ -465,7 +466,7 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
         </g>
         <g className="map-scale" fill="none" stroke={MAP_SECONDARY} strokeWidth="1">
           <path d={`M${SCALE_EDGE} ${scaleY - 4}V${scaleY}H${SCALE_EDGE + scale.px}V${scaleY - 4}`} />
-          <text x={SCALE_EDGE + scale.px + SCALE_LABEL_GAP} y={scaleY} fill={MAP_SECONDARY} stroke="none" fontFamily="Inter" fontSize="11" fontWeight="500">
+          <text x={SCALE_EDGE + scale.px + SCALE_LABEL_GAP} y={scaleY} fill={MAP_SECONDARY} stroke="none" fontFamily={MAP_SANS} fontSize="11" fontWeight="500">
             {scaleLabel}
           </text>
         </g>

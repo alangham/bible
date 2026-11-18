@@ -44,8 +44,11 @@ export function fitName(measuredWidth: number, letters: number, columnWidth: num
   return { fontSize, letterSpacing, lineHeight: Math.max(fontSize * LINE_RATIO, MIN_LINE_PX) }
 }
 
-/** The font of a book name at the measure size. Inter ExtraBold, docs/DESIGN.md section 7.3. */
-export const NAME_FONT = `800 ${MEASURE_PX}px Inter`
+/**
+ * The font of a book name at the measure size. Inrond ExtraBold, docs/DESIGN.md section 7.3. The list of families is that of the
+ * CSS of a book name, so that the canvas measures the font that the page shows, also when a font file does not load: section 16.10.
+ */
+export const NAME_FONT = `800 ${MEASURE_PX}px Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif`
 
 /** Measures the names in capitals at MEASURE_PX in the font of the wall. */
 export function measureNames(names: string[]): Map<string, number> {

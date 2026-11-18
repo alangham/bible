@@ -1,0 +1,218 @@
+{
+  "wall 1440x900": {
+    "files": [
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      }
+    ],
+    "total": 73028
+  },
+  "genesis-1 1440x900": {
+    "files": [
+      {
+        "file": "inter-latin-300-normal.woff2",
+        "bytes": 23916
+      },
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-normal.woff2",
+        "bytes": 21148
+      }
+    ],
+    "total": 166208
+  },
+  "sources 1440x900": {
+    "files": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-italic.woff2",
+        "bytes": 22756
+      },
+      {
+        "file": "lora-latin-400-normal.woff2",
+        "bytes": 21148
+      }
+    ],
+    "total": 140692
+  },
+  "map-acts 1440x900": {
+    "files": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-italic.woff2",
+        "bytes": 22756
+      }
+    ],
+    "total": 143900
+  },
+  "wall 390x844": {
+    "files": [
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      }
+    ],
+    "total": 73028
+  },
+  "genesis-1 390x844": {
+    "files": [
+      {
+        "file": "inter-latin-300-normal.woff2",
+        "bytes": 23916
+      },
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-normal.woff2",
+        "bytes": 21148
+      }
+    ],
+    "total": 166208
+  },
+  "sources 390x844": {
+    "files": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-italic.woff2",
+        "bytes": 22756
+      },
+      {
+        "file": "lora-latin-400-normal.woff2",
+        "bytes": 21148
+      }
+    ],
+    "total": 140692
+  },
+  "map-acts 390x844": {
+    "files": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "bytes": 23664
+      },
+      {
+        "file": "inter-latin-500-normal.woff2",
+        "bytes": 24272
+      },
+      {
+        "file": "inter-latin-600-normal.woff2",
+        "bytes": 24452
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "bytes": 24356
+      },
+      {
+        "file": "inter-latin-800-normal.woff2",
+        "bytes": 24400
+      },
+      {
+        "file": "lora-latin-400-italic.woff2",
+        "bytes": 22756
+      }
+    ],
+    "total": 143900
+  }
+}

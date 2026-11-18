@@ -354,8 +354,16 @@ export function placesOnMap(places: MapPlace[], view: View): boolean[] {
 /** The style of a name. "The drawing", rule 5. */
 export type NameStyle = 'place' | 'place-bold' | 'region' | 'water'
 
+/**
+ * The font families of the map, each with the fallback list of the CSS. docs/DESIGN.md section 16.10: the canvas measures a name
+ * in the same list as the drawing shows it, also when a font file does not load.
+ */
+export const MAP_SANS = 'Inrond, system-ui, sans-serif'
+/** The list of the CSS of the Bible text, for the names of the waters. */
+export const MAP_SERIF = "Lora, Georgia, 'Times New Roman', serif"
+
 export interface NameFont {
-  family: 'Inter' | 'Lora'
+  family: typeof MAP_SANS | typeof MAP_SERIF
   size: number
   weight: number
   italic: boolean
@@ -372,11 +380,11 @@ export const WATER_NAME = '#4a6f84'
 /** The font of a name, in the wide or the narrow layout. "The drawing", rule 5. */
 export function nameFont(style: NameStyle, sure: boolean, wide: boolean): NameFont {
   if (style === 'region') {
-    return { family: 'Inter', size: wide ? 10.5 : 9.5, weight: sure ? 600 : 400, italic: false, spacing: 1.6, color: MAP_SECONDARY }
+    return { family: MAP_SANS, size: wide ? 10.5 : 9.5, weight: sure ? 600 : 400, italic: false, spacing: 1.6, color: MAP_SECONDARY }
   }
-  if (style === 'water') return { family: 'Lora', size: wide ? 13.5 : 12, weight: 400, italic: true, spacing: 0, color: WATER_NAME }
+  if (style === 'water') return { family: MAP_SERIF, size: wide ? 13.5 : 12, weight: 400, italic: true, spacing: 0, color: WATER_NAME }
   const size = (wide ? 12.5 : 11) + (style === 'place-bold' ? 1 : 0)
-  return { family: 'Inter', size, weight: style === 'place-bold' ? 700 : 500, italic: false, spacing: 0, color: sure ? INK : MAP_SECONDARY }
+  return { family: MAP_SANS, size, weight: style === 'place-bold' ? 700 : 500, italic: false, spacing: 0, color: sure ? INK : MAP_SECONDARY }
 }
 
 /** The font of a name in the CSS form, for the canvas and for document.fonts. */

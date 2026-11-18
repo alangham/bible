@@ -5,7 +5,7 @@
      docs/DESIGN.md section 7.4, docs/TASKS.md Task 32. */
   --band-radius: 3px;
 
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--ink);
   background: #fff;
 }
@@ -102,7 +102,7 @@ a {
   padding-top: 52px;
   background: #fff;
   color: var(--wall-ink);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -221,7 +221,7 @@ html:has(.wall) {
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #6e6e73;
@@ -272,7 +272,7 @@ html:has(.wall) {
   background: none;
   color: inherit;
   font: inherit;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
   font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
@@ -292,7 +292,7 @@ html:has(.wall) {
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -312,7 +312,7 @@ html:has(.wall) {
   border: 0;
   background: none;
   color: #1d1d1f;
-  font: 500 16px Inter, system-ui, sans-serif;
+  font: 500 16px Inrond, system-ui, sans-serif;
   text-align: left;
   text-decoration: none;
   cursor: pointer;
@@ -340,7 +340,7 @@ html:has(.wall) {
   column-gap: 12px;
   min-height: 48px;
   color: #1d1d1f;
-  font: 500 16px Inter, system-ui, sans-serif;
+  font: 500 16px Inrond, system-ui, sans-serif;
 }
 
 .menu-size-sizes {
@@ -354,7 +354,7 @@ html:has(.wall) {
   border: 0;
   background: none;
   color: #6e6e73;
-  font: 500 16px Inter, system-ui, sans-serif;
+  font: 500 16px Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
 
@@ -397,7 +397,7 @@ html:has(.wall) {
   min-height: 100svh;
   background: #fff;
   color: var(--rd-ink);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   /* The browser does not move the page when a chapter is added below. */
   overflow-anchor: none;
@@ -479,7 +479,7 @@ html:has(.reading) {
   border-radius: 8px;
   background: none;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -530,7 +530,7 @@ html:has(.reading) {
   border-radius: 8px;
   background: none;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -551,7 +551,7 @@ html:has(.reading) {
   border: 0;
   background: none;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -639,7 +639,7 @@ html:has(.reading) {
   z-index: 9;
   box-sizing: border-box;
   background: #fff;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 .tr-list[hidden] {
@@ -697,7 +697,7 @@ html:has(.reading) {
   border-radius: 8px;
   background: none;
   color: var(--rd-ink);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   text-align: left;
   cursor: pointer;
 }
@@ -786,7 +786,7 @@ html:has(.reading) {
   padding: 0 12px;
   border-radius: 8px;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   text-decoration: none;
 }
 
@@ -857,7 +857,7 @@ html:has(.reading) {
   margin: 0 0 26px;
   padding: 8px 0;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
 }
 
 .rd-chapter {
@@ -880,7 +880,7 @@ html:has(.reading) {
   border-radius: var(--band-radius);
   background: var(--c);
   color: #fff;
-  font: 700 12px/1.2 Inter, system-ui, sans-serif;
+  font: 700 12px/1.2 Inrond, system-ui, sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -898,7 +898,7 @@ html:has(.reading) {
   gap: 0.24em;
   margin: 0 0 30px;
   color: var(--c);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
   font-size: min(var(--rd-heading-px), calc(100cqi / var(--heading-em)));
   line-height: 0.9;
 }
@@ -919,7 +919,7 @@ html:has(.reading) {
 
 /* "About this book". */
 .rd-about {
-  font: 400 15px/1.5 Inter, system-ui, sans-serif;
+  font: 400 15px/1.5 Inrond, system-ui, sans-serif;
 }
 
 .rd-about-line {
@@ -935,7 +935,7 @@ html:has(.reading) {
   border: 0;
   background: none;
   color: var(--c);
-  font: 600 15px Inter, system-ui, sans-serif;
+  font: 600 15px Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
 
@@ -1012,7 +1012,7 @@ html:has(.reading) {
 .rd-where-link {
   display: inline-block;
   color: var(--c);
-  font: 600 15px/24px Inter, system-ui, sans-serif;
+  font: 600 15px/24px Inrond, system-ui, sans-serif;
   text-decoration: none;
 }
 
@@ -1050,7 +1050,7 @@ html:has(.reading) {
 
 .rd-column .sh-s1,
 .rd-column .sh-s2 {
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
   line-height: 1.3;
   font-weight: 600;
 }
@@ -1070,7 +1070,7 @@ html:has(.reading) {
 .rd-column .sh-ms {
   margin: 10px 0 4px;
   color: var(--c);
-  font: 700 calc(13px * var(--rd-scale)) Inter, system-ui, sans-serif;
+  font: 700 calc(13px * var(--rd-scale)) Inrond, system-ui, sans-serif;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
@@ -1162,7 +1162,7 @@ html:has(.reading) {
 .rd-column .vn {
   margin-right: 0.28em;
   color: var(--c);
-  font: 600 0.6em Inter, system-ui, sans-serif;
+  font: 600 0.6em Inrond, system-ui, sans-serif;
   line-height: 0;
   vertical-align: 0.6em;
   text-indent: 0;
@@ -1190,7 +1190,7 @@ html:has(.reading) {
   padding: 2px 0 2px 12px;
   border-left: 2px solid var(--rd-line);
   color: var(--rd-ink-secondary);
-  font: 400 calc(13px * var(--rd-scale)) / 1.5 Inter, system-ui, sans-serif;
+  font: 400 calc(13px * var(--rd-scale)) / 1.5 Inrond, system-ui, sans-serif;
   text-indent: 0;
 }
 
@@ -1206,7 +1206,7 @@ html:has(.reading) {
 .rd-end {
   margin: 90px 0 0;
   color: var(--rd-ink-secondary);
-  font: 500 14px Inter, system-ui, sans-serif;
+  font: 500 14px Inrond, system-ui, sans-serif;
   text-align: center;
 }
 
@@ -1283,7 +1283,7 @@ html:has(.reading) {
   border: 0;
   background: none;
   color: var(--rd-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
+  font: 500 15px Inrond, system-ui, sans-serif;
   text-align: right;
   white-space: nowrap;
   cursor: pointer;
@@ -1314,7 +1314,7 @@ html:has(.reading) {
   align-items: center;
   gap: 6px 8px;
   margin-top: 6px;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
 }
 
 .rd-meta[data-full='false'] .rd-read-with {
@@ -1422,7 +1422,7 @@ html:has(.reading) {
 .rd-column .link-line {
   margin: -4px 0 10px;
   color: var(--rd-ink-secondary);
-  font: 400 calc(13px * var(--rd-scale)) / 1.45 Inter, system-ui, sans-serif;
+  font: 400 calc(13px * var(--rd-scale)) / 1.45 Inrond, system-ui, sans-serif;
 }
 
 .link-ref {
@@ -1430,7 +1430,7 @@ html:has(.reading) {
   padding: 4px 0;
   border: 0;
   background: none;
-  font: 600 calc(13px * var(--rd-scale)) / calc(16px * var(--rd-scale)) Inter, system-ui, sans-serif;
+  font: 600 calc(13px * var(--rd-scale)) / calc(16px * var(--rd-scale)) Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
 
@@ -1462,7 +1462,7 @@ html:has(.reading) {
   border: 0;
   background: none;
   color: var(--d);
-  font: 600 13px Inter, system-ui, sans-serif;
+  font: 600 13px Inrond, system-ui, sans-serif;
   line-height: normal;
   text-indent: 0;
   white-space: nowrap;
@@ -1554,7 +1554,7 @@ html:has(.reading) {
   background: #fff;
   border-bottom: 1px solid var(--rd-line);
   color: var(--rd-ink-secondary);
-  font: 500 13px Inter, system-ui, sans-serif;
+  font: 500 13px Inrond, system-ui, sans-serif;
   white-space: nowrap;
 }
 
@@ -1638,7 +1638,7 @@ html:has(.reading) {
   background: #fff;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
   color: var(--rd-ink);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
 }
 
 .pop[data-layout='narrow'] {
@@ -1709,7 +1709,7 @@ html:has(.reading) {
 .pop-vn {
   margin-right: 0.2em;
   color: var(--d);
-  font: 600 0.6em Inter, system-ui, sans-serif;
+  font: 600 0.6em Inrond, system-ui, sans-serif;
   line-height: 0;
   vertical-align: 0.6em;
 }
@@ -1747,7 +1747,7 @@ html:has(.reading) {
   height: 44px;
   padding: 0 18px;
   border-radius: 999px;
-  font: 600 15px Inter, system-ui, sans-serif;
+  font: 600 15px Inrond, system-ui, sans-serif;
 }
 
 .pop-go {
@@ -1836,7 +1836,7 @@ html:has(.reading) {
   min-height: 100svh;
   background: #fff;
   color: var(--ref-ink);
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: Inrond, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1949,7 +1949,7 @@ html:has(.reading) {
   flex: none;
   max-width: 100%;
   height: auto;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
 }
 
 .q-book {
@@ -2038,7 +2038,7 @@ html:has(.reading) {
   padding: 5px 0;
   border: 0;
   background: none;
-  font: 600 15px Inter, system-ui, sans-serif;
+  font: 600 15px Inrond, system-ui, sans-serif;
   text-align: left;
   cursor: pointer;
 }
@@ -2072,7 +2072,7 @@ html:has(.reading) {
   border-radius: 10px;
   background: #fff;
   color: var(--ref-ink);
-  font: 500 16px Inter, system-ui, sans-serif;
+  font: 500 16px Inrond, system-ui, sans-serif;
 }
 
 /* The timeline. docs/TASKS.md Task 17. src/reference/timelineLayout.ts places the names. */
@@ -2083,7 +2083,7 @@ html:has(.reading) {
 .tl-svg {
   display: block;
   overflow: visible;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inrond, system-ui, sans-serif;
 }
 
 .tl-axis {
@@ -2151,7 +2151,7 @@ html:has(.reading) {
   stroke-width: 1.5;
 }
 
-/* A book name: Inter, capitals, the group color. A white edge keeps it clear of the lines behind it.
+/* A book name: Inrond, capitals, the group color. A white edge keeps it clear of the lines behind it.
    The fill comes from `color`, so the contrast check of e2e/a11y.spec.ts reads the group color. */
 .tl-name {
   fill: currentColor;
@@ -2420,7 +2420,7 @@ html:has(.reading) {
   border: 0;
   background: none;
   color: var(--ref-ink);
-  font: 500 15px/22px Inter, system-ui, sans-serif;
+  font: 500 15px/22px Inrond, system-ui, sans-serif;
   text-align: left;
   cursor: pointer;
 }
@@ -2525,7 +2525,7 @@ html:has(.reading) {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   color: var(--ref-ink);
-  font: 400 22px/1 Inter, system-ui, sans-serif;
+  font: 400 22px/1 Inrond, system-ui, sans-serif;
   cursor: pointer;
 }
 

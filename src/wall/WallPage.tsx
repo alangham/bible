@@ -35,7 +35,7 @@ function useScreenWidth(ref: RefObject<HTMLElement | null>): number {
   return width
 }
 
-/** The widths of the names in Inter ExtraBold, measured after the font loads. Null until then. */
+/** The widths of the names in Inrond ExtraBold, measured after the font loads. Null until then. */
 function useNameWidths(books: Book[]): Map<string, number> | null {
   const [widths, setWidths] = useState<Map<string, number> | null>(null)
   useEffect(() => {

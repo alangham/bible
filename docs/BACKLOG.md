@@ -4,36 +4,7 @@ This file is the list of ideas for later. An idea here is not a task. Claude Cod
 
 Design fixes for pages that exist are in `docs/POLISH.md`, not here.
 
----
-
-## 1. A map for each book
-
-Added: 2026-11-13, by Arthur.
-
-In work from 2026-11-17. Arthur decided the direction and the look from sketches. Section 15 of `docs/DESIGN.md` has the decisions and the open points, and Task 36 of `docs/TASKS.md` is a report on the data. Where this item and section 15 differ, section 15 is correct.
-
-Idea: each book has a map that shows the places of that book.
-
-What the map can show. These are options, not decisions:
-
-- The places where the events of the book occur. Example: the route from Egypt to Mount Sinai for Exodus.
-- The place where the book was written and the place it was sent to. Example: Paul in prison in Rome, and the church at Philippi.
-- The journeys in the book. Example: the journeys of Paul in Acts.
-
-Where the map can be. These are options, not decisions:
-
-- On the cover page, near the three facts.
-- As a page of the open book, before chapter 1.
-- As a layer of the timeline page.
-
-Open questions:
-
-1. Which data source gives the places and their positions? OpenBible.info has a set of Bible places with positions. NOT VERIFIED: its licence and its content. Each source needs a licence check and a record in `docs/DATA-SOURCES.md`.
-2. Many places in the Bible have a disputed or unknown position. The map needs a rule for these, in the same way that the introductions have a rule for disputed authors.
-3. The map must fit the look of the site: paper-cut layers on the linen table, not a modern web map.
-4. Do the passages link to the map? Example: select a place name in a chapter, and the map shows it. This connects to links and travel in section 4.5 of `docs/DESIGN.md`.
-5. The accuracy reviewer needs a check for places.
-
+When an idea is built, its item is removed from this file. The other items keep their numbers, because other files refer to them by number. Removed on 2026-11-18: item 1, a map for each book (Tasks 36 to 40), and item 6, the King James Version (Tasks 19 to 21b).
 
 ---
 
@@ -112,52 +83,3 @@ What a task for this item must do:
 2. Change no link by hand. Arthur's rule of 2026-11-14 stays: links come only from the three approved sources.
 3. Where the cause is a fault of the build script, propose a correction of the script. Stop for Arthur's approval before the link data changes.
 4. Run the accuracy reviewer on the result.
-
----
-
-## 6. A second translation: the King James Version
-
-Added: 2026-11-15, by Arthur.
-
-Status on 2026-11-15: this idea is a task now. Arthur decided it after the report of Task 19. The decisions are in section 8 of `docs/DESIGN.md`, and Tasks 20 and 21 of `docs/TASKS.md` build it. Where this item and section 8 differ, section 8 is correct. The text below is the record of the idea.
-
-Idea: the reader can read the King James Version on the site, as a second translation beside the Berean Standard Bible.
-
-The facts on 2026-11-15, from a short check by the designer:
-
-- `docs/DESIGN.md` section 5 tells the site to keep the text service behind one interface, so that a second translation can be added without a change to the pages. `src/data/text.ts` is that interface. The pages get the text from its function `loadBookText`.
-- The site loads the text of one book at a time. A second translation adds 66 files to the repository. It does not add to the load of a page.
-- `scripts/build-text.mjs` reads only the Berean files. The King James Version needs a build script of its own, or a change to this script.
-- `src/data/text.test.ts` compares each verse with the Berean text file. The King James Version needs the same test against its source file.
-- Three files have the name "Berean Standard Bible" as fixed text: `src/wall/WallPage.tsx`, `src/book/LinkPopup.tsx`, and `src/SourcesPage.tsx`.
-- A possible source is eBible.org. Its page `https://ebible.org/details.php?id=eng-kjv2006` describes the standardized text of 1769, with the 66 books only and with Strong's numbers, and it gives a USFM download. The page has the label "public domain". eBible.org also has an edition with the name "KJV Cambridge Paragraph Bible", with the same label.
-- The same page states that three publishers have the exclusive right to print this translation in the United Kingdom, and that this right has no effect outside the United Kingdom.
-- The King James Version has no section headings of its own. The printing of 1611 had a summary at the top of each chapter and references in the margin. Two online versions show section headings above the King James Version words: Bible Hub and the Bible Society edition on YouVersion. A modern publisher added these headings, and each set has a copyright notice. The designer read search extracts only, and did not open the pages.
-- The designer found no public-domain data file of the King James Version with section headings.
-- The Berean publisher shows a set of section headings above the King James Version words on OpenBible.com and on Bible Hub. The designer compared Genesis 1 only. The headings are before the same seven verses as in the Berean files, and the words are changed for the King James Version. Example: "The Second Day: Firmament", where the Berean file has "The Second Day". The page on OpenBible.com has the credit "Section Headings Courtesy Berean Study Bible" and no licence statement. A mirror of the Bible Hub page has the credit "Section Headings Courtesy INT Bible © 2012, Used by Permission". The rights are not clear.
-- Arthur found a third source on 2026-11-15: `https://openbible.com/pdfs/kjv.pdf`, a file of the Berean publisher. The designer read Genesis 1 to 7 of it. It has the words of the King James Version below the section headings and the cross-reference lines of the Berean files. In Genesis 1 and 2, the headings and the first cross-reference line are the same as in the site data. So the Berean publisher uses the rule that Arthur decided. The file shows the words that the translators added in square brackets. The designer found no licence statement in that part of the file. Task 19 examines this file as edition C.
-- The designer examined the file `https://openbible.com/docx/kjv.docx` on 2026-11-15 and compared it with `public/data/text/*.json`. The numbers are in Task 19 of `docs/TASKS.md`. In short: the file has all 31,102 verses of the King James Version. Its 3,016 main section headings and its 1,325 cross-reference lines stand before the same verses as in the site data, and only four headings have different words. No paragraph of the file cuts a verse. The file has no statement about rights. The words of the file are not checked against a different edition.
-- The King James Version in the YouVersion app of Arthur has headings in the Old Testament chapters that he looked at, and none in the New Testament chapters that he looked at. A reader of the King James Version has no standard set of headings.
-- The use of the site, from Arthur on 2026-11-15: personal use. He will possibly share the site with friends and church members. The site will always be free.
-- The links name each passage by book, chapter, and verse (`scripts/build-links.mjs`). They do not depend on the words of a translation.
-- NOT VERIFIED: the content of the King James Version files. The workspace of the designer could not download them. The number of verses, the markers, the paragraphs, and the notes are not checked.
-
-Decided by Arthur on 2026-11-15:
-
-- A translation changes only the words. The reading page of the King James Version shows the section headings and the cross-reference lines of the Berean files above the words of the King James Version. The links, the read-with lists, the introductions, and the dates are the same for the two translations.
-- The cost, which Arthur accepted: the headings were written for a different translation, and the Sources page must say that the headings and the cross-reference lines on the King James Version pages are from the Berean files.
-- Arthur looked at this decision a second time on 2026-11-15, after he compared headings in the YouVersion app. The decision stays: the headings are those of the Berean files in the repository.
-- Task 19 in `docs/TASKS.md` is a report on the files of the King James Version. Arthur decides the tasks that add the King James Version from that report.
-- Arthur will ask the Berean publisher if the site can use its set of headings for the King James Version. The contact page `https://berean.bible/contact.htm` gives the address `bereanstudybible@aol.com`. The decision above does not wait for an answer. If the publisher gives permission, Arthur decides then if the site changes to that set.
-
-Open questions:
-
-1. Which edition, and from which source? The source needs a licence check and a record in `docs/DATA-SOURCES.md`. The record must include the right in the United Kingdom.
-2. How does the reader select the translation? The line at the bottom of the wall and the top bar are options. Does the site keep the selection in the storage of the browser?
-3. Does each section heading of the Berean files start at the start of a verse? NOT VERIFIED. A heading in the middle of a verse needs a rule, because the build script cannot cut the King James Version words at the same place. The same question applies to the paragraphs and the poetry lines: the Berean files cut some verses in the middle. A task must propose which paragraphs and lines the King James Version page uses.
-4. The King James Version has verses that the main text of the Berean Standard Bible does not have. The site shows a note at the place of such a verse. The links name a passage by book, chapter, and verse. A task must compare the verse lists of the two translations and report each difference before the links are used with the King James Version.
-5. The fit rule in section 4.5 of `docs/DESIGN.md` reads the words of the Berean Standard Bible. The decision above keeps the same links for the King James Version. The reason lines of the quotation links quote words of the Berean Standard Bible. The designer saw this in `public/data/links/numbers.json` on 2026-11-15. Task 19 counts these reason lines. What does the pop-up show for such a reason line when the reader reads the King James Version? Arthur's rule of 2026-11-14 stays: links come only from the three approved sources.
-6. The site shows only the manuscript notes of the Berean files. Which notes of the King James Version does the site show, if any?
-7. Do the introductions, the reason lines, or other text of the site quote the words of the Berean Standard Bible? This is not checked.
-8. `docs/DESIGN.md` sections 5 and 6 and the hard rules in `CLAUDE.md` name the Berean Standard Bible as the only translation. They need a change when this idea becomes a task.
-9. `docs/DATA-SOURCES.md` section 2 has a condition on the Berean name: a work that changes the text must not use the name. The credit on the Sources page must not give the King James Version pages the Berean name. A task must read the terms page again for this use.

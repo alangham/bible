@@ -108,9 +108,77 @@ export function firstView(box: Box, width: number, height: number): View {
   return { width, height, k, c, lon: (box[0] + box[1]) / 2, lat: (box[2] + box[3]) / 2 }
 }
 
-/** The view at a different scale, with the same center. Task 39 uses it for the zoom. */
-export function viewAtScale(view: View, k: number): View {
-  return { ...view, k }
+// ---- the zoom: docs/DESIGN.md section 15.11, "The zoom, Task 39" ----
+
+/** At the last step of the zoom, one mile is 20 px or more. "The zoom", rule 1. */
+export const LAST_STEP_PX_PER_MILE = 20
+
+/** The number of px for one mile at a scale. */
+export function pxPerMile(k: number): number {
+  return k / MILES_PER_DEGREE
+}
+
+/**
+ * The last step of the zoom: each step doubles the scale of the first view, and the last step is the first one
+ * where one mile is 20 px or more. Step 0 is the first view.
+ */
+export function lastStep(firstK: number): number {
+  // A frame with no area gives a scale of 0 or less. Then the zoom has no step, and the loop below would not end.
+  if (!(firstK > 0) || !Number.isFinite(firstK)) return 0
+  let step = 0
+  while (pxPerMile(firstK * 2 ** step) < LAST_STEP_PX_PER_MILE) step++
+  return step
+}
+
+/**
+ * The whole first view at the scale of a step: the frame times 2 to the power of the step, with the same center.
+ * The priority rule and the drawing use it. The frame shows a part of it, from an offset in px.
+ */
+export function stepView(first: View, step: number): View {
+  const f = 2 ** step
+  return { ...first, width: first.width * f, height: first.height * f, k: first.k * f }
+}
+
+/** The offset in px of the frame in the whole first view at a step: the left and top edge of the part that shows. */
+export interface Offset {
+  x: number
+  y: number
+}
+
+/** The limits of a move: the frame stays in the first view. "The zoom", rule 2. */
+export function clampOffset(first: View, step: number, o: Offset): Offset {
+  const f = 2 ** step
+  const maxX = first.width * (f - 1)
+  const maxY = first.height * (f - 1)
+  return { x: Math.min(Math.max(o.x, 0), maxX), y: Math.min(Math.max(o.y, 0), maxY) }
+}
+
+/**
+ * The offset after a change of the step. The point of the map below `at`, in px of the frame, stays at the same
+ * place. The controls and the keys use the center of the frame.
+ */
+export function zoomOffset(first: View, from: number, to: number, o: Offset, at?: Offset): Offset {
+  const a = at ?? { x: first.width / 2, y: first.height / 2 }
+  const r = 2 ** (to - from)
+  return clampOffset(first, to, { x: (o.x + a.x) * r - a.x, y: (o.y + a.y) * r - a.y })
+}
+
+/**
+ * The offset after a change of the size of the frame, for example at a rotation of a phone. The step stays if the new
+ * frame has it, and the point of the map at the center of the frame stays at the center.
+ */
+export function resizeOffset(from: View, fromStep: number, to: View, toStep: number, o: Offset): Offset {
+  const kFrom = from.k * 2 ** fromStep
+  const kTo = to.k * 2 ** toStep
+  const fTo = 2 ** toStep
+  // The center of the frame, in px from the center of the first view at the scale of the step.
+  const dx = o.x + from.width / 2 - (from.width * 2 ** fromStep) / 2
+  const dy = o.y + from.height / 2 - (from.height * 2 ** fromStep) / 2
+  const r = kTo / kFrom
+  return clampOffset(to, toStep, {
+    x: (to.width * fTo) / 2 + dx * r - to.width / 2,
+    y: (to.height * fTo) / 2 + dy * r - to.height / 2,
+  })
 }
 
 /** The projection: x is the longitude times the cosine of the middle latitude, and y is the latitude. In px of the frame. */
@@ -345,6 +413,14 @@ export function trianglePath(x: number, y: number, radius: number): string {
   return `M${x} ${y - h / 2}L${x + w / 2} ${y + h / 2}L${x - w / 2} ${y + h / 2}Z`
 }
 
+/**
+ * The radius of the mark of a place in the priority rule: the radius of the dot, or half the width of the triangle,
+ * 5 px in the wide layout and 4.5 px in the narrow layout. "The drawing", rule 4.
+ */
+export function markRadius(kind: Kind, radius: number): number {
+  return kind === 'mountain' ? triangleSize(radius).w / 2 : radius
+}
+
 /** The box of the sign of a place: a dot, or a triangle for a mountain. */
 export function signBox(kind: Kind, x: number, y: number, radius: number): Rect {
   if (kind === 'mountain') {
@@ -361,9 +437,20 @@ export function nameText(p: MapPlace): string {
   return p.kind === 'region' ? p.name.toUpperCase() : p.name
 }
 
-/** The three places with a dot or a triangle that the book names most: their name is in bold. "The drawing", rule 5. */
+/** A bold name is only for a place that the book names in 3 verses or more. "The drawing", rule 5. */
+export const BOLD_MIN_VERSES = 3
+
+/**
+ * The three places with a dot or a triangle that the book names most: their name is in bold, but only a place that
+ * the book names in 3 verses or more. "The drawing", rule 5.
+ */
 export function boldPlaces(places: MapPlace[], stay: number[]): Set<number> {
-  return new Set(stay.filter((i) => hasDot(places[i].kind)).slice(0, 3))
+  return new Set(
+    stay
+      .filter((i) => hasDot(places[i].kind))
+      .slice(0, 3)
+      .filter((i) => places[i].verses >= BOLD_MIN_VERSES),
+  )
 }
 
 /** The positions of the name of a place with a dot, in order: right, left, above, below, and the four corners. */
@@ -419,10 +506,13 @@ export function priority({ places, view, radius, measure, blocked }: PriorityInp
     const style: NameStyle = p.kind === 'region' ? 'region' : p.kind === 'water' ? 'water' : bold.has(i) ? 'place-bold' : 'place'
     const size = measure(text, style, p.sure)
     if (hasDot(p.kind)) {
-      const near = dots.some((d) => Math.hypot(d.x - x, d.y - y) < 2 * radius + DOT_SPACE)
+      // The sum of the two radii plus 2 px: a triangle has a radius of half its width.
+      const mr = markRadius(p.kind, radius)
+      const near = dots.some((d) => Math.hypot(d.x - x, d.y - y) < mr + markRadius(places[d.i].kind, radius) + DOT_SPACE)
       if (near || names.some((n) => touches(dotBox({ x, y, i }), n.box))) continue
       dots.push({ i, x, y })
-      const box = dotNamePositions(x, y, radius, size.w, size.h).find(free)
+      // The name is 5 px from the edge of the dot, or of the triangle.
+      const box = dotNamePositions(x, y, mr, size.w, size.h).find(free)
       if (box) names.push({ i, text, style, box, ascent: size.ascent })
     } else {
       const box = areaNamePositions(p.kind, x, y, size.w, size.h).find(free)

@@ -2395,6 +2395,7 @@ html:has(.reading) {
 
 /* The line of the frame: on its four sides in the wide layout, above and below in the narrow layout. */
 .map-frame {
+  position: relative;
   box-sizing: border-box;
   border: 1px solid var(--ref-line);
   overflow: hidden;
@@ -2402,6 +2403,99 @@ html:has(.reading) {
 
 .map-svg {
   display: block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* The map takes the focus for the keys. The frame cuts an outline outside the map, so the outline is inside. */
+.map-svg:focus-visible {
+  outline: 3px solid var(--ref-ink);
+  outline-offset: -3px;
+}
+
+/* After a zoom, the reader moves the map with a drag. "The zoom", rule 2. */
+.map-svg[data-zoomed='true'] {
+  cursor: grab;
+}
+
+.map-svg[data-zoomed='true']:active {
+  cursor: grabbing;
+}
+
+/* The zoom controls: at the upper right of the map, 12 px from the edges, two of 36 by 36 px, 4 px apart,
+   "+" above "−". docs/DESIGN.md section 15.11, "The zoom, Task 39", rule 1. */
+.map-zoom {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-zoom button {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  color: var(--ref-ink);
+  font: 400 22px/1 Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.map-zoom button:disabled {
+  color: #b0b0b5;
+  cursor: default;
+}
+
+.map-zoom button:focus-visible {
+  outline: 3px solid var(--ref-ink);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .map-zoom button:not(:disabled):hover {
+    background: #f5f5f7;
+  }
+}
+
+/* A change of the step: the new drawing grows from the size of the old one, around the point that stays.
+   With the setting for less motion, the page gives no class, so there is no animation. "The zoom", rule 6. */
+.map-zoom-in,
+.map-zoom-out {
+  transform-box: view-box;
+  animation: 240ms ease-out both;
+}
+
+.map-zoom-in {
+  animation-name: map-zoom-in;
+}
+
+.map-zoom-out {
+  animation-name: map-zoom-out;
+}
+
+@keyframes map-zoom-in {
+  from {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes map-zoom-out {
+  from {
+    transform: scale(2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-zoom-in,
+  .map-zoom-out {
+    animation: none;
+  }
 }
 
 /* The white edge of 3 px of each name: a stroke of 6 px that the text covers on its inner half. */

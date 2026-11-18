@@ -177,3 +177,220 @@ test.describe('map page, Task 38b', () => {
     })
   }
 })
+
+// docs/TASKS.md Task 39 step 1: the bold names of the first view, from "The drawing" rule 5 of section 15.11.
+test.describe('map page, the bold names of Task 39', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+  })
+
+  const bold = (page: Page) => page.locator('.map-names text[font-weight="700"]').allTextContents()
+
+  test('Exodus: "Mount Sinai" and "Rephidim" are bold, and "Baal-zephon" is not', async ({ page }) => {
+    await openMap(page, 'exodus')
+    expect(await bold(page)).toEqual(['Mount Sinai', 'Rephidim'])
+    expect(await mapNames(page)).toContain('Baal-zephon')
+  })
+
+  test('Daniel: "Dura" is not bold', async ({ page }) => {
+    await openMap(page, 'daniel')
+    expect(await bold(page)).not.toContain('Dura')
+    expect(await mapNames(page)).toContain('Dura')
+  })
+})
+
+/** The numbers of the map: the step, the last step, the offset, and the names and the dots of the step. */
+async function mapState(page: Page) {
+  return page.locator('.map-svg').evaluate((s) => {
+    const d = (s as SVGSVGElement).dataset
+    return {
+      step: Number(d.step),
+      last: Number(d.lastStep),
+      x: Number(d.offsetX),
+      y: Number(d.offsetY),
+      names: Number(d.names),
+      dots: Number(d.dots),
+      w: Number(s.getAttribute('width')),
+      h: Number(s.getAttribute('height')),
+    }
+  })
+}
+
+/** Waits until the step has its names. */
+async function atStep(page: Page, step: number) {
+  await expect(page.locator(`.map-svg[data-step="${step}"][data-ready="true"]`)).toBeVisible()
+}
+
+// docs/TASKS.md Task 39 step 5: the zoom, section 15.11 "The zoom, Task 39".
+for (const layout of LAYOUTS) {
+  test.describe(`map page, the zoom, ${layout.name} layout`, () => {
+    test.beforeEach(async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+    })
+
+    test('"Zoom out" is off in the first view, and "Zoom in" is off at the last step', async ({ page }) => {
+      await openMap(page, 'acts')
+      const zoomIn = page.getByRole('button', { name: 'Zoom in' })
+      const zoomOut = page.getByRole('button', { name: 'Zoom out' })
+      await expect(zoomOut).toBeDisabled()
+      await expect(zoomIn).toBeEnabled()
+      const { last } = await mapState(page)
+      expect(last).toBeGreaterThan(0)
+      for (let step = 1; step <= last; step++) {
+        await zoomIn.click()
+        await atStep(page, step)
+      }
+      await expect(zoomIn).toBeDisabled()
+      await expect(zoomOut).toBeEnabled()
+    })
+
+    test('Joshua: the number of names that show is larger after each of the first two steps', async ({ page }) => {
+      await openMap(page, 'joshua')
+      const names = [(await mapState(page)).names]
+      for (const step of [1, 2]) {
+        await page.getByRole('button', { name: 'Zoom in' }).click()
+        await atStep(page, step)
+        names.push((await mapState(page)).names)
+      }
+      expect(names[1]).toBeGreaterThan(names[0])
+      expect(names[2]).toBeGreaterThan(names[1])
+    })
+
+    test('a drag after a zoom moves the map, and the view stays in the first view', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.getByRole('button', { name: 'Zoom in' }).click()
+      await atStep(page, 1)
+      const before = await mapState(page)
+      const box = (await page.locator('.map-svg').boundingBox())!
+      const cx = box.x + box.width / 2
+      const cy = box.y + box.height / 2
+      await page.mouse.move(cx, cy)
+      await page.mouse.down()
+      await page.mouse.move(cx - 60, cy - 40, { steps: 5 })
+      await page.mouse.up()
+      const after = await mapState(page)
+      expect([after.x - before.x, after.y - before.y]).toEqual([60, 40])
+      // A long drag stops at the edge of the first view: at step 1, the offset is from 0 to the size of the frame.
+      await page.mouse.move(cx, cy)
+      await page.mouse.down()
+      await page.mouse.move(cx + 3000, cy + 3000, { steps: 5 })
+      await page.mouse.up()
+      expect(await mapState(page)).toMatchObject({ x: 0, y: 0 })
+      await page.mouse.move(box.x + 5, box.y + 5)
+      await page.mouse.down()
+      await page.mouse.move(box.x + 5 - 3000, box.y + 5 - 3000, { steps: 5 })
+      await page.mouse.up()
+      const end = await mapState(page)
+      expect([end.x, end.y]).toEqual([end.w, end.h])
+    })
+
+    test('the keys move and zoom the map when it has the focus', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.locator('.map-svg').focus()
+      await page.keyboard.press('+')
+      await atStep(page, 1)
+      const before = await mapState(page)
+      await page.keyboard.press('ArrowRight')
+      await page.keyboard.press('ArrowDown')
+      expect(await mapState(page)).toMatchObject({ x: before.x + 80, y: before.y + 80 })
+      await page.keyboard.press('ArrowLeft')
+      await page.keyboard.press('ArrowUp')
+      expect(await mapState(page)).toMatchObject({ x: before.x, y: before.y })
+      await page.keyboard.press('-')
+      await atStep(page, 0)
+      expect(await mapState(page)).toMatchObject({ x: 0, y: 0 })
+    })
+
+    test('a key with Ctrl or Alt is for the browser, and the map does not use it', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.locator('.map-svg').focus()
+      await page.keyboard.press('Control+Equal')
+      await page.keyboard.press('Alt+Equal')
+      await page.waitForTimeout(200)
+      expect((await mapState(page)).step).toBe(0)
+      await page.keyboard.press('+')
+      await atStep(page, 1)
+      const before = await mapState(page)
+      await page.keyboard.press('Control+Minus')
+      await page.keyboard.press('Alt+ArrowRight')
+      await page.waitForTimeout(200)
+      expect(await mapState(page)).toMatchObject({ step: 1, x: before.x, y: before.y })
+    })
+
+    test('Joshua: the axe check after a zoom', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.getByRole('button', { name: 'Zoom in' }).click()
+      await atStep(page, 1)
+      await page.waitForTimeout(400)
+      const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+      expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
+    })
+  })
+}
+
+test.describe('map page, one finger at 390 by 844 px', () => {
+  // A phone: the page has touch input.
+  test.use({ hasTouch: true })
+
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+  })
+
+  /** A drag of one finger on the map, up by 200 px, with the touch input of Chromium. */
+  async function fingerDrag(page: Page) {
+    const client = await page.context().newCDPSession(page)
+    const box = (await page.locator('.map-svg').boundingBox())!
+    const x = box.x + box.width / 2
+    const y = box.y + box.height - 20
+    await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] })
+    for (let i = 1; i <= 10; i++) {
+      await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x, y: y - 20 * i }] })
+    }
+    await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+  }
+
+  test('in the first view, a drag with one finger on the map scrolls the page', async ({ page }) => {
+    await openMap(page, 'joshua')
+    expect(await page.evaluate(() => window.scrollY)).toBe(0)
+    await fingerDrag(page)
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(50)
+    expect(await mapState(page)).toMatchObject({ step: 0, x: 0, y: 0 })
+  })
+
+  test('after a zoom, a drag with one finger moves the map and not the page', async ({ page }) => {
+    await openMap(page, 'joshua')
+    await page.getByRole('button', { name: 'Zoom in' }).click()
+    await atStep(page, 1)
+    const before = await mapState(page)
+    const scrollBefore = await page.evaluate(() => window.scrollY)
+    await fingerDrag(page)
+    await expect.poll(async () => (await mapState(page)).y).toBeGreaterThan(before.y)
+    expect(await page.evaluate(() => window.scrollY)).toBe(scrollBefore)
+  })
+})
+
+test.describe('map page, a change of the size of the window', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+  })
+
+  test('Joshua: the step stays when the frame changes size, and a window of 1 px does not stop the page', async ({ page }) => {
+    await openMap(page, 'joshua')
+    for (const step of [1, 2]) {
+      await page.getByRole('button', { name: 'Zoom in' }).click()
+      await atStep(page, step)
+    }
+    const heightBefore = await page.locator('.map-svg').getAttribute('height')
+    // A lower window gives a lower frame: 62% of the window height.
+    await page.setViewportSize({ width: 390, height: 700 })
+    await expect(page.locator('.map-svg')).not.toHaveAttribute('height', heightBefore!)
+    expect((await mapState(page)).step).toBe(2)
+    // A window of 1 by 1 px gives a frame with no area. Before the correction, the page stopped in a loop.
+    await page.setViewportSize({ width: 1, height: 1 })
+    await page.waitForTimeout(200)
+    await page.setViewportSize({ width: 390, height: 844 })
+    await expect(page.locator('.map-svg')).toHaveAttribute('height', heightBefore!)
+    expect((await mapState(page)).step).toBe(2)
+    await page.screenshot({ fullPage: true, timeout: 10000 })
+  })
+})

@@ -3,6 +3,12 @@
 import { describe, expect, it } from 'vitest'
 import {
   clampFrameHeight,
+  clampOffset,
+  lastStep,
+  resizeOffset,
+  markRadius,
+  pxPerMile,
+  zoomOffset,
   countSentences,
   decode,
   firstView,
@@ -17,7 +23,7 @@ import {
   trianglePath,
   triangleSize,
   scaleBar,
-  viewAtScale,
+  stepView,
   wideFrameHeight,
   type Box,
   type MapBook,
@@ -76,9 +82,9 @@ describe('the first view', () => {
 
   it('takes the scale as an input for the zoom', () => {
     const v = firstView(R1, 958, 790)
-    const z = viewAtScale(v, v.k * 2)
-    expect(project(z, v.lon, v.lat)).toEqual(project(v, v.lon, v.lat))
-    expect(project(z, v.lon, v.lat + 1)[1]).toBeCloseTo(395 - 2 * v.k, 6)
+    const z = stepView(v, 1)
+    expect(project(z, v.lon, v.lat)).toEqual([958, 790])
+    expect(project(z, v.lon, v.lat + 1)[1]).toBeCloseTo(790 - 2 * v.k, 6)
   })
 
   it('shows the small rivers from 80 px for one degree of latitude', () => {
@@ -286,5 +292,141 @@ describe('the priority rule', () => {
     expect(nextToDot.names.map((n) => [n.box.x, n.box.y])).toEqual([[106, 94]])
     // On the point, above, and below touch the triangle: the name goes to the right, 5 px from the point of the region at x 112.
     expect(nextToTriangle.names.map((n) => [n.box.x, n.box.y])).toEqual([[117, 94]])
+  })
+})
+
+// docs/TASKS.md Task 39 step 1: two corrections of the first view, "The drawing" rules 4 and 5 of section 15.11.
+describe('the corrections of Task 39', () => {
+  const measure: Measure = (text) => ({ w: text.length * 6, h: 12, ascent: 10 })
+  const view = { width: 400, height: 300, k: 100, c: 1, lon: 0, lat: 0 }
+  const p = (name: string, x: number, y: number, verses: number, kind: MapPlace['kind'] = 'place', sure = true) =>
+    place(name, (x - 200) / 100, (150 - y) / 100, verses, kind, sure)
+  const run = (places: MapPlace[]) => priority({ places, view, radius: 3.5, measure, blocked: [] })
+
+  it('gives bold only to a place that the book names in 3 verses or more', () => {
+    // Exodus: Mount Horeb is at the position of Mount Sinai, and rule 1 removes it.
+    const exodus = run([
+      p('Mount Sinai', 40, 40, 12, 'mountain'),
+      p('Mount Horeb', 40, 40, 4, 'mountain'),
+      p('Rephidim', 40, 120, 3, 'place', false),
+      p('Baal-zephon', 40, 200, 2, 'place', false),
+    ])
+    expect(exodus.names.filter((n) => n.style === 'place-bold').map((n) => n.text)).toEqual(['Mount Sinai', 'Rephidim'])
+    // Ephesians: one place in 1 verse.
+    expect(run([p('Ephesus', 100, 100, 1)]).names[0].style).toBe('place')
+  })
+
+  it('gives a triangle a radius of half its width', () => {
+    expect(markRadius('mountain', 3.5)).toBe(5)
+    expect(markRadius('mountain', 3)).toBe(4.5)
+    expect(markRadius('place', 3.5)).toBe(3.5)
+  })
+
+  it('uses the sum of the two radii plus 2 px in the distance rule', () => {
+    // A dot and a triangle: 3.5 + 5 + 2 = 10.5 px. Two triangles: 12 px. Two dots: 9 px.
+    expect(run([p('A', 100, 100, 9), p('B', 110.4, 100, 5, 'mountain')]).dots.map((d) => d.i)).toEqual([0])
+    expect(run([p('A', 100, 100, 9), p('B', 100, 110.6, 5, 'mountain')]).dots.map((d) => d.i)).toEqual([0, 1])
+    expect(run([p('A', 100, 100, 9, 'mountain'), p('B', 100, 111.9, 5, 'mountain')]).dots.map((d) => d.i)).toEqual([0])
+    expect(run([p('A', 100, 100, 9, 'mountain'), p('B', 100, 112.1, 5, 'mountain')]).dots.map((d) => d.i)).toEqual([0, 1])
+  })
+
+  it('puts the name of a mountain 5 px from the edge of the triangle', () => {
+    const r = run([p('Sinai', 100, 100, 9, 'mountain')])
+    expect(r.names[0].box.x).toBeCloseTo(110, 6)
+  })
+})
+
+// docs/TASKS.md Task 39 step 4: "The zoom, Task 39" of section 15.11.
+describe('the zoom', () => {
+  const R2: Box = [29.5, 37.0, 27.5, 34.2]
+  const R3: Box = [20.5, 31.5, 35.0, 42.0]
+  const R4: Box = [29.0, 49.0, 27.5, 38.5]
+  const regions: [string, Box][] = [
+    ['r1', R1],
+    ['r2', R2],
+    ['r3', R3],
+    ['r4', R4],
+    ['r5', R5],
+  ]
+
+  it('has the number of steps of each region at a frame of 960 by 792 px and of 390 by 520 px', () => {
+    const steps = (w: number, h: number) => regions.map(([id, box]) => [id, lastStep(firstView(box, w, h).k)])
+    expect(steps(960, 792)).toEqual([
+      ['r1', 3],
+      ['r2', 4],
+      ['r3', 4],
+      ['r4', 5],
+      ['r5', 5],
+    ])
+    expect(steps(390, 520)).toEqual([
+      ['r1', 4],
+      ['r2', 5],
+      ['r3', 5],
+      ['r4', 6],
+      ['r5', 7],
+    ])
+  })
+
+  it('stops at the first step where one mile is 20 px or more', () => {
+    for (const [, box] of regions) {
+      for (const [w, h] of [
+        [960, 792],
+        [390, 520],
+      ]) {
+        const k = firstView(box, w, h).k
+        const last = lastStep(k)
+        expect(pxPerMile(k * 2 ** last)).toBeGreaterThanOrEqual(20)
+        expect(pxPerMile(k * 2 ** (last - 1))).toBeLessThan(20)
+      }
+    }
+    expect(lastStep(20 * 69.09)).toBe(0)
+  })
+
+  it('keeps the frame in the first view: the limits of a move', () => {
+    const first = firstView(R1, 400, 300)
+    expect(clampOffset(first, 0, { x: 50, y: -20 })).toEqual({ x: 0, y: 0 })
+    expect(clampOffset(first, 1, { x: -5, y: 9999 })).toEqual({ x: 0, y: 300 })
+    expect(clampOffset(first, 2, { x: 9999, y: 100 })).toEqual({ x: 1200, y: 100 })
+  })
+
+  it('keeps the point at the center when the size of the frame changes', () => {
+    const from = firstView(R1, 400, 300)
+    const to = firstView(R1, 300, 400)
+    const o = { x: 650, y: 480 }
+    const centerOf = (v: typeof from, step: number, off: { x: number; y: number }) => {
+      const k = v.k * 2 ** step
+      return [v.lon + (off.x + v.width / 2 - (v.width * 2 ** step) / 2) / (v.c * k), v.lat - (off.y + v.height / 2 - (v.height * 2 ** step) / 2) / k]
+    }
+    const n = resizeOffset(from, 2, to, 2, o)
+    const [lon0, lat0] = centerOf(from, 2, o)
+    const [lon1, lat1] = centerOf(to, 2, n)
+    expect(lon1).toBeCloseTo(lon0, 6)
+    expect(lat1).toBeCloseTo(lat0, 6)
+    // The same size gives the same offset, and the limits of the new frame apply.
+    expect(resizeOffset(from, 1, from, 1, { x: 100, y: 50 })).toEqual({ x: 100, y: 50 })
+    expect(resizeOffset(from, 2, to, 0, o)).toEqual({ x: 0, y: 0 })
+  })
+
+  it('gives step 0 for a frame with no area, and the loop ends', () => {
+    expect(lastStep(0)).toBe(0)
+    expect(lastStep(-3)).toBe(0)
+    expect(lastStep(Number.NaN)).toBe(0)
+    expect(lastStep(Number.POSITIVE_INFINITY)).toBe(0)
+    expect(lastStep(firstView(R1, 1, -40).k)).toBe(0)
+  })
+
+  it('keeps the center of the frame at a change of the step', () => {
+    const first = firstView(R1, 400, 300)
+    // From the first view, the center of step 1 shows the center of the first view.
+    expect(zoomOffset(first, 0, 1, { x: 0, y: 0 })).toEqual({ x: 200, y: 150 })
+    expect(zoomOffset(first, 1, 2, { x: 200, y: 150 })).toEqual({ x: 600, y: 450 })
+    expect(zoomOffset(first, 2, 1, { x: 600, y: 450 })).toEqual({ x: 200, y: 150 })
+    // Back to the first view: the offset is 0.
+    expect(zoomOffset(first, 1, 0, { x: 300, y: 10 })).toEqual({ x: 0, y: 0 })
+    // A point other than the center: the point below the fingers stays.
+    expect(zoomOffset(first, 0, 1, { x: 0, y: 0 }, { x: 100, y: 100 })).toEqual({ x: 100, y: 100 })
+    // Near an edge, the limits apply.
+    // (600 + 200) * 2 - 200 = 1400, more than the limit of 1200. (0 + 150) * 2 - 150 = 150.
+    expect(zoomOffset(first, 1, 2, { x: 600, y: 0 })).toEqual({ x: 1200, y: 150 })
   })
 })

@@ -2632,7 +2632,7 @@ Stop and report.
 
 ## Task 39. The map page: the zoom
 
-Status: TODO
+Status: DONE
 
 Accuracy review: no
 
@@ -2642,27 +2642,34 @@ Read "The zoom, Task 39" in section 15.11 of `docs/DESIGN.md` first.
 
 WARNING: Do not add a link to the map page. Do not add the line "Where".
 
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report. In Task 38b, two tests failed in the first full run, and their names are not known.
+
 Steps:
 
-1. Add the zoom controls, the drag, the two fingers, and the keys, by section 15.11.
-2. At each step of the zoom, compute the places and the names again with the priority rule of Task 38, for the whole first view at the new scale.
-3. Tests in Vitest: the number of steps for each region at a frame of 960 by 792 px and of 390 by 520 px, and the limits of a move.
-4. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+1. Two corrections of the first view, from the report of Task 38b. Read rules 4 and 5 of "The drawing" in section 15.11.
+   - A bold name is only for a place that the book names in 3 verses or more. Examples: in Exodus, "Mount Sinai" and "Rephidim" are bold, and "Baal-zephon" is not. In Daniel, "Dura" is not bold. Ephesians has no bold name.
+   - In the priority rule, a triangle has a radius of half its width. Change the distance rule for two marks and the position of the name of a mountain.
+   - Add a test in Vitest for each one, and an end-to-end test for Exodus and Daniel at 1440 by 900 px.
+   - Report the table of Task 38 step 8 again for Acts, Joshua, Matthew, Ezekiel, and Exodus, so that the designer sees the effect.
+2. Add the zoom controls, the drag, the two fingers, and the keys, by section 15.11.
+3. At each step of the zoom, compute the places and the names again with the priority rule of Task 38, for the whole first view at the new scale.
+4. Tests in Vitest: the number of steps for each region at a frame of 960 by 792 px and of 390 by 520 px, and the limits of a move.
+5. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
    - "Zoom out" is off in the first view, and "Zoom in" is off at the last step.
    - Joshua: the number of names that show is larger after each of the first two steps.
    - A drag after a zoom moves the map, and the view stays in the first view.
    - At 390 by 844 px in the first view, a drag with one finger on the map scrolls the page.
    - The keys move and zoom the map when it has the focus.
    - The axe check for Joshua after a zoom.
-5. Make screenshots in `docs/screenshots/task-39/`, at the two sizes: Joshua and Acts after two steps, and at the last step. For the last step, keep the center of the first view.
-6. Report for each region, at the two frames of step 3: the number of steps, and the number of px for one mile at the last step. Report for Joshua and for Acts at each step: the dots and the names that show, and the places that show at no step with the cause.
-7. Report how the coast and the lakes look at the last step. The data is made for the scale 1:10 million. Do not change the data.
-8. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+6. Make screenshots in `docs/screenshots/task-39/`, at the two sizes: Joshua and Acts after two steps, and at the last step. For the last step, keep the center of the first view.
+7. Report for each region, at the two frames of step 4: the number of steps, and the number of px for one mile at the last step. Report for Joshua and for Acts at each step: the dots and the names that show, and the places that show at no step with the cause.
+8. Report how the coast and the lakes look at the last step. The data is made for the scale 1:10 million. Do not change the data.
+9. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
 
 Done when:
 
-- The tests of steps 3 and 4 pass, or the report gives the cause of each one that does not.
-- The report has the numbers of step 6.
+- The tests of steps 1, 4, and 5 pass, or the report gives the cause of each one that does not.
+- The report has the numbers of steps 1 and 7.
 
 Stop and report.
 

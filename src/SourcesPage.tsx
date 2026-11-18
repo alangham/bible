@@ -6,10 +6,13 @@
 // The credit of the King James Version: docs/TASKS.md Task 21 step 9.
 // The first section, "The three translations": docs/DESIGN.md section 14.4, docs/TASKS.md Task 33 step 5.
 // The section "Places", the credit of the map data: docs/DESIGN.md section 15.9, docs/TASKS.md Task 37 step 8.
+// The section "Videos", the credit of the videos of BibleProject: docs/DESIGN.md section 17.6, docs/TASKS.md Task 42 step 7.
 
 import { Fragment, useEffect } from 'react'
 import { SAMPLE_PARTS } from './data/sampleVerse.ts'
 import { TRANSLATIONS } from './data/translation.ts'
+import { SUMMARY_VIDEOS, videoHref } from './data/videos.ts'
+import { VideoCredit } from './reading/AboutBook.tsx'
 import { RefBar } from './reference/RefBar.tsx'
 
 const LICENSES = `${import.meta.env.BASE_URL}licenses/`
@@ -181,6 +184,27 @@ export function SourcesPage() {
           </p>
         </section>
 
+        {/* The videos of BibleProject: links only. docs/DESIGN.md section 17.6, docs/TASKS.md Task 42 step 7. The terms
+            are in section 13 of docs/DATA-SOURCES.md. The credit is in the words that BibleProject gives, section 17.3. */}
+        <section aria-labelledby="sources-videos">
+          <h2 id="sources-videos">Videos</h2>
+          <p>
+            Each book has a link to a video about the book. The link is in “About this book”. The videos are by BibleProject, and each link opens
+            a video on YouTube. A video gives the view of BibleProject. The introductions of this site do not come from the videos. BibleProject
+            has no connection with this site.
+          </p>
+          <p>BibleProject also has a video about each part of the Bible:</p>
+          <ul className="sources-video-links">
+            <li>
+              <SummaryLink id={SUMMARY_VIDEOS.oldTestament} words="Old Testament overview" />
+            </li>
+            <li>
+              <SummaryLink id={SUMMARY_VIDEOS.newTestament} words="New Testament overview" />
+            </li>
+          </ul>
+          <VideoCredit />
+        </section>
+
         <section aria-labelledby="sources-fonts">
           <h2 id="sources-fonts">Fonts</h2>
           <ul>
@@ -198,5 +222,14 @@ export function SourcesPage() {
         </section>
       </main>
     </div>
+  )
+}
+
+/** A link to a summary video: it opens in a new tab, with the name of section 17.3 for a screen reader. */
+function SummaryLink({ id, words }: { id: string; words: string }) {
+  return (
+    <a href={videoHref(id)} target="_blank" rel="noopener noreferrer" aria-label={`${words}, on YouTube, in a new tab`}>
+      {words}
+    </a>
   )
 }

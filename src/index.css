@@ -983,7 +983,8 @@ html:has(.reading) {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 8px 0 6px;
+  /* The 16 px below the facts: the space above the read-with list. docs/DESIGN.md section 17.7, Task 42. */
+  margin: 8px 0 16px;
 }
 
 .rd-fact {
@@ -1019,6 +1020,37 @@ html:has(.reading) {
 .rd-where-link span {
   display: inline-block;
   margin-left: 4px;
+}
+
+/*
+  The line "Video": each link to a video is a line of its own, with the look of the link of the line "Where".
+  Below the links, the credit to BibleProject, with a line at its left. docs/DESIGN.md section 17.3, Task 42.
+*/
+.rd-video-link {
+  display: block;
+  width: fit-content;
+  color: var(--c);
+  font: 600 15px/24px Inrond, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.rd-video-link span[aria-hidden] {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+/* Two classes, so that the margin of the rule .rd-column p does not apply. */
+.rd-fact .rd-video-credit {
+  margin: 10px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  color: var(--rd-ink-secondary);
+  font: 400 14px/21px Inrond, system-ui, sans-serif;
+}
+
+.rd-video-credit a {
+  color: var(--c);
+  text-decoration: underline;
 }
 
 .rd-scholars-detail {
@@ -2260,6 +2292,11 @@ html:has(.reading) {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* The two links to a summary video are a list of links alone, so each is a control of 24 px or more: the height of the line. Task 42. */
+.ref-main.sources-page .sources-video-links a {
+  display: inline-block;
 }
 
 /*

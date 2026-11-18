@@ -683,7 +683,7 @@ for (const layout of LAYOUTS) {
 
     test('Acts has the line "Where" after "Written", with one link to its map', async ({ page }) => {
       const about = await openAbout(page, 'acts', 1)
-      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where'])
+      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where', 'Video'])
       const where = about.locator('.rd-fact').filter({ has: page.locator('dt', { hasText: 'Where' }) })
       await expect(where.locator('dd')).toHaveText('The places of this book ›')
       await expect(where.getByRole('link')).toHaveCount(1)
@@ -693,7 +693,7 @@ for (const layout of LAYOUTS) {
     test('Philemon has no line "Where"', async ({ page }) => {
       const about = await openAbout(page, 'philemon', 1)
       await page.waitForLoadState('networkidle')
-      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written'])
+      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Video'])
       await expect(page.getByRole('link', { name: 'The places of this book' })).toHaveCount(0)
     })
 
@@ -722,5 +722,5 @@ test('if the map index did not load, no book has the line "Where"', async ({ pag
   await page.route('**/data/map/index.json', (route) => route.abort())
   const about = await openAbout(page, 'acts', 1)
   await page.waitForLoadState('networkidle')
-  await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written'])
+  await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Video'])
 })

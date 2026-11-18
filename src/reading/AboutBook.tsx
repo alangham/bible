@@ -3,10 +3,13 @@
 // The words of the introductions come from public/data/intros.json with no change.
 // From Task 40, a fourth line "Where" has one link to the map of the book, for a book in the map index.
 // docs/DESIGN.md sections 15.7 item 5, 15.10 item 8, and 15.11.
+// From Task 42, the last line "Video" has the links to the overview videos of BibleProject, and the credit.
+// docs/DESIGN.md section 17. The video list is in the code, so the line does not wait for a file.
 
 import { useEffect, useId, useState } from 'react'
 import type { Intro } from '../data/intros.ts'
 import { loadMapIndex } from '../map/mapData.ts'
+import { BOOK_VIDEOS, VIDEO_CREDIT, videoHref } from '../data/videos.ts'
 import { mapHref } from '../router.ts'
 import { Fact } from './Fact.tsx'
 
@@ -71,10 +74,60 @@ export function AboutBook({ bookId, intro, translation }: AboutBookProps) {
                   </dd>
                 </div>
               )}
+              <VideoLine bookId={bookId} />
             </dl>
           </>
         )}
       </div>
     </div>
+  )
+}
+
+/** The words of each link to a video: section 17.3. The name for a screen reader adds ", on YouTube, in a new tab". */
+const LINK_WORDS: Record<number, string[]> = {
+  1: ['BibleProject overview'],
+  2: ['BibleProject overview, part 1', 'BibleProject overview, part 2'],
+}
+
+/**
+ * The line "Video": one or two links to a video on YouTube, each in a new tab, and below them the credit to
+ * BibleProject, with the sentence of the shared video before it. docs/DESIGN.md sections 17.3 and 17.4.
+ */
+function VideoLine({ bookId }: { bookId: string }) {
+  const entry = BOOK_VIDEOS[bookId]
+  if (!entry) return null
+  return (
+    <div className="rd-fact rd-video">
+      <dt>Video</dt>
+      <dd>
+        {entry.videos.map((id, n) => (
+          <a
+            key={id}
+            className="rd-video-link"
+            href={videoHref(id)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${LINK_WORDS[entry.videos.length][n]}, on YouTube, in a new tab`}
+          >
+            {LINK_WORDS[entry.videos.length][n]} <span aria-hidden="true">›</span>
+          </a>
+        ))}
+        <VideoCredit className="rd-video-credit" shared={entry.shared} />
+      </dd>
+    </div>
+  )
+}
+
+/** The credit of section 17.3, with no change to its words. The Sources page shows it also. */
+export function VideoCredit({ className, shared }: { className?: string; shared?: string }) {
+  return (
+    <p className={className}>
+      {shared && `${shared} `}
+      {VIDEO_CREDIT.before}
+      <a href={VIDEO_CREDIT.href} target="_blank" rel="noopener noreferrer" aria-label={`${VIDEO_CREDIT.link}, in a new tab`}>
+        {VIDEO_CREDIT.link}
+      </a>
+      {VIDEO_CREDIT.after}
+    </p>
   )
 }

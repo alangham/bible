@@ -238,8 +238,8 @@ test.describe('reading page: the introduction and the text', () => {
     await expect(about).toBeHidden()
     await control.click()
     await expect(control).toHaveAttribute('aria-expanded', 'true')
-    // Task 40: a fourth line "Where", for a book with places.
-    await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where'])
+    // Task 40: a fourth line "Where", for a book with places. Task 42: the last line "Video", for each book.
+    await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where', 'Video'])
     for (const dd of await about.locator('.rd-fact-text').all()) await expect(dd).not.toBeEmpty()
     await expect(about.locator('.rd-draft')).toBeVisible()
     await expect(page.locator('.rd-translation')).toHaveText('Berean Standard Bible')

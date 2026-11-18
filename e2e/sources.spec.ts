@@ -50,7 +50,9 @@ test.describe('sources page', () => {
       await expect(places.getByRole('heading', { level: 2 })).toHaveText('Places')
       await expect(places.locator('h2')).toHaveAttribute('id', 'sources-places')
       const ids = await page.locator('main section h2').evaluateAll((els) => els.map((e) => e.id))
-      expect(ids.indexOf('sources-places')).toBe(ids.indexOf('sources-fonts') - 1)
+      // From Task 42, the section "Videos" is between "Places" and "Fonts". docs/DESIGN.md section 17.6.
+      expect(ids.indexOf('sources-places')).toBe(ids.indexOf('sources-fonts') - 2)
+      expect(ids.indexOf('sources-videos')).toBe(ids.indexOf('sources-fonts') - 1)
 
       const paragraphs = places.locator('p')
       await expect(paragraphs).toHaveCount(4)

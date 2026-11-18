@@ -1257,3 +1257,245 @@ Claude Code completed Task 41 in commit `be05090`. The second chat ran the build
 5. With the font files stopped: each book name of the wall fills its column within 0.13 px, the timeline measures and shows each name with the same width within 0.01 px, and the map names do not touch and have the system font.
 6. Three sentences about the licence were not exact, from the accuracy review of Task 41. This section and section 6 of `docs/DATA-SOURCES.md` are corrected. Name 13 of each font file is a notice of 145 characters, not the text of the licence. Condition 5 of the licence is for the fonts "modified or unmodified". Condition 2 permits the metadata fields only if the user can easily view them. The site meets condition 2 with the licence file.
 7. The accuracy review gave one more point with no change: the credit on the Sources page does not say that the optical size is fixed at 14 and that the files are static. The credit says nothing false.
+
+## 17. The line "Video" in "About this book", of 2026-11-18
+
+Arthur decided this section on 2026-11-18, from renders, in two steps: first the line, and then the credit of section 17.3, after Claude Code read the terms of BibleProject. Section 17.10 has that step. The renders are in `docs/screenshots/video-design/`. `video-line-desktop-1440.png` and `video-line-phone-390.png` show the line with the credit in Mark, Matthew, and 2 Kings. `space-desktop-1440.png` and `space-phone-390.png` show the space of section 17.7, with the line as it was before the credit. The renders are a sketch on the built site of Task 41. Each link in a render goes nowhere or to the first page of a site, not to a video. Task 42 in `docs/TASKS.md` builds this section.
+
+### 17.1 Reason
+
+- Arthur asked on 2026-11-18 for links in "About this book" to the overview videos of BibleProject on YouTube: generally one video for each book.
+- He gave two playlists of the channel BibleProject:
+  - Old Testament: `https://www.youtube.com/playlist?list=PLH0Szn1yYNeeVFodkI9J_WEATHQCwRZ0u`, 41 videos.
+  - New Testament: `https://www.youtube.com/playlist?list=PLH0Szn1yYNecanpQqdixWAm3zHdhY2kPR`, 32 videos.
+- The designer read the two playlists on 2026-11-18, in a browser on Arthur's computer. The 73 videos are these:
+  - 2 videos are a summary of a testament, not of a book.
+  - 47 books have one video each.
+  - 10 books have two videos each, "Part 1" and "Part 2": Genesis, Exodus, Isaiah, Ezekiel, Matthew, Luke, John, Acts, Romans, and Revelation.
+  - 9 books share 4 videos: 1 and 2 Kings, 1 and 2 Chronicles, Ezra and Nehemiah, and 1, 2, and 3 John.
+- So each of the 66 books has a video.
+
+### 17.2 Decided by Arthur on 2026-11-18
+
+1. "About this book" gets a line "Video". Each of the 66 books has it.
+2. The line is a link, and only a link. The page shows no video, and it gets nothing from YouTube or from BibleProject. A tap on the link opens the video on YouTube in a new tab, so the site stays open. Reasons: the hard rule that the site gets no data from a different server, and a video in the page brings the tracking of YouTube to each reader of the page.
+3. The link has the name "BibleProject". Reason: the introductions give the traditional view and then "Scholars differ". A video gives the view of BibleProject. The name tells the reader that the video is not a text of the site.
+4. A book with two videos has two links.
+5. A book that shares its video has the link to that video, and one sentence below the link names the books of the video.
+6. The two summary videos are not in "About this book". The Sources page has them, in a section "Videos" that gives the credit to BibleProject.
+7. With "About this book" open, the space above the read-with list is larger. Section 17.7.
+8. Below the links, each book has a credit to BibleProject, in the words that BibleProject gives. The credit does not look like a fact of the site: it has a line at its left, and gray text at 14 px. Sections 17.3 and 17.10.
+
+### 17.3 The words of the line
+
+The label of the line is "Video".
+
+| Case | Books | What the line shows |
+|---|---|---|
+| One video | 47 | One link: "BibleProject overview" and the sign "›". Below it, the credit. |
+| Two videos | 10 | Two links, one below the other: "BibleProject overview, part 1" and "BibleProject overview, part 2", each with the sign "›". Below them, the credit. |
+| A shared video | 9 | One link: "BibleProject overview" and the sign "›". Below it, the credit, with the sentence of the shared video before its first word. |
+
+The credit is these words, with no change: "BibleProject is the author and owner of this content. To find more BibleProject resources, visit bibleproject.com." The words "bibleproject.com" are a link to `https://www.bibleproject.com/`. The words are the credit that BibleProject gives on its help page for app creators. Section 17.10 has the reason.
+
+The sentence of each shared video. It is in the same paragraph as the credit, before it, with one space between them:
+
+| Books | Sentence of the shared video |
+|---|---|
+| 1 Kings, 2 Kings | The video covers 1 and 2 Kings. |
+| 1 Chronicles, 2 Chronicles | The video covers 1 and 2 Chronicles. |
+| Ezra, Nehemiah | The video covers Ezra and Nehemiah. |
+| 1 John, 2 John, 3 John | The video covers 1, 2, and 3 John. |
+
+Rules for a link to a video:
+
+- It has the look of the link of the line "Where": the group color, weight 600, 15 px, a line height of 24 px, and no line below the words. The sign "›" is hidden from a screen reader.
+- Each link is a line of its own. A link is 24 px high or more.
+- Its address is `https://www.youtube.com/watch?v=<video id>`, with the video id of section 17.5 and no other parameter.
+- It opens in a new tab: `target="_blank"` and `rel="noopener noreferrer"`.
+- For a screen reader, its name is its words and then ", on YouTube, in a new tab". Example: "BibleProject overview, part 1, on YouTube, in a new tab". The added words are not visible.
+
+Rules for the credit. Arthur decided the look on 2026-11-18, from renders:
+
+- It is one paragraph, 10 px below the last link to a video.
+- It has a line at its left: 2 px wide, in black at 20% opacity. The text starts 10 px to the right of the line.
+- The text is in the secondary ink color, weight 400, 14 px, with a line height of 21 px.
+- The link "bibleproject.com" is in the group color, with a line below the words. It opens in a new tab, with `rel="noopener noreferrer"`. For a screen reader, its name is "bibleproject.com, in a new tab".
+- The link "bibleproject.com" is a link in a sentence, as the links of the Sources page are. The rule of 24 px for a control does not apply to it.
+- Each book has the credit, with the same words.
+
+The line has no other words, no picture, and no sign of YouTube or of BibleProject.
+
+### 17.4 Where the line is
+
+- It is the last line of the list of the facts: below "Where", or below "Written" in the five books that have no line "Where".
+- It is in the list of the facts, so it shows when the introduction shows. It does not wait for a file: the video list is in the code.
+- It does not depend on the map index.
+- It is the same in the three translations.
+
+### 17.5 The video list
+
+This list is the only source of a video address. No person and no agent adds, removes, or changes a row without a decision of Arthur. The rows are in the order of the two playlists.
+
+| No. | Playlist | Video id | Title on YouTube | Book ids | Words of the link | Sentence of the shared video |
+|---|---|---|---|---|---|---|
+| 1 | Old Testament | `ALsluAKBZ-c` | Old Testament Summary: A Complete Animated Overview | none: Sources page | Old Testament overview |  |
+| 2 | Old Testament | `GQI72THyO5I` | Book of Genesis Summary: A Complete Animated Overview (Part 1) | `genesis` | BibleProject overview, part 1 |  |
+| 3 | Old Testament | `F4isSyennFo` | Book of Genesis Summary: A Complete Animated Overview (Part 2) | `genesis` | BibleProject overview, part 2 |  |
+| 4 | Old Testament | `jH_aojNJM3E` | Book of Exodus Summary: A Complete Animated Overview (Part 1) | `exodus` | BibleProject overview, part 1 |  |
+| 5 | Old Testament | `oNpTha80yyE` | Book of Exodus Summary: A Complete Animated Overview (Part 2) | `exodus` | BibleProject overview, part 2 |  |
+| 6 | Old Testament | `IJ-FekWUZzE` | Book of Leviticus Summary: A Complete Animated Overview | `leviticus` | BibleProject overview |  |
+| 7 | Old Testament | `tp5MIrMZFqo` | Book of Numbers Summary: A Complete Animated Overview | `numbers` | BibleProject overview |  |
+| 8 | Old Testament | `q5QEH9bH8AU` | Book of Deuteronomy Summary: A Complete Animated Overview | `deuteronomy` | BibleProject overview |  |
+| 9 | Old Testament | `JqOqJlFF_eU` | Book of Joshua Summary: A Complete Animated Overview | `joshua` | BibleProject overview |  |
+| 10 | Old Testament | `kOYy8iCfIJ4` | Book of Judges Summary: A Complete Animated Overview | `judges` | BibleProject overview |  |
+| 11 | Old Testament | `QJOju5Dw0V0` | Book of 1 Samuel Summary: A Complete Animated Overview | `1-samuel` | BibleProject overview |  |
+| 12 | Old Testament | `YvoWDXNDJgs` | Book of 2 Samuel Summary: A Complete Animated Overview | `2-samuel` | BibleProject overview |  |
+| 13 | Old Testament | `bVFW3wbi9pk` | Books of 1-2 Kings Summary: A Complete Animated Overview | `1-kings`, `2-kings` | BibleProject overview | The video covers 1 and 2 Kings. |
+| 14 | Old Testament | `d0A6Uchb1F8` | Book of Isaiah Summary: A Complete Animated Overview (Part 1) | `isaiah` | BibleProject overview, part 1 |  |
+| 15 | Old Testament | `_TzdEPuqgQg` | Book of Isaiah Summary: A Complete Animated Overview (Part 2) | `isaiah` | BibleProject overview, part 2 |  |
+| 16 | Old Testament | `RSK36cHbrk0` | Book of Jeremiah Summary: A Complete Animated Overview | `jeremiah` | BibleProject overview |  |
+| 17 | Old Testament | `R-CIPu1nko8` | Book of Ezekiel Summary: A Complete Animated Overview (Part 1) | `ezekiel` | BibleProject overview, part 1 |  |
+| 18 | Old Testament | `SDeCWW_Bnyw` | Book of Ezekiel Summary: A Complete Animated Overview (Part 2) | `ezekiel` | BibleProject overview, part 2 |  |
+| 19 | Old Testament | `kE6SZ1ogOVU` | Book of Hosea Summary: A Complete Animated Overview | `hosea` | BibleProject overview |  |
+| 20 | Old Testament | `zQLazbgz90c` | Book of Joel Summary: A Complete Animated Overview | `joel` | BibleProject overview |  |
+| 21 | Old Testament | `mGgWaPGpGz4` | Book of Amos Summary: A Complete Animated Overview | `amos` | BibleProject overview |  |
+| 22 | Old Testament | `i4ogCrEoG5s` | Book of Obadiah Summary: A Complete Animated Overview | `obadiah` | BibleProject overview |  |
+| 23 | Old Testament | `dLIabZc0O4c` | Book of Jonah Summary: A Complete Animated Overview | `jonah` | BibleProject overview |  |
+| 24 | Old Testament | `MFEUEcylwLc` | Book of Micah Summary: A Complete Animated Overview | `micah` | BibleProject overview |  |
+| 25 | Old Testament | `Y30DanA5EhU` | Book of Nahum Summary: A Complete Animated Overview | `nahum` | BibleProject overview |  |
+| 26 | Old Testament | `OPMaRqGJPUU` | Book of Habakkuk Summary: A Complete Animated Overview | `habakkuk` | BibleProject overview |  |
+| 27 | Old Testament | `oFZknKPNvz8` | Book of Zephaniah Summary: A Complete Animated Overview | `zephaniah` | BibleProject overview |  |
+| 28 | Old Testament | `juPvv_xcX-U` | Book of Haggai Summary: A Complete Animated Overview | `haggai` | BibleProject overview |  |
+| 29 | Old Testament | `_106IfO6Kc0` | Book of Zechariah Summary: A Complete Animated Overview | `zechariah` | BibleProject overview |  |
+| 30 | Old Testament | `HPGShWZ4Jvk` | Book of Malachi Summary: A Complete Animated Overview | `malachi` | BibleProject overview |  |
+| 31 | Old Testament | `j9phNEaPrv8` | Book of Psalms Summary: A Complete Animated Overview | `psalms` | BibleProject overview |  |
+| 32 | Old Testament | `AzmYV8GNAIM` | Book of Proverbs Summary: A Complete Animated Overview | `proverbs` | BibleProject overview |  |
+| 33 | Old Testament | `xQwnH8th_fs` | Book of Job Summary: A Complete Animated Overview | `job` | BibleProject overview |  |
+| 34 | Old Testament | `4KC7xE4fgOw` | Song of Songs Summary: A Complete Animated Overview | `song-of-solomon` | BibleProject overview |  |
+| 35 | Old Testament | `0h1eoBeR4Jk` | Book of Ruth Summary: A Complete Animated Overview | `ruth` | BibleProject overview |  |
+| 36 | Old Testament | `p8GDFPdaQZQ` | Book of Lamentations Summary: A Complete Animated Overview | `lamentations` | BibleProject overview |  |
+| 37 | Old Testament | `lrsQ1tc-2wk` | Book of Ecclesiastes Summary: A Complete Animated Overview | `ecclesiastes` | BibleProject overview |  |
+| 38 | Old Testament | `JydNSlufRIs` | Book of Esther Summary: A Complete Animated Overview | `esther` | BibleProject overview |  |
+| 39 | Old Testament | `9cSC9uobtPM` | Book of Daniel Summary: A Complete Animated Overview | `daniel` | BibleProject overview |  |
+| 40 | Old Testament | `MkETkRv9tG8` | Books of Ezra-Nehemiah Summary: A Complete Animated Overview | `ezra`, `nehemiah` | BibleProject overview | The video covers Ezra and Nehemiah. |
+| 41 | Old Testament | `HR7xaHv3Ias` | Books of 1-2 Chronicles Summary: A Complete Animated Overview | `1-chronicles`, `2-chronicles` | BibleProject overview | The video covers 1 and 2 Chronicles. |
+| 1 | New Testament | `Q0BrP8bqj0c` | New Testament Summary: A Complete Animated Overview | none: Sources page | New Testament overview |  |
+| 2 | New Testament | `3Dv4-n6OYGI` | Gospel of Matthew Summary: A Complete Animated Overview (Part 1) | `matthew` | BibleProject overview, part 1 |  |
+| 3 | New Testament | `GGCF3OPWN14` | Gospel of Matthew Summary: A Complete Animated Overview (Part 2) | `matthew` | BibleProject overview, part 2 |  |
+| 4 | New Testament | `HGHqu9-DtXk` | Gospel of Mark Summary: A Complete Animated Overview | `mark` | BibleProject overview |  |
+| 5 | New Testament | `G-2e9mMf7E8` | Gospel of John Summary: A Complete Animated Overview (Part 1) | `john` | BibleProject overview, part 1 |  |
+| 6 | New Testament | `RUfh_wOsauk` | Gospel of John Summary: A Complete Animated Overview (Part 2) | `john` | BibleProject overview, part 2 |  |
+| 7 | New Testament | `XIb_dCIxzr0` | Gospel of Luke Summary: A Complete Animated Overview (Part 1) | `luke` | BibleProject overview, part 1 |  |
+| 8 | New Testament | `26z_KhwNdD8` | Gospel of Luke Summary: A Complete Animated Overview (Part 2) | `luke` | BibleProject overview, part 2 |  |
+| 9 | New Testament | `CGbNw855ksw` | Book of Acts Summary: A Complete Animated Overview (Part 1) | `acts` | BibleProject overview, part 1 |  |
+| 10 | New Testament | `Z-17KxpjL0Q` | Book of Acts Summary: A Complete Animated Overview (Part 2) | `acts` | BibleProject overview, part 2 |  |
+| 11 | New Testament | `ej_6dVdJSIU` | Book of Romans Summary: A Complete Animated Overview (Part 1) | `romans` | BibleProject overview, part 1 |  |
+| 12 | New Testament | `0SVTl4Xa5fY` | Book of Romans Summary: A Complete Animated Overview (Part 2) | `romans` | BibleProject overview, part 2 |  |
+| 13 | New Testament | `yiHf8klCCc4` | Book of 1 Corinthians Summary: A Complete Animated Overview | `1-corinthians` | BibleProject overview |  |
+| 14 | New Testament | `3lfPK2vfC54` | Book of 2 Corinthians Summary: A Complete Animated Overview | `2-corinthians` | BibleProject overview |  |
+| 15 | New Testament | `vmx4UjRFp0M` | Book of Galatians Summary: A Complete Animated Overview | `galatians` | BibleProject overview |  |
+| 16 | New Testament | `Y71r-T98E2Q` | Book of Ephesians Summary: A Complete Animated Overview | `ephesians` | BibleProject overview |  |
+| 17 | New Testament | `oE9qqW1-BkU` | Book of Philippians Summary: A Complete Animated Overview | `philippians` | BibleProject overview |  |
+| 18 | New Testament | `pXTXlDxQsvc` | Book of Colossians Summary: A Complete Animated Overview | `colossians` | BibleProject overview |  |
+| 19 | New Testament | `No7Nq6IX23c` | Book of 1 Thessalonians Summary: A Complete Animated Overview | `1-thessalonians` | BibleProject overview |  |
+| 20 | New Testament | `kbPBDKOn1cc` | Book of 2 Thessalonians Summary: A Complete Animated Overview | `2-thessalonians` | BibleProject overview |  |
+| 21 | New Testament | `7RoqnGcEjcs` | Book of 1 Timothy Summary: A Complete Animated Overview | `1-timothy` | BibleProject overview |  |
+| 22 | New Testament | `urlvnxCaL00` | Book of 2 Timothy Summary: A Complete Animated Overview | `2-timothy` | BibleProject overview |  |
+| 23 | New Testament | `PUEYCVXJM3k` | Book of Titus Summary: A Complete Animated Overview | `titus` | BibleProject overview |  |
+| 24 | New Testament | `aW9Q3Jt6Yvk` | Book of Philemon Summary: A Complete Animated Overview | `philemon` | BibleProject overview |  |
+| 25 | New Testament | `1fNWTZZwgbs` | Book of Hebrews Summary: A Complete Animated Overview | `hebrews` | BibleProject overview |  |
+| 26 | New Testament | `qn-hLHWwRYY` | Book of James Summary: A Complete Animated Overview | `james` | BibleProject overview |  |
+| 27 | New Testament | `WhP7AZQlzCg` | Book of 1 Peter Summary: A Complete Animated Overview | `1-peter` | BibleProject overview |  |
+| 28 | New Testament | `wWLv_ITyKYc` | Book of 2 Peter Summary: A Complete Animated Overview | `2-peter` | BibleProject overview |  |
+| 29 | New Testament | `l3QkE6nKylM` | Books of 1-3 John Summary: A Complete Animated Overview | `1-john`, `2-john`, `3-john` | BibleProject overview | The video covers 1, 2, and 3 John. |
+| 30 | New Testament | `6UoCmakZmys` | Book of Jude Summary: A Complete Animated Overview | `jude` | BibleProject overview |  |
+| 31 | New Testament | `5nvVVcYD-0w` | Book of Revelation Summary: A Complete Animated Overview (Part 1) | `revelation` | BibleProject overview, part 1 |  |
+| 32 | New Testament | `QpnIrbq2bKo` | Book of Revelation Summary: A Complete Animated Overview (Part 2) | `revelation` | BibleProject overview, part 2 |  |
+
+How the designer made and checked the list on 2026-11-18:
+
+- The designer read the video id and the title of each video from the data of the two playlist pages.
+- For each of the 73 video ids, the address `https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=<video id>` gave the same title, and the author name "BibleProject".
+- The SHA-256 of the 73 lines "video id, tab, title", in the order of this table, with a line feed after each line, is `94e0f6bf2fb0207bea9fbe0cc5913a7ba85d8a740e39727958aa7d38cfe6a46d`. It is the same for the playlist pages and for this table.
+
+The numbers of the list:
+
+- 73 rows: 41 and 32.
+- 71 rows have a book id. 2 rows have none.
+- Each of the 66 book ids of `public/data/books.json` is in the list.
+- 56 books have one row, and 10 books have two rows.
+- 4 rows have more than one book id. They have 9 book ids together, and each of them has a sentence of the shared video.
+
+The name of a book in a title is the name that BibleProject uses. Example: "Song of Songs" for the book that the site names "Song of Solomon". The words of a link do not name the book, so the two names do not meet on a page.
+
+### 17.6 The section "Videos" on the Sources page
+
+- It is after the section "Places" and before the section "Fonts".
+- Its first paragraph: "Each book has a link to a video about the book. The link is in “About this book”. The videos are by BibleProject, and each link opens a video on YouTube. A video gives the view of BibleProject. The introductions of this site do not come from the videos. BibleProject has no connection with this site."
+- Its second paragraph: "BibleProject also has a video about each part of the Bible:" and then two links, "Old Testament overview" and "New Testament overview". They go to rows 1 of the two playlists in section 17.5.
+- Its third paragraph is the credit of section 17.3, with the same words and the same link. It is in the normal text of the Sources page, with no line at its left. Reason: the terms ask for the notice near each link to a video, and this section has two.
+- The two links to a video open in a new tab, by the rules of section 17.3 for the address, the new tab, and the name for a screen reader.
+
+### 17.7 The space above the read-with list
+
+- Arthur gave this on 2026-11-18, from the first renders: with "About this book" closed, the space above the read-with list is good. With "About this book" open, it is too small.
+- Measured on the built site of Task 41, at 1440 by 900 px and at 390 by 844 px:
+  - Closed: the read-with list starts 6 px below the control "About this book". The control has 8 px of its own below its words.
+  - Open: the read-with list starts 6 px below the list of the facts. The lines of the facts are 8 px from each other, so the read-with list looks like one more line of the facts.
+- The rule: the bottom margin of the list of the facts is 16 px, where it was 6 px. With "About this book" open, the read-with list then starts 16 px below the list of the facts.
+- With "About this book" closed, nothing changes.
+- The designer made renders with 6, 16, 22, and 28 px, and selected 16 px.
+
+### 17.8 Selected by the designer, without a decision by Arthur
+
+Arthur saw the first four points in the renders and approved the line as shown.
+
+- The label "Video", and the words "BibleProject overview", ", part 1", and ", part 2".
+- The sentence of a shared video and its words. The first proposal of the designer was a link with the books in it, as in "BibleProject overview of 1–2 Kings". At 390 px that link is wider than its column, and the sign "›" goes to a line of its own.
+- Two links with the full words for a book with two videos. The first proposal was "Part 1" and "Part 2". A link with its full words is clear to a screen reader.
+- The sign "›" for a link that goes to a different site. The usual sign "↗" is not in the font files of Inrond of the site.
+- The value of 16 px in section 17.7. Arthur asked for more space and gave no value.
+- The words of section 17.6, and the position of the section "Videos". Arthur approved a short section that gives the credit and has the two summary videos. He did not see the words.
+- The name of a link for a screen reader.
+- For the credit: the 10 px above it, where Arthur asked for "just a bit" more than the 6 px of the render. The color and the width of the line at its left, the 10 px between the line and the text, and the line height of 21 px. Arthur saw them in the last render.
+- The address form of section 17.3. A link does not have the playlist in its address, so YouTube does not start the next video of the playlist.
+
+### 17.9 Not decided and not checked
+
+1. The terms of BibleProject: section 17.10.
+2. A video can go away. BibleProject can remove a video or put a new one in its place. The site does not check its links. A link to a removed video opens a page of YouTube that says so.
+3. The videos are also on `bibleproject.com`. The links go to YouTube, because Arthur gave the two playlists of YouTube.
+4. No test on a real phone. On a phone, the link possibly opens the YouTube app and not a new tab. This is not checked.
+5. A reader with a video on YouTube gets the tracking of YouTube there. The site cannot change this.
+
+### 17.10 The terms of BibleProject, and the credit
+
+Claude Code stopped Task 42 at step 1 on 2026-11-18 and changed no file: the terms of BibleProject ask for a notice near a link to a video. The line of the first design did not have one. Arthur decided the credit of section 17.3 the same day.
+
+What the terms say. Claude Code and the designer each read `https://bibleproject.com/terms/` on 2026-11-18, in a browser. The page has the date "Updated October 2026". This is a summary in the words of the designer, not the text of the terms:
+
+- The section "Video Content" permits a stream of a video, or a link to a video, in a site of a different owner, until BibleProject tells the owner to remove it.
+- The owner does not ask for payment and makes no profit from the videos.
+- The owner does not sell, copy, edit, or change a video, and does not put a video on a different server.
+- Near the video, the owner puts a clear and prominent notice. The notice names BibleProject as the author and owner of the video, and it has a link to `www.bibleproject.com`.
+- The owner agrees to the terms of the service that has the video. For the site, that is YouTube.
+- The section "BibleProject Trademarks" gives no right to the name or the logo of BibleProject, other than to refer to BibleProject. Its reason: no reader thinks that BibleProject sponsors a site that only uses its content.
+
+How the site meets each point:
+
+- The site is free, and it has links only. It has no copy of a video.
+- The credit is the notice. It is directly below the links, in each book, and it shows when the links show.
+- The credit has the words that BibleProject gives for this purpose. Its help page for app creators, `https://help.bibleproject.com/hc/en-us/articles/22547623073687`, asks for a credit to BibleProject at each place that has one of its resources, with these words. The designer read that page through a fetch tool on 2026-11-18. Claude Code got an HTTP 403 error from the help pages.
+- The name "BibleProject" is in the words of the link, so the reader sees it before a tap.
+- The site uses the name as a reference only, with no logo. The Sources page says that BibleProject has no connection with the site.
+
+How prominent the credit is. The terms do not say what "prominent" means. The designer compared the question with the rules of the United States Federal Trade Commission for a disclosure in an advertisement, as a comparison only: a reader must not easily miss it, and its size, its contrast, and its position are judged against the text around it. The designer told Arthur that gray text and a smaller size make the credit less prominent than the text of the facts. Arthur decided on 2026-11-18: the credit must not look like a fact of the site, so it has the line at its left, gray text, and 14 px. The gray has a contrast of 5.0 to 1 against white.
+
+Arthur gave an example on 2026-11-18. An app that he uses shows these videos with the label "Devotional", and he needed a long time to see that the app did not make them. The line "Video" must not do this to a reader.
+
+Not checked:
+
+1. If BibleProject accepts this credit for a text link. Only BibleProject can say. Arthur can ask.
+2. The help pages, in a browser.
+3. The designer is not a lawyer. This section is not legal advice.

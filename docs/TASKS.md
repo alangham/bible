@@ -2947,3 +2947,76 @@ Done when:
 - The report gives, for each page and size of step 4, the font files and the bytes before and after.
 
 Stop and report.
+
+---
+
+## Task 42. The line "Video" in "About this book"
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader goes from "About this book" to an overview video of the book on YouTube, and sees that BibleProject made the video. With "About this book" open, the read-with list has more space above it.
+
+Arthur decided this on 2026-11-18, from renders. Read section 17 of `docs/DESIGN.md` first, and look at the four pictures in `docs/screenshots/video-design/`. The pictures are sketches of the designer on the built page of Task 41. The two pictures `video-line-` show the line and the credit as Arthur approved them. The two pictures `space-` show only the space of step 6: the line in them has no credit.
+
+This task shows on the site: each book gets one more line in "About this book", and the Sources page gets one more section.
+
+The state on 2026-11-18. Claude Code started this task, read the terms of BibleProject, and stopped at step 1 with no change to a file: the terms ask for a notice near each link to a video. Arthur then decided the credit of section 17.3. Section 17.10 has the terms and the decision. The designer changed sections 17.2, 17.3, 17.6, 17.8, 17.9, and 17.10 and this task. Read them again, and continue at step 1.
+
+WARNING: The line has links, and it shows no video. Do not add a video player, an `iframe`, a preview image, a script, or a font of YouTube or of BibleProject. No page makes a request to a different server.
+
+WARNING: Do not add, remove, or change a video address. The list of section 17.5 of `docs/DESIGN.md` is the only source. If you think that a row is wrong, stop and ask Arthur.
+
+WARNING: Do not change a word, a capital letter, or a punctuation mark of the credit of section 17.3. The words are those that BibleProject gives. Do not make the credit smaller or lighter than section 17.3 says, and do not hide it behind a control.
+
+WARNING: Do not write a word about a video, about a book, or about BibleProject that is not in section 17. Do not use a video as a source for an introduction. Do not add a logo of BibleProject.
+
+WARNING: Do not change the words, the data, or the lines "What it is", "Author", "Written", and "Where" of "About this book".
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Add a section 13 to `docs/DATA-SOURCES.md`, "Videos of BibleProject: links only". Record the addresses of the two playlists, the address and the date of the terms that you read on 2026-11-18, what the terms ask for, and how the site meets each point. Section 17.10 has the points. Write them in your own words. For the help pages that gave you an HTTP 403 error, record "NOT VERIFIED by Claude Code", and that the designer read the help page for app creators through a fetch tool on 2026-11-18.
+2. The check of the 73 rows of section 17.5 is done: you ran it on 2026-11-18, with 0 differences. Give that result in the report. Do not run it again, unless section 17.5 changed. The check: `https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=<video id>` gives the `title` of the row and the `author_name` "BibleProject". It is not a test: no test and no build makes a request to YouTube.
+3. Put the video list in one file in `src/data/`, as a constant in the code. It is not a file in `public/data/`, so that the line shows with no load. For each book id: its one or two video ids in the order of section 17.5, and the sentence of the shared video if the row has one. And the two summary videos. The words of the credit are in the same file, in one place, so that "About this book" and the Sources page show the same words.
+4. Add unit tests of the list, with the numbers of section 17.5:
+   - Each of the 66 book ids of `public/data/books.json` has one or two videos. 56 have one, and 10 have two.
+   - The list has 71 different video ids for the books, and 73 with the two summary videos.
+   - Each video id is 11 characters of letters, digits, "-", and "_".
+   - 4 video ids are in more than one book. Those 9 books have a sentence of the shared video, and no other book has one.
+   - The SHA-256 of the 73 lines "video id, tab, title", in the order of section 17.5, with a line feed after each line, is `94e0f6bf2fb0207bea9fbe0cc5913a7ba85d8a740e39727958aa7d38cfe6a46d`. If the list in the code does not keep the titles, compute this in the test from the table of section 17.5, and compare the video ids of the table with those of the code.
+   - The words of the credit in the code are the words of section 17.3, character for character.
+   If one of your numbers differs, find the cause and give it. Do not change the list to make the numbers agree.
+5. Add the line "Video" to "About this book", with the links and the credit, by sections 17.3 and 17.4 of `docs/DESIGN.md`.
+6. Change the bottom margin of the list of the facts from 6 px to 16 px, by section 17.7. Change no other space of the facts.
+7. Add the section "Videos" to the Sources page, by section 17.6. Use the words of section 17.6 with no change.
+8. Check that `https://www.bibleproject.com/` opens the site of BibleProject. If it does not, stop and ask Arthur.
+9. End-to-end tests:
+   - Mark: the line "Video" is below the line "Where". It has one link to a video, with the words "BibleProject overview" and the address of row 4 of the New Testament playlist. Below the link is the credit, with the words of section 17.3.
+   - Matthew: two links to a video, "BibleProject overview, part 1" above "BibleProject overview, part 2", with the addresses of rows 2 and 3 of the New Testament playlist. The credit is below the second link, and the line has one credit.
+   - 1 Kings and 2 Kings: the same address. The paragraph of the credit starts with "The video covers 1 and 2 Kings." and then has the credit.
+   - 3 John: the paragraph of the credit starts with "The video covers 1, 2, and 3 John."
+   - Philemon: the line "Video" is below the line "Written", and the book has no line "Where".
+   - The credit, in Matthew, at 1440 by 900 px and at 390 by 844 px: its top is 10 px below the bottom of the last link to a video. Its text is 14 px, in the secondary ink color. It has a line of 2 px at its left. Its link has the words "bibleproject.com" and the address `https://www.bibleproject.com/`.
+   - Each link to a video has `target="_blank"` and a `rel` with `noopener`, and its name for a screen reader ends with "on YouTube, in a new tab". The link of the credit has `target="_blank"` and a `rel` with `noopener`.
+   - At 390 by 844 px, in Matthew and in 2 Kings: each link to a video is one line of text, 24 px high, and no part of the line "Video" is outside its column.
+   - In Matthew, with "About this book" open: the page made no request to a host that is not the host of the site.
+   - At 1440 by 900 px and at 390 by 844 px, in Matthew: with "About this book" open, the top of the read-with list is 16 px below the bottom of the list of the facts. With "About this book" closed, the top of the read-with list is 6 px below the bottom of the control, as before.
+   - The Sources page: the section "Videos" is after "Places" and before "Fonts". Its two links to a video have the addresses of rows 1 of the two playlists. It has the credit, with the link to `https://www.bibleproject.com/`.
+   - The axe check with "About this book" open in Matthew and in 2 Kings, and the axe check of the Sources page.
+   - The line is the same after a change of the translation to the King James Version.
+10. Report the contrast against white of the text of the credit, and of the link of the credit in the group color of Matthew and in the lightest group color of the site.
+11. Make screenshots in `docs/screenshots/task-42/`, at 1440 by 900 px and at 390 by 844 px: "About this book" open in Mark, in Matthew, and in 2 Kings, and the section "Videos" of the Sources page.
+12. If a chapter of the site has no read-with list, say in the report what is below the list of the facts in that chapter, and give the space.
+13. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 4 and 9 pass, or the report gives the cause of each one that does not.
+- `docs/DATA-SOURCES.md` has section 13.
+- The report gives the result of the check of step 2 for the 73 rows.
+- `npm run build` has no errors.
+
+Stop and report. Commit the four sketches of the designer in `docs/screenshots/video-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.

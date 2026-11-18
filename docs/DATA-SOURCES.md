@@ -461,3 +461,50 @@ All files were downloaded by Claude on 2026-11-17 from `https://raw.githubuserco
 - The form of the coordinates of a region file: an integer in units of 0.0001 degrees. A ring or a line is one flat array: the first point as longitude and latitude, then each next point as the difference from the point before it. A ring is closed, and the array does not repeat its first point. The rounding error is 0.00005 degrees at most. The limits of the data box of a region are on the same grid of 0.0001 degrees.
 - A position of a place in a book file is in degrees with 5 decimal places.
 - The OpenStreetMap parts: 19 places of the books have a position from an OpenStreetMap node, by the report of Task 36. Arthur decided to keep them, with a credit, in section 15.7 of `docs/DESIGN.md`. The region files have no OpenStreetMap data.
+
+## 13. Videos of BibleProject: links only
+
+From Task 42, "About this book" and the Sources page have links to overview videos of BibleProject on YouTube. The site has no copy of a video, no player, no `iframe`, no picture, and no script of YouTube or of BibleProject. No page gets a file from those servers. Section 17 of `docs/DESIGN.md` has the design, and section 17.5 has the list of the 73 videos.
+
+### The two playlists
+
+Arthur gave these two playlists of the channel BibleProject on 2026-11-18:
+
+- Old Testament: `https://www.youtube.com/playlist?list=PLH0Szn1yYNeeVFodkI9J_WEATHQCwRZ0u`, 41 videos.
+- New Testament: `https://www.youtube.com/playlist?list=PLH0Szn1yYNecanpQqdixWAm3zHdhY2kPR`, 32 videos.
+
+A link of the site has the form `https://www.youtube.com/watch?v=<video id>`, with no playlist in it.
+
+Check of the list. On 2026-11-18, Claude Code got `https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=<video id>` for each of the 73 rows of section 17.5. For each row, the `title` was the title of the row and the `author_name` was "BibleProject". There were 0 differences. This was a check by hand, with a script outside the repository. No test and no build makes a request to YouTube.
+
+### The terms of BibleProject
+
+- Address: `https://bibleproject.com/terms/`. The page has the date "Updated October 2026".
+- Claude Code read the page on 2026-11-18, in the built-in browser of the Claude app.
+
+This is a summary in my own words. It is not the text of the terms, and it is not legal advice.
+
+- The section "Video Content" permits a site of a different owner to have a stream of a video, or a link to a video. The permission stops if BibleProject tells the owner to remove it.
+- The owner must not ask for payment to see a video, and must not profit from a video.
+- The owner must not sell, copy, or edit a video, and must not put a video on a different server or streaming service.
+- The owner must put a clear and prominent notice near the video. The notice names BibleProject as the author and owner of the video, and it has a link to `www.bibleproject.com`.
+- The owner agrees to the terms of the service that has the video. For this site, that service is YouTube.
+- A list of restrictions in the terms includes a "deep link" to the services of BibleProject. That list applies "unless specifically permitted by these Terms". The section "Video Content" permits a link to a video.
+- The section "BibleProject Trademarks" gives no licence for the name or the logo of BibleProject. A site can use the name only as a reference that is fair use under the law of the United States. The reason in the terms: no reader must think that BibleProject sponsors or approves a site that only uses its content.
+
+How the site meets each point:
+
+- The site is free. It has links only, and it has no copy of a video.
+- The site does not change a video. A link opens the video on YouTube.
+- The credit of section 17.3 of `docs/DESIGN.md` is the notice. It is directly below the links in "About this book" of each book, and it shows when the links show. The Sources page has the credit below its two links to a video.
+- The credit names BibleProject as the author and owner, and it has a link to `https://www.bibleproject.com/`.
+- The words of each link start with "BibleProject", so the reader sees the name before a tap.
+- The site uses the name "BibleProject" as a reference only, with no logo. The Sources page says that BibleProject has no connection with the site.
+
+### The help pages of BibleProject
+
+- `https://help.bibleproject.com/hc/en-us/articles/4479161296151`: NOT VERIFIED by Claude Code. The server gave an HTTP 403 error on 2026-11-18, to a fetch tool and to `curl`.
+- `https://help.bibleproject.com/hc/en-us/articles/4479163021207`: NOT VERIFIED by Claude Code. The server gave an HTTP 403 error on 2026-11-18, to a fetch tool and to `curl`.
+- `https://help.bibleproject.com/hc/en-us/articles/22547623073687`, the help page for app creators: NOT VERIFIED by Claude Code. The designer read this page through a fetch tool on 2026-11-18. By section 17.10 of `docs/DESIGN.md`, the page asks for a credit to BibleProject at each place that has one of its resources, and the words of the credit of the site are the words of that page.
+
+Not checked: whether BibleProject accepts the credit for a text link. Only BibleProject can say.

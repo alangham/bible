@@ -4,20 +4,7 @@ This file is the list of ideas for later. An idea here is not a task. Claude Cod
 
 Design fixes for pages that exist are in `docs/POLISH.md`, not here.
 
-When an idea is built, its item is removed from this file. The other items keep their numbers, because other files refer to them by number. Removed on 2026-11-18: item 1, a map for each book (Tasks 36 to 40), and item 6, the King James Version (Tasks 19 to 21b).
-
----
-
-## 2. A scene of its own for a book that does not fit its category scene
-
-Added: 2026-11-14, by the designer.
-
-Idea: version 1 has one scene for each category. Three books do not fit their scene: Obadiah, Jonah, and Jude. Other books fit only in part, for example Genesis, Ruth, Esther, Acts, Daniel, and Galatians. A later version can give such a book a scene of its own. Example: the sea and a ship for Jonah.
-
-Open questions:
-
-1. Which books get a scene of their own first?
-2. Each new subject needs Arthur's approval and a check by the accuracy reviewer, as in Task 5.
+When an idea is built, its item is removed from this file. The other items keep their numbers, because other files refer to them by number. Removed on 2026-11-18: item 1, a map for each book (Tasks 36 to 40); item 2, a scene of its own for some books (obsolete: the redesign of 2026-11-14 removed the paper-cut scenes); and item 6, the King James Version (Tasks 19 to 21b).
 
 ---
 

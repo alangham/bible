@@ -242,7 +242,9 @@ test.describe('reading page: the introduction and the text', () => {
     await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where', 'Video'])
     for (const dd of await about.locator('.rd-fact-text').all()) await expect(dd).not.toBeEmpty()
     await expect(about.locator('.rd-draft')).toBeVisible()
-    await expect(page.locator('.rd-translation')).toHaveText('Berean Standard Bible')
+    // Task 43: the top bar names the translation. The line of the control has the control only.
+    await expect(page.getByRole('button', { name: /^Translation: / })).toHaveAccessibleName('Translation: Berean Standard Bible, BSB')
+    await expect(page.locator('section.rd-chapter').first()).toHaveAttribute('data-translation', 'bsb')
   })
 
   test('Genesis gives the traditional author, and the control opens the detail in two parts', async ({ page }) => {

@@ -208,7 +208,7 @@ Arthur decided the two bands on 2026-11-14.
 
 - Translation in version 1: the Berean Standard Bible. It is in the public domain. The full text is bundled in the repository.
 - Arthur decided on 2026-11-15 to add the King James Version as a second translation. Section 8 has the decisions.
-- The page must show the name of the translation.
+- The page must show the name of the translation. From Task 43, the translation control of the top bar does this: it shows the short name, and its name for a screen reader has the full name. The translation list has the full name, one tap from the control. Arthur decided on 2026-11-18 to remove the full name that was to the right of the control "About this book": the top bar has the name already. No licence asks for the name at that place, and the Sources page gives the credit of each translation.
 - The ESV is not in version 1. Arthur decided this on 2026-11-13. The ESV is his preferred translation, but it is not a requirement.
 - Reason: the ESV is available only through the Crossway ESV API. The terms forbid a published access key, and the terms expect server-side code. A static site on GitHub Pages cannot hold the key.
 - To add the ESV later, the site needs a small proxy that holds the key. Keep the text service behind one interface so that a second translation can be added without a change to the pages.

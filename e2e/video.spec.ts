@@ -173,7 +173,7 @@ for (const layout of LAYOUTS) {
       const chapter = page.locator('section.rd-chapter[data-chapter="1"]').first()
       await expect(chapter).toHaveAttribute('data-translation', 'kjv')
       await expect(chapter).toHaveAttribute('data-loaded', 'true')
-      await expect(page.locator('.rd-translation').first()).toHaveText('King James Version')
+      await expect(page.getByRole('button', { name: /^Translation: / })).toHaveAccessibleName('Translation: King James Version, KJV')
       const control = page.getByRole('button', { name: 'About this book' }).first()
       if ((await control.getAttribute('aria-expanded')) !== 'true') await control.click()
       const about = page.getByRole('region', { name: 'About this book' }).first()

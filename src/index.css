@@ -951,12 +951,6 @@ html:has(.reading) {
   transform: rotate(90deg);
 }
 
-.rd-translation {
-  color: var(--rd-ink-secondary);
-  font-size: 13px;
-  font-weight: 500;
-}
-
 .rd-about-panel[hidden],
 .rd-scholars-detail[hidden] {
   display: none;

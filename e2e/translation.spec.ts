@@ -110,7 +110,9 @@ for (const vp of VIEWPORTS) {
       await expect(translationList(page).getByRole('button', { name: 'World English Bible' })).toHaveAttribute('aria-pressed', 'false')
       await page.keyboard.press('Escape')
       expect(await pageVerse(genesis, 1)).toBe('In the beginning God created the heavens and the earth.')
-      await expect(genesis.locator('.rd-translation')).toHaveText('Berean Standard Bible')
+      // Task 43: the translation control of the top bar is the one place that names the translation.
+      await expect(translationControl(page)).toHaveAccessibleName('Translation: Berean Standard Bible, BSB')
+      await expect(genesis).toHaveAttribute('data-translation', 'bsb')
     })
 
     test('the translation list selects the King James Version, and the selection stays after a reload', async ({ page }) => {
@@ -136,7 +138,8 @@ for (const vp of VIEWPORTS) {
       // The section heading of the Berean files, and its cross-reference line, are on the page.
       await expect(genesis.locator('h3.sh-s1').first()).toHaveText('The Creation')
       await expect(genesis.locator('h3.sh-s1 + .link-line').first()).toContainText('John 1:1–5')
-      await expect(genesis.locator('.rd-translation')).toHaveText('King James Version')
+      await expect(translationControl(page)).toHaveAccessibleName('Translation: King James Version, KJV')
+      await expect(genesis).toHaveAttribute('data-translation', 'kjv')
 
       await page.reload()
       await expect(chapter(page, 'genesis', 1)).toHaveAttribute('data-translation', 'kjv')
@@ -383,7 +386,8 @@ for (const vp of VIEWPORTS) {
       await page.waitForTimeout(300)
       expect(await pageVerse(john, 16)).toContain('only born Son')
       expect(await pageVerse(john, 16)).toBe(dataVerse('text-web', 'john', 3, 16))
-      await expect(john.locator('.rd-translation')).toHaveText('World English Bible')
+      await expect(translationControl(page)).toHaveAccessibleName('Translation: World English Bible, WEB')
+      await expect(john).toHaveAttribute('data-translation', 'web')
       const after = await page.evaluate(
         ({ c, v }) => document.querySelector(`section.rd-chapter[data-book="john"][data-chapter="${c}"] .chapter-body .vn[data-verse="${v}"]`)?.getBoundingClientRect().top,
         { c: before!.c, v: before!.v },
@@ -592,5 +596,32 @@ for (const vp of VIEWPORTS) {
       await expect(ebible).toHaveCount(2)
       await expect(ebible.nth(1)).toHaveAttribute('href', 'https://ebible.org/details.php?id=engwebp')
     })
+  })
+}
+
+// docs/TASKS.md Task 43 step 4: the line of the control "About this book" has the control only. The translation
+// control of the top bar names the translation. docs/DESIGN.md section 5.
+for (const vp of VIEWPORTS) {
+  test(`Genesis 1, at ${vp.name}: the line of "About this book" has no text other than the control, with each translation`, async ({ context }) => {
+    // A new page for each translation: a second goto to the same address changes only the hash, and does not load the page again.
+    for (const [id, name] of [
+      ['bsb', 'Translation: Berean Standard Bible, BSB'],
+      ['kjv', 'Translation: King James Version, KJV'],
+      ['web', 'Translation: World English Bible, WEB'],
+    ] as const) {
+      const page = await context.newPage()
+      await openIn(id, page, vp.size, 'genesis', 1)
+      const line = chapter(page, 'genesis', 1).locator('.rd-about-line')
+      await expect(line).toHaveCount(1)
+      const content = await line.evaluate((e) => ({
+        children: [...e.children].map((c) => `${c.tagName} ${c.className}`),
+        text: e.textContent!.replace(/\s+/g, ' ').trim(),
+        control: e.querySelector('.rd-about-control')!.textContent!.replace(/\s+/g, ' ').trim(),
+      }))
+      expect(content).toEqual({ children: ['BUTTON rd-about-control'], text: 'About this book ›', control: 'About this book ›' })
+      await expect(page.locator('.rd-translation')).toHaveCount(0)
+      await expect(translationControl(page)).toHaveAccessibleName(name)
+      await page.close()
+    }
   })
 }

@@ -3020,3 +3020,43 @@ Done when:
 - `npm run build` has no errors.
 
 Stop and report. Commit the four sketches of the designer in `docs/screenshots/video-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.
+
+---
+
+## Task 43. Remove the name of the translation next to "About this book"
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: the line of the control "About this book" has the control only. The translation control of the top bar is the one place that shows the selected translation.
+
+Arthur decided this on 2026-11-18: the name of the translation is already in the top bar. Section 5 of `docs/DESIGN.md` has the changed rule. This is a small change, and it has no sketch.
+
+This task shows on the site: the gray text "Berean Standard Bible", "King James Version", or "World English Bible" to the right of "About this book" goes away, at the heading of each book.
+
+WARNING: Remove only this text. Do not change the translation control, the translation list, the Sources page, the pop-up, or a name of a translation in a different place.
+
+WARNING: Do not change the control "About this book", its panel, or a space. The position of the control and of the read-with list stays as built.
+
+WARNING: Do not remove the attribute `data-translation` of a chapter. The tests use it.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. In `src/reading/AboutBook.tsx`, remove the text with the class `rd-translation` and the property that gives it. Remove the property where `src/reading/ChapterSection.tsx` gives it. Correct the comments.
+2. Remove the CSS rule `.rd-translation` in `src/index.css`. If a different file uses the class, stop and ask.
+3. Change the five tests that read this text. They are in `e2e/reading.spec.ts`, `e2e/translation.spec.ts` in three places, and `e2e/video.spec.ts`. Each one now reads what the reader sees and what the page has: the name of the translation control of the top bar, for example "Translation: King James Version, KJV", and the attribute `data-translation` of the chapter. Do not remove a test.
+4. Add one end-to-end test, at 1440 by 900 px and at 390 by 844 px, in Genesis: the line of the control "About this book" has no text other than the control, with each of the three translations.
+5. Before the change and after it, at the two sizes, in Genesis with "About this book" closed and open: record the top of the control "About this book" and the top of the read-with list. The numbers must be the same. Give them in the report. If they differ, find the cause and give it. Do not add a space to make them agree.
+6. Make screenshots in `docs/screenshots/task-43/`, at 1440 by 900 px and at 390 by 844 px: the heading of Genesis with "About this book" closed.
+7. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- No page has an element with the class `rd-translation`.
+- The tests of steps 3 and 4 pass, and the numbers of step 5 are the same.
+- `npm run build` has no errors.
+
+Stop and report. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

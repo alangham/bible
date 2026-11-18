@@ -5,6 +5,8 @@
 // docs/DESIGN.md sections 15.7 item 5, 15.10 item 8, and 15.11.
 // From Task 42, the last line "Video" has the links to the overview videos of BibleProject, and the credit.
 // docs/DESIGN.md section 17. The video list is in the code, so the line does not wait for a file.
+// From Task 43, the line of the control has the control only: the translation control of the top bar shows the
+// translation. docs/DESIGN.md section 5.
 
 import { useEffect, useId, useState } from 'react'
 import type { Intro } from '../data/intros.ts'
@@ -34,11 +36,9 @@ interface AboutBookProps {
   bookId: string
   /** Undefined while the introductions load. Null if they did not load. */
   intro: Intro | null | undefined
-  /** The name of the translation, shown on the same line. docs/DESIGN.md section 5. */
-  translation?: string
 }
 
-export function AboutBook({ bookId, intro, translation }: AboutBookProps) {
+export function AboutBook({ bookId, intro }: AboutBookProps) {
   const [open, setOpen] = useState(false)
   const hasMap = useHasMap(bookId)
   const panelId = useId()
@@ -49,7 +49,6 @@ export function AboutBook({ bookId, intro, translation }: AboutBookProps) {
         <button type="button" className="rd-about-control" aria-expanded={open} aria-controls={panelId} onClick={() => setOpen((o) => !o)}>
           About this book <span aria-hidden="true">›</span>
         </button>
-        {translation && <span className="rd-translation">{translation}</span>}
       </div>
       <div id={panelId} className="rd-about-panel" role="region" aria-label="About this book" hidden={!open}>
         {intro === null && <p role="alert">The introduction did not load.</p>}

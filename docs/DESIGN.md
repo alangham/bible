@@ -1140,7 +1140,7 @@ Arthur decided this section on 2026-11-17. Task 41 in `docs/TASKS.md` builds it.
 - The values for each file: `ROND` 20 and `opsz` 14. The weight is the weight of the file.
 - Reason for `opsz` 14: the files of `@fontsource/inter` are the text design of Inter. With the optical size set by the browser, the book names on the wall were 1 to 3.5% narrower than in Inter, and they did not fill their columns. With `opsz` 14, the widths are the same. The designer measured this on the public site on 2026-11-17.
 - The tools: fontTools 4.67.0 with the module brotli. For each weight, the script fixes the three axes. Then it cuts the font to the characters of the matching Latin file and Latin Extended file of `@fontsource/inter` 5.3.0, and keeps only the layout features of those files: `calt`, `ccmp`, `dnom`, `frac`, `locl`, `numr`, `pnum`, `tnum`, `kern`, `mark`, and `mkmk`. The files have no hinting.
-- The name table: the family name is "Inrond", and the style name is the name of the weight, for example "ExtraBold". The copyright line (name 0), the licence text (name 13), and the licence address (name 14) are those of Inrond. The version line (name 5) adds "Inrond 1.0 with ROND 20 and opsz 14, cut to latin and latin-ext".
+- The name table: the family name is "Inrond", and the style name is the name of the weight, for example "ExtraBold". The copyright line (name 0), the short licence notice (name 13), and the licence address (name 14) are those of Inrond. The version line (name 5) adds "Inrond 1.0 with ROND 20 and opsz 14, cut to latin and latin-ext".
 - The script is `build_font.py`. Its arguments: the source file, the folder `files` of `@fontsource/inter` 5.3.0, the output folder, and the family name "Inrond".
 
 ### 16.4 The files
@@ -1178,7 +1178,7 @@ The designer read `OFL.txt` of Inrond and `LICENSE.txt` of Inter on 2026-11-17.
 - The files of the site are a "Modified Version" in the words of the licence: the script changes the axes, removes characters, and changes the format.
 - What the licence asks of a changed copy:
   1. It must not be sold by itself.
-  2. Each copy must contain the copyright notice and the licence. The site serves `public/licenses/OFL-inrond.txt`. Each font file also keeps the copyright line and the licence text in its name table.
+  2. Each copy must contain the copyright notice and the licence. The site serves `public/licenses/OFL-inrond.txt`. Each font file also keeps the copyright line and a short licence notice in its name table.
   3. It must not use a Reserved Font Name. The licence files name none.
   4. The names of the copyright holders and the authors must not promote the changed copy, except to acknowledge their work. The credit on the Sources page only acknowledges.
   5. It must be distributed under this licence only.
@@ -1230,7 +1230,7 @@ The chat that wrote sections 13 to 15 checked this section and Task 41 before th
 3. Section 16.6, with fontTools: for each of the 12 files, the characters, the layout features, and the units of the em are the same as in the matching file of `@fontsource/inter` 5.3.0. The advance widths are the same, with the 3 and the 5 exceptions of 1 unit at weight 700 that section 16.6 names. The sums of bytes are 407,028 and 360,596 for the 12 files.
 4. Point 2 of section 16.8, the kerning. In Chrome, the width of a text is the same in Inter and in Inrond for each text that the chat measured: the 66 book names in capitals at weight 800, the 1,046 names of the map data at the weights 500 and 700 and in capitals at weight 600, and the 509 texts of the introductions at weight 400. The README of Inrond says that the advance widths and the kerning are those of Inter at each roundness.
 5. The characters. The chat searched 210 files for a character that is not in the two character sets of the font files: the book list, the introductions, the periods, the dates, the quotation pairs, the map data, the link data, and the source code. It found none. The Bible text is in Lora and was not part of the search.
-6. The licence. The first lines of `OFL-inrond.txt` are the two copyright lines of section 16.5, and the file names no Reserved Font Name. The file `LICENSE.txt` of Inter names none. The README of Inter says: "Inter" is a Reserved Font Name by Rasmus Andersson. Each font file has the family name "Inrond", the copyright line, the licence text, and the licence address in its name table.
+6. The licence. The first lines of `OFL-inrond.txt` are the two copyright lines of section 16.5, and the file names no Reserved Font Name. The file `LICENSE.txt` of Inter names none. The README of Inter says: "Inter" is a Reserved Font Name by Rasmus Andersson. Each font file has the family name "Inrond", the copyright line, a short licence notice, and the licence address in its name table.
 7. Not checked by the second chat: the two sheets against the files, the script `build_font.py`, and the look of the font on a real page. The chat is not a lawyer.
 
 ### 16.10 The fallback list, decided by Arthur on 2026-11-17
@@ -1245,3 +1245,15 @@ The first run of Task 41 stopped at a test of the task: with the font files stop
 3. The decision: the font that measures a name has the same list of font families as the CSS of the text that it measures. The map uses `Inrond, system-ui, sans-serif` for its names and its scale label. With Inrond loaded, nothing changes: the map records of Task 41 must stay the same.
 4. Arthur did not select these options: a correction of the wall only, and a change of the test with no change of the code.
 5. This is the one change of Task 41 that is more than the name of the font. Step 13a of the task has it.
+
+### 16.11 Task 41 as built, checked on 2026-11-18
+
+Claude Code completed Task 41 in commit `be05090`. The second chat ran the build in a browser at 1440 by 900 px and at 390 by 844 px.
+
+1. The font files of the build are the same, byte for byte, as the files of section 16.4.
+2. The wall, the headings, the bands, the controls, and the map show in Inrond. The Bible text shows in Lora. The browser downloads no file of Inter.
+3. The wall downloads the weights 500, 700, and 800.
+4. The numbers of dots and names of the map for Acts, Joshua, and Matthew are the same as before the task.
+5. With the font files stopped: each book name of the wall fills its column within 0.13 px, the timeline measures and shows each name with the same width within 0.01 px, and the map names do not touch and have the system font.
+6. Three sentences about the licence were not exact, from the accuracy review of Task 41. This section and section 6 of `docs/DATA-SOURCES.md` are corrected. Name 13 of each font file is a notice of 145 characters, not the text of the licence. Condition 5 of the licence is for the fonts "modified or unmodified". Condition 2 permits the metadata fields only if the user can easily view them. The site meets condition 2 with the licence file.
+7. The accuracy review gave one more point with no change: the credit on the Sources page does not say that the optical size is fixed at 14 and that the files are static. The credit says nothing false.

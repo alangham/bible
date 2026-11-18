@@ -74,6 +74,19 @@ describe('the map data', () => {
     expect(outside).toEqual([])
   })
 
+  // docs/TASKS.md Task 38b step 4, docs/DESIGN.md section 15.9 rule 7: no place with the name of a direction.
+  it('has no place with the name "East", "North", or "South" in a list of a book file', () => {
+    const directions = ['East', 'North', 'South']
+    for (const { book } of index.books) {
+      const f = bookFile(book)
+      const names = [...f.places.map((p) => p.name), ...f.inSettlement, ...f.noPosition]
+      expect(names.filter((n) => directions.includes(n)), book).toEqual([])
+    }
+    // Two books of the designer: Matthew 38 to 36, and Daniel 23 to 21.
+    expect(bookFile('matthew').named).toBe(36)
+    expect(bookFile('daniel').named).toBe(21)
+  })
+
   it('has the numbers of step 6 for Exodus, Acts, and Proverbs', () => {
     // Columns: named, the places with a position, the places with a score below 500. The places inside a settlement
     // have a position. In these three books, no place inside a settlement has a score below 500.

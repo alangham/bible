@@ -126,3 +126,54 @@ test('no page has a link to the map page', async ({ page }) => {
   await page.getByRole('button', { name: 'About this book' }).first().click()
   await expect(page.locator('a[href*="/map"]')).toHaveCount(0)
 })
+
+// docs/TASKS.md Task 38b step 11: the four corrections, and the data with no name of a direction.
+test.describe('map page, Task 38b', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+  })
+
+  test('Matthew: the map has no name "EAST", and the page has no word "South"', async ({ page }) => {
+    await openMap(page, 'matthew')
+    expect(await mapNames(page)).not.toContain('EAST')
+    await expect(page.locator('main')).not.toContainText('South')
+    await expect(page.locator('.map-counts p').first()).toHaveText(/^Matthew names 36 places\./)
+  })
+
+  test('Matthew: the axe check', async ({ page }) => {
+    await openMap(page, 'matthew')
+    const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+    expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
+  })
+
+  test('Exodus: "Mount Sinai" is bold', async ({ page }) => {
+    await openMap(page, 'exodus')
+    const sinai = page.locator('.map-names text', { hasText: /^Mount Sinai$/ })
+    await expect(sinai).toHaveAttribute('font-weight', '700')
+  })
+
+  test('Ezekiel: the number of the sentence is the number of the names shown plus N', async ({ page }) => {
+    await openMap(page, 'ezekiel')
+    const outside = await page.locator('.map-counts p', { hasText: 'outside this map' }).textContent()
+    const m = /^(\d+) places are outside this map: (.*), and (\d+) more\.$/.exec(outside ?? '')
+    expect(m, outside ?? '').not.toBeNull()
+    expect(Number(m![1])).toBe(m![2].split(', ').length + Number(m![3]))
+  })
+
+  for (const [width, left, right] of [
+    [1440, 80, 20],
+    [1470, 80, 50],
+    [1500, 80, 80],
+    [1920, 290, 290],
+  ]) {
+    test(`the space at the left and at the right of the two columns at ${width} px: ${left} and ${right}`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 })
+      await openMap(page, 'acts')
+      const space = await page.evaluate(() => {
+        const W = document.documentElement.clientWidth
+        return [document.querySelector('.map-head')!.getBoundingClientRect().left, W - document.querySelector('.map-holder')!.getBoundingClientRect().right]
+      })
+      expect(space).toEqual([left, right])
+    })
+  }
+})

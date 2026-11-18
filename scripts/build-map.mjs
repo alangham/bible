@@ -12,7 +12,8 @@
 //   public/data/map/books/<book id>.json: the places of each book with a region.
 //   public/data/map/regions/<region id>.json: the land, the lakes, and the rivers of each region.
 // Two runs give the same bytes. No person selects a place, a position, a name, or a kind: the rules of
-// section 15.9 do. The script prints the numbers of step 6 of Task 37.
+// section 15.9 do. The one exception is rule 7, a decision of Arthur: the places with the name "East", "North",
+// or "South" are left out. The script prints the numbers of step 6 of Task 37, and the entries of rule 7.
 //
 // The form of a coordinate in a region file: an integer in units of 0.0001 degrees. A ring or a line is one
 // flat array: the first point as [lon, lat], then each next point as the difference from the point before it.
@@ -167,11 +168,25 @@ function kindOf(a) {
 // Rule 3. A score below 500 is not certain.
 const LIMIT = 500
 
+// Rule 7, decided by Arthur on 2026-11-17, docs/TASKS.md Task 38b: a place whose name is "East", "North", or
+// "South" is not a place of a book. The name is the one of rule 5. Reason: the name is a direction and not a place.
+const DIRECTIONS = new Set(['East', 'North', 'South'])
+const isDirection = (a) => DIRECTIONS.has(nameOf(a))
+
 // Rule 1. The places of each book, with the number of verses of the place in that book. Order of ancient.jsonl.
+// `leftOut` has the entries of rule 7, with their books, and `namedBefore` the number of places of each book
+// before rule 7.
 const placesOfBook = new Map(books.map((b) => [b.id, []]))
+const leftOut = []
+const namedBefore = new Map()
 ancient.forEach((a, order) => {
   const n = new Map()
   for (const v of a.verses ?? []) count(n, bookOfVerse(v))
+  for (const bookId of n.keys()) count(namedBefore, bookId)
+  if (isDirection(a)) {
+    leftOut.push({ a, books: [...n.keys()] })
+    return
+  }
   for (const [bookId, verses] of n) placesOfBook.get(bookId).push({ a, order, verses })
 })
 // The order of a list: the most verses first, then the order of ancient.jsonl.
@@ -538,6 +553,16 @@ section('Names that are two or more times in the places of one book file')
 
 section('The rivers of the class "River" that the rule leaves out by the name')
 line([...new Set(riverAll.filter((f) => f.properties.featurecla === 'River' && isCanalName(f)).map((f) => f.properties.name))].join(', '))
+
+section('Rule 7. The entries with the name of a direction that the data leaves out, with their books')
+for (const { a, books: ids } of leftOut) line(`  ${a.friendly_id}: ${ids.map(nameOfBook).join(', ') || 'no book'}`)
+line('entries:', leftOut.length)
+{
+  const changed = books.filter((b) => bookFiles.has(b.id) && namedBefore.get(b.id) !== bookFiles.get(b.id).named)
+  line('books where named changes:', changed.length)
+  for (const b of changed) line(`  ${b.name}: ${namedBefore.get(b.id)} to ${bookFiles.get(b.id).named}`)
+  line('books in the index:', bookFiles.size)
+}
 
 section('The files of public/data/map/')
 {

@@ -449,13 +449,13 @@ All files were downloaded by Claude on 2026-11-17 from `https://raw.githubuserco
 - Claude downloaded `schemas/ancient.json` and `schemas/modern.json` and did not read them. The report uses no statement from them.
 - The pages of this section are not in the table. They change, so a hash of a page would not identify a version of its text. The dates of reading are above.
 - `scripts/map-report.mjs` prints the size and the SHA-256 of the seven data files again when it runs.
-- Claude downloaded the seven data files again for Task 37 on 2026-11-17, from the same addresses. The size and the SHA-256 of each are the values of the table. `scripts/build-map.mjs` reads six of them. It prints their size and SHA-256, and it stops if one differs from the table. Claude compared `data/geometry.jsonl` by hand.
+- Claude downloaded the seven data files again for Task 37 and for Task 38b on 2026-11-17, from the same addresses. The size and the SHA-256 of each are the values of the table. `scripts/build-map.mjs` reads six of them. It prints their size and SHA-256, and it stops if one differs from the table. Claude compared `data/geometry.jsonl` by hand.
 
 ### The map data of the site (Task 37)
 
 - Script: `scripts/build-map.mjs <folder>`. It reads `data/ancient.jsonl` and `data/modern.jsonl` of the places data, and the four GeoJSON files of Natural Earth, from a folder outside the repository. It writes `public/data/map/`. Two runs give the same bytes.
-- Rules: section 15.9 of `docs/DESIGN.md`. They select each place, position, name, kind, and region. No person selects them.
-- Files: 67. `index.json`, 61 files in `books/`, and 5 files in `regions/`. Sum: 822,263 bytes, 270,850 bytes with gzip.
+- Rules: section 15.9 of `docs/DESIGN.md`. They select each place, position, name, kind, and region. No person selects them. The one exception is rule 7 of "The places of a book", which Arthur decided on 2026-11-17 and Task 38b built: the data leaves out the places with the name "East", "North", or "South". The name is the `friendly_id` with no number at its end. The script leaves out five entries of `data/ancient.jsonl`: East, North, South 1, South 2, and South 3. They are in no list and in no count. `named` changes in 13 books, no book changes its region, and the region files and `index.json` do not change.
+- Files: 67. `index.json`, 61 files in `books/`, and 5 files in `regions/`. Sum after Task 38b: 821,002 bytes, 270,661 bytes with gzip. Sum of Task 37: 822,263 bytes, 270,850 bytes with gzip.
 - The form of the coordinates of a region file: an integer in units of 0.0001 degrees. A ring or a line is one flat array: the first point as longitude and latitude, then each next point as the difference from the point before it. A ring is closed, and the array does not repeat its first point. The rounding error is 0.00005 degrees at most. The limits of the data box of a region are on the same grid of 0.0001 degrees.
 - A position of a place in a book file is in degrees with 5 decimal places.
 - The OpenStreetMap parts: 19 places of the books have a position from an OpenStreetMap node, by the report of Task 36. Arthur decided to keep them, with a credit, in section 15.7 of `docs/DESIGN.md`. The region files have no OpenStreetMap data.

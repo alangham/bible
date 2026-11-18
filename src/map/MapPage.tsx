@@ -21,6 +21,7 @@ import {
   priority,
   riverShows,
   scaleBar,
+  trianglePath,
   wideFrameHeight,
   type Measure,
   type MapPlace,
@@ -168,14 +169,14 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
       <div className="map-after">
         <ul className="map-signs">
           <li>
-            <Sign kind="dot" color={color} />A place that the book names
+            <Sign kind="dot" color={color} r={wide ? 3.5 : 3} />A place that the book names
           </li>
           <li>
-            <Sign kind="open" color={color} />
+            <Sign kind="open" color={color} r={wide ? 3.5 : 3} />
             The position is not certain
           </li>
           <li>
-            <Sign kind="triangle" color={color} />A mountain or a hill
+            <Sign kind="triangle" color={color} r={wide ? 3.5 : 3} />A mountain or a hill
           </li>
         </ul>
         {onMap && file.file && (
@@ -195,19 +196,15 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
   )
 }
 
-function Sign({ kind, color }: { kind: 'dot' | 'open' | 'triangle'; color: string }) {
+/** A sign of the list, in the size of the map: a dot of radius r, or a triangle. "The drawing", rule 4. */
+function Sign({ kind, color, r }: { kind: 'dot' | 'open' | 'triangle'; color: string; r: number }) {
   return (
     <svg className="map-sign" width="14" height="14" viewBox="-7 -7 14 14" aria-hidden="true">
-      {kind === 'dot' && <circle r="3.5" fill={color} stroke="#fff" strokeWidth="1" />}
-      {kind === 'open' && <circle r="3.5" fill="#fff" stroke={color} strokeWidth="1.4" />}
-      {kind === 'triangle' && <path d={triangle(0, 0, 3.5)} fill={color} stroke="#fff" strokeWidth="1" />}
+      {kind === 'dot' && <circle r={r} fill={color} stroke="#fff" strokeWidth="1" />}
+      {kind === 'open' && <circle r={r} fill="#fff" stroke={color} strokeWidth="1.4" />}
+      {kind === 'triangle' && <path d={trianglePath(0, 0, r)} fill={color} stroke="#fff" strokeWidth="1" />}
     </svg>
   )
-}
-
-/** A triangle with the size of the dot: 2 radii wide and 2 radii high, with its center on the point. */
-function triangle(x: number, y: number, r: number): string {
-  return `M${x} ${y - r}L${x + r} ${y + r}L${x - r} ${y + r}Z`
 }
 
 interface DrawingProps {
@@ -322,7 +319,7 @@ function MapDrawing({ book, regionName, places, region, view, wide, color }: Dra
             const stroke = solid ? '#fff' : color
             const sw = solid ? 1 : 1.4
             return p.kind === 'mountain' ? (
-              <path key={d.i} data-place={d.i} d={triangle(d.x, d.y, r)} fill={fill} stroke={stroke} strokeWidth={sw} />
+              <path key={d.i} data-place={d.i} d={trianglePath(d.x, d.y, r)} fill={fill} stroke={stroke} strokeWidth={sw} />
             ) : (
               <circle key={d.i} data-place={d.i} cx={d.x} cy={d.y} r={r} fill={fill} stroke={stroke} strokeWidth={sw} />
             )

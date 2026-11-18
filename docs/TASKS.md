@@ -2581,6 +2581,55 @@ Done when:
 
 Stop and report.
 
+## Task 38b. The map: four corrections of the page, and the names of a direction
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the map page has the four corrections of the designer, and the map data has no place with the name "East", "North", or "South".
+
+The designer verified Task 38 and found no error of the build. The four corrections come from rules of the designer that were not clear or not right. Arthur decided the change of the data on 2026-11-17. Read rule 7 of "The places of a book" in section 15.9 of `docs/DESIGN.md`, and section 15.11.
+
+WARNING: Do not add a link to the map page. Do not add the line "Where". Do not add the zoom.
+
+WARNING: The names of rule 7 are the one exception to the rule that no person selects a place. Do not leave out a different place.
+
+Steps:
+
+1. The data. Download the files of Task 37 again, and check each SHA-256, as in Task 37 step 1.
+2. Change `scripts/build-map.mjs`: a place whose name is "East", "North", or "South" is not a place of a book. The name is the `friendly_id` with no number at its end. The script prints the entries that it leaves out, with the books of each. Build `public/data/map/` again.
+3. Compare with the numbers of the designer. If your numbers differ, find the cause and give it.
+   - The entries: East, North, South 1, South 2, and South 3.
+   - `named` changes in 13 books: Genesis 117 to 116, Numbers 139 to 138, Judges 150 to 149, 1 Kings 105 to 104, Job 10 to 9, Isaiah 136 to 135, Jeremiah 137 to 136, Ezekiel 107 to 106, Daniel 23 to 21, Zechariah 39 to 38, Matthew 38 to 36, Luke 34 to 33, and Revelation 19 to 18.
+   - No book changes its region. The index has 61 books.
+   - The region files do not change. Give the SHA-256 of each before and after.
+4. `src/data/mapData.test.ts`: add a test that no list of a book file has one of the three names. Change a number of a test only if step 3 gives the cause.
+5. The Sources page, section "Places": change the second sentence to "The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city and the places with the name East, North, or South." Change the test of the section.
+6. `docs/DATA-SOURCES.md`, section 12: add rule 7, the five entries, and the new number of bytes.
+7. The page, correction 1: ", and N more." N is the number of the places of the list that the names shown do not stand for. Example: Ezekiel at 1440 by 900 px has 8 names and then the number of the other places.
+8. The page, correction 2: the three bold names are those of the places with a dot or a triangle that the book names most. Example: in Exodus, "Mount Sinai" is bold.
+9. The page, correction 3: the size of the triangle, from "The drawing" rule 4 of section 15.11, on the map and in the list of the signs.
+10. The page, correction 4: the space at the left in the wide layout, from "The layout" rule 2 of section 15.11.
+11. Tests. Vitest: the three corrections 1, 2, and 3 in the functions. End-to-end:
+    - Matthew at 1440 by 900 px: the map has no name "EAST", and the page has no word "South".
+    - Exodus at 1440 by 900 px: "Mount Sinai" is bold.
+    - Ezekiel at 1440 by 900 px: the number of the sentence is the number of the names shown plus N.
+    - The space at the left and at the right of the two columns, in a window of 1440, 1470, 1500, and 1920 px. The designer computed 80 and 20, 80 and 50, 80 and 80, and 290 and 290.
+    - The axe check for Matthew.
+12. Make screenshots in `docs/screenshots/task-38b/`: Matthew, Exodus, Ezekiel, and Daniel at 1440 by 900 px and at 390 by 844 px, and Acts at 1920 by 1080 px.
+13. Report the table of Task 38 step 8 again, for the same four books and Daniel.
+14. Run the `accuracy-reviewer` agent: the numbers of step 3 against the script, the sentences of the counts against the data for the books of step 12, and the sentence of step 5 against rule 7.
+15. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- No file of `public/data/map/books/` has one of the three names.
+- The tests of steps 4 and 11 pass, or the report gives the cause of each one that does not.
+- No page has a link to the map page.
+
+Stop and report.
+
 ## Task 39. The map page: the zoom
 
 Status: TODO

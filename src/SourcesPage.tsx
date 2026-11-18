@@ -167,7 +167,8 @@ export function SourcesPage() {
             The places that each book names, the verses that name them, and their positions come from the{' '}
             <a href="https://www.openbible.info/geo/">Bible Geocoding Data of OpenBible.info</a>, with a{' '}
             <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 licence</a>. The site changed the data: it keeps
-            one position for each place, and it leaves out the places that are inside a city.
+            one position for each place, and it leaves out the places that are inside a city and the places with the name East, North, or
+            South.
           </p>
           <p>
             Some positions in that data come from OpenStreetMap. <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>.

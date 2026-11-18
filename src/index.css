@@ -2334,17 +2334,13 @@ html:has(.reading) {
 /* ---- The map page: docs/DESIGN.md sections 15.8 and 15.11, docs/TASKS.md Task 38. ---- */
 
 /* Wide layout: the text column is 340 px wide, 80 px from the left. The map is 40 px to its right, 960 px wide
-   at most, with 20 px to its right. In a window wider than 1440 px, the two columns together are in the center:
-   the space at the left and at the right is the same. The map starts 28 px below the bar and stays in view when
-   the text column scrolls.
-   --wider is 30 px when the page is wider than 1440 px, and 0 when it is not. --extra is half of the width above
-   1440 px. A percentage of a padding is a part of the width of the page. */
+   at most, with 20 px to its right. The space at the left is 80 px, or half of the width of the window minus
+   1340 px if that is more: the two columns are in the center from a window of 1500 px. A percentage of a padding
+   is a part of the width of the page. The map starts 28 px below the bar and stays in view when the text column
+   scrolls. */
 .map-page {
-  --wider: clamp(0px, (100% - 1440px) * 10000, 30px);
-  --extra: max(0px, (100% - 1440px) / 2);
-
   box-sizing: border-box;
-  padding: 28px calc(20px + var(--wider) + var(--extra)) 28px calc(80px - var(--wider) + var(--extra));
+  padding: 28px 20px 28px max(80px, (100% - 1340px) / 2);
   display: grid;
   grid-template-columns: 340px minmax(0, 960px);
   grid-template-rows: auto 1fr;

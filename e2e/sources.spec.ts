@@ -52,7 +52,7 @@ test.describe('sources page', () => {
       const paragraphs = places.locator('p')
       await expect(paragraphs).toHaveCount(3)
       await expect(paragraphs.nth(0)).toHaveText(
-        'The places that each book names, the verses that name them, and their positions come from the Bible Geocoding Data of OpenBible.info, with a Creative Commons Attribution 4.0 licence. The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city.',
+        'The places that each book names, the verses that name them, and their positions come from the Bible Geocoding Data of OpenBible.info, with a Creative Commons Attribution 4.0 licence. The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city and the places with the name East, North, or South.',
       )
       await expect(paragraphs.nth(1)).toHaveText('Some positions in that data come from OpenStreetMap. © OpenStreetMap contributors. That data has the Open Database License.')
       await expect(paragraphs.nth(2)).toHaveText('The coast, the rivers, and the lakes come from Natural Earth, which is in the public domain.')

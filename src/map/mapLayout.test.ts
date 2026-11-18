@@ -13,6 +13,9 @@ import {
   project,
   regionRatio,
   riverShows,
+  signBox,
+  trianglePath,
+  triangleSize,
   scaleBar,
   viewAtScale,
   wideFrameHeight,
@@ -154,6 +157,15 @@ describe('the counts', () => {
     const places = [place('Hazor', 40, 40, 3), place('Hazor', 41, 40, 2), place('Kedesh', 42, 40, 1)]
     expect(countSentences('Joshua', file(places), [false, false, false])[1]).toBe('3 places are outside this map: Hazor, Kedesh.')
   })
+
+  // Task 38b step 7: N is the number of the places of the list that the 8 names shown do not stand for.
+  it('gives the number of the other places after 8 names, so that the numbers of the sentence add up', () => {
+    // Ezekiel: "Lud" two times in the list. 18 places, 17 names.
+    const names = ['Cush', 'Eden', 'Tarshish', 'Put', 'Sheba', 'Thebes', 'Arabia', 'Beth-togarmah', 'Lud', 'Lud', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    expect(nameList(names)).toBe('Cush, Eden, Tarshish, Put, Sheba, Thebes, Arabia, Beth-togarmah, and 10 more.')
+    // A name of the 8 that is two times in the list stands for its two places.
+    expect(nameList(['Hazor', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'Hazor', 'I', 'J'])).toBe('Hazor, B, C, D, E, F, G, H, and 2 more.')
+  })
 })
 
 describe('the places at one position', () => {
@@ -242,8 +254,37 @@ describe('the priority rule', () => {
     expect(r.dots.map((d) => d.i)).toEqual([1])
   })
 
-  it('gives bold to the three places with a dot that the book names most', () => {
+  it('gives bold to the three places with a dot or a triangle that the book names most', () => {
     const r = run([p('A', 20, 20, 9), p('R', 300, 20, 8, 'region'), p('B', 20, 100, 7), p('C', 20, 180, 6), p('D', 20, 260, 5)])
     expect(r.names.map((n) => n.style)).toEqual(['place-bold', 'region', 'place-bold', 'place-bold', 'place'])
+    // Task 38b step 8. Exodus: the mountain "Mount Sinai" with 12 verses is bold.
+    const m = run([p('Egypt', 300, 20, 30, 'region'), p('Mount Sinai', 20, 20, 12, 'mountain'), p('Rameses', 20, 100, 4), p('Shur', 20, 180, 3), p('Baal-zephon', 20, 260, 2)])
+    expect(m.names.map((n) => `${n.text} ${n.style}`)).toEqual([
+      'EGYPT region',
+      'Mount Sinai place-bold',
+      'Rameses place-bold',
+      'Shur place-bold',
+      'Baal-zephon place',
+    ])
+  })
+
+  // Task 38b step 9: a triangle is 3 px wider than the dot and 2 px higher, with its center on the position.
+  it('gives a triangle of 10 by 9 px in the wide layout and 9 by 8 px in the narrow layout', () => {
+    expect(triangleSize(3.5)).toEqual({ w: 10, h: 9 })
+    expect(triangleSize(3)).toEqual({ w: 9, h: 8 })
+    expect(trianglePath(100, 50, 3.5)).toBe('M100 45.5L105 54.5L95 54.5Z')
+    expect(signBox('mountain', 100, 50, 3)).toEqual({ x: 95.5, y: 46, w: 9, h: 8 })
+    expect(signBox('place', 100, 50, 3)).toEqual({ x: 97, y: 47, w: 6, h: 6 })
+  })
+
+  it('keeps a name away from the full box of a triangle', () => {
+    // A has a name that is wider than the view, so it shows with no name. The name "RR" of the region on its point
+    // is from x 106 to 118, and with 2 px around it from 104. The dot of A ends at 103.5, the triangle at 105.
+    const long = 'A'.repeat(80)
+    const nextToDot = run([p(long, 100, 100, 9), p('Rr', 112, 100, 5, 'region')])
+    const nextToTriangle = run([p(long, 100, 100, 9, 'mountain'), p('Rr', 112, 100, 5, 'region')])
+    expect(nextToDot.names.map((n) => [n.box.x, n.box.y])).toEqual([[106, 94]])
+    // On the point, above, and below touch the triangle: the name goes to the right, 5 px from the point of the region at x 112.
+    expect(nextToTriangle.names.map((n) => [n.box.x, n.box.y])).toEqual([[117, 94]])
   })
 })

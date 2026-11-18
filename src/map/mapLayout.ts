@@ -179,7 +179,10 @@ export function scaleBar(k: number): { miles: number; px: number } {
 export function nameList(names: string[]): string {
   const unique = [...new Set(names)]
   if (unique.length <= 8) return `${unique.join(', ')}.`
-  return `${unique.slice(0, 8).join(', ')}, and ${unique.length - 8} more.`
+  // The number of the other places: the places of the list that the 8 names shown do not stand for. Task 38b step 7.
+  const shown = new Set(unique.slice(0, 8))
+  const others = names.filter((n) => !shown.has(n)).length
+  return `${unique.slice(0, 8).join(', ')}, and ${others} more.`
 }
 
 /**
@@ -328,6 +331,29 @@ export function touches(a: Rect, b: Rect): boolean {
   return a.x <= b.x + b.w && b.x <= a.x + a.w && a.y <= b.y + b.h && b.y <= a.y + a.h
 }
 
+/**
+ * The size of a triangle: 3 px wider than the dot and 2 px higher. 10 by 9 px in the wide layout, 9 by 8 px in the
+ * narrow layout. "The drawing", rule 4.
+ */
+export function triangleSize(radius: number): { w: number; h: number } {
+  return { w: 2 * radius + 3, h: 2 * radius + 2 }
+}
+
+/** SVG path data of a triangle with its center on the point. */
+export function trianglePath(x: number, y: number, radius: number): string {
+  const { w, h } = triangleSize(radius)
+  return `M${x} ${y - h / 2}L${x + w / 2} ${y + h / 2}L${x - w / 2} ${y + h / 2}Z`
+}
+
+/** The box of the sign of a place: a dot, or a triangle for a mountain. */
+export function signBox(kind: Kind, x: number, y: number, radius: number): Rect {
+  if (kind === 'mountain') {
+    const { w, h } = triangleSize(radius)
+    return { x: x - w / 2, y: y - h / 2, w, h }
+  }
+  return { x: x - radius, y: y - radius, w: 2 * radius, h: 2 * radius }
+}
+
 const grow = (r: Rect, d: number): Rect => ({ x: r.x - d, y: r.y - d, w: r.w + 2 * d, h: r.h + 2 * d })
 
 /** The text of a name on the map: a region in capitals. */
@@ -335,9 +361,9 @@ export function nameText(p: MapPlace): string {
   return p.kind === 'region' ? p.name.toUpperCase() : p.name
 }
 
-/** The three places with a dot that the book names most: their name is in bold. "The drawing", rule 5. */
+/** The three places with a dot or a triangle that the book names most: their name is in bold. "The drawing", rule 5. */
 export function boldPlaces(places: MapPlace[], stay: number[]): Set<number> {
-  return new Set(stay.filter((i) => places[i].kind === 'place').slice(0, 3))
+  return new Set(stay.filter((i) => hasDot(places[i].kind)).slice(0, 3))
 }
 
 /** The positions of the name of a place with a dot, in order: right, left, above, below, and the four corners. */
@@ -376,7 +402,7 @@ export function priority({ places, view, radius, measure, blocked }: PriorityInp
   const bold = boldPlaces(places, stay)
   const dots: ShownDot[] = []
   const names: ShownName[] = []
-  const dotBox = (d: { x: number; y: number }): Rect => ({ x: d.x - radius, y: d.y - radius, w: 2 * radius, h: 2 * radius })
+  const dotBox = (d: { x: number; y: number; i: number }): Rect => signBox(places[d.i].kind, d.x, d.y, radius)
   const frame: Rect = { x: 0, y: 0, w: view.width, h: view.height }
   const free = (box: Rect) => {
     const around = grow(box, NAME_SPACE)
@@ -394,7 +420,7 @@ export function priority({ places, view, radius, measure, blocked }: PriorityInp
     const size = measure(text, style, p.sure)
     if (hasDot(p.kind)) {
       const near = dots.some((d) => Math.hypot(d.x - x, d.y - y) < 2 * radius + DOT_SPACE)
-      if (near || names.some((n) => touches(dotBox({ x, y }), n.box))) continue
+      if (near || names.some((n) => touches(dotBox({ x, y, i }), n.box))) continue
       dots.push({ i, x, y })
       const box = dotNamePositions(x, y, radius, size.w, size.h).find(free)
       if (box) names.push({ i, text, style, box, ascent: size.ascent })

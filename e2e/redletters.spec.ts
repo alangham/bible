@@ -346,6 +346,8 @@ for (const vp of VIEWPORTS) {
     })
 
     test('axe-core: Matthew 4 and John 14 with red letters on, in the three translations', async ({ page }) => {
+      // Task 39b step 4: this test takes about 20 s, and it failed one time in Task 39 with the limit of 30 s.
+      test.setTimeout(90_000)
       for (const translation of TRANSLATIONS) {
         for (const [book, n] of [
           ['matthew', 4],

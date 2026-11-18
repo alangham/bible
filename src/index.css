@@ -2498,14 +2498,6 @@ html:has(.reading) {
   }
 }
 
-/* The white edge of 3 px of each name: a stroke of 6 px that the text covers on its inner half. */
-.map-names text {
-  stroke: #fff;
-  stroke-width: 6px;
-  stroke-linejoin: round;
-  paint-order: stroke;
-}
-
 .map-signs {
   margin: 30px 0 0;
   padding: 0;
@@ -2523,6 +2515,19 @@ html:has(.reading) {
 
 .map-sign {
   flex: none;
+}
+
+/* The switch for the places that are not certain, below the three signs. The look of the echo links switch. */
+.map-switch {
+  display: block;
+  margin: 6px 0 -12px;
+  padding: 12px 0;
+  border: 0;
+  background: none;
+  color: var(--ref-ink-secondary);
+  font: 500 15px Inter, system-ui, sans-serif;
+  text-align: left;
+  cursor: pointer;
 }
 
 .map-counts p,

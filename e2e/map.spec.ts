@@ -394,3 +394,136 @@ test.describe('map page, a change of the size of the window', () => {
     await page.screenshot({ fullPage: true, timeout: 10000 })
   })
 })
+
+// docs/TASKS.md Task 39b step 5: the names with no edge, the switch for the places that are not certain, and the
+// double click, section 15.11.
+const SWITCH = 'Places that are not certain'
+const NEW_SENTENCE = /^\d+ of them (have|has) a position that is not certain, and the map does not show (them|it)\.$/
+
+/** The state of the map: the numbers and the names, for a comparison. */
+async function firstViewState(page: Page) {
+  const d = await page.locator('.map-svg').evaluate((s) => ({ ...(s as SVGSVGElement).dataset }))
+  return { dots: d.dots, names: d.names, list: await mapNames(page) }
+}
+
+for (const layout of LAYOUTS) {
+  test.describe(`map page, Task 39b, ${layout.name} layout`, () => {
+    test.beforeEach(async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+    })
+
+    test('Acts: no name has a stroke, and the lines stop at the names', async ({ page }) => {
+      await openMap(page, 'acts')
+      const strokes = await page.locator('.map-names text').evaluateAll((ts) => [...new Set(ts.map((t) => getComputedStyle(t).stroke))])
+      expect(strokes).toEqual(['none'])
+      // The mask of the lines has one hole for each name.
+      const holes = await page.locator('.map-svg mask rect[fill="#000"]').count()
+      expect(holes).toBe(await page.locator('.map-names text').count())
+    })
+
+    test('Joshua: the switch is on first; off, the map has no open sign and the page has the new sentence', async ({ page }) => {
+      await openMap(page, 'joshua')
+      const button = page.getByRole('button', { name: SWITCH })
+      await expect(button).toHaveAttribute('aria-pressed', 'true')
+      await expect(button).toHaveText(`${SWITCH} on`)
+      const before = await firstViewState(page)
+      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBeGreaterThan(0)
+      await expect(page.locator('.map-counts p').filter({ hasText: NEW_SENTENCE })).toHaveCount(0)
+
+      await button.click()
+      await expect(button).toHaveAttribute('aria-pressed', 'false')
+      await expect(button).toHaveText(`${SWITCH} off`)
+      await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+      // An open dot and an open triangle are white inside.
+      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
+      await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
+
+      await button.click()
+      await expect(button).toHaveAttribute('aria-pressed', 'true')
+      await expect(page.locator('.map-counts p').filter({ hasText: NEW_SENTENCE })).toHaveCount(0)
+      expect(await firstViewState(page)).toEqual(before)
+    })
+
+    test('Joshua: the state stays after a reload, and Exodus opens with the same state', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.getByRole('button', { name: SWITCH }).click()
+      await page.reload()
+      await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      await openMap(page, 'exodus')
+      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
+      expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
+    })
+
+    test('Ephesians has no switch', async ({ page }) => {
+      await openMap(page, 'ephesians')
+      await expect(page.getByRole('button', { name: SWITCH })).toHaveCount(0)
+    })
+
+    test('Joshua: the axe check with the switch off', async ({ page }) => {
+      await openMap(page, 'joshua')
+      await page.getByRole('button', { name: SWITCH }).click()
+      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+      expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
+    })
+  })
+}
+
+test.describe('map page, the double click at 1440 by 900 px', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+  })
+
+  test('Joshua: a double click zooms in one step, and the point stays below the pointer', async ({ page }) => {
+    await openMap(page, 'joshua')
+    const box = (await page.locator('.map-svg').boundingBox())!
+    const at = { x: 300, y: 250 }
+    await page.mouse.dblclick(box.x + at.x, box.y + at.y)
+    await atStep(page, 1)
+    // The point of the map below the pointer was at (300, 250) of step 0, so it is at (600, 500) of step 1. The frame
+    // shows it at (300, 250) if the offset is (300, 250).
+    expect(await mapState(page)).toMatchObject({ step: 1, x: at.x, y: at.y })
+    // The double click selects no text on the page.
+    expect(await page.evaluate(() => window.getSelection()?.toString() ?? '')).toBe('')
+  })
+
+  test('Joshua: at the last step, a double click changes nothing', async ({ page }) => {
+    await openMap(page, 'joshua')
+    const last = (await mapState(page)).last
+    for (let s = 1; s <= last; s++) {
+      await page.getByRole('button', { name: 'Zoom in' }).click()
+      await atStep(page, s)
+    }
+    const before = await mapState(page)
+    const box = (await page.locator('.map-svg').boundingBox())!
+    await page.mouse.dblclick(box.x + 200, box.y + 200)
+    await page.waitForTimeout(400)
+    expect(await mapState(page)).toEqual(before)
+  })
+})
+
+test.describe('map page, the double tap at 390 by 844 px', () => {
+  test.use({ hasTouch: true })
+
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+  })
+
+  test('in the first view, a double tap zooms in one step', async ({ page }) => {
+    await openMap(page, 'joshua')
+    const client = await page.context().newCDPSession(page)
+    const box = (await page.locator('.map-svg').boundingBox())!
+    const x = box.x + 150
+    const y = box.y + 200
+    for (let i = 0; i < 2; i++) {
+      await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] })
+      await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
+    }
+    await atStep(page, 1)
+    await page.waitForTimeout(500)
+    // One step, and not two: the browser makes no second zoom from the taps.
+    expect(await mapState(page)).toMatchObject({ step: 1, x: 150, y: 200 })
+  })
+})

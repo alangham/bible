@@ -10,6 +10,12 @@ import {
   pxPerMile,
   zoomOffset,
   countSentences,
+  hasUncertain,
+  isDoubleTap,
+  nameCut,
+  uncertainInView,
+  uncertainSentence,
+  withoutUncertain,
   decode,
   firstView,
   nameList,
@@ -428,5 +434,73 @@ describe('the zoom', () => {
     // Near an edge, the limits apply.
     // (600 + 200) * 2 - 200 = 1400, more than the limit of 1200. (0 + 150) * 2 - 150 = 150.
     expect(zoomOffset(first, 1, 2, { x: 600, y: 0 })).toEqual({ x: 1200, y: 150 })
+  })
+})
+
+// docs/TASKS.md Task 39b step 2: the switch for the places that are not certain, section 15.11.
+describe('the switch for the places that are not certain', () => {
+  const file = (places: MapPlace[]): MapBook => ({ book: 'x', region: 'r1', named: places.length, places, inSettlement: [], noPosition: [] })
+  const places = [
+    place('Hazor', 35.5, 33.0, 9),
+    place('Madon', 35.4, 32.8, 2, 'place', false),
+    place('Mount Halak', 35.0, 30.5, 1, 'mountain', false),
+    place('Geshur', 35.8, 32.8, 3, 'region', false),
+    place('Salt Sea', 35.5, 31.5, 4, 'water'),
+  ]
+
+  it('takes out each place with a position that is not certain, of each kind', () => {
+    expect(withoutUncertain(places).map((p) => p.name)).toEqual(['Hazor', 'Salt Sea'])
+    expect(hasUncertain(places)).toBe(true)
+    expect(hasUncertain(withoutUncertain(places))).toBe(false)
+  })
+
+  it('takes the places out before the priority rule', () => {
+    // A place that is not certain, with more verses, 4 px from a sure place: with the switch on, the sure place has
+    // no dot. With the switch off, it has one.
+    const view = { width: 400, height: 300, k: 100, c: 1, lon: 35, lat: 31 }
+    const measure: Measure = (text) => ({ w: text.length * 6, h: 12, ascent: 10 })
+    const near = [place('Kain', 35.0, 31.0, 5, 'place', false), place('Ziph', 35.04, 31.0, 2)]
+    const run = (ps: MapPlace[]) => priority({ places: ps, view, radius: 3.5, measure, blocked: [] }).dots.map((d) => ps[d.i].name)
+    expect(run(near)).toEqual(['Kain'])
+    expect(run(withoutUncertain(near))).toEqual(['Ziph'])
+  })
+
+  it('counts only the places in the first view', () => {
+    expect(uncertainInView(places, [true, true, false, true, true])).toBe(2)
+    expect(uncertainInView(places, [true, false, false, false, true])).toBe(0)
+  })
+
+  it('writes the new sentence in its two forms, and no sentence for 0', () => {
+    expect(uncertainSentence(194)).toBe('194 of them have a position that is not certain, and the map does not show them.')
+    expect(uncertainSentence(1)).toBe('1 of them has a position that is not certain, and the map does not show it.')
+    expect(uncertainSentence(0)).toBeNull()
+  })
+
+  it('puts the new sentence after the first sentence of the counts, only with the switch off', () => {
+    const onMap = [true, true, true, true, false]
+    expect(countSentences('Joshua', file(places), onMap, true)).toEqual([
+      'Joshua names 5 places. 4 are on this map.',
+      '3 of them have a position that is not certain, and the map does not show them.',
+      '1 place is outside this map: Salt Sea.',
+    ])
+    expect(countSentences('Joshua', file(places), onMap, false)).toEqual([
+      'Joshua names 5 places. 4 are on this map.',
+      '1 place is outside this map: Salt Sea.',
+    ])
+  })
+})
+
+// docs/TASKS.md Task 39b steps 1 and 3: the lines stop at a name, and the double tap, section 15.11.
+describe('the lines at a name, and the double tap', () => {
+  it('makes the box where the lines stop 2 px wider at the left and at the right', () => {
+    expect(nameCut({ x: 100, y: 50, w: 40, h: 15 })).toEqual({ x: 98, y: 50, w: 44, h: 15 })
+  })
+
+  it('takes two taps at one point in 300 ms as a double tap', () => {
+    const first = { t: 1000, x: 50, y: 50 }
+    expect(isDoubleTap(first, { t: 1300, x: 55, y: 48 })).toBe(true)
+    expect(isDoubleTap(first, { t: 1301, x: 50, y: 50 })).toBe(false)
+    expect(isDoubleTap(first, { t: 1100, x: 80, y: 50 })).toBe(false)
+    expect(isDoubleTap(null, { t: 1100, x: 50, y: 50 })).toBe(false)
   })
 })

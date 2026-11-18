@@ -1,5 +1,5 @@
 // The map page: the places of one book on a map. docs/DESIGN.md sections 15.8, 15.10, and 15.11, docs/TASKS.md
-// Tasks 38 and 39. No page links to it before Task 40. The drawing and the zoom are in MapDrawing.tsx.
+// Tasks 38, 39, and 39b. No page links to it before Task 40. The drawing and the zoom are in MapDrawing.tsx.
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
@@ -9,7 +9,19 @@ import type { ScreenLayout } from '../screenLayout.ts'
 import { bandLabel } from '../wall/layout.ts'
 import { loadBookMap, type BookMap } from './mapData.ts'
 import { MapDrawing } from './MapDrawing.tsx'
-import { countSentences, firstView, narrowFrameHeight, placesOnMap, trianglePath, wideFrameHeight, type MapPlace, type View } from './mapLayout.ts'
+import {
+  countSentences,
+  firstView,
+  hasUncertain,
+  narrowFrameHeight,
+  placesOnMap,
+  trianglePath,
+  wideFrameHeight,
+  withoutUncertain,
+  type MapPlace,
+  type View,
+} from './mapLayout.ts'
+import { setMapUncertain, useMapUncertain } from './uncertain.ts'
 
 export function MapPage({ books, id, layout }: { books: Book[]; id: string; layout: ScreenLayout }) {
   const book = books.find((b) => b.id === id)
@@ -112,6 +124,11 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
   if (sizedView && sizedView !== keptView) setKeptView(sizedView)
   const view = sizedView ?? keptView
   const onMap = useMemo(() => (view ? placesOnMap(places, view) : null), [places, view])
+  // The switch for the places that are not certain. With the switch off, the site takes these places out first.
+  const uncertainOn = useMapUncertain()
+  const showSwitch = hasUncertain(places)
+  const uncertainOff = showSwitch && !uncertainOn
+  const drawn = useMemo(() => (uncertainOff ? withoutUncertain(places) : places), [places, uncertainOff])
   const color = groupOf(book).color
   const nameEm = book.name.length * 0.8
 
@@ -131,7 +148,7 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
             <MapDrawing
               book={book}
               regionName={regionName}
-              places={places}
+              places={drawn}
               region={file.region}
               view={view}
               wide={wide}
@@ -153,9 +170,16 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
             <Sign kind="triangle" color={color} r={wide ? 3.5 : 3} />A mountain or a hill
           </li>
         </ul>
+        {/* The switch: the look and the behavior of the echo links switch. Its name is "Places that are not
+            certain"; the state is aria-pressed. */}
+        {showSwitch && (
+          <button type="button" className="map-switch" aria-pressed={uncertainOn} onClick={() => setMapUncertain(!uncertainOn)}>
+            Places that are not certain <span aria-hidden="true">{uncertainOn ? 'on' : 'off'}</span>
+          </button>
+        )}
         {onMap && file.file && (
           <div className="map-counts">
-            {countSentences(book.name, file.file, onMap).map((s) => (
+            {countSentences(book.name, file.file, onMap, uncertainOff).map((s) => (
               <p key={s}>{s}</p>
             ))}
           </div>

@@ -2673,6 +2673,48 @@ Done when:
 
 Stop and report.
 
+## Task 39b. The map page: the names with no edge, the switch, and the double click
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the map page has the three changes that Arthur decided on 2026-11-17, after the first review of the built page.
+
+The designer verified Task 39 and found no error of the build. Read in section 15.11 of `docs/DESIGN.md`: rule 5 of "The drawing", "The switch for the places that are not certain", and rule 9 of "The zoom".
+
+WARNING: Do not add a link to the map page. Do not add the line "Where".
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. The names with no edge. Remove the white edge of the names. Make the coast line, the river lines, and the lines of the lakes stop at each name, by rule 5 of "The drawing". The color of the land and of the lakes does not change below a name. The rule is for each step of the zoom and during a move.
+2. The switch, by "The switch for the places that are not certain". Put the functions with no browser in `src/map/mapLayout.ts`, with tests in Vitest: the places that the switch takes out, and the new sentence with its two forms.
+3. The double click and the double tap, by rule 9 of "The zoom". A double click must not select text on the page.
+4. The slow test. The test "axe-core: Matthew 4 and John 14 with red letters on, in the three translations" of `e2e/redletters.spec.ts` gets a time limit of 90 seconds. It failed one time in Task 39 with the limit of 30 seconds, and it takes approximately 20 seconds. Do not change what the test checks.
+5. End-to-end tests, at 1440 by 900 px and at 390 by 844 px if no size is given:
+   - Acts: no name has a stroke.
+   - Joshua: the switch is on in the first state. With the switch off, the map has no open dot and no open triangle, and the page has the new sentence. With the switch on again, the first view is the same as before.
+   - Joshua: the state stays after a reload, and Exodus opens with the same state.
+   - Ephesians has no switch.
+   - Joshua at 1440 by 900 px: a double click at a point zooms in one step, and the point stays below the pointer. At the last step, a double click changes nothing.
+   - At 390 by 844 px in the first view: a double tap zooms in one step.
+   - The axe check for Joshua with the switch off.
+6. Compare with the numbers of the designer, rule 7 of the switch. If your numbers differ, find the cause and give it. Do not change the code to make the numbers agree.
+7. Report the number of the new sentence for Joshua, Exodus, and Acts at the two sizes.
+8. Make screenshots in `docs/screenshots/task-39b/`, at the two sizes: Acts and Exodus in the first view, Joshua in the first view with the switch on and with the switch off, and Joshua after two steps.
+9. Run the `accuracy-reviewer` agent: the numbers of step 7 against the data.
+10. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 2 and 5 pass, or the report gives the cause of each one that does not.
+- The report has the numbers of steps 6 and 7.
+- No page has a link to the map page.
+
+Stop and report. Commit the two comparisons of the designer with this task: `docs/screenshots/map-design/halo-compare-acts.png` and `docs/screenshots/map-design/joshua-toggle-compare.png`.
+
 ## Task 40. The line "Where" in "About this book"
 
 Status: TODO
@@ -2681,7 +2723,7 @@ Accuracy review: no
 
 Goal: a reader goes from "About this book" to the map of the book.
 
-WARNING: Do this task only after Arthur approved the map page of Tasks 38 and 39. If `docs/TASKS.md` does not say so below this line, stop and ask.
+WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39b. If `docs/TASKS.md` does not say so below this line, stop and ask.
 
 Steps:
 

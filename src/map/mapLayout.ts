@@ -253,16 +253,46 @@ export function nameList(names: string[]): string {
   return `${unique.slice(0, 8).join(', ')}, and ${others} more.`
 }
 
+// ---- the switch for the places that are not certain: docs/DESIGN.md section 15.11, Task 39b ----
+
+/** True if the book has a place with a position that is not certain. Only such a book has the switch. Rule 4. */
+export function hasUncertain(places: MapPlace[]): boolean {
+  return places.some((p) => !p.sure)
+}
+
+/**
+ * The places of the map with the switch off: the site takes out each place with a position that is not certain, of
+ * each kind, before the rules of "Which places show". Rule 5.
+ */
+export function withoutUncertain(places: MapPlace[]): MapPlace[] {
+  return places.filter((p) => p.sure)
+}
+
+/** The number of places in the first view with a position that is not certain. Rule 6. */
+export function uncertainInView(places: MapPlace[], onMap: boolean[]): number {
+  return places.filter((p, i) => onMap[i] && !p.sure).length
+}
+
+/** The sentence of the counts with the switch off, in its two forms. No sentence for 0. Rule 6. */
+export function uncertainSentence(n: number): string | null {
+  if (n === 0) return null
+  if (n === 1) return '1 of them has a position that is not certain, and the map does not show it.'
+  return `${n} of them have a position that is not certain, and the map does not show them.`
+}
+
 /**
  * The sentences of the counts, from the book file and the places of the file that are in the first view.
- * `onMap[i]` is true if the place `i` of the file is in the first view. "The parts of the page", rule 2.
+ * `onMap[i]` is true if the place `i` of the file is in the first view. "The parts of the page", rule 2. With the
+ * switch off, `uncertainOff` is true, and the sentence of the places that are not certain follows the first one.
  */
-export function countSentences(bookName: string, file: MapBook, onMap: boolean[]): string[] {
+export function countSentences(bookName: string, file: MapBook, onMap: boolean[], uncertainOff = false): string[] {
   const n = file.named
   const m = onMap.filter(Boolean).length
   const out: string[] = []
   if (n === 1) out.push(`${bookName} names 1 place. ${m === 1 ? 'It is on this map.' : 'It is not on this map.'}`)
   else out.push(`${bookName} names ${n} places. ${m === 1 ? '1 is' : `${m} are`} on this map.`)
+  const notCertain = uncertainOff ? uncertainSentence(uncertainInView(file.places, onMap)) : null
+  if (notCertain) out.push(notCertain)
   const outside = file.places.filter((_, i) => !onMap[i]).map((p) => p.name)
   if (outside.length === 1) out.push(`1 place is outside this map: ${nameList(outside)}`)
   else if (outside.length > 1) out.push(`${outside.length} places are outside this map: ${nameList(outside)}`)
@@ -371,6 +401,26 @@ export interface ShownName {
   /** The box of the name, without the 2 px around it. */
   box: Rect
   ascent: number
+}
+
+/** The corners of the box where the lines of the map stop at a name: 3 px round. "The drawing", rule 5. */
+export const NAME_CUT_RADIUS = 3
+
+/**
+ * The box where the coast line, the river lines, and the lines of the lakes stop at a name: the box of the name,
+ * 2 px wider at the left and at the right. "The drawing", rule 5.
+ */
+export function nameCut(box: Rect): Rect {
+  return { x: box.x - 2, y: box.y, w: box.w + 4, h: box.h }
+}
+
+/** A double tap: two taps at one point, in 300 ms. A tap that moves more than 10 px is not a tap. "The zoom", rule 9. */
+export const DOUBLE_TAP_MS = 300
+export const TAP_MOVE = 10
+
+/** True if two taps are a double tap: the second in 300 ms, and in 20 px of the first. */
+export function isDoubleTap(first: { t: number; x: number; y: number } | null, second: { t: number; x: number; y: number }): boolean {
+  return first !== null && second.t - first.t <= DOUBLE_TAP_MS && Math.hypot(second.x - first.x, second.y - first.y) <= 2 * TAP_MOVE
 }
 
 export interface Priority {

@@ -1,14 +1,18 @@
 // The drawing of the map, with the zoom. docs/DESIGN.md section 15.11 "The drawing", "Which places show", and
-// "The zoom, Task 39", docs/TASKS.md Tasks 38 and 39. The page is in MapPage.tsx.
+// "The zoom, Task 39", docs/TASKS.md Tasks 38, 39, and 39b. The page is in MapPage.tsx.
 
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type PointerEvent } from 'react'
+import { useEffect, useId, useMemo, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type PointerEvent } from 'react'
 import type { Book } from '../data/books.ts'
 import { useReducedMotion } from '../useReducedMotion.ts'
 import {
   clampOffset,
   cssFont,
   hasDot,
+  isDoubleTap,
   lastStep,
+  NAME_CUT_RADIUS,
+  nameCut,
+  TAP_MOVE,
   resizeOffset,
   MAP_SECONDARY,
   nameFont,
@@ -158,6 +162,12 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
     }
   }, [region, canvas])
 
+  // The boxes where the lines of the map stop: one for each name that shows. "The drawing", rule 5.
+  // The id of the mask, with letters and digits only, for the reference url(#...).
+  const maskId = `map-cut-${useId().replace(/[^a-zA-Z0-9]/g, '')}`
+  const maskMargin = 4 * Math.max(W, H)
+  const cuts = useMemo(() => (shown ? shown.names.map((n) => ({ i: n.i, ...nameCut(n.box) })) : []), [shown])
+
   // ---- the changes of the zoom and the moves ----
 
   const zoomInRef = useRef<HTMLButtonElement>(null)
@@ -206,6 +216,20 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
     dragRef.current = null
   }
 
+  // A double click zooms in one step, and the point below the pointer stays. At the last step, it does nothing.
+  // "The zoom", rule 9. The second press of a double click does not select text on the page.
+  const framePoint = (clientX: number, clientY: number): Offset => {
+    const b = svgRef.current!.getBoundingClientRect()
+    return { x: clientX - b.left, y: clientY - b.top }
+  }
+  const onMouseDown = (e: MouseEvent<SVGSVGElement>) => {
+    if (e.detail > 1) e.preventDefault()
+  }
+  const onDoubleClick = (e: MouseEvent<SVGSVGElement>) => {
+    e.preventDefault()
+    if (step < last) zoomTo(step + 1, framePoint(e.clientX, e.clientY))
+  }
+
   // The keys, when the map has the focus: the arrows move the map by 80 px, and "+" and "−" zoom. "The zoom", rule 5.
   // In the first view, the map cannot move, and the arrows scroll the page.
   const onKeyDown = (e: KeyboardEvent<SVGSVGElement>) => {
@@ -234,15 +258,19 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
   // zoom, a drag with one finger scrolls the page. After a zoom, it moves the map. "The zoom", rule 3. The
   // listeners are not passive, so that they can stop the scroll of the page.
   const svgRef = useRef<SVGSVGElement>(null)
-  const stateRef = useRef({ zoom, first })
+  const stateRef = useRef<{ zoom: Zoom; first: View; zoomInAt: (at: Offset) => void }>({ zoom, first, zoomInAt: () => undefined })
+  const zoomInAt = (at: Offset) => zoomTo(stateRef.current.zoom.step + 1, at)
   useEffect(() => {
-    stateRef.current = { zoom, first }
+    stateRef.current = { zoom, first, zoomInAt }
   })
   useEffect(() => {
     const el = svgRef.current
     if (!el) return
     let fingers: { d: number; step: number; at: Offset; offset: Offset; scale: number } | null = null
     let drag: { x: number; y: number; ox: number; oy: number } | null = null
+    // A tap: one finger that does not move. The last tap, for the double tap of "The zoom", rule 9.
+    let tap: { x: number; y: number } | null = null
+    let lastTap: { t: number; x: number; y: number } | null = null
     const local = (t: Touch): Offset => {
       const b = el.getBoundingClientRect()
       return { x: t.clientX - b.left, y: t.clientY - b.top }
@@ -257,6 +285,8 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
     }
     const start = (e: TouchEvent) => {
       const { zoom: z } = stateRef.current
+      const t0 = onMap(e)[0]
+      tap = e.touches.length === 1 && t0 ? { x: t0.clientX, y: t0.clientY } : null
       if (onMap(e).length >= 2) {
         e.preventDefault()
         const { d, at } = between(e)
@@ -268,6 +298,8 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
       }
     }
     const move = (e: TouchEvent) => {
+      const t0 = onMap(e)[0]
+      if (tap && (!t0 || Math.hypot(t0.clientX - tap.x, t0.clientY - tap.y) > TAP_MOVE)) tap = null
       if (fingers && onMap(e).length >= 2) {
         e.preventDefault()
         fingers.scale = between(e).d / fingers.d
@@ -290,10 +322,24 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
         setZoom({ step: target, offset: zoomOffset(f, p.step, target, p.offset, p.at), anim: null, at: p.at })
       }
       if (onMap(e).length === 0) drag = null
+      // A double tap zooms in one step at its point. It stops the click and the double click that the browser makes
+      // from the taps, so that the map does not zoom two times.
+      // A touch that the browser cancels is not a tap.
+      const t1 = e.changedTouches[0]
+      if (e.type === 'touchcancel') lastTap = null
+      else if (tap && e.touches.length === 0 && t1) {
+        const now = { t: e.timeStamp, x: t1.clientX, y: t1.clientY }
+        if (isDoubleTap(lastTap, now)) {
+          if (e.cancelable) e.preventDefault()
+          lastTap = null
+          stateRef.current.zoomInAt(local(t1))
+        } else lastTap = now
+      }
+      tap = null
     }
     el.addEventListener('touchstart', start, { passive: false })
     el.addEventListener('touchmove', move, { passive: false })
-    el.addEventListener('touchend', end)
+    el.addEventListener('touchend', end, { passive: false })
     el.addEventListener('touchcancel', end)
     return () => {
       el.removeEventListener('touchstart', start)
@@ -344,13 +390,36 @@ export function MapDrawing({ book, regionName, places, region, view: first, wide
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
         onKeyDown={onKeyDown}
+        onMouseDown={onMouseDown}
+        onDoubleClick={onDoubleClick}
       >
         <rect width={W} height={H} fill="#fff" />
         <g key={step} className={zoom.anim && !pinch ? `map-zoom-${zoom.anim}` : undefined} style={contentStyle}>
           <g transform={`translate(${-offset.x} ${-offset.y})`}>
-            <path d={paths.land} fill="#f4f1eb" stroke="#cfc8bb" strokeWidth="0.9" fillRule="evenodd" strokeLinejoin="round" />
-            <path d={paths.lakes} fill="#fff" stroke="#a9c0cc" strokeWidth="0.9" fillRule="evenodd" strokeLinejoin="round" />
-            <path d={paths.rivers} fill="none" stroke="#a9c0cc" strokeWidth="1.1" strokeLinejoin="round" strokeLinecap="round" />
+            {/* The colors of the land and of the lakes. A name does not change them. */}
+            <path d={paths.land} fill="#f4f1eb" fillRule="evenodd" />
+            <path d={paths.lakes} fill="#fff" fillRule="evenodd" />
+            {/* The lines stop at each name: the mask has a hole for the box of each name. "The drawing", rule 5. */}
+            {/* The mask is larger than the canvas: during a pinch or the animation of a zoom, the frame can show the
+                land past the edge of the canvas, and its lines too. */}
+            <mask
+              id={maskId}
+              maskUnits="userSpaceOnUse"
+              x={-maskMargin}
+              y={-maskMargin}
+              width={canvas.width + 2 * maskMargin}
+              height={canvas.height + 2 * maskMargin}
+            >
+              <rect x={-maskMargin} y={-maskMargin} width={canvas.width + 2 * maskMargin} height={canvas.height + 2 * maskMargin} fill="#fff" />
+              {cuts.map((c) => (
+                <rect key={c.i} x={c.x} y={c.y} width={c.w} height={c.h} rx={NAME_CUT_RADIUS} fill="#000" />
+              ))}
+            </mask>
+            <g className="map-lines" mask={`url(#${maskId})`} fill="none" strokeLinejoin="round">
+              <path d={paths.land} stroke="#cfc8bb" strokeWidth="0.9" />
+              <path d={paths.lakes} stroke="#a9c0cc" strokeWidth="0.9" />
+              <path d={paths.rivers} stroke="#a9c0cc" strokeWidth="1.1" strokeLinecap="round" />
+            </g>
             {shown && (
               <g className="map-dots">
                 {shown.dots.map((d) => {

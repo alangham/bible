@@ -2715,6 +2715,44 @@ Done when:
 
 Stop and report. Commit the two comparisons of the designer with this task: `docs/screenshots/map-design/halo-compare-acts.png` and `docs/screenshots/map-design/joshua-toggle-compare.png`.
 
+## Task 39c. The map page: a new design of the switch
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader finds the switch for the places that are not certain at once.
+
+Arthur needed 2 minutes to find the switch of Task 39b. He selected a new design on 2026-11-17. Read rule 1 of "The switch for the places that are not certain" in section 15.11 of `docs/DESIGN.md`, and look at design D in `docs/screenshots/map-design/switch-options-desktop.png` and `switch-options-phone.png`. The two pictures are sketches of the designer on the built page.
+
+WARNING: Do not add a link to the map page. Do not add the line "Where".
+
+WARNING: Change only the look and the position of the switch. Its behavior, its memory in the browser, and the sentence of the counts stay as built.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Remove the control of Task 39b below the signs.
+2. Add the switch by rule 1: one line below the line "Map:", in the wide layout and in the narrow layout.
+3. Change the end-to-end tests of the switch to the new control. Add these tests:
+   - In Joshua at 1440 by 900 px: the switch is below the line "Map:" and above the signs. At 390 by 844 px: it is below the line "Map:" and above the map.
+   - At 390 by 844 px, in Joshua: the switch and the top of the map are in the window with no scroll.
+   - A click on the words changes the state, and a click on the switch changes the state.
+   - With the keyboard, the switch takes the focus, and the space key changes the state.
+   - Ephesians has no switch, and its page has no empty line in that place.
+   - The axe check for Joshua with the switch on and with the switch off.
+4. Make screenshots in `docs/screenshots/task-39c/`, at 1440 by 900 px and at 390 by 844 px: Joshua with the switch on and with the switch off, and Ephesians.
+5. Report the contrast of the switch in the two states against white, for the group color of Joshua and for the lightest group color of the site.
+6. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of step 3 pass, or the report gives the cause of each one that does not.
+- No page has a link to the map page.
+
+Stop and report. Commit the two sketches of the designer with this task.
+
 ## Task 40. The line "Where" in "About this book"
 
 Status: TODO
@@ -2723,7 +2761,7 @@ Accuracy review: no
 
 Goal: a reader goes from "About this book" to the map of the book.
 
-WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39b. If `docs/TASKS.md` does not say so below this line, stop and ask.
+WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39c. If `docs/TASKS.md` does not say so below this line, stop and ask.
 
 Steps:
 

@@ -2393,6 +2393,75 @@ html:has(.reading) {
   font-size: 15px;
 }
 
+/* The switch for the places that are not certain: one line below the line "Map:", as wide as the text column. The
+   words at the left, and the switch at the right: 38 by 22 px, with a white circle of 18 px. On: the group color.
+   Off: #8e8e93. docs/DESIGN.md section 15.11, "The switch for the places that are not certain", rule 1. */
+.map-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--ref-ink);
+  font: 500 15px/22px Inter, system-ui, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.map-switch-track {
+  flex: none;
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border-radius: 11px;
+  background: #8e8e93;
+  transition: background-color 120ms ease;
+}
+
+.map-switch[aria-checked='true'] .map-switch-track {
+  background: var(--c);
+}
+
+.map-switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 120ms ease;
+}
+
+.map-switch[aria-checked='true'] .map-switch-knob {
+  transform: translateX(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-switch-track,
+  .map-switch-knob {
+    transition: none;
+  }
+}
+
+/* In the forced colors of Windows, the system removes the colors of the track. The line and the circle get the
+   color of the text, so the position of the circle shows the state. */
+@media (forced-colors: active) {
+  .map-switch-track {
+    border: 1px solid CanvasText;
+  }
+
+  .map-switch-knob {
+    top: 1px;
+    left: 1px;
+    background: CanvasText;
+  }
+}
+
 /* The line of the frame: on its four sides in the wide layout, above and below in the narrow layout. */
 .map-frame {
   position: relative;
@@ -2515,19 +2584,6 @@ html:has(.reading) {
 
 .map-sign {
   flex: none;
-}
-
-/* The switch for the places that are not certain, below the three signs. The look of the echo links switch. */
-.map-switch {
-  display: block;
-  margin: 6px 0 -12px;
-  padding: 12px 0;
-  border: 0;
-  background: none;
-  color: var(--ref-ink-secondary);
-  font: 500 15px Inter, system-ui, sans-serif;
-  text-align: left;
-  cursor: pointer;
 }
 
 .map-counts p,

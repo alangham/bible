@@ -1079,7 +1079,12 @@ These rules give the details of sections 15.8 and 15.10. They are of the designe
 
 **The switch for the places that are not certain, Task 39b.** Decided by Arthur on 2026-11-17: the first view of Joshua is too full. The comparison is `docs/screenshots/map-design/joshua-toggle-compare.png`.
 
-1. The switch is below the three signs. It has the look and the behavior of the echo links switch of the reading page: one control with the name "Places that are not certain" and the word "on" or "off".
+1. The switch is one line below the line "Map:", above the signs: the words "Places that are not certain" at the left, and a switch at the right. In the wide layout, the line is as wide as the text column. In the narrow layout, it has the margins of the text, so the reader sees it with the map and does not scroll. Arthur decided this on 2026-11-17 from four designs, in `docs/screenshots/map-design/switch-options-desktop.png` and `switch-options-phone.png`: it is design D.
+   - The switch is 38 px wide and 22 px high, with round ends, and a white circle of 18 px that is at the right when the switch is on and at the left when it is off. On: the group color of the book. Off: `#8e8e93`, which has a contrast of 3 to 1 or more on white.
+   - The words have the ink color, Inter, 15 px, weight 500.
+   - The full line is the control. For a screen reader it is a switch with the name "Places that are not certain". It has the focus ring of the site.
+   - The circle moves in 120 ms, and with no animation when the reader asked for less motion.
+   - The first design, built in Task 39b, was a line of text with the word "on" or "off", below the signs, with the look of the echo links switch. Arthur needed 2 minutes to find it: it did not look like a control.
 2. The first state is "on": the places show. Reason: with the switch off, the first view of Exodus has 2 dots.
 3. The browser keeps the state, as it does for the red letters. The key is `bible-map-uncertain`. The state is the same for each book.
 4. Only a book with a place that is not certain has the switch.

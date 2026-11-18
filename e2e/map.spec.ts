@@ -423,48 +423,46 @@ for (const layout of LAYOUTS) {
 
     test('Joshua: the switch is on first; off, the map has no open sign and the page has the new sentence', async ({ page }) => {
       await openMap(page, 'joshua')
-      const button = page.getByRole('button', { name: SWITCH })
-      await expect(button).toHaveAttribute('aria-pressed', 'true')
-      await expect(button).toHaveText(`${SWITCH} on`)
+      const button = page.getByRole('switch', { name: SWITCH })
+      await expect(button).toHaveAttribute('aria-checked', 'true')
       const before = await firstViewState(page)
       expect(await page.locator('.map-dots [fill="#fff"]').count()).toBeGreaterThan(0)
       await expect(page.locator('.map-counts p').filter({ hasText: NEW_SENTENCE })).toHaveCount(0)
 
       await button.click()
-      await expect(button).toHaveAttribute('aria-pressed', 'false')
-      await expect(button).toHaveText(`${SWITCH} off`)
+      await expect(button).toHaveAttribute('aria-checked', 'false')
       await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
       // An open dot and an open triangle are white inside.
       expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
       await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
 
       await button.click()
-      await expect(button).toHaveAttribute('aria-pressed', 'true')
+      await expect(button).toHaveAttribute('aria-checked', 'true')
       await expect(page.locator('.map-counts p').filter({ hasText: NEW_SENTENCE })).toHaveCount(0)
       expect(await firstViewState(page)).toEqual(before)
     })
 
     test('Joshua: the state stays after a reload, and Exodus opens with the same state', async ({ page }) => {
       await openMap(page, 'joshua')
-      await page.getByRole('button', { name: SWITCH }).click()
+      await page.getByRole('switch', { name: SWITCH }).click()
       await page.reload()
       await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
-      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
       await openMap(page, 'exodus')
-      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
       await expect(page.locator('.map-counts p').nth(1)).toHaveText(NEW_SENTENCE)
       expect(await page.locator('.map-dots [fill="#fff"]').count()).toBe(0)
     })
 
     test('Ephesians has no switch', async ({ page }) => {
       await openMap(page, 'ephesians')
-      await expect(page.getByRole('button', { name: SWITCH })).toHaveCount(0)
+      await expect(page.getByRole('switch', { name: SWITCH })).toHaveCount(0)
     })
 
     test('Joshua: the axe check with the switch off', async ({ page }) => {
       await openMap(page, 'joshua')
-      await page.getByRole('button', { name: SWITCH }).click()
-      await expect(page.getByRole('button', { name: SWITCH })).toHaveAttribute('aria-pressed', 'false')
+      await page.getByRole('switch', { name: SWITCH }).click()
+      await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
       const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
       expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
     })
@@ -525,5 +523,87 @@ test.describe('map page, the double tap at 390 by 844 px', () => {
     await page.waitForTimeout(500)
     // One step, and not two: the browser makes no second zoom from the taps.
     expect(await mapState(page)).toMatchObject({ step: 1, x: 150, y: 200 })
+  })
+})
+
+// docs/TASKS.md Task 39c step 3: the new design of the switch, section 15.11, "The switch for the places that are
+// not certain", rule 1.
+for (const layout of LAYOUTS) {
+  test.describe(`map page, the switch of Task 39c, ${layout.name} layout`, () => {
+    test.beforeEach(async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+    })
+
+    test('Joshua: the switch is below the line "Map:", and above the signs or the map', async ({ page }) => {
+      await openMap(page, 'joshua')
+      const region = (await page.locator('.map-region').boundingBox())!
+      const control = (await page.getByRole('switch', { name: SWITCH }).boundingBox())!
+      expect(control.y).toBeGreaterThanOrEqual(region.y + region.height)
+      const below = layout.name === 'wide' ? '.map-signs' : '.map-frame'
+      const next = (await page.locator(below).boundingBox())!
+      expect(control.y + control.height).toBeLessThanOrEqual(next.y)
+      // The line is as wide as the text column: the switch ends at the right edge of the column.
+      const head = (await page.locator('.map-head').boundingBox())!
+      const track = (await page.locator('.map-switch-track').boundingBox())!
+      expect(Math.abs(track.x + track.width - (head.x + head.width - (layout.name === 'wide' ? 0 : 24)))).toBeLessThan(1)
+      expect(track).toMatchObject({ width: 38, height: 22 })
+    })
+
+    test('Joshua: a click on the words changes the state, and a click on the switch changes the state', async ({ page }) => {
+      await openMap(page, 'joshua')
+      const control = page.getByRole('switch', { name: SWITCH })
+      await expect(control).toHaveAttribute('aria-checked', 'true')
+      await control.getByText(SWITCH).click()
+      await expect(control).toHaveAttribute('aria-checked', 'false')
+      await page.locator('.map-switch-track').click()
+      await expect(control).toHaveAttribute('aria-checked', 'true')
+    })
+
+    test('Joshua: the switch takes the focus with the keyboard, and the space key changes the state', async ({ page }) => {
+      await openMap(page, 'joshua')
+      const control = page.getByRole('switch', { name: SWITCH })
+      let focused = false
+      for (let i = 0; i < 10 && !focused; i++) {
+        await page.keyboard.press('Tab')
+        focused = await control.evaluate((el) => el === document.activeElement)
+      }
+      expect(focused).toBe(true)
+      await page.keyboard.press('Space')
+      await expect(control).toHaveAttribute('aria-checked', 'false')
+      await page.keyboard.press('Space')
+      await expect(control).toHaveAttribute('aria-checked', 'true')
+    })
+
+    test('Ephesians has no switch, and no empty line below the line "Map:"', async ({ page }) => {
+      await openMap(page, 'ephesians')
+      await expect(page.getByRole('switch')).toHaveCount(0)
+      const region = (await page.locator('.map-region').boundingBox())!
+      const head = (await page.locator('.map-head').boundingBox())!
+      expect(Math.abs(head.y + head.height - (region.y + region.height))).toBeLessThan(1)
+    })
+
+    for (const state of ['on', 'off']) {
+      test(`Joshua: the axe check with the switch ${state}`, async ({ page }) => {
+        await openMap(page, 'joshua')
+        const control = page.getByRole('switch', { name: SWITCH })
+        if (state === 'off') await control.click()
+        await expect(control).toHaveAttribute('aria-checked', state === 'on' ? 'true' : 'false')
+        const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+        expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
+      })
+    }
+  })
+}
+
+test.describe('map page, the switch of Task 39c at 390 by 844 px', () => {
+  test('Joshua: the switch and the top of the map are in the window with no scroll', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await openMap(page, 'joshua')
+    expect(await page.evaluate(() => window.scrollY)).toBe(0)
+    const control = (await page.getByRole('switch', { name: SWITCH }).boundingBox())!
+    const frame = (await page.locator('.map-frame').boundingBox())!
+    expect(control.y + control.height).toBeLessThanOrEqual(844)
+    // The top of the map: at least 100 px of it.
+    expect(frame.y + 100).toBeLessThanOrEqual(844)
   })
 })

@@ -1,5 +1,5 @@
 // The map page: the places of one book on a map. docs/DESIGN.md sections 15.8, 15.10, and 15.11, docs/TASKS.md
-// Tasks 38, 39, and 39b. No page links to it before Task 40. The drawing and the zoom are in MapDrawing.tsx.
+// Tasks 38, 39, 39b, and 39c. No page links to it before Task 40. The drawing and the zoom are in MapDrawing.tsx.
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
@@ -141,6 +141,16 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
         </h1>
         <h2 className="map-heading">The places of this book</h2>
         <p className="map-region">Map: {regionName}</p>
+        {/* The switch for the places that are not certain, one line below the line "Map:". The full line is the
+            control: a switch for a screen reader, with the name from its words. Section 15.11, Task 39c. */}
+        {showSwitch && (
+          <button type="button" role="switch" aria-checked={uncertainOn} className="map-switch" onClick={() => setMapUncertain(!uncertainOn)}>
+            <span>Places that are not certain</span>
+            <span className="map-switch-track" aria-hidden="true">
+              <span className="map-switch-knob" />
+            </span>
+          </button>
+        )}
       </div>
       <div className="map-holder" ref={holderRef}>
         {view && file.region && (
@@ -170,13 +180,6 @@ function MapMain({ book, layout, places, file, regionName, box }: MainProps) {
             <Sign kind="triangle" color={color} r={wide ? 3.5 : 3} />A mountain or a hill
           </li>
         </ul>
-        {/* The switch: the look and the behavior of the echo links switch. Its name is "Places that are not
-            certain"; the state is aria-pressed. */}
-        {showSwitch && (
-          <button type="button" className="map-switch" aria-pressed={uncertainOn} onClick={() => setMapUncertain(!uncertainOn)}>
-            Places that are not certain <span aria-hidden="true">{uncertainOn ? 'on' : 'off'}</span>
-          </button>
-        )}
         {onMap && file.file && (
           <div className="map-counts">
             {countSentences(book.name, file.file, onMap, uncertainOff).map((s) => (

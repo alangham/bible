@@ -1008,6 +1008,19 @@ html:has(.reading) {
   font-size: 14px;
 }
 
+/* The link of the line "Where" to the map of the book: the look of "Scholars differ", 15 px. Task 40. */
+.rd-where-link {
+  display: inline-block;
+  color: var(--c);
+  font: 600 15px/24px Inter, system-ui, sans-serif;
+  text-decoration: none;
+}
+
+.rd-where-link span {
+  display: inline-block;
+  margin-left: 4px;
+}
+
 .rd-scholars-detail {
   margin: 6px 0 4px;
   padding: 12px 14px;

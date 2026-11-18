@@ -1105,4 +1105,6 @@ These rules give the details of sections 15.8 and 15.10. They are of the designe
 8. Built in Task 39, and correct: a key with Ctrl, Cmd, or Alt goes to the browser and not to the map, and the map has the role description "map" for a screen reader.
 9. A double click on the map zooms in one step, and the point below the pointer stays where it is. On a touch screen, a double tap does the same: two taps at one point in 300 ms. At the last step, a double click does nothing. Arthur decided this on 2026-11-17. Reason: the controls zoom at the center of the view. In Acts, the center of the region is open sea, and the third step shows one name.
 
+**The approval.** Arthur reviewed the built map page on 2026-11-17, at commit `87d16da`, and approved it. Task 40 adds the line "Where" with the link.
+
 **Not in these tasks.** A link from a place name in the text to the map. A list of the places for a reader who cannot see the map. A route. A finer coast.

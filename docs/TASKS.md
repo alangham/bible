@@ -2793,13 +2793,17 @@ Stop and report.
 
 ## Task 40. The line "Where" in "About this book"
 
-Status: TODO
+Status: DONE
 
 Accuracy review: no
 
 Goal: a reader goes from "About this book" to the map of the book.
 
 WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39d. If `docs/TASKS.md` does not say so below this line, stop and ask.
+
+Arthur approved the map page of Tasks 38 to 39d on 2026-11-17, after his review of the built page at commit `87d16da`. Do this task.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
 
 Steps:
 

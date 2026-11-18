@@ -174,7 +174,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
       </h2>
       {(full || readWith.length > 0) && (
         <div className="rd-meta" data-full={full}>
-          {full && <AboutBook intro={intro} translation={text?.translation} />}
+          {full && <AboutBook bookId={book.id} intro={intro} translation={text?.translation} />}
           <ReadWith books={books} list={readWith} onTravel={(to) => onReadWith({ book: book.id, c: n }, to)} />
         </div>
       )}

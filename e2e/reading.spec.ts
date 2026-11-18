@@ -231,14 +231,15 @@ test.describe('reading page', () => {
 
 // The tests of the book pages of the first build, moved to the reading page. Task 13 step 15.
 test.describe('reading page: the introduction and the text', () => {
-  test('Genesis: "About this book" opens the three facts and the draft label', async ({ page }) => {
+  test('Genesis: "About this book" opens the three facts, the line "Where", and the draft label', async ({ page }) => {
     await openChapter(page, WIDE, 'genesis', 1)
     const control = page.getByRole('button', { name: 'About this book' })
     const about = page.getByRole('region', { name: 'About this book' })
     await expect(about).toBeHidden()
     await control.click()
     await expect(control).toHaveAttribute('aria-expanded', 'true')
-    await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written'])
+    // Task 40: a fourth line "Where", for a book with places.
+    await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where'])
     for (const dd of await about.locator('.rd-fact-text').all()) await expect(dd).not.toBeEmpty()
     await expect(about.locator('.rd-draft')).toBeVisible()
     await expect(page.locator('.rd-translation')).toHaveText('Berean Standard Bible')

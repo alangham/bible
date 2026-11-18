@@ -1,5 +1,5 @@
 // The map page: the places of one book on a map. docs/DESIGN.md sections 15.8, 15.10, and 15.11, docs/TASKS.md
-// Tasks 38, 39, 39b, and 39c. No page links to it before Task 40. The drawing and the zoom are in MapDrawing.tsx.
+// Tasks 38, 39, 39b, 39c, and 39d. The line "Where" of "About this book" links to it from Task 40. The drawing and the zoom are in MapDrawing.tsx.
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'

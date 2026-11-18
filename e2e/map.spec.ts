@@ -115,16 +115,25 @@ test('the narrow heights of the map: Joshua 520 px, Acts 300 px at 390 by 844', 
   expect((await page.locator('.map-frame').boundingBox())?.height).toBe(300)
 })
 
-test('no page has a link to the map page', async ({ page }) => {
+// From Task 40, the one link to the map page is the line "Where" of "About this book".
+test('the one link to the map page is the line "Where" of "About this book"', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 })
-  for (const path of ['./', './#/book/acts/1', './#/sources', './#/timeline', './#/quotations']) {
+  // The pages with no "About this book": no link to the map page, hidden or shown.
+  for (const path of ['./', './#/sources', './#/timeline', './#/quotations']) {
     await page.goto(path)
     await page.waitForLoadState('networkidle')
     await expect(page.locator('a[href*="/map"]')).toHaveCount(0)
   }
+  // The reading page: the link is in the closed panel of "About this book", one for each full heading of a book.
   await page.goto('./#/book/acts/1')
+  await page.waitForLoadState('networkidle')
+  await expect(page.locator('a[href*="/map"]:visible')).toHaveCount(0)
+  const hidden = await page.locator('a[href*="/map"]').evaluateAll((els) => els.map((e) => [e.textContent, e.closest('.rd-about-panel') !== null]))
+  expect(hidden.length).toBeGreaterThan(0)
+  for (const [text, inPanel] of hidden) expect([text, inPanel]).toEqual(['The places of this book ›', true])
   await page.getByRole('button', { name: 'About this book' }).first().click()
-  await expect(page.locator('a[href*="/map"]')).toHaveCount(0)
+  await expect(page.locator('a[href*="/map"]:visible')).toHaveCount(1)
+  await expect(page.locator('a[href*="/map"]:visible')).toHaveAttribute('href', '#/book/acts/map')
 })
 
 // docs/TASKS.md Task 38b step 11: the four corrections, and the data with no name of a direction.
@@ -654,3 +663,64 @@ for (const layout of LAYOUTS) {
     })
   })
 }
+
+// docs/TASKS.md Task 40 step 4: the line "Where" in "About this book", sections 15.7 item 5, 15.10 item 8, and 15.11.
+/** Opens a chapter and "About this book" of its first heading. */
+async function openAbout(page: Page, id: string, n: number) {
+  await page.goto(`./#/book/${id}/${n}`)
+  await expect(page.locator(`section.rd-chapter[data-chapter="${n}"]`).first()).toHaveAttribute('data-loaded', 'true')
+  await page.getByRole('button', { name: 'About this book' }).first().click()
+  const about = page.getByRole('region', { name: 'About this book' }).first()
+  await expect(about.locator('dt').first()).toHaveText('What it is')
+  return about
+}
+
+for (const layout of LAYOUTS) {
+  test.describe(`the line "Where", ${layout.name} layout`, () => {
+    test.beforeEach(async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+    })
+
+    test('Acts has the line "Where" after "Written", with one link to its map', async ({ page }) => {
+      const about = await openAbout(page, 'acts', 1)
+      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written', 'Where'])
+      const where = about.locator('.rd-fact').filter({ has: page.locator('dt', { hasText: 'Where' }) })
+      await expect(where.locator('dd')).toHaveText('The places of this book ›')
+      await expect(where.getByRole('link')).toHaveCount(1)
+      await expect(where.getByRole('link', { name: 'The places of this book' })).toHaveAttribute('href', '#/book/acts/map')
+    })
+
+    test('Philemon has no line "Where"', async ({ page }) => {
+      const about = await openAbout(page, 'philemon', 1)
+      await page.waitForLoadState('networkidle')
+      await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written'])
+      await expect(page.getByRole('link', { name: 'The places of this book' })).toHaveCount(0)
+    })
+
+    test('the link opens the map of Acts, and "‹ Acts" in its bar returns to the chapter of the reader', async ({ page }) => {
+      const about = await openAbout(page, 'acts', 5)
+      await about.getByRole('link', { name: 'The places of this book' }).click()
+      await expect(page).toHaveURL(/#\/book\/acts\/map$/)
+      await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+      await expect(page.getByRole('heading', { level: 2, name: 'The places of this book' })).toBeVisible()
+      await page.locator('.map-bar').getByRole('link', { name: 'Acts' }).click()
+      await expect(page).toHaveURL(/#\/book\/acts\/5$/)
+      await expect(page.locator('section.rd-chapter').first()).toHaveAttribute('data-chapter', '5')
+    })
+
+    test('Acts: the axe check with "About this book" open', async ({ page }) => {
+      const about = await openAbout(page, 'acts', 1)
+      await expect(about.getByRole('link', { name: 'The places of this book' })).toBeVisible()
+      const result = await new AxeBuilder({ page }).withTags(AXE_TAGS).analyze()
+      expect(result.violations.flatMap((v) => v.nodes.map((n) => `${v.id}: ${n.target.join(' ')}`))).toEqual([])
+    })
+  })
+}
+
+test('if the map index did not load, no book has the line "Where"', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await page.route('**/data/map/index.json', (route) => route.abort())
+  const about = await openAbout(page, 'acts', 1)
+  await page.waitForLoadState('networkidle')
+  await expect(about.locator('dt')).toHaveText(['What it is', 'Author', 'Written'])
+})

@@ -67,7 +67,7 @@ export function chapterHref(id: string, chapter: number, verse?: number): string
   return verse ? `#/book/${id}/${chapter}/${verse}` : `#/book/${id}/${chapter}`
 }
 
-/** The map of the places of a book. docs/DESIGN.md section 15.11, docs/TASKS.md Task 38. No page links to it before Task 40. */
+/** The map of the places of a book. docs/DESIGN.md section 15.11, docs/TASKS.md Task 38. The line "Where" of "About this book" links to it from Task 40. */
 export function mapHref(id: string): string {
   return `#/book/${id}/map`
 }

@@ -163,6 +163,7 @@ export function SourcesPage() {
             section 12 of docs/DATA-SOURCES.md. */}
         <section aria-labelledby="sources-places">
           <h2 id="sources-places">Places</h2>
+          <p>Each book with places has a map of them. The link is in “About this book”.</p>
           <p>
             The places that each book names, the verses that name them, and their positions come from the{' '}
             <a href="https://www.openbible.info/geo/">Bible Geocoding Data of OpenBible.info</a>, with a{' '}

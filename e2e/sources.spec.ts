@@ -50,12 +50,14 @@ test.describe('sources page', () => {
       expect(ids.indexOf('sources-places')).toBe(ids.indexOf('sources-fonts') - 1)
 
       const paragraphs = places.locator('p')
-      await expect(paragraphs).toHaveCount(3)
-      await expect(paragraphs.nth(0)).toHaveText(
+      await expect(paragraphs).toHaveCount(4)
+      // Task 40 step 3: the first sentence of the section.
+      await expect(paragraphs.nth(0)).toHaveText('Each book with places has a map of them. The link is in “About this book”.')
+      await expect(paragraphs.nth(1)).toHaveText(
         'The places that each book names, the verses that name them, and their positions come from the Bible Geocoding Data of OpenBible.info, with a Creative Commons Attribution 4.0 licence. The site changed the data: it keeps one position for each place, and it leaves out the places that are inside a city and the places with the name East, North, or South.',
       )
-      await expect(paragraphs.nth(1)).toHaveText('Some positions in that data come from OpenStreetMap. © OpenStreetMap contributors. That data has the Open Database License.')
-      await expect(paragraphs.nth(2)).toHaveText('The coast, the rivers, and the lakes come from Natural Earth, which is in the public domain.')
+      await expect(paragraphs.nth(2)).toHaveText('Some positions in that data come from OpenStreetMap. © OpenStreetMap contributors. That data has the Open Database License.')
+      await expect(paragraphs.nth(3)).toHaveText('The coast, the rivers, and the lakes come from Natural Earth, which is in the public domain.')
 
       const links = await places.getByRole('link').evaluateAll((els) => els.map((e) => [e.textContent, (e as HTMLAnchorElement).getAttribute('href')]))
       expect(links).toEqual([

@@ -253,24 +253,32 @@ export function nameList(names: string[]): string {
   return `${unique.slice(0, 8).join(', ')}, and ${others} more.`
 }
 
-// ---- the switch for the places that are not certain: docs/DESIGN.md section 15.11, Task 39b ----
+// ---- the switch for the places that are not certain: docs/DESIGN.md section 15.11, Tasks 39b and 39d ----
 
-/** True if the book has a place with a position that is not certain. Only such a book has the switch. Rule 4. */
+/**
+ * True if the switch takes out the place: a place with a dot or a triangle, with a position that is not certain. A
+ * water and a region stay on the map always: they have no open sign. Rule 5.
+ */
+export function switchTakesOut(p: MapPlace): boolean {
+  return !p.sure && hasDot(p.kind)
+}
+
+/** True if the book has a dot or a triangle that is not certain. Only such a book has the switch. Rule 4. */
 export function hasUncertain(places: MapPlace[]): boolean {
-  return places.some((p) => !p.sure)
+  return places.some(switchTakesOut)
 }
 
 /**
- * The places of the map with the switch off: the site takes out each place with a position that is not certain, of
- * each kind, before the rules of "Which places show". Rule 5.
+ * The places of the map with the switch off: the site takes out each dot and each triangle with a position that is
+ * not certain, before the rules of "Which places show". Rule 5.
  */
 export function withoutUncertain(places: MapPlace[]): MapPlace[] {
-  return places.filter((p) => p.sure)
+  return places.filter((p) => !switchTakesOut(p))
 }
 
-/** The number of places in the first view with a position that is not certain. Rule 6. */
+/** The number of places in the first view that the switch takes out: the dots and the triangles only. Rule 6. */
 export function uncertainInView(places: MapPlace[], onMap: boolean[]): number {
-  return places.filter((p, i) => onMap[i] && !p.sure).length
+  return places.filter((p, i) => onMap[i] && switchTakesOut(p)).length
 }
 
 /** The sentence of the counts with the switch off, in its two forms. No sentence for 0. Rule 6. */

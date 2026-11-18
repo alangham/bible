@@ -2753,6 +2753,44 @@ Done when:
 
 Stop and report. Commit the two sketches of the designer with this task.
 
+## Task 39d. The map page: the switch hides only dots and triangles
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: with the switch off, the waters and the regions stay on the map. Only the dots and the triangles that are not certain go away.
+
+Arthur decided this on 2026-11-17. With the switch off, the map of Acts lost the name "Red Sea", and a reader did not know why. Read rules 4 to 8 of "The switch for the places that are not certain" in section 15.11 of `docs/DESIGN.md`.
+
+WARNING: Do not add a link to the map page. Do not add the line "Where".
+
+WARNING: Change only which places the switch takes out, and the number of the sentence. The look, the position, and the memory of the switch stay as built.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Change the function that takes out the places: it takes out a place only if its position is not certain and its kind is "place" or "mountain". Change its tests in Vitest.
+2. Change the number of the sentence, by rule 6. Change its tests.
+3. A book has the switch only if it has such a place, by rule 4. Report the number of books with the switch before and after.
+4. End-to-end tests, with the switch off:
+   - Acts at 1440 by 900 px: the map shows the name "Red Sea", and it does not show the name "Mount Sinai".
+   - Joshua at the two sizes: the map has no open dot and no open triangle.
+   - Exodus at 1440 by 900 px: the map shows the name "Red Sea" as many times as with the switch on. The designer saw two.
+5. Compare with the numbers of the designer, rule 7. If your numbers differ, find the cause and give it. Do not change the code to make the numbers agree.
+6. Make screenshots in `docs/screenshots/task-39d/`, at the two sizes, with the switch off: Acts, Joshua, and Exodus.
+7. Run the `accuracy-reviewer` agent: the numbers of the sentence for Joshua, Exodus, and Acts against the data.
+8. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 1, 2, and 4 pass, or the report gives the cause of each one that does not.
+- The report has the numbers of steps 3 and 5.
+- No page has a link to the map page.
+
+Stop and report.
+
 ## Task 40. The line "Where" in "About this book"
 
 Status: TODO
@@ -2761,7 +2799,7 @@ Accuracy review: no
 
 Goal: a reader goes from "About this book" to the map of the book.
 
-WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39c. If `docs/TASKS.md` does not say so below this line, stop and ask.
+WARNING: Do this task only after Arthur approved the map page of Tasks 38 to 39d. If `docs/TASKS.md` does not say so below this line, stop and ask.
 
 Steps:
 

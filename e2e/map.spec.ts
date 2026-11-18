@@ -607,3 +607,50 @@ test.describe('map page, the switch of Task 39c at 390 by 844 px', () => {
     expect(frame.y + 100).toBeLessThanOrEqual(844)
   })
 })
+
+// docs/TASKS.md Task 39d step 4: with the switch off, only the dots and the triangles that are not certain go away.
+// The waters and the regions stay. Section 15.11, "The switch for the places that are not certain", rules 4 to 7.
+test.describe('map page, the switch of Task 39d at 1440 by 900 px', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+  })
+
+  test('Acts with the switch off: the map shows "Red Sea", and not "Mount Sinai"', async ({ page }) => {
+    await openMap(page, 'acts')
+    // With the switch on, the first view shows "Mount Sinai", an open triangle.
+    expect(await mapNames(page)).toContain('Mount Sinai')
+    await page.getByRole('switch', { name: SWITCH }).click()
+    await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
+    await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+    const names = await mapNames(page)
+    expect(names).toContain('Red Sea')
+    expect(names).not.toContain('Mount Sinai')
+  })
+
+  test('Exodus with the switch off: the map shows "Red Sea" as many times as with the switch on', async ({ page }) => {
+    await openMap(page, 'exodus')
+    const count = async () => (await mapNames(page)).filter((n) => n === 'Red Sea').length
+    const on = await count()
+    expect(on).toBeGreaterThan(0)
+    await page.getByRole('switch', { name: SWITCH }).click()
+    await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
+    await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+    expect(await count()).toBe(on)
+  })
+})
+
+for (const layout of LAYOUTS) {
+  test.describe(`map page, the switch of Task 39d, ${layout.name} layout`, () => {
+    test('Joshua with the switch off: the map has no open dot and no open triangle', async ({ page }) => {
+      await page.setViewportSize(layout.viewport)
+      await openMap(page, 'joshua')
+      await page.getByRole('switch', { name: SWITCH }).click()
+      await expect(page.getByRole('switch', { name: SWITCH })).toHaveAttribute('aria-checked', 'false')
+      await expect(page.locator('.map-svg[data-ready="true"]')).toBeVisible()
+      // An open dot is a white circle, and an open triangle is a white path.
+      expect(await page.locator('.map-dots circle[fill="#fff"]').count()).toBe(0)
+      expect(await page.locator('.map-dots path[fill="#fff"]').count()).toBe(0)
+      expect(await page.locator('.map-dots > *').count()).toBeGreaterThan(0)
+    })
+  })
+}

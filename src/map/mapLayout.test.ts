@@ -448,10 +448,14 @@ describe('the switch for the places that are not certain', () => {
     place('Salt Sea', 35.5, 31.5, 4, 'water'),
   ]
 
-  it('takes out each place with a position that is not certain, of each kind', () => {
-    expect(withoutUncertain(places).map((p) => p.name)).toEqual(['Hazor', 'Salt Sea'])
+  it('takes out a place and a mountain that are not certain, and keeps a region and a water (Task 39d)', () => {
+    expect(withoutUncertain(places).map((p) => p.name)).toEqual(['Hazor', 'Geshur', 'Salt Sea'])
+    const red = [place('Red Sea', 33, 28, 4, 'water', false), place('Arabia', 40, 25, 1, 'region', false)]
+    expect(withoutUncertain(red)).toEqual(red)
     expect(hasUncertain(places)).toBe(true)
     expect(hasUncertain(withoutUncertain(places))).toBe(false)
+    // A book with only a water and a region that are not certain has no switch. Rule 4.
+    expect(hasUncertain(red)).toBe(false)
   })
 
   it('takes the places out before the priority rule', () => {
@@ -465,9 +469,11 @@ describe('the switch for the places that are not certain', () => {
     expect(run(withoutUncertain(near))).toEqual(['Ziph'])
   })
 
-  it('counts only the places in the first view', () => {
-    expect(uncertainInView(places, [true, true, false, true, true])).toBe(2)
-    expect(uncertainInView(places, [true, false, false, false, true])).toBe(0)
+  it('counts only the dots and the triangles in the first view (Task 39d)', () => {
+    // Madon, a place, and Mount Halak, a mountain, count. Geshur, a region, does not.
+    expect(uncertainInView(places, [true, true, true, true, true])).toBe(2)
+    expect(uncertainInView(places, [true, true, false, true, true])).toBe(1)
+    expect(uncertainInView(places, [true, false, false, true, true])).toBe(0)
   })
 
   it('writes the new sentence in its two forms, and no sentence for 0', () => {
@@ -480,7 +486,7 @@ describe('the switch for the places that are not certain', () => {
     const onMap = [true, true, true, true, false]
     expect(countSentences('Joshua', file(places), onMap, true)).toEqual([
       'Joshua names 5 places. 4 are on this map.',
-      '3 of them have a position that is not certain, and the map does not show them.',
+      '2 of them have a position that is not certain, and the map does not show them.',
       '1 place is outside this map: Salt Sea.',
     ])
     expect(countSentences('Joshua', file(places), onMap, false)).toEqual([

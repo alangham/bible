@@ -89,6 +89,10 @@ test.describe('timeline page', () => {
   for (const width of [900, 1440]) {
     test(`wide layout at ${width} px: no name covers another, and no name is outside the window`, async ({ page }) => {
       await open(page, width, 900)
+      // data-ready is true when the dates load. The names and the year labels draw later, when the fonts are ready,
+      // so the test waits for the 66 names before it reads the boxes. Without this wait, the test read 0 names in the
+      // full e2e run 2 of Task 45, and 1 time in 60 more runs at 900 px.
+      await expect(page.locator('.tl-name')).toHaveCount(66)
       const boxes = await page.locator('.tl-name').evaluateAll((els) =>
         els.map((e) => {
           const r = e.getBoundingClientRect()

@@ -22,6 +22,7 @@ import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { setRedLetters, useRedLetters } from '../data/redLetters.ts'
+import { setDarkMode, useDarkMode } from '../data/darkMode.ts'
 import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
 import { getTranslation, setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
 import { usePageTitle } from '../pageTitle.ts'
@@ -354,6 +355,7 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
   const redOn = useRedLetters()
+  const darkOn = useDarkMode()
   const translation = useTranslation()
   const textSize = useTextSize()
   const whereRef = useRef<HTMLButtonElement>(null)
@@ -596,6 +598,16 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
               {redOn ? 'On' : 'Off'}
             </span>
           </button>
+          {/* The dark mode switch, below a thin line, in the form of the red letters switch. Its name is "Dark mode"; the
+              state is aria-pressed. A click changes each color at once, and the list stays open. docs/DESIGN.md section 18.3. */}
+          <div className="menu-rule ts-rule" aria-hidden="true" />
+          <button type="button" className="tr-row ts-dark" aria-pressed={darkOn} onClick={() => setDarkMode(!darkOn)}>
+            <Check on={false} />
+            <span className="tr-name">Dark mode</span>
+            <span className="ts-state" aria-hidden="true">
+              {darkOn ? 'On' : 'Off'}
+            </span>
+          </button>
         </div>
       )}
       {layout === 'narrow' && (
@@ -624,6 +636,14 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
             Red letters
             <span className="menu-state" aria-hidden="true">
               {redOn ? 'On' : 'Off'}
+            </span>
+          </button>
+          {/* The dark mode switch, the row below "Red letters", with no line between. A tap changes each color at once,
+              and the panel stays open. docs/DESIGN.md section 18.3. */}
+          <button type="button" className="menu-row" aria-pressed={darkOn} onClick={() => setDarkMode(!darkOn)}>
+            Dark mode
+            <span className="menu-state" aria-hidden="true">
+              {darkOn ? 'On' : 'Off'}
             </span>
           </button>
           <div className="menu-rule" aria-hidden="true" />

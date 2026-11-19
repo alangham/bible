@@ -2,6 +2,7 @@
 // This test reads each .css, .ts, and .tsx file of src/, with no test file, and fails if a file has a color value
 // outside these places:
 // - the first :root block of src/index.css, which holds the names;
+// - the dark rule :root[data-mode='dark'] of src/index.css, which holds the dark value of each name, Task 45;
 // - src/data/books.ts, the one source of the ten group colors;
 // - the SVG mask of src/map/MapDrawing.tsx, where white means "show" and black means "hide".
 // It also fails if a file uses a name with var() that no file defines.
@@ -30,9 +31,12 @@ function withoutComments(text: string, css: boolean): string {
   return css ? noBlocks : noBlocks.replace(/(^|[^:'"`])\/\/.*$/gm, '$1')
 }
 
-/** The first :root block of src/index.css: the one place of the names. */
-function rootBlock(css: string): { start: number; end: number } {
-  const start = css.indexOf(':root {')
+/** The dark rule of src/index.css: the one place of the dark values. docs/TASKS.md Task 45. */
+const DARK_HEAD = ":root[data-mode='dark'] {"
+
+/** The first :root block of src/index.css: the one place of the names. With a head, the block of the dark values. */
+function rootBlock(css: string, head = ':root {'): { start: number; end: number } {
+  const start = css.indexOf(head)
   return { start, end: css.indexOf('\n}', start) }
 }
 
@@ -95,8 +99,11 @@ describe('the colors of src/', () => {
       const isCss = file.endsWith('.css')
       let text = withoutComments(readFileSync(path, 'utf8'), isCss)
       if (file === 'index.css') {
-        const { start, end } = rootBlock(text)
-        text = text.slice(0, start) + text.slice(start, end).replace(/[^\n]/g, ' ') + text.slice(end)
+        for (const head of [':root {', DARK_HEAD]) {
+          const { start, end } = rootBlock(text, head)
+          expect(start, head).toBeGreaterThanOrEqual(0)
+          text = text.slice(0, start) + text.slice(start, end).replace(/[^\n]/g, ' ') + text.slice(end)
+        }
       }
       if (file === 'map/MapDrawing.tsx') text = text.replace(/<mask[\s\S]*?<\/mask>/, (m) => m.replace(/[^\n]/g, ' '))
       for (const v of colorValues(text, isCss)) problems.push(`${file}:${v}`)

@@ -8,9 +8,25 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Bible Wall" />
-    <meta name="theme-color" content="#ffffff" />
+    <!-- The line theme-color: the page color of the light mode, and of the dark mode of docs/DESIGN.md section 18.11.
+         The script below and src/data/darkMode.ts take the value from data-light or data-dark. -->
+    <meta name="theme-color" content="#ffffff" data-light="#ffffff" data-dark="#1C1C1E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bible Wall</title>
+    <!-- The dark mode, before the first paint: docs/DESIGN.md section 18.3, docs/TASKS.md Task 45 step 6. With the value
+         "on" for the key bible-dark-mode, the root element gets data-mode="dark", and the line theme-color the dark page
+         color. With no value, the mode is light. src/data/darkMode.ts reads the same key. -->
+    <script>
+      try {
+        if (localStorage.getItem('bible-dark-mode') === 'on') {
+          document.documentElement.setAttribute('data-mode', 'dark')
+          var themeColor = document.querySelector('meta[name="theme-color"]')
+          themeColor.content = themeColor.dataset.dark
+        }
+      } catch (e) {
+        // A storage that fails gives the light mode.
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1564,18 +1564,18 @@ The rule of the dark mode: each color has one name, and the dark mode gives each
 | Page | `#FFFFFF` | `#1C1C1E` |
 | Ink | `#1D1D1F` | `#F5F5F7` |
 | Secondary ink | `#6E6E73` | `#A1A1A6` |
-| A thin line | black at 9% | white at 15% |
+| A thin line | black at 9% | white at 16% |
 | The surface of a panel with no text in a group color | `#FFFFFF` | `#2C2C2E` |
-| The surface of a panel with text in a group color | `#FFFFFF` | `#1C1C1E`, with a border of white at 16% |
+| The surface of a panel with text in a group color | `#FFFFFF` | `#1C1C1E`. Its border is the thin line, as built. |
 | A light gray surface | `#F5F5F7` | `#2C2C2E` |
 | Red letters | `#8B1A1A` | `#EE766C` |
 
 - The page is near black, not full black. White text on full black is hard on the eyes in a long text.
 - Contrast against `#1C1C1E`: ink 15.6 to 1, secondary ink 6.6 to 1, red letters 6.0 to 1.
-- A text in a group color is only on the page color `#1C1C1E`. On `#2C2C2E`, the group color of History has a contrast of 3.7 to 1. So a panel with such a text keeps the page color and gets a border.
+- A text in a group color is only on the page color `#1C1C1E`. On `#2C2C2E`, the group color of History has a contrast of 4.2 to 1. So a panel with such a text keeps the page color. Its border and its shadow set it apart from the page.
 - The text of the band has the color of the page. In the light mode that is white on the group color, as built. In the dark mode that is `#1C1C1E` on the dark group color. The rule is the same in the two modes.
 - A shadow stays black. A part that the light mode makes darker on hover, with a mix of the group color and black, is made lighter in the dark mode, with a mix of the group color and white.
-- This table has the main names only. Task 44 gives the list of each color of the site. The designer then gives each name its dark value, by the rule of this section, before Task 45.
+- This table has the main names only. Section 18.11 has the dark value of each of the 45 names of Task 44.
 
 ### 18.5 The ten group colors
 
@@ -1584,7 +1584,7 @@ Each dark color keeps the hue of its group and is lighter. Each has a contrast o
 | Group | Light, as built | Contrast against white | Dark | Contrast against `#1C1C1E` |
 |---|---|---|---|---|
 | Law | `#C2255C` | 5.7 | `#F26A90` | 5.9 |
-| History | `#B01E35` | 6.8 | `#E74D54` | 4.5 |
+| History | `#B01E35` | 6.8 | `#F3585D` | 5.2 |
 | Poetry & Wisdom | `#CD4C26` | 4.5 | `#EB7443` | 5.8 |
 | Major Prophets | `#9D6E00` | 4.5 | `#CD9C34` | 6.8 |
 | Minor Prophets | `#667F19` | 4.6 | `#86A645` | 6.1 |
@@ -1592,11 +1592,12 @@ Each dark color keeps the hue of its group and is lighter. Each has a contrast o
 | History (Acts) | `#6E6A66` | 5.4 | `#9C9793` | 5.9 |
 | Letters of Paul | `#1B2A41` | 14.4 | `#8DB3EA` | 7.9 |
 | General Letters | `#4B2E57` | 11.5 | `#C0A1E4` | 7.7 |
-| Prophecy | `#986694` | 4.5 | `#B274A4` | 4.8 |
+| Prophecy | `#986694` | 4.5 | `#BB7DAD` | 5.4 |
 
-- The exact contrast of History in the dark mode is 4.53 to 1. A unit test keeps each dark color at 4.5 to 1 or more.
+- The lowest contrast is that of History, 5.16 to 1. A unit test keeps each dark color at 4.5 to 1 or more against the page color, and against the page color with the hover of section 18.11.
+- The designer changed two colors after the first sketches, on 2026-11-18: History was `#E74D54`, at 4.5 to 1, and Prophecy was `#B274A4`, at 4.8 to 1. With those values, the two colors were below 4.5 to 1 on a chapter of the chapter grid under the pointer. The pictures `dark-wall-1440.png`, `dark-read-red-1440.png`, `dark-read-top-1440.png`, `dark-map-1440.png`, and `dark-phone-390.png` have the first values. `dark-palette.png` and the four sheets of section 18.11 have the values of this table.
 - Letters of Paul and General Letters are the two darkest colors on white. They are the two lightest colors on the dark page. This keeps General Letters apart from Prophecy, which is the same family of purple.
-- The designer computed the colors in the OKLCH color space: the hue of the group, and a lightness between 0.64 and 0.76.
+- The designer computed the colors in the OKLCH color space: the hue of the group, and a lightness between 0.67 and 0.76.
 
 ### 18.6 The map in the dark mode
 
@@ -1623,12 +1624,11 @@ WARNING: The map has an SVG mask that stops the coast, river, and lake lines at 
 
 ### 18.8 The tasks
 
-1. Task 44: each color of the site gets one name in one place, and a report gives the list. It changes nothing on the site.
-2. The dark wall and the dark reading page, with the top bar, the panels, the pop-up, and the trail, and the switch. In this task, the first state of the switch is "Off", and the site does not follow the device.
-3. The dark map page and the dark pages of the Reference section.
-4. The first visit follows the device. Only after Arthur approves the dark pages on the built site.
+1. Task 44: each color of the site gets one name in one place, and a report gives the list. It changes nothing on the site. Done.
+2. Task 45: the dark mode on each page, and the switch. In this task, the first state of the switch is "Off", and the site does not follow the device.
+3. A last task: the first visit follows the device. Only after Arthur approves the dark pages on the built site.
 
-The designer writes tasks 2, 3, and 4 of this list into `docs/TASKS.md` after the report of Task 44, because they need the list of the colors.
+The first plan had two tasks in place of Task 45: the wall and the reading page, and then the map and the Reference section. After Task 44, each color is a name, so one rule makes each page dark. Two tasks would need more work, to keep some pages light for a time.
 
 ### 18.9 Selected by the designer, without a decision by Arthur
 
@@ -1646,7 +1646,106 @@ Arthur saw these in the sketches and approved the direction.
 1. The red letters are near the dark colors of History and of Poetry & Wisdom. In Matthew 5, the red text and the label "Psalms 37:11" in the margin are close. On white, the dark red is clearly different.
 2. On the dark map, the land is only a little lighter than the sea. The coast line carries the shape.
 3. Law, History, and Poetry & Wisdom are three warm colors. They are distinct on the dark wall, but less than on white.
-4. Not in the sketches: the timeline, the quotation diagram, the Sources page, the pop-up, the chapter grid, the translation list, the trail, and each hover state. The designer saw the text list and the menu panel in the dark mode only with the same color as the page.
+4. Not in the sketches: each state under the pointer, each focus outline, the verse that travel opens, and a message for an error. The four sheets of section 18.11 have the other parts.
 5. The words of the Sources page do not name the modes. No decision.
-6. The line `theme-color` of `index.html` is white. The dark mode needs the page color there. Task 4 of the list in section 18.8.
+6. The line `theme-color` of `index.html` is white. The dark mode needs the page color there. Task 45 sets it.
 7. No test on a real phone.
+
+### 18.11 The dark value of each name, from the report of Task 44
+
+Claude Code completed Task 44 in commit `b889e82`. Its report is `docs/reviews/task-44-colors.md`: 45 names of colors in the first `:root` block of `src/index.css`, and ten group names from `src/data/books.ts`. The designer compared 14 pairs of pages of the build before and after, at 1440 by 900 px and at 390 by 844 px: 0 different pixels.
+
+The designer then gave each name a dark value, put the values on the build of Task 44 in the workspace, and looked at each kind of page. The sheets `dark-panels-1440.png`, `dark-pages-1440.png`, `dark-panels-390.png`, and `dark-pages-390.png` in `docs/screenshots/dark-design/` show the result: the pop-up, the trail, the chapter grid, the translation list, the text list, "Scholars differ", the timeline, the quotation diagram, the Sources page, and the map. In these sheets, the text of the pop-up and of Numbers did not load, because the workspace did not have the file. This is not a defect of the site.
+
+This table is the only source of a dark value. The light values are those of `src/index.css`, and they do not change.
+
+| Name | Light, as built | Dark |
+|---|---|---|
+| `--page` | `#fff` | `#1C1C1E` |
+| `--ink` | `#1d1d1f` | `#F5F5F7` |
+| `--ink-secondary` | `#6e6e73` | `#A1A1A6` |
+| `--ink-italic` | `#3a3a3c` | `#D1D1D6` |
+| `--red-letters` | `#8b1a1a` | `#EE766C` |
+| `--on-group` | `#fff` | `#1C1C1E` |
+| `--line` | `rgba(0, 0, 0, 0.09)` | `rgba(255,255,255,0.16)` |
+| `--line-faint` | `rgba(0, 0, 0, 0.05)` | `rgba(255,255,255,0.09)` |
+| `--divider` | `rgba(0, 0, 0, 0.14)` | `rgba(255,255,255,0.24)` |
+| `--sample-line` | `#e3e3e6` | `#3A3A3C` |
+| `--credit-line` | `rgba(0, 0, 0, 0.2)` | `rgba(255,255,255,0.32)` |
+| `--border-chip` | `rgba(0, 0, 0, 0.14)` | `rgba(255,255,255,0.24)` |
+| `--border-draft` | `rgba(0, 0, 0, 0.15)` | `rgba(255,255,255,0.25)` |
+| `--border-button` | `rgba(0, 0, 0, 0.18)` | `rgba(255,255,255,0.30)` |
+| `--border-select` | `rgba(0, 0, 0, 0.2)` | `rgba(255,255,255,0.34)` |
+| `--bar` | `rgba(255, 255, 255, 0.9)` | `rgba(28,28,30,0.9)` |
+| `--panel` | `#fff` | `#2C2C2E` |
+| `--panel-group` | `#fff` | `#1C1C1E` |
+| `--surface-gray` | `#f5f5f7` | `#2C2C2E` |
+| `--hover` | `rgba(0, 0, 0, 0.05)` | `rgba(255,255,255,0.05)` |
+| `--button-hover` | `#f5f5f7` | `#3A3A3C` |
+| `--shade-bar` | `rgba(0, 0, 0, 0.18)` | `rgba(0,0,0,0.45)` |
+| `--shade-pop` | `rgba(0, 0, 0, 0.22)` | `rgba(0,0,0,0.5)` |
+| `--hit` | `rgba(0, 0, 0, 0.06)` | `rgba(255,255,255,0.08)` |
+| `--hit-mix` | `#000` | `#fff` |
+| `--shadow-panel` | `0 14px 30px rgba(0, 0, 0, 0.08)` | `0 14px 30px rgba(0,0,0,0.45)` |
+| `--shadow-list` | `0 14px 34px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07)` | `0 14px 34px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.12)` |
+| `--shadow-pop` | `0 18px 50px rgba(0, 0, 0, 0.16)` | `0 18px 50px rgba(0,0,0,0.55)` |
+| `--shadow-button` | `0 1px 2px rgba(0, 0, 0, 0.06)` | `0 1px 2px rgba(0,0,0,0.4)` |
+| `--switch-off` | `#8e8e93` | `#7C7C80` |
+| `--switch-knob` | `#fff` | `#1C1C1E` |
+| `--disabled` | `#b0b0b5` | `#636366` |
+| `--timeline-dot-open` | `#fff` | `#1C1C1E` |
+| `--timeline-halo` | `#fff` | `#1C1C1E` |
+| `--map-sea` | `#fff` | `#1C1C1E` |
+| `--map-land` | `#f4f1eb` | `#2B2A28` |
+| `--map-coast` | `#cfc8bb` | `#55514A` |
+| `--map-water-line` | `#a9c0cc` | `#456072` |
+| `--map-water-name` | `#4a6f84` | `#86AEC6` |
+| `--map-place-name` | `#1d1d1f` | `#F5F5F7` |
+| `--map-secondary` | `#6b6b6b` | `#A1A1A6` |
+| `--map-dot-edge` | `#fff` | `#1C1C1E` |
+| `--map-dot-open` | `#fff` | `#1C1C1E` |
+| `--quote-line-dim` | `#1d1d1f` | `#F5F5F7` |
+| `--quote-name-dim` | `#6e6e73` | `#A1A1A6` |
+
+The ten group names. Section 18.5 has the contrast of each:
+
+| Name | Light, as built | Dark |
+|---|---|---|
+| `--group-law` | `#C2255C` | `#F26A90` |
+| `--group-history` | `#B01E35` | `#F3585D` |
+| `--group-poetry-wisdom` | `#CD4C26` | `#EB7443` |
+| `--group-major-prophets` | `#9D6E00` | `#CD9C34` |
+| `--group-minor-prophets` | `#667F19` | `#86A645` |
+| `--group-gospels` | `#26828B` | `#49A8B3` |
+| `--group-history-acts` | `#6E6A66` | `#9C9793` |
+| `--group-letters-of-paul` | `#1B2A41` | `#8DB3EA` |
+| `--group-general-letters` | `#4B2E57` | `#C0A1E4` |
+| `--group-prophecy` | `#986694` | `#BB7DAD` |
+
+The SHA-256 of the 55 lines "name, equals sign, dark value", in the order of the two tables, with a line feed after each line and with the values as written here, is `3ae78db0ebd1487092306268eeffbaf7b338fd6de9c07d82b2fcfaefc9069121`.
+
+The rules behind the values:
+
+- A black line or border at an opacity becomes a white line at about 1.7 times that opacity.
+- A shadow stays black, with more opacity. The ring of 1 px in `--shadow-list` is a border, so it becomes white.
+- A surface that is white, and that has a text in a group color, is the page color. A surface that is white with no such text is `#2C2C2E`.
+- `--on-group`, `--switch-knob`, `--timeline-dot-open`, `--timeline-halo`, `--map-sea`, `--map-dot-edge`, and `--map-dot-open` are the page color. Each one is a part that the light mode shows in the color of the page.
+- `--hover` is white at 5%, not more. On the page color with that hover, each group color still has a contrast of 4.5 to 1 or more. The lowest is History, at 4.52.
+- `--hit-mix` is white: the number of the verse that travel opens gets lighter, where the light mode makes it darker.
+- Contrast against the page color `#1C1C1E`: `--ink-italic` 11.2 to 1, `--map-water-name` 7.2, `--switch-off` 4.1. Against the land of the map, `#2B2A28`: `--map-secondary` 5.6, `--map-water-name` 6.1. Against `--panel`, `#2C2C2E`: `--ink` 12.8, `--ink-secondary` 5.4.
+
+### 18.12 The 11 questions of the report of Task 44
+
+One rule answers most of them: the light mode stays as built. So no name is removed, and no name is joined with a different name. A name with the value of a different name keeps its own role, and the table of section 18.11 gives each name its dark value.
+
+1. `--line-faint` and `--line`: two names stay.
+2. The three lines at the left of a text: three names stay.
+3. The four borders of a small control: four names stay.
+4. `--hover` and `--button-hover`: two names stay.
+5. `--map-secondary` and `--ink-secondary`: two names stay, with one dark value.
+6. The names with the value of a different name: they stay. Section 18.11 gives each one.
+7. `--divider` and `--border-chip`: two names stay.
+8. The border of a panel with text in a group color. The dark mode adds no border and changes no border. The pop-up, the chapter grid, and the trail keep `--line`, and the dark value of `--line` is white at 16%. That is the border of section 18.4. An entry of the read-with list keeps `--border-chip`.
+9. The two shadows of the translation list: two names stay.
+10. The line `theme-color` of `index.html`: the task that builds the dark mode sets it to the page color of the mode.
+11. The icon of the site: no change.

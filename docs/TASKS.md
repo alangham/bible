@@ -3121,3 +3121,67 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Commit the eight sketches of the designer in `docs/screenshots/dark-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.
+
+---
+
+## Task 45. Dark mode: the dark colors on each page, and the switch
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader sets the switch "Dark mode" to "On", and each page of the site is dark. With the switch "Off", each page is the same as before this task.
+
+Arthur approved the look and the switch on 2026-11-18, from sketches. Read section 18 of `docs/DESIGN.md` first: sections 18.3, 18.5, 18.11, and 18.12 are the rules of this task. Look at the pictures in `docs/screenshots/dark-design/`. They are sketches of the designer: the built site with the colors replaced in a workspace. `dark-palette.png` and the four sheets `dark-panels-` and `dark-pages-` have the values of this task. The five older pictures have two group colors with older values.
+
+This task shows on the site: the text list and the menu panel of the reading page get one more row, "Dark mode". With the row "Off", nothing else changes.
+
+WARNING: In this task, the first state of the switch is "Off". The site does not read the setting of the device. Do not add `prefers-color-scheme`. A last task adds it, only after Arthur approves the dark pages on the built site.
+
+WARNING: The table of section 18.11 is the only source of a dark value. Do not change a value, and do not add a name. If a part looks wrong or a contrast check fails in the dark mode, stop and ask Arthur. Give the part, the two colors, and the contrast. Do not correct it with a new value.
+
+WARNING: Do not change a light value. With the switch "Off", each page is the same as before, pixel for pixel, but for the new row.
+
+WARNING: Do not change a size, a space, a position, a word, or a data file. The one new part is the row "Dark mode".
+
+WARNING: In `src/map/MapDrawing.tsx`, the white and the black inside the SVG mask do not change in the dark mode.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make the 26 screenshots of step 1 of Task 44 again, in a folder outside the repository, with the method of section 9 of `docs/reviews/task-44-colors.md`.
+2. Add the dark values. One attribute on the root element selects the mode, and one CSS rule for that attribute gives each of the 45 names its dark value of section 18.11. `src/data/books.ts` gets the ten dark group colors of section 18.11 as a second list, and its function makes a second rule for the attribute. No component changes for a color.
+3. In the dark mode, the root element has `color-scheme: dark`, so that the browser draws its own parts dark: the scroll bar, and the select control of the Quotations page. Do not set `color-scheme` in the light mode.
+4. Add unit tests of the dark values:
+   - The SHA-256 of the 55 lines of section 18.11 is `3ae78db0ebd1487092306268eeffbaf7b338fd6de9c07d82b2fcfaefc9069121`. Compute it from the values in the code, in the order and the form of section 18.11. If your number differs, find the cause and give it. Do not change a value to make the numbers agree.
+   - Each of the ten dark group colors has a contrast of 4.5 to 1 or more against `#1C1C1E`, and against `#272729`, which is the page color with the hover.
+   - Against `#1C1C1E`: the ink, the secondary ink, and the red letters have 4.5 to 1 or more. Against `#2C2C2E`: the ink and the secondary ink have 4.5 to 1 or more.
+   - The light values of the 45 names and of the ten groups are those of commit `b889e82`.
+5. Add the setting, in the form of `src/data/redLetters.ts`: the key `bible-dark-mode` in the storage of the browser. With no value, the mode is light.
+6. Set the mode before the first paint. A reader with the dark mode must not see a white page for a moment at the load of a page. A short script in `index.html`, before the style sheet, that reads the key and sets the attribute is the usual way. The same script sets the line `theme-color` to `#1C1C1E` in the dark mode. In the light mode it stays `#ffffff`.
+7. Add the switch "Dark mode", by section 18.3: a row below "Red letters" in the text list, with a thin line between the two rows, and a row below "Red letters" in the menu panel of the reading page. It has the form of the red letters switch, with the state "On" or "Off". A change of the switch changes each color at once, with no new load of the page, and it changes the line `theme-color`.
+8. The mode is for each page: the wall, the reading page, the map page, the timeline, the Quotations page, and the Sources page. A page with no switch reads the same key.
+9. With the switch "Off", make the 26 screenshots again. Compare each pair with those of step 1. 24 pairs must have 0 different pixels. The two views with the text list or the menu panel open differ only by the new row: give the box of the different pixels for these two.
+10. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+    - The first visit: the switch is "Off", and the root element has no dark attribute.
+    - The switch "On": the background of the page is `rgb(28, 28, 30)`, and the color of the main text is `rgb(245, 245, 247)`. The switch "Off" again: `rgb(255, 255, 255)` and `rgb(29, 29, 31)`.
+    - The selection stays after a new load, and it applies on the wall, on the map of Acts, on the timeline, on the Quotations page, and on the Sources page.
+    - With the key set to dark before the load, and with the request for the JavaScript file stopped: the background of the root element is `rgb(28, 28, 30)`. This is the check of step 6.
+    - The line `theme-color` is `#1C1C1E` with the switch "On", and `#ffffff` with the switch "Off".
+    - In the dark mode: the text of the band of Matthew has the color of the page. The name of Genesis on the wall has the color `rgb(242, 106, 144)`. The red letters of Matthew 5 have the color `rgb(238, 118, 108)`.
+    - In the dark mode, on the map of Acts: the sea has the color of the page, the lines of the coast show, and the two values of the mask are as before.
+    - The switch works with the keyboard, and its state is in `aria-pressed`, as for the red letters switch.
+    - The other settings do not change with the switch: the text size, the red letters, the echo links, the translation, and the switch of the map.
+    - The axe check in the dark mode, for each of the 13 views of step 1.
+11. Make screenshots in `docs/screenshots/task-45/`, in the dark mode, at 1440 by 900 px and at 390 by 844 px: the 13 views of step 1, and the text list and the menu panel with the new row in the light mode.
+12. In the report, give each part that you did not see in the dark mode: a state under the pointer, a focus outline, the verse that travel opens, a message for an error, and each other part that the 13 views do not show. For each one that you can open in a test, look at it and say if it is correct.
+13. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 4 and 10 pass.
+- The 24 pairs of step 9 have 0 different pixels, and the report gives the box of the two others.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Commit the pictures of the designer in `docs/screenshots/dark-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.

@@ -97,6 +97,63 @@
   background: var(--page);
 }
 
+/*
+  The dark mode: the dark value of each name above, from the table of docs/DESIGN.md section 18.11, in its order
+  and with the values as written there. docs/TASKS.md Task 45 step 2. The attribute data-mode="dark" on the root
+  element selects it: the script in index.html sets it before the first paint, and src/data/darkMode.ts sets it
+  when the reader uses the dark mode switch. In the light mode the root element has no such attribute. The ten
+  dark group colors are in src/data/books.ts. color-scheme makes the browser draw its own parts dark: the scroll
+  bar, and the select control of the Quotations page.
+*/
+:root[data-mode='dark'] {
+  color-scheme: dark;
+  --page: #1C1C1E;
+  --ink: #F5F5F7;
+  --ink-secondary: #A1A1A6;
+  --ink-italic: #D1D1D6;
+  --red-letters: #EE766C;
+  --on-group: #1C1C1E;
+  --line: rgba(255,255,255,0.16);
+  --line-faint: rgba(255,255,255,0.09);
+  --divider: rgba(255,255,255,0.24);
+  --sample-line: #3A3A3C;
+  --credit-line: rgba(255,255,255,0.32);
+  --border-chip: rgba(255,255,255,0.24);
+  --border-draft: rgba(255,255,255,0.25);
+  --border-button: rgba(255,255,255,0.30);
+  --border-select: rgba(255,255,255,0.34);
+  --bar: rgba(28,28,30,0.9);
+  --panel: #2C2C2E;
+  --panel-group: #1C1C1E;
+  --surface-gray: #2C2C2E;
+  --hover: rgba(255,255,255,0.05);
+  --button-hover: #3A3A3C;
+  --shade-bar: rgba(0,0,0,0.45);
+  --shade-pop: rgba(0,0,0,0.5);
+  --hit: rgba(255,255,255,0.08);
+  --hit-mix: #fff;
+  --shadow-panel: 0 14px 30px rgba(0,0,0,0.45);
+  --shadow-list: 0 14px 34px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.12);
+  --shadow-pop: 0 18px 50px rgba(0,0,0,0.55);
+  --shadow-button: 0 1px 2px rgba(0,0,0,0.4);
+  --switch-off: #7C7C80;
+  --switch-knob: #1C1C1E;
+  --disabled: #636366;
+  --timeline-dot-open: #1C1C1E;
+  --timeline-halo: #1C1C1E;
+  --map-sea: #1C1C1E;
+  --map-land: #2B2A28;
+  --map-coast: #55514A;
+  --map-water-line: #456072;
+  --map-water-name: #86AEC6;
+  --map-place-name: #F5F5F7;
+  --map-secondary: #A1A1A6;
+  --map-dot-edge: #1C1C1E;
+  --map-dot-open: #1C1C1E;
+  --quote-line-dim: #F5F5F7;
+  --quote-name-dim: #A1A1A6;
+}
+
 body {
   margin: 0;
   min-height: 100svh;
@@ -745,8 +802,10 @@ html:has(.reading) {
   margin: 6px 8px;
 }
 
-/* The row "Red letters" of the text list: the weight of a row that is not selected, and "On" or "Off" at the right. */
-.ts-list .tr-row.ts-red {
+/* The rows "Red letters" and "Dark mode" of the text list: the weight of a row that is not selected, and "On" or
+   "Off" at the right. docs/DESIGN.md section 18.3. */
+.ts-list .tr-row.ts-red,
+.ts-list .tr-row.ts-dark {
   font-weight: 500;
 }
 

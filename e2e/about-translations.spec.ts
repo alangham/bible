@@ -150,32 +150,38 @@ for (const vp of VIEWPORTS) {
 
 // The rows of the text list and of the "Menu" panel have the same size as before Task 33. The values were measured
 // before the change, on the built site of Task 32. docs/TASKS.md Task 33 step 4.
-test('at 1440 by 900 px, the rows of the text list have the size of before Task 33', async ({ page }) => {
+// Task 45 added the row "Dark mode" below "Red letters": in the text list after a thin line, in the "Menu" panel with
+// no line. The rows above it keep their boxes. The new row has the size of the row "Red letters", and the rows below
+// it in the "Menu" panel move down by the 48 px of the new row. docs/TASKS.md Task 45 step 7.
+test('at 1440 by 900 px, the rows of the text list have the size of before Task 33, and the row "Dark mode" the size of "Red letters"', async ({ page }) => {
   await openChapter(page, WIDE, 'john', 3)
   await page.getByRole('button', { name: 'Text settings' }).click()
   await expect(page.locator('#text-list')).toBeVisible()
   expect(await boxes(page.locator('#text-list, #text-list .tr-row, #text-list .ts-rule'))).toEqual([
-    ['tr-list ts-list', 0, 0, 220, 201],
+    ['tr-list ts-list', 0, 0, 220, 258],
     ['tr-row', 6, 6, 208, 44],
     ['tr-row', 6, 50, 208, 44],
     ['tr-row', 6, 94, 208, 44],
     ['menu-rule ts-rule', 14, 144, 192, 1],
     ['tr-row ts-red', 6, 151, 208, 44],
+    ['menu-rule ts-rule', 14, 201, 192, 1],
+    ['tr-row ts-dark', 6, 208, 208, 44],
   ])
 })
 
-test('at 390 by 844 px, the rows of the "Menu" panel have the size of before Task 33', async ({ page }) => {
+test('at 390 by 844 px, the rows of the "Menu" panel have the size of before Task 33, with the row "Dark mode" below "Red letters"', async ({ page }) => {
   await openChapter(page, NARROW, 'john', 3)
   await page.getByRole('button', { name: 'Menu', exact: true }).click()
   await expect(page.locator('#menu-panel')).toBeVisible()
   expect(await boxes(page.locator('#menu-panel, #menu-panel .menu-row, #menu-panel .menu-size, #menu-panel .menu-rule'))).toEqual([
-    ['menu-panel', 0, 0, 390, 324],
+    ['menu-panel', 0, 0, 390, 372],
     ['menu-row', 16, 8, 358, 48],
     ['menu-size', 16, 56, 358, 48],
     ['menu-row', 16, 104, 358, 48],
-    ['menu-rule', 16, 158, 358, 1],
-    ['menu-row', 16, 165, 358, 48],
+    ['menu-row', 16, 152, 358, 48],
+    ['menu-rule', 16, 206, 358, 1],
     ['menu-row', 16, 213, 358, 48],
     ['menu-row', 16, 261, 358, 48],
+    ['menu-row', 16, 309, 358, 48],
   ])
 })

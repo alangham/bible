@@ -62,9 +62,31 @@ export function groupVar(group: Group): string {
   return `var(${groupProperty(group)})`
 }
 
-/** The CSS rule that gives each group color its name on the root element. src/main.tsx adds it before the first render. */
+/**
+ * The dark group colors: the second list, from the table of docs/DESIGN.md section 18.11, with the values as written
+ * there. docs/TASKS.md Task 45 step 2. Each one has a contrast of 4.5 to 1 or more against the dark page, section 18.5.
+ */
+export const DARK_GROUP_COLORS: Readonly<Record<GroupName, string>> = {
+  Law: '#F26A90',
+  History: '#F3585D',
+  'Poetry & Wisdom': '#EB7443',
+  'Major Prophets': '#CD9C34',
+  'Minor Prophets': '#86A645',
+  Gospels: '#49A8B3',
+  'History (Acts)': '#9C9793',
+  'Letters of Paul': '#8DB3EA',
+  'General Letters': '#C0A1E4',
+  Prophecy: '#BB7DAD',
+}
+
+/**
+ * The CSS rules that give each group color its name on the root element: the light value, and the dark value for
+ * the attribute data-mode="dark" of src/index.css. src/main.tsx adds them before the first render.
+ */
 export function groupColorsCss(): string {
-  return `:root {\n${GROUPS.map((g) => `  ${groupProperty(g)}: ${g.color};`).join('\n')}\n}\n`
+  const rule = (selector: string, color: (g: Group) => string) =>
+    `${selector} {\n${GROUPS.map((g) => `  ${groupProperty(g)}: ${color(g)};`).join('\n')}\n}\n`
+  return rule(':root', (g) => g.color) + rule(":root[data-mode='dark']", (g) => DARK_GROUP_COLORS[g.name])
 }
 
 export function groupOf(book: Book): Group {

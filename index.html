@@ -13,19 +13,27 @@
     <meta name="theme-color" content="#ffffff" data-light="#ffffff" data-dark="#1C1C1E" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bible Wall</title>
-    <!-- The dark mode, before the first paint: docs/DESIGN.md section 18.3, docs/TASKS.md Task 45 step 6. With the value
-         "on" for the key bible-dark-mode, the root element gets data-mode="dark", and the line theme-color the dark page
-         color. With no value, the mode is light. src/data/darkMode.ts reads the same key. -->
+    <!-- The dark mode, before the first paint: docs/DESIGN.md section 18.3, docs/TASKS.md Task 45 step 6 and Task 46.
+         With no value for the key bible-dark-mode, the mode of the device. With the value "on", dark. With a different
+         value, such as "off", light. In the dark mode, the root element gets data-mode="dark", and the line theme-color
+         the dark page color. src/data/darkMode.ts has the same rule. -->
     <script>
-      try {
-        if (localStorage.getItem('bible-dark-mode') === 'on') {
+      ;(function () {
+        var stored = null
+        try {
+          stored = localStorage.getItem('bible-dark-mode')
+        } catch (e) {
+          // A storage that fails is a storage with no value: the mode of the device.
+        }
+        // A browser with no matchMedia is a light device, as in src/data/darkMode.ts.
+        var deviceDark = typeof matchMedia === 'function' && matchMedia('(prefers-color-scheme: dark)').matches
+        var dark = stored === null ? deviceDark : stored === 'on'
+        if (dark) {
           document.documentElement.setAttribute('data-mode', 'dark')
           var themeColor = document.querySelector('meta[name="theme-color"]')
           themeColor.content = themeColor.dataset.dark
         }
-      } catch (e) {
-        // A storage that fails gives the light mode.
-      }
+      })()
     </script>
   </head>
   <body>

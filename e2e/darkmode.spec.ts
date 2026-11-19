@@ -140,7 +140,7 @@ const VIEWS: { name: string; open: (page: Page) => Promise<void> }[] = [
 
 for (const vp of VIEWPORTS) {
   test.describe(`dark mode, ${vp.name}`, () => {
-    test('the first visit: the switch is "Off", the root element has no dark attribute, and theme-color is #ffffff', async ({ page }) => {
+    test('the first visit on a light device: the switch is "Off", the root element has no dark attribute, and theme-color is #ffffff', async ({ page }) => {
       await openChapter(page, vp.size, 'john', 3)
       expect(await page.evaluate((k) => localStorage.getItem(k), KEY)).toBeNull()
       expect(await modeAttribute(page)).toBeNull()

@@ -1626,7 +1626,7 @@ WARNING: The map has an SVG mask that stops the coast, river, and lake lines at 
 
 1. Task 44: each color of the site gets one name in one place, and a report gives the list. It changes nothing on the site. Done.
 2. Task 45: the dark mode on each page, and the switch. In this task, the first state of the switch is "Off", and the site does not follow the device.
-3. A last task: the first visit follows the device. Only after Arthur approves the dark pages on the built site.
+3. Task 46: the first visit follows the device. Arthur approved the dark pages on 2026-11-18. Section 18.13.
 
 The first plan had two tasks in place of Task 45: the wall and the reading page, and then the map and the Reference section. After Task 44, each color is a name, so one rule makes each page dark. Two tasks would need more work, to keep some pages light for a time.
 
@@ -1749,3 +1749,24 @@ One rule answers most of them: the light mode stays as built. So no name is remo
 9. The two shadows of the translation list: two names stay.
 10. The line `theme-color` of `index.html`: the task that builds the dark mode sets it to the page color of the mode.
 11. The icon of the site: no change.
+
+### 18.13 Task 45 as built, checked on 2026-11-18
+
+Claude Code completed Task 45 in commit `53f90f4`, and corrected a test of the timeline in commit `1872590`. The designer ran the build in a browser at 1440 by 900 px and at 390 by 844 px.
+
+1. Each of the 45 dark values in `src/index.css` and each of the ten dark group colors in `src/data/books.ts` is the value of section 18.11.
+2. With the switch "Off": 14 pairs of pages of the builds of Task 44 and of Task 45 have 0 different pixels. The views: the wall, Matthew 5, the map of Acts, the timeline, the Quotations page, the Sources page, and Hebrews 9.
+3. With the switch "On": the same 14 views of the build have 0 different pixels against the sketch of the designer with the values of section 18.11.
+4. The switch is below "Red letters" in the text list and in the menu panel. A click changes the page at once, sets the attribute `data-mode="dark"` on the root element, stores the value "on" for the key `bible-dark-mode`, and sets the line `theme-color` to `#1C1C1E`.
+5. With the value "on" stored and the JavaScript file stopped, the root element is dark. So a reader with the dark mode sees no white page at the load.
+6. The first visit is light. The build does not read the setting of the device.
+
+Arthur approved the dark pages on 2026-11-18. He kept these points as built:
+
+- The attribute `data-mode="dark"`, and the stored values "on" and "off".
+- The two values of the line `theme-color` are in `index.html`, in `data-light` and `data-dark`.
+- Three older tests changed for the new row, and the test of the timeline at 900 px now waits for the 66 names.
+
+A known limit: `public/manifest.webmanifest` has `#ffffff` for `theme_color` and `background_color`. A browser uses them when a reader adds the site to the home screen. A manifest has one value, not one for each mode. No change.
+
+From the reports of Claude Code, not checked by the designer: 261 unit tests and 459 browser tests pass. The axe check of the 13 dark views has 0 failures. Claude Code looked at 16 parts that the 13 views do not show, and each one is correct. It did not see the hover of the map switch, the hover of the link dot in the narrow layout, and each focus outline on the map page and on the Sources page.

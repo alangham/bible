@@ -3185,3 +3185,65 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Commit the pictures of the designer in `docs/screenshots/dark-design/`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, with this task.
+
+---
+
+## Task 46. Dark mode: the first visit follows the device
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader who did not use the switch "Dark mode" gets the mode of the device. A reader who used the switch keeps the selection.
+
+Arthur approved the dark pages of Task 45 on 2026-11-18. This is the last task of the dark mode. Read sections 18.3 and 18.13 of `docs/DESIGN.md` first.
+
+This task shows on the site: on a device with a dark setting, the first visit is dark. On a device with a light setting, nothing changes.
+
+The rule, with the key `bible-dark-mode` in the storage of the browser:
+
+| Stored value | Device | Mode | The switch shows |
+|---|---|---|---|
+| none | light | light | Off |
+| none | dark | dark | On |
+| "on" | light or dark | dark | On |
+| "off" | light or dark | light | Off |
+
+WARNING: Do not change a color, a dark value, or a light value. Section 18.11 of `docs/DESIGN.md` is the only source of a dark value.
+
+WARNING: Do not change the look or the place of the switch. Do not add a third state or a row "Automatic". Arthur selected one switch on 2026-11-18, with this cost: after a reader uses the switch, the site does not follow the device.
+
+WARNING: The site stores a value only when the reader uses the switch. A visit on a dark device stores nothing.
+
+WARNING: Do not change `public/manifest.webmanifest`. Section 18.13 has the reason.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make the 26 light screenshots of step 1 of Task 44 again, in a folder outside the repository, with a light device. Make the 26 dark screenshots also, with the stored value "on".
+2. Change the script in `index.html` and `src/data/darkMode.ts` to the rule of the table. The device is the media feature `prefers-color-scheme`. The mode is still set before the first paint.
+3. With no stored value, the page follows a change of the device while it is open: the colors, the state of the switch, and the line `theme-color` change with no new load. With a stored value, a change of the device changes nothing.
+4. A click on the switch stores the reverse of the mode that shows. Example: on a dark device with no stored value, the switch shows "On", and a click stores "off".
+5. Add a unit test that ties the value `data-light` of the line `theme-color` in `index.html` to the light value of `--page`, as the test for `data-dark` does.
+6. Make sure that each test that is there runs with a light device, so that no test changes its result on a computer with a dark setting. Set this in the configuration of Playwright, not in each test.
+7. End-to-end tests, at 1440 by 900 px and at 390 by 844 px, with the device setting that Playwright gives to the browser:
+   - The four cases of the table: the background of the page, the state of the switch, and the line `theme-color`.
+   - A dark device and no stored value: after the load, the storage still has no value for the key.
+   - A dark device and no stored value, with the request for the JavaScript file stopped: the background of the root element is `rgb(28, 28, 30)`.
+   - No stored value, and the device changes from light to dark while the page is open: the page changes to dark, and the switch shows "On". The device changes to light again: the page changes to light.
+   - The stored value "off", and the device changes to dark while the page is open: the page stays light.
+   - A dark device and no stored value: a click on the switch gives the light mode and stores "off". After a new load, the page is light.
+   - The mode of a dark device with no stored value applies on the wall, on the map of Acts, on the timeline, on the Quotations page, and on the Sources page.
+   - The axe check of the wall and of Matthew 5 on a dark device with no stored value.
+8. Make the 52 screenshots of step 1 again. Compare each pair. Each of the 52 pairs must have 0 different pixels. If a pair differs, find the cause and correct it.
+9. Make screenshots in `docs/screenshots/task-46/`, on a dark device with no stored value, at 1440 by 900 px and at 390 by 844 px: the wall, and Matthew 5 with the text list or the menu panel open.
+10. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The tests of steps 5 and 7 pass.
+- Each of the 52 pairs of step 8 has 0 different pixels.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

@@ -5,6 +5,9 @@ export default defineConfig({
   use: {
     // The site is served under the Vite base path /bible/.
     baseURL: 'http://localhost:4173/bible/',
+    // A light device for each test, on each computer: with no stored value, the site follows the device,
+    // docs/TASKS.md Task 46 step 6. A test of a dark device sets colorScheme itself.
+    colorScheme: 'light',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: {

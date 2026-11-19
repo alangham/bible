@@ -1,6 +1,7 @@
-// The dark mode. docs/TASKS.md Task 45 steps 4 and 5, docs/DESIGN.md sections 18.3, 18.5, and 18.11.
+// The dark mode. docs/TASKS.md Task 45 steps 4 and 5, and Task 46 step 5. docs/DESIGN.md sections 18.3, 18.5, and 18.11.
 // The values: the dark values in the code are those of the table of section 18.11, each text color has its contrast,
-// and the light values are those of commit b889e82, Task 44. The switch: the key bible-dark-mode in the storage.
+// and the light values are those of commit b889e82, Task 44. The switch: the key bible-dark-mode in the storage, and
+// the device, by the table of Task 46, in src/data/darkMode.ts and in the script of index.html.
 
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
@@ -80,13 +81,27 @@ describe('the dark values', () => {
 
   it('give the line theme-color in index.html the page color of each mode, and a script before the module', () => {
     expect(html).toMatch(/<meta name="theme-color" content="#ffffff" data-light="#ffffff" data-dark="#1C1C1E" \/>/)
-    expect(darkOf.get('--page')).toBe('#1C1C1E')
-    const script = html.indexOf("localStorage.getItem('bible-dark-mode') === 'on'")
+    const meta = html.match(/<meta name="theme-color" content="([^"]+)" data-light="([^"]+)" data-dark="([^"]+)" \/>/)!
+    // Task 46 step 5: data-light is the light value of --page, and data-dark is its dark value. The content at the
+    // load is the light value. The light value is written #fff in src/index.css.
+    expect(sameColor(meta[2], lightOf.get('--page')!)).toBe(true)
+    expect(sameColor(meta[1], lightOf.get('--page')!)).toBe(true)
+    expect(meta[3]).toBe(darkOf.get('--page'))
+    const script = html.indexOf("localStorage.getItem('bible-dark-mode')")
     expect(script).toBeGreaterThan(html.indexOf('name="theme-color"'))
     expect(script).toBeLessThan(html.indexOf('<script type="module"'))
-    expect(html).not.toMatch(/prefers-color-scheme/)
+    expect(html.indexOf("matchMedia('(prefers-color-scheme: dark)')")).toBeGreaterThan(script)
+    expect(html.indexOf("matchMedia('(prefers-color-scheme: dark)')")).toBeLessThan(html.indexOf('<script type="module"'))
+    // The CSS selects the mode only by the attribute. The device is read in index.html and in src/data/darkMode.ts.
+    expect(css).not.toMatch(/prefers-color-scheme/)
   })
 })
+
+/** Two hex colors are the same color: #fff and #FFFFFF are the same. */
+function sameColor(a: string, b: string): boolean {
+  const long = (c: string) => (c.length === 4 ? `#${[...c.slice(1)].map((x) => x + x).join('')}` : c).toLowerCase()
+  return long(a) === long(b)
+}
 
 /** A storage in memory, as the browser gives it. */
 function memoryStorage(start: Record<string, string> = {}) {
@@ -97,6 +112,14 @@ function memoryStorage(start: Record<string, string> = {}) {
     removeItem: (k: string) => void data.delete(k),
     data,
   }
+}
+
+/** A storage that fails, as in a browser that blocks it. */
+function failingStorage() {
+  const fail = () => {
+    throw new Error('blocked')
+  }
+  return { getItem: fail, setItem: fail, removeItem: fail }
 }
 
 /** The root element and the line theme-color, as the page gives them. */
@@ -114,37 +137,124 @@ function fakeDocument() {
   }
 }
 
-/** The module reads the storage when it loads, so each test loads it again. */
-async function load() {
+type Change = (e: { matches: boolean }) => void
+
+/** The device: the media feature prefers-color-scheme, with a change while the page is open. */
+function fakeDevice(dark: boolean) {
+  const changes = new Set<Change>()
+  const query = {
+    matches: dark,
+    addEventListener: (_: string, fn: Change) => void changes.add(fn),
+    removeEventListener: (_: string, fn: Change) => void changes.delete(fn),
+  }
+  const queries: string[] = []
+  return {
+    matchMedia: (q: string) => {
+      queries.push(q)
+      return query
+    },
+    change(to: boolean) {
+      query.matches = to
+      for (const fn of changes) fn({ matches: to })
+    },
+    queries,
+  }
+}
+
+/** The module reads the storage and the device when it loads, so each test loads it again. */
+async function load(storage: object, device: ReturnType<typeof fakeDevice>) {
+  const doc = fakeDocument()
+  vi.stubGlobal('localStorage', storage)
+  vi.stubGlobal('matchMedia', device.matchMedia)
+  vi.stubGlobal('document', doc)
   vi.resetModules()
-  return import('./darkMode.ts')
+  return { d: await import('./darkMode.ts'), doc }
+}
+
+/** The script of index.html, run on a fake page: the mode before the first paint. */
+function runScript(storage: object, device: ReturnType<typeof fakeDevice>) {
+  const code = html.match(/<script>([\s\S]*?)<\/script>/)![1]
+  const doc = fakeDocument()
+  new Function('localStorage', 'matchMedia', 'document', code)(storage, device.matchMedia, doc)
+  return doc
 }
 
 afterEach(() => {
   vi.unstubAllGlobals()
 })
 
+// The table of docs/TASKS.md Task 46: the stored value, the device, and the mode.
+const table: [Record<string, string>, boolean, boolean][] = [
+  [{}, false, false],
+  [{}, true, true],
+  [{ 'bible-dark-mode': 'on' }, false, true],
+  [{ 'bible-dark-mode': 'on' }, true, true],
+  [{ 'bible-dark-mode': 'off' }, false, false],
+  [{ 'bible-dark-mode': 'off' }, true, false],
+]
+
 describe('dark mode switch', () => {
-  it('is off at the first visit, with no value for the key', async () => {
-    vi.stubGlobal('localStorage', memoryStorage())
-    const d = await load()
+  it('has the key bible-dark-mode, and reads the media feature of the device', async () => {
+    const device = fakeDevice(false)
+    const { d } = await load(memoryStorage(), device)
     expect(d.DARK_MODE_KEY).toBe('bible-dark-mode')
-    expect(d.getDarkMode()).toBe(false)
+    expect(device.queries).toContain('(prefers-color-scheme: dark)')
   })
 
-  it('is on with the value "on", and off with the value "off"', async () => {
-    vi.stubGlobal('localStorage', memoryStorage({ 'bible-dark-mode': 'on' }))
-    expect((await load()).getDarkMode()).toBe(true)
-    vi.stubGlobal('localStorage', memoryStorage({ 'bible-dark-mode': 'off' }))
-    expect((await load()).getDarkMode()).toBe(false)
+  for (const [stored, deviceDark, mode] of table) {
+    const name = `${stored['bible-dark-mode'] ?? 'no value'}, ${deviceDark ? 'dark' : 'light'} device`
+
+    it(`gives the mode of the table: ${name}`, async () => {
+      expect((await load(memoryStorage(stored), fakeDevice(deviceDark))).d.getDarkMode()).toBe(mode)
+    })
+
+    it(`the script of index.html gives the same mode before the first paint: ${name}`, () => {
+      const doc = runScript(memoryStorage(stored), fakeDevice(deviceDark))
+      expect(doc.attributes.get('data-mode')).toBe(mode ? 'dark' : undefined)
+      expect(doc.meta.content).toBe(mode ? '#1C1C1E' : '#ffffff')
+    })
+  }
+
+  it('with no matchMedia in the browser, the script and the module give a light device', async () => {
+    const code = html.match(/<script>([\s\S]*?)<\/script>/)![1]
+    const doc = fakeDocument()
+    new Function('localStorage', 'matchMedia', 'document', code)(memoryStorage(), undefined, doc)
+    expect(doc.attributes.has('data-mode')).toBe(false)
+    vi.stubGlobal('localStorage', memoryStorage())
+    vi.stubGlobal('matchMedia', undefined)
+    vi.resetModules()
+    const d = await import('./darkMode.ts')
+    expect(d.getDarkMode()).toBe(false)
+    expect(d.followDevice()).toBeTypeOf('function')
+  })
+
+  it('stores no value at a visit on a dark device', async () => {
+    const storage = memoryStorage()
+    const device = fakeDevice(true)
+    runScript(storage, device)
+    const { d } = await load(storage, device)
+    d.followDevice()
+    expect(d.getDarkMode()).toBe(true)
+    expect(storage.data.size).toBe(0)
+  })
+
+  it('with a storage that fails, follows the device, and a change of the switch still holds for the page', async () => {
+    const device = fakeDevice(true)
+    expect(runScript(failingStorage(), device).attributes.get('data-mode')).toBe('dark')
+    const { d } = await load(failingStorage(), device)
+    expect(d.getDarkMode()).toBe(true)
+    d.followDevice()
+    d.setDarkMode(false)
+    expect(d.getDarkMode()).toBe(false)
+    // The selection of the reader holds: a change of the device changes nothing.
+    device.change(false)
+    device.change(true)
+    expect(d.getDarkMode()).toBe(false)
   })
 
   it('keeps the selection, and sets the attribute and the line theme-color at once', async () => {
     const storage = memoryStorage()
-    const doc = fakeDocument()
-    vi.stubGlobal('localStorage', storage)
-    vi.stubGlobal('document', doc)
-    const d = await load()
+    const { d, doc } = await load(storage, fakeDevice(false))
     d.setDarkMode(true)
     expect(storage.data.get('bible-dark-mode')).toBe('on')
     expect(doc.attributes.get('data-mode')).toBe('dark')
@@ -155,15 +265,55 @@ describe('dark mode switch', () => {
     expect(doc.meta.content).toBe('#ffffff')
   })
 
-  it('is off when the storage fails, and a change still holds for the page', async () => {
-    const fail = () => {
-      throw new Error('blocked')
-    }
-    vi.stubGlobal('localStorage', { getItem: fail, setItem: fail })
-    vi.stubGlobal('document', fakeDocument())
-    const d = await load()
+  it('on a dark device with no value, a click stores "off", the reverse of the mode that shows', async () => {
+    const storage = memoryStorage()
+    const { d, doc } = await load(storage, fakeDevice(true))
+    expect(d.getDarkMode()).toBe(true)
+    // The switch calls setDarkMode with the reverse of the mode that shows, as src/reading/ReadingPage.tsx does.
+    d.setDarkMode(!d.getDarkMode())
+    expect(storage.data.get('bible-dark-mode')).toBe('off')
     expect(d.getDarkMode()).toBe(false)
+    expect(doc.attributes.has('data-mode')).toBe(false)
+  })
+
+  it('with no value, follows a change of the device: the mode, the attribute, and the line theme-color', async () => {
+    const storage = memoryStorage()
+    const device = fakeDevice(false)
+    const { d, doc } = await load(storage, device)
+    d.followDevice()
+    device.change(true)
+    expect(d.getDarkMode()).toBe(true)
+    expect(doc.attributes.get('data-mode')).toBe('dark')
+    expect(doc.meta.content).toBe('#1C1C1E')
+    device.change(false)
+    expect(d.getDarkMode()).toBe(false)
+    expect(doc.attributes.has('data-mode')).toBe(false)
+    expect(doc.meta.content).toBe('#ffffff')
+    expect(storage.data.size).toBe(0)
+  })
+
+  for (const value of ['on', 'off']) {
+    it(`with the value "${value}", a change of the device changes nothing`, async () => {
+      const startDark = value === 'off'
+      const device = fakeDevice(startDark)
+      const { d, doc } = await load(memoryStorage({ 'bible-dark-mode': value }), device)
+      d.followDevice()
+      device.change(!startDark)
+      device.change(startDark)
+      device.change(!startDark)
+      expect(d.getDarkMode()).toBe(value === 'on')
+      expect(doc.attributes.size).toBe(0)
+      expect(doc.meta.content).toBe('#ffffff')
+    })
+  }
+
+  it('with no value, stops following the device after a click', async () => {
+    const device = fakeDevice(false)
+    const { d } = await load(memoryStorage(), device)
+    d.followDevice()
     d.setDarkMode(true)
+    device.change(true)
+    device.change(false)
     expect(d.getDarkMode()).toBe(true)
   })
 })

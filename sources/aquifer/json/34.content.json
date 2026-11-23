@@ -1,0 +1,1690 @@
+[
+{
+"content_id": "22388",
+"reference_id": 21556,
+"version": "1.0.4",
+"title": "Nahum 1:1",
+"media_type": "Text",
+"index_reference": "34001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>burden … vision</em>: This opening, like those in other prophetic books (compare <data class=\"bible-ref\" data-start-ref=\"31001001\" data-end-ref=\"31001001\">Obadiah 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"35001001\" data-end-ref=\"35001001\">Habakkuk 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"39001001\" data-end-ref=\"39001001\">Malachi 1:1</data>), identifies Nahum as a prophet who delivered messages from God. </p></li><li><p>Nineveh became the capital of the Assyrian Empire shortly after 705 BC and stayed so until its destruction in 612 BC. </p></li><li><p>The name <em>Nahum</em> means “comfort” or “encouragement.” A key theme of his prophecy is that God will encourage his people through Nineveh’s downfall (<data class=\"bible-ref\" data-start-ref=\"34001012\" data-end-ref=\"34001015\">Nahum 1:12–15</data>; see <data class=\"bible-ref\" data-start-ref=\"23040001\" data-end-ref=\"23040001\">Isaiah 40:1</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001001",
+"start_ref_usfm": "NAM 1:1",
+"end_ref": "34001001",
+"end_ref_usfm": "NAM 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Elkosh",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Elkosh"
+},
+{
+"id": "person:Nahum.2",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Nahum"
+},
+{
+"id": "place:Nineveh",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Nineveh"
+},
+{
+"id": "keyterm:Utterance",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Utterance"
+},
+{
+"id": "realia:Scroll",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Scroll"
+}
+]
+}
+},
+{
+"content_id": "22391",
+"reference_id": 21559,
+"version": "1.0.4",
+"title": "Nahum 1:2",
+"media_type": "Text",
+"index_reference": "34001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>jealous</em> (or <em>zealous</em>): God jealously protects the well-being of his people and strongly desires their faithfulness (see <data class=\"bible-ref\" data-start-ref=\"02020004\" data-end-ref=\"02020005\">Exodus 20:4–5</data>; <data class=\"bible-ref\" data-start-ref=\"05004023\" data-end-ref=\"05004024\">Deuteronomy 4:23–24</data>; <data class=\"bible-ref\" data-start-ref=\"05006004\" data-end-ref=\"05006004\">6:4</data>; <data class=\"bible-ref\" data-start-ref=\"24002001\" data-end-ref=\"24003005\">Jeremiah 2:1–3:5</data>). </p></li><li><p>God’s vengeance and anger are different from how people seek revenge or try to harm others in return. God’s actions come from his: </p><ul><li><p>holiness (<data class=\"bible-ref\" data-start-ref=\"24050028\" data-end-ref=\"24050029\">Jeremiah 50:28–29</data>),</p></li><li><p>justice (<data class=\"bible-ref\" data-start-ref=\"23063001\" data-end-ref=\"23063009\">Isaiah 63:1–9</data>), and</p></li><li><p>faithfulness to the covenant with his people (<data class=\"bible-ref\" data-start-ref=\"03026023\" data-end-ref=\"03026025\">Leviticus 26:23–25</data>; <data class=\"bible-ref\" data-start-ref=\"23001024\" data-end-ref=\"23001026\">Isaiah 1:24–26</data>).</p></li></ul><p>His vengeance is never random or without purpose.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001002",
+"start_ref_usfm": "NAM 1:2",
+"end_ref": "34001002",
+"end_ref_usfm": "NAM 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Zealous.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Zealous"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22390",
+"reference_id": 21558,
+"version": "1.0.4",
+"title": "Nahum 1:2–6",
+"media_type": "Text",
+"index_reference": "34001002-34001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The hymn&apos;s first stanza uses biblical texts about Israel&apos;s exodus from Egypt. It teaches that everything in creation is under God&apos;s power. God will punish those who oppose him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001002",
+"start_ref_usfm": "NAM 1:2",
+"end_ref": "34001006",
+"end_ref_usfm": "NAM 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "The Way"
+},
+{
+"id": "keyterm:Zealous.3",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Zealous"
+},
+{
+"id": "keyterm:PronounceInnocent",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Pronounce Innocent"
+},
+{
+"id": "place:Carmel",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Carmel"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+}
+]
+}
+},
+{
+"content_id": "22389",
+"reference_id": 21557,
+"version": "1.0.4",
+"title": "Nahum 1:2–11",
+"media_type": "Text",
+"index_reference": "34001002-34001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This short hymn (a song of praise about God) has two stanzas (<data class=\"bible-ref\" data-start-ref=\"34001002\" data-end-ref=\"34001006\">1:2–6</data>, <data class=\"bible-ref\" data-start-ref=\"34001007\" data-end-ref=\"34001011\">7–11</data>). It speaks about God’s supreme power and authority.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001002",
+"start_ref_usfm": "NAM 1:2",
+"end_ref": "34001011",
+"end_ref_usfm": "NAM 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.575,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+},
+{
+"id": "keyterm:Wickedness",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Wickedness"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "The Way"
+},
+{
+"id": "keyterm:Zealous.3",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Zealous"
+},
+{
+"id": "keyterm:PronounceInnocent",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Pronounce Innocent"
+},
+{
+"id": "place:Carmel",
+"type": "place",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Carmel"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "realia:StrongDrink",
+"type": "realia",
+"confidence": 0.135,
+"match_method": "canonical",
+"preferred_label": "Strong Drink"
+},
+{
+"id": "realia:Fortress",
+"type": "realia",
+"confidence": 0.135,
+"match_method": "canonical",
+"preferred_label": "Fortress"
+},
+{
+"id": "flora:Brier",
+"type": "flora",
+"confidence": 0.135,
+"match_method": "canonical",
+"preferred_label": "Brier"
+}
+]
+}
+},
+{
+"content_id": "22392",
+"reference_id": 21560,
+"version": "1.0.4",
+"title": "Nahum 1:3",
+"media_type": "Text",
+"index_reference": "34001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>slow to anger</em>: God&apos;s patience with disobedience is linked to his faithful love (<data class=\"bible-ref\" data-start-ref=\"02034006\" data-end-ref=\"02034006\">Exodus 34:6</data>; <data class=\"bible-ref\" data-start-ref=\"04014018\" data-end-ref=\"04014018\">Numbers 14:18</data>; <data class=\"bible-ref\" data-start-ref=\"19103008\" data-end-ref=\"19103008\">Psalm 103:8</data>; <data class=\"bible-ref\" data-start-ref=\"29002013\" data-end-ref=\"29002013\">Joel 2:13</data>). This trait disappointed Jonah, who wanted Nineveh destroyed immediately (<data class=\"bible-ref\" data-start-ref=\"32004002\" data-end-ref=\"32004002\">Jonah 4:2</data>). Because God is patient, he sometimes delays the deserved punishment of sinners (<data class=\"bible-ref\" data-start-ref=\"16009029\" data-end-ref=\"16009030\">Nehemiah 9:29–30</data>; <data class=\"bible-ref\" data-start-ref=\"45002004\" data-end-ref=\"45002004\">Romans 2:4</data>; <data class=\"bible-ref\" data-start-ref=\"61003009\" data-end-ref=\"61003009\">2 Peter 3:9</data>), but those who continue to sin will ultimately face God&apos;s judgment (<data class=\"bible-ref\" data-start-ref=\"02034007\" data-end-ref=\"02034007\">Exodus 34:7</data>; <data class=\"bible-ref\" data-start-ref=\"45014010\" data-end-ref=\"45014010\">Romans 14:10</data>; <data class=\"bible-ref\" data-start-ref=\"47005010\" data-end-ref=\"47005010\">2 Corinthians 5:10</data>; <data class=\"bible-ref\" data-start-ref=\"66014006\" data-end-ref=\"66014007\">Revelation 14:6–7</data>). </p></li><li><p><em>the whirlwind and storm</em>: This imagery describes the fury of God&apos;s judgment against the wicked (see also <data class=\"bible-ref\" data-start-ref=\"23029006\" data-end-ref=\"23029006\">Isaiah 29:6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001003",
+"start_ref_usfm": "NAM 1:3",
+"end_ref": "34001003",
+"end_ref_usfm": "NAM 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:PronounceInnocent",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pronounce Innocent"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "The Way"
+}
+]
+}
+},
+{
+"content_id": "22393",
+"reference_id": 21561,
+"version": "1.0.4",
+"title": "Nahum 1:4",
+"media_type": "Text",
+"index_reference": "34001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Like clouds (<data class=\"bible-ref\" data-start-ref=\"34001003\" data-end-ref=\"34001003\">Nahum 1:3</data>) and mountains (<data class=\"bible-ref\" data-start-ref=\"34001005\" data-end-ref=\"34001005\">1:5</data>), oceans and rivers are under God&apos;s control. The Old Testament prophets often recall God&apos;s actions against the seas and rivers during the exodus (<data class=\"bible-ref\" data-start-ref=\"02015008\" data-end-ref=\"02015010\">Exodus 15:8–10</data>; <data class=\"bible-ref\" data-start-ref=\"10022016\" data-end-ref=\"10022016\">2&nbsp;Samuel 22:16</data>; <data class=\"bible-ref\" data-start-ref=\"19066006\" data-end-ref=\"19066006\">Psalms 66:6</data>; <data class=\"bible-ref\" data-start-ref=\"19077016\" data-end-ref=\"19077016\">77:16</data>; <data class=\"bible-ref\" data-start-ref=\"35003015\" data-end-ref=\"35003015\">Habakkuk 3:15</data>). God&apos;s power over the waters challenged the myths of the ancient Canaanites, who believed the sea-god Yam controlled the oceans and rivers. </p></li><li><p>Bashan, east of the Sea of Galilee, was known for its rich grasslands, ideal for raising cattle (compare <data class=\"bible-ref\" data-start-ref=\"33007014\" data-end-ref=\"33007014\">Micah 7:14</data>). </p></li><li><p>Carmel, a mountain region on the Mediterranean coast in central Canaan, was well known for its beauty and rich farmland (<data class=\"bible-ref\" data-start-ref=\"22007005\" data-end-ref=\"22007005\">Song of Solomon 7:5</data>; <data class=\"bible-ref\" data-start-ref=\"24050019\" data-end-ref=\"24050019\">Jeremiah 50:19</data>). </p></li><li><p>Lebanon was famous for its great cedars (<data class=\"bible-ref\" data-start-ref=\"11005006\" data-end-ref=\"11005018\">1&nbsp;Kings 5:6–18</data>). Nahum lists these areas to show that even the most fertile and productive places on earth cannot withstand God&apos;s judgment.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001004",
+"start_ref_usfm": "NAM 1:4",
+"end_ref": "34001004",
+"end_ref_usfm": "NAM 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+},
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "place:Carmel",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Carmel"
+}
+]
+}
+},
+{
+"content_id": "22394",
+"reference_id": 21562,
+"version": "1.0.4",
+"title": "Nahum 1:5",
+"media_type": "Text",
+"index_reference": "34001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Poetry in the Old Testament often describes the earth shaking. This language remembers the time of the exodus, when God showed his power as he rescued Israel from Egypt (for example, <data class=\"bible-ref\" data-start-ref=\"19018007\" data-end-ref=\"19018007\">Psalm 18:7</data>; <data class=\"bible-ref\" data-start-ref=\"35003006\" data-end-ref=\"35003006\">Habakkuk 3:6</data>; see&nbsp;<data class=\"bible-ref\" data-start-ref=\"02019018\" data-end-ref=\"02019018\">Exodus 19:18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001005",
+"start_ref_usfm": "NAM 1:5",
+"end_ref": "34001005",
+"end_ref_usfm": "NAM 1:5"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22395",
+"reference_id": 21563,
+"version": "1.0.4",
+"title": "Nahum 1:6",
+"media_type": "Text",
+"index_reference": "34001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Hebrew word translated &quot;wrath&quot; appears again from <data class=\"bible-ref\" data-start-ref=\"34001002\" data-end-ref=\"34001002\">Nahum 1:2</data>. This repetition marks <data class=\"bible-ref\" data-start-ref=\"34001002\" data-end-ref=\"34001006\">Nahum 1:2–6</data> as one poetic section.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001006",
+"start_ref_usfm": "NAM 1:6",
+"end_ref": "34001006",
+"end_ref_usfm": "NAM 1:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22397",
+"reference_id": 21565,
+"version": "1.0.4",
+"title": "Nahum 1:7",
+"media_type": "Text",
+"index_reference": "34001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>The LORD is good</em>: God judges the wicked fairly. He also offers refuge to those who trust in him. He accepts and protects them during life&apos;s challenges (<data class=\"bible-ref\" data-start-ref=\"19018002\" data-end-ref=\"19018002\">Psalms 18:2</data>; <data class=\"bible-ref\" data-start-ref=\"19062005\" data-end-ref=\"19062007\">62:5–7</data>). God&apos;s abundant goodness can inspire people to repent (<data class=\"bible-ref\" data-start-ref=\"45002002\" data-end-ref=\"45002004\">Romans 2:2–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001007",
+"start_ref_usfm": "NAM 1:7",
+"end_ref": "34001007",
+"end_ref_usfm": "NAM 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "realia:Fortress",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Fortress"
+}
+]
+}
+},
+{
+"content_id": "22396",
+"reference_id": 21564,
+"version": "1.0.4",
+"title": "Nahum 1:7–11",
+"media_type": "Text",
+"index_reference": "34001007-34001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This second stanza (see <data class=\"resource-ref\" data-content-id=\"22389\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Nahum 1:2–11</data>) focuses on God’s rule, righteousness, and justice in the way he deals with all people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001007",
+"start_ref_usfm": "NAM 1:7",
+"end_ref": "34001011",
+"end_ref_usfm": "NAM 1:11"
+}
+],
+"resource": [
+{
+"reference_id": "21557",
+"content_id": "22389",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Nahum 1:2–11",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.52,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Wickedness",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Wickedness"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "realia:StrongDrink",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Strong Drink"
+},
+{
+"id": "realia:Fortress",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Fortress"
+},
+{
+"id": "flora:Brier",
+"type": "flora",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Brier"
+}
+]
+}
+},
+{
+"content_id": "22398",
+"reference_id": 21566,
+"version": "1.0.4",
+"title": "Nahum 1:8",
+"media_type": "Text",
+"index_reference": "34001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>overwhelming flood</em>: This is a metaphor for the strong nature of God&apos;s judgment (see <data class=\"bible-ref\" data-start-ref=\"34002006\" data-end-ref=\"34002006\">Nahum 2:6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001008",
+"start_ref_usfm": "NAM 1:8",
+"end_ref": "34001008",
+"end_ref_usfm": "NAM 1:8"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22399",
+"reference_id": 21567,
+"version": "1.0.4",
+"title": "Nahum 1:9",
+"media_type": "Text",
+"index_reference": "34001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Whatever you plot against the LORD</em>:</span> No human plan can succeed against God. Human plans are worthless if they do not align with God&apos;s plans (<data class=\"bible-ref\" data-start-ref=\"19002001\" data-end-ref=\"19002012\">Psalm 2</data>; <data class=\"bible-ref\" data-start-ref=\"23014026\" data-end-ref=\"23014027\">Isaiah 14:26–27</data>; <data class=\"bible-ref\" data-start-ref=\"23023009\" data-end-ref=\"23023009\">23:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001009",
+"start_ref_usfm": "NAM 1:9",
+"end_ref": "34001009",
+"end_ref_usfm": "NAM 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22384",
+"reference_id": 21552,
+"version": "1.0.4",
+"title": "Nahum 1:11",
+"media_type": "Text",
+"index_reference": "34001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The <span><em>counselor of wickedness</em></span> refers to the Assyrian king. God also addressed the arrogance of an Assyrian king during Hezekiah’s time (around 701&nbsp;BC; see <data class=\"bible-ref\" data-start-ref=\"12019035\" data-end-ref=\"12019036\">2&nbsp;Kings 19:35–36</data>). Assyria’s <span><em>counselor of wickedness</em></span> contrasts with the coming Messiah, the king who is a &quot;Wonderful Counselor&quot; (<data class=\"bible-ref\" data-start-ref=\"23009006\" data-end-ref=\"23009006\">Isaiah 9:6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001011",
+"start_ref_usfm": "NAM 1:11",
+"end_ref": "34001011",
+"end_ref_usfm": "NAM 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Wickedness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Wickedness"
+}
+]
+}
+},
+{
+"content_id": "22385",
+"reference_id": 21553,
+"version": "1.0.4",
+"title": "Nahum 1:12",
+"media_type": "Text",
+"index_reference": "34001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Assyrians&apos; allies were vassal or subordinate kingdoms, including Egypt, which was once powerful. Ironically, a group of former allies gradually brought down the great Neo-Assyrian Empire between 625 and 605 BC. </p></li><li><p>God had punished Judah earlier when the Assyrian king Sennacherib, who ruled from 704 to 681 BC, launched a campaign in 701 BC against the western states of the Near East. Although Sennacherib failed to capture Jerusalem (<data class=\"bible-ref\" data-start-ref=\"12019032\" data-end-ref=\"12019036\">2 Kings 19:32–36</data>), he claimed in his records that he took Jerusalem’s tribute and a large amount of spoils from 46 cities in Judah. </p><p>Even though Judah had become a vassal state and lived under the constant threat of Assyria, Assyria did not destroy the southern kingdom. Instead, Babylon defeated Judah in 586 BC. </p><p>Sadly, neither Israel nor Judah listened to God’s many warnings. They did not turn back to him, even though he warned that refusing to repent would bring judgment (<data class=\"bible-ref\" data-start-ref=\"28011005\" data-end-ref=\"28011005\">Hosea 11:5</data>; <data class=\"bible-ref\" data-start-ref=\"29002001\" data-end-ref=\"29002027\">Joel 2:1–27</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001012",
+"start_ref_usfm": "NAM 1:12",
+"end_ref": "34001012",
+"end_ref_usfm": "NAM 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22386",
+"reference_id": 21554,
+"version": "1.0.4",
+"title": "Nahum 1:14",
+"media_type": "Text",
+"index_reference": "34001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>no descendants</em>: Nineveh would be completely destroyed. Cutting off a person&apos;s name and leaving him without descendants meant total destruction (<data class=\"bible-ref\" data-start-ref=\"09024021\" data-end-ref=\"09024021\">1&nbsp;Samuel 24:21</data>; <data class=\"bible-ref\" data-start-ref=\"18018017\" data-end-ref=\"18018017\">Job 18:17</data>; <data class=\"bible-ref\" data-start-ref=\"23014022\" data-end-ref=\"23014022\">Isaiah 14:22</data>). </p></li><li><p>None of Assyria’s respected gods could save Nineveh from God&apos;s death sentence. </p></li><li><p>God was already preparing a grave for Nineveh and guiding Assyria’s enemies to destroy the city. Assyria’s proud cities fell one by one to the combined attacks of the Chaldeans, the Medes, and the Ummanmanda. Nineveh itself fell in 612&nbsp;BC.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001014",
+"start_ref_usfm": "NAM 1:14",
+"end_ref": "34001014",
+"end_ref_usfm": "NAM 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+}
+]
+}
+},
+{
+"content_id": "22387",
+"reference_id": 21555,
+"version": "1.0.4",
+"title": "Nahum 1:15",
+"media_type": "Text",
+"index_reference": "34001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Nahum adds to his prophecy about Judah&apos;s freedom from bondage (<data class=\"bible-ref\" data-start-ref=\"34001013\" data-end-ref=\"34001013\">Nahum 1:13</data>) by predicting a messenger will bring news of peace (see also <data class=\"bible-ref\" data-start-ref=\"23052007\" data-end-ref=\"23052007\">Isaiah 52:7</data>). The peace message was that Assyria&apos;s control over Judah would end, freeing God&apos;s people from its burden. This happened during King Josiah&apos;s reign from 640 to 609 BC, after Assyrian King Ashurbanipal died in 626 BC. </p><p>This political message hints at God&apos;s final victory over evil. It foretells the release from sin through the Messiah&apos;s saving work, granting eternal peace (<data class=\"bible-ref\" data-start-ref=\"36003013\" data-end-ref=\"36003013\">Zephaniah 3:13</data>; <data class=\"bible-ref\" data-start-ref=\"42002010\" data-end-ref=\"42002014\">Luke 2:10–14</data>; <data class=\"bible-ref\" data-start-ref=\"44010034\" data-end-ref=\"44010043\">Acts 10:34–43</data>; <data class=\"bible-ref\" data-start-ref=\"45010015\" data-end-ref=\"45010015\">Romans 10:15</data>; <data class=\"bible-ref\" data-start-ref=\"49002014\" data-end-ref=\"49002018\">Ephesians 2:14–18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34001015",
+"start_ref_usfm": "NAM 1:15",
+"end_ref": "34001015",
+"end_ref_usfm": "NAM 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Vow",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Vow"
+},
+{
+"id": "keyterm:Wickedness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Wickedness"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "22403",
+"reference_id": 21571,
+"version": "1.0.4",
+"title": "Nahum 2:1",
+"media_type": "Text",
+"index_reference": "34002001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Even if Nineveh&apos;s defenders prepared with walls, roads, defenses, and forces, they were destined to fail (<data class=\"bible-ref\" data-start-ref=\"34001001\" data-end-ref=\"34001014\">Nahum 1:1–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002001",
+"start_ref_usfm": "NAM 2:1",
+"end_ref": "34002001",
+"end_ref_usfm": "NAM 2:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "realia:Fortification",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Fortification"
+}
+]
+}
+},
+{
+"content_id": "22404",
+"reference_id": 21572,
+"version": "1.0.4",
+"title": "Nahum 2:2",
+"media_type": "Text",
+"index_reference": "34002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The vine represents God&apos;s blessing to his people (<data class=\"bible-ref\" data-start-ref=\"23027002\" data-end-ref=\"23027006\">Isaiah 27:2–6</data>), while the stripped vine shows God&apos;s earlier punishment of them (<data class=\"bible-ref\" data-start-ref=\"23005001\" data-end-ref=\"23005007\">Isaiah 5:1–7</data>). The children of Israel were in a sad state compared to the days of the great kings David and Solomon. However, God promised to restore the splendor of his people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002002",
+"start_ref_usfm": "NAM 2:2",
+"end_ref": "34002002",
+"end_ref_usfm": "NAM 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+}
+]
+}
+},
+{
+"content_id": "22405",
+"reference_id": 21573,
+"version": "1.0.4",
+"title": "Nahum 2:4",
+"media_type": "Text",
+"index_reference": "34002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Chariots were almost impossible to stop in battle due to their speed and strength.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002004",
+"start_ref_usfm": "NAM 2:4",
+"end_ref": "34002004",
+"end_ref_usfm": "NAM 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+}
+]
+}
+},
+{
+"content_id": "22406",
+"reference_id": 21574,
+"version": "1.0.4",
+"title": "Nahum 2:5",
+"media_type": "Text",
+"index_reference": "34002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Assyrian king recovers from the surprise attack on Nineveh and calls out to his officers. He and the city are unprepared, so they hurry to the walls to stop the siege. </p></li><li><p><em>the protective shield is set in place</em> (literally <em>the covering is prepared</em>): The meaning of the Hebrew term here is unclear. <em>Covering</em> probably refers to something that attackers or defenders used for protection. It helped shield them from weapons thrown through the air.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002005",
+"start_ref_usfm": "NAM 2:5",
+"end_ref": "34002005",
+"end_ref_usfm": "NAM 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:ProtectiveShield",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Protective Shield"
+}
+]
+}
+},
+{
+"content_id": "22407",
+"reference_id": 21575,
+"version": "1.0.4",
+"title": "Nahum 2:6",
+"media_type": "Text",
+"index_reference": "34002006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The rush to defend comes too late (<data class=\"bible-ref\" data-start-ref=\"34002005\" data-end-ref=\"34002005\">Nahum 2:5</data>). The defenses are already breached. </p></li><li><p>Nineveh had a reservoir created by a double dam on the Khosr River, a tributary of the Tigris that flowed through the city. The reservoir was enhanced by a series of flood gates. </p><p>The Greek historian Diodorus reported that a great amount of rain had already swollen the city’s river system. By first closing, then opening the flood gates, Nineveh’s attackers released the stored water as a battering ram against the city walls.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002006",
+"start_ref_usfm": "NAM 2:6",
+"end_ref": "34002006",
+"end_ref_usfm": "NAM 2:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22408",
+"reference_id": 21576,
+"version": "1.0.4",
+"title": "Nahum 2:7",
+"media_type": "Text",
+"index_reference": "34002007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Because God had decreed Nineveh’s exile, it would certainly happen.</p></li><li><p><em>beat upon their breasts</em>: This was a common sign of mourning. People did this to show sorrow and regret (see, for example, <data class=\"bible-ref\" data-start-ref=\"42018013\" data-end-ref=\"42018013\">Luke 18:13</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002007",
+"start_ref_usfm": "NAM 2:7",
+"end_ref": "34002007",
+"end_ref_usfm": "NAM 2:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Dove",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Dove"
+}
+]
+}
+},
+{
+"content_id": "22409",
+"reference_id": 21577,
+"version": "1.0.4",
+"title": "Nahum 2:8",
+"media_type": "Text",
+"index_reference": "34002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The people would flee quickly, like water rushing from a broken reservoir (see <data class=\"resource-ref\" data-content-id=\"22407\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Nahum 2:6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002008",
+"start_ref_usfm": "NAM 2:8",
+"end_ref": "34002008",
+"end_ref_usfm": "NAM 2:8"
+}
+],
+"resource": [
+{
+"reference_id": "21575",
+"content_id": "22407",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Nahum 2:6",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "place:Nineveh",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Nineveh"
+}
+]
+}
+},
+{
+"content_id": "22410",
+"reference_id": 21578,
+"version": "1.0.4",
+"title": "Nahum 2:9",
+"media_type": "Text",
+"index_reference": "34002009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The great wealth from other nations came into the Assyrian capital through trade, tribute, and spoils, but it vanished quickly. Ruthless aggression and wickedness may succeed for a short time, but they will eventually face destruction (<data class=\"bible-ref\" data-start-ref=\"20013022\" data-end-ref=\"20013022\">Proverbs 13:22</data>; <data class=\"bible-ref\" data-start-ref=\"31001015\" data-end-ref=\"31001015\">Obadiah 1:15</data>; <data class=\"bible-ref\" data-start-ref=\"42012016\" data-end-ref=\"42012020\">Luke 12:16–20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002009",
+"start_ref_usfm": "NAM 2:9",
+"end_ref": "34002009",
+"end_ref_usfm": "NAM 2:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "22400",
+"reference_id": 21568,
+"version": "1.0.4",
+"title": "Nahum 2:10",
+"media_type": "Text",
+"index_reference": "34002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>emptied … desolate … laid waste</em>: The Hebrew words here use alliteration (repeating similar sounds) to create a strong effect: <em>buqah umbuqah umbullaqah</em>. This sound pattern emphasizes how complete the destruction was. A similar effect in English would be “devastated, despoiled, and destroyed.”</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002010",
+"start_ref_usfm": "NAM 2:10",
+"end_ref": "34002010",
+"end_ref_usfm": "NAM 2:10"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22401",
+"reference_id": 21569,
+"version": "1.0.4",
+"title": "Nahum 2:11–13",
+"media_type": "Text",
+"index_reference": "34002011-34002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After describing Nineveh’s fall (<data class=\"bible-ref\" data-start-ref=\"34002001\" data-end-ref=\"34002010\">Nahum 2:1–10</data>), Nahum includes the first of three taunt songs (see also <data class=\"bible-ref\" data-start-ref=\"34003008\" data-end-ref=\"34003013\">3:8–13</data>, <data class=\"bible-ref\" data-start-ref=\"34003014\" data-end-ref=\"34003019\">14–19</data>). Taunt songs were a common form of poetry in the ancient Near East.</p><p>In this song, Nahum uses sharp humor to compare Nineveh to a lion’s den. Sennacherib and other Assyrian kings often compared themselves to lions. They even decorated their palaces with images of lions and scenes of royal lion hunts.</p><p>However, because God had become Nineveh’s enemy, the city would no longer be a safe place for a powerful predator. Its strength and pride would not protect it.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002011",
+"start_ref_usfm": "NAM 2:11",
+"end_ref": "34002013",
+"end_ref_usfm": "NAM 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.64,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Grass"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22402",
+"reference_id": 21570,
+"version": "1.0.4",
+"title": "Nahum 2:13",
+"media_type": "Text",
+"index_reference": "34002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Examples of the voices of Assyria’s proud messengers are in <data class=\"bible-ref\" data-start-ref=\"12018019\" data-end-ref=\"12019013\">2&nbsp;Kings 18:19–19:13</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34002013",
+"start_ref_usfm": "NAM 2:13",
+"end_ref": "34002013",
+"end_ref_usfm": "NAM 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Lion"
+}
+]
+}
+},
+{
+"content_id": "22417",
+"reference_id": 21585,
+"version": "1.0.4",
+"title": "Nahum 3:1",
+"media_type": "Text",
+"index_reference": "34003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>city of blood</em>: The Assyrians&apos; extreme cruelty is well documented. They cut off body parts like noses, ears, hands, and feet. They executed people by impaling them on stakes. They piled severed heads in front of besieged city gates. They sometimes blinded victims and stripped their skin while still alive.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003001",
+"start_ref_usfm": "NAM 3:1",
+"end_ref": "34003001",
+"end_ref_usfm": "NAM 3:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Woe"
+}
+]
+}
+},
+{
+"content_id": "22418",
+"reference_id": 21586,
+"version": "1.0.4",
+"title": "Nahum 3:2–3",
+"media_type": "Text",
+"index_reference": "34003002-34003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>These short, abrupt phrases show how shocking it was to see and hear the battle as it happened.</p></li><li><p>Assyrian chariots and charioteers were feared in many lands because of their speed and power.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003002",
+"start_ref_usfm": "NAM 3:2",
+"end_ref": "34003003",
+"end_ref_usfm": "NAM 3:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Whip",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Whip"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:Wagon",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Wagon"
+}
+]
+}
+},
+{
+"content_id": "22419",
+"reference_id": 21587,
+"version": "1.0.4",
+"title": "Nahum 3:4",
+"media_type": "Text",
+"index_reference": "34003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>mistress of sorcery</em></span>: The Assyrians attracted other nations with wealth and promises of safety and prosperity. However, they then exploited them through military power and economic control. Therefore, their punishment was a fair consequence for their actions (see <data class=\"bible-ref\" data-start-ref=\"20024012\" data-end-ref=\"20024012\">Proverbs 24:12</data>; <data class=\"bible-ref\" data-start-ref=\"29003004\" data-end-ref=\"29003008\">Joel 3:4–8</data>; <data class=\"bible-ref\" data-start-ref=\"66018006\" data-end-ref=\"66018006\">Revelation 18:6</data>; <data class=\"bible-ref\" data-start-ref=\"66020012\" data-end-ref=\"66020012\">20:12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003004",
+"start_ref_usfm": "NAM 3:4",
+"end_ref": "34003004",
+"end_ref_usfm": "NAM 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Incantations",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Incantations"
+}
+]
+}
+},
+{
+"content_id": "22420",
+"reference_id": 21588,
+"version": "1.0.4",
+"title": "Nahum 3:5",
+"media_type": "Text",
+"index_reference": "34003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Twice, God tells Nineveh, <span><em>I am against you</em></span> (also <data class=\"bible-ref\" data-start-ref=\"34002013\" data-end-ref=\"34002013\">Nahum 2:13</data>). Nineveh&apos;s judgment serves as a historical reminder that the Lord hates sin and will judge people and nations based on their actions (<data class=\"bible-ref\" data-start-ref=\"19009007\" data-end-ref=\"19009008\">Psalms 9:7–8</data>; <data class=\"bible-ref\" data-start-ref=\"19062012\" data-end-ref=\"19062012\">62:12</data>; <data class=\"bible-ref\" data-start-ref=\"24046028\" data-end-ref=\"24046028\">Jeremiah 46:28</data>; <data class=\"bible-ref\" data-start-ref=\"44017031\" data-end-ref=\"44017031\">Acts 17:31</data>). One day, God&apos;s justice will reach the entire world, affecting those who have rebelled against him (<data class=\"bible-ref\" data-start-ref=\"66017001\" data-end-ref=\"66019021\">Revelation 17–19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003005",
+"start_ref_usfm": "NAM 3:5",
+"end_ref": "34003005",
+"end_ref_usfm": "NAM 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:Train",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Train"
+}
+]
+}
+},
+{
+"content_id": "22421",
+"reference_id": 21589,
+"version": "1.0.4",
+"title": "Nahum 3:8",
+"media_type": "Text",
+"index_reference": "34003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Thebes was a historic capital of Egypt. The city stood on both sides of the Nile River in Upper Egypt.</p><p>Thebes became most famous during Egypt’s New Kingdom period, from 1550 to 1069 BC. During this time, it served as the main political, religious, and cultural center of the nation.</p><p>By the 600s BC, Thebes was no longer Egypt’s capital. Even so, it remained a large and active city.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003008",
+"start_ref_usfm": "NAM 3:8",
+"end_ref": "34003008",
+"end_ref_usfm": "NAM 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Thebes",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Thebes"
+},
+{
+"id": "deity:Amon",
+"type": "deity",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Amon"
+},
+{
+"id": "place:Nile",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Nile River"
+}
+]
+}
+},
+{
+"content_id": "22422",
+"reference_id": 21590,
+"version": "1.0.4",
+"title": "Nahum 3:9–10",
+"media_type": "Text",
+"index_reference": "34003009-34003010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Assyrians, led by King Ashurbanipal, conquered Thebes in 663 BC. Before this, Thebes seemed unbeatable with strong defenses and support from Egypt and its allies: </p><ul><li><p>Ethiopia, </p></li><li><p>Put (possibly the legendary land of Punt, located near what is now coastal Somalia), and </p></li><li><p>Libya. </p></li></ul><p>However, these allies did not protect Thebes effectively. </p></li><li><p><span><em>infants were dashed to pieces</em>: </span>In the ancient world, conquering armies sometimes killed the infants of their enemies. This cruel practice was meant to wipe out a people completely and prevent future resistance (<data class=\"bible-ref\" data-start-ref=\"12008012\" data-end-ref=\"12008012\">2 Kings 8:12</data>; <data class=\"bible-ref\" data-start-ref=\"19137009\" data-end-ref=\"19137009\">Psalm 137:9</data>; <data class=\"bible-ref\" data-start-ref=\"23013016\" data-end-ref=\"23013016\">Isaiah 13:16</data>, <data class=\"bible-ref\" data-start-ref=\"23013018\" data-end-ref=\"23013018\">18</data>). </p></li><li><p>Soldiers cast lots to divide the goods taken in war. At the same time, the leaders of the defeated people were tied with chains and taken away as prisoners (see <data class=\"bible-ref\" data-start-ref=\"12025007\" data-end-ref=\"12025007\">2 Kings 25:7</data>; <data class=\"bible-ref\" data-start-ref=\"24040001\" data-end-ref=\"24040001\">Jeremiah 40:1</data>, <data class=\"bible-ref\" data-start-ref=\"24040004\" data-end-ref=\"24040004\">4</data>; <data class=\"bible-ref\" data-start-ref=\"29003003\" data-end-ref=\"29003003\">Joel 3:3</data>; <data class=\"bible-ref\" data-start-ref=\"31001011\" data-end-ref=\"31001011\">Obadiah 1:11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003009",
+"start_ref_usfm": "NAM 3:9",
+"end_ref": "34003010",
+"end_ref_usfm": "NAM 3:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Put",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Put"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "keyterm:Lot",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Lot"
+},
+{
+"id": "place:Libya",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Libya"
+},
+{
+"id": "keyterm:BringHonorAndGloryOnOneself",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Bring Honor and Glory on Oneself"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Cush"
+}
+]
+}
+},
+{
+"content_id": "22411",
+"reference_id": 21579,
+"version": "1.0.4",
+"title": "Nahum 3:12",
+"media_type": "Text",
+"index_reference": "34003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>ripe figs</em>: Compare <data class=\"bible-ref\" data-start-ref=\"30008001\" data-end-ref=\"30008002\">Amos 8:1–2</data>; <data class=\"bible-ref\" data-start-ref=\"66006013\" data-end-ref=\"66006013\">Revelation 6:13</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003012",
+"start_ref_usfm": "NAM 3:12",
+"end_ref": "34003012",
+"end_ref_usfm": "NAM 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Fig"
+}
+]
+}
+},
+{
+"content_id": "22412",
+"reference_id": 21580,
+"version": "1.0.4",
+"title": "Nahum 3:14",
+"media_type": "Text",
+"index_reference": "34003014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Draw … strengthen</em>: Nahum used sarcasm (sharp words meant to mock) to show that no amount of preparation could protect the Assyrians from God’s judgment. He also used this same sarcastic tone in <data class=\"bible-ref\" data-start-ref=\"34002011\" data-end-ref=\"34002013\">Nahum 2:11–13</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003014",
+"start_ref_usfm": "NAM 3:14",
+"end_ref": "34003014",
+"end_ref_usfm": "NAM 3:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:BrickMold",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Brick Mold"
+},
+{
+"id": "keyterm:StateOfBeingUnderSiege",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Under Siege"
+}
+]
+}
+},
+{
+"content_id": "22413",
+"reference_id": 21581,
+"version": "1.0.4",
+"title": "Nahum 3:15",
+"media_type": "Text",
+"index_reference": "34003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Old Testament often uses locusts as a metaphor for armies (see <data class=\"bible-ref\" data-start-ref=\"29002001\" data-end-ref=\"29002011\">Joel 2:1–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003015",
+"start_ref_usfm": "NAM 3:15",
+"end_ref": "34003015",
+"end_ref_usfm": "NAM 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Locust",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Locust"
+}
+]
+}
+},
+{
+"content_id": "22414",
+"reference_id": 21582,
+"version": "1.0.4",
+"title": "Nahum 3:16",
+"media_type": "Text",
+"index_reference": "34003016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Assyrian merchants spread across the Near East like locusts, bringing great wealth to Nineveh. However, like locusts that eat and leave, the merchants took their goods and departed during Nineveh&apos;s difficult times, leaving the people in need.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003016",
+"start_ref_usfm": "NAM 3:16",
+"end_ref": "34003016",
+"end_ref_usfm": "NAM 3:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Locust",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Locust"
+}
+]
+}
+},
+{
+"content_id": "22415",
+"reference_id": 21583,
+"version": "1.0.4",
+"title": "Nahum 3:18",
+"media_type": "Text",
+"index_reference": "34003018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>shepherds</em>: With the leaders gone, Nineveh’s people would scatter like sheep. </p></li><li><p><em>sleep</em> (see <data class=\"bible-ref\" data-start-ref=\"43011011\" data-end-ref=\"43011014\">John 11:11–14</data>): Assyria’s leaders, asleep during Nineveh’s crisis, would sleep in death. In contrast, Israel’s Protector does not slumber (<data class=\"bible-ref\" data-start-ref=\"19121003\" data-end-ref=\"19121003\">Psalm 121:3</data>), and he will gather Israel’s lost sheep (<data class=\"bible-ref\" data-start-ref=\"24023003\" data-end-ref=\"24023003\">Jeremiah 23:3</data>; <data class=\"bible-ref\" data-start-ref=\"26036035\" data-end-ref=\"26036035\">Ezekiel 36:35</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003018",
+"start_ref_usfm": "NAM 3:18",
+"end_ref": "34003018",
+"end_ref_usfm": "NAM 3:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+}
+]
+}
+},
+{
+"content_id": "22416",
+"reference_id": 21584,
+"version": "1.0.4",
+"title": "Nahum 3:19",
+"media_type": "Text",
+"index_reference": "34003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Nineveh deserved destruction, not healing. Although God showed patience with Nineveh in Jonah’s time (<data class=\"bible-ref\" data-start-ref=\"32003010\" data-end-ref=\"32003010\">Jonah 3:10</data>), the Assyrians returned to cruelty. They would face the consequences of their evil actions (see <data class=\"bible-ref\" data-start-ref=\"20011016\" data-end-ref=\"20011019\">Proverbs 11:16–19</data>; <data class=\"bible-ref\" data-start-ref=\"23066005\" data-end-ref=\"23066006\">Isaiah 66:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"28008007\" data-end-ref=\"28008007\">Hosea 8:7</data>). Those who suffered under Assyria’s cruelty would welcome this message with joy.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "34003019",
+"start_ref_usfm": "NAM 3:19",
+"end_ref": "34003019",
+"end_ref_usfm": "NAM 3:19"
+}
+],
+"resource": [],
+"acai": []
+}
+}
+]

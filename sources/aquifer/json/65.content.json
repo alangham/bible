@@ -1,0 +1,1689 @@
+[
+{
+"content_id": "19672",
+"reference_id": 18840,
+"version": "1.0.4",
+"title": "Jude 1:1",
+"media_type": "Text",
+"index_reference": "65001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Jude (or <em>Judas</em>) is the Greek version of the Hebrew name “Judah.” It was a common name. This Jude was a brother of James, who was also a brother of Jesus (see Jude Book Introduction, “Author”). </p></li><li><p><span><em>a servant of Jesus Christ</em></span>: Jude states he follows Jesus in all parts of life. This title also shows honor. Important leaders in the Old Testament were called <em>slaves</em> or <em>servants</em> of God (see <data class=\"bible-ref\" data-start-ref=\"06014007\" data-end-ref=\"06014007\">Joshua 14:7</data>; <data class=\"bible-ref\" data-start-ref=\"12018012\" data-end-ref=\"12018012\">2&nbsp;Kings 18:12</data>; <data class=\"bible-ref\" data-start-ref=\"26034023\" data-end-ref=\"26034023\">Ezekiel 34:23</data>). </p></li><li><p><span><em>To those who are called</em></span>: We do not know exactly who Jude wrote this letter to.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001001",
+"start_ref_usfm": "JUD 1:1",
+"end_ref": "65001001",
+"end_ref_usfm": "JUD 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jude",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Jude"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "person:James.3",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "James"
+}
+]
+}
+},
+{
+"content_id": "19664",
+"reference_id": 18832,
+"version": "1.0.4",
+"title": "Jude 1:1–2",
+"media_type": "Text",
+"index_reference": "65001001-65001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Following the typical structure of the beginning of a letter, Jude identifies himself, addresses his audience, and prays for them.</p></li><li><p><span><em>kept in Jesus Christ</em></span>: This phrase emphasizes an important point (see also <data class=\"bible-ref\" data-start-ref=\"65001021\" data-end-ref=\"65001021\">1:21</data>, <data class=\"bible-ref\" data-start-ref=\"65001024\" data-end-ref=\"65001024\">24</data>). It gives believers confidence when they face people who teach wrong things about God.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001001",
+"start_ref_usfm": "JUD 1:1",
+"end_ref": "65001002",
+"end_ref_usfm": "JUD 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "person:Jude",
+"type": "person",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Jude"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:James.3",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "James"
+}
+]
+}
+},
+{
+"content_id": "19679",
+"reference_id": 18847,
+"version": "1.0.4",
+"title": "Jude 1:3",
+"media_type": "Text",
+"index_reference": "65001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the New Testament, &quot;faith&quot; usually means the act of believing, while &quot;the faith&quot; refers to Christian beliefs.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001003",
+"start_ref_usfm": "JUD 1:3",
+"end_ref": "65001003",
+"end_ref_usfm": "JUD 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:InCommon",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Common"
+},
+{
+"id": "keyterm:Eagerness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Eagerness"
+}
+]
+}
+},
+{
+"content_id": "19678",
+"reference_id": 18846,
+"version": "1.0.4",
+"title": "Jude 1:3–4",
+"media_type": "Text",
+"index_reference": "65001003-65001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Instead of the usual thanksgiving that usually occurs at this point in New Testament letters, Jude explains his main purpose (see <data class=\"bible-ref\" data-start-ref=\"45001008\" data-end-ref=\"45001014\">Romans 1:8–14</data>; <data class=\"bible-ref\" data-start-ref=\"46001004\" data-end-ref=\"46001009\">1&nbsp;Corinthians 1:4–9</data>). False teaching was a serious threat to the faith of the people he was writing to (see <data class=\"bible-ref\" data-start-ref=\"65001022\" data-end-ref=\"65001023\">Jude 1:22–23</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001003",
+"start_ref_usfm": "JUD 1:3",
+"end_ref": "65001004",
+"end_ref_usfm": "JUD 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:InCommon",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "In Common"
+},
+{
+"id": "keyterm:Eagerness",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Eagerness"
+}
+]
+}
+},
+{
+"content_id": "19680",
+"reference_id": 18848,
+"version": "1.0.4",
+"title": "Jude 1:4",
+"media_type": "Text",
+"index_reference": "65001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>It is tempting to misuse God&apos;s wonderful grace by saying it lets us do wrong things (see <data class=\"bible-ref\" data-start-ref=\"45006001\" data-end-ref=\"45006023\">Romans 6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001004",
+"start_ref_usfm": "JUD 1:4",
+"end_ref": "65001004",
+"end_ref_usfm": "JUD 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "19682",
+"reference_id": 18850,
+"version": "1.0.4",
+"title": "Jude 1:5",
+"media_type": "Text",
+"index_reference": "65001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Jesus existed before his birth and saved the people of Israel from Egypt. Later, he punished those who were unfaithful (compare <data class=\"bible-ref\" data-start-ref=\"46010004\" data-end-ref=\"46010004\">1&nbsp;Corinthians 10:4</data>). </p></li><li><p><span><em>after Jesus had delivered His people out of the land of Egypt, He destroyed those who did not believe:</em></span> Most people did not trust God to keep them safe. Because they did not believe, God made that generation (except Joshua and Caleb) wander in the wilderness until they died (see <data class=\"bible-ref\" data-start-ref=\"04014001\" data-end-ref=\"04014045\">Numbers 14</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001005",
+"start_ref_usfm": "JUD 1:5",
+"end_ref": "65001005",
+"end_ref_usfm": "JUD 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "19681",
+"reference_id": 18849,
+"version": "1.0.4",
+"title": "Jude 1:5–16",
+"media_type": "Text",
+"index_reference": "65001005-65001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This section explains &quot;<span>designated long ago for condemnation</span>&quot; in <data class=\"bible-ref\" data-start-ref=\"65001004\" data-end-ref=\"65001004\">1:4</data> by using Old Testament examples of God&apos;s judgment on false teachers.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001005",
+"start_ref_usfm": "JUD 1:5",
+"end_ref": "65001016",
+"end_ref_usfm": "JUD 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Korah.3",
+"type": "person",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Korah"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Speak",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Speak as a Prophet"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:EternalFire",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Eternal Fire"
+},
+{
+"id": "person:Michael.11",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Michael"
+},
+{
+"id": "place:Gomorrah",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Gomorrah"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Disaster",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Disaster"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "person:Balaam",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Balaam"
+},
+{
+"id": "keyterm:Discern",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Discern"
+},
+{
+"id": "person:Enoch.2",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Enoch"
+},
+{
+"id": "place:Sodom",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Sodom"
+},
+{
+"id": "person:Cain",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Cain"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Command",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "To Command"
+},
+{
+"id": "person:Moses",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Moses"
+},
+{
+"id": "keyterm:FellowshipMeal",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Fellowship Meal"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Adam"
+},
+{
+"id": "realia:Chain",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Chain"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Flock"
+}
+]
+}
+},
+{
+"content_id": "19683",
+"reference_id": 18851,
+"version": "1.0.4",
+"title": "Jude 1:6",
+"media_type": "Text",
+"index_reference": "65001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The angels might refer to the fall of Satan and the angels who followed him, but no Old Testament passage clearly describes this event (see study notes on <data class=\"resource-ref\" data-content-id=\"15874\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">Isaiah 14:12–17</data>; <data class=\"resource-ref\" data-content-id=\"11655\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">Ezekiel 28:12–19</data>). Jude was probably referring to <data class=\"bible-ref\" data-start-ref=\"01006001\" data-end-ref=\"01006004\">Genesis 6:1–4</data>. Jewish tradition understood the “sons of God” in <data class=\"bible-ref\" data-start-ref=\"01006001\" data-end-ref=\"01006022\">Genesis 6</data> to be wicked angels. They believed God punished these angels because they had sexual relations with women (see <em>1&nbsp;Enoch</em> 6–10; see also study notes on <data class=\"resource-ref\" data-content-id=\"15756\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">1&nbsp;Peter 3:19–20</data>; <data class=\"resource-ref\" data-content-id=\"14805\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">2&nbsp;Peter 2:4</data>). Jude later (in <data class=\"bible-ref\" data-start-ref=\"65001014\" data-end-ref=\"65001015\">verses 14–15</data>) quotes directly from <em>1&nbsp;Enoch</em>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001006",
+"start_ref_usfm": "JUD 1:6",
+"end_ref": "65001006",
+"end_ref_usfm": "JUD 1:6"
+}
+],
+"resource": [
+{
+"reference_id": "15042",
+"content_id": "15874",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "Isaiah 14:12-17",
+"language": "eng"
+},
+{
+"reference_id": "10823",
+"content_id": "11655",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "Ezekiel 28:12-19",
+"language": "eng"
+},
+{
+"reference_id": "14924",
+"content_id": "15756",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "1 Peter 3:19-20",
+"language": "eng"
+},
+{
+"reference_id": "13973",
+"content_id": "14805",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "2 Peter 2:4",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "realia:Chain",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Chain"
+}
+]
+}
+},
+{
+"content_id": "19684",
+"reference_id": 18852,
+"version": "1.0.4",
+"title": "Jude 1:7",
+"media_type": "Text",
+"index_reference": "65001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>God&apos;s judgment on Sodom and Gomorrah became well-known (see <data class=\"bible-ref\" data-start-ref=\"01018017\" data-end-ref=\"01019026\">Genesis 18:17–19:26</data>; <data class=\"bible-ref\" data-start-ref=\"42017026\" data-end-ref=\"42017029\">Luke 17:26–29</data>). </p></li><li><p><span><em>the cities around them</em></span>: <data class=\"bible-ref\" data-start-ref=\"05029023\" data-end-ref=\"05029023\">Deuteronomy 29:23</data> mentions Admah and Zeboiim. </p></li><li><p><span><em>sexual immorality and pursued strange flesh</em>: this likely refers to sexual relations between people of the same sex</span> (<data class=\"bible-ref\" data-start-ref=\"01019005\" data-end-ref=\"01019010\">Genesis 19:5–10</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001007",
+"start_ref_usfm": "JUD 1:7",
+"end_ref": "65001007",
+"end_ref_usfm": "JUD 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Gomorrah",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gomorrah"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:EternalFire",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Eternal Fire"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "place:Sodom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sodom"
+}
+]
+}
+},
+{
+"content_id": "19685",
+"reference_id": 18853,
+"version": "1.0.4",
+"title": "Jude 1:8",
+"media_type": "Text",
+"index_reference": "65001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>glorious beings</em></span>: This likely refers to evil angels. In the Old Testament and Judaism, angels played an important role in judgment. The false teachers might have been minimizing the reality of a future judgment (see <data class=\"bible-ref\" data-start-ref=\"65001018\" data-end-ref=\"65001018\">1:18</data>; <data class=\"bible-ref\" data-start-ref=\"61003003\" data-end-ref=\"61003004\">2&nbsp;Peter 3:3–4</data>) or denying the glorious origin of these angels who rebelled against God (compare <data class=\"bible-ref\" data-start-ref=\"61002010\" data-end-ref=\"61002010\">2&nbsp;Peter 2:10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001008",
+"start_ref_usfm": "JUD 1:8",
+"end_ref": "65001008",
+"end_ref_usfm": "JUD 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+}
+]
+}
+},
+{
+"content_id": "19686",
+"reference_id": 18854,
+"version": "1.0.4",
+"title": "Jude 1:9",
+"media_type": "Text",
+"index_reference": "65001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Michael is one of the most powerful angels. In Jewish tradition, an &quot;archangel&quot; is the highest rank of angel (see also <data class=\"bible-ref\" data-start-ref=\"52004016\" data-end-ref=\"52004016\">1&nbsp;Thessalonians 4:16</data>). Michael is mentioned several times in the Bible (<data class=\"bible-ref\" data-start-ref=\"27010013\" data-end-ref=\"27010013\">Daniel 10:13</data>, <data class=\"bible-ref\" data-start-ref=\"27010021\" data-end-ref=\"27010021\">21</data>; <data class=\"bible-ref\" data-start-ref=\"27012001\" data-end-ref=\"27012001\">12:1</data>; <data class=\"bible-ref\" data-start-ref=\"66012007\" data-end-ref=\"66012007\">Revelation 12:7</data>). The story of him fighting the devil about the body of Moses is not in the Old Testament but is found in Jewish tradition (see <em>Assumption of Moses</em>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001009",
+"start_ref_usfm": "JUD 1:9",
+"end_ref": "65001009",
+"end_ref_usfm": "JUD 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Command",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Command"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Discern",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Discern"
+},
+{
+"id": "person:Moses",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Moses"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "person:Michael.11",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Michael"
+}
+]
+}
+},
+{
+"content_id": "19665",
+"reference_id": 18833,
+"version": "1.0.4",
+"title": "Jude 1:11",
+"media_type": "Text",
+"index_reference": "65001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Cain</em>: Refer to <data class=\"bible-ref\" data-start-ref=\"01004001\" data-end-ref=\"01004016\">Genesis 4:1–16</data>. </p></li><li><p><em>Balaam</em>: Refer to <data class=\"resource-ref\" data-content-id=\"14796\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">the study note on 2&nbsp;Peter 2:15</data>. </p></li><li><p><em>Korah</em>: Refer to <data class=\"bible-ref\" data-start-ref=\"04016001\" data-end-ref=\"04016035\">Numbers 16:1–35</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001011",
+"start_ref_usfm": "JUD 1:11",
+"end_ref": "65001011",
+"end_ref_usfm": "JUD 1:11"
+}
+],
+"resource": [
+{
+"reference_id": "13964",
+"content_id": "14796",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "the study note on 2 Peter 2:15",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "person:Korah.3",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Korah"
+},
+{
+"id": "keyterm:Disaster",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Disaster"
+},
+{
+"id": "person:Balaam",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Balaam"
+},
+{
+"id": "person:Cain",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cain"
+}
+]
+}
+},
+{
+"content_id": "19666",
+"reference_id": 18834,
+"version": "1.0.4",
+"title": "Jude 1:12",
+"media_type": "Text",
+"index_reference": "65001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The early Christians celebrated the Lord’s Supper as part of shared fellowship meals with one another.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001012",
+"start_ref_usfm": "JUD 1:12",
+"end_ref": "65001012",
+"end_ref_usfm": "JUD 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:FellowshipMeal",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fellowship Meal"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+}
+]
+}
+},
+{
+"content_id": "19667",
+"reference_id": 18835,
+"version": "1.0.4",
+"title": "Jude 1:13",
+"media_type": "Text",
+"index_reference": "65001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>People once thought planets were wandering stars because they moved in irregular patterns across the sky. Similarly, false teachers wandered (by teaching things that were not true), and God condemned their actions.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001013",
+"start_ref_usfm": "JUD 1:13",
+"end_ref": "65001013",
+"end_ref_usfm": "JUD 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "19668",
+"reference_id": 18836,
+"version": "1.0.4",
+"title": "Jude 1:14–15",
+"media_type": "Text",
+"index_reference": "65001014-65001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Enoch was an early descendant of Adam (see <data class=\"bible-ref\" data-start-ref=\"01005018\" data-end-ref=\"01005024\">Genesis 5:18–24</data>; <data class=\"bible-ref\" data-start-ref=\"13001003\" data-end-ref=\"13001003\">1 Chronicles 1:3</data>). <data class=\"bible-ref\" data-start-ref=\"01005024\" data-end-ref=\"01005024\">Genesis 5:24</data> suggests that Enoch did not die but was taken directly to heaven (compare <data class=\"bible-ref\" data-start-ref=\"12002001\" data-end-ref=\"12002013\">2 Kings 2:1–13</data>; see <data class=\"bible-ref\" data-start-ref=\"58011005\" data-end-ref=\"58011005\">Hebrews 11:5</data>). This special recognition from God and the limited mention of him in Scripture make Enoch an interesting character. Jewish literature contains several legends about him, and at least two books of apocalyptic visions written between the Old and New Testaments are attributed to him (<em>1–2 Enoch</em>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001014",
+"start_ref_usfm": "JUD 1:14",
+"end_ref": "65001015",
+"end_ref_usfm": "JUD 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Speak",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Speak as a Prophet"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "person:Enoch.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Enoch"
+},
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Adam"
+}
+]
+}
+},
+{
+"content_id": "19670",
+"reference_id": 18838,
+"version": "1.0.4",
+"title": "Jude 1:17",
+"media_type": "Text",
+"index_reference": "65001017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>what was foretold by the apostles of our Lord Jesus Christ</em>:</span> See <data class=\"bible-ref\" data-start-ref=\"44020029\" data-end-ref=\"44020030\">Acts 20:29–30</data>, <data class=\"bible-ref\" data-start-ref=\"54004001\" data-end-ref=\"54004003\">1&nbsp;Timothy 4:1–3</data>, and <data class=\"bible-ref\" data-start-ref=\"55003001\" data-end-ref=\"55003005\">2&nbsp;Timothy 3:1–5</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001017",
+"start_ref_usfm": "JUD 1:17",
+"end_ref": "65001017",
+"end_ref_usfm": "JUD 1:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Word",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Word"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "19669",
+"reference_id": 18837,
+"version": "1.0.4",
+"title": "Jude 1:17–23",
+"media_type": "Text",
+"index_reference": "65001017-65001023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After condemning the false teachers, Jude again encourages his readers directly (see <data class=\"bible-ref\" data-start-ref=\"65001003\" data-end-ref=\"65001004\">1:3–4</data>). The apostles had warned them about false teachings (<data class=\"bible-ref\" data-start-ref=\"65001017\" data-end-ref=\"65001019\">1:17–19</data>). They should support each other in their faith (<data class=\"bible-ref\" data-start-ref=\"65001020\" data-end-ref=\"65001021\">1:20–21</data>). They should help those who might be misled by the false teachers (<data class=\"bible-ref\" data-start-ref=\"65001022\" data-end-ref=\"65001023\">1:22–23</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001017",
+"start_ref_usfm": "JUD 1:17",
+"end_ref": "65001023",
+"end_ref_usfm": "JUD 1:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.4429,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:CreatingDivisions",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Creating Divisions"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Discern",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Discern"
+},
+{
+"id": "keyterm:Natural",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Natural"
+},
+{
+"id": "keyterm:Word",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Word"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "19671",
+"reference_id": 18839,
+"version": "1.0.4",
+"title": "Jude 1:18",
+"media_type": "Text",
+"index_reference": "65001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>In the last times</em></span>: Jesus coming as the Messiah (God&apos;s chosen one) started the final part of God&apos;s plan. This is when Old Testament prophecies about the last days began to happen. Because of this, Jude uses the apostles&apos; prophecy about the last times to address the current crisis caused by false teachers (<data class=\"bible-ref\" data-start-ref=\"65001019\" data-end-ref=\"65001019\">1:19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001018",
+"start_ref_usfm": "JUD 1:18",
+"end_ref": "65001018",
+"end_ref_usfm": "JUD 1:18"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "19673",
+"reference_id": 18841,
+"version": "1.0.4",
+"title": "Jude 1:20",
+"media_type": "Text",
+"index_reference": "65001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>your most holy faith</em>: As in <data class=\"bible-ref\" data-start-ref=\"65001003\" data-end-ref=\"65001003\">1:3</data>, <em>faith</em> means the basic teachings that Christians believe. These teachings include both what Christians should believe about God and how they should live. False teachers threaten these beliefs, so believers must commit to them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001020",
+"start_ref_usfm": "JUD 1:20",
+"end_ref": "65001020",
+"end_ref_usfm": "JUD 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "19675",
+"reference_id": 18843,
+"version": "1.0.4",
+"title": "Jude 1:22",
+"media_type": "Text",
+"index_reference": "65001022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>those who doubt</em></span>: Some believers were starting to doubt their faith because of what the false teachers were saying.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001022",
+"start_ref_usfm": "JUD 1:22",
+"end_ref": "65001022",
+"end_ref_usfm": "JUD 1:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Discern",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Discern"
+}
+]
+}
+},
+{
+"content_id": "19674",
+"reference_id": 18842,
+"version": "1.0.4",
+"title": "Jude 1:22–23",
+"media_type": "Text",
+"index_reference": "65001022-65001023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Berean Standard Bible follows a manuscript tradition with three commands for different groups: </p><ol><li><p>those who doubt, </p></li><li><p>those needing rescue from judgment (&quot;by snatching them from the fire&quot;), and </p></li><li><p>those needing mercy. </p></li></ol><p>Some manuscripts mention only two groups: </p><ol><li><p>those with wavering faith who need rescue from judgment, and </p></li><li><p>those needing mercy. </p></li></ol><p>The Berean Standard Bible uses the three-part pattern found in other parts of Jude (<data class=\"bible-ref\" data-start-ref=\"65001005\" data-end-ref=\"65001007\">1:5–7</data>, <data class=\"bible-ref\" data-start-ref=\"65001011\" data-end-ref=\"65001011\">11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001022",
+"start_ref_usfm": "JUD 1:22",
+"end_ref": "65001023",
+"end_ref_usfm": "JUD 1:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Discern",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Discern"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "19676",
+"reference_id": 18844,
+"version": "1.0.4",
+"title": "Jude 1:23",
+"media_type": "Text",
+"index_reference": "65001023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>save others</em></span>: Some believers were so influenced by the false teachers that they were in immediate danger of being condemned. </p></li><li><p><span><em>to still others show mercy</em></span>: This group likely includes the false teachers themselves or those who followed their teachings. Showing mercy might involve praying for them (see <data class=\"bible-ref\" data-start-ref=\"40005044\" data-end-ref=\"40005044\">Matthew 5:44</data>). </p></li><li><p>Believers must be very careful when showing mercy to false teachers and those who have adopted their sinful ways, as their sins can be tempting. See <data class=\"bible-ref\" data-start-ref=\"38003001\" data-end-ref=\"38003004\">Zechariah 3:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"66003004\" data-end-ref=\"66003004\">Revelation 3:4</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001023",
+"start_ref_usfm": "JUD 1:23",
+"end_ref": "65001023",
+"end_ref_usfm": "JUD 1:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "19677",
+"reference_id": 18845,
+"version": "1.0.4",
+"title": "Jude 1:24–25",
+"media_type": "Text",
+"index_reference": "65001024-65001025",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Jude ends his letter with a powerful praise to God, often quoted during times of worship. His words are perfect for the people who received his letter. They needed a renewed understanding of God. The believers needed to remember that God was powerful enough to help them stay faithful to him. They also needed to trust that God could protect them from being convinced by false teachings. God has the glory, majesty, power, and authority to bring them safely into his glorious presence forever.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "65001024",
+"start_ref_usfm": "JUD 1:24",
+"end_ref": "65001025",
+"end_ref_usfm": "JUD 1:25"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Unblemished",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Unblemished"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+}
+]

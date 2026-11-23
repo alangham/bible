@@ -3318,3 +3318,141 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give in the report the size of the 66 files in `public/data/notes/`, and when the page gets the notes file of a book. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, `docs/BACKLOG.md`, `CLAUDE.md`, and `docs/screenshots/about-chapter-design/` with this task.
+
+---
+
+## Task 48. Study notes, part 1: the source, the data, and the psalms in "About this chapter"
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: each of the 132 psalms with no Biblica note gets "About this chapter", with one note of the Aquifer Open Study Notes and the Aquifer credit. The data of all 16,923 notes is in the repository, ready for Task 49.
+
+Arthur decided this on 2026-11-23. Read section 20 of `docs/DESIGN.md` first, and section 19 again. The pictures of the design are in `docs/screenshots/study-notes-design/`: `psalm3-panel-1440.png` and `psalm3-panel-390.png` are for this task.
+
+This task shows on the site: 132 psalms get the control "About this chapter". No other page changes, other than the Sources page.
+
+The accuracy review is "no", because this task writes no fact about the Bible. The numbers of sections 20.3 and 20.5 show that the words have no change.
+
+WARNING: Do not change a word, a quotation mark, or a spelling of a note. Section 20.3 has the four changes of the format that are permitted.
+
+WARNING: Do not show an Aquifer note without the Aquifer credit. Do not change a word of the credit. Section 20.6.
+
+WARNING: Do not build a part of sections 20.7 and 20.8. The switch "Study notes" and the notes at the verses are Task 49.
+
+WARNING: Do not change the Biblica notes, their files, or the panel of a chapter that has a Biblica note.
+
+WARNING: Do not put a string of a data file into the page as HTML with no check. The page makes only the elements of point 1 of section 20.3, with no attribute.
+
+WARNING: Do not get a file from a different server when the site runs. Do not put a color value in a component or in a CSS rule.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make screenshots in a folder outside the repository, at 1440 by 900 px and at 390 by 844 px, in the light mode: Psalms 3, Psalms 23 with "About this chapter" open, and Genesis 22 with "About this chapter" open. These are the "before" screenshots.
+2. Read `README.md` and `eng/metadata.json` of `https://github.com/BibleAquifer/AquiferOpenStudyNotes` at the commit of section 20.2. Compare the copyright line, the statement of the adaptation, the license, and the version with section 20.2. If they differ, stop and report.
+3. Copy the files of section 20.2 from that commit into `sources/aquifer/`, as section 20.3 says. Do not change them. Compare the git blob hash of each file with the tree of the commit.
+4. Add a section "15. Aquifer Open Study Notes" to `docs/DATA-SOURCES.md`, with the facts of section 20.2. Say for each fact if you verified it or if it is from the designer.
+5. Write `scripts/build-study-notes.mjs`. It makes the files of section 20.4. It checks each fact of section 20.3 and each number of section 20.5, and it stops with an error if one does not fit. It prints the numbers and the two SHA-256.
+6. Run the script. Compare each number and the two SHA-256 with sections 20.3 and 20.5. If one differs, stop and report. Do not change a number in `docs/DESIGN.md`.
+7. Build the panel of section 20.5 for the 132 psalms, with the Aquifer credit of section 20.6.
+8. Change the section "Notes on the chapters" of the Sources page to the words of section 20.9, without the sentence of Task 49.
+9. Unit tests:
+   - The SHA-256 of section 20.3, from the 66 files in `public/data/study/`.
+   - The files in `public/data/study/` have no element and no attribute other than those of point 1 of section 20.3.
+   - The numbers and the SHA-256 of section 20.5, from `about-psalms.json`.
+   - Psalms 3 gets the note with the `content_id` `24356`. Psalms 9 gets the note Psalms 9:1–10:18. Psalms 42 and Psalms 43 get the same note. Psalms 23 gets no Aquifer note.
+   - The range label "Psalms 42:1–43:5".
+10. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+    - Psalms 3: the control "About this chapter" is on the line of "About this book". The open panel has the label "Psalms 3:1–8", one paragraph, and the Aquifer credit with its exact words and its two addresses.
+    - Psalms 42: the open panel has the label "Psalms 42:1–43:5".
+    - A psalm whose note has a list: the open panel has the list items of the source, in their order. Select the psalm from the data, and name it in the report.
+    - Psalms 23: the open panel has the Biblica note and the note credit of section 19.8, and no Aquifer credit.
+    - Open Psalms 2, and scroll until Psalms 3 is on the page. Psalms 3 has the control, and the control opens the panel of Psalms 3.
+    - Each of the 150 psalms has the control "About this chapter". Test this from the data and on 5 psalms on the page.
+    - The request for `about-psalms.json` is stopped: Psalms 3 shows the control, and the open panel says "The notes did not load."
+    - Psalms 3 with the panel open at 390 px: the page has no horizontal scroll.
+    - The Sources page has the words of section 20.9 and their links.
+    - The axe check of Psalms 3 with the panel open, in the light mode and in the dark mode.
+11. Make the screenshots of step 1 again. Compare each pair. The pairs of Psalms 23 and of Genesis 22 must have 0 different pixels. In the pairs of Psalms 3, the only difference is the control "About this chapter".
+12. Make screenshots in `docs/screenshots/task-48/`, at 1440 by 900 px and at 390 by 844 px: Psalms 3 with the panel open in the light mode and in the dark mode, Psalms 42 with the panel open, and the psalm with a list of step 10. Compare Psalms 3 with the pictures of the design. Give each difference in the report.
+13. Run the reviewer agents of a page task. Ask the reviewer to compare the text of the 16,923 notes in `public/data/study/` with the source files, with its own code. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The numbers and the two SHA-256 of step 6 are those of `docs/DESIGN.md`.
+- The tests of steps 9 and 10 pass.
+- The pairs of Psalms 23 and of Genesis 22 of step 11 have 0 different pixels.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give in the report the size of the files in `public/data/study/`, with and without gzip, and the size of `dist`. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, `docs/BACKLOG.md`, `CLAUDE.md`, and `docs/screenshots/study-notes-design/` with this task.
+
+---
+
+## Task 49. Study notes, part 2: the switch "Study notes" and the notes at the verses
+
+Status: TODO
+
+Accuracy review: no
+
+Goal: a reader who sets the switch "Study notes" on gets one control below each paragraph or stanza that has a note. The control opens the notes of those verses, with the short credit.
+
+Arthur selected this form on 2026-11-23: option B of the pictures. Read sections 20.6, 20.7, 20.8, and 20.11 of `docs/DESIGN.md` first. The pictures of the design are in `docs/screenshots/study-notes-design/`: `verse-B-romans8-1440.png` and `verse-B-romans8-390.png` are for this task. `verse-A-romans8-1440.png` shows the option that Arthur did not select.
+
+This task shows on the site: the reading page gets the switch "Study notes". With the switch off, no page changes.
+
+Do this task only after Task 48 is DONE.
+
+WARNING: Do not change a word of a note or of the short credit. Do not show a block of notes without the short credit.
+
+WARNING: With the switch off, the reading page must be the page of Task 48, pixel for pixel, and it must not get a study file.
+
+WARNING: Do not add a mark, a number, or a control into a line of the Bible text. A control is after the last block of its group.
+
+WARNING: Do not make a link from the words of a note. A reference to a passage or to a different note is plain text in this task.
+
+WARNING: Do not open the notes with the pop-up of the links. The block is in the page, below its control.
+
+WARNING: Do not put a string of a data file into the page as HTML with no check. Do not put a color value in a component or in a CSS rule.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make the 26 light screenshots and the 26 dark screenshots of step 1 of Task 46 again, in a folder outside the repository. Add Romans 8, Psalms 3, and Mark 14 at 1440 by 900 px and at 390 by 844 px, in the light mode. These are the "before" screenshots.
+2. Write the rule of the groups of section 20.8 as one function, and the rule that gives each note its group. Use them in the script or in the page. Say in the report where they run.
+3. Unit tests for step 2, with the numbers of section 20.8: the 16,792 notes, the 10,562 groups with a note, the 3,663 groups with one verse, the 1,186 chapters, the three chapters with none, Mark 14, Matthew 26, Luke 22, the ten groups of Romans 8 with their verses, Genesis 22, Psalms 119, the three groups of Psalms 3, Psalms 142, Psalms 23, Revelation 12, 3 John, and the block of Exodus 20. If a number differs, stop and report. Do not change a number in `docs/DESIGN.md`.
+4. Build the switch of section 20.7.
+5. Build the control and the block of section 20.8, with the short credit of section 20.6.
+6. Add the sentence of Task 49 to the Sources page. Section 20.9.
+7. Unit tests for the note label: "Verse 3", "Verses 19–21", "Romans 5:1–8:39", "Title of the psalm", and "Verse 7" for the note `24105`.
+8. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+   - With no stored value, the switch shows "Off", Romans 8 has no control of this task, and the page makes no request for a file in `data/study/`.
+   - The reader sets the switch on: Romans 8 gets ten controls, with the words of section 20.8, each one after the last block of its group. The storage has "on". After a new load, the switch shows "On", and the controls are there.
+   - The control "Notes on verses 1 to 4" of Romans 8 opens a block with the note labels "Verse 1", "Verse 2", "Verse 3", and "Verse 4", in this order, and the short credit with its exact words and its three addresses. A second click closes the block.
+   - The first list item of the note of verse 3 has the words "the flesh" in italics.
+   - Psalms 3 with the switch on: three controls, "Notes on verse 1", "Notes on verses 2 to 6", and "Notes on verses 7 to 8". The note of "About this chapter" of Psalms 3 is not in a block.
+   - Psalms 7 with the switch on: the first block has the note label "Title of the psalm".
+   - Exodus 36 with the switch on: no control.
+   - The reader sets the switch on while verse 20 of Romans 8 is at the top of the page: verse 20 stays at the same place, with the tolerance of the test of the text size. The same for the change to off.
+   - With the switch on, the notes are the same in the three translations.
+   - At 1440 px, after a block of Romans 8 opens, each margin label is on the line of its verse.
+   - Romans 8 with each block open at 390 px: the page has no horizontal scroll.
+   - The request for the study file of Romans is stopped, with the switch on: the page shows the Bible text and no control, and the chapter shows as loaded.
+   - "About this chapter" of Romans 8 and of Psalms 3 is the same with the switch on and off.
+   - The axe check of Romans 8 with the switch on and one block open, in the light mode and in the dark mode.
+9. Make the screenshots of step 1 again, with the switch off. Compare each pair. Each pair must have 0 different pixels, other than the text list or the menu panel where it is open: there the only difference is the new row "Study notes".
+10. Make screenshots in `docs/screenshots/task-49/`, at 1440 by 900 px and at 390 by 844 px: the text list or the menu panel with the switch; Romans 8 with the switch on and the first block open, in the light mode and in the dark mode; Psalms 3 with the switch on and the second block open; Mark 14 with the switch on and all blocks closed. Compare Romans 8 with the pictures of the design. Give each difference in the report.
+11. Remove item 7 from `docs/BACKLOG.md`, by the rule at the top of that file. Add its two lines "Other sources" as a new item 8, with the idea of links for the references in the notes, from section 20.11 of `docs/DESIGN.md`.
+12. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The numbers of step 3 are those of `docs/DESIGN.md`.
+- The tests of steps 3, 7, and 8 pass.
+- The pairs of step 9 have 0 different pixels, with the one exception of step 9.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give in the report the largest study file that a page gets, with and without gzip, and the time from the click on the switch to the controls on Romans 8.

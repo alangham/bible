@@ -552,3 +552,37 @@ How the site meets each point:
 ### The data on the site
 
 `scripts/build-notes.mjs` makes `public/data/notes/<book id>.json`, 66 files, 787,420 bytes. The script checks the facts of section 19.4 of `docs/DESIGN.md` and the numbers of section 19.5, and it stops with an error if one does not fit. The site shows no link to the key terms of the files.
+
+## 15. Aquifer Open Study Notes: the psalms in "About this chapter"
+
+From Task 48, the panel "About this chapter" of the 132 psalms with no Biblica note shows one Aquifer Open Study Note, with no change to a word. Section 20 of `docs/DESIGN.md` has the design. Arthur approved this source on 2026-11-23. Task 49 adds the notes at the verses.
+
+| Fact | Value | Verified by Claude Code? |
+|---|---|---|
+| Name | Aquifer Open Study Notes | Verified on 2026-11-23: the title in `README.md` and the field `resource_metadata.title` in `eng/metadata.json`. |
+| Copyright line | Aquifer Open Study Notes © 2026 Mission Mutual | Verified on 2026-11-23: `README.md`, and the fields `license_info.copyright.dates` "2026" and `license_info.copyright.holder.name` "Mission Mutual" in `eng/metadata.json`. |
+| Adaptation | An adaptation of the Tyndale Open Study Notes © 2023 Tyndale House Publishers, made by Mission Mutual | Verified on 2026-11-23: the section "License" of `README.md`, and the field `adaptation_notice` of `eng/metadata.json`, have the same statement. |
+| License | Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), for the Tyndale notes and for the adaptation | Verified on 2026-11-23: `README.md` gives CC BY-SA 4.0 for the two. The field `licenses` of `eng/metadata.json` has the name "CC BY-SA 4.0 license". |
+| Address of the license | `https://creativecommons.org/licenses/by-sa/4.0/` | Verified on 2026-11-23. The two files give `https://creativecommons.org/licenses/by-sa/4.0/legalcode.en`. The site uses the canonical address, as in section 14. |
+| The license of the Tyndale Open Study Notes on the site of Tyndale | `https://tyndaleopenresources.com/` gives CC BY-SA 4.0 and asks for no special words in a credit | From the designer, section 20.2 of `docs/DESIGN.md`. Claude Code did not read this page. |
+| Address of the files | `https://github.com/BibleAquifer/AquiferOpenStudyNotes` | Verified on 2026-11-23. |
+| Commit | `d903df3d9bdbd6399fe83fc3d7046ea29e024962`, of 2026-11-17 | Verified on 2026-11-23: the GitHub API gives the date 2026-11-17T18:19:01Z for this commit. |
+| Version | 1.1.2, the field `resource_metadata.version` of `eng/metadata.json` | Verified on 2026-11-23. |
+| Files in the repository of the site | `sources/aquifer/json/01.content.json` to `66.content.json`, `sources/aquifer/metadata.json`, and `sources/aquifer/README.md`, from `eng/json/`, `eng/metadata.json`, and `README.md` of the commit | Verified on 2026-11-23: the git blob hash of each of the 68 files is the hash in the tree of the commit. 0 files differ. |
+| An adaptation notice for English | `eng/metadata.json` has `showAdaptationNoticeForEnglish: false` | Verified on 2026-11-23. Not verified: that the English files have the words of the adaptation by Mission Mutual with no change. |
+| A notice of the disclaimer of warranties | `README.md` and `eng/metadata.json` have none | Verified on 2026-11-23: the two files do not have the word "warranty". |
+
+### The license
+
+The license is the license of section 14, and the summary of section 14 applies. One point is more important here. Section 3(a)(1)(B) asks for a statement of the changes, and the material is an adaptation. So the Aquifer credit keeps the statement that the notes are an adaptation of the Tyndale Open Study Notes.
+
+How the site meets each point:
+
+- The site changes only the format of a note, by the four points of section 20.3 of `docs/DESIGN.md`. It removes the tags `<data>`, `<span>`, and `<a>`, the 6 empty `h3` elements, and the 22 `p` elements with no text: 20 empty, and 2 with only a `br`. It changes three character references to their characters. It changes no word. The SHA-256 of section 20.3 shows this, and `scripts/build-study-notes.mjs` and a unit test check it.
+- The Aquifer credit of section 20.6 of `docs/DESIGN.md` is below the note in each panel. It has the copyright line, the statement of the adaptation, the name of the license with a link to it, a link to the files, and the sentence "The words have no changes."
+- The Sources page has the section "Notes on the chapters", with the same facts and the version.
+- The site uses the names "Mission Mutual" and "Tyndale House Publishers" as a reference only, with no logo. The Sources page says that they have no connection with this site.
+
+### The data on the site
+
+`scripts/build-study-notes.mjs` makes `public/data/study/<book id>.json`, 66 files, and `public/data/study/about-psalms.json`. The 67 files have 5,788,414 bytes, and 1,914,911 bytes with gzip. The script checks the facts of section 20.3 of `docs/DESIGN.md` and the numbers of section 20.5, and it stops with an error if one does not fit. The site shows no link of the files. Until Task 49, the page uses only `about-psalms.json`.

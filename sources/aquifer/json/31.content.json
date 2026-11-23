@@ -1,0 +1,1137 @@
+[
+{
+"content_id": "23043",
+"reference_id": 22211,
+"version": "1.0.4",
+"title": "Obadiah 1:1",
+"media_type": "Text",
+"index_reference": "31001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The word <em>vision</em> introduces a prophetic book (<data class=\"bible-ref\" data-start-ref=\"23001001\" data-end-ref=\"23001001\">Isaiah 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"34001001\" data-end-ref=\"34001001\">Nahum 1:1</data>). It also describes what a prophet saw or sensed as a divine message (<data class=\"bible-ref\" data-start-ref=\"26012026\" data-end-ref=\"26012027\">Ezekiel 12:26–27</data>; <data class=\"bible-ref\" data-start-ref=\"27008001\" data-end-ref=\"27008001\">Daniel 8:1</data>). A vision not from the Lord was false (<data class=\"bible-ref\" data-start-ref=\"24014014\" data-end-ref=\"24014014\">Jeremiah 14:14</data>; <data class=\"bible-ref\" data-start-ref=\"24023016\" data-end-ref=\"24023016\">23:16</data>), proven by its failure to happen (<data class=\"bible-ref\" data-start-ref=\"26012022\" data-end-ref=\"26012024\">Ezekiel 12:22–24</data>). In contrast, true visions of events, whether near or far, do happen (<data class=\"bible-ref\" data-start-ref=\"26012025\" data-end-ref=\"26012025\">Ezekiel 12:25</data>; <data class=\"bible-ref\" data-start-ref=\"35002003\" data-end-ref=\"35002003\">Habakkuk 2:3</data>). Prophetic visions appeared in different forms, like dreams or extrasensory experiences (for example, <data class=\"bible-ref\" data-start-ref=\"27008002\" data-end-ref=\"27008002\">Daniel 8:2</data>). The lack of visions shows divine abandonment (<data class=\"bible-ref\" data-start-ref=\"25002009\" data-end-ref=\"25002009\">Lamentations 2:9</data>; <data class=\"bible-ref\" data-start-ref=\"26007026\" data-end-ref=\"26007026\">Ezekiel 7:26</data>; <data class=\"bible-ref\" data-start-ref=\"33003006\" data-end-ref=\"33003006\">Micah 3:6</data>). </p></li><li><p>Obadiah was a common Hebrew name meaning “servant of the Lord.” The prophet Obadiah is unknown outside this book. </p></li><li><p><span><em>an envoy has been sent among the nations</em></span>: In ancient warfare, allies were contacted to join a military group to punish an enemy or defend against an attack. Here, the Sovereign Lord calls the nations to address Edom’s evil pride. </p></li><li><p><em>let us god to battle</em>: This is a willing group, but ironically, they will later be punished for their own evil actions (<data class=\"bible-ref\" data-start-ref=\"31001015\" data-end-ref=\"31001016\">Obadiah 1:15–16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001001",
+"start_ref_usfm": "OBA 1:1",
+"end_ref": "31001001",
+"end_ref_usfm": "OBA 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Obadiah.12",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Obadiah"
+},
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "23044",
+"reference_id": 22212,
+"version": "1.0.4",
+"title": "Obadiah 1:2–4",
+"media_type": "Text",
+"index_reference": "31001002-31001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>I will make you small</em></span>: Several messages of judgment describe Edom’s specific sins against Israel (<data class=\"bible-ref\" data-start-ref=\"31001010\" data-end-ref=\"31001014\">Obadiah 1:10–14</data>; <data class=\"bible-ref\" data-start-ref=\"24049007\" data-end-ref=\"24049022\">Jeremiah 49:7–22</data>; <data class=\"bible-ref\" data-start-ref=\"26025012\" data-end-ref=\"26025014\">Ezekiel 25:12–14</data>; <data class=\"bible-ref\" data-start-ref=\"26036005\" data-end-ref=\"26036005\">36:5</data>). Edom often appears among the nations that opposed Israel and the Lord (<data class=\"bible-ref\" data-start-ref=\"23034001\" data-end-ref=\"23034017\">Isaiah 34</data>; <data class=\"bible-ref\" data-start-ref=\"26035001\" data-end-ref=\"26036038\">Ezekiel 35–36</data>; <data class=\"bible-ref\" data-start-ref=\"30009001\" data-end-ref=\"30009015\">Amos 9:1–15</data>). </p></li><li><p><em>small among the nations … The pride of your heart</em>: Edom’s rocky landscape reflected the pride of its people. Just as their land was high and difficult to reach, the people of Edom thought they were secure and above others. The height of the mountain fortress that provided their security only highlights the height from which Edom would fall. Edomite princes were among the arrogant rulers of the nations (<data class=\"bible-ref\" data-start-ref=\"26032029\" data-end-ref=\"26032029\">Ezekiel 32:29</data>; compare <data class=\"bible-ref\" data-start-ref=\"01036001\" data-end-ref=\"01036043\">Genesis 36</data>; <data class=\"bible-ref\" data-start-ref=\"13001043\" data-end-ref=\"13001054\">1&nbsp;Chronicles 1:43–54</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001002",
+"start_ref_usfm": "OBA 1:2",
+"end_ref": "31001004",
+"end_ref_usfm": "OBA 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+}
+]
+}
+},
+{
+"content_id": "23048",
+"reference_id": 22216,
+"version": "1.0.4",
+"title": "Obadiah 1:5",
+"media_type": "Text",
+"index_reference": "31001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Edom&apos;s destroyers would take everything, unlike thieves and harvesters. Thieves would leave anything that might slow their escape. Harvesters would always leave some leftovers for the poor (<data class=\"bible-ref\" data-start-ref=\"05024019\" data-end-ref=\"05024019\">Deuteronomy 24:19</data>; compare <data class=\"bible-ref\" data-start-ref=\"08002001\" data-end-ref=\"08002023\">Ruth 2</data>; <data class=\"bible-ref\" data-start-ref=\"40012001\" data-end-ref=\"40012001\">Matthew 12:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001005",
+"start_ref_usfm": "OBA 1:5",
+"end_ref": "31001005",
+"end_ref_usfm": "OBA 1:5"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23047",
+"reference_id": 22215,
+"version": "1.0.4",
+"title": "Obadiah 1:5–7",
+"media_type": "Text",
+"index_reference": "31001005-31001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Babylonians destroyed Jerusalem completely. Edom shared in the loot, so they deserved the same punishment (see <data class=\"bible-ref\" data-start-ref=\"31001015\" data-end-ref=\"31001018\">Obadiah 1:15–18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001005",
+"start_ref_usfm": "OBA 1:5",
+"end_ref": "31001007",
+"end_ref_usfm": "OBA 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "group:Edom",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Edomites"
+},
+{
+"id": "keyterm:Covenant",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Covenant"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "keyterm:Understanding",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Understanding"
+},
+{
+"id": "realia:Trap",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Trap"
+}
+]
+}
+},
+{
+"content_id": "23049",
+"reference_id": 22217,
+"version": "1.0.4",
+"title": "Obadiah 1:6",
+"media_type": "Text",
+"index_reference": "31001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Esau</em>: The Hebrew text uses the name of Esau, who was Jacob’s brother. This shows Edom broke a brotherly relationship (<data class=\"bible-ref\" data-start-ref=\"31001010\" data-end-ref=\"31001014\">Obadiah 1:10–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001006",
+"start_ref_usfm": "OBA 1:6",
+"end_ref": "31001006",
+"end_ref_usfm": "OBA 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "group:Edom",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edomites"
+}
+]
+}
+},
+{
+"content_id": "23050",
+"reference_id": 22218,
+"version": "1.0.4",
+"title": "Obadiah 1:7",
+"media_type": "Text",
+"index_reference": "31001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>men allied with you </em>(literally <em>men of the covenant</em>): Edom should have been Israel&apos;s ally, but instead, Edom made a covenant with Babylon. </p></li><li><p><em>men of peace</em> (paralleling <em>men of the covenant</em>): This was a fitting form of justice. Edom betrayed Israel, and later, Babylon betrayed Edom in the same way.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001007",
+"start_ref_usfm": "OBA 1:7",
+"end_ref": "31001007",
+"end_ref_usfm": "OBA 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Understanding",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Understanding"
+},
+{
+"id": "keyterm:Covenant",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Covenant"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "realia:Trap",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Trap"
+}
+]
+}
+},
+{
+"content_id": "23051",
+"reference_id": 22219,
+"version": "1.0.4",
+"title": "Obadiah 1:8",
+"media_type": "Text",
+"index_reference": "31001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>In that day</em>: The Hebrew word <em>yom</em>, meaning “day,” appears 12 times in <data class=\"bible-ref\" data-start-ref=\"31001008\" data-end-ref=\"31001015\">Obadiah 1:8–15</data>. It is often translated as “when” or “at that time.” The time mentioned in <data class=\"bible-ref\" data-start-ref=\"31001008\" data-end-ref=\"31001008\">Obadiah 1:8</data> marks the start of the end, when God intervenes to change the fate of his people. </p></li><li><p><span><em>wise men … men of understanding</em></span>: Edom was proud of its wisdom tradition (see <data class=\"bible-ref\" data-start-ref=\"24049007\" data-end-ref=\"24049007\">Jeremiah 49:7</data>). For instance, the book of Job takes place in Edomite land.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001008",
+"start_ref_usfm": "OBA 1:8",
+"end_ref": "31001008",
+"end_ref_usfm": "OBA 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Understanding",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Understanding"
+},
+{
+"id": "place:EsauMount",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mount Esau"
+}
+]
+}
+},
+{
+"content_id": "23033",
+"reference_id": 22201,
+"version": "1.0.4",
+"title": "Obadiah 1:10–14",
+"media_type": "Text",
+"index_reference": "31001010-31001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Because of the violence against your brother Jacob</em></span>: The reason for Esau’s condemnation is explained in <data class=\"bible-ref\" data-start-ref=\"31001010\" data-end-ref=\"31001010\">Obadiah 1:10</data> (see also <data class=\"bible-ref\" data-start-ref=\"23034001\" data-end-ref=\"23034017\">Isaiah 34</data>; <data class=\"bible-ref\" data-start-ref=\"24049007\" data-end-ref=\"24049022\">Jeremiah 49:7–22</data>; <data class=\"bible-ref\" data-start-ref=\"29003019\" data-end-ref=\"29003019\">Joel 3:19</data>; <data class=\"bible-ref\" data-start-ref=\"30001011\" data-end-ref=\"30001012\">Amos 1:11–12</data>) and expanded in <data class=\"bible-ref\" data-start-ref=\"31001011\" data-end-ref=\"31001014\">Obadiah 1:11–14</data>, where Edom’s betrayal is described. In legal terms, these verses provide evidence for the charge of breaking a covenant.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001010",
+"start_ref_usfm": "OBA 1:10",
+"end_ref": "31001014",
+"end_ref_usfm": "OBA 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Lot",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Lot"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "23034",
+"reference_id": 22202,
+"version": "1.0.4",
+"title": "Obadiah 1:11",
+"media_type": "Text",
+"index_reference": "31001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Outside of this book, we know little about Edom&apos;s role during the Babylonian invasions of Judah in 605, 597, and 586 BC. God&apos;s law requires responsibility toward one&apos;s neighbor (for example, <data class=\"bible-ref\" data-start-ref=\"05022001\" data-end-ref=\"05022004\">Deuteronomy 22:1–4</data>; compare <data class=\"bible-ref\" data-start-ref=\"40025041\" data-end-ref=\"40025046\">Matthew 25:41–46</data>), especially when there is a specific <span><em>covenant of brotherhood</em></span> (<data class=\"bible-ref\" data-start-ref=\"30001009\" data-end-ref=\"30001009\">Amos 1:9</data>) or a historical relationship which biblical writers considered a relationship between brothers (see <data class=\"resource-ref\" data-content-id=\"23049\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Obadiah 1:6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001011",
+"start_ref_usfm": "OBA 1:11",
+"end_ref": "31001011",
+"end_ref_usfm": "OBA 1:11"
+}
+],
+"resource": [
+{
+"reference_id": "22217",
+"content_id": "23049",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Obadiah 1:6",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Lot",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Lot"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "23036",
+"reference_id": 22204,
+"version": "1.0.4",
+"title": "Obadiah 1:12",
+"media_type": "Text",
+"index_reference": "31001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The tribes of Israel were relatives of Edom (literally <em>brother;</em> compare <data class=\"bible-ref\" data-start-ref=\"04020014\" data-end-ref=\"04020014\">Numbers 20:14</data>). </p></li><li><p>Edom and other nearby nations mistakenly believed that making peace with Nebuchadnezzar in 586&nbsp;BC would give them relief. However, their time of judgment would come.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001012",
+"start_ref_usfm": "OBA 1:12",
+"end_ref": "31001012",
+"end_ref_usfm": "OBA 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "23035",
+"reference_id": 22203,
+"version": "1.0.4",
+"title": "Obadiah 1:12–14",
+"media_type": "Text",
+"index_reference": "31001012-31001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>All societies are responsible for wrongdoings, like those of Edom (see, for example, the messages against Israel’s neighbors in <data class=\"bible-ref\" data-start-ref=\"30001003\" data-end-ref=\"30002003\">Amos 1:3–2:3</data>). The Edomites committed sins against Judah by helping the Babylonians loot the land (<data class=\"bible-ref\" data-start-ref=\"31001013\" data-end-ref=\"31001013\">Obadiah 1:13</data>) and either killing or sending back Judah’s escapees (<data class=\"bible-ref\" data-start-ref=\"31001014\" data-end-ref=\"31001014\">1:14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001012",
+"start_ref_usfm": "OBA 1:12",
+"end_ref": "31001014",
+"end_ref_usfm": "OBA 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "23038",
+"reference_id": 22206,
+"version": "1.0.4",
+"title": "Obadiah 1:15",
+"media_type": "Text",
+"index_reference": "31001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>The Day of the LORD is near</em>: The phrase <em>the day of the Lord</em> sometimes referred to a specific event, like the destruction of Edom or Joel’s locust plague (<data class=\"bible-ref\" data-start-ref=\"29001015\" data-end-ref=\"29001015\">Joel 1:15</data>). In its final form, it represents God&apos;s final judgment on all godless nations. </p></li><li><p><em>As you have done</em>: Those who face judgment will find their punishment reflects their evil actions.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001015",
+"start_ref_usfm": "OBA 1:15",
+"end_ref": "31001015",
+"end_ref_usfm": "OBA 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "23037",
+"reference_id": 22205,
+"version": "1.0.4",
+"title": "Obadiah 1:15–18",
+"media_type": "Text",
+"index_reference": "31001015-31001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The law of retribution (<em>lex talionis</em>) means we face the consequences of our actions. Edom&apos;s betrayal and pride would lead to her own downfall when vengeance came. Justice would deliver Israel and punish Edom (see also <data class=\"bible-ref\" data-start-ref=\"24049007\" data-end-ref=\"24049022\">Jeremiah 49:7–22</data>; <data class=\"bible-ref\" data-start-ref=\"26032029\" data-end-ref=\"26032029\">Ezekiel 32:29</data>; <data class=\"bible-ref\" data-start-ref=\"39001002\" data-end-ref=\"39001005\">Malachi 1:2–5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001015",
+"start_ref_usfm": "OBA 1:15",
+"end_ref": "31001018",
+"end_ref_usfm": "OBA 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "group:Edom",
+"type": "group",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Edomites"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "person:Joseph.10",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Joseph"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+}
+]
+}
+},
+{
+"content_id": "23039",
+"reference_id": 22207,
+"version": "1.0.4",
+"title": "Obadiah 1:17",
+"media_type": "Text",
+"index_reference": "31001017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Jerusalem would become a safe place for those who escape. A small group from Judah stayed in Jerusalem (see <data class=\"bible-ref\" data-start-ref=\"24040011\" data-end-ref=\"24040012\">Jeremiah 40:11–12</data>). The Lord’s mountain of refuge stands in stark contrast to Edom’s failed cliff fortresses. </p></li><li><p><em>their possession</em>: The land God gave to Abraham (<data class=\"bible-ref\" data-start-ref=\"01012001\" data-end-ref=\"01012007\">Genesis 12:1–7</data>) would be returned to his descendants forever. </p></li><li><p><em>the house of Jacob</em>: The prophet Malachi mentioned the promise of return for the people of Judah, but not for the Edomites (<data class=\"bible-ref\" data-start-ref=\"39001004\" data-end-ref=\"39001005\">Malachi 1:4–5</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001017",
+"start_ref_usfm": "OBA 1:17",
+"end_ref": "31001017",
+"end_ref_usfm": "OBA 1:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "23040",
+"reference_id": 22208,
+"version": "1.0.4",
+"title": "Obadiah 1:18",
+"media_type": "Text",
+"index_reference": "31001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The idea of retribution is shown through the image of a fierce fire destroying Edom completely. Babylonian King Nabonidus burned Edomite cities in 553 BC.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001018",
+"start_ref_usfm": "OBA 1:18",
+"end_ref": "31001018",
+"end_ref_usfm": "OBA 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Edom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edom"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "group:Edom",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Edomites"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "person:Joseph.10",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Joseph"
+}
+]
+}
+},
+{
+"content_id": "23041",
+"reference_id": 22209,
+"version": "1.0.4",
+"title": "Obadiah 1:19–20",
+"media_type": "Text",
+"index_reference": "31001019-31001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God&apos;s people in the Negev, the foothills of Judah, and Benjamin (three regions of Judah) would take over their neighbors&apos; territories (Edom, the Philistine plains, Gilead). Restored Israel would regain Ephraim and Samaria (territory lost from 722 to 721 BC to Assyria) and expand its borders to the lands promised during the conquest (the Philistine plains, the land of Gilead, the Phoenician coast). See also <data class=\"bible-ref\" data-start-ref=\"26047013\" data-end-ref=\"26047023\">Ezekiel 47:13–23</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001019",
+"start_ref_usfm": "OBA 1:19",
+"end_ref": "31001020",
+"end_ref_usfm": "OBA 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "place:Negeb",
+"type": "place",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Negev"
+},
+{
+"id": "place:Zarephath",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Zarephath"
+},
+{
+"id": "person:Benjamin",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Benjamin"
+},
+{
+"id": "place:Shephelah",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Shephelah"
+},
+{
+"id": "group:Benjamin",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Tribe of Benjamin"
+},
+{
+"id": "group:Canaan",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Canaanites"
+},
+{
+"id": "group:Ephraim",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Tribe of Ephraim"
+},
+{
+"id": "person:Ephraim",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ephraim"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "place:Gilead",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Gilead"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Sardis",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Sardis"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:EsauMount",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Mount Esau"
+},
+{
+"id": "group:Philistine",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Philistines"
+},
+{
+"id": "place:Philistine",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Philistia"
+}
+]
+}
+},
+{
+"content_id": "23042",
+"reference_id": 22210,
+"version": "1.0.4",
+"title": "Obadiah 1:19–21",
+"media_type": "Text",
+"index_reference": "31001019-31001021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>History moves toward a day when the Lord will rule over the whole world as his kingdom. This message gives hope to God’s people and warns the nations that ignore him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001019",
+"start_ref_usfm": "OBA 1:19",
+"end_ref": "31001021",
+"end_ref_usfm": "OBA 1:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "place:EsauMount",
+"type": "place",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Mount Esau"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Negeb",
+"type": "place",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Negev"
+},
+{
+"id": "person:Benjamin",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Benjamin"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Canaan",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Canaanites"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Ephraim",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Ephraim"
+},
+{
+"id": "place:Sardis",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Sardis"
+},
+{
+"id": "group:Philistine",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Philistines"
+},
+{
+"id": "place:Shephelah",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Shephelah"
+},
+{
+"id": "group:Benjamin",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Tribe of Benjamin"
+},
+{
+"id": "group:Ephraim",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Tribe of Ephraim"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "place:Philistine",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Philistia"
+},
+{
+"id": "place:Zarephath",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Zarephath"
+},
+{
+"id": "place:Gilead",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Gilead"
+}
+]
+}
+},
+{
+"content_id": "23045",
+"reference_id": 22213,
+"version": "1.0.4",
+"title": "Obadiah 1:20",
+"media_type": "Text",
+"index_reference": "31001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>in Sepharad</em>: This likely refers to a group of Jewish exiles in Asia Minor. They would return to the Negev. The scene matches some real events but also looks forward to the end times.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001020",
+"start_ref_usfm": "OBA 1:20",
+"end_ref": "31001020",
+"end_ref_usfm": "OBA 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Zarephath",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Zarephath"
+},
+{
+"id": "group:Canaan",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Canaanites"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "place:Sardis",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sardis"
+},
+{
+"id": "place:Negeb",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Negev"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+}
+]
+}
+},
+{
+"content_id": "23046",
+"reference_id": 22214,
+"version": "1.0.4",
+"title": "Obadiah 1:21",
+"media_type": "Text",
+"index_reference": "31001021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Mount Zion</em>: God&apos;s people would climb his holy mountain to rule over (or <em>to judge</em>) the mountains of their ancient enemy Edom. This would be a sign of the coming universal kingdom.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "31001021",
+"start_ref_usfm": "OBA 1:21",
+"end_ref": "31001021",
+"end_ref_usfm": "OBA 1:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:EsauMount",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mount Esau"
+}
+]
+}
+}
+]

@@ -1206,6 +1206,21 @@ html:has(.reading) {
   margin: 0 0 8px;
 }
 
+/*
+  The content of an Aquifer note: the values of section 20.8, Task 48. A paragraph has 8 px below it, also in a list
+  item. 20 px from the left side of the text to the text of an item, and 6 px below each item. The marks of a list
+  are those of the browser.
+*/
+.rd-notes .rd-aquifer ul,
+.rd-notes .rd-aquifer ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.rd-notes .rd-aquifer li {
+  margin: 0 0 6px;
+}
+
 .rd-notes .rd-range-label {
   margin: 14px 0 4px;
   color: var(--ink-secondary);

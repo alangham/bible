@@ -1,0 +1,2562 @@
+[
+{
+"content_id": "13002",
+"reference_id": 12170,
+"version": "1.0.4",
+"title": "Habakkuk 1:1",
+"media_type": "Text",
+"index_reference": "35001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The word message (or <em>oracle</em>) shows the book as God&apos;s revelation through his prophet (compare <data class=\"bible-ref\" data-start-ref=\"34001001\" data-end-ref=\"34001001\">Nahum 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"39001001\" data-end-ref=\"39001001\">Malachi 1:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001001",
+"start_ref_usfm": "HAB 1:1",
+"end_ref": "35001001",
+"end_ref_usfm": "HAB 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Habakkuk",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Habakkuk"
+},
+{
+"id": "keyterm:Utterance",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Utterance"
+},
+{
+"id": "keyterm:HaveAVision",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Have a Vision"
+}
+]
+}
+},
+{
+"content_id": "13004",
+"reference_id": 12172,
+"version": "1.0.4",
+"title": "Habakkuk 1:2",
+"media_type": "Text",
+"index_reference": "35001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>I call for help but You do not hear</em>: </span>The call and answer theme in Scripture often shows the speaker&apos;s trust in God as a refuge or guide (see <data class=\"bible-ref\" data-start-ref=\"19102001\" data-end-ref=\"19102002\">Psalm 102:1–2</data>). It also indicates a close relationship between the believer and God (<data class=\"bible-ref\" data-start-ref=\"19145018\" data-end-ref=\"19145018\">Psalm 145:18</data>; <data class=\"bible-ref\" data-start-ref=\"23065024\" data-end-ref=\"23065024\">Isaiah 65:24</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001002",
+"start_ref_usfm": "HAB 1:2",
+"end_ref": "35001002",
+"end_ref_usfm": "HAB 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "13003",
+"reference_id": 12171,
+"version": "1.0.4",
+"title": "Habakkuk 1:2–4",
+"media_type": "Text",
+"index_reference": "35001002-35001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>To Habakkuk, God seemed unconcerned about the evil spread throughout society in Judah (<data class=\"bible-ref\" data-start-ref=\"35001003\" data-end-ref=\"35001004\">Habakkuk 1:3–4</data>). God also seemed silent when Habakkuk complained about this evil (<data class=\"bible-ref\" data-start-ref=\"35001002\" data-end-ref=\"35001002\">1:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001002",
+"start_ref_usfm": "HAB 1:2",
+"end_ref": "35001004",
+"end_ref_usfm": "HAB 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+}
+]
+}
+},
+{
+"content_id": "13005",
+"reference_id": 12173,
+"version": "1.0.4",
+"title": "Habakkuk 1:3",
+"media_type": "Text",
+"index_reference": "35001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In Habakkuk’s time, destruction and violence were widespread in Judean society (see Habakkuk Book Introduction, “Setting”).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001003",
+"start_ref_usfm": "HAB 1:3",
+"end_ref": "35001003",
+"end_ref_usfm": "HAB 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+}
+]
+}
+},
+{
+"content_id": "13006",
+"reference_id": 12174,
+"version": "1.0.4",
+"title": "Habakkuk 1:4",
+"media_type": "Text",
+"index_reference": "35001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk shares his worry about the injustice and wrongdoing he observed everywhere (see <data class=\"bible-ref\" data-start-ref=\"35001012\" data-end-ref=\"35001013\">Habakkuk 1:12–13</data>; <data class=\"bible-ref\" data-start-ref=\"35002004\" data-end-ref=\"35002004\">2:4</data>,&nbsp;<data class=\"bible-ref\" data-start-ref=\"35002009\" data-end-ref=\"35002009\">9</data>), even in the courts<em>,</em> where the law failed to uphold justice.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001004",
+"start_ref_usfm": "HAB 1:4",
+"end_ref": "35001004",
+"end_ref_usfm": "HAB 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+}
+]
+}
+},
+{
+"content_id": "13008",
+"reference_id": 12176,
+"version": "1.0.4",
+"title": "Habakkuk 1:5",
+"media_type": "Text",
+"index_reference": "35001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Look … observe</em>: Two different Hebrew verbs are also translated as <em>see</em> and <em>tolerate</em> in <data class=\"bible-ref\" data-start-ref=\"35001003\" data-end-ref=\"35001003\">Habakkuk 1:3</data>. This creates a literary connection between Habakkuk’s questions in <data class=\"bible-ref\" data-start-ref=\"35001003\" data-end-ref=\"35001003\">Habakkuk 1:3</data> and God’s reply in <data class=\"bible-ref\" data-start-ref=\"35001005\" data-end-ref=\"35001011\">1:5–11</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001005",
+"start_ref_usfm": "HAB 1:5",
+"end_ref": "35001005",
+"end_ref_usfm": "HAB 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:BelieveIn",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe In"
+}
+]
+}
+},
+{
+"content_id": "13007",
+"reference_id": 12175,
+"version": "1.0.4",
+"title": "Habakkuk 1:5–11",
+"media_type": "Text",
+"index_reference": "35001005-35001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God&apos;s answer to Habakkuk&apos;s question is surprising. God would send a violent group (the Babylonians) to address the violence in Judah. The Babylonian army, well-trained and experienced in battle, was unstoppable.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001005",
+"start_ref_usfm": "HAB 1:5",
+"end_ref": "35001011",
+"end_ref_usfm": "HAB 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Chaldea",
+"type": "place",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Chaldea"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:BelieveIn",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Believe In"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "group:Chaldea",
+"type": "group",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Chaldeans"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "fauna:Wolf",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Wolf"
+},
+{
+"id": "fauna:Leopard",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Leopard"
+},
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+}
+]
+}
+},
+{
+"content_id": "13009",
+"reference_id": 12177,
+"version": "1.0.4",
+"title": "Habakkuk 1:7",
+"media_type": "Text",
+"index_reference": "35001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>from themselves</em>:</span> The Babylonians offered no relief from injustice. They followed their own laws, which confused the prophet about why God chose them to punish Judah.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001007",
+"start_ref_usfm": "HAB 1:7",
+"end_ref": "35001007",
+"end_ref_usfm": "HAB 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+}
+]
+}
+},
+{
+"content_id": "13010",
+"reference_id": 12178,
+"version": "1.0.4",
+"title": "Habakkuk 1:8",
+"media_type": "Text",
+"index_reference": "35001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The vivid images of cheetahs, wolves, and eagles show how fast and violent the Babylonian attacks against Judah were. These animals also show that the Babylonians hunted their enemies like prey (see <data class=\"bible-ref\" data-start-ref=\"24004013\" data-end-ref=\"24004013\">Jeremiah 4:13</data>; <data class=\"bible-ref\" data-start-ref=\"24048040\" data-end-ref=\"24048040\">48:40</data>; <data class=\"bible-ref\" data-start-ref=\"24049022\" data-end-ref=\"24049022\">49:22</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001008",
+"start_ref_usfm": "HAB 1:8",
+"end_ref": "35001008",
+"end_ref_usfm": "HAB 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "fauna:Leopard",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Leopard"
+},
+{
+"id": "fauna:Wolf",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Wolf"
+},
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+}
+]
+}
+},
+{
+"content_id": "13011",
+"reference_id": 12179,
+"version": "1.0.4",
+"title": "Habakkuk 1:9",
+"media_type": "Text",
+"index_reference": "35001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Babylonians took many people from Judah into exile between 605 and 586&nbsp;BC (see <data class=\"bible-ref\" data-start-ref=\"27001001\" data-end-ref=\"27001003\">Daniel 1:1–3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001009",
+"start_ref_usfm": "HAB 1:9",
+"end_ref": "35001009",
+"end_ref_usfm": "HAB 1:9"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "12996",
+"reference_id": 12164,
+"version": "1.0.4",
+"title": "Habakkuk 1:10",
+"media_type": "Text",
+"index_reference": "35001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the ancient Near East, armies often attacked cities by piling up earth to make ramps against city walls. This battle method is described in several places in the Bible (for example, <data class=\"bible-ref\" data-start-ref=\"12019032\" data-end-ref=\"12019032\">2 Kings 19:32</data>; <data class=\"bible-ref\" data-start-ref=\"34002001\" data-end-ref=\"34002001\">Nahum 2:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001010",
+"start_ref_usfm": "HAB 1:10",
+"end_ref": "35001010",
+"end_ref_usfm": "HAB 1:10"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "12997",
+"reference_id": 12165,
+"version": "1.0.4",
+"title": "Habakkuk 1:11",
+"media_type": "Text",
+"index_reference": "35001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>their own strength is their god</em></span>: The Babylonians worshiped many false gods. They proudly relied on their military power as another idol.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001011",
+"start_ref_usfm": "HAB 1:11",
+"end_ref": "35001011",
+"end_ref_usfm": "HAB 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Strength"
+}
+]
+}
+},
+{
+"content_id": "12999",
+"reference_id": 12167,
+"version": "1.0.4",
+"title": "Habakkuk 1:12",
+"media_type": "Text",
+"index_reference": "35001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Despite his confusion, Habakkuk did not abandon God. By saying <em>my God, my Holy One</em>, he showed his commitment to the Lord before asking important questions about what God had revealed to him. </p></li><li><p>In light of God&apos;s character and covenant with Israel, Habakkuk was sure that God would not destroy his people.</p></li><li><p><em>to execute judgment</em>: Compare <data class=\"bible-ref\" data-start-ref=\"58012005\" data-end-ref=\"58012011\">Hebrews 12:5–11</data>. </p></li><li><p><em>O Rock</em>: This is a common image of God&apos;s faithfulness and strength (see <data class=\"bible-ref\" data-start-ref=\"05032015\" data-end-ref=\"05032015\">Deuteronomy 32:15</data>; <data class=\"bible-ref\" data-start-ref=\"09002002\" data-end-ref=\"09002002\">1 Samuel 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"19018002\" data-end-ref=\"19018002\">Psalm 18:2</data>; <data class=\"bible-ref\" data-start-ref=\"46010004\" data-end-ref=\"46010004\">1 Corinthians 10:4</data>; <data class=\"bible-ref\" data-start-ref=\"60002006\" data-end-ref=\"60002008\">1 Peter 2:6–8</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001012",
+"start_ref_usfm": "HAB 1:12",
+"end_ref": "35001012",
+"end_ref_usfm": "HAB 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "12998",
+"reference_id": 12166,
+"version": "1.0.4",
+"title": "Habakkuk 1:12–2.1",
+"media_type": "Text",
+"index_reference": "35001012-35002001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk struggled to understand how God&apos;s answer in <data class=\"bible-ref\" data-start-ref=\"35001005\" data-end-ref=\"35001011\">Habakkuk 1:5–11</data> fit with God&apos;s character. How could a holy and just God punish Judah using a people more unrighteous than they were?</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001012",
+"start_ref_usfm": "HAB 1:12",
+"end_ref": "35002001",
+"end_ref_usfm": "HAB 2:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.4114,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+},
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.3829,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "realia:CastingNet",
+"type": "realia",
+"confidence": 0.2971,
+"match_method": "canonical",
+"preferred_label": "Casting Net"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "realia:Fortification",
+"type": "realia",
+"confidence": 0.1829,
+"match_method": "canonical",
+"preferred_label": "Fortification"
+},
+{
+"id": "fauna:Iguana",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Monitor"
+},
+{
+"id": "realia:Harpoon",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Harpoon"
+},
+{
+"id": "fauna:Fish",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Fish"
+},
+{
+"id": "fauna:Lizard",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Lizard"
+},
+{
+"id": "fauna:Chameleon",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Chameleon"
+}
+]
+}
+},
+{
+"content_id": "13000",
+"reference_id": 12168,
+"version": "1.0.4",
+"title": "Habakkuk 1:14–15",
+"media_type": "Text",
+"index_reference": "35001014-35001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>fish … hook … dragnet</em>: Habakkuk describes the Babylonians as fishermen who pull conquered peoples in like fish, showing how easily they captured their enemies.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001014",
+"start_ref_usfm": "HAB 1:14",
+"end_ref": "35001015",
+"end_ref_usfm": "HAB 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.415,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+},
+{
+"id": "realia:CastingNet",
+"type": "realia",
+"confidence": 0.415,
+"match_method": "canonical",
+"preferred_label": "Casting Net"
+},
+{
+"id": "fauna:Iguana",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Monitor"
+},
+{
+"id": "realia:Harpoon",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Harpoon"
+},
+{
+"id": "fauna:Fish",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Fish"
+},
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "fauna:Lizard",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Lizard"
+},
+{
+"id": "fauna:Chameleon",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Chameleon"
+}
+]
+}
+},
+{
+"content_id": "13001",
+"reference_id": 12169,
+"version": "1.0.4",
+"title": "Habakkuk 1:16",
+"media_type": "Text",
+"index_reference": "35001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>See <data class=\"resource-ref\" data-content-id=\"12997\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Habakkuk 1:11</data>; compare <data class=\"bible-ref\" data-start-ref=\"62005021\" data-end-ref=\"62005021\">1&nbsp;John 5:21</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35001016",
+"start_ref_usfm": "HAB 1:16",
+"end_ref": "35001016",
+"end_ref_usfm": "HAB 1:16"
+}
+],
+"resource": [
+{
+"reference_id": "12165",
+"content_id": "12997",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Habakkuk 1:11",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "realia:CastingNet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Casting Net"
+},
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+}
+]
+}
+},
+{
+"content_id": "13015",
+"reference_id": 12183,
+"version": "1.0.4",
+"title": "Habakkuk 2:1",
+"media_type": "Text",
+"index_reference": "35002001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>I will stand at my guard post</em>: Like a sentinel on duty (a guard who watches for danger), Habakkuk waited with care and expectation to see how the Lord would answer his complaint. He was ready to listen, even if the Lord corrected him (see also <data class=\"bible-ref\" data-start-ref=\"10018024\" data-end-ref=\"10018028\">2&nbsp;Samuel 18:24–28</data>; <data class=\"bible-ref\" data-start-ref=\"12009017\" data-end-ref=\"12009020\">2&nbsp;Kings 9:17–20</data>; <data class=\"bible-ref\" data-start-ref=\"26033002\" data-end-ref=\"26033006\">Ezekiel 33:2–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002001",
+"start_ref_usfm": "HAB 2:1",
+"end_ref": "35002001",
+"end_ref_usfm": "HAB 2:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Fortification",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Fortification"
+}
+]
+}
+},
+{
+"content_id": "13019",
+"reference_id": 12187,
+"version": "1.0.4",
+"title": "Habakkuk 2:2",
+"media_type": "Text",
+"index_reference": "35002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God tells the prophet to write <em>the</em> <em>vision</em> clearly so people can understand, keep, and share it with others.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002002",
+"start_ref_usfm": "HAB 2:2",
+"end_ref": "35002002",
+"end_ref_usfm": "HAB 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:Tablet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Tablet"
+}
+]
+}
+},
+{
+"content_id": "13017",
+"reference_id": 12185,
+"version": "1.0.4",
+"title": "Habakkuk 2:2–5",
+"media_type": "Text",
+"index_reference": "35002002-35002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk&apos;s mission was to tell people that God&apos;s justice may seem slow, but it will definitely come.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002002",
+"start_ref_usfm": "HAB 2:2",
+"end_ref": "35002005",
+"end_ref_usfm": "HAB 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Hell",
+"type": "place",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Hell"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:Tablet",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Tablet"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Vine"
+}
+]
+}
+},
+{
+"content_id": "13016",
+"reference_id": 12184,
+"version": "1.0.4",
+"title": "Habakkuk 2:2–20",
+"media_type": "Text",
+"index_reference": "35002002-35002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God answers Habakkuk&apos;s second complaint (<data class=\"bible-ref\" data-start-ref=\"35001012\" data-end-ref=\"35002001\">Habakkuk 1:12–2:1</data>) but does not explain why he chose the Babylonians. Instead, he assures Habakkuk that he will punish all violence and injustice.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002002",
+"start_ref_usfm": "HAB 2:2",
+"end_ref": "35002020",
+"end_ref_usfm": "HAB 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.4789,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4684,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2474,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Idol",
+"type": "keyterm",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Idol"
+},
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "keyterm:Disgraced",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Be Disgraced"
+},
+{
+"id": "place:Hell",
+"type": "place",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Hell"
+},
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+},
+{
+"id": "realia:Tablet",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Tablet"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "realia:Beam",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Beam"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "13020",
+"reference_id": 12188,
+"version": "1.0.4",
+"title": "Habakkuk 2:3",
+"media_type": "Text",
+"index_reference": "35002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>it will surely come</em></span>: At a future time known only to the Lord, he will step into earth&apos;s history and bring it to a proper end. He will support the righteous and judge the wicked. God&apos;s people must wait patiently, knowing that the divine plan is on schedule (see <data class=\"bible-ref\" data-start-ref=\"58010035\" data-end-ref=\"58010038\">Hebrews 10:35–38</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002003",
+"start_ref_usfm": "HAB 2:3",
+"end_ref": "35002003",
+"end_ref_usfm": "HAB 2:3"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13021",
+"reference_id": 12189,
+"version": "1.0.4",
+"title": "Habakkuk 2:4",
+"media_type": "Text",
+"index_reference": "35002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>God knows when proud people live only for themselves. Their dishonest lives show that they are not righteous. They refuse God’s instruction and choose what seems right to them (<data class=\"bible-ref\" data-start-ref=\"20012015\" data-end-ref=\"20012015\">Proverbs 12:15</data>; <data class=\"bible-ref\" data-start-ref=\"20021008\" data-end-ref=\"20021008\">21:8</data>, <data class=\"bible-ref\" data-start-ref=\"20021029\" data-end-ref=\"20021029\">29</data>; <data class=\"bible-ref\" data-start-ref=\"20029027\" data-end-ref=\"20029027\">29:27</data>). In contrast, the righteous stand in the right relationship with God. They accept God’s righteous standards and live them out in their daily lives.</p></li><li><p><em>faith</em>: Hebrew <em>’emunah</em>. This word translates the Hebrew <em>’emunah</em> (&quot;steadfastness, trust&quot;). In Genesis, the same Hebrew root (<em>’mn</em>) describes Abram’s trust in God (<data class=\"bible-ref\" data-start-ref=\"01015006\" data-end-ref=\"01015006\">Genesis 15:6</data>). God transforms how people think and choose when they trust him so they can follow God’s holy standards faithfully. See also <data class=\"bible-ref\" data-start-ref=\"45001016\" data-end-ref=\"45001017\">Romans 1:16–17</data>; <data class=\"bible-ref\" data-start-ref=\"48003011\" data-end-ref=\"48003011\">Galatians 3:11</data>; <data class=\"bible-ref\" data-start-ref=\"58010037\" data-end-ref=\"58010039\">Hebrews 10:37–39</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002004",
+"start_ref_usfm": "HAB 2:4",
+"end_ref": "35002004",
+"end_ref_usfm": "HAB 2:4"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13023",
+"reference_id": 12191,
+"version": "1.0.4",
+"title": "Habakkuk 2:6–8",
+"media_type": "Text",
+"index_reference": "35002006-35002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>In the first of Habakkuk’s taunt songs, he condemns the Babylonians for plundering other nations. </p></li><li><p><em>him who amasses what is not his and makes himself rich with many loans</em>: The image compares the Babylonians to creditors (people who lend money) who demand harsh repayment. Their oppression causes those they exploit to rise up against them. Greed can damage the spiritual life of both individuals and nations (<data class=\"bible-ref\" data-start-ref=\"42012015\" data-end-ref=\"42012015\">Luke 12:15</data>; <data class=\"bible-ref\" data-start-ref=\"49005003\" data-end-ref=\"49005003\">Ephesians 5:3</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002006",
+"start_ref_usfm": "HAB 2:6",
+"end_ref": "35002008",
+"end_ref_usfm": "HAB 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+}
+]
+}
+},
+{
+"content_id": "13022",
+"reference_id": 12190,
+"version": "1.0.4",
+"title": "Habakkuk 2:6–20",
+"media_type": "Text",
+"index_reference": "35002006-35002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Five taunt songs describe God&apos;s future judgment on the Babylonians and others who act violently and unjustly (<data class=\"bible-ref\" data-start-ref=\"35002006\" data-end-ref=\"35002008\">Habakkuk 2:6–8</data>, <data class=\"bible-ref\" data-start-ref=\"35002009\" data-end-ref=\"35002011\">9–11</data>, <data class=\"bible-ref\" data-start-ref=\"35002012\" data-end-ref=\"35002014\">12–14</data>, <data class=\"bible-ref\" data-start-ref=\"35002015\" data-end-ref=\"35002017\">15–17</data>, <data class=\"bible-ref\" data-start-ref=\"35002018\" data-end-ref=\"35002020\">18–20</data>). God lets them bring about their own destruction. Those who suffer will repeat these taunts when the wicked face judgment (see <data class=\"bible-ref\" data-start-ref=\"35001014\" data-end-ref=\"35001017\">Habakkuk 1:14–17</data>). Each taunt includes: </p><ul><li><p>a statement of sorrow,</p></li><li><p>a judgment, and</p></li><li><p>the reason for God&apos;s judgment.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002006",
+"start_ref_usfm": "HAB 2:6",
+"end_ref": "35002020",
+"end_ref_usfm": "HAB 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.5133,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.42,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Idol",
+"type": "keyterm",
+"confidence": 0.1933,
+"match_method": "canonical",
+"preferred_label": "Idol"
+},
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "keyterm:Disgraced",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Be Disgraced"
+},
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "realia:Beam",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Beam"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "13024",
+"reference_id": 12192,
+"version": "1.0.4",
+"title": "Habakkuk 2:9–11",
+"media_type": "Text",
+"index_reference": "35002009-35002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the second taunt song, the Babylonians face condemnation for their dishonest actions. They used deceit to gain resources for building large houses, which cost them their lives.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002009",
+"start_ref_usfm": "HAB 2:9",
+"end_ref": "35002011",
+"end_ref_usfm": "HAB 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "realia:Beam",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Beam"
+}
+]
+}
+},
+{
+"content_id": "13012",
+"reference_id": 12180,
+"version": "1.0.4",
+"title": "Habakkuk 2:12–14",
+"media_type": "Text",
+"index_reference": "35002012-35002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>In the third taunt song, the Babylonians face condemnation for their murder and corruption, which they used to gain wealth and build their cities. God will turn their apparent gain into a total loss. </p></li><li><p><em>Earth will be filled</em>: Unlike violence and stolen wealth, the awareness of the Lord&apos;s glory will spread as widely as water in the ocean (<data class=\"bible-ref\" data-start-ref=\"23011009\" data-end-ref=\"23011009\">Isaiah 11:9</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002012",
+"start_ref_usfm": "HAB 2:12",
+"end_ref": "35002014",
+"end_ref_usfm": "HAB 2:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Woe"
+}
+]
+}
+},
+{
+"content_id": "13013",
+"reference_id": 12181,
+"version": "1.0.4",
+"title": "Habakkuk 2:15–17",
+"media_type": "Text",
+"index_reference": "35002015-35002017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the fourth taunt song, the Babylonians face condemnation for their shameful acts against people, animals, and the environment. They are like a man who pretends to be friendly but, after getting his neighbors drunk, takes everything from them. However, the Babylonians will face disgrace after drinking from the cup of the Lord’s judgment (see <data class=\"bible-ref\" data-start-ref=\"24025015\" data-end-ref=\"24025017\">Jeremiah 25:15–17</data>; compare <data class=\"bible-ref\" data-start-ref=\"43018011\" data-end-ref=\"43018011\">John 18:11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002015",
+"start_ref_usfm": "HAB 2:15",
+"end_ref": "35002017",
+"end_ref_usfm": "HAB 2:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Disgraced",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Be Disgraced"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "place:Lebanon",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Lebanon"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Woe"
+}
+]
+}
+},
+{
+"content_id": "13014",
+"reference_id": 12182,
+"version": "1.0.4",
+"title": "Habakkuk 2:18–20",
+"media_type": "Text",
+"index_reference": "35002018-35002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the fifth taunt song, the Babylonians face criticism for worshiping idols. Whether people carve or cast idols, they cannot save or teach their worshipers (<data class=\"bible-ref\" data-start-ref=\"23042017\" data-end-ref=\"23042017\">Isaiah 42:17</data>). Only the Lord truly deserves worship (<data class=\"bible-ref\" data-start-ref=\"35002020\" data-end-ref=\"35002020\">Habakkuk 2:20</data>; <data class=\"bible-ref\" data-start-ref=\"02020002\" data-end-ref=\"02020006\">Exodus 20:2–6</data>; compare <data class=\"bible-ref\" data-start-ref=\"21005001\" data-end-ref=\"21005002\">Ecclesiastes 5:1–2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002018",
+"start_ref_usfm": "HAB 2:18",
+"end_ref": "35002020",
+"end_ref_usfm": "HAB 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Idol",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Idol"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Money"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+}
+]
+}
+},
+{
+"content_id": "13018",
+"reference_id": 12186,
+"version": "1.0.4",
+"title": "Habakkuk 2:20",
+"media_type": "Text",
+"index_reference": "35002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The taunt songs end with a statement: The ruler of all nations is not a Babylonian idol but God who is holy (<data class=\"bible-ref\" data-start-ref=\"35002018\" data-end-ref=\"35002020\">Habakkuk 2:18–20</data>). Unlike the lifeless Babylonian idols, the living God resides in his holy temple. God&apos;s presence fills his heavenly sanctuary (<data class=\"bible-ref\" data-start-ref=\"23006001\" data-end-ref=\"23006005\">Isaiah 6:1–5</data>). During Habakkuk&apos;s time, God&apos;s presence filled the temple in Jerusalem (<data class=\"bible-ref\" data-start-ref=\"11008010\" data-end-ref=\"11008011\">1 Kings 8:10–11</data>). God controls all the earth and expects people to worship him in humble submission (<data class=\"bible-ref\" data-start-ref=\"19063001\" data-end-ref=\"19063004\">Psalm 63:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"24010001\" data-end-ref=\"24010010\">Jeremiah 10:1–10</data>; <data class=\"bible-ref\" data-start-ref=\"33007016\" data-end-ref=\"33007016\">Micah 7:16</data>; <data class=\"bible-ref\" data-start-ref=\"38002013\" data-end-ref=\"38002013\">Zechariah 2:13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35002020",
+"start_ref_usfm": "HAB 2:20",
+"end_ref": "35002020",
+"end_ref_usfm": "HAB 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "13025",
+"reference_id": 12193,
+"version": "1.0.4",
+"title": "Habakkuk 3:1–19",
+"media_type": "Text",
+"index_reference": "35003001-35003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk’s prophecy concludes with a prayer that has the style and language of a psalm (a song of prayer).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003001",
+"start_ref_usfm": "HAB 3:1",
+"end_ref": "35003019",
+"end_ref_usfm": "HAB 3:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3947,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.3211,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.1874,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Arrow",
+"type": "realia",
+"confidence": 0.1874,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "place:Teman",
+"type": "place",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Teman"
+},
+{
+"id": "place:ParanMount",
+"type": "place",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Mount Paran"
+},
+{
+"id": "person:Habakkuk",
+"type": "person",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Habakkuk"
+},
+{
+"id": "place:Cushan",
+"type": "place",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Cushan"
+},
+{
+"id": "keyterm:Oath",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Oath"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Anointed",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Anointed"
+},
+{
+"id": "keyterm:Arrow",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "keyterm:Majesty",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Majesty"
+},
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "place:Midian",
+"type": "place",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Midian"
+},
+{
+"id": "fauna:Deer",
+"type": "fauna",
+"confidence": 0.1242,
+"match_method": "canonical",
+"preferred_label": "Deer"
+},
+{
+"id": "realia:Tent",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Tent"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "flora:OliveTree",
+"type": "flora",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Olive Tree"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "realia:AnimalPen",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Animal Pen"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+},
+{
+"id": "realia:Bow",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Bow"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "13032",
+"reference_id": 12200,
+"version": "1.0.4",
+"title": "Habakkuk 3:2",
+"media_type": "Text",
+"index_reference": "35003002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Habakkuk stands in awe before the LORD, who sits enthroned in his holy temple (<data class=\"bible-ref\" data-start-ref=\"35002020\" data-end-ref=\"35002020\">Habakkuk 2:20</data>). </p></li><li><p>Because Judah will soon face punishment, Habakkuk prays to God. He asks the Lord, who acted powerfully to save Israel in the past, to act again. Habakkuk asks God to make his work of salvation known once more (see also <data class=\"bible-ref\" data-start-ref=\"19077001\" data-end-ref=\"19077020\">Psalm 77</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003002",
+"start_ref_usfm": "HAB 3:2",
+"end_ref": "35003002",
+"end_ref_usfm": "HAB 3:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "13034",
+"reference_id": 12202,
+"version": "1.0.4",
+"title": "Habakkuk 3:3",
+"media_type": "Text",
+"index_reference": "35003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Teman</em>: This was one of Edom’s main cities (see also <data class=\"bible-ref\" data-start-ref=\"18002011\" data-end-ref=\"18002011\">Job 2:11</data>; <data class=\"bible-ref\" data-start-ref=\"24049007\" data-end-ref=\"24049007\">Jeremiah 49:7</data>). The term could refer to the whole region of Edom where the city was located (compare <data class=\"bible-ref\" data-start-ref=\"31001009\" data-end-ref=\"31001009\">Obadiah 1:9</data>). Habakkuk’s use of the term with Mount Paran suggests he meant the larger region. </p></li><li><p><em>Holy One</em> is an important title for God. It emphasizes that God is completely set apart and unlike anything or anyone else (<data class=\"bible-ref\" data-start-ref=\"35001012\" data-end-ref=\"35001012\">Habakkuk 1:12</data>; see also <data class=\"bible-ref\" data-start-ref=\"02015011\" data-end-ref=\"02015011\">Exodus 15:11</data>; <data class=\"bible-ref\" data-start-ref=\"12019022\" data-end-ref=\"12019022\">2 Kings 19:22</data>; <data class=\"bible-ref\" data-start-ref=\"19077013\" data-end-ref=\"19077013\">Psalm 77:13</data>; <data class=\"bible-ref\" data-start-ref=\"23006003\" data-end-ref=\"23006003\">Isaiah 6:3</data>). </p></li><li><p><em>Mount Paran</em>: The region of Paran included the mountain range west and south of Edom and northeast of Mount Sinai, as well as a large desert area in the Sinai Peninsula.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003003",
+"start_ref_usfm": "HAB 3:3",
+"end_ref": "35003003",
+"end_ref_usfm": "HAB 3:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Teman",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Teman"
+},
+{
+"id": "place:ParanMount",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Mount Paran"
+},
+{
+"id": "keyterm:Majesty",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Majesty"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "13033",
+"reference_id": 12201,
+"version": "1.0.4",
+"title": "Habakkuk 3:3–15",
+"media_type": "Text",
+"index_reference": "35003003-35003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The prophet praises God&apos;s power to save. These two praise sections (<data class=\"bible-ref\" data-start-ref=\"35003003\" data-end-ref=\"35003007\">Habakkuk 3:3–7</data> and <data class=\"bible-ref\" data-start-ref=\"35003008\" data-end-ref=\"35003015\">3:8–15</data>) poetically reflect on Israel&apos;s exodus. Although Habakkuk focuses on God&apos;s redemption of his people, his imagery sometimes includes ideas from ancient Near Eastern stories about the gods. For example:</p><ul><li><p>pestilence and plague (<data class=\"bible-ref\" data-start-ref=\"35003005\" data-end-ref=\"35003005\">Habakkuk 3:5</data>)</p></li><li><p>river and sea (<data class=\"bible-ref\" data-start-ref=\"35003008\" data-end-ref=\"35003008\">Habakkuk 3:8</data>) </p></li><li><p>sun and moon (<data class=\"bible-ref\" data-start-ref=\"35003011\" data-end-ref=\"35003011\">Habakkuk 3:11</data>)</p></li></ul><p>This imagery reminds Habakkuk&apos;s original audience that the Lord alone is the one true God who rules over all these things.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003003",
+"start_ref_usfm": "HAB 3:3",
+"end_ref": "35003015",
+"end_ref_usfm": "HAB 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2692,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.2092,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Arrow",
+"type": "realia",
+"confidence": 0.2092,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "place:Teman",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Teman"
+},
+{
+"id": "place:ParanMount",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Mount Paran"
+},
+{
+"id": "place:Cushan",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Cushan"
+},
+{
+"id": "keyterm:Oath",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Oath"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Anointed",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Anointed"
+},
+{
+"id": "keyterm:Arrow",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "keyterm:Majesty",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Majesty"
+},
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "place:Midian",
+"type": "place",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Midian"
+},
+{
+"id": "realia:Tent",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Tent"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "realia:Bow",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Bow"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+}
+]
+}
+},
+{
+"content_id": "13035",
+"reference_id": 12203,
+"version": "1.0.4",
+"title": "Habakkuk 3:4",
+"media_type": "Text",
+"index_reference": "35003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>like the sunlight</em></span>: The Lord, who appeared on Mount Sinai and filled the southern land with glory, now fills the heavens with splendor.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003004",
+"start_ref_usfm": "HAB 3:4",
+"end_ref": "35003004",
+"end_ref_usfm": "HAB 3:4"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13037",
+"reference_id": 12205,
+"version": "1.0.4",
+"title": "Habakkuk 3:5",
+"media_type": "Text",
+"index_reference": "35003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk speaks of pestilence and plague as if they were people. He describes them as soldiers in God’s army, carrying out God’s purposes (see <data class=\"bible-ref\" data-start-ref=\"05032024\" data-end-ref=\"05032024\">Deuteronomy 32:24</data>; <data class=\"bible-ref\" data-start-ref=\"02007001\" data-end-ref=\"02012051\">Exodus 7–12</data>; <data class=\"bible-ref\" data-start-ref=\"30004010\" data-end-ref=\"30004010\">Amos 4:10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003005",
+"start_ref_usfm": "HAB 3:5",
+"end_ref": "35003005",
+"end_ref_usfm": "HAB 3:5"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13036",
+"reference_id": 12204,
+"version": "1.0.4",
+"title": "Habakkuk 3:5–6",
+"media_type": "Text",
+"index_reference": "35003005-35003006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God is the divine warrior who helps his people (see <data class=\"bible-ref\" data-start-ref=\"35003008\" data-end-ref=\"35003015\">Habakkuk 3:8–15</data>; see also <data class=\"bible-ref\" data-start-ref=\"23063001\" data-end-ref=\"23063006\">Isaiah 63:1–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003005",
+"start_ref_usfm": "HAB 3:5",
+"end_ref": "35003006",
+"end_ref_usfm": "HAB 3:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13038",
+"reference_id": 12206,
+"version": "1.0.4",
+"title": "Habakkuk 3:7",
+"media_type": "Text",
+"index_reference": "35003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Midian was in the southern area east of the Jordan River (see <data class=\"bible-ref\" data-start-ref=\"01036035\" data-end-ref=\"01036035\">Genesis 36:35</data>). The nation was terrified by God&apos;s powerful presence (<data class=\"bible-ref\" data-start-ref=\"35003006\" data-end-ref=\"35003006\">Habakkuk 3:6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003007",
+"start_ref_usfm": "HAB 3:7",
+"end_ref": "35003007",
+"end_ref_usfm": "HAB 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Cushan",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Cushan"
+},
+{
+"id": "place:Midian",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Midian"
+},
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "realia:Tent",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Tent"
+}
+]
+}
+},
+{
+"content_id": "13040",
+"reference_id": 12208,
+"version": "1.0.4",
+"title": "Habakkuk 3:8",
+"media_type": "Text",
+"index_reference": "35003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>angry at the rivers … wrath against the streams</em>: See <data class=\"bible-ref\" data-start-ref=\"02007019\" data-end-ref=\"02007020\">Exodus 7:19–20</data>; <data class=\"bible-ref\" data-start-ref=\"02014015\" data-end-ref=\"02014031\">14:15–31</data>. </p></li><li><p><em>chariots of salvation</em>: This is an ironic reference to the Egyptian chariots that chased the Israelites when God helped them escape through the Red Sea (<data class=\"bible-ref\" data-start-ref=\"02014009\" data-end-ref=\"02014009\">Exodus 14:9</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003008",
+"start_ref_usfm": "HAB 3:8",
+"end_ref": "35003008",
+"end_ref_usfm": "HAB 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+}
+]
+}
+},
+{
+"content_id": "13039",
+"reference_id": 12207,
+"version": "1.0.4",
+"title": "Habakkuk 3:8–15",
+"media_type": "Text",
+"index_reference": "35003008-35003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord acts as a divine warrior for his people, using his power to save them. This picture of God as a divine warrior appears in both the Old Testament and the New Testament. </p><p>In the Old Testament, it is seen in Israel’s escape from Egypt and their journey to Mount Sinai (<data class=\"bible-ref\" data-start-ref=\"02015001\" data-end-ref=\"02015018\">Exodus 15:1–18</data>). It also appears as Israel approached the promised land from the south and during their early victories in the land (for example, <data class=\"bible-ref\" data-start-ref=\"07005004\" data-end-ref=\"07005005\">Judges 5:4–5</data>; <data class=\"bible-ref\" data-start-ref=\"19018008\" data-end-ref=\"19018016\">Psalms 18:8–16</data>; <data class=\"bible-ref\" data-start-ref=\"19077016\" data-end-ref=\"19077020\">77:16–20</data>). </p><p>A key New Testament example of this theme appears in Revelation, where Christ comes as a warrior to defeat evil and bring final justice (<data class=\"bible-ref\" data-start-ref=\"66019011\" data-end-ref=\"66019021\">Revelation 19:11–21</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003008",
+"start_ref_usfm": "HAB 3:8",
+"end_ref": "35003015",
+"end_ref_usfm": "HAB 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "realia:Arrow",
+"type": "realia",
+"confidence": 0.2525,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.2525,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "keyterm:Anointed",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Anointed"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Oath",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Oath"
+},
+{
+"id": "keyterm:Arrow",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:Bow",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Bow"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+}
+]
+}
+},
+{
+"content_id": "13041",
+"reference_id": 12209,
+"version": "1.0.4",
+"title": "Habakkuk 3:9–11",
+"media_type": "Text",
+"index_reference": "35003009-35003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Only God controls the forces of&nbsp;the natural world.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003009",
+"start_ref_usfm": "HAB 3:9",
+"end_ref": "35003011",
+"end_ref_usfm": "HAB 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Oath",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Oath"
+},
+{
+"id": "keyterm:Arrow",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "realia:Arrow",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "realia:Bow",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Bow"
+}
+]
+}
+},
+{
+"content_id": "13026",
+"reference_id": 12194,
+"version": "1.0.4",
+"title": "Habakkuk 3:10",
+"media_type": "Text",
+"index_reference": "35003010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>water</em>: See <data class=\"resource-ref\" data-content-id=\"13040\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Habakkuk 3:8</data> and also <data class=\"bible-ref\" data-start-ref=\"02015001\" data-end-ref=\"02015018\">Exodus 15:1–18</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003010",
+"start_ref_usfm": "HAB 3:10",
+"end_ref": "35003010",
+"end_ref_usfm": "HAB 3:10"
+}
+],
+"resource": [
+{
+"reference_id": "12208",
+"content_id": "13040",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Habakkuk 3:8",
+"language": "eng"
+}
+],
+"acai": []
+}
+},
+{
+"content_id": "13027",
+"reference_id": 12195,
+"version": "1.0.4",
+"title": "Habakkuk 3:11",
+"media_type": "Text",
+"index_reference": "35003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Sun and moon</em>: See <data class=\"bible-ref\" data-start-ref=\"06010012\" data-end-ref=\"06010013\">Joshua 10:12–13</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003011",
+"start_ref_usfm": "HAB 3:11",
+"end_ref": "35003011",
+"end_ref_usfm": "HAB 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Arrow",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Arrow"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Spear"
+}
+]
+}
+},
+{
+"content_id": "13028",
+"reference_id": 12196,
+"version": "1.0.4",
+"title": "Habakkuk 3:15",
+"media_type": "Text",
+"index_reference": "35003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Sea … waters</em>: The section ends the same way it started (<data class=\"bible-ref\" data-start-ref=\"35003008\" data-end-ref=\"35003008\">Habakkuk 3:8</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003015",
+"start_ref_usfm": "HAB 3:15",
+"end_ref": "35003015",
+"end_ref_usfm": "HAB 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Horse"
+}
+]
+}
+},
+{
+"content_id": "13029",
+"reference_id": 12197,
+"version": "1.0.4",
+"title": "Habakkuk 3:16",
+"media_type": "Text",
+"index_reference": "35003016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Even though realizing God&apos;s great power made Habakkuk tremble and lose strength, he would wait quietly for God&apos;s judgment (see <data class=\"bible-ref\" data-start-ref=\"35002003\" data-end-ref=\"35002003\">Habakkuk 2:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003016",
+"start_ref_usfm": "HAB 3:16",
+"end_ref": "35003016",
+"end_ref_usfm": "HAB 3:16"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "13030",
+"reference_id": 12198,
+"version": "1.0.4",
+"title": "Habakkuk 3:17–19",
+"media_type": "Text",
+"index_reference": "35003017-35003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>After recounting God’s powerful acts of redemption (<data class=\"bible-ref\" data-start-ref=\"35003002\" data-end-ref=\"35003015\">Habakkuk 3:2–15</data>) and pausing to reflect on them (<data class=\"bible-ref\" data-start-ref=\"35003016\" data-end-ref=\"35003016\">3:16</data>), Habakkuk reaffirms his trust in God as he ends his prayer. </p></li><li><p><em>Though … yet I will exult</em>: Even if God never gives material blessings to his people again, he is still worthy of all their trust and praise. No matter what happens, the prophet could rejoice, knowing that the Lord is not only Israel’s Redeemer but also the source of his own salvation.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003017",
+"start_ref_usfm": "HAB 3:17",
+"end_ref": "35003019",
+"end_ref_usfm": "HAB 3:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "fauna:Deer",
+"type": "fauna",
+"confidence": 0.3067,
+"match_method": "canonical",
+"preferred_label": "Deer"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:AnimalPen",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Animal Pen"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+},
+{
+"id": "flora:OliveTree",
+"type": "flora",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Olive Tree"
+}
+]
+}
+},
+{
+"content_id": "13031",
+"reference_id": 12199,
+"version": "1.0.4",
+"title": "Habakkuk 3:19",
+"media_type": "Text",
+"index_reference": "35003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Habakkuk gained his strength from God, his Savior (<data class=\"bible-ref\" data-start-ref=\"35003018\" data-end-ref=\"35003018\">Habakkuk 3:18</data>). He compared his spiritual journey to a deer quickly climbing mountaintops and moving gracefully over them (see <data class=\"bible-ref\" data-start-ref=\"19018032\" data-end-ref=\"19018033\">Psalm 18:32–33</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "35003019",
+"start_ref_usfm": "HAB 3:19",
+"end_ref": "35003019",
+"end_ref_usfm": "HAB 3:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Deer",
+"type": "fauna",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Deer"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+}
+]

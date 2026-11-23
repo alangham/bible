@@ -1,0 +1,870 @@
+[
+{
+"content_id": "14410",
+"reference_id": 13578,
+"version": "1.0.4",
+"title": "3 John 1:1",
+"media_type": "Text",
+"index_reference": "64001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>The elder</em></span>: See <data class=\"resource-ref\" data-content-id=\"14423\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 2&nbsp;John 1:1</data>.</p></li><li><p>The New Testament mentions several people named <em>Gaius</em> (see <data class=\"bible-ref\" data-start-ref=\"44019029\" data-end-ref=\"44019029\">Acts 19:29</data>; <data class=\"bible-ref\" data-start-ref=\"44020004\" data-end-ref=\"44020004\">20:4</data>; <data class=\"bible-ref\" data-start-ref=\"45016023\" data-end-ref=\"45016023\">Romans 16:23</data>; <data class=\"bible-ref\" data-start-ref=\"46001014\" data-end-ref=\"46001014\">1&nbsp;Corinthians 1:14</data>). It was a popular name in the Greco-Roman world.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001001",
+"start_ref_usfm": "3JN 1:1",
+"end_ref": "64001001",
+"end_ref_usfm": "3JN 1:1"
+}
+],
+"resource": [
+{
+"reference_id": "13591",
+"content_id": "14423",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 2 John 1:1",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "person:Gaius.4",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Gaius"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "14403",
+"reference_id": 13571,
+"version": "1.0.4",
+"title": "3 John 1:1–4",
+"media_type": "Text",
+"index_reference": "64001001-64001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The apostle John begins his letter with a common greeting. It includes:</p><ul><li><p>identifying himself and the person he is writing to,</p></li><li><p>using a friendly greeting, such as <em>beloved</em>,</p></li><li><p>offering wishes for the person&apos;s well-being, and</p></li><li><p> expressing thanks for their friendship.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001001",
+"start_ref_usfm": "3JN 1:1",
+"end_ref": "64001004",
+"end_ref_usfm": "3JN 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.5875,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "person:Gaius.4",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Gaius"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+}
+]
+}
+},
+{
+"content_id": "14411",
+"reference_id": 13579,
+"version": "1.0.4",
+"title": "3 John 1:3",
+"media_type": "Text",
+"index_reference": "64001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The traveling teachers (literally <em>brothers</em>) were probably John&apos;s messengers. They traveled between churches, teaching the good news about Jesus and encouraging Christians (see <data class=\"bible-ref\" data-start-ref=\"64001005\" data-end-ref=\"64001005\">1:5</data>, <data class=\"bible-ref\" data-start-ref=\"64001010\" data-end-ref=\"64001010\">10</data>). </p></li><li><p><span><em>your devotion to the truth</em></span>: Gaius remained faithful to the message about Jesus Christ that the apostles taught. The false teachers denied that Jesus truly came in the flesh or that his death was a real sacrifice (compare <data class=\"bible-ref\" data-start-ref=\"62004001\" data-end-ref=\"62004003\">1&nbsp;John 4:1–3</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001003",
+"start_ref_usfm": "3JN 1:3",
+"end_ref": "64001003",
+"end_ref_usfm": "3JN 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+}
+]
+}
+},
+{
+"content_id": "14412",
+"reference_id": 13580,
+"version": "1.0.4",
+"title": "3 John 1:4",
+"media_type": "Text",
+"index_reference": "64001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Like in 2 John (see <data class=\"bible-ref\" data-start-ref=\"63001001\" data-end-ref=\"63001004\">2&nbsp;John 1:1–4</data>), John emphasizes the importance of knowing and following the truth. This stands in contrast to Diotrephes and those who follow him (<data class=\"bible-ref\" data-start-ref=\"64001009\" data-end-ref=\"64001009\">3&nbsp;John 1:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001004",
+"start_ref_usfm": "3JN 1:4",
+"end_ref": "64001004",
+"end_ref_usfm": "3JN 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+}
+]
+}
+},
+{
+"content_id": "14414",
+"reference_id": 13582,
+"version": "1.0.4",
+"title": "3 John 1:5",
+"media_type": "Text",
+"index_reference": "64001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Gaius welcomed the traveling teachers (literally <em>the brothers</em>) who went from church to church to support the apostles’ teaching about Christ (<data class=\"bible-ref\" data-start-ref=\"64001007\" data-end-ref=\"64001008\">1:7–8</data>). By doing this, Gaius demonstrated that he had received the truth from the apostles and was faithful to God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001005",
+"start_ref_usfm": "3JN 1:5",
+"end_ref": "64001005",
+"end_ref_usfm": "3JN 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "14413",
+"reference_id": 13581,
+"version": "1.0.4",
+"title": "3 John 1:5–8",
+"media_type": "Text",
+"index_reference": "64001005-64001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>John encourages Gaius to keep supporting the traveling teachers that John sent out (<data class=\"bible-ref\" data-start-ref=\"64001003\" data-end-ref=\"64001003\">1:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001005",
+"start_ref_usfm": "3JN 1:5",
+"end_ref": "64001008",
+"end_ref_usfm": "3JN 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Ought",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Obligated"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "14415",
+"reference_id": 13583,
+"version": "1.0.4",
+"title": "3 John 1:6",
+"media_type": "Text",
+"index_reference": "64001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The church mentioned here was probably in Ephesus, where John was likely staying. Ephesus was an important port city in the province of Asia and was the fourth-largest city in the Roman Empire. It later became an important center for the Christian community (<data class=\"bible-ref\" data-start-ref=\"44018019\" data-end-ref=\"44019041\">Acts 18:19–19:41</data>; <data class=\"bible-ref\" data-start-ref=\"54001003\" data-end-ref=\"54001003\">1&nbsp;Timothy 1:3</data>; <data class=\"bible-ref\" data-start-ref=\"60001001\" data-end-ref=\"60001001\">1&nbsp;Peter 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"66002001\" data-end-ref=\"66002007\">Revelation 2:1–7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001006",
+"start_ref_usfm": "3JN 1:6",
+"end_ref": "64001006",
+"end_ref_usfm": "3JN 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+}
+]
+}
+},
+{
+"content_id": "14416",
+"reference_id": 13584,
+"version": "1.0.4",
+"title": "3 John 1:7–8",
+"media_type": "Text",
+"index_reference": "64001007-64001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>On behalf of the Name</em>: John did not need to specify whose name this was because early Christians understood that <em>the Name</em> referred to Jesus Christ (see <data class=\"bible-ref\" data-start-ref=\"44005041\" data-end-ref=\"44005041\">Acts 5:41</data>).</p></li><li><p>The traveling teachers had chosen to accept nothing offered to them from people who are not Christians. Instead, they relied on the churches for support. Christians who give support to trustworthy traveling teachers share in their work as those teachers spread the truth (see <data class=\"bible-ref\" data-start-ref=\"40010041\" data-end-ref=\"40010042\">Matthew 10:41–42</data>; <data class=\"bible-ref\" data-start-ref=\"50004015\" data-end-ref=\"50004019\">Philippians 4:15–19</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001007",
+"start_ref_usfm": "3JN 1:7",
+"end_ref": "64001008",
+"end_ref_usfm": "3JN 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Ought",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Obligated"
+}
+]
+}
+},
+{
+"content_id": "14418",
+"reference_id": 13586,
+"version": "1.0.4",
+"title": "3 John 1:9",
+"media_type": "Text",
+"index_reference": "64001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>I have written to the church about this</em>: </span>This could refer to 1 John or to a letter that is now lost.</p></li><li><p>Diotrephes was proud and thought himself important. He was motivated by selfish ambition (see <data class=\"bible-ref\" data-start-ref=\"54003006\" data-end-ref=\"54003006\">1 Timothy 3:6</data>).</p></li><li><p><span><em>will not accept our instruction</em>: </span>This disagreement was a major issue that John addressed in 1 John (see, for example, <data class=\"bible-ref\" data-start-ref=\"62002019\" data-end-ref=\"62002019\">1 John 2:19</data>; <data class=\"bible-ref\" data-start-ref=\"62004005\" data-end-ref=\"62004006\">4:5–6</data>). Diotrephes rejected the teachers sent by John and removed any church members who accepted them. He wanted to lead the local church without answering to any outside authority.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001009",
+"start_ref_usfm": "3JN 1:9",
+"end_ref": "64001009",
+"end_ref_usfm": "3JN 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Diotrephes",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Diotrephes"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+}
+]
+}
+},
+{
+"content_id": "14417",
+"reference_id": 13585,
+"version": "1.0.4",
+"title": "3 John 1:9–12",
+"media_type": "Text",
+"index_reference": "64001009-64001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In these verses, John condemns Diotrephes and presents Demetrius as the model of a faithful Christian who lives according to the truth. John encourages Gaius to follow the example of Demetrius<em>.</em></p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001009",
+"start_ref_usfm": "3JN 1:9",
+"end_ref": "64001012",
+"end_ref_usfm": "3JN 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "person:Diotrephes",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Diotrephes"
+},
+{
+"id": "person:Demetrius",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Demetrius"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+}
+]
+}
+},
+{
+"content_id": "14404",
+"reference_id": 13572,
+"version": "1.0.4",
+"title": "3 John 1:11",
+"media_type": "Text",
+"index_reference": "64001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>the one who does evil</em></span>: John condemns Diotrephes for not living by the Christian rule of love (<data class=\"bible-ref\" data-start-ref=\"62003010\" data-end-ref=\"62003014\">1&nbsp;John 3:10–14</data>). This was how Gaius could be sure that Diotrephes was not living according to the truth. This applies to all who refuse to accept the apostolic teaching about Jesus Christ and refuse to live in fellowship with others who do.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001011",
+"start_ref_usfm": "3JN 1:11",
+"end_ref": "64001011",
+"end_ref_usfm": "3JN 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "14405",
+"reference_id": 13573,
+"version": "1.0.4",
+"title": "3 John 1:12",
+"media_type": "Text",
+"index_reference": "64001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Demetrius was the opposite of Diotrephes. Demetrius was a clear example of a person who knows the truth and lives according to it (<data class=\"bible-ref\" data-start-ref=\"64001003\" data-end-ref=\"64001003\">1:3</data>). His name appears at the end of the letter. This suggests that he was the person who carried John’s letter to Gaius (compare <data class=\"bible-ref\" data-start-ref=\"51004007\" data-end-ref=\"51004009\">Colossians 4:7–9</data>; <data class=\"bible-ref\" data-start-ref=\"60005012\" data-end-ref=\"60005012\">1&nbsp;Peter 5:12</data>).</p></li><li><p><span><em>you know that our testimony is true</em></span>: John wanted to protect his honor as a trustworthy elder for these churches. He did not want Diotrephes or other false teachers to challenge or replace his leadership.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001012",
+"start_ref_usfm": "3JN 1:12",
+"end_ref": "64001012",
+"end_ref_usfm": "3JN 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Demetrius",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Demetrius"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+}
+]
+}
+},
+{
+"content_id": "14407",
+"reference_id": 13575,
+"version": "1.0.4",
+"title": "3 John 1:13",
+"media_type": "Text",
+"index_reference": "64001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p> <em>with pen and ink (</em>literally<em> ink and reed</em>): n ancient times, people often wrote with a pen made from a reed and with black carbon ink (see also <data class=\"bible-ref\" data-start-ref=\"63001012\" data-end-ref=\"63001012\">2&nbsp;John 1:12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001013",
+"start_ref_usfm": "3JN 1:13",
+"end_ref": "64001013",
+"end_ref_usfm": "3JN 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Pen",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Pen"
+},
+{
+"id": "realia:Ink",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Ink"
+},
+{
+"id": "flora:Reed",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Reed"
+}
+]
+}
+},
+{
+"content_id": "14406",
+"reference_id": 13574,
+"version": "1.0.4",
+"title": "3 John 1:13–15",
+"media_type": "Text",
+"index_reference": "64001013-64001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>As in 2 John, the end of 3 John shows John’s desire to visit in person and make sure the instructions in this letter are followed.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001013",
+"start_ref_usfm": "3JN 1:13",
+"end_ref": "64001015",
+"end_ref_usfm": "3JN 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Pen",
+"type": "realia",
+"confidence": 0.3067,
+"match_method": "canonical",
+"preferred_label": "Pen"
+},
+{
+"id": "realia:Ink",
+"type": "realia",
+"confidence": 0.3067,
+"match_method": "canonical",
+"preferred_label": "Ink"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "flora:Reed",
+"type": "flora",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Reed"
+}
+]
+}
+},
+{
+"content_id": "14408",
+"reference_id": 13576,
+"version": "1.0.4",
+"title": "3 John 1:14",
+"media_type": "Text",
+"index_reference": "64001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The English expression <em>face to face</em> is similar in meaning to the Greek expression used here, which means “mouth to mouth” (literally) (see also <data class=\"bible-ref\" data-start-ref=\"63001012\" data-end-ref=\"63001012\">2&nbsp;John 1:12</data>). In Greek, the phrase “mouth to mouth” is an idiom that means close, direct, and personal communication. It pictures two people speaking to each other without anything in between.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001014",
+"start_ref_usfm": "3JN 1:14",
+"end_ref": "64001014",
+"end_ref_usfm": "3JN 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+}
+]
+}
+},
+{
+"content_id": "14409",
+"reference_id": 13577,
+"version": "1.0.4",
+"title": "3 John 1:14–15",
+"media_type": "Text",
+"index_reference": "64001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>John closes his letter with his farewell and with greetings to others.</p></li><li><p><em>Peace to you</em>: This was a traditional Jewish greeting (<data class=\"bible-ref\" data-start-ref=\"40010012\" data-end-ref=\"40010012\">Matthew 10:12</data>; <data class=\"bible-ref\" data-start-ref=\"42010005\" data-end-ref=\"42010006\">Luke 10:5–6</data>). It became more meaningful for Christians because Jesus used it after his resurrection (<data class=\"bible-ref\" data-start-ref=\"43020019\" data-end-ref=\"43020021\">John 20:19–21</data>, <data class=\"bible-ref\" data-start-ref=\"43020026\" data-end-ref=\"43020026\">26</data>).</p></li><li><p><span><em>Greet each of our friends there by name</em></span>: John expected Gaius to greet the friends. This meant those who accept the good news about Jesus taught by the apostles and live according to the truth (compare <data class=\"bible-ref\" data-start-ref=\"64001003\" data-end-ref=\"64001004\">3&nbsp;John 1:3–4</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001015",
+"start_ref_usfm": "3JN 1:15",
+"end_ref": "64001015",
+"end_ref_usfm": "3JN 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+}
+]
+}
+}
+]

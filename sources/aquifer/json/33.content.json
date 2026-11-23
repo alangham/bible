@@ -1,0 +1,6517 @@
+[
+{
+"content_id": "22303",
+"reference_id": 21471,
+"version": "1.0.4",
+"title": "Micah 1:1",
+"media_type": "Text",
+"index_reference": "33001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Micah</em> is likely a short form of Micaiah, which means “Who is like the Lord?” </p></li><li><p>Moresheth was a fortress city located southeast of Gath in the low hills of southwestern Judah. </p></li><li><p><em>Jotham, Ahaz, and Hezekiah</em> (see Micah Book Introduction, “Setting”): These three kings ruled for about 65 years in total, from about 750 to 686&nbsp;BC. </p></li><li><p>God gave his message to the prophet Micah through visions (special scenes or messages God showed him).</p></li><li><p>Samaria and Jerusalem were the capitals of northern Israel and Judah. Sometimes these city names refer to the entire countries.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001001",
+"start_ref_usfm": "MIC 1:1",
+"end_ref": "33001001",
+"end_ref_usfm": "MIC 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Moresheth",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Moresheth"
+},
+{
+"id": "person:Micah.6",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Micah"
+},
+{
+"id": "person:Ahaz",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ahaz"
+},
+{
+"id": "person:Jotham.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jotham"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "keyterm:HaveAVision",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Have a Vision"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "person:Hezekiah",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hezekiah"
+}
+]
+}
+},
+{
+"content_id": "22306",
+"reference_id": 21474,
+"version": "1.0.4",
+"title": "Micah 1:2",
+"media_type": "Text",
+"index_reference": "33001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Hear!</em>: This word translates the same Hebrew term used in the Shema, which begins with the command “Hear” in <data class=\"bible-ref\" data-start-ref=\"05006004\" data-end-ref=\"05006004\">Deuteronomy 6:4</data>. It is a call to listen carefully and respond with obedience.</p></li><li><p><em>His holy temple</em>: This refers to the Lord’s dwelling place in heaven, not to the corrupt temple in Jerusalem (<data class=\"bible-ref\" data-start-ref=\"33001002\" data-end-ref=\"33001003\">Micah 1:2–3</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001002",
+"start_ref_usfm": "MIC 1:2",
+"end_ref": "33001002",
+"end_ref_usfm": "MIC 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22305",
+"reference_id": 21473,
+"version": "1.0.4",
+"title": "Micah 1:2–7",
+"media_type": "Text",
+"index_reference": "33001002-33001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This oracle speaks about Samaria before 722 BC. In that year, Samaria was destroyed and its people were taken away into exile. The Sovereign Lord was coming to judge his people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001002",
+"start_ref_usfm": "MIC 1:2",
+"end_ref": "33001007",
+"end_ref_usfm": "MIC 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "flora:Pine",
+"type": "flora",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Stone Pine"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "realia:HighPlace",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "High Place"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+}
+]
+}
+},
+{
+"content_id": "22304",
+"reference_id": 21472,
+"version": "1.0.4",
+"title": "Micah 1:2–2.13",
+"media_type": "Text",
+"index_reference": "33001002-33002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This message of judgment focuses on key themes in Micah&apos;s prophecies. It shows God&apos;s decision to judge his people and send them into exile (<data class=\"bible-ref\" data-start-ref=\"33001016\" data-end-ref=\"33001016\">Micah 1:16</data>; <data class=\"bible-ref\" data-start-ref=\"33002004\" data-end-ref=\"33002005\">2:4–5</data>). However, it ends with the Lord&apos;s promise to save a small group from exile (<data class=\"bible-ref\" data-start-ref=\"33002012\" data-end-ref=\"33002013\">Micah 2:12–13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001002",
+"start_ref_usfm": "MIC 1:2",
+"end_ref": "33002013",
+"end_ref_usfm": "MIC 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.4464,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.3643,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "place:Maroth",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Maroth"
+},
+{
+"id": "place:Beth-ezel",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Beth-ezel"
+},
+{
+"id": "place:Moresheth-gath",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Moresheth-gath"
+},
+{
+"id": "place:Zaanan",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Zaanan"
+},
+{
+"id": "place:Shaphir",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Shaphir"
+},
+{
+"id": "place:Achzib",
+"type": "place",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Achzib"
+},
+{
+"id": "group:GenericProphets",
+"type": "group",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Prophets"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1721,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1721,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "place:Mareshah",
+"type": "place",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Mareshah"
+},
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "place:Lachish",
+"type": "place",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Lachish"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "place:Ophrah",
+"type": "place",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Ophrah"
+},
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "place:Gath",
+"type": "place",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Gath"
+},
+{
+"id": "keyterm:Lot",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Lot"
+},
+{
+"id": "keyterm:Safety",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Safety"
+},
+{
+"id": "place:Adullam",
+"type": "place",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Adullam"
+},
+{
+"id": "fauna:Jackal",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Jackal"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "flora:Pine",
+"type": "flora",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Stone Pine"
+},
+{
+"id": "realia:Cloak",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Cloak"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "realia:Bed",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Bed"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "realia:HighPlace",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "High Place"
+},
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Rope",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Rope"
+},
+{
+"id": "fauna:Ostrich",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Ostrich"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+},
+{
+"id": "fauna:Owl",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Owl"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22307",
+"reference_id": 21475,
+"version": "1.0.4",
+"title": "Micah 1:3",
+"media_type": "Text",
+"index_reference": "33001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>T</em><span><em>read on the high places</em></span> suggests a theophany, which is an appearance of God. This God is behind the upcoming historical events affecting Samaria (see <data class=\"bible-ref\" data-start-ref=\"05033029\" data-end-ref=\"05033029\">Deuteronomy 33:29</data>; <data class=\"bible-ref\" data-start-ref=\"19108013\" data-end-ref=\"19108013\">Psalm 108:13</data>; <data class=\"bible-ref\" data-start-ref=\"30004013\" data-end-ref=\"30004013\">Amos 4:13</data>). God rules over nations and nature. People also believed the Canaanite god Baal acted in this way. Descriptions like this highlight that the Lord, not Baal, is truly in control.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001003",
+"start_ref_usfm": "MIC 1:3",
+"end_ref": "33001003",
+"end_ref_usfm": "MIC 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22308",
+"reference_id": 21476,
+"version": "1.0.4",
+"title": "Micah 1:4",
+"media_type": "Text",
+"index_reference": "33001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The strong and seemingly unmovable mountains will melt in the presence of the Lord (see <data class=\"bible-ref\" data-start-ref=\"19097005\" data-end-ref=\"19097005\">Psalm 97:5</data>). Nothing can stand against him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001004",
+"start_ref_usfm": "MIC 1:4",
+"end_ref": "33001004",
+"end_ref_usfm": "MIC 1:4"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22309",
+"reference_id": 21477,
+"version": "1.0.4",
+"title": "Micah 1:5",
+"media_type": "Text",
+"index_reference": "33001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Transgression</em> is the same as <em>sins</em>. These two words describe Israel&apos;s failure in the Old Testament. </p></li><li><p><em>What is … what it</em>: The capital cities of God&apos;s people should have been holy places, but they became sources of corruption instead. Samaria, the capital of the northern kingdom of Israel, was built by Omri, who ruled from 885 to 874 BC. It was a political, military, and economic crossroads of the ancient Near East (<data class=\"bible-ref\" data-start-ref=\"11016024\" data-end-ref=\"11016024\">1 Kings 16:24</data>). Omri was an evil king, so his city was evil (compare <data class=\"bible-ref\" data-start-ref=\"33006016\" data-end-ref=\"33006016\">Micah 6:16</data>, <data class=\"bible-ref\" data-start-ref=\"11016025\" data-end-ref=\"11016025\">1 Kings 16:25</data>). </p></li><li><p><em>Jerusalem</em>: The prophet did not allow the people of Judah to feel superior about the northern kingdom’s coming destruction. Judah’s beautiful temple was no different from a Canaanite center of idol worship (<em>high place</em>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001005",
+"start_ref_usfm": "MIC 1:5",
+"end_ref": "33001005",
+"end_ref_usfm": "MIC 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "flora:Pine",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Stone Pine"
+},
+{
+"id": "realia:HighPlace",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "High Place"
+}
+]
+}
+},
+{
+"content_id": "22310",
+"reference_id": 21478,
+"version": "1.0.4",
+"title": "Micah 1:6–7",
+"media_type": "Text",
+"index_reference": "33001006-33001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>a heap of rubble</em>: The Lord warned that he would completely destroy his treasured cities. Assyria almost completely destroyed Samaria in a brutal three-year siege from 724 to 722 BC.</p></li><li><p>Samaria, like many ancient cities, was built on a hill. When the city was destroyed, soldiers pushed the stones of its walls down into the valley below. Ancient armies often tore down city walls stone by stone, all the way to the foundation.</p></li><li><p>Samaria and Jerusalem were filled with carved images and sacred treasures placed by worshipers or taken as war loot. </p></li><li><p>Prostitution symbolizes Israel’s ongoing spiritual and physical unfaithfulness. Israelite prophets often used this metaphor to show Israel’s abandonment of the Lord, her true husband, to seek blessings from pagan gods. The worship of those gods often involved sexual activity. </p></li><li><p><em>Again</em> refers to the exile of Samaria into Assyria and its various provinces and conquered vassal states, which happened in 722 BC. The same fate was predicted for Jerusalem (<data class=\"bible-ref\" data-start-ref=\"33003012\" data-end-ref=\"33003012\">Micah 3:12</data>; <data class=\"bible-ref\" data-start-ref=\"24026018\" data-end-ref=\"24026018\">Jeremiah 26:18</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001006",
+"start_ref_usfm": "MIC 1:6",
+"end_ref": "33001007",
+"end_ref_usfm": "MIC 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Samaria",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Samaria"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Image"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+}
+]
+}
+},
+{
+"content_id": "22311",
+"reference_id": 21479,
+"version": "1.0.4",
+"title": "Micah 1:8–16",
+"media_type": "Text",
+"index_reference": "33001008-33001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>In response to the Lord’s predicted judgment, Micah walked barefoot and naked to show mourning (see <data class=\"bible-ref\" data-start-ref=\"23020002\" data-end-ref=\"23020002\">Isaiah 20:2</data>; <data class=\"bible-ref\" data-start-ref=\"25002010\" data-end-ref=\"25002010\">Lamentations 2:10</data>; <data class=\"bible-ref\" data-start-ref=\"26024017\" data-end-ref=\"26024017\">Ezekiel 24:17</data>). This act vividly showed what would happen to Samaria (Israel) and Jerusalem (Judah). They would lose their wealth, power, and population. </p></li><li><p>A jackal and an owl make sad sounds and live in deserted wilderness areas (see <data class=\"bible-ref\" data-start-ref=\"23034013\" data-end-ref=\"23034013\">Isaiah 34:13</data>; <data class=\"bible-ref\" data-start-ref=\"24050039\" data-end-ref=\"24050039\">Jeremiah 50:39</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001008",
+"start_ref_usfm": "MIC 1:8",
+"end_ref": "33001016",
+"end_ref_usfm": "MIC 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Maroth",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Maroth"
+},
+{
+"id": "place:Beth-ezel",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Beth-ezel"
+},
+{
+"id": "place:Moresheth-gath",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Moresheth-gath"
+},
+{
+"id": "place:Zaanan",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Zaanan"
+},
+{
+"id": "place:Shaphir",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Shaphir"
+},
+{
+"id": "place:Achzib",
+"type": "place",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Achzib"
+},
+{
+"id": "place:Mareshah",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Mareshah"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Lachish",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Lachish"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "place:Ophrah",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ophrah"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Gath",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Gath"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "place:Adullam",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Adullam"
+},
+{
+"id": "fauna:Jackal",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Jackal"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "fauna:Ostrich",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Ostrich"
+},
+{
+"id": "fauna:Owl",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Owl"
+}
+]
+}
+},
+{
+"content_id": "22312",
+"reference_id": 21480,
+"version": "1.0.4",
+"title": "Micah 1:9",
+"media_type": "Text",
+"index_reference": "33001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Judah … Jerusalem</em>: The corruption spread throughout the entire nation, from north to south.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001009",
+"start_ref_usfm": "MIC 1:9",
+"end_ref": "33001009",
+"end_ref_usfm": "MIC 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "22296",
+"reference_id": 21464,
+"version": "1.0.4",
+"title": "Micah 1:10–15",
+"media_type": "Text",
+"index_reference": "33001010-33001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The cities listed were in the lowlands of southwestern Judah&apos;s coastal areas. This sequence might show the Assyrian army&apos;s march down the coastal plain and then into Judah&apos;s heartland in 703 to 701 BC.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001010",
+"start_ref_usfm": "MIC 1:10",
+"end_ref": "33001015",
+"end_ref_usfm": "MIC 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Maroth",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Maroth"
+},
+{
+"id": "place:Beth-ezel",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Beth-ezel"
+},
+{
+"id": "place:Moresheth-gath",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Moresheth-gath"
+},
+{
+"id": "place:Zaanan",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Zaanan"
+},
+{
+"id": "place:Shaphir",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Shaphir"
+},
+{
+"id": "place:Achzib",
+"type": "place",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Achzib"
+},
+{
+"id": "place:Mareshah",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Mareshah"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Lachish",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Lachish"
+},
+{
+"id": "place:Ophrah",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Ophrah"
+},
+{
+"id": "place:Gath",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Gath"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "place:Adullam",
+"type": "place",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Adullam"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Horse"
+}
+]
+}
+},
+{
+"content_id": "22297",
+"reference_id": 21465,
+"version": "1.0.4",
+"title": "Micah 1:11",
+"media_type": "Text",
+"index_reference": "33001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Exile was the worst and most devastating punishment (<data class=\"bible-ref\" data-start-ref=\"05004029\" data-end-ref=\"05004029\">Deuteronomy 4:29</data>; <data class=\"bible-ref\" data-start-ref=\"05028037\" data-end-ref=\"05028037\">28:37</data>, <data class=\"bible-ref\" data-start-ref=\"05028048\" data-end-ref=\"05028048\">48</data>; <data class=\"bible-ref\" data-start-ref=\"24025007\" data-end-ref=\"24025011\">Jeremiah 25:7–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001011",
+"start_ref_usfm": "MIC 1:11",
+"end_ref": "33001011",
+"end_ref_usfm": "MIC 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Zaanan",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Zaanan"
+},
+{
+"id": "place:Beth-ezel",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Beth-ezel"
+},
+{
+"id": "place:Shaphir",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Shaphir"
+}
+]
+}
+},
+{
+"content_id": "22298",
+"reference_id": 21466,
+"version": "1.0.4",
+"title": "Micah 1:12",
+"media_type": "Text",
+"index_reference": "33001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>even to … Jerusalem</em>: God&apos;s judgment reaches everywhere corruption has spread (compare <data class=\"bible-ref\" data-start-ref=\"33001009\" data-end-ref=\"33001009\">Micah 1:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001012",
+"start_ref_usfm": "MIC 1:12",
+"end_ref": "33001012",
+"end_ref_usfm": "MIC 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Maroth",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Maroth"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "22299",
+"reference_id": 21467,
+"version": "1.0.4",
+"title": "Micah 1:13",
+"media_type": "Text",
+"index_reference": "33001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Lachish was the second most important city in Judah, after Jerusalem. It served as Judah&apos;s main defense center against enemies. Today, a large <em>tell</em> (or mound) over 46 meters (150 feet) high still exists. Lachish fell in 701 BC after being besieged, terrified, starved, and destroyed by Sennacherib&apos;s war machines. Sennacherib celebrated the fall of Lachish as one of his greatest victories and featured the event in large carvings on his palace walls.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001013",
+"start_ref_usfm": "MIC 1:13",
+"end_ref": "33001013",
+"end_ref_usfm": "MIC 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Lachish",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Lachish"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+}
+]
+}
+},
+{
+"content_id": "22300",
+"reference_id": 21468,
+"version": "1.0.4",
+"title": "Micah 1:14",
+"media_type": "Text",
+"index_reference": "33001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Farewell gifts marked the end for the people of Moresheth-gath, as the Assyrians took control of the city.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001014",
+"start_ref_usfm": "MIC 1:14",
+"end_ref": "33001014",
+"end_ref_usfm": "MIC 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Moresheth-gath",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Moresheth-gath"
+},
+{
+"id": "place:Achzib",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Achzib"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "22301",
+"reference_id": 21469,
+"version": "1.0.4",
+"title": "Micah 1:15",
+"media_type": "Text",
+"index_reference": "33001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>The glory</em>: The leaders of Israel were supposed to be the nation&apos;s &quot;glory&quot; by showing moral excellence and wise, caring leadership. Instead, God&apos;s shepherds corrupted their nation. </p></li><li><p>Assyria destroyed Adullam in 701&nbsp;BC.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001015",
+"start_ref_usfm": "MIC 1:15",
+"end_ref": "33001015",
+"end_ref_usfm": "MIC 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Mareshah",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mareshah"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Dispossess",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Dispossess"
+},
+{
+"id": "place:Adullam",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Adullam"
+}
+]
+}
+},
+{
+"content_id": "22302",
+"reference_id": 21470,
+"version": "1.0.4",
+"title": "Micah 1:16",
+"media_type": "Text",
+"index_reference": "33001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The people of Judah, including those from Jerusalem, were exiled to faraway lands in Babylonia in 605, 597, and 586 BC. Babylon was about 1,700 kilometers (1,000 miles) from Jerusalem. </p></li><li><p><em>Shave yourselves</em>: This was an act of mourning and despair (see also <data class=\"bible-ref\" data-start-ref=\"24041005\" data-end-ref=\"24041005\">Jeremiah 41:5</data>). It could also mean purification (<data class=\"bible-ref\" data-start-ref=\"03014007\" data-end-ref=\"03014010\">Leviticus 14:7–10</data>; <data class=\"bible-ref\" data-start-ref=\"04006010\" data-end-ref=\"04006011\">Numbers 6:10–11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33001016",
+"start_ref_usfm": "MIC 1:16",
+"end_ref": "33001016",
+"end_ref_usfm": "MIC 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Vulture",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vulture"
+}
+]
+}
+},
+{
+"content_id": "22313",
+"reference_id": 21481,
+"version": "1.0.4",
+"title": "Micah 2:1–2",
+"media_type": "Text",
+"index_reference": "33002001-33002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Power had corrupted the wealthy, who should have been ready to help their fellow Israelites (compare <data class=\"bible-ref\" data-start-ref=\"01004009\" data-end-ref=\"01004009\">Genesis 4:9</data>; <data class=\"bible-ref\" data-start-ref=\"06001014\" data-end-ref=\"06001014\">Joshua 1:14</data>). </p></li><li><p>Thinking up evil plans because you have the power to do so shows a corrupt heart, mind, and character (<data class=\"bible-ref\" data-start-ref=\"01006005\" data-end-ref=\"01006005\">Genesis 6:5</data>).</p></li><li><p><em>They covet</em>: They took others&apos; property, which was like stealing and broke God&apos;s law against coveting (<data class=\"bible-ref\" data-start-ref=\"02020017\" data-end-ref=\"02020017\">Exodus 20:17</data>). A family&apos;s inheritance was a sacred gift from the Lord, meant to be a permanent possession (<data class=\"bible-ref\" data-start-ref=\"03025008\" data-end-ref=\"03025055\">Leviticus 25:8–55</data>; compare <data class=\"bible-ref\" data-start-ref=\"11021001\" data-end-ref=\"11021029\">1 Kings 21</data>; <data class=\"bible-ref\" data-start-ref=\"23005008\" data-end-ref=\"23005008\">Isaiah 5:8</data>). God sought righteousness among his people, but instead, he found oppression (<data class=\"bible-ref\" data-start-ref=\"11010009\" data-end-ref=\"11010009\">1 Kings 10:9</data>; <data class=\"bible-ref\" data-start-ref=\"23005007\" data-end-ref=\"23005007\">Isaiah 5:7</data>; <data class=\"bible-ref\" data-start-ref=\"61002013\" data-end-ref=\"61002013\">2 Peter 2:13</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002001",
+"start_ref_usfm": "MIC 2:1",
+"end_ref": "33002002",
+"end_ref_usfm": "MIC 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "keyterm:Mischief",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Mischief"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Bed",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Bed"
+}
+]
+}
+},
+{
+"content_id": "22317",
+"reference_id": 21485,
+"version": "1.0.4",
+"title": "Micah 2:3–5",
+"media_type": "Text",
+"index_reference": "33002003-33002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord, acting as a judge, announces the sentence. He will repay his people&apos;s wicked hearts and actions with disaster. The prophet uses wordplay here. The Hebrew word for &quot;evil&quot; has many meanings. It can mean moral evil, as in the first case, or calamity or disaster, as in the second. The Lord will bring disaster on them because of their wickedness.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002003",
+"start_ref_usfm": "MIC 2:3",
+"end_ref": "33002005",
+"end_ref_usfm": "MIC 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Lot",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Lot"
+},
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+},
+{
+"id": "realia:Rope",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Rope"
+}
+]
+}
+},
+{
+"content_id": "22318",
+"reference_id": 21486,
+"version": "1.0.4",
+"title": "Micah 2:4",
+"media_type": "Text",
+"index_reference": "33002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The leaders would lose their wealth when their enemies took their property. The land they had taken unfairly from other Israelites would be taken away from them in return (<data class=\"bible-ref\" data-start-ref=\"33002005\" data-end-ref=\"33002005\">Micah 2:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002004",
+"start_ref_usfm": "MIC 2:4",
+"end_ref": "33002004",
+"end_ref_usfm": "MIC 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Saying",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Proverb"
+}
+]
+}
+},
+{
+"content_id": "22319",
+"reference_id": 21487,
+"version": "1.0.4",
+"title": "Micah 2:6",
+"media_type": "Text",
+"index_reference": "33002006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>There was a weak attempt to silence a true prophet. </p></li><li><p><em>they preach</em>: They believed that exile and other disasters could not happen to them, but they were mistaken.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002006",
+"start_ref_usfm": "MIC 2:6",
+"end_ref": "33002006",
+"end_ref_usfm": "MIC 2:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22320",
+"reference_id": 21488,
+"version": "1.0.4",
+"title": "Micah 2:7–10",
+"media_type": "Text",
+"index_reference": "33002007-33002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Mistreating their fellow Israelites was like attacking the Lord and his prophet. The people were at fault, not Micah&apos;s inspired and righteous message.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002007",
+"start_ref_usfm": "MIC 2:7",
+"end_ref": "33002010",
+"end_ref_usfm": "MIC 2:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:GenericProphets",
+"type": "group",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Prophets"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Safety",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Safety"
+},
+{
+"id": "realia:Cloak",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Cloak"
+}
+]
+}
+},
+{
+"content_id": "22314",
+"reference_id": 21482,
+"version": "1.0.4",
+"title": "Micah 2:11",
+"media_type": "Text",
+"index_reference": "33002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These wicked individuals enjoyed listening to lies from their favorite prophets who promised good times (compare <data class=\"bible-ref\" data-start-ref=\"24028008\" data-end-ref=\"24028009\">Jeremiah 28:8–9</data>). False prophets assured Israel and Judah that they could avoid judgment. When judgment arrived, they offered no comfort.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002011",
+"start_ref_usfm": "MIC 2:11",
+"end_ref": "33002011",
+"end_ref_usfm": "MIC 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "22315",
+"reference_id": 21483,
+"version": "1.0.4",
+"title": "Micah 2:12–13",
+"media_type": "Text",
+"index_reference": "33002012-33002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God demonstrated his love and care for his rebellious people by promising them hope, even while mentioning exile and despair. Although Israel would be scattered, they would return (compare <data class=\"bible-ref\" data-start-ref=\"05004026\" data-end-ref=\"05004029\">Deuteronomy 4:26–29</data>; <data class=\"bible-ref\" data-start-ref=\"05030001\" data-end-ref=\"05030006\">30:1–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002012",
+"start_ref_usfm": "MIC 2:12",
+"end_ref": "33002013",
+"end_ref_usfm": "MIC 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22316",
+"reference_id": 21484,
+"version": "1.0.4",
+"title": "Micah 2:13",
+"media_type": "Text",
+"index_reference": "33002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord led Israel out of exile, hinting at the greater freedom from slavery that the Messiah, Jesus Christ, would later provide.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33002013",
+"start_ref_usfm": "MIC 2:13",
+"end_ref": "33002013",
+"end_ref_usfm": "MIC 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22325",
+"reference_id": 21493,
+"version": "1.0.4",
+"title": "Micah 3:1",
+"media_type": "Text",
+"index_reference": "33003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The leaders, expected to understand true judgment and justice (<data class=\"bible-ref\" data-start-ref=\"33006008\" data-end-ref=\"33006008\">Micah 6:8</data>; <data class=\"bible-ref\" data-start-ref=\"05010012\" data-end-ref=\"05010013\">Deuteronomy 10:12–13</data>), were morally responsible for Israel&apos;s guilt.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003001",
+"start_ref_usfm": "MIC 3:1",
+"end_ref": "33003001",
+"end_ref_usfm": "MIC 3:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+}
+]
+}
+},
+{
+"content_id": "22321",
+"reference_id": 21489,
+"version": "1.0.4",
+"title": "Micah 3:1–4",
+"media_type": "Text",
+"index_reference": "33003001-33003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Micah strongly criticized the leaders of Israel because they were responsible for the people&apos;s well-being. The horrors described here show the fears of people under attack (compare <data class=\"bible-ref\" data-start-ref=\"05028053\" data-end-ref=\"05028053\">Deuteronomy 28:53</data>; <data class=\"bible-ref\" data-start-ref=\"12006029\" data-end-ref=\"12006029\">2 Kings 6:29</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003001",
+"start_ref_usfm": "MIC 3:1",
+"end_ref": "33003004",
+"end_ref_usfm": "MIC 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "realia:CookingPot",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Cooking Pot"
+}
+]
+}
+},
+{
+"content_id": "22322",
+"reference_id": 21490,
+"version": "1.0.4",
+"title": "Micah 3:1–5.15",
+"media_type": "Text",
+"index_reference": "33003001-33005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This message accuses the evil leaders who harmed God&apos;s people. It contrasts them with a vision of God&apos;s kingdom and a righteous king&apos;s rule. After facing judgment and exile, a purified Israel would return and receive God&apos;s blessings.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003001",
+"start_ref_usfm": "MIC 3:1",
+"end_ref": "33005015",
+"end_ref_usfm": "MIC 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5413,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.4513,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.44,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:PracticeDivination",
+"type": "keyterm",
+"confidence": 0.2888,
+"match_method": "canonical",
+"preferred_label": "Practice Divination"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.2238,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.2238,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "group:Assyria",
+"type": "group",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Assyrians"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "keyterm:Incantations",
+"type": "keyterm",
+"confidence": 0.1663,
+"match_method": "canonical",
+"preferred_label": "Incantations"
+},
+{
+"id": "place:Bethlehem",
+"type": "place",
+"confidence": 0.1663,
+"match_method": "canonical",
+"preferred_label": "Bethlehem"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.1625,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.1625,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1625,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1625,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "place:TowerOfEder",
+"type": "place",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Tower of Eder"
+},
+{
+"id": "person:Nimrod",
+"type": "person",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Nimrod"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "The Way"
+},
+{
+"id": "keyterm:Redeem",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Redeem"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Proscribe",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Set Apart for God"
+},
+{
+"id": "keyterm:Counsel",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Counsel"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "deity:Asherah",
+"type": "deity",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Asherah"
+},
+{
+"id": "place:Babylon",
+"type": "place",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Babylon"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "keyterm:Horn",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Horn"
+},
+{
+"id": "keyterm:Perceive",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Perceive"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:StateOfBeingUnderSiege",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Under Siege"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:Sheaf",
+"type": "realia",
+"confidence": 0.1063,
+"match_method": "canonical",
+"preferred_label": "Sheaf"
+},
+{
+"id": "realia:PruningKnife",
+"type": "realia",
+"confidence": 0.1063,
+"match_method": "canonical",
+"preferred_label": "Pruning Knife"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Grass"
+},
+{
+"id": "realia:ThreshingFloor",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Threshing Floor"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "realia:Mattock",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Mattock"
+},
+{
+"id": "realia:SacredPole",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Sacred Pole"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Money"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:CookingPot",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Cooking Pot"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Rod"
+},
+{
+"id": "realia:SacredPillar",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Sacred Pillar"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Staff"
+}
+]
+}
+},
+{
+"content_id": "22326",
+"reference_id": 21494,
+"version": "1.0.4",
+"title": "Micah 3:2–3",
+"media_type": "Text",
+"index_reference": "33003002-33003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The leaders acted like wild animals. They harmed their own people and treated them without mercy.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003002",
+"start_ref_usfm": "MIC 3:2",
+"end_ref": "33003003",
+"end_ref_usfm": "MIC 3:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "realia:CookingPot",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Cooking Pot"
+}
+]
+}
+},
+{
+"content_id": "22327",
+"reference_id": 21495,
+"version": "1.0.4",
+"title": "Micah 3:4",
+"media_type": "Text",
+"index_reference": "33003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Then</em>: Even after oppressing the Lord&apos;s people, the leaders selfishly asked the Lord for help.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003004",
+"start_ref_usfm": "MIC 3:4",
+"end_ref": "33003004",
+"end_ref_usfm": "MIC 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22328",
+"reference_id": 21496,
+"version": "1.0.4",
+"title": "Micah 3:5",
+"media_type": "Text",
+"index_reference": "33003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The false prophets were part of Israel’s spiritual leadership, so Micah included them in his accusations. Prophets were meant to guide Israel in the right way, not to lead the people away from God (see <data class=\"bible-ref\" data-start-ref=\"05013001\" data-end-ref=\"05013018\">Deuteronomy 13</data>, <data class=\"bible-ref\" data-start-ref=\"05018001\" data-end-ref=\"05018022\">18</data>). Instead, these prophets used their gifts for their own benefit.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003005",
+"start_ref_usfm": "MIC 3:5",
+"end_ref": "33003005",
+"end_ref_usfm": "MIC 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Peace"
+}
+]
+}
+},
+{
+"content_id": "22329",
+"reference_id": 21497,
+"version": "1.0.4",
+"title": "Micah 3:6–7",
+"media_type": "Text",
+"index_reference": "33003006-33003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Micah announced God&apos;s judgment on the false prophets. Without God&apos;s special messages, these seers and fortune-tellers were like the pagan court prophets of nations like Babylon, Mari, and especially Assyria. Those prophets were expected to say what the rulers wanted to hear, but they did not receive true messages from the Lord <data class=\"bible-ref\" data-start-ref=\"09028006\" data-end-ref=\"09028006\">1&nbsp;Samuel 28:6</data>; <data class=\"bible-ref\" data-start-ref=\"30008011\" data-end-ref=\"30008012\">Amos 8:11–12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003006",
+"start_ref_usfm": "MIC 3:6",
+"end_ref": "33003007",
+"end_ref_usfm": "MIC 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:PracticeDivination",
+"type": "keyterm",
+"confidence": 0.75,
+"match_method": "canonical",
+"preferred_label": "Practice Divination"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22330",
+"reference_id": 21498,
+"version": "1.0.4",
+"title": "Micah 3:8",
+"media_type": "Text",
+"index_reference": "33003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>There was a big difference between the true prophet and the false prophets (<data class=\"bible-ref\" data-start-ref=\"33003005\" data-end-ref=\"33003007\">Micah 3:5–7</data>). Truth, justice, and power come from God’s Spirit. This Spirit gave Micah the moral and ethical strength to speak his true message about the sin and rebellion of his people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003008",
+"start_ref_usfm": "MIC 3:8",
+"end_ref": "33003008",
+"end_ref_usfm": "MIC 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Strength",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Strength"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "22331",
+"reference_id": 21499,
+"version": "1.0.4",
+"title": "Micah 3:9–12",
+"media_type": "Text",
+"index_reference": "33003009-33003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The leaders of Israel built Jerusalem on murder and corruption. Because of this, the city would become a wilderness and ruins (<data class=\"bible-ref\" data-start-ref=\"33003012\" data-end-ref=\"33003012\">Micah 3:12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003009",
+"start_ref_usfm": "MIC 3:9",
+"end_ref": "33003012",
+"end_ref_usfm": "MIC 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:PracticeDivination",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Practice Divination"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "22323",
+"reference_id": 21491,
+"version": "1.0.4",
+"title": "Micah 3:11",
+"media_type": "Text",
+"index_reference": "33003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Is not the LORD among us?</em></span>: This expression shows the Lord&apos;s approval (see <data class=\"bible-ref\" data-start-ref=\"02003012\" data-end-ref=\"02003012\">Exodus 3:12</data>, <data class=\"bible-ref\" data-start-ref=\"02003014\" data-end-ref=\"02003014\">14</data>; <data class=\"bible-ref\" data-start-ref=\"02025008\" data-end-ref=\"02025008\">25:8</data>; <data class=\"bible-ref\" data-start-ref=\"33002005\" data-end-ref=\"33002005\">Micah 2:5</data>; <data class=\"bible-ref\" data-start-ref=\"38002011\" data-end-ref=\"38002011\">Zechariah 2:11</data>) and his presence among his people. The false prophets wrongly claimed God&apos;s presence.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003011",
+"start_ref_usfm": "MIC 3:11",
+"end_ref": "33003011",
+"end_ref_usfm": "MIC 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:PracticeDivination",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Practice Divination"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "22324",
+"reference_id": 21492,
+"version": "1.0.4",
+"title": "Micah 3:12",
+"media_type": "Text",
+"index_reference": "33003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Mount Zion, where the Lord once lived, would become a dense forest and an uninhabitable wilderness. Complete destruction awaited the fallen Jerusalem. Jeremiah later quoted this passage (<data class=\"bible-ref\" data-start-ref=\"24026018\" data-end-ref=\"24026018\">Jeremiah 26:18</data>)</p></li><li><p>Just as a field needs clearing for cultivation, Jerusalem had to be reduced to ruins as a form of judgment.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33003012",
+"start_ref_usfm": "MIC 3:12",
+"end_ref": "33003012",
+"end_ref_usfm": "MIC 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "22332",
+"reference_id": 21500,
+"version": "1.0.4",
+"title": "Micah 4:1–2",
+"media_type": "Text",
+"index_reference": "33004001-33004002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>In the last days</em>: God promised to act in history to establish his kingdom. </p></li><li><p>The <em>mountain of the house of the LORD</em> refers to Mount Zion in Jerusalem, where Solomon’s temple was built (see <data class=\"bible-ref\" data-start-ref=\"10024018\" data-end-ref=\"10024025\">2 Samuel 24:18–25</data>). It reminds us of Mount Sinai, the mountain of God (<data class=\"bible-ref\" data-start-ref=\"02003001\" data-end-ref=\"02003001\">Exodus 3:1</data>; <data class=\"bible-ref\" data-start-ref=\"04010033\" data-end-ref=\"04010033\">Numbers 10:33</data>), where God appeared. The mountain of the Lord is important as the place where God reveals his identity and offers fellowship. </p></li><li><p><span><em>teach us His ways … His paths</em></span>: The wisdom of God’s laws and the knowledge of his ways will give life to the nations (<data class=\"bible-ref\" data-start-ref=\"05004006\" data-end-ref=\"05004006\">Deuteronomy 4:6</data>; <data class=\"bible-ref\" data-start-ref=\"05032047\" data-end-ref=\"05032047\">32:47</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004001",
+"start_ref_usfm": "MIC 4:1",
+"end_ref": "33004002",
+"end_ref_usfm": "MIC 4:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.59,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "The Way"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+}
+]
+}
+},
+{
+"content_id": "22333",
+"reference_id": 21501,
+"version": "1.0.4",
+"title": "Micah 4:1–5",
+"media_type": "Text",
+"index_reference": "33004001-33004005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Micah&apos;s prophecy shifts from deep despair to a burst of hope as he describes the future rise of Mount Zion in Jerusalem. God&apos;s plan to bless all nations (<data class=\"bible-ref\" data-start-ref=\"01012003\" data-end-ref=\"01012003\">Genesis 12:3</data>) through Abraham&apos;s descendants will come true when people from all nations gather at the Lord&apos;s house to worship. There:</p><ol><li><p>they will learn to follow God&apos;s laws and teachings; </p></li><li><p>these laws and teachings will spread among the nations as they leave God&apos;s house; </p></li><li><p>peace and well-being will grow as nations focus on peaceful activities and stop waging war; and </p></li><li><p>people will live without fear, enjoying security, prosperity, and blessings (<data class=\"bible-ref\" data-start-ref=\"33004004\" data-end-ref=\"33004004\">Micah 4:4</data>). </p></li></ol><p>The idols of the nations fail them, but Israel&apos;s faithful God achieves all this. The prosperity he brings lasts forever (<data class=\"bible-ref\" data-start-ref=\"33004005\" data-end-ref=\"33004005\">Micah 4:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004001",
+"start_ref_usfm": "MIC 4:1",
+"end_ref": "33004005",
+"end_ref_usfm": "MIC 4:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.66,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.32,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "keyterm:TheWay",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "The Way"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "realia:PruningKnife",
+"type": "realia",
+"confidence": 0.22,
+"match_method": "canonical",
+"preferred_label": "Pruning Knife"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Spear"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:Mattock",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Mattock"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Vine"
+}
+]
+}
+},
+{
+"content_id": "22338",
+"reference_id": 21506,
+"version": "1.0.4",
+"title": "Micah 4:3",
+"media_type": "Text",
+"index_reference": "33004003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The <em>shalom</em> (“well-being, peace”) of the Lord will cover the earth, and tools of destruction will be used for peaceful activities. Ancient history, from its earliest records, tells of war and one group dominating others. Warfare and violence peaked in the Assyrian and Babylonian kingdoms. </p></li><li><p><em>swords into plowshares</em>: Weapons will become tools for farming. Some scholars think this phrase means turning &quot;swords into metal shards,&quot; making them useless.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004003",
+"start_ref_usfm": "MIC 4:3",
+"end_ref": "33004003",
+"end_ref_usfm": "MIC 4:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:PruningKnife",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Pruning Knife"
+},
+{
+"id": "realia:Mattock",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Mattock"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:Spear",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Spear"
+}
+]
+}
+},
+{
+"content_id": "22339",
+"reference_id": 21507,
+"version": "1.0.4",
+"title": "Micah 4:4",
+"media_type": "Text",
+"index_reference": "33004004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Everyone will live without enemies, like in Solomon’s time (<data class=\"bible-ref\" data-start-ref=\"11004025\" data-end-ref=\"11004025\">1&nbsp;Kings 4:25</data>; compare <data class=\"bible-ref\" data-start-ref=\"23036016\" data-end-ref=\"23036016\">Isaiah 36:16</data>; <data class=\"bible-ref\" data-start-ref=\"38003010\" data-end-ref=\"38003010\">Zechariah 3:10</data>). </p></li><li><p>The prophets often called God the <em>LORD of Hosts</em>. This military title shows his control over the universe and his unlimited power. The warrior kings of the ancient Near East could not compete with the Lord.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004004",
+"start_ref_usfm": "MIC 4:4",
+"end_ref": "33004004",
+"end_ref_usfm": "MIC 4:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vine"
+}
+]
+}
+},
+{
+"content_id": "22340",
+"reference_id": 21508,
+"version": "1.0.4",
+"title": "Micah 4:6–7",
+"media_type": "Text",
+"index_reference": "33004006-33004007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the ancient Near East, the survivors of destroyed cities were usually scattered or absorbed into other peoples. But when God rescued Israel’s remnant, those survivors became the beginning of the Lord’s renewed people (<data class=\"bible-ref\" data-start-ref=\"05004026\" data-end-ref=\"05004031\">Deuteronomy 4:26–31</data>; <data class=\"bible-ref\" data-start-ref=\"05030001\" data-end-ref=\"05030005\">30:1–5</data>; <data class=\"bible-ref\" data-start-ref=\"12019031\" data-end-ref=\"12019031\">2 Kings 19:31</data>; <data class=\"bible-ref\" data-start-ref=\"23010021\" data-end-ref=\"23010021\">Isaiah 10:21</data>; <data class=\"bible-ref\" data-start-ref=\"24029010\" data-end-ref=\"24029014\">Jeremiah 29:10–14</data>; see <data class=\"bible-ref\" data-start-ref=\"15009008\" data-end-ref=\"15009008\">Ezra 9:8</data>; <data class=\"bible-ref\" data-start-ref=\"16001002\" data-end-ref=\"16001002\">Nehemiah 1:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004006",
+"start_ref_usfm": "MIC 4:6",
+"end_ref": "33004007",
+"end_ref_usfm": "MIC 4:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "22341",
+"reference_id": 21509,
+"version": "1.0.4",
+"title": "Micah 4:8",
+"media_type": "Text",
+"index_reference": "33004008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>And you, O watchtower of the flock</em>: Jerusalem </span>was a fortified royal capital city with a watchtower for the defense and security of its people.  </p></li><li><p><span><em>the former dominion will be restored</em></span>: compare <data class=\"bible-ref\" data-start-ref=\"30009011\" data-end-ref=\"30009015\">Amos 9:11–15</data>; see <data class=\"bible-ref\" data-start-ref=\"10007011\" data-end-ref=\"10007016\">2&nbsp;Samuel 7:11–16</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004008",
+"start_ref_usfm": "MIC 4:8",
+"end_ref": "33004008",
+"end_ref_usfm": "MIC 4:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:TowerOfEder",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tower of Eder"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "22342",
+"reference_id": 21510,
+"version": "1.0.4",
+"title": "Micah 4:9",
+"media_type": "Text",
+"index_reference": "33004009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Israel&apos;s king and wise people were meant to lead and live by the Lord&apos;s instructions and covenant (<data class=\"bible-ref\" data-start-ref=\"05017018\" data-end-ref=\"05017020\">Deuteronomy 17:18–20</data>). Now, however, the people would lack godly leadership (compare <data class=\"bible-ref\" data-start-ref=\"07017006\" data-end-ref=\"07017006\">Judges 17:6</data>; <data class=\"bible-ref\" data-start-ref=\"07018001\" data-end-ref=\"07018001\">18:1</data>; <data class=\"bible-ref\" data-start-ref=\"07021025\" data-end-ref=\"07021025\">21:25</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004009",
+"start_ref_usfm": "MIC 4:9",
+"end_ref": "33004009",
+"end_ref_usfm": "MIC 4:9"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22334",
+"reference_id": 21502,
+"version": "1.0.4",
+"title": "Micah 4:10",
+"media_type": "Text",
+"index_reference": "33004010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Babylon was about 1,700 kilometers (1,000 miles) from Jerusalem. People could not reach it by crossing the barren eastern desert. </p></li><li><p>The Lord&apos;s rescue of his people from certain death in Babylon would be greater than when he brought them out of Egypt. They were shaped in the womb of suffering and awaited a hopeful rebirth (<data class=\"bible-ref\" data-start-ref=\"23043001\" data-end-ref=\"23043005\">Isaiah 43:1–5</data>; compare <data class=\"bible-ref\" data-start-ref=\"26037001\" data-end-ref=\"26037028\">Ezekiel 37</data>).</p></li><li><p>For Micah, Babylon symbolized exile. In Micah&apos;s time (the late 700s and early 600s BC), there was no sign of a Babylonian empire replacing the Assyrians. But Micah spoke for God, who knows the future.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004010",
+"start_ref_usfm": "MIC 4:10",
+"end_ref": "33004010",
+"end_ref_usfm": "MIC 4:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Redeem",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Redeem"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Babylon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Babylon"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "22335",
+"reference_id": 21503,
+"version": "1.0.4",
+"title": "Micah 4:11–13",
+"media_type": "Text",
+"index_reference": "33004011-33004013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>assembled against you</em>: This refers first to the attack of Babylon against Jerusalem in 588–586 BC. At the same time, it also points to a future attack against a restored and ideal Jerusalem described in <data class=\"bible-ref\" data-start-ref=\"33004001\" data-end-ref=\"33004005\">Micah 4:1–5 </data>(compare <data class=\"bible-ref\" data-start-ref=\"66020007\" data-end-ref=\"66020009\">Revelation 20:7–9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004011",
+"start_ref_usfm": "MIC 4:11",
+"end_ref": "33004013",
+"end_ref_usfm": "MIC 4:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "realia:Sheaf",
+"type": "realia",
+"confidence": 0.3067,
+"match_method": "canonical",
+"preferred_label": "Sheaf"
+},
+{
+"id": "keyterm:Perceive",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Perceive"
+},
+{
+"id": "keyterm:Proscribe",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Set Apart for God"
+},
+{
+"id": "keyterm:Counsel",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Counsel"
+},
+{
+"id": "keyterm:Horn",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Horn"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "realia:ThreshingFloor",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Threshing Floor"
+}
+]
+}
+},
+{
+"content_id": "22336",
+"reference_id": 21504,
+"version": "1.0.4",
+"title": "Micah 4:12",
+"media_type": "Text",
+"index_reference": "33004012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>God reveals his plans to his servants (<data class=\"bible-ref\" data-start-ref=\"27002019\" data-end-ref=\"27002023\">Daniel 2:19–23</data>; <data class=\"bible-ref\" data-start-ref=\"30003007\" data-end-ref=\"30003007\">Amos 3:7</data>), but the nations do not know. They are not aware of God&apos;s great plans or his actions behind the scenes for his people. The hopes and plans of the nations around Israel were in vain. The Lord&apos;s plans for his unique people will succeed, and he will rule the nations (<data class=\"bible-ref\" data-start-ref=\"01012001\" data-end-ref=\"01012003\">Genesis 12:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"01015012\" data-end-ref=\"01015021\">15:12–21</data>; <data class=\"bible-ref\" data-start-ref=\"02019004\" data-end-ref=\"02019006\">Exodus 19:4–6</data>; <data class=\"bible-ref\" data-start-ref=\"23045023\" data-end-ref=\"23045023\">Isaiah 45:23</data>; <data class=\"bible-ref\" data-start-ref=\"23066023\" data-end-ref=\"23066023\">66:23</data>). </p></li><li><p>At the threshing floor<em>,</em> people beat and trampled grain to separate it from the chaff. Similarly, the nations will be crushed (<data class=\"bible-ref\" data-start-ref=\"33004013\" data-end-ref=\"33004013\">Micah 4:13</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004012",
+"start_ref_usfm": "MIC 4:12",
+"end_ref": "33004012",
+"end_ref_usfm": "MIC 4:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Sheaf",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Sheaf"
+},
+{
+"id": "keyterm:Perceive",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Perceive"
+},
+{
+"id": "keyterm:Counsel",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Counsel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:ThreshingFloor",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Threshing Floor"
+}
+]
+}
+},
+{
+"content_id": "22337",
+"reference_id": 21505,
+"version": "1.0.4",
+"title": "Micah 4:13",
+"media_type": "Text",
+"index_reference": "33004013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The horns and hooves of bulls and horses symbolize strength, just like iron and bronze. People may have used metal shoes on animals that helped with farming. God will give strength to his people to defeat their enemies. </p></li><li><p><em>their gain</em>: Many nations gathered wealth unfairly through war, plunder, heavy taxes, forced labor, and conscription. The Lord of all the earth originally owned all this wealth (<data class=\"bible-ref\" data-start-ref=\"02019005\" data-end-ref=\"02019005\">Exodus 19:5</data>). </p></li><li><p><em>you will devote</em>: The Hebrew term (<em>kharam</em>, meaning “dedicate”) refers to war spoils set aside as holy to the Lord (see <data class=\"bible-ref\" data-start-ref=\"03027028\" data-end-ref=\"03027029\">Leviticus 27:28–29</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33004013",
+"start_ref_usfm": "MIC 4:13",
+"end_ref": "33004013",
+"end_ref_usfm": "MIC 4:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Proscribe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Set Apart for God"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:Horn",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Horn"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+}
+]
+}
+},
+{
+"content_id": "22346",
+"reference_id": 21514,
+"version": "1.0.4",
+"title": "Micah 5:1",
+"media_type": "Text",
+"index_reference": "33005001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Assyrians defeated Israel&apos;s leader (compare <data class=\"bible-ref\" data-start-ref=\"33006009\" data-end-ref=\"33006009\">Micah 6:9</data>). Hitting someone with a rod showed disrespect (compare <data class=\"bible-ref\" data-start-ref=\"11022024\" data-end-ref=\"11022024\">1&nbsp;Kings 22:24</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005001",
+"start_ref_usfm": "MIC 5:1",
+"end_ref": "33005001",
+"end_ref_usfm": "MIC 5:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:StateOfBeingUnderSiege",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Under Siege"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Rod"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Staff"
+}
+]
+}
+},
+{
+"content_id": "22343",
+"reference_id": 21511,
+"version": "1.0.4",
+"title": "Micah 5:1–15",
+"media_type": "Text",
+"index_reference": "33005001-33005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This section urges Israel to prepare for the fierce attack by Assyria, Israel&apos;s enemy (<data class=\"bible-ref\" data-start-ref=\"33005005\" data-end-ref=\"33005006\">Micah 5:5b–6</data>). This terrifying siege will not destroy Israel, because God will provide a leader (<data class=\"bible-ref\" data-start-ref=\"33005002\" data-end-ref=\"33005005\">Micah 5:2–5a</data>) to guide the people back from exile. God will preserve and purify the remaining people (<data class=\"bible-ref\" data-start-ref=\"33005007\" data-end-ref=\"33005014\">Micah 5:7–14</data>), completing their restoration as God&apos;s victorious people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005001",
+"start_ref_usfm": "MIC 5:1",
+"end_ref": "33005015",
+"end_ref_usfm": "MIC 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.34,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "group:Assyria",
+"type": "group",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Assyrians"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "keyterm:Incantations",
+"type": "keyterm",
+"confidence": 0.1933,
+"match_method": "canonical",
+"preferred_label": "Incantations"
+},
+{
+"id": "place:Bethlehem",
+"type": "place",
+"confidence": 0.1933,
+"match_method": "canonical",
+"preferred_label": "Bethlehem"
+},
+{
+"id": "person:Nimrod",
+"type": "person",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Nimrod"
+},
+{
+"id": "deity:Asherah",
+"type": "deity",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Asherah"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:StateOfBeingUnderSiege",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Under Siege"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Grass"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:SacredPole",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Sacred Pole"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Rod"
+},
+{
+"id": "realia:SacredPillar",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Sacred Pillar"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Staff"
+}
+]
+}
+},
+{
+"content_id": "22347",
+"reference_id": 21515,
+"version": "1.0.4",
+"title": "Micah 5:2",
+"media_type": "Text",
+"index_reference": "33005002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Ephrathah</em> was the ancient name of Bethlehem (<data class=\"bible-ref\" data-start-ref=\"01035016\" data-end-ref=\"01035016\">Genesis 35:16</data>; <data class=\"bible-ref\" data-start-ref=\"08004011\" data-end-ref=\"08004011\">Ruth 4:11</data>), where David was born. In the future, a ruler greater than David would come from there (<data class=\"bible-ref\" data-start-ref=\"40002005\" data-end-ref=\"40002006\">Matthew 2:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"43007042\" data-end-ref=\"43007042\">John 7:42</data>). This future king&apos;s influence would span from the distant past (Hebrew <em>qedem</em>; compare <data class=\"bible-ref\" data-start-ref=\"05033027\" data-end-ref=\"05033027\">Deuteronomy 33:27</data>; <data class=\"bible-ref\" data-start-ref=\"20008022\" data-end-ref=\"20008023\">Proverbs 8:22–23</data>; <data class=\"bible-ref\" data-start-ref=\"23037026\" data-end-ref=\"23037026\">Isaiah 37:26</data>) to a time yet to come, suggesting a divine-human being.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005002",
+"start_ref_usfm": "MIC 5:2",
+"end_ref": "33005002",
+"end_ref_usfm": "MIC 5:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Bethlehem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bethlehem"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "22348",
+"reference_id": 21516,
+"version": "1.0.4",
+"title": "Micah 5:4–5",
+"media_type": "Text",
+"index_reference": "33005004-33005005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After the exile in Babylon, Prince Zerubbabel, a descendant of David, was among the returning exiles and became the focus of Israel&apos;s hopes (see <data class=\"bible-ref\" data-start-ref=\"37002020\" data-end-ref=\"37002023\">Haggai 2:20–23</data>). However, Israel needed a greater ruler than Zerubbabel. The leader from Bethlehem would bring peace; Isaiah called him the <em>Prince of Peace</em> (<data class=\"bible-ref\" data-start-ref=\"23009006\" data-end-ref=\"23009006\">Isaiah 9:6</data>). Only Jesus fits this description.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005004",
+"start_ref_usfm": "MIC 5:4",
+"end_ref": "33005005",
+"end_ref_usfm": "MIC 5:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.59,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "group:Assyria",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Assyrians"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22349",
+"reference_id": 21517,
+"version": "1.0.4",
+"title": "Micah 5:5",
+"media_type": "Text",
+"index_reference": "33005005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Assyrians destroyed northern Israel in 722 BC. In 701 BC, Sennacherib trapped King Hezekiah of Jerusalem &quot;like a bird in a cage&quot; (Sennacherib&apos;s own words) and devastated over 46 cities in Judah. The expected deliverer-king did not appear during that time. The Assyrians symbolize all of Israel&apos;s enemies. </p></li><li><p><span><em>seven shepherds … eight leaders</em></span>: This phrase means there will be plenty of leaders to guide Israel as needed.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005005",
+"start_ref_usfm": "MIC 5:5",
+"end_ref": "33005005",
+"end_ref_usfm": "MIC 5:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "group:Assyria",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyrians"
+},
+{
+"id": "keyterm:IntactState",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Peace"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22350",
+"reference_id": 21518,
+"version": "1.0.4",
+"title": "Micah 5:6",
+"media_type": "Text",
+"index_reference": "33005006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>the land of Nimrod</em>: Nimrod was a powerful early ruler. He helped establish the first cities of what later became the Assyrian and Babylonian civilizations (<data class=\"bible-ref\" data-start-ref=\"01010008\" data-end-ref=\"01010011\">Genesis 10:8–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005006",
+"start_ref_usfm": "MIC 5:6",
+"end_ref": "33005006",
+"end_ref_usfm": "MIC 5:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Nimrod",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Nimrod"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "group:Assyria",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyrians"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sword"
+}
+]
+}
+},
+{
+"content_id": "22352",
+"reference_id": 21520,
+"version": "1.0.4",
+"title": "Micah 5:7",
+"media_type": "Text",
+"index_reference": "33005007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The remnant refers to those whom God&apos;s grace saved to form the foundation of his new people (<data class=\"bible-ref\" data-start-ref=\"15009008\" data-end-ref=\"15009015\">Ezra 9:8–15</data>; <data class=\"bible-ref\" data-start-ref=\"16001002\" data-end-ref=\"16001002\">Nehemiah 1:2</data>). </p></li><li><p>Dew and rain are gifts from the Lord. No human being can stop him from sending them.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005007",
+"start_ref_usfm": "MIC 5:7",
+"end_ref": "33005007",
+"end_ref_usfm": "MIC 5:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Grass"
+}
+]
+}
+},
+{
+"content_id": "22351",
+"reference_id": 21519,
+"version": "1.0.4",
+"title": "Micah 5:7–15",
+"media_type": "Text",
+"index_reference": "33005007-33005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God did not aim to create just another nation (<data class=\"bible-ref\" data-start-ref=\"02019004\" data-end-ref=\"02019006\">Exodus 19:4–6</data>; <data class=\"bible-ref\" data-start-ref=\"04023009\" data-end-ref=\"04023009\">Numbers 23:9</data>; <data class=\"bible-ref\" data-start-ref=\"24007023\" data-end-ref=\"24007023\">Jeremiah 7:23</data>). He wanted his own people to follow his ways and be holy like him (<data class=\"bible-ref\" data-start-ref=\"03011045\" data-end-ref=\"03011045\">Leviticus 11:45</data>). In that time (<data class=\"bible-ref\" data-start-ref=\"33005010\" data-end-ref=\"33005010\">Micah 5:10</data>), God will lead a redeemed and purified people, free from violence and the damage of war.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005007",
+"start_ref_usfm": "MIC 5:7",
+"end_ref": "33005015",
+"end_ref_usfm": "MIC 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Incantations",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Incantations"
+},
+{
+"id": "deity:Asherah",
+"type": "deity",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Asherah"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:SacredPillar",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Sacred Pillar"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:SacredPole",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Sacred Pole"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Grass"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+}
+]
+}
+},
+{
+"content_id": "22353",
+"reference_id": 21521,
+"version": "1.0.4",
+"title": "Micah 5:8–9",
+"media_type": "Text",
+"index_reference": "33005008-33005009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>God&apos;s people will have a special role among the world&apos;s nations (<data class=\"bible-ref\" data-start-ref=\"01012003\" data-end-ref=\"01012003\">Genesis 12:3</data>; <data class=\"bible-ref\" data-start-ref=\"02019004\" data-end-ref=\"02019006\">Exodus 19:4–6</data>). They will lead and not follow (<data class=\"bible-ref\" data-start-ref=\"05028013\" data-end-ref=\"05028013\">Deuteronomy 28:13</data>), and be as strong as a lion (compare <data class=\"bible-ref\" data-start-ref=\"17006013\" data-end-ref=\"17006013\">Esther 6:13</data>) as God grants them power over the nations. </p></li><li><p>The Lord will judge their enemies (see <data class=\"bible-ref\" data-start-ref=\"33005015\" data-end-ref=\"33005015\">Micah 5:15</data>) if they keep rebelling against him. However, the Lord&apos;s ultimate wish is to bless the nations, not to curse or destroy them (<data class=\"bible-ref\" data-start-ref=\"01012003\" data-end-ref=\"01012003\">Genesis 12:3</data>; <data class=\"bible-ref\" data-start-ref=\"32004011\" data-end-ref=\"32004011\">Jonah 4:11</data>; <data class=\"bible-ref\" data-start-ref=\"43003016\" data-end-ref=\"43003016\">John 3:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005008",
+"start_ref_usfm": "MIC 5:8",
+"end_ref": "33005009",
+"end_ref_usfm": "MIC 5:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22344",
+"reference_id": 21512,
+"version": "1.0.4",
+"title": "Micah 5:10–14",
+"media_type": "Text",
+"index_reference": "33005010-33005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord’s actions, both for and against his people, cleanse them. He removed practices and objects that Israel had taken from the pagan cultures of Mesopotamia and Canaan.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005010",
+"start_ref_usfm": "MIC 5:10",
+"end_ref": "33005014",
+"end_ref_usfm": "MIC 5:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Incantations",
+"type": "keyterm",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Incantations"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:Asherah",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Asherah"
+},
+{
+"id": "fauna:Horse",
+"type": "fauna",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Horse"
+},
+{
+"id": "realia:SacredPillar",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Sacred Pillar"
+},
+{
+"id": "realia:SacredPole",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Sacred Pole"
+},
+{
+"id": "realia:Chariot",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Chariot"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+}
+]
+}
+},
+{
+"content_id": "22345",
+"reference_id": 21513,
+"version": "1.0.4",
+"title": "Micah 5:13–14",
+"media_type": "Text",
+"index_reference": "33005013-33005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>sacred pillars … Asherah poles</em>: Stones and trees were used for worship. They could symbolize pagan gods. The <em>Asherah poles</em> were green poles or trees representing the goddess Asherah and her fertility powers. The stones and trees might have had sexual meanings—one male, the other female. People viewed Asherah as the mother of gods and the partner of El or Baal.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33005013",
+"start_ref_usfm": "MIC 5:13",
+"end_ref": "33005014",
+"end_ref_usfm": "MIC 5:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Asherah",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Asherah"
+},
+{
+"id": "realia:SacredPillar",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sacred Pillar"
+},
+{
+"id": "realia:SacredPole",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sacred Pole"
+},
+{
+"id": "realia:GravenImage",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Graven Image"
+}
+]
+}
+},
+{
+"content_id": "22355",
+"reference_id": 21523,
+"version": "1.0.4",
+"title": "Micah 6:1–2",
+"media_type": "Text",
+"index_reference": "33006001-33006002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>mountains … hills</em>: All creation is called as a witness (see <data class=\"bible-ref\" data-start-ref=\"06024027\" data-end-ref=\"06024027\">Joshua 24:27</data>). In other ancient Near Eastern treaties, they called the gods of the countries as witnesses.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006001",
+"start_ref_usfm": "MIC 6:1",
+"end_ref": "33006002",
+"end_ref_usfm": "MIC 6:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+}
+]
+}
+},
+{
+"content_id": "22354",
+"reference_id": 21522,
+"version": "1.0.4",
+"title": "Micah 6:1–16",
+"media_type": "Text",
+"index_reference": "33006001-33006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord presented, argued, and decided a case against his rebellious people, Israel. This section is written as a formal legal court case. Other prophets use the same pattern (compare <data class=\"bible-ref\" data-start-ref=\"23001002\" data-end-ref=\"23001004\">Isaiah 1:2–4</data>; <data class=\"bible-ref\" data-start-ref=\"24002004\" data-end-ref=\"24002009\">Jeremiah 2:4–9</data>; <data class=\"bible-ref\" data-start-ref=\"28004001\" data-end-ref=\"28004019\">Hosea 4</data>). </p><p>Using the image of a courtroom, the Lord challenged his people to state their case against him. At the same time, he stated his case against them (<data class=\"bible-ref\" data-start-ref=\"33006001\" data-end-ref=\"33006005\">Micah 6:1–5</data>). The people had not obeyed what the Lord required of them (<data class=\"bible-ref\" data-start-ref=\"33006006\" data-end-ref=\"33006008\">Micah 6:6–8</data>), so they were found guilty (<data class=\"bible-ref\" data-start-ref=\"33006009\" data-end-ref=\"33006012\">6:9–12</data>). </p><p>After the guilty verdict, the passage describes Israel’s punishment. This final section announces the sentence that follows the judgment (<data class=\"bible-ref\" data-start-ref=\"33006013\" data-end-ref=\"33006016\">Micah 6:13–16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006001",
+"start_ref_usfm": "MIC 6:1",
+"end_ref": "33006016",
+"end_ref_usfm": "MIC 6:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5469,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.2562,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2562,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:AnointingOil",
+"type": "realia",
+"confidence": 0.1963,
+"match_method": "canonical",
+"preferred_label": "Anointing Oil"
+},
+{
+"id": "realia:OliveOil",
+"type": "realia",
+"confidence": 0.1963,
+"match_method": "canonical",
+"preferred_label": "Olive Oil"
+},
+{
+"id": "person:Beor.2",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Beor"
+},
+{
+"id": "place:Shittim",
+"type": "place",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Shittim"
+},
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "person:Balaam",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Balaam"
+},
+{
+"id": "keyterm:Redeem",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Redeem"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Gilgal.2",
+"type": "place",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Gilgal"
+},
+{
+"id": "keyterm:SoundWisdom",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Sound Wisdom"
+},
+{
+"id": "person:Miriam",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Miriam"
+},
+{
+"id": "person:Omri",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Omri"
+},
+{
+"id": "person:Aaron",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Aaron"
+},
+{
+"id": "person:Ahab",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Ahab"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "person:Moses",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Moses"
+},
+{
+"id": "person:Balak",
+"type": "person",
+"confidence": 0.1781,
+"match_method": "canonical",
+"preferred_label": "Balak"
+},
+{
+"id": "realia:Balance",
+"type": "realia",
+"confidence": 0.1306,
+"match_method": "canonical",
+"preferred_label": "Balance"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "flora:OliveTree",
+"type": "flora",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Olive Tree"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:Barley",
+"type": "flora",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Barley"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+},
+{
+"id": "realia:Bag",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Bag"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "realia:Must",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Must"
+},
+{
+"id": "fauna:Mule",
+"type": "fauna",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Mule"
+},
+{
+"id": "realia:Ephah",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Ephah"
+},
+{
+"id": "realia:Foundation",
+"type": "realia",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Foundation"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1181,
+"match_method": "canonical",
+"preferred_label": "Vine"
+}
+]
+}
+},
+{
+"content_id": "22359",
+"reference_id": 21527,
+"version": "1.0.4",
+"title": "Micah 6:3",
+"media_type": "Text",
+"index_reference": "33006003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>wearied you!</em>: The Lord asks if he has done anything to make Israel turn away from him. However, their disrespect for God comes from their own lack of gratitude (<data class=\"bible-ref\" data-start-ref=\"33006004\" data-end-ref=\"33006005\">Micah 6:4–5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006003",
+"start_ref_usfm": "MIC 6:3",
+"end_ref": "33006003",
+"end_ref_usfm": "MIC 6:3"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22360",
+"reference_id": 21528,
+"version": "1.0.4",
+"title": "Micah 6:4–5",
+"media_type": "Text",
+"index_reference": "33006004-33006005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Lord led Israel out of Egypt, protected them, and blessed them on their journey to the promised land. God urged Israel to always remember what he had done for them from Sinai onward (<data class=\"bible-ref\" data-start-ref=\"02003015\" data-end-ref=\"02003015\">Exodus 3:15</data>; <data class=\"bible-ref\" data-start-ref=\"05005015\" data-end-ref=\"05005015\">Deuteronomy 5:15</data>; <data class=\"bible-ref\" data-start-ref=\"19077011\" data-end-ref=\"19077011\">Psalms 77:11</data>; <data class=\"bible-ref\" data-start-ref=\"19111004\" data-end-ref=\"19111004\">111:4</data>; see also <data class=\"bible-ref\" data-start-ref=\"19078001\" data-end-ref=\"19078072\">Psalms 78</data>, <data class=\"bible-ref\" data-start-ref=\"19136001\" data-end-ref=\"19136026\">136</data>). </p></li><li><p><em>Balak … Balaam</em>: (see <data class=\"bible-ref\" data-start-ref=\"04022001\" data-end-ref=\"04024025\">Numbers 22–24</data>). </p></li><li><p>Shittim<em>,</em> east of the Jordan River, was Israel’s base camp before entering the promised land (see <data class=\"bible-ref\" data-start-ref=\"04025001\" data-end-ref=\"04025001\">Numbers 25:1</data>; <data class=\"bible-ref\" data-start-ref=\"06002001\" data-end-ref=\"06002001\">Joshua 2:1</data>; <data class=\"bible-ref\" data-start-ref=\"06003001\" data-end-ref=\"06003001\">3:1</data>). The journey from there to Gilgal (west of the Jordan River) shows God’s faithful covenant. God’s saving acts brought the Israelites into the promised land.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006004",
+"start_ref_usfm": "MIC 6:4",
+"end_ref": "33006005",
+"end_ref_usfm": "MIC 6:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Miriam",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Miriam"
+},
+{
+"id": "person:Beor.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Beor"
+},
+{
+"id": "person:Balaam",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Balaam"
+},
+{
+"id": "place:Shittim",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Shittim"
+},
+{
+"id": "person:Aaron",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Aaron"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Redeem",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Redeem"
+},
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "person:Moses",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Moses"
+},
+{
+"id": "place:Gilgal.2",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Gilgal"
+},
+{
+"id": "person:Balak",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Balak"
+}
+]
+}
+},
+{
+"content_id": "22361",
+"reference_id": 21529,
+"version": "1.0.4",
+"title": "Micah 6:6–7",
+"media_type": "Text",
+"index_reference": "33006006-33006007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Israel&apos;s situation seemed hopeless, so they asked the Lord how to please him. They offered increasingly significant items, from calves to rams, olive oil, and even firstborn children. None of these offerings was enough or acceptable to God, who judges the heart (<data class=\"bible-ref\" data-start-ref=\"09015022\" data-end-ref=\"09015022\">1&nbsp;Samuel 15:22</data>; <data class=\"bible-ref\" data-start-ref=\"09016007\" data-end-ref=\"09016007\">16:7</data>; <data class=\"bible-ref\" data-start-ref=\"24017009\" data-end-ref=\"24017009\">Jeremiah 17:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006006",
+"start_ref_usfm": "MIC 6:6",
+"end_ref": "33006007",
+"end_ref_usfm": "MIC 6:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "realia:AnointingOil",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Anointing Oil"
+},
+{
+"id": "realia:MoltenImage",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Molten Image"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+},
+{
+"id": "realia:OliveOil",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Olive Oil"
+}
+]
+}
+},
+{
+"content_id": "22362",
+"reference_id": 21530,
+"version": "1.0.4",
+"title": "Micah 6:8",
+"media_type": "Text",
+"index_reference": "33006008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Good</em> means what is right in God&apos;s eyes. God is the source of all goodness (<data class=\"bible-ref\" data-start-ref=\"01001001\" data-end-ref=\"01001031\">Genesis 1</data>; <data class=\"bible-ref\" data-start-ref=\"02033019\" data-end-ref=\"02033019\">Exodus 33:19</data>; <data class=\"bible-ref\" data-start-ref=\"02034006\" data-end-ref=\"02034007\">34:6–7</data>; <data class=\"bible-ref\" data-start-ref=\"05012028\" data-end-ref=\"05012028\">Deuteronomy 12:28</data>). </p></li><li><p><em>what is good</em> (Hebrew <em>mishpat</em>, often translated as &quot;justice&quot;): This means treating others fairly and without manipulation or oppression. </p></li><li><p><em>mercy</em> (Hebrew <em>khesed</em>): This is a deep, undeserved loyalty that defines God&apos;s holy character (see <data class=\"bible-ref\" data-start-ref=\"19136001\" data-end-ref=\"19136026\">Psalm 136</data>). Those who know God should act this way toward others (see <data class=\"bible-ref\" data-start-ref=\"01021022\" data-end-ref=\"01021024\">Genesis 21:22–24</data>; <data class=\"bible-ref\" data-start-ref=\"06002012\" data-end-ref=\"06002014\">Joshua 2:12–14</data>; <data class=\"bible-ref\" data-start-ref=\"40005043\" data-end-ref=\"40005048\">Matthew 5:43–48</data>). </p></li><li><p><em>walk humbly</em>: God’s people must live with humility. They must not act with pride or claim special privilege. Instead, they should live in reverent fear of God (deep respect and awe). <em>Mishpat</em> (&quot;justice&quot;) and <em>khesed</em> (&quot;mercy&quot;) cannot exist together with human pride. God wants an ongoing, close relationship with his people. This relationship is described as a “walk” (a way of living life each day). This walk changes how people treat one another (compare <data class=\"bible-ref\" data-start-ref=\"05028009\" data-end-ref=\"05028009\">Deuteronomy 28:9</data>; <data class=\"bible-ref\" data-start-ref=\"06022005\" data-end-ref=\"06022005\">Joshua 22:5</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006008",
+"start_ref_usfm": "MIC 6:8",
+"end_ref": "33006008",
+"end_ref_usfm": "MIC 6:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+}
+]
+}
+},
+{
+"content_id": "22364",
+"reference_id": 21532,
+"version": "1.0.4",
+"title": "Micah 6:9",
+"media_type": "Text",
+"index_reference": "33006009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Wise people respect the Lord<em>. </em>God&apos;s voice invites everyone in Jerusalem to learn wisdom (compare <data class=\"bible-ref\" data-start-ref=\"20001007\" data-end-ref=\"20001007\">Proverbs 1:7</data>, <data class=\"bible-ref\" data-start-ref=\"20001020\" data-end-ref=\"20001020\">20</data>, <data class=\"bible-ref\" data-start-ref=\"20001028\" data-end-ref=\"20001028\">28</data>). </p></li><li><p><span><em>Heed the rod … who ordained it</em>: </span>Assyria would carry out the Lord’s plan to destroy Samaria, while Babylon would be the instrument of destruction for Jerusalem (<data class=\"bible-ref\" data-start-ref=\"33004010\" data-end-ref=\"33004010\">Micah 4:10</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006009",
+"start_ref_usfm": "MIC 6:9",
+"end_ref": "33006009",
+"end_ref_usfm": "MIC 6:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:SoundWisdom",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sound Wisdom"
+}
+]
+}
+},
+{
+"content_id": "22363",
+"reference_id": 21531,
+"version": "1.0.4",
+"title": "Micah 6:9–16",
+"media_type": "Text",
+"index_reference": "33006009-33006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>People in Jerusalem were invited to learn from Samaria: If you oppress others to gain wealth (<data class=\"bible-ref\" data-start-ref=\"33006010\" data-end-ref=\"33006012\">Micah 6:10–12</data>), you will never have enough, no matter how much you acquire (<data class=\"bible-ref\" data-start-ref=\"33006013\" data-end-ref=\"33006015\">6:13–15</data>). Eventually, you will lose even that (<data class=\"bible-ref\" data-start-ref=\"33006016\" data-end-ref=\"33006016\">Micah 6:16</data>). Such people deserve scorn, not honor and praise (<data class=\"bible-ref\" data-start-ref=\"33006016\" data-end-ref=\"33006016\">Micah 6:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006009",
+"start_ref_usfm": "MIC 6:9",
+"end_ref": "33006016",
+"end_ref_usfm": "MIC 6:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "person:Omri",
+"type": "person",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Omri"
+},
+{
+"id": "person:Ahab",
+"type": "person",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Ahab"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:SoundWisdom",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Sound Wisdom"
+},
+{
+"id": "realia:Balance",
+"type": "realia",
+"confidence": 0.1713,
+"match_method": "canonical",
+"preferred_label": "Balance"
+},
+{
+"id": "realia:Bag",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Bag"
+},
+{
+"id": "realia:OliveOil",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Olive Oil"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:OliveTree",
+"type": "flora",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Olive Tree"
+},
+{
+"id": "flora:Barley",
+"type": "flora",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Barley"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:AnointingOil",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Anointing Oil"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Must",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Must"
+},
+{
+"id": "fauna:Mule",
+"type": "fauna",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Mule"
+},
+{
+"id": "realia:Ephah",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Ephah"
+}
+]
+}
+},
+{
+"content_id": "22356",
+"reference_id": 21524,
+"version": "1.0.4",
+"title": "Micah 6:10–12",
+"media_type": "Text",
+"index_reference": "33006010-33006012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord brought clear charges against his people. Israel had become a community marked by lies and dishonesty. Because of this, they faced rejection and destruction.</p><p>The people gained wealth through dishonest means. They used unfair business practices and relied on threats and violence. These actions were not fitting for people who claimed to belong to God (see <data class=\"bible-ref\" data-start-ref=\"12006025\" data-end-ref=\"12006025\">2&nbsp;Kings 6:25</data>; <data class=\"bible-ref\" data-start-ref=\"28012007\" data-end-ref=\"28012008\">Hosea 12:7–8</data>; <data class=\"bible-ref\" data-start-ref=\"30008005\" data-end-ref=\"30008006\">Amos 8:5–6</data>). </p><p>They were unable to change because lying had become their normal way of life (compare <data class=\"bible-ref\" data-start-ref=\"20006016\" data-end-ref=\"20006019\">Proverbs 6:16–19</data>). As a result, Israel was corrupt in every part of its life.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006010",
+"start_ref_usfm": "MIC 6:10",
+"end_ref": "33006012",
+"end_ref_usfm": "MIC 6:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "realia:Balance",
+"type": "realia",
+"confidence": 0.3067,
+"match_method": "canonical",
+"preferred_label": "Balance"
+},
+{
+"id": "realia:Bag",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Bag"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Ephah",
+"type": "realia",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ephah"
+}
+]
+}
+},
+{
+"content_id": "22357",
+"reference_id": 21525,
+"version": "1.0.4",
+"title": "Micah 6:13–16",
+"media_type": "Text",
+"index_reference": "33006013-33006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>I am striking you severely</em>:</span> This phrase introduces the curses God promised to bring upon the disobedient and rebellious people of Israel (see <data class=\"bible-ref\" data-start-ref=\"05028015\" data-end-ref=\"05028068\">Deuteronomy 28:15–68</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006013",
+"start_ref_usfm": "MIC 6:13",
+"end_ref": "33006016",
+"end_ref_usfm": "MIC 6:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Omri",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Omri"
+},
+{
+"id": "person:Ahab",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Ahab"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:OliveOil",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Olive Oil"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "flora:Barley",
+"type": "flora",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Barley"
+},
+{
+"id": "realia:AnointingOil",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Anointing Oil"
+},
+{
+"id": "realia:Must",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Must"
+},
+{
+"id": "fauna:Mule",
+"type": "fauna",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Mule"
+},
+{
+"id": "flora:OliveTree",
+"type": "flora",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Olive Tree"
+}
+]
+}
+},
+{
+"content_id": "22358",
+"reference_id": 21526,
+"version": "1.0.4",
+"title": "Micah 6:16",
+"media_type": "Text",
+"index_reference": "33006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These kings started perhaps the most rebellious dynasty in northern Israel that lasted from 885 to 841 BC (<data class=\"bible-ref\" data-start-ref=\"11016023\" data-end-ref=\"12010017\">1 Kings 16:23—2 Kings 10:17</data>). Elijah predicted their destruction (<data class=\"bible-ref\" data-start-ref=\"12010017\" data-end-ref=\"12010017\">2 Kings 10:17</data>). No northern kings of Israel followed the laws of Moses (see <data class=\"bible-ref\" data-start-ref=\"33001005\" data-end-ref=\"33001006\">Micah 1:5–6</data>). </p><p>Omri and his son Ahab were the worst of the evil kings (for example, <data class=\"bible-ref\" data-start-ref=\"11018004\" data-end-ref=\"11018004\">1 Kings 18:4</data>; <data class=\"bible-ref\" data-start-ref=\"11021001\" data-end-ref=\"11021026\">21:1–26</data>). Omri’s family line of kings was destroyed by Jehu, whom the Lord appointed to judge the royal house of Israel, in 841 BC (<data class=\"bible-ref\" data-start-ref=\"12009014\" data-end-ref=\"12010017\">2 Kings 9:14–10:17</data>). In the same way, the people of Israel who followed this evil example would also be destroyed by the Lord.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33006016",
+"start_ref_usfm": "MIC 6:16",
+"end_ref": "33006016",
+"end_ref_usfm": "MIC 6:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Omri",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Omri"
+},
+{
+"id": "person:Ahab",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ahab"
+}
+]
+}
+},
+{
+"content_id": "22375",
+"reference_id": 21543,
+"version": "1.0.4",
+"title": "Micah 7:1",
+"media_type": "Text",
+"index_reference": "33007001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>gathering summer fruit at the gleaning of the vineyard</em></span>: After the second crop of figs and fruit in August to September (toward the end of summer), no more fruit was produced for several months (see <data class=\"bible-ref\" data-start-ref=\"23016009\" data-end-ref=\"23016009\">Isaiah 16:9</data>; <data class=\"bible-ref\" data-start-ref=\"24048032\" data-end-ref=\"24048032\">Jeremiah 48:32</data>). No one could satisfy Micah’s hunger for righteousness (<data class=\"bible-ref\" data-start-ref=\"33007002\" data-end-ref=\"33007006\">Micah 7:2–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007001",
+"start_ref_usfm": "MIC 7:1",
+"end_ref": "33007001",
+"end_ref_usfm": "MIC 7:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Fig"
+}
+]
+}
+},
+{
+"content_id": "22365",
+"reference_id": 21533,
+"version": "1.0.4",
+"title": "Micah 7:1–20",
+"media_type": "Text",
+"index_reference": "33007001-33007020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Hopeless deception and corruption filled God’s people (<data class=\"bible-ref\" data-start-ref=\"33007001\" data-end-ref=\"33007006\">Micah 7:1–6</data>). Because of this, Micah mourned their condition and turned to the Lord for help (<data class=\"bible-ref\" data-start-ref=\"33007007\" data-end-ref=\"33007010\">Micah 7:7–10</data>).</p><p>Even so, God’s mercy would triumph. Israel would be restored by the Lord (<data class=\"bible-ref\" data-start-ref=\"33007011\" data-end-ref=\"33007013\">Micah 7:11–13</data>). God’s mercy, compassion, and unfailing love would prevail in the end (<data class=\"bible-ref\" data-start-ref=\"33007014\" data-end-ref=\"33007020\">Micah 7:14–20</data>). </p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007001",
+"start_ref_usfm": "MIC 7:1",
+"end_ref": "33007020",
+"end_ref_usfm": "MIC 7:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.485,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Decree",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Decree"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "place:Euphrates",
+"type": "place",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Euphrates River"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "keyterm:LoyalPerson",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Loyal Person"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+},
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "place:Gilead",
+"type": "place",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Gilead"
+},
+{
+"id": "keyterm:BelieveIn",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Believe In"
+},
+{
+"id": "keyterm:Visitation",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Visitation"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.1225,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+},
+{
+"id": "flora:Brier",
+"type": "flora",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Brier"
+},
+{
+"id": "flora:Fig",
+"type": "flora",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Fig"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Snake",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Snake"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Rod"
+},
+{
+"id": "realia:ThornHedge",
+"type": "realia",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Thorn Hedge"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Staff"
+}
+]
+}
+},
+{
+"content_id": "22377",
+"reference_id": 21545,
+"version": "1.0.4",
+"title": "Micah 7:2",
+"media_type": "Text",
+"index_reference": "33007002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>This complaint often appears in the prophets (see <data class=\"bible-ref\" data-start-ref=\"23059016\" data-end-ref=\"23059016\">Isaiah 59:16</data>; <data class=\"bible-ref\" data-start-ref=\"24005001\" data-end-ref=\"24005001\">Jeremiah 5:1</data>; <data class=\"bible-ref\" data-start-ref=\"26022030\" data-end-ref=\"26022030\">Ezekiel 22:30</data>). </p></li><li><p>In the ancient Near East, people caught fish and hunted by setting traps and using nets (compare <data class=\"bible-ref\" data-start-ref=\"19010009\" data-end-ref=\"19010009\">Psalm 10:9</data>; <data class=\"bible-ref\" data-start-ref=\"20001017\" data-end-ref=\"20001017\">Proverbs 1:17</data>; <data class=\"bible-ref\" data-start-ref=\"23051020\" data-end-ref=\"23051020\">Isaiah 51:20</data>). </p></li><li><p><em>one another</em>: All fellow Israelites were regarded as brothers.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007002",
+"start_ref_usfm": "MIC 7:2",
+"end_ref": "33007002",
+"end_ref_usfm": "MIC 7:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "keyterm:LoyalPerson",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Loyal Person"
+},
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+}
+]
+}
+},
+{
+"content_id": "22376",
+"reference_id": 21544,
+"version": "1.0.4",
+"title": "Micah 7:2–6",
+"media_type": "Text",
+"index_reference": "33007002-33007006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The people of Israel were without law, justice, or righteousness. Everyone took advantage of others for personal gain. This created a society in which all forms of oppression were normal.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007002",
+"start_ref_usfm": "MIC 7:2",
+"end_ref": "33007006",
+"end_ref_usfm": "MIC 7:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "keyterm:BelieveIn",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Believe In"
+},
+{
+"id": "keyterm:Visitation",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Visitation"
+},
+{
+"id": "keyterm:LoyalPerson",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Loyal Person"
+},
+{
+"id": "realia:Net",
+"type": "realia",
+"confidence": 0.22,
+"match_method": "canonical",
+"preferred_label": "Net"
+},
+{
+"id": "realia:Dragnet",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Dragnet"
+},
+{
+"id": "flora:Brier",
+"type": "flora",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Brier"
+},
+{
+"id": "realia:ThornHedge",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Thorn Hedge"
+}
+]
+}
+},
+{
+"content_id": "22378",
+"reference_id": 21546,
+"version": "1.0.4",
+"title": "Micah 7:3",
+"media_type": "Text",
+"index_reference": "33007003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>skilled at evil</em>: That is, they had learned how to do evil very well.</p></li><li><p><span><em>the prince and the judge demand a bribe</em></span>: The law forbade rulers and judges from accepting bribes or turning justice in the wrong direction (<data class=\"bible-ref\" data-start-ref=\"02018019\" data-end-ref=\"02018022\">Exodus 18:19–22</data>; <data class=\"bible-ref\" data-start-ref=\"05016018\" data-end-ref=\"05016020\">Deuteronomy 16:18–20</data>). Because of this, Israel’s legal system no longer worked in a fair way.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007003",
+"start_ref_usfm": "MIC 7:3",
+"end_ref": "33007003",
+"end_ref_usfm": "MIC 7:3"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22379",
+"reference_id": 21547,
+"version": "1.0.4",
+"title": "Micah 7:4",
+"media_type": "Text",
+"index_reference": "33007004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>The day for your watchmen has come</em></span>: The people of Israel will soon be conquered by the Assyrians. The people of Judah will soon face destruction by the Babylonians. All the people of the earth will soon face God in judgment.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007004",
+"start_ref_usfm": "MIC 7:4",
+"end_ref": "33007004",
+"end_ref_usfm": "MIC 7:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Visitation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Visitation"
+},
+{
+"id": "realia:ThornHedge",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Thorn Hedge"
+},
+{
+"id": "flora:Brier",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Brier"
+}
+]
+}
+},
+{
+"content_id": "22380",
+"reference_id": 21548,
+"version": "1.0.4",
+"title": "Micah 7:5–6",
+"media_type": "Text",
+"index_reference": "33007005-33007006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Do not rely on a friend</em></span>: Bitterness, corruption, and betrayal had harmed the community of the Lord&apos;s people (compare <data class=\"bible-ref\" data-start-ref=\"40010034\" data-end-ref=\"40010036\">Matthew 10:34–36</data>; <data class=\"bible-ref\" data-start-ref=\"42012052\" data-end-ref=\"42012053\">Luke 12:52–53</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007005",
+"start_ref_usfm": "MIC 7:5",
+"end_ref": "33007006",
+"end_ref_usfm": "MIC 7:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:BelieveIn",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe In"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Trust"
+}
+]
+}
+},
+{
+"content_id": "22381",
+"reference_id": 21549,
+"version": "1.0.4",
+"title": "Micah 7:7–10",
+"media_type": "Text",
+"index_reference": "33007007-33007010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>During a difficult time, Micah prays with a psalm expressing hope and trust in the Lord (compare <data class=\"bible-ref\" data-start-ref=\"35002004\" data-end-ref=\"35002004\">Habakkuk 2:4</data>; <data class=\"bible-ref\" data-start-ref=\"35003016\" data-end-ref=\"35003018\">3:16–18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007007",
+"start_ref_usfm": "MIC 7:7",
+"end_ref": "33007010",
+"end_ref_usfm": "MIC 7:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.75,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "22382",
+"reference_id": 21550,
+"version": "1.0.4",
+"title": "Micah 7:8",
+"media_type": "Text",
+"index_reference": "33007008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>though I sit in darkness</em>:</span> The prophet trusts God to be his light (see <data class=\"bible-ref\" data-start-ref=\"19027001\" data-end-ref=\"19027001\">Psalm 27:1</data>). He knows his enemies will not defeat him (compare <data class=\"bible-ref\" data-start-ref=\"19023004\" data-end-ref=\"19023005\">Psalm 23:4–5</data>). God&apos;s spirit gives him the strength and confidence to carry out his prophetic duties (<data class=\"bible-ref\" data-start-ref=\"33003008\" data-end-ref=\"33003008\">Micah 3:8</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007008",
+"start_ref_usfm": "MIC 7:8",
+"end_ref": "33007008",
+"end_ref_usfm": "MIC 7:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22383",
+"reference_id": 21551,
+"version": "1.0.4",
+"title": "Micah 7:9",
+"media_type": "Text",
+"index_reference": "33007009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>I have sinned</em>: The prophet and other religious people admit their mistakes and responsibility, yet trust in the Lord for redemption. </p></li><li><p>The Lord&apos;s righteousness saves and rescues his people.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007009",
+"start_ref_usfm": "MIC 7:9",
+"end_ref": "33007009",
+"end_ref_usfm": "MIC 7:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "22366",
+"reference_id": 21534,
+"version": "1.0.4",
+"title": "Micah 7:10",
+"media_type": "Text",
+"index_reference": "33007010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Where is the LORD your God?</em>:</span> This question was spoken as a taunt. It mocked God and those who trusted in him.</p><p>God had promised that he would always be with his people and their leaders (<data class=\"bible-ref\" data-start-ref=\"01046003\" data-end-ref=\"01046004\">Genesis 46:3–4</data>; <data class=\"bible-ref\" data-start-ref=\"02003012\" data-end-ref=\"02003012\">Exodus 3:12</data>). These taunts dishonored God’s name. Because of this, God would act to defend his honor and show his faithfulness (compare <data class=\"bible-ref\" data-start-ref=\"26020009\" data-end-ref=\"26020009\">Ezekiel 20:9</data>; <data class=\"bible-ref\" data-start-ref=\"26036019\" data-end-ref=\"26036026\">36:19–26</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007010",
+"start_ref_usfm": "MIC 7:10",
+"end_ref": "33007010",
+"end_ref_usfm": "MIC 7:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "22367",
+"reference_id": 21535,
+"version": "1.0.4",
+"title": "Micah 7:11–12",
+"media_type": "Text",
+"index_reference": "33007011-33007012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>That day includes: </p><ol><li><p>538 BC, when Israel began to return from exile in Babylon (see <data class=\"bible-ref\" data-start-ref=\"15001001\" data-end-ref=\"15002070\">Ezra 1–2</data>); and</p></li><li><p>the final restoration of God&apos;s people (see <data class=\"bible-ref\" data-start-ref=\"30009011\" data-end-ref=\"30009015\">Amos 9:11–15</data>). </p></li></ol><p>As the nations come to a renewed Israel, God will fulfill his purposes through Abraham (see <data class=\"bible-ref\" data-start-ref=\"01012003\" data-end-ref=\"01012003\">Genesis 12:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007011",
+"start_ref_usfm": "MIC 7:11",
+"end_ref": "33007012",
+"end_ref_usfm": "MIC 7:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Euphrates",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Euphrates River"
+},
+{
+"id": "keyterm:Decree",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Decree"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+}
+]
+}
+},
+{
+"content_id": "22368",
+"reference_id": 21536,
+"version": "1.0.4",
+"title": "Micah 7:13",
+"media_type": "Text",
+"index_reference": "33007013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Before their restoration, Israel must face discipline (<data class=\"bible-ref\" data-start-ref=\"05004029\" data-end-ref=\"05004029\">Deuteronomy 4:29</data>; <data class=\"bible-ref\" data-start-ref=\"05028037\" data-end-ref=\"05028037\">28:37</data>, <data class=\"bible-ref\" data-start-ref=\"05028048\" data-end-ref=\"05028048\">48</data>, <data class=\"bible-ref\" data-start-ref=\"05028063\" data-end-ref=\"05028063\">63</data>; <data class=\"bible-ref\" data-start-ref=\"05030001\" data-end-ref=\"05030006\">30:1–6</data>). </p></li><li><p><em>desolate</em>: The people&apos;s stubborn wickedness led to God&apos;s judgments.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007013",
+"start_ref_usfm": "MIC 7:13",
+"end_ref": "33007013",
+"end_ref_usfm": "MIC 7:13"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22370",
+"reference_id": 21538,
+"version": "1.0.4",
+"title": "Micah 7:14",
+"media_type": "Text",
+"index_reference": "33007014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>A shepherd in the ancient Near East used a staff to protect sheep from wild animals. Similarly, the prophet prayed for God to protect his people from hostile non-Jewish nations (compare <data class=\"bible-ref\" data-start-ref=\"02004001\" data-end-ref=\"02004005\">Exodus 4:1–5</data>). </p></li><li><p><em>Your inheritance</em>: compare <data class=\"bible-ref\" data-start-ref=\"02019005\" data-end-ref=\"02019005\">Exodus 19:5</data>; <data class=\"bible-ref\" data-start-ref=\"05007006\" data-end-ref=\"05007006\">Deuteronomy 7:6</data>; <data class=\"bible-ref\" data-start-ref=\"05014002\" data-end-ref=\"05014002\">14:2</data>; <data class=\"bible-ref\" data-start-ref=\"05026018\" data-end-ref=\"05026018\">26:18</data>; <data class=\"bible-ref\" data-start-ref=\"39003017\" data-end-ref=\"39003017\">Malachi 3:17</data>; <data class=\"bible-ref\" data-start-ref=\"60002009\" data-end-ref=\"60002009\">1&nbsp;Peter 2:9</data>. </p></li><li><p>Bashan and Gilead, located east of the Jordan River, were among the Lord’s earliest gifts to the Israelite tribes of Reuben, Gad, and Manasseh (<data class=\"bible-ref\" data-start-ref=\"06013015\" data-end-ref=\"06013031\">Joshua 13:15–31</data>). Assyria took over these areas and exiled these tribes in the 700s&nbsp;BC. Israel would regain and expand its ownership.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007014",
+"start_ref_usfm": "MIC 7:14",
+"end_ref": "33007014",
+"end_ref_usfm": "MIC 7:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "place:Gilead",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gilead"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Staff"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Rod"
+}
+]
+}
+},
+{
+"content_id": "22369",
+"reference_id": 21537,
+"version": "1.0.4",
+"title": "Micah 7:14–20",
+"media_type": "Text",
+"index_reference": "33007014-33007020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Lord promised to fully renew Israel, his special possession (see <data class=\"bible-ref\" data-start-ref=\"02019005\" data-end-ref=\"02019005\">Exodus 19:5</data>; <data class=\"bible-ref\" data-start-ref=\"39003017\" data-end-ref=\"39003017\">Malachi 3:17</data>). Judgment would not destroy hope but cleanse it so true hope could thrive. God alone would restore the remnant of his special people and remove their guilt through his love, compassion, and faithfulness (see <data class=\"bible-ref\" data-start-ref=\"02032012\" data-end-ref=\"02032014\">Exodus 32:12–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007014",
+"start_ref_usfm": "MIC 7:14",
+"end_ref": "33007020",
+"end_ref_usfm": "MIC 7:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "place:Bashan",
+"type": "place",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Bashan"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+},
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "place:Gilead",
+"type": "place",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Gilead"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "flora:Sandalwood",
+"type": "flora",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Sandalwood"
+},
+{
+"id": "fauna:Snake",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Snake"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "realia:Rod",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Rod"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:Staff",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Staff"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "22371",
+"reference_id": 21539,
+"version": "1.0.4",
+"title": "Micah 7:15",
+"media_type": "Text",
+"index_reference": "33007015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Israel was enslaved to sin and to other nations. This situation required powerful acts from God, like the miracles he used to bring Israel out of Egypt.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007015",
+"start_ref_usfm": "MIC 7:15",
+"end_ref": "33007015",
+"end_ref_usfm": "MIC 7:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Egypt",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Egypt"
+}
+]
+}
+},
+{
+"content_id": "22372",
+"reference_id": 21540,
+"version": "1.0.4",
+"title": "Micah 7:16",
+"media_type": "Text",
+"index_reference": "33007016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God promised that all nations would receive blessings through Abraham&apos;s descendants (<data class=\"bible-ref\" data-start-ref=\"01012003\" data-end-ref=\"01012003\">Genesis 12:3</data>). This promise would come true with the restoration of God&apos;s chosen people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007016",
+"start_ref_usfm": "MIC 7:16",
+"end_ref": "33007016",
+"end_ref_usfm": "MIC 7:16"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "22373",
+"reference_id": 21541,
+"version": "1.0.4",
+"title": "Micah 7:17",
+"media_type": "Text",
+"index_reference": "33007017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Like snakes, the nations had attacked Israel&apos;s heel (compare <data class=\"bible-ref\" data-start-ref=\"01003014\" data-end-ref=\"01003015\">Genesis 3:14–15</data>). The prophets often described foreign nations as deceitful, poisonous serpents (<data class=\"bible-ref\" data-start-ref=\"23014029\" data-end-ref=\"23014029\">Isaiah 14:29</data>; <data class=\"bible-ref\" data-start-ref=\"24008017\" data-end-ref=\"24008017\">Jeremiah 8:17</data>; <data class=\"bible-ref\" data-start-ref=\"26029001\" data-end-ref=\"26029003\">Ezekiel 29:1–3</data>). Now these nations would face humiliation (compare <data class=\"bible-ref\" data-start-ref=\"19072009\" data-end-ref=\"19072009\">Psalm 72:9</data>). Crawling and &quot;licking dust&quot; were metaphors for defeat and humiliation.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007017",
+"start_ref_usfm": "MIC 7:17",
+"end_ref": "33007017",
+"end_ref_usfm": "MIC 7:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "fauna:Snake",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Snake"
+}
+]
+}
+},
+{
+"content_id": "22374",
+"reference_id": 21542,
+"version": "1.0.4",
+"title": "Micah 7:18–20",
+"media_type": "Text",
+"index_reference": "33007018-33007020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>These verses summarize Old Testament theology well. God is unique. Nothing and no one compares to God. Because of God&apos;s unfailing love (Hebrew <em>khesed</em>), he does not destroy his people when he judges them. Instead, he restores them (see <data class=\"bible-ref\" data-start-ref=\"02036006\" data-end-ref=\"02036007\">Exodus 36:6–7</data>). His faithfulness means he can be trusted to do good, no matter the cost to himself (see <data class=\"bible-ref\" data-start-ref=\"19089001\" data-end-ref=\"19089002\">Psalm 89:1–2</data>). </p></li><li><p><span><em>Who is a God like You</em></span>: This question likely refers to Micah’s name, which means “Who is like the Lord?” God&apos;s character is unmatched among the gods of other nations. His actions and words reflect his character (<data class=\"bible-ref\" data-start-ref=\"02034006\" data-end-ref=\"02034007\">Exodus 34:6–7</data>). God pardons, shows compassion, triumphs over his people&apos;s sins, and seals those sins away. </p><p>The Lord&apos;s unfailing love led him to choose Israel from the start (<data class=\"bible-ref\" data-start-ref=\"05007008\" data-end-ref=\"05007008\">Deuteronomy 7:8</data>), consistent with his covenant faithfulness to Israel’s ancestors (<data class=\"bible-ref\" data-start-ref=\"05007020\" data-end-ref=\"05007020\">Deuteronomy 7:20</data>; <data class=\"bible-ref\" data-start-ref=\"05009001\" data-end-ref=\"05010022\">9:1–10:22</data>). Through his unfailing love, God continues to offer hope to those who trust in him.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "33007018",
+"start_ref_usfm": "MIC 7:18",
+"end_ref": "33007020",
+"end_ref_usfm": "MIC 7:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "keyterm:Possess",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "To Cause to Possess"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+}
+]
+}
+}
+]

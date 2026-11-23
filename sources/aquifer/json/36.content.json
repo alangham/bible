@@ -1,0 +1,3332 @@
+[
+{
+"content_id": "26155",
+"reference_id": 25323,
+"version": "1.0.4",
+"title": "Zephaniah 1:1",
+"media_type": "Text",
+"index_reference": "36001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>This is the word of the LORD that came</em></span>: The Lord gave this message to Zephaniah. Zephaniah was a prophet, which means he spoke for God.</p></li><li><p>The reference to Hezekiah probably points to King Hezekiah of Judah, who ruled during this time (see <data class=\"bible-ref\" data-start-ref=\"12018001\" data-end-ref=\"12020020\">2 Kings 18:1–20:20</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001001",
+"start_ref_usfm": "ZEP 1:1",
+"end_ref": "36001001",
+"end_ref_usfm": "ZEP 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Hezekiah.4",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Hezekiah"
+},
+{
+"id": "person:Zephaniah.3",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Zephaniah"
+},
+{
+"id": "person:Amariah.9",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Amariah"
+},
+{
+"id": "person:Gedaliah.3",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Gedaliah"
+},
+{
+"id": "person:Cushi",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Cushi"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "person:Amon.3",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Amon"
+},
+{
+"id": "person:Josiah",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Josiah"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+}
+]
+}
+},
+{
+"content_id": "26149",
+"reference_id": 25317,
+"version": "1.0.4",
+"title": "Zephaniah 1:1–2.3",
+"media_type": "Text",
+"index_reference": "36001001-36002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Zephaniah&apos;s message from the Lord warns about worldwide judgment (<data class=\"bible-ref\" data-start-ref=\"36001001\" data-end-ref=\"36001006\">Zephaniah 1:1–6</data>). He urges his readers to repent (<data class=\"bible-ref\" data-start-ref=\"36001007\" data-end-ref=\"36001013\">Zephaniah 1:7–13</data>) before disaster strikes (<data class=\"bible-ref\" data-start-ref=\"36001014\" data-end-ref=\"36001018\">1:14–18</data>). He encourages them to seek the Lord and live righteously and humbly, hoping they may avoid his judgment (<data class=\"bible-ref\" data-start-ref=\"36002001\" data-end-ref=\"36002003\">Zephaniah 2:1–3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001001",
+"start_ref_usfm": "ZEP 1:1",
+"end_ref": "36002003",
+"end_ref_usfm": "ZEP 2:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.3143,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:Slaughtering",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Slaughtering"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1829,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1829,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.1829,
+"match_method": "canonical",
+"preferred_label": "Money"
+},
+{
+"id": "person:Cushi",
+"type": "person",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Cushi"
+},
+{
+"id": "person:Amariah.9",
+"type": "person",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Amariah"
+},
+{
+"id": "place:FishGate",
+"type": "place",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Fish Gate"
+},
+{
+"id": "person:Gedaliah.3",
+"type": "person",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Gedaliah"
+},
+{
+"id": "person:Hezekiah.4",
+"type": "person",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Hezekiah"
+},
+{
+"id": "person:Zephaniah.3",
+"type": "person",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Zephaniah"
+},
+{
+"id": "place:SecondQuarter",
+"type": "place",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Second District"
+},
+{
+"id": "place:Mortar",
+"type": "place",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "The Hollow"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "deity:Baal",
+"type": "deity",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Baal"
+},
+{
+"id": "keyterm:Decree",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Decree"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "deity:Molech",
+"type": "deity",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Molech"
+},
+{
+"id": "person:Amon.3",
+"type": "person",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Amon"
+},
+{
+"id": "keyterm:Poor",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Poor"
+},
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "group:GenericMales",
+"type": "group",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Men"
+},
+{
+"id": "person:Josiah",
+"type": "person",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Josiah"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "realia:RamsHorn",
+"type": "realia",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Rams Horn"
+},
+{
+"id": "realia:Lamp",
+"type": "realia",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Lamp"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "fauna:Fish",
+"type": "fauna",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Fish"
+}
+]
+}
+},
+{
+"content_id": "26156",
+"reference_id": 25324,
+"version": "1.0.4",
+"title": "Zephaniah 1:2–3",
+"media_type": "Text",
+"index_reference": "36001002-36001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God&apos;s judgment will remove things in the reverse order of their creation (<data class=\"bible-ref\" data-start-ref=\"01001020\" data-end-ref=\"01001026\">Genesis 1:20–26</data>). People and animals are mentioned first, then birds, and finally fish.</p><p>This order shows that judgment is a reversal of creation, moving backward through what God originally made.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001002",
+"start_ref_usfm": "ZEP 1:2",
+"end_ref": "36001003",
+"end_ref_usfm": "ZEP 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "fauna:Fish",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Fish"
+}
+]
+}
+},
+{
+"content_id": "26158",
+"reference_id": 25326,
+"version": "1.0.4",
+"title": "Zephaniah 1:4",
+"media_type": "Text",
+"index_reference": "36001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>When Zephaniah made this prophecy, before Josiah&apos;s reforms in 622 BC, idolatrous priests actively promoted Baal worship and other forms of paganism (<data class=\"bible-ref\" data-start-ref=\"12023005\" data-end-ref=\"12023005\">2 Kings 23:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001004",
+"start_ref_usfm": "ZEP 1:4",
+"end_ref": "36001004",
+"end_ref_usfm": "ZEP 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "deity:Baal",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Baal"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "26157",
+"reference_id": 25325,
+"version": "1.0.4",
+"title": "Zephaniah 1:4–6",
+"media_type": "Text",
+"index_reference": "36001004-36001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After judging the entire earth (<data class=\"bible-ref\" data-start-ref=\"36001002\" data-end-ref=\"36001003\">Zephaniah 1:2–3</data>), Zephaniah now focuses on his own people, Judah and Jerusalem.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001004",
+"start_ref_usfm": "ZEP 1:4",
+"end_ref": "36001006",
+"end_ref_usfm": "ZEP 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "deity:Baal",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Baal"
+},
+{
+"id": "deity:Molech",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Molech"
+}
+]
+}
+},
+{
+"content_id": "26159",
+"reference_id": 25327,
+"version": "1.0.4",
+"title": "Zephaniah 1:5",
+"media_type": "Text",
+"index_reference": "36001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Scripture condemned the worship of heavenly bodies like the sun, moon, and stars (see <data class=\"bible-ref\" data-start-ref=\"05004015\" data-end-ref=\"05004019\">Deuteronomy 4:15–19</data>; <data class=\"bible-ref\" data-start-ref=\"12021003\" data-end-ref=\"12021003\">2 Kings 21:3</data>; <data class=\"bible-ref\" data-start-ref=\"12023012\" data-end-ref=\"12023012\">23:12</data>). </p></li><li><p>Milcom was the national god of the Ammonites. In some Old Testament passages, Milcom is closely connected with Molech, a pagan deity linked with child sacrifice. Because of this connection, some texts use these names in overlapping ways.</p><p>The law clearly forbade the worship of Molech and related practices (<data class=\"bible-ref\" data-start-ref=\"03020001\" data-end-ref=\"03020005\">Leviticus 20:1–5</data>). Even so, these forms of worship continued to tempt Israel, especially through contact with neighboring nations (<data class=\"bible-ref\" data-start-ref=\"12016003\" data-end-ref=\"12016003\">2 Kings 16:3</data>; <data class=\"bible-ref\" data-start-ref=\"12021006\" data-end-ref=\"12021006\">21:6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001005",
+"start_ref_usfm": "ZEP 1:5",
+"end_ref": "36001005",
+"end_ref_usfm": "ZEP 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Swear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Swear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:Molech",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Molech"
+}
+]
+}
+},
+{
+"content_id": "26161",
+"reference_id": 25329,
+"version": "1.0.4",
+"title": "Zephaniah 1:7",
+"media_type": "Text",
+"index_reference": "36001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>the LORD has prepared a sacrifice; He has consecrated His guests</em>: </span>Foreigners will kill the wicked among the Lord&apos;s people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001007",
+"start_ref_usfm": "ZEP 1:7",
+"end_ref": "36001007",
+"end_ref_usfm": "ZEP 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Slaughtering",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Slaughtering"
+}
+]
+}
+},
+{
+"content_id": "26160",
+"reference_id": 25328,
+"version": "1.0.4",
+"title": "Zephaniah 1:7–18",
+"media_type": "Text",
+"index_reference": "36001007-36001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>We should view the entire passage as one large event. Some parts were fulfilled when Jerusalem fell in 586 BC. Other parts repeated in different historical periods, like the destruction of Jerusalem in AD 70. The whole prophecy will be fulfilled at the end of time. Then, God will fully and finally judge the world and renew creation (<data class=\"bible-ref\" data-start-ref=\"66019011\" data-end-ref=\"66022005\">Revelation 19:11–22:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001007",
+"start_ref_usfm": "ZEP 1:7",
+"end_ref": "36001018",
+"end_ref_usfm": "ZEP 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6125,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "keyterm:Slaughtering",
+"type": "keyterm",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Slaughtering"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Money"
+},
+{
+"id": "place:Mortar",
+"type": "place",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "The Hollow"
+},
+{
+"id": "place:FishGate",
+"type": "place",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Fish Gate"
+},
+{
+"id": "place:SecondQuarter",
+"type": "place",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Second District"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "group:GenericMales",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Men"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "realia:Lamp",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Lamp"
+},
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:RamsHorn",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Rams Horn"
+}
+]
+}
+},
+{
+"content_id": "26162",
+"reference_id": 25330,
+"version": "1.0.4",
+"title": "Zephaniah 1:8",
+"media_type": "Text",
+"index_reference": "36001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The leaders and princes of Judah were: </p><ul><li><p>the tribal chiefs of Israel (<data class=\"bible-ref\" data-start-ref=\"04001004\" data-end-ref=\"04001004\">Numbers 1:4</data>),</p></li><li><p>court officials (<data class=\"bible-ref\" data-start-ref=\"13022017\" data-end-ref=\"13022017\">1&nbsp;Chronicles 22:17</data>),</p></li><li><p>district supervisors (<data class=\"bible-ref\" data-start-ref=\"11020014\" data-end-ref=\"11020015\">1&nbsp;Kings 20:14–15</data>),</p></li><li><p>city officials (<data class=\"bible-ref\" data-start-ref=\"07008006\" data-end-ref=\"07008006\">Judges 8:6</data>),</p></li><li><p>military leaders (<data class=\"bible-ref\" data-start-ref=\"11002005\" data-end-ref=\"11002005\">1&nbsp;Kings 2:5</data>; <data class=\"bible-ref\" data-start-ref=\"12001009\" data-end-ref=\"12001014\">2&nbsp;Kings 1:9–14</data>; <data class=\"bible-ref\" data-start-ref=\"12025023\" data-end-ref=\"12025023\">25:23</data>, <data class=\"bible-ref\" data-start-ref=\"12025026\" data-end-ref=\"12025026\">26</data>), or even</p></li><li><p>religious leaders (<data class=\"bible-ref\" data-start-ref=\"15008024\" data-end-ref=\"15008024\">Ezra 8:24</data>).</p></li></ul><p>Their important roles gave them great responsibility before God (see <data class=\"bible-ref\" data-start-ref=\"59003001\" data-end-ref=\"59003001\">James 3:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001008",
+"start_ref_usfm": "ZEP 1:8",
+"end_ref": "36001008",
+"end_ref_usfm": "ZEP 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Slaughtering",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Slaughtering"
+}
+]
+}
+},
+{
+"content_id": "26163",
+"reference_id": 25331,
+"version": "1.0.4",
+"title": "Zephaniah 1:9",
+"media_type": "Text",
+"index_reference": "36001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>all who leap over the threshold</em>: The people of Judah continued the pagan custom of jumping over a temple&apos;s threshold to avoid touching it, out of respect for that pagan god (see <data class=\"bible-ref\" data-start-ref=\"09005001\" data-end-ref=\"09005005\">1 Samuel 5:1–5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001009",
+"start_ref_usfm": "ZEP 1:9",
+"end_ref": "36001009",
+"end_ref_usfm": "ZEP 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "26150",
+"reference_id": 25318,
+"version": "1.0.4",
+"title": "Zephaniah 1:10",
+"media_type": "Text",
+"index_reference": "36001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The<em> Fish Gate</em> was in the northern part of Jerusalem (<data class=\"bible-ref\" data-start-ref=\"16012039\" data-end-ref=\"16012039\">Nehemiah 12:39</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001010",
+"start_ref_usfm": "ZEP 1:10",
+"end_ref": "36001010",
+"end_ref_usfm": "ZEP 1:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:FishGate",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Fish Gate"
+},
+{
+"id": "place:SecondQuarter",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Second District"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "26151",
+"reference_id": 25319,
+"version": "1.0.4",
+"title": "Zephaniah 1:13",
+"media_type": "Text",
+"index_reference": "36001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God would send an invading force to loot Jerusalem. The destruction would happen so fast that those who gained wealth unfairly would not live to enjoy it.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001013",
+"start_ref_usfm": "ZEP 1:13",
+"end_ref": "36001013",
+"end_ref_usfm": "ZEP 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "flora:Vine",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Vine"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "26152",
+"reference_id": 25320,
+"version": "1.0.4",
+"title": "Zephaniah 1:14–18",
+"media_type": "Text",
+"index_reference": "36001014-36001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The meaning of the day of the Lord expands to include God&apos;s actions involving the entire earth.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001014",
+"start_ref_usfm": "ZEP 1:14",
+"end_ref": "36001018",
+"end_ref_usfm": "ZEP 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.52,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:RamsHorn",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Rams Horn"
+},
+{
+"id": "realia:Money",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Money"
+}
+]
+}
+},
+{
+"content_id": "26153",
+"reference_id": 25321,
+"version": "1.0.4",
+"title": "Zephaniah 1:15",
+"media_type": "Text",
+"index_reference": "36001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>darkness and gloom</em>: See also <data class=\"bible-ref\" data-start-ref=\"23013009\" data-end-ref=\"23013010\">Isaiah 13:9–10</data>; <data class=\"bible-ref\" data-start-ref=\"29002001\" data-end-ref=\"29002002\">Joel 2:1–2</data>; <data class=\"bible-ref\" data-start-ref=\"30005018\" data-end-ref=\"30005020\">Amos 5:18–20</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001015",
+"start_ref_usfm": "ZEP 1:15",
+"end_ref": "36001015",
+"end_ref_usfm": "ZEP 1:15"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "26154",
+"reference_id": 25322,
+"version": "1.0.4",
+"title": "Zephaniah 1:17",
+"media_type": "Text",
+"index_reference": "36001017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>walk like the blind</em></span>: This is an example of God&apos;s justice (see also <data class=\"bible-ref\" data-start-ref=\"45001021\" data-end-ref=\"45001032\">Romans 1:21–32</data>). God’s people were blind in their moral choices and in their relationship with him. They could not see what was right or wrong (see <data class=\"bible-ref\" data-start-ref=\"02023008\" data-end-ref=\"02023008\">Exodus 23:8</data>; <data class=\"bible-ref\" data-start-ref=\"45002019\" data-end-ref=\"45002019\">Romans 2:19</data>; <data class=\"bible-ref\" data-start-ref=\"62002011\" data-end-ref=\"62002011\">1&nbsp;John 2:11</data>). Because they sinned against the Lord and disobeyed his commands, they received the punishments promised in God’s covenant (<data class=\"bible-ref\" data-start-ref=\"05028028\" data-end-ref=\"05028029\">Deuteronomy 28:28–29</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36001017",
+"start_ref_usfm": "ZEP 1:17",
+"end_ref": "36001017",
+"end_ref_usfm": "ZEP 1:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "26164",
+"reference_id": 25332,
+"version": "1.0.4",
+"title": "Zephaniah 2:1–3",
+"media_type": "Text",
+"index_reference": "36002001-36002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After describing the terrifying scene, Zephaniah urges his nation to repent and humble themselves before God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002001",
+"start_ref_usfm": "ZEP 2:1",
+"end_ref": "36002003",
+"end_ref_usfm": "ZEP 2:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Decree",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Decree"
+},
+{
+"id": "keyterm:Poor",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Poor"
+}
+]
+}
+},
+{
+"content_id": "26170",
+"reference_id": 25338,
+"version": "1.0.4",
+"title": "Zephaniah 2:2",
+"media_type": "Text",
+"index_reference": "36002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Farmers threshed grain on windy hilltops. They tossed the mixed grain and chaff into the air. The wind blew the chaff away, while the heavier grain fell to the ground. The chance to repent was brief.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002002",
+"start_ref_usfm": "ZEP 2:2",
+"end_ref": "36002002",
+"end_ref_usfm": "ZEP 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Decree",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Decree"
+}
+]
+}
+},
+{
+"content_id": "26171",
+"reference_id": 25339,
+"version": "1.0.4",
+"title": "Zephaniah 2:3",
+"media_type": "Text",
+"index_reference": "36002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>all you humble</em></span>: True humility means submitting to and depending on God (<data class=\"bible-ref\" data-start-ref=\"19018025\" data-end-ref=\"19018027\">Psalms 18:25–27</data>; <data class=\"bible-ref\" data-start-ref=\"19119142\" data-end-ref=\"19119144\">119:142–144</data>; <data class=\"bible-ref\" data-start-ref=\"20015033\" data-end-ref=\"20015033\">Proverbs 15:33</data>; <data class=\"bible-ref\" data-start-ref=\"20018012\" data-end-ref=\"20018012\">18:12</data>; <data class=\"bible-ref\" data-start-ref=\"20022004\" data-end-ref=\"20022004\">22:4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002003",
+"start_ref_usfm": "ZEP 2:3",
+"end_ref": "36002003",
+"end_ref_usfm": "ZEP 2:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Poor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Poor"
+}
+]
+}
+},
+{
+"content_id": "26174",
+"reference_id": 25342,
+"version": "1.0.4",
+"title": "Zephaniah 2:4",
+"media_type": "Text",
+"index_reference": "36002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>King Nebuchadnezzar of Babylon conquered the Philistine cities of Gaza, Ashkelon, Ashdod, and Ekron. Gaza remained deserted, but the others recovered and continued into later times. Zephaniah does not mention Gath, the fifth major Philistine city (see <data class=\"bible-ref\" data-start-ref=\"09006017\" data-end-ref=\"09006017\">1&nbsp;Samuel 6:17</data>), which had either disappeared or become unimportant by Zephaniah’s time.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002004",
+"start_ref_usfm": "ZEP 2:4",
+"end_ref": "36002004",
+"end_ref_usfm": "ZEP 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Ekron",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ekron"
+},
+{
+"id": "place:Ashdod",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ashdod"
+},
+{
+"id": "place:Ashkelon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ashkelon"
+},
+{
+"id": "place:Gaza",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gaza"
+}
+]
+}
+},
+{
+"content_id": "26172",
+"reference_id": 25340,
+"version": "1.0.4",
+"title": "Zephaniah 2:4–15",
+"media_type": "Text",
+"index_reference": "36002004-36002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Zephaniah started his messages with the Philistines, whose kingdom was west of Judah (<data class=\"bible-ref\" data-start-ref=\"36002004\" data-end-ref=\"36002007\">Zephaniah 2:4–7</data>). He then addressed Moab and Ammon to the east (<data class=\"bible-ref\" data-start-ref=\"36002008\" data-end-ref=\"36002011\">Zephaniah 2:8–11</data>), and finally mentioned Cush (Ethiopia) to the south (<data class=\"bible-ref\" data-start-ref=\"36002012\" data-end-ref=\"36002012\">2:12</data>) and Assyria to the north (<data class=\"bible-ref\" data-start-ref=\"36002013\" data-end-ref=\"36002015\">2:13–15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002004",
+"start_ref_usfm": "ZEP 2:4",
+"end_ref": "36002015",
+"end_ref_usfm": "ZEP 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "place:Ashkelon",
+"type": "place",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Ashkelon"
+},
+{
+"id": "place:Ammon",
+"type": "place",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Ammon"
+},
+{
+"id": "group:Ammon",
+"type": "group",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Ammonites"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Gomorrah",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Gomorrah"
+},
+{
+"id": "place:Gaza",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Gaza"
+},
+{
+"id": "place:Ashdod",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Ashdod"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "place:Ekron",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Ekron"
+},
+{
+"id": "group:Philistine",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Philistines"
+},
+{
+"id": "place:Sodom",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Sodom"
+},
+{
+"id": "group:Cush",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Cushites"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "group:Cherethite",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Cherethites"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "place:Philistine",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Philistia"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Cush"
+},
+{
+"id": "place:Nineveh",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Nineveh"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "keyterm:Safety",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Safety"
+},
+{
+"id": "fauna:Owl.3",
+"type": "fauna",
+"confidence": 0.1442,
+"match_method": "canonical",
+"preferred_label": "Owl"
+},
+{
+"id": "flora:Nettle",
+"type": "flora",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Nettle"
+},
+{
+"id": "realia:Capital",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Capital"
+},
+{
+"id": "realia:Doorstep",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Doorstep"
+},
+{
+"id": "fauna:Jackdaw",
+"type": "fauna",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Jackdaw"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "realia:Window",
+"type": "realia",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Window"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Crow",
+"type": "fauna",
+"confidence": 0.1275,
+"match_method": "canonical",
+"preferred_label": "Crow"
+}
+]
+}
+},
+{
+"content_id": "26173",
+"reference_id": 25341,
+"version": "1.0.4",
+"title": "Zephaniah 2:4–3.20",
+"media_type": "Text",
+"index_reference": "36002004-36003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Zephaniah first focuses on judging the foreign nations (<data class=\"bible-ref\" data-start-ref=\"36002004\" data-end-ref=\"36002015\">Zephaniah 2:4–15</data>). Then, he returns to judging Judah and Jerusalem (<data class=\"bible-ref\" data-start-ref=\"36003001\" data-end-ref=\"36003008\">Zephaniah 3:1–8</data>). Finally, he describes God&apos;s plans for his purified and obedient people (<data class=\"bible-ref\" data-start-ref=\"36003009\" data-end-ref=\"36003020\">Zephaniah 3:9–20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002004",
+"start_ref_usfm": "ZEP 2:4",
+"end_ref": "36002004",
+"end_ref_usfm": "ZEP 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5328,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.3563,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.3563,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "place:Ashkelon",
+"type": "place",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Ashkelon"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "place:Ammon",
+"type": "place",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Ammon"
+},
+{
+"id": "group:Ammon",
+"type": "group",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Ammonites"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.2281,
+"match_method": "canonical",
+"preferred_label": "Cush"
+},
+{
+"id": "keyterm:Stain",
+"type": "keyterm",
+"confidence": 0.1703,
+"match_method": "canonical",
+"preferred_label": "Defile"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1681,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1681,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Dishonor",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "To Dishonor"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "keyterm:AppointedFeast",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Appointed Feast"
+},
+{
+"id": "place:Gomorrah",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Gomorrah"
+},
+{
+"id": "place:Gaza",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Gaza"
+},
+{
+"id": "place:Ashdod",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Ashdod"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "place:Ekron",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Ekron"
+},
+{
+"id": "group:Philistine",
+"type": "group",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Philistines"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "place:Sodom",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Sodom"
+},
+{
+"id": "group:Cush",
+"type": "group",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Cushites"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "group:Cherethite",
+"type": "group",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Cherethites"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "place:Philistine",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Philistia"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Nineveh",
+"type": "place",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Nineveh"
+},
+{
+"id": "keyterm:Safety",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Safety"
+},
+{
+"id": "keyterm:EnticedToServe",
+"type": "keyterm",
+"confidence": 0.1641,
+"match_method": "canonical",
+"preferred_label": "Force to Serve"
+},
+{
+"id": "fauna:Owl.3",
+"type": "fauna",
+"confidence": 0.1103,
+"match_method": "canonical",
+"preferred_label": "Owl"
+},
+{
+"id": "flora:Nettle",
+"type": "flora",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Nettle"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "realia:Capital",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Capital"
+},
+{
+"id": "realia:Doorstep",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Doorstep"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "fauna:Jackdaw",
+"type": "fauna",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Jackdaw"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Sword"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+},
+{
+"id": "realia:Window",
+"type": "realia",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Window"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Wolf",
+"type": "fauna",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Wolf"
+},
+{
+"id": "fauna:Crow",
+"type": "fauna",
+"confidence": 0.1041,
+"match_method": "canonical",
+"preferred_label": "Crow"
+}
+]
+}
+},
+{
+"content_id": "26175",
+"reference_id": 25343,
+"version": "1.0.4",
+"title": "Zephaniah 2:5",
+"media_type": "Text",
+"index_reference": "36002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Old Testament scholars think the Philistines came from the island of Crete (compare <data class=\"bible-ref\" data-start-ref=\"26025016\" data-end-ref=\"26025016\">Ezekiel 25:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002005",
+"start_ref_usfm": "ZEP 2:5",
+"end_ref": "36002005",
+"end_ref_usfm": "ZEP 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Canaan",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Canaan"
+},
+{
+"id": "keyterm:WordOfTheLord",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Word of the Lord"
+},
+{
+"id": "group:Cherethite",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cherethites"
+},
+{
+"id": "group:Philistine",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Philistines"
+},
+{
+"id": "place:Philistine",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Philistia"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Woe"
+}
+]
+}
+},
+{
+"content_id": "26176",
+"reference_id": 25344,
+"version": "1.0.4",
+"title": "Zephaniah 2:6",
+"media_type": "Text",
+"index_reference": "36002006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>pastures … wells for shepherds and folds for sheep</em></span>: The destruction of cities and their return to nature is a severe punishment from God. See also <data class=\"bible-ref\" data-start-ref=\"23007023\" data-end-ref=\"23007025\">Isaiah 7:23–25</data>; <data class=\"bible-ref\" data-start-ref=\"23013019\" data-end-ref=\"23013021\">13:19–21</data>; <data class=\"bible-ref\" data-start-ref=\"23032009\" data-end-ref=\"23032015\">32:9–15</data>; <data class=\"bible-ref\" data-start-ref=\"26035009\" data-end-ref=\"26035009\">Ezekiel 35:9</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002006",
+"start_ref_usfm": "ZEP 2:6",
+"end_ref": "36002006",
+"end_ref_usfm": "ZEP 2:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "realia:Sheepfold",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheepfold"
+}
+]
+}
+},
+{
+"content_id": "26177",
+"reference_id": 25345,
+"version": "1.0.4",
+"title": "Zephaniah 2:7",
+"media_type": "Text",
+"index_reference": "36002007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Baal worshipers (<data class=\"bible-ref\" data-start-ref=\"36001004\" data-end-ref=\"36001004\">Zephaniah 1:4</data>) and the Philistines would never be restored (<data class=\"bible-ref\" data-start-ref=\"36002004\" data-end-ref=\"36002006\">2:4–6</data>; see also <data class=\"bible-ref\" data-start-ref=\"30001008\" data-end-ref=\"30001008\">Amos 1:8</data>). In contrast, God promised to bring back the remaining people to their land, care for them, and restore their prosperity (<data class=\"bible-ref\" data-start-ref=\"36003018\" data-end-ref=\"36003020\">Zephaniah 3:18–20</data>; <data class=\"bible-ref\" data-start-ref=\"23011011\" data-end-ref=\"23011016\">Isaiah 11:11–16</data>; <data class=\"bible-ref\" data-start-ref=\"24023001\" data-end-ref=\"24023008\">Jeremiah 23:1–8</data>; <data class=\"bible-ref\" data-start-ref=\"26034011\" data-end-ref=\"26034016\">Ezekiel 34:11–16</data>, <data class=\"bible-ref\" data-start-ref=\"26034020\" data-end-ref=\"26034031\">20–31</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002007",
+"start_ref_usfm": "ZEP 2:7",
+"end_ref": "36002007",
+"end_ref_usfm": "ZEP 2:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Judah.4",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judah"
+},
+{
+"id": "place:Ashkelon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ashkelon"
+},
+{
+"id": "group:Judah",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Judah"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "26178",
+"reference_id": 25346,
+"version": "1.0.4",
+"title": "Zephaniah 2:8",
+"media_type": "Text",
+"index_reference": "36002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The Moabites and Ammonites were traditional enemies of Israel. The Israelites often fought them (see <data class=\"bible-ref\" data-start-ref=\"12003001\" data-end-ref=\"12003027\">2 Kings 3:1–27</data>; <data class=\"bible-ref\" data-start-ref=\"14020001\" data-end-ref=\"14020030\">2 Chronicles 20:1–30</data>), and they remained enemies until the end (<data class=\"bible-ref\" data-start-ref=\"12025025\" data-end-ref=\"12025025\">2 Kings 25:25</data>; <data class=\"bible-ref\" data-start-ref=\"24040011\" data-end-ref=\"24040014\">Jeremiah 40:11–14</data>). </p></li><li><p><em>taunted … threatened their borders</em>: The Israelites faced repeated attacks from the Moabites and Ammonites (see <data class=\"bible-ref\" data-start-ref=\"30001013\" data-end-ref=\"30001013\">Amos 1:13</data>) and also suffered insults about their victories.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002008",
+"start_ref_usfm": "ZEP 2:8",
+"end_ref": "36002008",
+"end_ref_usfm": "ZEP 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "group:Ammon",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ammonites"
+},
+{
+"id": "place:Ammon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ammon"
+}
+]
+}
+},
+{
+"content_id": "26179",
+"reference_id": 25347,
+"version": "1.0.4",
+"title": "Zephaniah 2:9",
+"media_type": "Text",
+"index_reference": "36002009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The destruction of Sodom and Gomorrah shows God&apos;s severe judgment of sin. This is evident in both the Old Testament (<data class=\"bible-ref\" data-start-ref=\"05029023\" data-end-ref=\"05029023\">Deuteronomy 29:23</data>; <data class=\"bible-ref\" data-start-ref=\"23001009\" data-end-ref=\"23001009\">Isaiah 1:9</data>; <data class=\"bible-ref\" data-start-ref=\"24023014\" data-end-ref=\"24023014\">Jeremiah 23:14</data>; <data class=\"bible-ref\" data-start-ref=\"30004011\" data-end-ref=\"30004011\">Amos 4:11</data>) and the New Testament (<data class=\"bible-ref\" data-start-ref=\"42010012\" data-end-ref=\"42010012\">Luke 10:12</data>; <data class=\"bible-ref\" data-start-ref=\"45009029\" data-end-ref=\"45009029\">Romans 9:29</data>; <data class=\"bible-ref\" data-start-ref=\"61002006\" data-end-ref=\"61002006\">2&nbsp;Peter 2:6</data>). </p></li><li><p><em>salt pits</em>: These are areas of ruin (<data class=\"bible-ref\" data-start-ref=\"05029023\" data-end-ref=\"05029023\">Deuteronomy 29:23</data>; <data class=\"bible-ref\" data-start-ref=\"19107034\" data-end-ref=\"19107034\">Psalm 107:34</data>; <data class=\"bible-ref\" data-start-ref=\"24017006\" data-end-ref=\"24017006\">Jeremiah 17:6</data>). Sowing the earth with salt was a sign of permanent judgment (see <data class=\"bible-ref\" data-start-ref=\"07009045\" data-end-ref=\"07009045\">Judges 9:45</data>) because it made the ground infertile.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002009",
+"start_ref_usfm": "ZEP 2:9",
+"end_ref": "36002009",
+"end_ref_usfm": "ZEP 2:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Gomorrah",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gomorrah"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Moab",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Moab"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Ammon",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ammonites"
+},
+{
+"id": "place:Ammon",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ammon"
+},
+{
+"id": "place:Sodom",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sodom"
+},
+{
+"id": "flora:Nettle",
+"type": "flora",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Nettle"
+}
+]
+}
+},
+{
+"content_id": "26165",
+"reference_id": 25333,
+"version": "1.0.4",
+"title": "Zephaniah 2:11",
+"media_type": "Text",
+"index_reference": "36002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>nations … will bow in worship to Him</em></span>: At the end of history, everyone everywhere will worship God alone (<data class=\"bible-ref\" data-start-ref=\"36003009\" data-end-ref=\"36003009\">Zephaniah 3:9</data>; <data class=\"bible-ref\" data-start-ref=\"19066004\" data-end-ref=\"19066004\">Psalm 66:4</data>; <data class=\"bible-ref\" data-start-ref=\"33004001\" data-end-ref=\"33004002\">Micah 4:1–2</data>; <data class=\"bible-ref\" data-start-ref=\"38014016\" data-end-ref=\"38014016\">Zechariah 14:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002011",
+"start_ref_usfm": "ZEP 2:11",
+"end_ref": "36002011",
+"end_ref_usfm": "ZEP 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "26166",
+"reference_id": 25334,
+"version": "1.0.4",
+"title": "Zephaniah 2:12",
+"media_type": "Text",
+"index_reference": "36002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>C<em>ushites</em>: While the Hebrew term can refer to any nation or people along the southern edge of the known world of that time, here it refers specifically to the Ethiopian family of kings that ruled Egypt.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002012",
+"start_ref_usfm": "ZEP 2:12",
+"end_ref": "36002012",
+"end_ref_usfm": "ZEP 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Cush",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cushites"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cush"
+},
+{
+"id": "realia:Sword",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sword"
+}
+]
+}
+},
+{
+"content_id": "26167",
+"reference_id": 25335,
+"version": "1.0.4",
+"title": "Zephaniah 2:13",
+"media_type": "Text",
+"index_reference": "36002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Zephaniah shifts focus from the south (<data class=\"bible-ref\" data-start-ref=\"36002012\" data-end-ref=\"36002012\">Zephaniah 2:12</data>) to the north. Like Nahum before him, he predicts the downfall of Assyria that would happen soon.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002013",
+"start_ref_usfm": "ZEP 2:13",
+"end_ref": "36002013",
+"end_ref_usfm": "ZEP 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Nineveh",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Nineveh"
+},
+{
+"id": "place:Assyria",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Assyria"
+}
+]
+}
+},
+{
+"content_id": "26168",
+"reference_id": 25336,
+"version": "1.0.4",
+"title": "Zephaniah 2:14",
+"media_type": "Text",
+"index_reference": "36002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>To emphasize Nineveh&apos;s fate, Zephaniah uses strong imagery. Rubble would block the doorways once used by Nineveh&apos;s wealthy and powerful. The haunting sounds of owls hooting in empty windows would highlight the city&apos;s desolation.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002014",
+"start_ref_usfm": "ZEP 2:14",
+"end_ref": "36002014",
+"end_ref_usfm": "ZEP 2:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Owl.3",
+"type": "fauna",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Owl"
+},
+{
+"id": "realia:Capital",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Capital"
+},
+{
+"id": "realia:Doorstep",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Doorstep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Jackdaw",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Jackdaw"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Crow",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Crow"
+},
+{
+"id": "realia:Window",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Window"
+}
+]
+}
+},
+{
+"content_id": "26169",
+"reference_id": 25337,
+"version": "1.0.4",
+"title": "Zephaniah 2:15",
+"media_type": "Text",
+"index_reference": "36002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>ruin</em>: The destruction was certain and could not be reversed (see <data class=\"bible-ref\" data-start-ref=\"34001014\" data-end-ref=\"34001014\">Nahum 1:14</data>; <data class=\"bible-ref\" data-start-ref=\"34002013\" data-end-ref=\"34002013\">2:13</data>; <data class=\"bible-ref\" data-start-ref=\"34003019\" data-end-ref=\"34003019\">3:19</data>). Zephaniah saw no future for Assyria or its capital. Nineveh was so completely destroyed that the Greek historian Xenophon passed by its ruins without knowing it was there. </p></li><li><p><span><em>hisses and shakes his fist</em></span>: Those who suffered under Assyria&apos;s cruel empire would feel glad seeing it come to an end.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36002015",
+"start_ref_usfm": "ZEP 2:15",
+"end_ref": "36002015",
+"end_ref_usfm": "ZEP 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Safety",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Safety"
+}
+]
+}
+},
+{
+"content_id": "26189",
+"reference_id": 25357,
+"version": "1.0.4",
+"title": "Zephaniah 3:1",
+"media_type": "Text",
+"index_reference": "36003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Polluted Jerusalem (made unclean by sin and wrongdoing) had turned away from its calling to be a holy city (<data class=\"bible-ref\" data-start-ref=\"23052001\" data-end-ref=\"23052001\">Isaiah 52:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003001",
+"start_ref_usfm": "ZEP 3:1",
+"end_ref": "36003001",
+"end_ref_usfm": "ZEP 3:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Stain",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Defile"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Woe"
+}
+]
+}
+},
+{
+"content_id": "26180",
+"reference_id": 25348,
+"version": "1.0.4",
+"title": "Zephaniah 3:1–8",
+"media_type": "Text",
+"index_reference": "36003001-36003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Zephaniah delivers a message of sorrow for Judah and Jerusalem. He advises them to wait patiently for God&apos;s fair judgment.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003001",
+"start_ref_usfm": "ZEP 3:1",
+"end_ref": "36003008",
+"end_ref_usfm": "ZEP 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4187,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Stain",
+"type": "keyterm",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Defile"
+},
+{
+"id": "keyterm:Dishonor",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "To Dishonor"
+},
+{
+"id": "keyterm:LeanOn",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Trust"
+},
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Passion"
+},
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Woe.2",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Woe"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "fauna:Wolf",
+"type": "fauna",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Wolf"
+}
+]
+}
+},
+{
+"content_id": "26191",
+"reference_id": 25359,
+"version": "1.0.4",
+"title": "Zephaniah 3:3–4",
+"media_type": "Text",
+"index_reference": "36003003-36003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>See also <data class=\"bible-ref\" data-start-ref=\"26022023\" data-end-ref=\"26022029\">Ezekiel 22:23–29</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003003",
+"start_ref_usfm": "ZEP 3:3",
+"end_ref": "36003004",
+"end_ref_usfm": "ZEP 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Instruction",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Instruction"
+},
+{
+"id": "keyterm:Dishonor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "To Dishonor"
+},
+{
+"id": "fauna:Wolf",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Wolf"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Lion"
+}
+]
+}
+},
+{
+"content_id": "26192",
+"reference_id": 25360,
+"version": "1.0.4",
+"title": "Zephaniah 3:5",
+"media_type": "Text",
+"index_reference": "36003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>He does nothing wrong<em>,</em> unlike those mentioned in <data class=\"bible-ref\" data-start-ref=\"36003003\" data-end-ref=\"36003004\">Zephaniah 3:3–4</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003005",
+"start_ref_usfm": "ZEP 3:5",
+"end_ref": "36003005",
+"end_ref_usfm": "ZEP 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "26193",
+"reference_id": 25361,
+"version": "1.0.4",
+"title": "Zephaniah 3:7",
+"media_type": "Text",
+"index_reference": "36003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>rose early</em>: The people of Jerusalem eagerly got out of bed to commit more evil deeds (compare <data class=\"bible-ref\" data-start-ref=\"20001016\" data-end-ref=\"20001016\">Proverbs 1:16</data>). They had strayed far from the path of their ancestor Abraham, who rose early to follow God&apos;s command (<data class=\"bible-ref\" data-start-ref=\"01022003\" data-end-ref=\"01022003\">Genesis 22:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003007",
+"start_ref_usfm": "ZEP 3:7",
+"end_ref": "36003007",
+"end_ref_usfm": "ZEP 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Appoint",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Appoint"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+}
+]
+}
+},
+{
+"content_id": "26194",
+"reference_id": 25362,
+"version": "1.0.4",
+"title": "Zephaniah 3:8",
+"media_type": "Text",
+"index_reference": "36003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>wait for Me</em>: See <data class=\"bible-ref\" data-start-ref=\"35002003\" data-end-ref=\"35002003\">Habakkuk 2:3</data>.</p></li><li><p><em>rise to testify</em>: The prophet describes a courtroom scene. God first acts as a witness (see also <data class=\"bible-ref\" data-start-ref=\"24029023\" data-end-ref=\"24029023\">Jeremiah 29:23</data>; <data class=\"bible-ref\" data-start-ref=\"39003005\" data-end-ref=\"39003005\">Malachi 3:5</data>) on his own behalf, then serves as judge (see also <data class=\"bible-ref\" data-start-ref=\"18009015\" data-end-ref=\"18009015\">Job 9:15</data>; <data class=\"bible-ref\" data-start-ref=\"19050006\" data-end-ref=\"19050006\">Psalm 50:6</data>) to give his fair sentence. </p></li><li><p>The fire of my jealousy refers to the Lord’s rightful anger against sin. It also shows his care for his holy name and his people&apos;s well-being (see <data class=\"bible-ref\" data-start-ref=\"23066013\" data-end-ref=\"23066016\">Isaiah 66:13–16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003008",
+"start_ref_usfm": "ZEP 3:8",
+"end_ref": "36003008",
+"end_ref_usfm": "ZEP 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Ardour",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Passion"
+}
+]
+}
+},
+{
+"content_id": "26197",
+"reference_id": 25365,
+"version": "1.0.4",
+"title": "Zephaniah 3:9",
+"media_type": "Text",
+"index_reference": "36003009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God plans for the blessings promised to the faithful remnant in <data class=\"bible-ref\" data-start-ref=\"36003009\" data-end-ref=\"36003013\">Zephaniah 3:9–13</data> to reach people from every nation. Not just Israel, but all people will transform, call on the Lord (see <data class=\"bible-ref\" data-start-ref=\"23055005\" data-end-ref=\"23055005\">Isaiah 55:5</data>), and serve him (see <data class=\"bible-ref\" data-start-ref=\"23059019\" data-end-ref=\"23059021\">Isaiah 59:19–21</data>; <data class=\"bible-ref\" data-start-ref=\"38014016\" data-end-ref=\"38014016\">Zechariah 14:16</data>). Spreading the good news to all nations helped fulfill this vision (<data class=\"bible-ref\" data-start-ref=\"40028019\" data-end-ref=\"40028020\">Matthew 28:19–20</data>; <data class=\"bible-ref\" data-start-ref=\"45010009\" data-end-ref=\"45010013\">Romans 10:9–13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003009",
+"start_ref_usfm": "ZEP 3:9",
+"end_ref": "36003009",
+"end_ref_usfm": "ZEP 3:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:EnticedToServe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Force to Serve"
+}
+]
+}
+},
+{
+"content_id": "26195",
+"reference_id": 25363,
+"version": "1.0.4",
+"title": "Zephaniah 3:9–13",
+"media_type": "Text",
+"index_reference": "36003009-36003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The bright future described in these verses gives more reason to wait patiently for the Lord (<data class=\"bible-ref\" data-start-ref=\"36003008\" data-end-ref=\"36003008\">Zephaniah 3:8</data>). Like the prophets Isaiah, Nahum, and Habakkuk, Zephaniah uses judgment and hope as main themes.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003009",
+"start_ref_usfm": "ZEP 3:9",
+"end_ref": "36003013",
+"end_ref_usfm": "ZEP 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "keyterm:EnticedToServe",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Force to Serve"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Cush"
+}
+]
+}
+},
+{
+"content_id": "26196",
+"reference_id": 25364,
+"version": "1.0.4",
+"title": "Zephaniah 3:9–20",
+"media_type": "Text",
+"index_reference": "36003009-36003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God shows his plans for a humble and pure group of his people (<data class=\"bible-ref\" data-start-ref=\"36003009\" data-end-ref=\"36003013\">Zephaniah 3:9–13</data>). He encourages them to rejoice in the coming abundant blessings from their saving Lord (<data class=\"bible-ref\" data-start-ref=\"36003014\" data-end-ref=\"36003020\">Zephaniah 3:14–20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003009",
+"start_ref_usfm": "ZEP 3:9",
+"end_ref": "36003020",
+"end_ref_usfm": "ZEP 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.3625,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Deceit",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Deceit"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Rebel",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Rebel"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:AppointedFeast",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Appointed Feast"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+},
+{
+"id": "keyterm:EnticedToServe",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Force to Serve"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Cush"
+}
+]
+}
+},
+{
+"content_id": "26181",
+"reference_id": 25349,
+"version": "1.0.4",
+"title": "Zephaniah 3:10",
+"media_type": "Text",
+"index_reference": "36003010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The rivers of Ethiopia are the distant sources of the Nile River. In ancient times, people saw the Nile&apos;s origin as a great mystery. This expression refers to the farthest parts of the earth.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003010",
+"start_ref_usfm": "ZEP 3:10",
+"end_ref": "36003010",
+"end_ref_usfm": "ZEP 3:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "place:Cush.2",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cush"
+}
+]
+}
+},
+{
+"content_id": "26182",
+"reference_id": 25350,
+"version": "1.0.4",
+"title": "Zephaniah 3:12",
+"media_type": "Text",
+"index_reference": "36003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Jesus the Messiah, God&apos;s chosen one, perfectly shows the moral qualities expected of the faithful people of Israel (<data class=\"bible-ref\" data-start-ref=\"23042001\" data-end-ref=\"23042004\">Isaiah 42:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"23053003\" data-end-ref=\"23053003\">53:3</data>, <data class=\"bible-ref\" data-start-ref=\"23053007\" data-end-ref=\"23053009\">7–9</data>; <data class=\"bible-ref\" data-start-ref=\"38009009\" data-end-ref=\"38009009\">Zechariah 9:9</data>; see <data class=\"bible-ref\" data-start-ref=\"40011028\" data-end-ref=\"40011030\">Matthew 11:28–30</data>; <data class=\"bible-ref\" data-start-ref=\"40012015\" data-end-ref=\"40012021\">12:15–21</data>; <data class=\"bible-ref\" data-start-ref=\"50002001\" data-end-ref=\"50002008\">Philippians 2:1–8</data>; <data class=\"bible-ref\" data-start-ref=\"60002023\" data-end-ref=\"60002023\">1&nbsp;Peter 2:23</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003012",
+"start_ref_usfm": "ZEP 3:12",
+"end_ref": "36003012",
+"end_ref_usfm": "ZEP 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:SeekfindRefuge",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Seek Refugue"
+}
+]
+}
+},
+{
+"content_id": "26183",
+"reference_id": 25351,
+"version": "1.0.4",
+"title": "Zephaniah 3:14",
+"media_type": "Text",
+"index_reference": "36003014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Sing … shout aloud … Be glad and rejoice!</em>: These commands together show that God’s people will one day experience very great joy.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003014",
+"start_ref_usfm": "ZEP 3:14",
+"end_ref": "36003014",
+"end_ref_usfm": "ZEP 3:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+}
+]
+}
+},
+{
+"content_id": "26184",
+"reference_id": 25352,
+"version": "1.0.4",
+"title": "Zephaniah 3:15",
+"media_type": "Text",
+"index_reference": "36003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The true king of Israel was always meant to be the Lord (<data class=\"bible-ref\" data-start-ref=\"04023021\" data-end-ref=\"04023021\">Numbers 23:21</data>; <data class=\"bible-ref\" data-start-ref=\"09008007\" data-end-ref=\"09008007\">1 Samuel 8:7</data>; <data class=\"bible-ref\" data-start-ref=\"23044006\" data-end-ref=\"23044006\">Isaiah 44:6</data>). </p></li><li><p><em>is among you</em>: See also <data class=\"bible-ref\" data-start-ref=\"23054004\" data-end-ref=\"23054008\">Isaiah 54:4–8</data>; <data class=\"bible-ref\" data-start-ref=\"23057014\" data-end-ref=\"23057019\">57:14–19</data>; <data class=\"bible-ref\" data-start-ref=\"23062010\" data-end-ref=\"23062012\">62:10–12</data>; <data class=\"bible-ref\" data-start-ref=\"26048035\" data-end-ref=\"26048035\">Ezekiel 48:35</data>; <data class=\"bible-ref\" data-start-ref=\"29003017\" data-end-ref=\"29003017\">Joel 3:17</data>, <data class=\"bible-ref\" data-start-ref=\"29003021\" data-end-ref=\"29003021\">21</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003015",
+"start_ref_usfm": "ZEP 3:15",
+"end_ref": "36003015",
+"end_ref_usfm": "ZEP 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+}
+]
+}
+},
+{
+"content_id": "26185",
+"reference_id": 25353,
+"version": "1.0.4",
+"title": "Zephaniah 3:17",
+"media_type": "Text",
+"index_reference": "36003017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>mighty to save</em>: God served as Israel’s divine warrior and redeemer (see <data class=\"bible-ref\" data-start-ref=\"19024008\" data-end-ref=\"19024010\">Psalm 24:8–10</data>; <data class=\"bible-ref\" data-start-ref=\"23042013\" data-end-ref=\"23042013\">Isaiah 42:13</data>; <data class=\"bible-ref\" data-start-ref=\"35003008\" data-end-ref=\"35003015\">Habakkuk 3:8–15</data>). One of God’s titles is “the Mighty God” (<data class=\"bible-ref\" data-start-ref=\"23010021\" data-end-ref=\"23010021\">Isaiah 10:21</data>). This title also refers to the Messiah (<data class=\"bible-ref\" data-start-ref=\"23009006\" data-end-ref=\"23009006\">Isaiah 9:6</data>). </p></li><li><p><em>He will rejoice over you</em>: Jerusalem and all Israel will <em>rejoice</em> in God (<data class=\"bible-ref\" data-start-ref=\"36003014\" data-end-ref=\"36003014\">Zephaniah 3:14</data>), and God will rejoice over them as a purified and faithful people (see <data class=\"bible-ref\" data-start-ref=\"36003012\" data-end-ref=\"36003013\">3:12–13</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003017",
+"start_ref_usfm": "ZEP 3:17",
+"end_ref": "36003017",
+"end_ref_usfm": "ZEP 3:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "26187",
+"reference_id": 25355,
+"version": "1.0.4",
+"title": "Zephaniah 3:18",
+"media_type": "Text",
+"index_reference": "36003018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>I will gather … no longer suffer reproach</em></span>: The Lord&apos;s promise is very different from the warnings at the start of the book. First, God threatened to gather the nations to remove the people of Judah from the earth (<data class=\"bible-ref\" data-start-ref=\"36001002\" data-end-ref=\"36001004\">Zephaniah 1:2–4</data>). Now, he promises to gather those exiled from Jerusalem and lead them safely home.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003018",
+"start_ref_usfm": "ZEP 3:18",
+"end_ref": "36003018",
+"end_ref_usfm": "ZEP 3:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AppointedFeast",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Appointed Feast"
+}
+]
+}
+},
+{
+"content_id": "26186",
+"reference_id": 25354,
+"version": "1.0.4",
+"title": "Zephaniah 3:18–20",
+"media_type": "Text",
+"index_reference": "36003018-36003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The repeated use of <em>I will</em> in these verses emphasises God&apos;s promises to his people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003018",
+"start_ref_usfm": "ZEP 3:18",
+"end_ref": "36003020",
+"end_ref_usfm": "ZEP 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:AppointedFeast",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Appointed Feast"
+}
+]
+}
+},
+{
+"content_id": "26188",
+"reference_id": 25356,
+"version": "1.0.4",
+"title": "Zephaniah 3:19",
+"media_type": "Text",
+"index_reference": "36003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God will change his people&apos;s past shame into glory and fame (see <data class=\"bible-ref\" data-start-ref=\"05026019\" data-end-ref=\"05026019\">Deuteronomy 26:19</data>; <data class=\"bible-ref\" data-start-ref=\"23062007\" data-end-ref=\"23062007\">Isaiah 62:7</data>; <data class=\"bible-ref\" data-start-ref=\"33004006\" data-end-ref=\"33004008\">Micah 4:6–8</data>; compare <data class=\"bible-ref\" data-start-ref=\"60005004\" data-end-ref=\"60005004\">1 Peter 5:4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003019",
+"start_ref_usfm": "ZEP 3:19",
+"end_ref": "36003019",
+"end_ref_usfm": "ZEP 3:19"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "26190",
+"reference_id": 25358,
+"version": "1.0.4",
+"title": "Zephaniah 3:20",
+"media_type": "Text",
+"index_reference": "36003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>At that time</em>: After a period of severe anger and judgment, the day of the Lord ends with eternal blessings for everyone who trusts in him (<data class=\"bible-ref\" data-start-ref=\"36003009\" data-end-ref=\"36003009\">Zephaniah 3:9</data>, <data class=\"bible-ref\" data-start-ref=\"36003012\" data-end-ref=\"36003012\">12</data>; see <data class=\"bible-ref\" data-start-ref=\"19002012\" data-end-ref=\"19002012\">Psalm 2:12</data>; <data class=\"bible-ref\" data-start-ref=\"23045022\" data-end-ref=\"23045022\">Isaiah 45:22</data>; see also <data class=\"bible-ref\" data-start-ref=\"66019011\" data-end-ref=\"66022005\">Revelation 19:11–22:5</data>). </p></li><li><p><span><em>says the LORD</em>:</span> Zephaniah’s prophecy, entirely from God (see also <data class=\"bible-ref\" data-start-ref=\"36001001\" data-end-ref=\"36001003\">Zephaniah 1:1–3</data>, <data class=\"bible-ref\" data-start-ref=\"36001010\" data-end-ref=\"36001010\">10</data>; <data class=\"bible-ref\" data-start-ref=\"36002009\" data-end-ref=\"36002009\">2:9</data>; <data class=\"bible-ref\" data-start-ref=\"36003008\" data-end-ref=\"36003008\">3:8</data>), is completely trustworthy.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "36003020",
+"start_ref_usfm": "ZEP 3:20",
+"end_ref": "36003020",
+"end_ref_usfm": "ZEP 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+}
+]

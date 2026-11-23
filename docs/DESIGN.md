@@ -1979,7 +1979,7 @@ Not in Task 47. Arthur decided the direction on 2026-11-23. The design is not ma
 - The other Aquifer notes are a separate layer at their verses, with one switch in the top bar. This layer needs a design and pictures on the built page.
 - The reader gets no setting that selects a publisher.
 
-Item 7 of `docs/BACKLOG.md` has the facts and the open questions.
+Item 7 of `docs/BACKLOG.md` has the facts and the open questions. From 2026-11-23, section 20 has the design of this step, and Tasks 48 and 49 build it.
 
 ### 19.13 Weak points, not decided, and not checked
 
@@ -1993,3 +1993,266 @@ Item 7 of `docs/BACKLOG.md` has the facts and the open questions.
 - Not checked: the dark mode and a real phone. The designer made no picture of them.
 - Corrected on 2026-11-23, after the report of step 6 of Task 47: section 19.5 had 738 words for the longest panels and 281 words for the median panel. The designer had removed the tags before the count, so the last word of a paragraph and the first word of the next paragraph were one word. Claude Code found the difference. The correct numbers are 745 and 285.
 - The designer told Arthur 159,016 words on 2026-11-23. That number had the headings and the lists of concepts of the Markdown files. The correct number is 131,406.
+
+### 19.14 Task 47 as built, checked on 2026-11-23
+
+Claude Code built Task 47 in the commit `53ee38e`. The designer checked these points on 2026-11-23:
+
+- The SHA-256 of section 19.4, computed by the designer from the 66 files in `public/data/notes/` and from the 66 files in `dist/data/notes/`: both are the number of section 19.4, with 751 notes and 748,783 bytes.
+- On the build, at 1440 by 900 px and at 390 by 844 px: Genesis 22 has the two controls on one line, and the panel is closed at the load. The open panel has the range label "Genesis 21:1–22:24", three paragraphs, the note credit with its exact words, and the two addresses of section 19.8. Romans 8 has three range labels in the order of the Bible. Psalms 3 has no control "About this chapter". The page has no horizontal scroll at 390 px with the panel of Romans 8 open.
+- The size of the panel in the build and in the pictures of the design differs by 4 px or less. Example: Romans 8 at 1440 px has 1,067 px in the build and 1,066 px in the picture.
+- The dark mode on the build at 390 px: the page is `rgb(28, 28, 30)`, the text of a note is `rgb(245, 245, 247)`, and the range label and the note credit are `rgb(161, 161, 166)`.
+- The public site, in a browser, on 2026-11-23: it serves `index-DemtqrGF.js`. Psalms 23 has the control, and the open panel has the range label "Psalms 23:1–6", seven paragraphs, and the note credit. Psalms 24, a later chapter on the same page with no note, has no control.
+
+As built, and accepted by the designer:
+
+- The space at a range label follows the table of section 19.7: 14 px above and 4 px below. The pictures of the design have about 4 px less above and about 4 px more below, because the script of the designer had a fault: the rule for a paragraph also applied to the range label. The table is correct.
+- A range label is an `h3` element.
+- The Sources page has typographic quotation marks around the words About this chapter, as the other sections of that page have.
+- If the notes file of a book does not load, each chapter of that book shows the control, and the panel says "The notes did not load." This includes a psalm with no note.
+- The page gets the notes file of a book one time, with the text and the links of the first chapter of that book on the page. A chapter shows as loaded only after the notes file loads.
+- The 66 files have 787,420 bytes, and 275,119 bytes with gzip.
+- Two older tests changed, because the line of "About this book" now has a second control: `e2e/textsize.spec.ts` and `e2e/translation.spec.ts`.
+- The script also checks the numbers of section 19.5.
+
+From the report of Claude Code, not checked by the designer: 291 unit tests and 505 tests in the full run pass. The two pairs of screenshots of Psalms 3 have 0 different pixels. The reviewer agent compared the 751 notes with the source files and found 0 differences. Each of the 68 source files has the git blob hash of the commit.
+
+Not checked by a person or an agent: a real phone, and the teaching of the notes.
+
+## 20. Study notes: the Aquifer Open Study Notes, of 2026-11-23
+
+Arthur decided this on 2026-11-23. It is the second step of section 19.12. It has two parts:
+
+1. Part 1, Task 48: a psalm with no Biblica note gets "About this chapter" with a note of the Aquifer Open Study Notes.
+2. Part 2, Task 49: the other notes show at their verses, behind one switch, "Study notes".
+
+The pictures of the design are in `docs/screenshots/study-notes-design/`. The designer made them on the build of Task 47, with a script that put the notes into the page.
+
+### 20.1 Decided by Arthur on 2026-11-23
+
+- The second step starts now. The psalms come first, then the notes at the verses.
+- The notes at the verses show as option B of the pictures: one control below each paragraph. The reader opens the notes of that paragraph. The picture `verse-A-romans8-1440.png` shows the option that Arthur did not select: all notes open.
+- From section 19.2: the reader gets no setting that selects the source of "About this chapter".
+
+Arthur saw these notes in the pictures before the decision: the note of Psalm 3, and the notes of Romans 8:1 to 8:4.
+
+### 20.2 The source and its license
+
+| | |
+|---|---|
+| Name | Aquifer Open Study Notes |
+| Copyright line | Aquifer Open Study Notes © 2026 Mission Mutual |
+| Adaptation | The source says: an adaptation of the Tyndale Open Study Notes © 2023 Tyndale House Publishers, made by Mission Mutual |
+| License | CC BY-SA 4.0, for the Tyndale notes and for the adaptation |
+| Address of the license | `https://creativecommons.org/licenses/by-sa/4.0/`, as in section 19.3 |
+| Address of the files | `https://github.com/BibleAquifer/AquiferOpenStudyNotes` |
+| Commit | `d903df3d9bdbd6399fe83fc3d7046ea29e024962`, of 2026-11-17 |
+| Version in `eng/metadata.json` | 1.1.2 |
+| Files that the site uses | `eng/json/01.content.json` to `eng/json/66.content.json`, `eng/metadata.json`, and `README.md` |
+
+The designer read `README.md` and `eng/metadata.json` on 2026-11-23. The designer read the page `https://tyndaleopenresources.com/` in a browser on 2026-11-23: it gives the license CC BY-SA 4.0 for the Tyndale Open Study Notes, and it asks for no special words in a credit.
+
+The license is the license of section 19.3. Its points 1 to 9 apply. One point is more important here: the credit must keep the statement that the material is an adaptation, because the license asks for "an indication of any previous modifications".
+
+### 20.3 The source files
+
+The source files go into `sources/aquifer/`, with no change: `json/01.content.json` to `json/66.content.json`, `metadata.json`, and `README.md`. The 66 files have about 27 MB. A large part of this is the field `associations`, which the site does not use.
+
+The site uses four fields of a note: `content_id`, `title`, `index_reference`, and `content`.
+
+Facts about the 66 files, from a check by the designer on 2026-11-23. The script checks each fact, and it stops if one does not fit:
+
+- 16,923 notes. Each `content_id` occurs one time. Each note is in the book of its file.
+- `index_reference` has one of two forms: one verse, with 8 digits, or a range, with 8 digits, a hyphen, and 8 digits. The digits are those of section 19.4.
+- 10,581 notes have one verse. 6,012 notes have a range in one chapter that does not end at verse 999. 322 notes have a range of more than one chapter. 8 notes have the range from verse 1 to verse 999 of one psalm. The sum is 16,923. No note has a range of more than one book.
+- For 7 of the 8 notes, the `title` ends with ":title". These are the title notes: Psalms 7, 9, 30, 51, 57, 73, and 89.
+- The eighth note is a fault of the source: `content_id` `24105` has the `title` "Psalms 142:7" and the range from verse 1 to verse 999. The site uses verse 7 for it. This is the one exception.
+- The elements are `p`, `ul`, `ol`, `li`, `em`, `strong`, `sup`, `br`, `h3`, `a`, `data`, and `span`, and no other element.
+- The 6 `h3` elements are empty. There is 1 `a` element. 20 `p` elements are empty.
+- The character references are `&apos;`, `&quot;`, and `&nbsp;`, and no other one.
+- No `content` has a line feed or a tab.
+
+The format of the content on the page:
+
+1. The page keeps these elements, with no attribute: `p`, `ul`, `ol`, `li`, `em`, `strong`, `sup`, `br`.
+2. Each `data`, `span`, and `a` tag is removed. The words between the tags stay.
+3. An element with no text is removed.
+4. `&apos;` becomes `'`, `&quot;` becomes `"`, and `&nbsp;` becomes the character U+00A0.
+
+WARNING: Do not change a word, a quotation mark, or a spelling of a note. The four points are changes of the format, and no other change is permitted.
+
+The text of a note is its `content` with each tag removed and with point 4 applied.
+
+The number that shows that the words have no change: make one line for each of the 16,923 notes, in the order of the 66 file names and in the order of each file. The line is the `content_id`, a tab, and the text of the note. Put the line feed character after each line. Encode the result as UTF-8. The SHA-256 of the result is:
+
+`8f5f57da1f500459091552bb4806747e6ee811c2779f23dd735b1c4a783e0ae1`
+
+The result has 4,584,237 bytes.
+
+### 20.4 The data of the site
+
+The script `scripts/build-study-notes.mjs` makes these files:
+
+- `public/data/study/<book id>.json`, 66 files. Each one has all the notes of the book, in the order of the source file, with the number, the range, the mark of a title note, and the content.
+- `public/data/study/about-psalms.json`. It has the 132 psalms of section 20.5, each with its note.
+
+Claude Code selects the form of the content in the files. A unit test must show that the files have no element and no attribute other than those of point 1 of section 20.3, and that the SHA-256 of section 20.3 comes from the 66 files.
+
+### 20.5 Part 1: the psalms in "About this chapter"
+
+The 132 psalms with no Biblica note are those of section 19.5. For each of them, "About this chapter" shows one Aquifer note. The rule:
+
+1. Take the notes of Psalms whose range has each verse of the psalm, from verse 1 to the last verse of the psalm in the Berean data. A title note is not in this list.
+2. Take the note whose range has the smallest number of chapters. The script stops if two notes have the smallest number.
+
+Numbers for the tests:
+
+- 132 psalms get a note. 129 of them get a note for exactly the psalm.
+- Psalm 9 gets the note Psalms 9:1–10:18. Psalms 42 and 43 get the note Psalms 42:1–43:5. So the 132 psalms have 131 different notes.
+- Make one line for each of the 132 psalms, in the order of the psalm numbers: the number of the psalm, a tab, and the `content_id`. Put the line feed character after each line. The SHA-256 is `651b7fe88ce7ff10d006247efe364b5f58807fe86f19dbbb5f0f497ae01b3b07`.
+- The notes are short. The median has 41 words, the shortest has 7 words, and the longest has 151 words, when a tag counts as a space.
+
+The control and the panel are those of sections 19.6 and 19.7, with these differences:
+
+- The range label is built by the rule of section 19.7. The `title` of the source has a different form for a range of more than one chapter, "Psalms 42:1–43.5". The page shows "Psalms 42:1–43:5".
+- The content can have a list and words in italics. The values of the content are those of section 20.8.
+- The credit is the Aquifer credit of section 20.6, in the place and with the values of the note credit.
+- A panel never has a Biblica note and an Aquifer note together.
+- The page gets `about-psalms.json` with the Biblica notes file of Psalms. The rule of section 19.6 for `data-loaded` applies to it also.
+- The panel does not need the switch "Study notes".
+
+The 18 psalms with a Biblica note do not change.
+
+### 20.6 The two Aquifer credits
+
+The Aquifer credit, below the note of a psalm in "About this chapter":
+
+> From the Aquifer Open Study Notes, © 2026 Mission Mutual, licensed under CC BY-SA 4.0. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The words have no changes.
+
+The short credit, at the end of each block of study notes of part 2:
+
+> From the Aquifer Open Study Notes, licensed under CC BY-SA 4.0. Full credit
+
+- "Aquifer Open Study Notes" is a link to `https://github.com/BibleAquifer/AquiferOpenStudyNotes`.
+- "CC BY-SA 4.0" is a link to `https://creativecommons.org/licenses/by-sa/4.0/`.
+- "Full credit" is a link to the Sources page of the site. It opens in the same tab.
+- The two links to a different site open in a new tab, with the name for a screen reader of section 19.8.
+
+The designer wrote these words. WARNING: Do not change a word of a credit, and do not show an Aquifer note without one of the two credits.
+
+The short credit is sufficient by point 5 of section 19.3: a link to a page that has the information. That page is the Sources page.
+
+### 20.7 Part 2: the switch "Study notes"
+
+- The switch is a row "Study notes" with the state "On" or "Off", in the form of the dark mode switch. It is below the dark mode switch: in the text list in the wide layout, and in the menu panel in the narrow layout. It is on the reading page only.
+- The key in the storage of the browser is `bible-study-notes`, with the value "on" or "off". The site stores a value only when the reader uses the switch. With no stored value, the switch is off.
+- With the switch off, the reading page is the page of Task 48: it has no control of part 2, and it does not get a file `public/data/study/<book id>.json`.
+- With the switch on, the page gets the study file of each book that is on the page, one time for each book.
+- With the switch on at the load, a chapter shows as loaded, with `data-loaded`, only after its study file loads or does not load.
+- When the reader sets the switch on or off, the verse at the top of the page stays at the same place, as for a change of the text size in section 10.
+- The switch does not change "About this chapter".
+- The study notes show with each of the three translations.
+
+### 20.8 Part 2: the groups, the controls, and the blocks
+
+A group is a set of text blocks of a chapter that the reader sees as one paragraph or one stanza. The rule uses the blocks of the Berean data in `public/data/text/`, in their order:
+
+1. A block that is not a text block ends the group. These are the kinds `h`, `b`, and `n`.
+2. The styles of a text block have four kinds. Prose: `p`, `pmo`. Poetry: `q1`, `q2`, `qr`, `pc`, `qd`. List: `li1`, `li2`. Title: `d`.
+3. A title block always starts a new group.
+4. A block after a group that has only a title block goes into that group.
+5. A poetry block after a poetry block goes into the same group. A list block after a list block goes into the same group.
+6. Each other block starts a new group. So each prose block is a group.
+
+The verses of a group are the verse numbers that are in its blocks. The script stops if a style is not in point 2.
+
+Each note of the 66 study files goes to one group, in the chapter of its first verse:
+
+1. A note that "About this chapter" shows for a psalm, by section 20.5, is not in the groups of the psalm of its first verse.
+2. A title note goes to the first group of the chapter that has a verse.
+3. Each other note goes to the group that has its first verse.
+4. If no group of the chapter has the first verse, the note goes to the group of the nearest verse before it. This occurs for 3 notes: 3 John 1:14–15, Revelation 12:18, and Revelation 12:18–13:18.
+
+In a group, the notes are in the order of the source file.
+
+Numbers for the tests:
+
+- 16,792 notes are in the groups. 131 notes are only in "About this chapter".
+- 10,562 groups have a note. 3,663 of them have one verse.
+- 1,186 chapters have a group with a note. The three chapters with none are Exodus 36, Psalms 108, and Psalms 123.
+- The median chapter has 8 groups with a note. Mark 14 has the most, 35. Matthew 26 has 32, and Luke 22 has 31.
+- Romans 8 has 10: at the verses 1 to 4, 5 to 8, 9 to 11, 12 to 14, 15 to 17, 18 to 21, 22 to 25, 26 to 27, 28 to 30, and 31 to 34.
+- Genesis 22 has 11. Psalms 119 has 22. Psalms 3 has 3: at verse 1, at the verses 2 to 6, and at the verses 7 to 8. Psalms 142 has 4. Psalms 23 has 2. Revelation 12 has 7, and 3 John has 7.
+- The block of Exodus 20, verses 3 to 17, has the most notes, 15.
+
+The control:
+
+- With the switch on, each group with a note has one control, directly after the last block of the group.
+- The words are "Notes on verses 1 to 4", with the first verse and the last verse of the group, or "Notes on verse 5" for a group with one verse. The caret is that of "About this chapter".
+- The block of the notes is closed at the load. The site does not store the state. Each control has its own state.
+- For a screen reader: the control has `aria-expanded` and `aria-controls`. The block has the role `region`, and its name has the words of the control and the name of the chapter, for example "Notes on verses 1 to 4 of Romans 8".
+
+The block, below its control:
+
+- For each note: a note label, and then the content.
+- The note label is "Verse 3" for one verse and "Verses 19–21" for a range in one chapter, with the en dash. For a range of more than one chapter, it is the range label of section 19.7, for example "Romans 5:1–8:39". For a title note, it is "Title of the psalm".
+- After the last note: the short credit of section 20.6.
+- The words of a note that refer to a different note or to a passage are plain text. Example: "See study note on 6:19".
+
+The values. The pictures have a smaller space above a note label, because the script of the designer had the fault of section 19.14. The table is correct:
+
+| Part | Value |
+|---|---|
+| Control | Inrond, weight 600, 13 px, line height 20 px, the color of the group. It is at the left side of the text column. About 8 px from the last line of the group to the control, and the usual space of a paragraph below a closed control. |
+| Block | A line on the left side: 2 px, solid, the color name `--credit-line`. 14 px from the line to the text. 2 px above and 26 px below. |
+| Text of a note | Inrond, weight 400, 15 px, line height 1.5, the color name `--ink`. Words in italics are in the italic style of Inrond. |
+| Paragraph | 8 px below each paragraph, also in a list item. |
+| List | 20 px from the left side of the block to the text of an item. 6 px below each item. The marks of a list are those of the browser. |
+| Note label | The values of the range label of section 19.7. |
+| Short credit | The values of the note credit of section 19.7. |
+
+The block uses only color names that the site has.
+
+What does not change with the switch on: the Bible text, the marks, the margin labels, the read-with list, and the pop-up. The margin labels stay on the lines of their verses when a block opens.
+
+### 20.9 The Sources page
+
+Task 48 changes the last paragraph of the section "Notes on the chapters" and adds two paragraphs. The section then has these words after its first two paragraphs:
+
+> The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of "About this chapter" is from the Aquifer Open Study Notes, © 2026 Mission Mutual. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The license of both is CC BY-SA 4.0.
+>
+> The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.
+>
+> Biblica, Mission Mutual, and Tyndale House Publishers have no connection with this site.
+
+- "Aquifer Open Study Notes" and "BibleAquifer/AquiferOpenStudyNotes" are links to `https://github.com/BibleAquifer/AquiferOpenStudyNotes`.
+- "CC BY-SA 4.0" is a link to `https://creativecommons.org/licenses/by-sa/4.0/`.
+
+Task 49 adds one sentence after "© 2026 Mission Mutual.": "The study notes at the verses are from the same source."
+
+`docs/DATA-SOURCES.md` gets a section for this source, with the facts of section 20.2.
+
+### 20.10 Selected by the designer, without a decision by Arthur
+
+1. The rule of section 20.5 for the note of a psalm, and the joint notes for Psalms 9, 42, and 43.
+2. The words of the two credits, and the words of the Sources page.
+3. The short credit at the end of each block, with the full credit on the Sources page.
+4. The name "Study notes", the place of the switch, and the state "off" at the first visit.
+5. The rule of the groups in section 20.8, and the words of the control and of the note label.
+6. The study notes show with each of the three translations. The next section has the cost.
+7. A reference to a different note or to a passage is plain text.
+8. A note of "About this chapter" is not also at the verses of that psalm.
+9. The source files are in the repository. They have about 27 MB.
+10. Two tasks, not one.
+
+### 20.11 Weak points, not decided, and not checked
+
+- The designer read the notes of Romans 8 and of five psalms. No person checked the teaching of the other notes.
+- The phrases in italics follow the Berean Standard Bible. The designer checked 6,386 phrases in italics at the start of a paragraph or of a list item: 6,191 of them, 96.9 percent, are word for word in the Berean text of the chapter. One note has a link to a page of the Berean Standard Bible on biblehub.com. The source does not say which translation it follows. On a page of the King James Version or of the World English Bible, a phrase in italics is frequently not in the text above it.
+- A reader cannot follow "See study note on 6:19" with a tap. The files have 39,112 references to a passage and 1,244 references to a different resource. Links for them are an idea for later.
+- The notes of the 132 psalms are short. Some have one sentence.
+- A long chapter gets many controls: Mark 14 gets 35.
+- The Biblica notes and the Aquifer notes have different writers, and the two can differ on a point. The designer did not compare them.
+- The spelling of the Aquifer notes is American. The spelling of the Biblica notes is British.
+- Not made: a picture of the switch, a picture of the study notes in a psalm, a picture of the dark mode, and a check on a real phone. Tasks 48 and 49 make screenshots of them.
+- Not checked: that the English files have the words of the adaptation with no change by a third person.

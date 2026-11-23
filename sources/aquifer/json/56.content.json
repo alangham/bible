@@ -1,0 +1,2832 @@
+[
+{
+"content_id": "25940",
+"reference_id": 25108,
+"version": "1.0.4",
+"title": "Titus 1:1",
+"media_type": "Text",
+"index_reference": "56001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>knowledge … that leads to godliness</em>: See <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">2:11–14</data>; <data class=\"bible-ref\" data-start-ref=\"54006003\" data-end-ref=\"54006003\">1&nbsp;Timothy 6:3</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001001",
+"start_ref_usfm": "TIT 1:1",
+"end_ref": "56001001",
+"end_ref_usfm": "TIT 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+}
+]
+}
+},
+{
+"content_id": "25930",
+"reference_id": 25098,
+"version": "1.0.4",
+"title": "Titus 1:1–4",
+"media_type": "Text",
+"index_reference": "56001001-56001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The beginning of the book of Titus, like that of 1&nbsp;Timothy (<data class=\"bible-ref\" data-start-ref=\"54001001\" data-end-ref=\"54001002\">1:1–2</data>), establishes Paul’s authority for his representative.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001001",
+"start_ref_usfm": "TIT 1:1",
+"end_ref": "56001004",
+"end_ref_usfm": "TIT 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.75,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.5875,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "person:Titus",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Titus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:InCommon",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "In Common"
+}
+]
+}
+},
+{
+"content_id": "25941",
+"reference_id": 25109,
+"version": "1.0.4",
+"title": "Titus 1:2",
+"media_type": "Text",
+"index_reference": "56001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Believing that they have eternal life enables God’s people to live well now (see <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">2:11–14</data>; <data class=\"bible-ref\" data-start-ref=\"56003007\" data-end-ref=\"56003008\">3:7–8</data>). </p></li><li><p><em>God, who cannot lie</em>: The true God contrasts with popular Cretan ideas (see <data class=\"resource-ref\" data-content-id=\"25934\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1:12</data>). This statement also emphasizes God’s plan of salvation as unchanging (<data class=\"bible-ref\" data-start-ref=\"56001001\" data-end-ref=\"56001001\">1:1</data>): God can be trusted to fulfill his promises (see <data class=\"bible-ref\" data-start-ref=\"04023019\" data-end-ref=\"04023019\">Numbers 23:19</data>; <data class=\"bible-ref\" data-start-ref=\"09015029\" data-end-ref=\"09015029\">1&nbsp;Samuel 15:29</data>; <data class=\"bible-ref\" data-start-ref=\"45003003\" data-end-ref=\"45003004\">Romans 3:3–4</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001002",
+"start_ref_usfm": "TIT 1:2",
+"end_ref": "56001002",
+"end_ref_usfm": "TIT 1:2"
+}
+],
+"resource": [
+{
+"reference_id": "25102",
+"content_id": "25934",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1:12",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Promise"
+}
+]
+}
+},
+{
+"content_id": "25942",
+"reference_id": 25110,
+"version": "1.0.4",
+"title": "Titus 1:3",
+"media_type": "Text",
+"index_reference": "56001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>In His own time</em>: The initiative is entirely with God, who fulfills his plan on his own schedule by his own will (see <data class=\"bible-ref\" data-start-ref=\"56003005\" data-end-ref=\"56003005\">3:5</data>; <data class=\"bible-ref\" data-start-ref=\"54002006\" data-end-ref=\"54002006\">1&nbsp;Timothy 2:6</data>; <data class=\"bible-ref\" data-start-ref=\"55001010\" data-end-ref=\"55001010\">2&nbsp;Timothy 1:10</data>). </p></li><li><p><em>God our Savior</em>: In <data class=\"bible-ref\" data-start-ref=\"56001004\" data-end-ref=\"56001004\">Titus 1:4</data>, Jesus is also called “our Savior,” identifying Jesus with God (see <data class=\"bible-ref\" data-start-ref=\"56002010\" data-end-ref=\"56002010\">2:10</data>, <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">13</data>; <data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003004\">3:4</data>, <data class=\"bible-ref\" data-start-ref=\"56003006\" data-end-ref=\"56003006\">6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001003",
+"start_ref_usfm": "TIT 1:3",
+"end_ref": "56001003",
+"end_ref_usfm": "TIT 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Savior"
+}
+]
+}
+},
+{
+"content_id": "25943",
+"reference_id": 25111,
+"version": "1.0.4",
+"title": "Titus 1:4",
+"media_type": "Text",
+"index_reference": "56001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Titus was Paul’s delegate in dealing with the church in Crete. A delegate is someone who is sent to represent another person. </p></li><li><p><em>my true child</em>: The wording authorizes the delegate (as in <data class=\"bible-ref\" data-start-ref=\"54001002\" data-end-ref=\"54001002\">1&nbsp;Timothy 1:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001004",
+"start_ref_usfm": "TIT 1:4",
+"end_ref": "56001004",
+"end_ref_usfm": "TIT 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Titus",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Titus"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:InCommon",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Common"
+}
+]
+}
+},
+{
+"content_id": "25946",
+"reference_id": 25114,
+"version": "1.0.4",
+"title": "Titus 1:5",
+"media_type": "Text",
+"index_reference": "56001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Crete was located in the Mediterranean, south of the Aegean Sea. It was an important location for travel and trade by sea, so it had a mix of influences, including a Jewish population. Some from Crete had been at Pentecost (<data class=\"bible-ref\" data-start-ref=\"44002011\" data-end-ref=\"44002011\">Acts 2:11</data>), but this letter seems to deal with a church in the early stages of development. </p></li><li><p><em>elders in every town</em>: There may have been more than one house church in a given town and possibly more than one elder in a given house church. Clearly, there were churches in at least two towns and the leadership was specific to each town.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001005",
+"start_ref_usfm": "TIT 1:5",
+"end_ref": "56001005",
+"end_ref_usfm": "TIT 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Crete",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Crete"
+}
+]
+}
+},
+{
+"content_id": "25945",
+"reference_id": 25113,
+"version": "1.0.4",
+"title": "Titus 1:5–9",
+"media_type": "Text",
+"index_reference": "56001005-56001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Titus was instructed to appoint leaders in order to complete what was unfinished—that is, to establish the church (compare <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003013\">1&nbsp;Timothy 3:1–13</data>). Deacons are not mentioned, possibly because these were new, small churches. </p></li><li><p>These leadership qualities might be an accommodation to the newness of these converts and the roughness of their culture. It is assumed that the elders will be male (see <data class=\"bible-ref\" data-start-ref=\"54003004\" data-end-ref=\"54003005\">1&nbsp;Timothy 3:4–5</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001005",
+"start_ref_usfm": "TIT 1:5",
+"end_ref": "56001009",
+"end_ref_usfm": "TIT 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.46,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "place:Crete",
+"type": "place",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Crete"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:LikingWhatIsGood",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Liking What Is Good"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+}
+]
+}
+},
+{
+"content_id": "25944",
+"reference_id": 25112,
+"version": "1.0.4",
+"title": "Titus 1:5–16",
+"media_type": "Text",
+"index_reference": "56001005-56001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Strong, faithful leadership was needed in the churches of Crete to address the danger of false teachers (<data class=\"bible-ref\" data-start-ref=\"56001010\" data-end-ref=\"56001016\">1:10–16</data>). This part of Titus’s task coincides with the larger concern of the letter: to shape a community that bears witness to Christ by embodying God’s grace in its conduct. Compare <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003007\">1&nbsp;Timothy 3:1–7</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001005",
+"start_ref_usfm": "TIT 1:5",
+"end_ref": "56001016",
+"end_ref_usfm": "TIT 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.3083,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "place:Crete",
+"type": "place",
+"confidence": 0.2917,
+"match_method": "canonical",
+"preferred_label": "Crete"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.275,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "person:CretanProphet",
+"type": "person",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Cretan Prophet"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "group:Cretan",
+"type": "group",
+"confidence": 0.2042,
+"match_method": "canonical",
+"preferred_label": "Cretans"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "group:Jews",
+"type": "group",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Jews"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:LikingWhatIsGood",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Liking What Is Good"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1875,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "25947",
+"reference_id": 25115,
+"version": "1.0.4",
+"title": "Titus 1:6",
+"media_type": "Text",
+"index_reference": "56001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>the husband of one wife</em> (or faithful to his wife): See <data class=\"resource-ref\" data-content-id=\"17330\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1&nbsp;Timothy 3:2</data>. </p></li><li><p><em>indiscretion or insubordination</em> (that is, reckless behavior or rebellion): This probably reflects Cretan culture with its low moral standards (<data class=\"bible-ref\" data-start-ref=\"56001012\" data-end-ref=\"56001012\">Titus 1:12</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001006",
+"start_ref_usfm": "TIT 1:6",
+"end_ref": "56001006",
+"end_ref_usfm": "TIT 1:6"
+}
+],
+"resource": [
+{
+"reference_id": "16498",
+"content_id": "17330",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 3:2",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "25948",
+"reference_id": 25116,
+"version": "1.0.4",
+"title": "Titus 1:7",
+"media_type": "Text",
+"index_reference": "56001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>A church leader (or <em>An overseer,</em> or <em>A bishop</em>) is a manager of God’s household: See <data class=\"bible-ref\" data-start-ref=\"56001011\" data-end-ref=\"56001011\">1:11</data>; <data class=\"bible-ref\" data-start-ref=\"56002002\" data-end-ref=\"56002010\">2:2–10</data>; <data class=\"bible-ref\" data-start-ref=\"54001004\" data-end-ref=\"54001004\">1&nbsp;Timothy 1:4</data>; <data class=\"bible-ref\" data-start-ref=\"54003004\" data-end-ref=\"54003005\">3:4–5</data>, <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">12</data>, <data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003015\">15</data>; <data class=\"bible-ref\" data-start-ref=\"55002020\" data-end-ref=\"55002021\">2&nbsp;Timothy 2:20–21</data>. </p></li><li><p>These qualities indicate that an elder should not behave like the people in Crete known for their immorality (see <data class=\"bible-ref\" data-start-ref=\"56001012\" data-end-ref=\"56001012\">Titus 1:12</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001007",
+"start_ref_usfm": "TIT 1:7",
+"end_ref": "56001007",
+"end_ref_usfm": "TIT 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "25949",
+"reference_id": 25117,
+"version": "1.0.4",
+"title": "Titus 1:9",
+"media_type": "Text",
+"index_reference": "56001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The elders had a leading role in teaching the community. This may have been necessary in dealing with the immediate threat to these particular communities (as also in Ephesus; see <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003001\">1&nbsp;Timothy 3:1</data>). </p></li><li><p>Only with a strong belief in the good news would an elder be able to provide sound teaching. Paul’s specific concerns are addressed in <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56003011\">Titus 2:1–3:11</data>, considering the problems mentioned in <data class=\"bible-ref\" data-start-ref=\"56001010\" data-end-ref=\"56001016\">1:10–16</data> and <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003011\">3:9–11</data> (see also <data class=\"bible-ref\" data-start-ref=\"54001010\" data-end-ref=\"54001010\">1&nbsp;Timothy 1:10</data>). </p></li><li><p>Titus had a similar role (compare <data class=\"bible-ref\" data-start-ref=\"56001013\" data-end-ref=\"56001013\">Titus 1:13</data>; <data class=\"bible-ref\" data-start-ref=\"56002015\" data-end-ref=\"56002015\">2:15</data>; <data class=\"bible-ref\" data-start-ref=\"56003010\" data-end-ref=\"56003011\">3:10–11</data>). The local leadership would continue the work Paul and his delegates started. </p></li><li><p>Those who oppose it are described in <data class=\"bible-ref\" data-start-ref=\"56001010\" data-end-ref=\"56001016\">1:10–16</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001009",
+"start_ref_usfm": "TIT 1:9",
+"end_ref": "56001009",
+"end_ref_usfm": "TIT 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+}
+]
+}
+},
+{
+"content_id": "25932",
+"reference_id": 25100,
+"version": "1.0.4",
+"title": "Titus 1:10",
+"media_type": "Text",
+"index_reference": "56001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>rebellious</em>: The same Greek word is used of children in <data class=\"bible-ref\" data-start-ref=\"56001006\" data-end-ref=\"56001006\">1:6</data>. </p></li><li><p><em>those who insist on circumcision for salvation</em> (literally <em>those of the circumcision</em>): This probably refers to Jewish Christians. The Greek phrase does not specify whether or not they required Gentiles to be circumcised. The Jewish influence of this false teaching is suggested in <data class=\"bible-ref\" data-start-ref=\"56001014\" data-end-ref=\"56001015\">1:14–15</data> and <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003009\">3:9</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001010",
+"start_ref_usfm": "TIT 1:10",
+"end_ref": "56001010",
+"end_ref_usfm": "TIT 1:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+}
+]
+}
+},
+{
+"content_id": "25931",
+"reference_id": 25099,
+"version": "1.0.4",
+"title": "Titus 1:10–16",
+"media_type": "Text",
+"index_reference": "56001010-56001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In a native population of troublemakers, Titus would need to lead firmly to rid these Christian communities of corruption and make them healthy in the faith (<data class=\"bible-ref\" data-start-ref=\"56001013\" data-end-ref=\"56001016\">1:13–16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001010",
+"start_ref_usfm": "TIT 1:10",
+"end_ref": "56001016",
+"end_ref_usfm": "TIT 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "person:CretanProphet",
+"type": "person",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Cretan Prophet"
+},
+{
+"id": "group:Cretan",
+"type": "group",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Cretans"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "place:Crete",
+"type": "place",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Crete"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+},
+{
+"id": "group:Jews",
+"type": "group",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Jews"
+}
+]
+}
+},
+{
+"content_id": "25933",
+"reference_id": 25101,
+"version": "1.0.4",
+"title": "Titus 1:11",
+"media_type": "Text",
+"index_reference": "56001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>entire households</em>: This also happened in Ephesus (compare <data class=\"bible-ref\" data-start-ref=\"54004003\" data-end-ref=\"54004003\">1&nbsp;Timothy 4:3</data>; <data class=\"bible-ref\" data-start-ref=\"55002018\" data-end-ref=\"55002018\">2&nbsp;Timothy 2:18</data>; <data class=\"bible-ref\" data-start-ref=\"55003006\" data-end-ref=\"55003006\">3:6</data>). </p></li><li><p><em>for the sake of dishonorable gain</em>: Elders must not have this characteristic (<data class=\"bible-ref\" data-start-ref=\"56001007\" data-end-ref=\"56001007\">Titus 1:7</data>; see also <data class=\"bible-ref\" data-start-ref=\"54006005\" data-end-ref=\"54006010\">1&nbsp;Timothy 6:5–10</data>; <data class=\"bible-ref\" data-start-ref=\"47002017\" data-end-ref=\"47002017\">2&nbsp;Corinthians 2:17</data>; <data class=\"bible-ref\" data-start-ref=\"60005002\" data-end-ref=\"60005002\">1&nbsp;Peter 5:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001011",
+"start_ref_usfm": "TIT 1:11",
+"end_ref": "56001011",
+"end_ref_usfm": "TIT 1:11"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "25934",
+"reference_id": 25102,
+"version": "1.0.4",
+"title": "Titus 1:12",
+"media_type": "Text",
+"index_reference": "56001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>one of their own prophets</em>: This quotation is from Epimenides of Knossos, a philosopher who lived on Crete around the 500s&nbsp;BC. </p></li><li><p><em>liars</em>: This charge was directed specifically at the Cretan claim to have Zeus’s tomb on the island. According to Cretan mythology, the god Zeus was once a mere human who lived and died on Crete. His tomb was said to be there. But Zeus had achieved godhood through his patronage (that is, gifts and benefits) to humans. Some Greek moralists opposed this legend and characterized it as a lie. A quote from Alexandria in the 200s&nbsp;BC reads: “Cretans are always liars. For a tomb, O Lord, Cretans build for you; but you do not die, for you are forever.” One of Crete’s own prophets (Epimenides) thought the same thing. Paul cites his voice of conscience approvingly (<data class=\"bible-ref\" data-start-ref=\"56001013\" data-end-ref=\"56001013\">Titus 1:13</data>; see <data class=\"bible-ref\" data-start-ref=\"44017028\" data-end-ref=\"44017028\">Acts 17:28</data>), for the God who does not lie (<data class=\"bible-ref\" data-start-ref=\"56001002\" data-end-ref=\"56001002\">Titus 1:2</data>) opposes the lies of such myths. </p></li><li><p><em>liars … beasts … gluttons</em>: It was believed that Cretan immorality resulted from their belief about Zeus. Religious lies had led to moral corruption. Paul&nbsp;later counters these vices by presenting the contrasting virtues (positive qualities or behaviors) (<data class=\"bible-ref\" data-start-ref=\"56002012\" data-end-ref=\"56002012\">Titus 2:12</data>). He urges the Cretans to reach ethical ideals that are praised in human society generally but were absent on Crete, as bemoaned by their own prophet. They would reach these ideals only through the gospel of Jesus Christ (<data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">2:11–14</data>). </p></li><li><p><em>lazy gluttons</em>: Cretans were known to do anything for money. They were well-known as mercenaries and as excessive consumers. They were said to feel no shame in their greed (see <data class=\"bible-ref\" data-start-ref=\"50003019\" data-end-ref=\"50003019\">Philippians 3:19</data>). </p></li><li><p>Paul applies the quotation more directly to the current false teachers than to Cretan culture generally. The false teachers carried on this Cretan tradition of immorality based on a lie.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001012",
+"start_ref_usfm": "TIT 1:12",
+"end_ref": "56001012",
+"end_ref_usfm": "TIT 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Cretan",
+"type": "group",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Cretans"
+},
+{
+"id": "person:CretanProphet",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Cretan Prophet"
+},
+{
+"id": "place:Crete",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Crete"
+}
+]
+}
+},
+{
+"content_id": "25935",
+"reference_id": 25103,
+"version": "1.0.4",
+"title": "Titus 1:13",
+"media_type": "Text",
+"index_reference": "56001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>This testimony is true</em>: See <data class=\"resource-ref\" data-content-id=\"25934\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1:12</data>.</p></li><li><p>Being sound (or strong) in the faith is here defined as rejecting false teachings (compare <data class=\"bible-ref\" data-start-ref=\"56001009\" data-end-ref=\"56001009\">1:9</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001013",
+"start_ref_usfm": "TIT 1:13",
+"end_ref": "56001013",
+"end_ref_usfm": "TIT 1:13"
+}
+],
+"resource": [
+{
+"reference_id": "25102",
+"content_id": "25934",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1:12",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+}
+]
+}
+},
+{
+"content_id": "25936",
+"reference_id": 25104,
+"version": "1.0.4",
+"title": "Titus 1:14",
+"media_type": "Text",
+"index_reference": "56001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Jewish myths</em>: See <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003009\">3:9</data>; <data class=\"bible-ref\" data-start-ref=\"54001004\" data-end-ref=\"54001004\">1&nbsp;Timothy 1:4</data>; <data class=\"bible-ref\" data-start-ref=\"54004007\" data-end-ref=\"54004007\">4:7</data>; <data class=\"bible-ref\" data-start-ref=\"55004004\" data-end-ref=\"55004004\">2&nbsp;Timothy 4:4</data>. </p></li><li><p><em>have rejected the truth</em>: This was apostasy not mere unbelief. Apostasy is when someone abandons or rejects their beliefs. See <data class=\"bible-ref\" data-start-ref=\"54001006\" data-end-ref=\"54001007\">1&nbsp;Timothy 1:6–7</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001014",
+"start_ref_usfm": "TIT 1:14",
+"end_ref": "56001014",
+"end_ref_usfm": "TIT 1:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "group:Jews",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jews"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+}
+]
+}
+},
+{
+"content_id": "25938",
+"reference_id": 25106,
+"version": "1.0.4",
+"title": "Titus 1:15",
+"media_type": "Text",
+"index_reference": "56001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Compare <data class=\"bible-ref\" data-start-ref=\"54004003\" data-end-ref=\"54004005\">1&nbsp;Timothy 4:3–5</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001015",
+"start_ref_usfm": "TIT 1:15",
+"end_ref": "56001015",
+"end_ref_usfm": "TIT 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+}
+]
+}
+},
+{
+"content_id": "25937",
+"reference_id": 25105,
+"version": "1.0.4",
+"title": "Titus 1:15–16",
+"media_type": "Text",
+"index_reference": "56001015-56001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These two verses comment on the people of <data class=\"bible-ref\" data-start-ref=\"56001014\" data-end-ref=\"56001014\">1:14</data> and their commands, while transitioning to a discussion on teaching that encourages goodness (<data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56003011\">2:1–3:11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001015",
+"start_ref_usfm": "TIT 1:15",
+"end_ref": "56001016",
+"end_ref_usfm": "TIT 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "25939",
+"reference_id": 25107,
+"version": "1.0.4",
+"title": "Titus 1:16",
+"media_type": "Text",
+"index_reference": "56001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Sound teaching and godliness are&nbsp;always linked together in the letters to Timothy and Titus (see <data class=\"bible-ref\" data-start-ref=\"54001007\" data-end-ref=\"54001011\">1&nbsp;Timothy 1:7–11</data>; <data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003016\">3:15–16</data>; <data class=\"bible-ref\" data-start-ref=\"54005024\" data-end-ref=\"54005025\">5:24–25</data>; <data class=\"bible-ref\" data-start-ref=\"55003005\" data-end-ref=\"55003005\">2&nbsp;Timothy 3:5</data>, <data class=\"bible-ref\" data-start-ref=\"55003009\" data-end-ref=\"55003009\">9</data>). Similarly, the ungodly way they live is connected with false teaching. </p></li><li><p><em>any good deed</em>: This contrasts with <data class=\"bible-ref\" data-start-ref=\"56003001\" data-end-ref=\"56003001\">Titus 3:1</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56001016",
+"start_ref_usfm": "TIT 1:16",
+"end_ref": "56001016",
+"end_ref_usfm": "TIT 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "25950",
+"reference_id": 25118,
+"version": "1.0.4",
+"title": "Titus 2:1–15",
+"media_type": "Text",
+"index_reference": "56002001-56002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Sound teaching was especially urgent on account of the false teachers, who had caused problems within &quot;entire households&quot; (<data class=\"bible-ref\" data-start-ref=\"56001011\" data-end-ref=\"56001011\">1:11</data>). In <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002010\">2:1–10</data>, Paul addresses different groups&nbsp;within the household of faith, showing his concern for the public testimony of the church (<data class=\"bible-ref\" data-start-ref=\"56002005\" data-end-ref=\"56002005\">2:5</data>, <data class=\"bible-ref\" data-start-ref=\"56002008\" data-end-ref=\"56002008\">8</data>, <data class=\"bible-ref\" data-start-ref=\"56002010\" data-end-ref=\"56002010\">10</data>; see&nbsp;also <data class=\"bible-ref\" data-start-ref=\"54005001\" data-end-ref=\"54006002\">1&nbsp;Tim 5:1–6:2</data>). Paul then elaborates on the coming of Christ (<data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">Titus 2:11–14</data>) before giving a direct charge to Titus (<data class=\"bible-ref\" data-start-ref=\"56002015\" data-end-ref=\"56002015\">2:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002001",
+"start_ref_usfm": "TIT 2:1",
+"end_ref": "56002015",
+"end_ref_usfm": "TIT 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.42,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.2733,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:HavingLoveForOnesHusband",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Having Love for One's Husband"
+},
+{
+"id": "keyterm:Cleanse.2",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "To Cleanse"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Worldly",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Worldly"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Liberation",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Liberation"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "25956",
+"reference_id": 25124,
+"version": "1.0.4",
+"title": "Titus 2:9–10",
+"media_type": "Text",
+"index_reference": "56002009-56002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The purpose of these commands is to &quot;adorn the teaching about God&quot; The New Living Translation translates it this way: &quot;make the teaching about&nbsp;God … attractive&quot; (see <data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006002\">1&nbsp;Timothy 6:1–2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002009",
+"start_ref_usfm": "TIT 2:9",
+"end_ref": "56002010",
+"end_ref_usfm": "TIT 2:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Savior"
+}
+]
+}
+},
+{
+"content_id": "25952",
+"reference_id": 25120,
+"version": "1.0.4",
+"title": "Titus 2:11",
+"media_type": "Text",
+"index_reference": "56002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>has been revealed </em>(literally <em>has appeared</em>): See <data class=\"resource-ref\" data-content-id=\"17367\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1&nbsp;Timothy 6:14</data>. </p></li><li><p><em>salvation to everyone</em>: Paul intends that God’s grace will fully accomplish its purposes among the Cretans and that, in doing so, it will enlist them into God’s saving work of evangelism (<data class=\"bible-ref\" data-start-ref=\"56002012\" data-end-ref=\"56002012\">Titus 2:12</data>; see <data class=\"bible-ref\" data-start-ref=\"54002001\" data-end-ref=\"54002007\">1&nbsp;Timothy 2:1–7</data>; <data class=\"bible-ref\" data-start-ref=\"54004010\" data-end-ref=\"54004010\">4:10</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002011",
+"start_ref_usfm": "TIT 2:11",
+"end_ref": "56002011",
+"end_ref_usfm": "TIT 2:11"
+}
+],
+"resource": [
+{
+"reference_id": "16535",
+"content_id": "17367",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 6:14",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "25951",
+"reference_id": 25119,
+"version": "1.0.4",
+"title": "Titus 2:11–15",
+"media_type": "Text",
+"index_reference": "56002011-56002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>For</em>: The commands of <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002010\">2:1–10</data> are here grounded in the past and future coming of Christ. God’s grace is&nbsp;a model for the church’s own conduct, even as salvation by grace makes&nbsp;a good life possible and creates people devoted to good works (see also&nbsp;<data class=\"bible-ref\" data-start-ref=\"56003003\" data-end-ref=\"56003007\">3:3–7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002011",
+"start_ref_usfm": "TIT 2:11",
+"end_ref": "56002015",
+"end_ref_usfm": "TIT 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Liberation",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Liberation"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Cleanse.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "To Cleanse"
+},
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Worldly",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Worldly"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+}
+]
+}
+},
+{
+"content_id": "25953",
+"reference_id": 25121,
+"version": "1.0.4",
+"title": "Titus 2:12",
+"media_type": "Text",
+"index_reference": "56002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>It instructs us</em>: The emphasis of this instruction falls on the positive virtues: wisdom, righteousness, and devotion to God. In Greco-Roman writings, these three virtues represent virtuous behavior in general. These virtues counter the Cretan vices (immoral behaviors or qualities) listed in <data class=\"bible-ref\" data-start-ref=\"56001012\" data-end-ref=\"56001012\">1:12</data> and are transformed into thoroughly Christian qualities (see <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">2:13</data>). </p></li><li><p>Paul encourages the Cretans to embody these virtues, in order to clearly show their fellow Cretans that a virtuous life comes only from God’s grace in Jesus Christ.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002012",
+"start_ref_usfm": "TIT 2:12",
+"end_ref": "56002012",
+"end_ref_usfm": "TIT 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Worldly",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Worldly"
+}
+]
+}
+},
+{
+"content_id": "25954",
+"reference_id": 25122,
+"version": "1.0.4",
+"title": "Titus 2:13",
+"media_type": "Text",
+"index_reference": "56002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>we await</em>: This implies hope as well as future accountability, both of which encourage godly behavior in the present. </p></li><li><p><em>appearance</em>: The Greek word used here is prominent in the letters to Timothy and Titus (“epiphany” or “appearing”; also <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002011\">2:11</data>; see <data class=\"resource-ref\" data-content-id=\"17367\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1&nbsp;Timothy 6:14</data>). </p></li><li><p><em>great God and Savior</em>: This is one of the few places in the New Testament where Jesus Christ is explicitly called “God”  (see also <data class=\"bible-ref\" data-start-ref=\"43001001\" data-end-ref=\"43001001\">John 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"43020028\" data-end-ref=\"43020028\">20:28</data>; <data class=\"bible-ref\" data-start-ref=\"45009005\" data-end-ref=\"45009005\">Romans 9:5</data>; <data class=\"bible-ref\" data-start-ref=\"58001008\" data-end-ref=\"58001008\">Hebrews 1:8</data>; <data class=\"bible-ref\" data-start-ref=\"61001001\" data-end-ref=\"61001001\">2&nbsp;Peter 1:1</data>; possibly <data class=\"bible-ref\" data-start-ref=\"43001018\" data-end-ref=\"43001018\">John 1:18</data>). Yet this claim is entirely consistent with the roles and attributes of Christ and the worship that he receives. It is possible this title is used here to assert that Christ is not a mere human elevated to the status of other gods (see <data class=\"resource-ref\" data-content-id=\"25934\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Titus 1:12</data>). When this letter was written, Christians were insisting more and more that Christ alone, rather than rulers and emperors, should be called divine.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002013",
+"start_ref_usfm": "TIT 2:13",
+"end_ref": "56002013",
+"end_ref_usfm": "TIT 2:13"
+}
+],
+"resource": [
+{
+"reference_id": "16535",
+"content_id": "17367",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 6:14",
+"language": "eng"
+},
+{
+"reference_id": "25102",
+"content_id": "25934",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Titus 1:12",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+}
+]
+}
+},
+{
+"content_id": "25955",
+"reference_id": 25123,
+"version": "1.0.4",
+"title": "Titus 2:14",
+"media_type": "Text",
+"index_reference": "56002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Salvation produces a people who have the desire for and ability to do the good deeds described in <data class=\"bible-ref\" data-start-ref=\"56002002\" data-end-ref=\"56002010\">2:2–10</data>. </p></li><li><p><em>He gave Himself</em>: See also <data class=\"bible-ref\" data-start-ref=\"54002006\" data-end-ref=\"54002006\">1&nbsp;Timothy 2:6</data>. </p></li><li><p><em>to redeem us</em>: See <data class=\"bible-ref\" data-start-ref=\"48003022\" data-end-ref=\"48003022\">Galatians 3:22</data>; <data class=\"bible-ref\" data-start-ref=\"48004004\" data-end-ref=\"48004005\">4:4–5</data>; compare <data class=\"bible-ref\" data-start-ref=\"02006006\" data-end-ref=\"02006008\">Exodus 6:6–8</data>. </p></li><li><p>The phrase &quot;a people for His own possession&quot; recalls the formation of Israel as a nation (see <data class=\"bible-ref\" data-start-ref=\"02019005\" data-end-ref=\"02019005\">Exodus 19:5</data>; <data class=\"bible-ref\" data-start-ref=\"05007006\" data-end-ref=\"05007006\">Deuteronomy 7:6</data>; <data class=\"bible-ref\" data-start-ref=\"05014002\" data-end-ref=\"05014002\">14:2</data>). Those who follow Christ are now God’s people—his nation—and the Spirit leads them to keep God’s covenant. </p></li><li><p><em>totally committed to doing good deeds</em> (literally <em>zealous for good deeds</em>): See <data class=\"bible-ref\" data-start-ref=\"56001016\" data-end-ref=\"56001016\">Titus 1:16</data>; <data class=\"bible-ref\" data-start-ref=\"49002010\" data-end-ref=\"49002010\">Ephesians 2:10</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56002014",
+"start_ref_usfm": "TIT 2:14",
+"end_ref": "56002014",
+"end_ref_usfm": "TIT 2:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Cleanse.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Cleanse"
+},
+{
+"id": "keyterm:Liberation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Liberation"
+}
+]
+}
+},
+{
+"content_id": "25964",
+"reference_id": 25132,
+"version": "1.0.4",
+"title": "Titus 3:1",
+"media_type": "Text",
+"index_reference": "56003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul might be telling the believers to make a clear distinction between themselves and the disorderly general population. Alternatively, the troublemakers (<data class=\"bible-ref\" data-start-ref=\"56001010\" data-end-ref=\"56001015\">1:10–15</data>; <data class=\"bible-ref\" data-start-ref=\"56003010\" data-end-ref=\"56003010\">3:10</data>) might have adopted disorderly behaviors as a result of their false teachings (as is likely the case in <data class=\"bible-ref\" data-start-ref=\"54002001\" data-end-ref=\"54002007\">1&nbsp;Timothy 2:1–7</data>). </p></li><li><p>On relations to rulers and authorities<em>,</em> see <data class=\"bible-ref\" data-start-ref=\"54002002\" data-end-ref=\"54002002\">1&nbsp;Timothy 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"45013001\" data-end-ref=\"45013007\">Romans 13:1–7</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003001",
+"start_ref_usfm": "TIT 3:1",
+"end_ref": "56003001",
+"end_ref_usfm": "TIT 3:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "25957",
+"reference_id": 25125,
+"version": "1.0.4",
+"title": "Titus 3:1–11",
+"media_type": "Text",
+"index_reference": "56003001-56003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The emphasis on sound teaching continues (<data class=\"bible-ref\" data-start-ref=\"56001009\" data-end-ref=\"56001009\">1:9</data>; <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002001\">2:1</data>). Now Paul shifts his focus to how the Christian community relates to society in general (compare <data class=\"bible-ref\" data-start-ref=\"54002002\" data-end-ref=\"54002004\">1&nbsp;Timothy 2:2–4</data>). As in <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002015\">Titus 2:1–15</data>, God’s instructions for his people in<data class=\"bible-ref\" data-start-ref=\"56003001\" data-end-ref=\"56003002\"> 3:1–2</data> are based on his interactions with them (<data class=\"bible-ref\" data-start-ref=\"56003003\" data-end-ref=\"56003007\">3:3–7</data>; compare <data class=\"resource-ref\" data-content-id=\"25951\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 2:11–15</data>). Paul then instructs Titus to avoid pointless arguments and to insist on beneficial teaching (<data class=\"bible-ref\" data-start-ref=\"56003008\" data-end-ref=\"56003011\">3:8–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003001",
+"start_ref_usfm": "TIT 3:1",
+"end_ref": "56003011",
+"end_ref_usfm": "TIT 3:11"
+}
+],
+"resource": [
+{
+"reference_id": "25119",
+"content_id": "25951",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 2:11-15",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Worthless",
+"type": "keyterm",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Worthless"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:SelfCondemned",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Self-Condemned"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "25965",
+"reference_id": 25133,
+"version": "1.0.4",
+"title": "Titus 3:3",
+"media_type": "Text",
+"index_reference": "56003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Being humble and treating everyone with respect is appropriate (<data class=\"bible-ref\" data-start-ref=\"56003002\" data-end-ref=\"56003002\">3:2</data>). This is especially true when we remember our own condition when God’s kindness and love came to us (<data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003004\">3:4</data>; see <data class=\"bible-ref\" data-start-ref=\"49002001\" data-end-ref=\"49002004\">Ephesians 2:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"49005008\" data-end-ref=\"49005008\">5:8</data>; <data class=\"bible-ref\" data-start-ref=\"51003007\" data-end-ref=\"51003007\">Colossians 3:7</data>; <data class=\"bible-ref\" data-start-ref=\"60004003\" data-end-ref=\"60004003\">1&nbsp;Peter 4:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003003",
+"start_ref_usfm": "TIT 3:3",
+"end_ref": "56003003",
+"end_ref_usfm": "TIT 3:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+}
+]
+}
+},
+{
+"content_id": "25967",
+"reference_id": 25135,
+"version": "1.0.4",
+"title": "Titus 3:4",
+"media_type": "Text",
+"index_reference": "56003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>We should behave toward our fellow humans as God acted toward us—in kindness and love. God’s salvation makes this possible. </p></li><li><p><em>revealed</em> (literally <em>appeared</em>): The Greek word relates to the coming of Christ (also in <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002011\">2:11</data>, <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">13</data>; see <data class=\"resource-ref\" data-content-id=\"17367\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1&nbsp;Timothy 6:14</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003004",
+"start_ref_usfm": "TIT 3:4",
+"end_ref": "56003004",
+"end_ref_usfm": "TIT 3:4"
+}
+],
+"resource": [
+{
+"reference_id": "16535",
+"content_id": "17367",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 6:14",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Savior"
+}
+]
+}
+},
+{
+"content_id": "25966",
+"reference_id": 25134,
+"version": "1.0.4",
+"title": "Titus 3:4–7",
+"media_type": "Text",
+"index_reference": "56003004-56003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This passage might be a summary or quote from traditional teaching (see <data class=\"bible-ref\" data-start-ref=\"54001015\" data-end-ref=\"54001015\">1&nbsp;Timothy 1:15</data>; <data class=\"bible-ref\" data-start-ref=\"54002005\" data-end-ref=\"54002006\">2:5–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003004",
+"start_ref_usfm": "TIT 3:4",
+"end_ref": "56003007",
+"end_ref_usfm": "TIT 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Kindness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Kindness"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "25968",
+"reference_id": 25136,
+"version": "1.0.4",
+"title": "Titus 3:5",
+"media_type": "Text",
+"index_reference": "56003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>not by … but by</em>: The contrast is between human actions that might be thought to deserve salvation and God’s grace (see <data class=\"bible-ref\" data-start-ref=\"48002016\" data-end-ref=\"48002016\">Galatians 2:16</data>). Salvation is through faith in God’s mercy alone (<data class=\"bible-ref\" data-start-ref=\"49002008\" data-end-ref=\"49002008\">Ephesians 2:8</data>). </p></li><li><p><em>washing of new birth</em>: See <data class=\"bible-ref\" data-start-ref=\"26016009\" data-end-ref=\"26016009\">Ezekiel 16:9</data>; <data class=\"bible-ref\" data-start-ref=\"43003001\" data-end-ref=\"43003015\">John 3:1–15</data>; <data class=\"bible-ref\" data-start-ref=\"49005026\" data-end-ref=\"49005026\">Ephesians 5:26</data>; <data class=\"bible-ref\" data-start-ref=\"58010022\" data-end-ref=\"58010022\">Hebrews 10:22</data>; <data class=\"bible-ref\" data-start-ref=\"61001009\" data-end-ref=\"61001009\">2&nbsp;Peter 1:9</data>. </p></li><li><p><em>and renewal by the Holy Spirit</em>: This demonstrates a complete departure from the life of sin and death and a transfer into the life of purity (see also <data class=\"bible-ref\" data-start-ref=\"45012002\" data-end-ref=\"45012002\">Romans 12:2</data>; <data class=\"bible-ref\" data-start-ref=\"47005017\" data-end-ref=\"47005017\">2&nbsp;Corinthians 5:17</data>; <data class=\"bible-ref\" data-start-ref=\"51003010\" data-end-ref=\"51003010\">Colossians 3:10</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003005",
+"start_ref_usfm": "TIT 3:5",
+"end_ref": "56003005",
+"end_ref_usfm": "TIT 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "25969",
+"reference_id": 25137,
+"version": "1.0.4",
+"title": "Titus 3:7",
+"media_type": "Text",
+"index_reference": "56003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The first half of this verse summarizes <data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003006\">3:4–6</data>. The second half supplies the purpose for what God did. </p></li><li><p><em>made us right in his sight </em>(literally <em>having been justified</em>): See <data class=\"bible-ref\" data-start-ref=\"45003020\" data-end-ref=\"45003028\">Romans 3:20–28</data>; <data class=\"bible-ref\" data-start-ref=\"48002016\" data-end-ref=\"48002017\">Galatians 2:16–17</data>. </p></li><li><p><em>heirs with the hope of eternal life</em>: The Spirit, as mentioned in <data class=\"bible-ref\" data-start-ref=\"56003005\" data-end-ref=\"56003005\">Titus 3:5</data>, is often connected to our status as heirs (see <data class=\"bible-ref\" data-start-ref=\"45008015\" data-end-ref=\"45008017\">Romans 8:15–17</data>; <data class=\"bible-ref\" data-start-ref=\"46006009\" data-end-ref=\"46006011\">1&nbsp;Corinthians 6:9–11</data>; <data class=\"bible-ref\" data-start-ref=\"48004006\" data-end-ref=\"48004007\">Gal 4:6–7</data>; <data class=\"bible-ref\" data-start-ref=\"49001013\" data-end-ref=\"49001014\">Ephesians 1:13–14</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003007",
+"start_ref_usfm": "TIT 3:7",
+"end_ref": "56003007",
+"end_ref_usfm": "TIT 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "25970",
+"reference_id": 25138,
+"version": "1.0.4",
+"title": "Titus 3:8",
+"media_type": "Text",
+"index_reference": "56003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The trustworthy saying is <data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003007\">3:4–7</data> (compare <data class=\"bible-ref\" data-start-ref=\"54001015\" data-end-ref=\"54001015\">1&nbsp;Timothy 1:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003008",
+"start_ref_usfm": "TIT 3:8",
+"end_ref": "56003008",
+"end_ref_usfm": "TIT 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "25958",
+"reference_id": 25126,
+"version": "1.0.4",
+"title": "Titus 3:10–11",
+"media_type": "Text",
+"index_reference": "56003010-56003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>a divisive man</em>: This refers to quarrelsome people who are difficult to correct or change (see <data class=\"bible-ref\" data-start-ref=\"56001011\" data-end-ref=\"56001011\">1:11</data>, <data class=\"bible-ref\" data-start-ref=\"56001013\" data-end-ref=\"56001013\">13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003010",
+"start_ref_usfm": "TIT 3:10",
+"end_ref": "56003011",
+"end_ref_usfm": "TIT 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:SelfCondemned",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Self-Condemned"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "25960",
+"reference_id": 25128,
+"version": "1.0.4",
+"title": "Titus 3:12",
+"media_type": "Text",
+"index_reference": "56003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Evidently Artemas or Tychicus would be Titus’s replacement on Crete. Since Tychicus was in fact sent to Ephesus (see <data class=\"bible-ref\" data-start-ref=\"55004012\" data-end-ref=\"55004012\">2&nbsp;Timothy 4:12</data>), Artemas might have been the one who went to Crete. </p></li><li><p><em>Nicopolis</em>: Several cities had this name. This was most likely a major city on the western coast of the Greek peninsula (a piece of land surrounded mostly by water but connected to the mainland on one side). It is possible Paul had worked here before (see <data class=\"bible-ref\" data-start-ref=\"45015019\" data-end-ref=\"45015019\">Romans 15:19</data>, which mentions Paul’s activity even further west).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003012",
+"start_ref_usfm": "TIT 3:12",
+"end_ref": "56003012",
+"end_ref_usfm": "TIT 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Artemas",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Artemas"
+},
+{
+"id": "place:Nicopolis",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Nicopolis"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "person:Tychicus",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tychicus"
+}
+]
+}
+},
+{
+"content_id": "25959",
+"reference_id": 25127,
+"version": "1.0.4",
+"title": "Titus 3:12–15",
+"media_type": "Text",
+"index_reference": "56003012-56003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The letter ends with news in <data class=\"bible-ref\" data-start-ref=\"56003012\" data-end-ref=\"56003012\">3:12</data>, a final exhortation (or encouragement) in <data class=\"bible-ref\" data-start-ref=\"56003013\" data-end-ref=\"56003014\">3:13–14</data>, greetings, and a blessing in <data class=\"bible-ref\" data-start-ref=\"56003015\" data-end-ref=\"56003015\">3:15</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003012",
+"start_ref_usfm": "TIT 3:12",
+"end_ref": "56003015",
+"end_ref_usfm": "TIT 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Zenas",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Zenas"
+},
+{
+"id": "place:Nicopolis",
+"type": "place",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Nicopolis"
+},
+{
+"id": "person:Artemas",
+"type": "person",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Artemas"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Friendship",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Friendship"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "person:Apollos",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Apollos"
+},
+{
+"id": "person:Tychicus",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Tychicus"
+}
+]
+}
+},
+{
+"content_id": "25961",
+"reference_id": 25129,
+"version": "1.0.4",
+"title": "Titus 3:13",
+"media_type": "Text",
+"index_reference": "56003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Zenas and Apollos were involved in spreading the good news about Jesus, and they might have been the ones who delivered this letter to Titus. </p></li><li><p>Zenas was probably an expert in Roman law or a Roman jurist (the same word for lawyer is in <data class=\"bible-ref\" data-start-ref=\"42007030\" data-end-ref=\"42007030\">Luke 7:30</data>; <data class=\"bible-ref\" data-start-ref=\"42010025\" data-end-ref=\"42010025\">10:25</data>). His Greek name (which means “gift of Zeus”) makes it unlikely that he was an expert in Jewish law. </p></li><li><p>Apollos is presumably the same man as in <data class=\"bible-ref\" data-start-ref=\"44018024\" data-end-ref=\"44018024\">Acts 18:24</data>; <data class=\"bible-ref\" data-start-ref=\"44019001\" data-end-ref=\"44019001\">19:1</data>; <data class=\"bible-ref\" data-start-ref=\"46001012\" data-end-ref=\"46001012\">1&nbsp;Corinthians 1:12</data>; <data class=\"bible-ref\" data-start-ref=\"46003004\" data-end-ref=\"46003006\">3:4–6</data>, <data class=\"bible-ref\" data-start-ref=\"46003022\" data-end-ref=\"46003022\">22</data>; <data class=\"bible-ref\" data-start-ref=\"46004006\" data-end-ref=\"46004006\">4:6</data>; <data class=\"bible-ref\" data-start-ref=\"46016012\" data-end-ref=\"46016012\">16:12</data>. </p></li><li><p><em>everything they need</em>: See <data class=\"bible-ref\" data-start-ref=\"54003002\" data-end-ref=\"54003002\">1&nbsp;Timothy 3:2</data>; <data class=\"bible-ref\" data-start-ref=\"64001005\" data-end-ref=\"64001008\">3&nbsp;John 1:5–8</data>; compare <data class=\"bible-ref\" data-start-ref=\"45015024\" data-end-ref=\"45015024\">Romans 15:24</data>; <data class=\"bible-ref\" data-start-ref=\"46016006\" data-end-ref=\"46016006\">1&nbsp;Corinthians 16:6</data>, <data class=\"bible-ref\" data-start-ref=\"46016011\" data-end-ref=\"46016011\">11</data>; <data class=\"bible-ref\" data-start-ref=\"47001016\" data-end-ref=\"47001016\">2&nbsp;Corinthians 1:16</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003013",
+"start_ref_usfm": "TIT 3:13",
+"end_ref": "56003013",
+"end_ref_usfm": "TIT 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Zenas",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Zenas"
+},
+{
+"id": "person:Apollos",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Apollos"
+}
+]
+}
+},
+{
+"content_id": "25962",
+"reference_id": 25130,
+"version": "1.0.4",
+"title": "Titus 3:14",
+"media_type": "Text",
+"index_reference": "56003014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>This final exhortation is connected to the responsibility to take care of Zenas and Apollos (see <data class=\"bible-ref\" data-start-ref=\"45012013\" data-end-ref=\"45012013\">Romans 12:13</data>; <data class=\"bible-ref\" data-start-ref=\"49004028\" data-end-ref=\"49004028\">Ephesians 4:28</data>; <data class=\"bible-ref\" data-start-ref=\"52004011\" data-end-ref=\"52004011\">1&nbsp;Thessalonians 4:11</data>; <data class=\"bible-ref\" data-start-ref=\"54005008\" data-end-ref=\"54005008\">1&nbsp;Timothy 5:8</data>, <data class=\"bible-ref\" data-start-ref=\"54005016\" data-end-ref=\"54005016\">16</data>; <data class=\"bible-ref\" data-start-ref=\"54006018\" data-end-ref=\"54006018\">6:18</data>). </p></li><li><p>Our people (that is, followers of Christ) must involve themselves in the life-giving ministry of the good news rather than in the unproductive speculations of the false teachers.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003014",
+"start_ref_usfm": "TIT 3:14",
+"end_ref": "56003014",
+"end_ref_usfm": "TIT 3:14"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "25963",
+"reference_id": 25131,
+"version": "1.0.4",
+"title": "Titus 3:15",
+"media_type": "Text",
+"index_reference": "56003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>all of you</em>: The letter was addressed to Titus in <data class=\"bible-ref\" data-start-ref=\"56001004\" data-end-ref=\"56001004\">1:4</data>, but the whole church was the audience for the letter.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "56003015",
+"start_ref_usfm": "TIT 3:15",
+"end_ref": "56003015",
+"end_ref_usfm": "TIT 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Friendship",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Friendship"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+}
+]

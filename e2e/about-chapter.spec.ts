@@ -78,15 +78,6 @@ for (const vp of VIEWPORTS) {
       await expect(panel(page, 'romans', 8, 'Romans').locator('.rd-range-label')).toHaveText(['Romans 8:1–17', 'Romans 8:18–25', 'Romans 8:26–39'])
     })
 
-    test('Psalms 3: the chapter has no control "About this chapter", and its line below the heading does not change', async ({ page }) => {
-      await openChapter(page, vp.size, 'psalms', 3)
-      const psalm = chapter(page, 'psalms', 3)
-      await expect(psalm.getByRole('button', { name: 'About this chapter' })).toHaveCount(0)
-      await expect(psalm.locator('.rd-notes, .rd-chapter-control')).toHaveCount(0)
-      await expect(page.getByRole('button', { name: 'About this chapter' })).toHaveCount(0)
-      await expect(psalm.locator('.rd-about-line').getByRole('button')).toHaveText([/About this book/])
-    })
-
     test('Genesis 21, then Genesis 22 as a later chapter: the control alone, and each chapter has its own panel', async ({ page }) => {
       await openChapter(page, vp.size, 'genesis', 21)
       const later = chapter(page, 'genesis', 22)
@@ -144,19 +135,23 @@ for (const vp of VIEWPORTS) {
       await expect(region.locator('.rd-note, .rd-note-credit')).toHaveCount(0)
     })
 
-    test('the Sources page: the section "Notes on the chapters" after "Book introductions", with its three links', async ({ page }) => {
+    test('the Sources page: the section "Notes on the chapters" after "Book introductions", with the links of its first two paragraphs', async ({ page }) => {
       await page.setViewportSize(vp.size)
       await page.goto('./#/sources')
       await expect(page.locator('#sources-notes')).toHaveText('Notes on the chapters')
       const ids = await page.locator('main section h2').evaluateAll((els) => els.map((e) => e.id))
       expect(ids[ids.indexOf('sources-notes') - 1]).toBe('sources-introductions')
       const section = page.locator('section[aria-labelledby="sources-notes"]')
-      await expect(section.locator('p')).toHaveText([
+      // The first two paragraphs. From Task 48, the section has three more paragraphs: e2e/about-psalms.spec.ts tests them.
+      const first = section.locator('p').nth(0)
+      const second = section.locator('p').nth(1)
+      await expect(first).toHaveText(
         'The text of “About this chapter” is from the Biblica Study Notes, © 2023 Biblica Inc. The license is the Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0).',
+      )
+      await expect(second).toHaveText(
         'The site got the files from the repository BibleAquifer/BiblicaStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links to the key terms of the files.',
-        'The notes have no text for 132 psalms. Biblica has no connection with this site.',
-      ])
-      const links = section.getByRole('link')
+      )
+      const links = section.locator('p:nth-of-type(-n+2) a')
       await expect(links).toHaveText(['Biblica Study Notes', 'CC BY-SA 4.0', 'BibleAquifer/BiblicaStudyNotes'])
       expect(await links.evaluateAll((els) => els.map((e) => e.getAttribute('href')))).toEqual([SOURCE, LICENSE, SOURCE])
     })

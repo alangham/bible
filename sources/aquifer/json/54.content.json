@@ -1,0 +1,6260 @@
+[
+{
+"content_id": "17300",
+"reference_id": 16468,
+"version": "1.0.4",
+"title": "1 Timothy 1:1",
+"media_type": "Text",
+"index_reference": "54001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>our Savior</em>:<em> </em>Here this refers to God, but also equally applies to Christ Jesus (<data class=\"bible-ref\" data-start-ref=\"54001015\" data-end-ref=\"54001015\">1:15</data>; <data class=\"bible-ref\" data-start-ref=\"54002003\" data-end-ref=\"54002004\">2:3–4</data>; see <data class=\"bible-ref\" data-start-ref=\"55001009\" data-end-ref=\"55001010\">2&nbsp;Timothy 1:9–10</data>; <data class=\"bible-ref\" data-start-ref=\"56001003\" data-end-ref=\"56001004\">Titus 1:3–4</data>; <data class=\"bible-ref\" data-start-ref=\"56002010\" data-end-ref=\"56002010\">2:10</data>, <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">13</data>). </p></li><li><p><em>our hope</em>: True hope is based on God, not other human hopes such as wealth (<data class=\"bible-ref\" data-start-ref=\"54004010\" data-end-ref=\"54004010\">1&nbsp;Timothy 4:10</data>; <data class=\"bible-ref\" data-start-ref=\"54005005\" data-end-ref=\"54005005\">5:5</data>; <data class=\"bible-ref\" data-start-ref=\"54006017\" data-end-ref=\"54006017\">6:17</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001001",
+"start_ref_usfm": "1TI 1:1",
+"end_ref": "54001001",
+"end_ref_usfm": "1TI 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Paul"
+}
+]
+}
+},
+{
+"content_id": "17292",
+"reference_id": 16460,
+"version": "1.0.4",
+"title": "1 Timothy 1:1–2",
+"media_type": "Text",
+"index_reference": "54001001-54001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This opening includes the usual parts of a letter: </p><ul><li><p>sender, </p></li><li><p>recipient, and </p></li><li><p>greeting. </p></li></ul><p>Additional details emphasize Paul&apos;s important message (see also <data class=\"bible-ref\" data-start-ref=\"45001001\" data-end-ref=\"45001007\">Romans 1:1–7</data>; <data class=\"bible-ref\" data-start-ref=\"46001001\" data-end-ref=\"46001003\">1 Corinthians 1:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"48001001\" data-end-ref=\"48001005\">Galatians 1:1–5</data>; <data class=\"bible-ref\" data-start-ref=\"56001001\" data-end-ref=\"56001004\">Titus 1:1–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001001",
+"start_ref_usfm": "1TI 1:1",
+"end_ref": "54001002",
+"end_ref_usfm": "1TI 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Paul"
+}
+]
+}
+},
+{
+"content_id": "17302",
+"reference_id": 16470,
+"version": "1.0.4",
+"title": "1 Timothy 1:2",
+"media_type": "Text",
+"index_reference": "54001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Timothy was in Ephesus as Paul&apos;s representative (see 1&nbsp;Timothy Book Introduction, “Setting”).</p></li><li><p><em>my true child: </em>Timothy was like a true child to Paul in the faith (see <data class=\"bible-ref\" data-start-ref=\"50002020\" data-end-ref=\"50002020\">Philippians 2:20</data>; compare <data class=\"bible-ref\" data-start-ref=\"56001004\" data-end-ref=\"56001004\">Titus 1:4</data>). But he was probably not directly converted by Paul (see <data class=\"bible-ref\" data-start-ref=\"44016001\" data-end-ref=\"44016001\">Acts 16:1</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001002",
+"start_ref_usfm": "1TI 1:2",
+"end_ref": "54001002",
+"end_ref_usfm": "1TI 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "17304",
+"reference_id": 16472,
+"version": "1.0.4",
+"title": "1 Timothy 1:3",
+"media_type": "Text",
+"index_reference": "54001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>not to teach false doctrines</em></span>: As Paul had warned before, false teachers entered the church in Ephesus (<data class=\"bible-ref\" data-start-ref=\"44020029\" data-end-ref=\"44020031\">Acts 20:29–31</data>). He wrote this letter to help Timothy deal with them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001003",
+"start_ref_usfm": "1TI 1:3",
+"end_ref": "54001003",
+"end_ref_usfm": "1TI 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "place:Ephesus",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ephesus"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+}
+]
+}
+},
+{
+"content_id": "17303",
+"reference_id": 16471,
+"version": "1.0.4",
+"title": "1 Timothy 1:3–11",
+"media_type": "Text",
+"index_reference": "54001003-54001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul&apos;s greetings usually include a mention of thanks or blessing to God. Greco-Roman letters were often structured this way. First Timothy and Titus probably do not include this because they are official letters authorizing a delegate (see 1&nbsp;Timothy Book Introduction, “Literary Genre”). Instead, Paul first addresses his concern about stopping false teachers.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001003",
+"start_ref_usfm": "1TI 1:3",
+"end_ref": "54001011",
+"end_ref_usfm": "1TI 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Law"
+},
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "place:Ephesus",
+"type": "place",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ephesus"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Unhypocritical",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Unhypocritical"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:EmptyTalk",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Empty Talk"
+},
+{
+"id": "keyterm:Lawfully",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Lawfully"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Clean"
+}
+]
+}
+},
+{
+"content_id": "17305",
+"reference_id": 16473,
+"version": "1.0.4",
+"title": "1 Timothy 1:4",
+"media_type": "Text",
+"index_reference": "54001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>myths and endless genealogies … speculation</em>:</span> Paul might be dismissing their teachings as not significant, or he might rejecting their interpretations and their justification of bad behavior (<data class=\"bible-ref\" data-start-ref=\"54001007\" data-end-ref=\"54001007\">1:7</data>; see also <data class=\"bible-ref\" data-start-ref=\"55004003\" data-end-ref=\"55004004\">2 Timothy 4:3–4</data>; <data class=\"bible-ref\" data-start-ref=\"56001014\" data-end-ref=\"56001014\">Titus 1:14</data>; <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003009\">3:9</data>; <data class=\"bible-ref\" data-start-ref=\"61001016\" data-end-ref=\"61001016\">2 Peter 1:16</data>; <data class=\"bible-ref\" data-start-ref=\"54001008\" data-end-ref=\"54001011\">1 Timothy 1:8–11</data>; <data class=\"bible-ref\" data-start-ref=\"54004001\" data-end-ref=\"54004002\">4:1–2</data>, <data class=\"bible-ref\" data-start-ref=\"54004007\" data-end-ref=\"54004007\">7</data>; see also <data class=\"bible-ref\" data-start-ref=\"56001015\" data-end-ref=\"56001016\">Titus 1:15–16</data>).</p></li><li><p><em>endless genealogies</em>: In Judaism, a genealogy (list of ancestors) established a person&apos;s spiritual heritage. The false teachers might have focused too much on this. They probably also used Old Testament genealogies in imaginary interpretations of the law (<data class=\"bible-ref\" data-start-ref=\"01002001\" data-end-ref=\"01004026\">Genesis 2–4</data>; <data class=\"bible-ref\" data-start-ref=\"01005001\" data-end-ref=\"01005032\">5:1–32</data>).</p></li><li><p><span><em>rather than the stewardship of God’s work, which is by faith</em></span>: The Greek uses an important word (“stewardship,” “household management”) connected to managing a household (see <data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003015\">1 Timothy 3:15</data>). This phrase can also imply other meanings, including faithfulness to God&apos;s household management or faithfulness in managing God&apos;s household.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001004",
+"start_ref_usfm": "1TI 1:4",
+"end_ref": "54001004",
+"end_ref_usfm": "1TI 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17306",
+"reference_id": 16474,
+"version": "1.0.4",
+"title": "1 Timothy 1:5",
+"media_type": "Text",
+"index_reference": "54001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>The goal of our instruction</em>: Paul intends to encourage a life committed to God that comes from sincere faith and spiritual renewal (see <data class=\"bible-ref\" data-start-ref=\"56003005\" data-end-ref=\"56003005\">Titus 3:5</data>; see also <data class=\"bible-ref\" data-start-ref=\"46013001\" data-end-ref=\"46013013\">1&nbsp;Corinthians 13:1–13</data>; <data class=\"bible-ref\" data-start-ref=\"51003014\" data-end-ref=\"51003014\">Colossians 3:14</data>).</p></li><li><p>In 1&nbsp;Timothy and Titus, references to a clear conscience contrast with the false teachers’ dead consciences (for example, <data class=\"bible-ref\" data-start-ref=\"54001019\" data-end-ref=\"54001019\">1&nbsp;Timothy 1:19</data>; <data class=\"bible-ref\" data-start-ref=\"54004002\" data-end-ref=\"54004002\">4:2</data>; <data class=\"bible-ref\" data-start-ref=\"56001015\" data-end-ref=\"56001015\">Titus 1:15</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001005",
+"start_ref_usfm": "1TI 1:5",
+"end_ref": "54001005",
+"end_ref_usfm": "1TI 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Unhypocritical",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Unhypocritical"
+}
+]
+}
+},
+{
+"content_id": "17308",
+"reference_id": 16476,
+"version": "1.0.4",
+"title": "1 Timothy 1:6",
+"media_type": "Text",
+"index_reference": "54001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Some</em>: This might be a way of classifying the false teachers as general opponents of the good news about Jesus (see <data class=\"bible-ref\" data-start-ref=\"45003008\" data-end-ref=\"45003008\">Romans 3:8</data>; <data class=\"bible-ref\" data-start-ref=\"46004018\" data-end-ref=\"46004018\">1 Corinthians 4:18</data>; <data class=\"bible-ref\" data-start-ref=\"47003001\" data-end-ref=\"47003001\">2 Corinthians 3:1</data>; <data class=\"bible-ref\" data-start-ref=\"48001007\" data-end-ref=\"48001007\">Galatians 1:7</data>).</p></li><li><p>They claimed to be Christians but missed the main message of the good news about Jesus and turned away.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001006",
+"start_ref_usfm": "1TI 1:6",
+"end_ref": "54001006",
+"end_ref_usfm": "1TI 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:EmptyTalk",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Empty Talk"
+}
+]
+}
+},
+{
+"content_id": "17307",
+"reference_id": 16475,
+"version": "1.0.4",
+"title": "1 Timothy 1:6–11",
+"media_type": "Text",
+"index_reference": "54001006-54001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul now explains the false teachers&apos; ideas and uses their own topics against them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001006",
+"start_ref_usfm": "1TI 1:6",
+"end_ref": "54001011",
+"end_ref_usfm": "1TI 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Law"
+},
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:EmptyTalk",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Empty Talk"
+},
+{
+"id": "keyterm:Lawfully",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Lawfully"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "17309",
+"reference_id": 16477,
+"version": "1.0.4",
+"title": "1 Timothy 1:7",
+"media_type": "Text",
+"index_reference": "54001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>They wanted to teach the law of Moses, but this desire showed the irony of their thoughts in contrast to their actions. They did not interpret the law very well according to the good news about Jesus. They neither understood nor followed the law (see <data class=\"bible-ref\" data-start-ref=\"54001008\" data-end-ref=\"54001011\">1:8–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001007",
+"start_ref_usfm": "1TI 1:7",
+"end_ref": "54001007",
+"end_ref_usfm": "1TI 1:7"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17310",
+"reference_id": 16478,
+"version": "1.0.4",
+"title": "1 Timothy 1:9",
+"media_type": "Text",
+"index_reference": "54001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>law is not enacted for the righteous</em></span>: Generally, people who have virtue do not need laws. For Christians, living right with God comes from faith in Christ, not from obeying the law (see <data class=\"bible-ref\" data-start-ref=\"48005016\" data-end-ref=\"48005026\">Galatians 5:16–26</data>; <data class=\"bible-ref\" data-start-ref=\"49002011\" data-end-ref=\"49002014\">Ephesians 2:11–14</data>; <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">Titus 2:11–14</data>; compare <data class=\"bible-ref\" data-start-ref=\"45008001\" data-end-ref=\"45008017\">Romans 8:1–17</data>; <data class=\"bible-ref\" data-start-ref=\"59002014\" data-end-ref=\"59002016\">James 2:14–16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001009",
+"start_ref_usfm": "1TI 1:9",
+"end_ref": "54001009",
+"end_ref_usfm": "1TI 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Lawless",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Lawless"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Law"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+}
+]
+}
+},
+{
+"content_id": "17293",
+"reference_id": 16461,
+"version": "1.0.4",
+"title": "1 Timothy 1:10",
+"media_type": "Text",
+"index_reference": "54001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>This list shows the main ideas of the false teachers&apos; teachings and their spiritual condition. It also demonstrates how superior the good news is over the law (see <data class=\"bible-ref\" data-start-ref=\"40005020\" data-end-ref=\"40005020\">Matthew 5:20</data>; <data class=\"bible-ref\" data-start-ref=\"48005022\" data-end-ref=\"48005023\">Galatians 5:22–23</data>).</p></li><li><p><span><em>who is averse to sound teaching</em></span>: See also <data class=\"bible-ref\" data-start-ref=\"54006003\" data-end-ref=\"54006004\">1&nbsp;Timothy 6:3–4</data>; <data class=\"bible-ref\" data-start-ref=\"55001013\" data-end-ref=\"55001013\">2&nbsp;Timothy 1:13</data>; <data class=\"bible-ref\" data-start-ref=\"55004003\" data-end-ref=\"55004003\">4:3</data>; <data class=\"bible-ref\" data-start-ref=\"56001009\" data-end-ref=\"56001009\">Titus 1:9</data>, <data class=\"bible-ref\" data-start-ref=\"56001013\" data-end-ref=\"56001013\">13</data>; <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002001\">2:1</data>, <data class=\"bible-ref\" data-start-ref=\"56002008\" data-end-ref=\"56002008\">8</data>. This addition to the list is both a final summary and a strong statement. The good news about Jesus now defines what makes a person right with God more effectively than the law. But the law still addresses anything that opposes the gospel. The false teachers focused on the law, emphasizing their rejection of Paul&apos;s teaching.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001010",
+"start_ref_usfm": "1TI 1:10",
+"end_ref": "54001010",
+"end_ref_usfm": "1TI 1:10"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17294",
+"reference_id": 16462,
+"version": "1.0.4",
+"title": "1 Timothy 1:11",
+"media_type": "Text",
+"index_reference": "54001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">Titus 2:11–14</data> provides a more detailed explanation Paul&apos;s idea in this verse.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001011",
+"start_ref_usfm": "1TI 1:11",
+"end_ref": "54001011",
+"end_ref_usfm": "1TI 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "17295",
+"reference_id": 16463,
+"version": "1.0.4",
+"title": "1 Timothy 1:12–17",
+"media_type": "Text",
+"index_reference": "54001012-54001017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>I thank Christ Jesus our Lord: </em>This expression of thanks is a side note from Paul’s message to Timothy (<data class=\"bible-ref\" data-start-ref=\"54001003\" data-end-ref=\"54001011\">1:3–11</data>, <data class=\"bible-ref\" data-start-ref=\"54001018\" data-end-ref=\"54001020\">18–20</data>). Paul’s role in proclaiming the good news about Jesus prompts gratitude and shows why he is thankful (<data class=\"bible-ref\" data-start-ref=\"54001011\" data-end-ref=\"54001011\">1:11</data>). It also serves as a model for readers. When discussing his work, Paul gives credit to God and makes it evident he is doing God&apos;s work (see also <data class=\"bible-ref\" data-start-ref=\"47001021\" data-end-ref=\"47001022\">2&nbsp;Corinthians 1:21–22</data>; <data class=\"bible-ref\" data-start-ref=\"47002014\" data-end-ref=\"47002017\">2:14–17</data>; <data class=\"bible-ref\" data-start-ref=\"47003004\" data-end-ref=\"47003006\">3:4–6</data>; <data class=\"bible-ref\" data-start-ref=\"47004007\" data-end-ref=\"47004007\">4:7</data>; <data class=\"bible-ref\" data-start-ref=\"47012009\" data-end-ref=\"47012010\">12:9–10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001012",
+"start_ref_usfm": "1TI 1:12",
+"end_ref": "54001017",
+"end_ref_usfm": "1TI 1:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Blasphemous",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Blasphemous"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Disbelieve",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Disbelieve"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Life"
+}
+]
+}
+},
+{
+"content_id": "17296",
+"reference_id": 16464,
+"version": "1.0.4",
+"title": "1 Timothy 1:15",
+"media_type": "Text",
+"index_reference": "54001015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>This is a trustworthy saying</em>: This phrase appears only in the letters to Timothy and Titus (<data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003001\">1&nbsp;Timothy 3:1</data>; <data class=\"bible-ref\" data-start-ref=\"54004008\" data-end-ref=\"54004009\">4:8–9</data>; <data class=\"bible-ref\" data-start-ref=\"55002011\" data-end-ref=\"55002013\">2&nbsp;Timothy 2:11–13</data>; <data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003008\">Titus 3:4–8</data>). These sayings are probably quotes from tradition that Paul has adapted for the current situation. The saying emphasizes the mercy shown to Paul, but it also offers correction to the false teachers. The saying emphasizes Christ&apos;s arrival in history to save sinners. </p><p>This saying was probably being suppressed in some way by the false teachers, who focused on:</p><ul><li><p>law (<data class=\"bible-ref\" data-start-ref=\"54001007\" data-end-ref=\"54001007\">1&nbsp;Timothy 1:7</data>),</p></li></ul><ul><li><p>special knowledge (<data class=\"bible-ref\" data-start-ref=\"54006020\" data-end-ref=\"54006020\">6:20</data>; see also <data class=\"bible-ref\" data-start-ref=\"56001016\" data-end-ref=\"56001016\">Titus 1:16</data>), and</p></li><li><p>rules like those in <data class=\"bible-ref\" data-start-ref=\"54004003\" data-end-ref=\"54004003\">1&nbsp;Timothy 4:3</data> (see also <data class=\"bible-ref\" data-start-ref=\"51002016\" data-end-ref=\"51002023\">Colossians 2:16–23</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001015",
+"start_ref_usfm": "1TI 1:15",
+"end_ref": "54001015",
+"end_ref_usfm": "1TI 1:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17298",
+"reference_id": 16466,
+"version": "1.0.4",
+"title": "1 Timothy 1:18",
+"media_type": "Text",
+"index_reference": "54001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>the previous prophecies about you</em></span>: This probably happened during Timothy’s commissioning as a leader (ordination) (see <data class=\"bible-ref\" data-start-ref=\"54004014\" data-end-ref=\"54004014\">4:14</data>; <data class=\"bible-ref\" data-start-ref=\"55001006\" data-end-ref=\"55001006\">2&nbsp;Timothy 1:6</data>; compare <data class=\"bible-ref\" data-start-ref=\"44013002\" data-end-ref=\"44013003\">Acts 13:2–3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001018",
+"start_ref_usfm": "1TI 1:18",
+"end_ref": "54001018",
+"end_ref_usfm": "1TI 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "17297",
+"reference_id": 16465,
+"version": "1.0.4",
+"title": "1 Timothy 1:18–20",
+"media_type": "Text",
+"index_reference": "54001018-54001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul continues instructing Timothy (<data class=\"bible-ref\" data-start-ref=\"54001003\" data-end-ref=\"54001011\">1:3–11</data>). He advises Timothy to use available resources, remain faithful, and learn from two poor examples. The church should expect Paul’s delegate to do these things (the church is also part of the audience; see 1&nbsp;Timothy Book Introduction, “Literary Genre”).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001018",
+"start_ref_usfm": "1TI 1:18",
+"end_ref": "54001020",
+"end_ref_usfm": "1TI 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Hymenaeus",
+"type": "person",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Hymenaeus"
+},
+{
+"id": "person:Alexander.4",
+"type": "person",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Alexander"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "17299",
+"reference_id": 16467,
+"version": "1.0.4",
+"title": "1 Timothy 1:19",
+"media_type": "Text",
+"index_reference": "54001019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>See also <data class=\"bible-ref\" data-start-ref=\"54001005\" data-end-ref=\"54001006\">1:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"54006020\" data-end-ref=\"54006021\">6:20–21</data>; <data class=\"bible-ref\" data-start-ref=\"55002015\" data-end-ref=\"55002018\">2&nbsp;Timothy 2:15–18</data>. The conscience is like a guide inside a person (similar to a gyroscope, which helps something stay steady and on course). Keeping your conscience clear (or <em>good</em>) means protecting it so that it is not damaged or destroyed (see <data class=\"resource-ref\" data-content-id=\"17339\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1&nbsp;Timothy 4:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001019",
+"start_ref_usfm": "1TI 1:19",
+"end_ref": "54001019",
+"end_ref_usfm": "1TI 1:19"
+}
+],
+"resource": [
+{
+"reference_id": "16507",
+"content_id": "17339",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 4:2",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "17301",
+"reference_id": 16469,
+"version": "1.0.4",
+"title": "1 Timothy 1:20",
+"media_type": "Text",
+"index_reference": "54001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Hymenaeus and Alexander</em> might have been leaders or elders in the church at Ephesus (see also <data class=\"bible-ref\" data-start-ref=\"55002017\" data-end-ref=\"55002017\">2&nbsp;Timothy 2:17</data>; <data class=\"bible-ref\" data-start-ref=\"55004014\" data-end-ref=\"55004014\">4:14</data>; compare <data class=\"bible-ref\" data-start-ref=\"44019033\" data-end-ref=\"44019033\">Acts 19:33</data>; <data class=\"bible-ref\" data-start-ref=\"44020029\" data-end-ref=\"44020031\">20:29–31</data>).</p></li><li><p>The church was the area of the Holy Spirit&apos;s guidance. Paul allowed Hymenaeus and Alexander to be under Satan&apos;s influence (instead of the Holy Spirit&apos;s) by removing them from the church (see also <data class=\"bible-ref\" data-start-ref=\"55002025\" data-end-ref=\"55002026\">2&nbsp;Timothy 2:25–26</data>; <data class=\"bible-ref\" data-start-ref=\"18002006\" data-end-ref=\"18002006\">Job 2:6</data>; <data class=\"bible-ref\" data-start-ref=\"40018017\" data-end-ref=\"40018020\">Matthew 18:17–20</data>; <data class=\"bible-ref\" data-start-ref=\"46005002\" data-end-ref=\"46005005\">1&nbsp;Corinthians 5:2–5</data>; <data class=\"bible-ref\" data-start-ref=\"47002005\" data-end-ref=\"47002011\">2&nbsp;Corinthians 2:5–11</data>).</p></li><li><p>Hymenaeus and Alexander blasphemed God by attacking the true good news, and thus God himself (see <data class=\"bible-ref\" data-start-ref=\"54001013\" data-end-ref=\"54001013\">1&nbsp;Timothy 1:13</data>; compare <data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006001\">6:1</data>; <data class=\"bible-ref\" data-start-ref=\"56002005\" data-end-ref=\"56002005\">Titus 2:5</data>; <data class=\"bible-ref\" data-start-ref=\"61002002\" data-end-ref=\"61002002\">2&nbsp;Peter 2:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54001020",
+"start_ref_usfm": "1TI 1:20",
+"end_ref": "54001020",
+"end_ref_usfm": "1TI 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Hymenaeus",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Hymenaeus"
+},
+{
+"id": "person:Alexander.4",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Alexander"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+}
+]
+}
+},
+{
+"content_id": "17318",
+"reference_id": 16486,
+"version": "1.0.4",
+"title": "1 Timothy 2:1",
+"media_type": "Text",
+"index_reference": "54002001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>everyone</em>: The prayers of the false teachers and their followers did not align with God&apos;s will to save all kinds of people (<data class=\"bible-ref\" data-start-ref=\"54002003\" data-end-ref=\"54002004\">2:3–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002001",
+"start_ref_usfm": "1TI 2:1",
+"end_ref": "54002001",
+"end_ref_usfm": "1TI 2:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "17313",
+"reference_id": 16481,
+"version": "1.0.4",
+"title": "1 Timothy 2:1–7",
+"media_type": "Text",
+"index_reference": "54002001-54002007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Here, prayer focuses on the church’s mission. This suggests that false teachers damaged the church&apos;s reputation in society and hindered its mission to non-Jewish people (see <data class=\"bible-ref\" data-start-ref=\"54003006\" data-end-ref=\"54003007\">3:6–7</data>; <data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006001\">6:1</data>; <data class=\"bible-ref\" data-start-ref=\"56002005\" data-end-ref=\"56002005\">Titus 2:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002001",
+"start_ref_usfm": "1TI 2:1",
+"end_ref": "54002007",
+"end_ref_usfm": "1TI 2:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:DailyLife",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Daily Life"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Ransom",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Ransom"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Tranquil",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Tranquil"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+}
+]
+}
+},
+{
+"content_id": "17311",
+"reference_id": 16479,
+"version": "1.0.4",
+"title": "1 Timothy 2:1–15",
+"media_type": "Text",
+"index_reference": "54002001-54002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This passage first covers prayer and then the behavior of men and women (<data class=\"bible-ref\" data-start-ref=\"54002001\" data-end-ref=\"54002007\">2:1–7</data>; <data class=\"bible-ref\" data-start-ref=\"54002008\" data-end-ref=\"54002010\">8–10</data>). It ends with the topic of women and teaching (<data class=\"bible-ref\" data-start-ref=\"54002011\" data-end-ref=\"54002015\">2:11–15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002001",
+"start_ref_usfm": "1TI 2:1",
+"end_ref": "54002015",
+"end_ref_usfm": "1TI 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.26,
+"match_method": "canonical",
+"preferred_label": "Adam"
+},
+{
+"id": "keyterm:DailyLife",
+"type": "keyterm",
+"confidence": 0.1933,
+"match_method": "canonical",
+"preferred_label": "Daily Life"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Tranquil",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Tranquil"
+},
+{
+"id": "keyterm:GodlyReverence",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Godly Reverence"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "person:Eve",
+"type": "person",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Eve"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Ransom",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Ransom"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+},
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.12,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+}
+]
+}
+},
+{
+"content_id": "17312",
+"reference_id": 16480,
+"version": "1.0.4",
+"title": "1 Timothy 2:1–3.13",
+"media_type": "Text",
+"index_reference": "54002001-54003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul addresses how false teachers influenced behavior in God&apos;s household, the church (<data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003015\">3:15</data>). Corruption had influenced worship, roles related to gender, and leadership within this community (<data class=\"bible-ref\" data-start-ref=\"54002001\" data-end-ref=\"54002015\">2:1–15</data>; <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003013\">3:1–13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002001",
+"start_ref_usfm": "1TI 2:1",
+"end_ref": "54003013",
+"end_ref_usfm": "1TI 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.3643,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2982,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.2321,
+"match_method": "canonical",
+"preferred_label": "Adam"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:DailyLife",
+"type": "keyterm",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Daily Life"
+},
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.1732,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:PositionOfResponsibility",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Position of Responsibility"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Tranquil",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Tranquil"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:GodlyReverence",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Godly Reverence"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:DoubleTongued",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Double, Tongued"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:NotALoverOfMoney",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Not a Lover of Money"
+},
+{
+"id": "person:Eve",
+"type": "person",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Eve"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "keyterm:Ransom",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Ransom"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.1661,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.1061,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+}
+]
+}
+},
+{
+"content_id": "17319",
+"reference_id": 16487,
+"version": "1.0.4",
+"title": "1 Timothy 2:2",
+"media_type": "Text",
+"index_reference": "54002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>all those in authority</em>: These are people with the power to either persecute or protect the church (see also <data class=\"bible-ref\" data-start-ref=\"45013001\" data-end-ref=\"45013007\">Romans 13:1–7</data>; <data class=\"bible-ref\" data-start-ref=\"60002013\" data-end-ref=\"60002017\">1 Peter 2:13–17</data>). </p></li><li><p><span><em>lead tranquil and quiet lives</em></span>: The goal is not that Christians hide. The goal is to show the beauty of the good news about Jesus through Christian living. It is also important to continue the church&apos;s mission without unnecessary problems (see <data class=\"bible-ref\" data-start-ref=\"55003012\" data-end-ref=\"55003012\">2 Timothy 3:12</data>; <data class=\"bible-ref\" data-start-ref=\"60003013\" data-end-ref=\"60003017\">1 Peter 3:13–17</data>).</p></li><li><p><em>in all godliness: </em>The word godliness and its related terms summarize the beliefs, attitudes, and lifestyles that align with true knowledge of God, obeying him, and genuine worship (also at <data class=\"bible-ref\" data-start-ref=\"54003016\" data-end-ref=\"54003016\">1 Timothy 3:16</data>; <data class=\"bible-ref\" data-start-ref=\"54004007\" data-end-ref=\"54004008\">4:7–8</data>; <data class=\"bible-ref\" data-start-ref=\"54005004\" data-end-ref=\"54005004\">5:4</data>; <data class=\"bible-ref\" data-start-ref=\"54006003\" data-end-ref=\"54006003\">6:3</data>, <data class=\"bible-ref\" data-start-ref=\"54006005\" data-end-ref=\"54006006\">5–6</data>, <data class=\"bible-ref\" data-start-ref=\"54006011\" data-end-ref=\"54006011\">11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002002",
+"start_ref_usfm": "1TI 2:2",
+"end_ref": "54002002",
+"end_ref_usfm": "1TI 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:DailyLife",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Daily Life"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Tranquil",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tranquil"
+}
+]
+}
+},
+{
+"content_id": "17321",
+"reference_id": 16489,
+"version": "1.0.4",
+"title": "1 Timothy 2:5",
+"media_type": "Text",
+"index_reference": "54002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>There is <em>one God </em>and one mission for all people (<data class=\"bible-ref\" data-start-ref=\"45003029\" data-end-ref=\"45003030\">Romans 3:29–30</data>; <data class=\"bible-ref\" data-start-ref=\"48003026\" data-end-ref=\"48003029\">Galatians 3:26–29</data>). The phrase <em>one God</em> is a key statement of Christian faith, similar to the basics of Jewish faith (<data class=\"bible-ref\" data-start-ref=\"05006004\" data-end-ref=\"05006004\">Deuteronomy 6:4</data>).</p></li><li><p><span><em>there is one mediator between God and men, the man Christ Jesus</em></span>: Jesus is fully human and fully God. This means he is the only one who can make peace between God and humanity (see <data class=\"bible-ref\" data-start-ref=\"46008006\" data-end-ref=\"46008006\">1&nbsp;Corinthians 8:6</data>; <data class=\"bible-ref\" data-start-ref=\"49004005\" data-end-ref=\"49004006\">Ephesians 4:5–6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002005",
+"start_ref_usfm": "1TI 2:5",
+"end_ref": "54002005",
+"end_ref_usfm": "1TI 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17320",
+"reference_id": 16488,
+"version": "1.0.4",
+"title": "1 Timothy 2:5–6",
+"media_type": "Text",
+"index_reference": "54002005-54002006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Short teachings like this one appear throughout the letters to Timothy and Titus (see also <data class=\"bible-ref\" data-start-ref=\"54003016\" data-end-ref=\"54003016\">1&nbsp;Timothy 3:16</data>; <data class=\"bible-ref\" data-start-ref=\"55001009\" data-end-ref=\"55001010\">2&nbsp;Timothy 1:9–10</data>; <data class=\"bible-ref\" data-start-ref=\"55002008\" data-end-ref=\"55002008\">2:8</data>, <data class=\"bible-ref\" data-start-ref=\"55002011\" data-end-ref=\"55002013\">11–13</data>; <data class=\"bible-ref\" data-start-ref=\"56003004\" data-end-ref=\"56003007\">Titus 3:4–7</data>). They might have adapted these teachings from creeds, hymns, or prayers familiar to the churches. The teachings probably relate to Paul&apos;s trouble with false teachers. The false teachers&apos; teachings weakened the universal message of the good news about Jesus and the mission to non-Jews (Gentiles). The false teachers also did not accurately understand Jesus and his salvation.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002005",
+"start_ref_usfm": "1TI 2:5",
+"end_ref": "54002006",
+"end_ref_usfm": "1TI 2:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Ransom",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ransom"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17322",
+"reference_id": 16490,
+"version": "1.0.4",
+"title": "1 Timothy 2:8",
+"media_type": "Text",
+"index_reference": "54002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Genuine prayer among the Ephesian church had declined because of the false teachers&apos; influence (see <data class=\"bible-ref\" data-start-ref=\"54006004\" data-end-ref=\"54006005\">1 Timothy 6:4–5</data>; <data class=\"bible-ref\" data-start-ref=\"54001004\" data-end-ref=\"54001004\">1:4</data>; compare <data class=\"bible-ref\" data-start-ref=\"55003001\" data-end-ref=\"55003005\">2 Timothy 3:1–5</data>; <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003011\">Titus 3:9–11</data>).</p></li><li><p><em>lifting up holy hands</em>: See <data class=\"bible-ref\" data-start-ref=\"23001015\" data-end-ref=\"23001017\">Isaiah 1:15–17</data>. This was an ancient gesture for praise and asking for help (see <data class=\"bible-ref\" data-start-ref=\"02009029\" data-end-ref=\"02009029\">Exodus 9:29</data>; <data class=\"bible-ref\" data-start-ref=\"11008022\" data-end-ref=\"11008022\">1 Kings 8:22</data>, <data class=\"bible-ref\" data-start-ref=\"11008054\" data-end-ref=\"11008054\">54</data>; <data class=\"bible-ref\" data-start-ref=\"16008006\" data-end-ref=\"16008006\">Nehemiah 8:6</data>; <data class=\"bible-ref\" data-start-ref=\"19028002\" data-end-ref=\"19028002\">Psalm 28:2</data>; <data class=\"bible-ref\" data-start-ref=\"42024050\" data-end-ref=\"42024050\">Luke 24:50</data>).</p></li><li><p><span><em>without anger or dissension</em></span>: Compare <data class=\"bible-ref\" data-start-ref=\"59003008\" data-end-ref=\"59003012\">James 3:8–12</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002008",
+"start_ref_usfm": "1TI 2:8",
+"end_ref": "54002008",
+"end_ref_usfm": "1TI 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "17323",
+"reference_id": 16491,
+"version": "1.0.4",
+"title": "1 Timothy 2:9–10",
+"media_type": "Text",
+"index_reference": "54002009-54002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The subject is still community prayer. </p></li><li><p><span><em>women to adorn themselves with respectable apparel, with modesty</em></span>: Paul recommends Christian women must praise God rather than seek praise from people (compare <data class=\"bible-ref\" data-start-ref=\"60003003\" data-end-ref=\"60003005\">1 Peter 3:3–5</data>). They should focus on doing good deeds for others, not on enhancing their appearance or being sexy. <span>Gold, pearls, or expensive clothes</span> suggest wealth (see <data class=\"bible-ref\" data-start-ref=\"54006005\" data-end-ref=\"54006010\">1 Timothy 6:5–10</data>, <data class=\"bible-ref\" data-start-ref=\"54006017\" data-end-ref=\"54006019\">17–19</data>). The reference to wealth might have been part of the power struggles within the church that Timothy had to address (<data class=\"bible-ref\" data-start-ref=\"54002011\" data-end-ref=\"54002015\">2:11–15</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002009",
+"start_ref_usfm": "1TI 2:9",
+"end_ref": "54002010",
+"end_ref_usfm": "1TI 2:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GodlyReverence",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Godly Reverence"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "17314",
+"reference_id": 16482,
+"version": "1.0.4",
+"title": "1 Timothy 2:11–15",
+"media_type": "Text",
+"index_reference": "54002011-54002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul continues discussing women in the church, focusing on their role in public teaching (see also <data class=\"bible-ref\" data-start-ref=\"46011002\" data-end-ref=\"46011016\">1&nbsp;Corinthians 11:2–16</data>; <data class=\"bible-ref\" data-start-ref=\"46014033\" data-end-ref=\"46014036\">14:33–36</data>; <data class=\"bible-ref\" data-start-ref=\"47011003\" data-end-ref=\"47011003\">2&nbsp;Corinthians 11:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002011",
+"start_ref_usfm": "1TI 2:11",
+"end_ref": "54002015",
+"end_ref_usfm": "1TI 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Adam"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "person:Eve",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Eve"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17315",
+"reference_id": 16483,
+"version": "1.0.4",
+"title": "1 Timothy 2:12",
+"media_type": "Text",
+"index_reference": "54002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>to teach or to exercise authority over a man</em></span>: The link between teaching and authority depends on how we understand both. Women did teach (<data class=\"bible-ref\" data-start-ref=\"56002003\" data-end-ref=\"56002005\">Titus 2:3–5</data>). But the New Testament does not plainly show or support women teaching men in church meetings (see <data class=\"bible-ref\" data-start-ref=\"44018026\" data-end-ref=\"44018026\">Acts 18:26</data>; <data class=\"bible-ref\" data-start-ref=\"46014034\" data-end-ref=\"46014035\">1&nbsp;Corinthians 14:34–35</data>; <data class=\"bible-ref\" data-start-ref=\"50004003\" data-end-ref=\"50004003\">Philippians 4:3</data>). We know it happened in some churches because Paul responded against it. Women did prophesy (<data class=\"bible-ref\" data-start-ref=\"44002017\" data-end-ref=\"44002018\">Acts 2:17–18</data>; <data class=\"bible-ref\" data-start-ref=\"44021009\" data-end-ref=\"44021009\">21:9</data>; <data class=\"bible-ref\" data-start-ref=\"46011005\" data-end-ref=\"46011005\">1&nbsp;Corinthians 11:5</data>). But some types of prophecy might not have been considered the same as teaching with authority (<data class=\"bible-ref\" data-start-ref=\"44011028\" data-end-ref=\"44011028\">Acts 11:28</data>; <data class=\"bible-ref\" data-start-ref=\"44021010\" data-end-ref=\"44021011\">21:10–11</data>; <data class=\"bible-ref\" data-start-ref=\"46014029\" data-end-ref=\"46014029\">1&nbsp;Corinthians 14:29</data>). </p></li><li><p><span><em>exercise authority over a man</em></span>: This verb can mean either an attitude of dominance or simply exercising authority.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002012",
+"start_ref_usfm": "1TI 2:12",
+"end_ref": "54002012",
+"end_ref_usfm": "1TI 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Authority"
+}
+]
+}
+},
+{
+"content_id": "17316",
+"reference_id": 16484,
+"version": "1.0.4",
+"title": "1 Timothy 2:13",
+"media_type": "Text",
+"index_reference": "54002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The common view of this verse is that Paul thinks social roles come from man being created first (<data class=\"bible-ref\" data-start-ref=\"01002007\" data-end-ref=\"01002007\">Genesis 2:7</data>, <data class=\"bible-ref\" data-start-ref=\"01002022\" data-end-ref=\"01002022\">22</data>; <data class=\"bible-ref\" data-start-ref=\"46011008\" data-end-ref=\"46011012\">1 Corinthians 11:8–12</data>). People often link Paul&apos;s reasoning to the leading role of the firstborn son in the Old Testament. However, there are exceptions to the firstborn rule in Scripture (see <data class=\"bible-ref\" data-start-ref=\"01027001\" data-end-ref=\"01028022\">Genesis 27–28</data>). While the New Testament retains gender differences, it also promotes equality in Christ (<data class=\"bible-ref\" data-start-ref=\"48003028\" data-end-ref=\"48003028\">Galatians 3:28</data>; see also <data class=\"bible-ref\" data-start-ref=\"46011011\" data-end-ref=\"46011012\">1 Corinthians 11:11–12</data>; <data class=\"bible-ref\" data-start-ref=\"46012013\" data-end-ref=\"46012013\">12:13</data>; <data class=\"bible-ref\" data-start-ref=\"49005021\" data-end-ref=\"49005021\">Ephesians 5:21</data>; <data class=\"bible-ref\" data-start-ref=\"51003011\" data-end-ref=\"51003011\">Colossians 3:11</data>). </p></li><li><p>It is possible that some false teachers claimed a reversal of gender roles in Christ, which gave women a level of dominance to which Paul objected. Paul might be referring to this in order to challenge that claim and restore balance.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002013",
+"start_ref_usfm": "1TI 2:13",
+"end_ref": "54002013",
+"end_ref_usfm": "1TI 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Eve",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Eve"
+},
+{
+"id": "person:Adam",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Adam"
+}
+]
+}
+},
+{
+"content_id": "17317",
+"reference_id": 16485,
+"version": "1.0.4",
+"title": "1 Timothy 2:15",
+"media_type": "Text",
+"index_reference": "54002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Women, however, will be saved through childbearing</em></span> (or <em>by accepting their role as mothers,</em> or <em>by the birth of the Child</em>): The most likely explanation is that false teachers caused trouble in households (see 1 Timothy Book Introduction, “Setting”). Paul urged these women to return to proper roles in their homes, following the truth of the gospel (good news) (see <data class=\"bible-ref\" data-start-ref=\"54001004\" data-end-ref=\"54001005\">1:4–5</data>; <data class=\"bible-ref\" data-start-ref=\"54004001\" data-end-ref=\"54004005\">4:1–5</data>). By doing this, they would be saved in the ultimate sense (see <data class=\"bible-ref\" data-start-ref=\"54004016\" data-end-ref=\"54004016\">4:16</data>; compare <data class=\"bible-ref\" data-start-ref=\"54003013\" data-end-ref=\"54003013\">3:13</data>). This verse might refer to <data class=\"bible-ref\" data-start-ref=\"01003015\" data-end-ref=\"01003016\">Genesis 3:15–16</data>, suggesting a reversal of the effects of human sin. This could mean either the normal birth of children or the birth of the Messiah.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54002015",
+"start_ref_usfm": "1TI 2:15",
+"end_ref": "54002015",
+"end_ref_usfm": "1TI 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17329",
+"reference_id": 16497,
+"version": "1.0.4",
+"title": "1 Timothy 3:1",
+"media_type": "Text",
+"index_reference": "54003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>trustworthy saying</em>: See <data class=\"resource-ref\" data-content-id=\"17296\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1:15</data>.</p></li><li><p><em>an overseer</em>: Some translations assume that <em>overseer</em> and <em>church leader</em> refer to the same role (see <data class=\"resource-ref\" data-content-id=\"17351\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 5:17–18</data>; see <data class=\"bible-ref\" data-start-ref=\"56001005\" data-end-ref=\"56001007\">Titus 1:5–7</data>). In the Greek and Roman world, an overseer was a supervisor in religious, civic, or military contexts. The traditional translation of this term is &quot;bishop&quot; (see King James Version).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003001",
+"start_ref_usfm": "1TI 3:1",
+"end_ref": "54003001",
+"end_ref_usfm": "1TI 3:1"
+}
+],
+"resource": [
+{
+"reference_id": "16464",
+"content_id": "17296",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1:15",
+"language": "eng"
+},
+{
+"reference_id": "16519",
+"content_id": "17351",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 5:17-18",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:PositionOfResponsibility",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Position of Responsibility"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17324",
+"reference_id": 16492,
+"version": "1.0.4",
+"title": "1 Timothy 3:1–13",
+"media_type": "Text",
+"index_reference": "54003001-54003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The topic shifts to church leadership by overseers and deacons (<data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003007\">3:1–7</data>; <data class=\"bible-ref\" data-start-ref=\"54003008\" data-end-ref=\"54003013\">8–13</data>). Timothy’s role in the appointments is less plain than that of Titus (see <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005022\">5:17–22</data>; <data class=\"bible-ref\" data-start-ref=\"56001005\" data-end-ref=\"56001005\">Titus 1:5</data>). This may be because the church in Ephesus was more mature and better able to manage the process (see <data class=\"bible-ref\" data-start-ref=\"44006002\" data-end-ref=\"44006006\">Acts 6:2–6</data>). </p><p>The criteria listed here focus on character rather than function. It partly responds to the local false teachers and their followers. Reading this letter in the churches would make the criteria public and show that the false teachers were not qualified for leadership.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003001",
+"start_ref_usfm": "1TI 3:1",
+"end_ref": "54003013",
+"end_ref_usfm": "1TI 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2692,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2692,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.2692,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:PositionOfResponsibility",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Position of Responsibility"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:DoubleTongued",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Double, Tongued"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:NotALoverOfMoney",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Not a Lover of Money"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.1846,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1246,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "17330",
+"reference_id": 16498,
+"version": "1.0.4",
+"title": "1 Timothy 3:2",
+"media_type": "Text",
+"index_reference": "54003002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>must be above reproach</em></span>: This is a key requirement for a church leader and public representative (see <data class=\"bible-ref\" data-start-ref=\"54003007\" data-end-ref=\"54003007\">3:7</data>, <data class=\"bible-ref\" data-start-ref=\"54003010\" data-end-ref=\"54003010\">10</data>; <data class=\"bible-ref\" data-start-ref=\"54005007\" data-end-ref=\"54005007\">5:7</data>; <data class=\"bible-ref\" data-start-ref=\"54006014\" data-end-ref=\"54006014\">6:14</data>; <data class=\"bible-ref\" data-start-ref=\"56001006\" data-end-ref=\"56001007\">Titus 1:6–7</data>; <data class=\"bible-ref\" data-start-ref=\"56002008\" data-end-ref=\"56002008\">2:8</data>).</p></li><li><p><span><em>the husband of but one wife</em></span> (or <em>be married only once;</em> literally <em>be the husband of one wife;</em> also in <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">1 Timothy 3:12</data>): This suggests, but does not require, a married man. It focuses on pure character and loyalty in marriage. This was not always assumed in the surrounding culture. It probably does not forbid marrying again after a spouse&apos;s death and does not address polygamy specifically (literally, &quot;marriage to many&quot;) (see <data class=\"bible-ref\" data-start-ref=\"54005009\" data-end-ref=\"54005009\">5:9</data>). See also <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">3:12</data>; <data class=\"bible-ref\" data-start-ref=\"56001006\" data-end-ref=\"56001006\">Titus 1:6</data>; compare <data class=\"bible-ref\" data-start-ref=\"54005009\" data-end-ref=\"54005009\">1 Timothy 5:9</data>.</p></li><li><p><span><em>hospitable </em>(literally,<em> &quot;</em>friend of the stranger&quot;)</span>: This means to make a practice of hosting people in one&apos;s home. It was an important duty and virtue respected in ancient times. Traveling Christians would often stay with fellow Christians (see <data class=\"bible-ref\" data-start-ref=\"63001010\" data-end-ref=\"63001011\">2 John 1:10–11</data>; <data class=\"bible-ref\" data-start-ref=\"64001001\" data-end-ref=\"64001001\">3 John</data>). Additionally, first-century AD churches often met in private homes (see <data class=\"bible-ref\" data-start-ref=\"51004015\" data-end-ref=\"51004015\">Colossians 4:15</data>; <data class=\"bible-ref\" data-start-ref=\"57001002\" data-end-ref=\"57001002\">Philemon 1:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003002",
+"start_ref_usfm": "1TI 3:2",
+"end_ref": "54003002",
+"end_ref_usfm": "1TI 3:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+}
+]
+}
+},
+{
+"content_id": "17331",
+"reference_id": 16499,
+"version": "1.0.4",
+"title": "1 Timothy 3:4–5",
+"media_type": "Text",
+"index_reference": "54003004-54003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The church, seen as a household, shared similarities with a family household (<data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003015\">3:15</data>). An overseer&apos;s ability to manage one area showed his skill in the other (see also <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">3:12</data>; <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005017\">5:17</data>; <data class=\"bible-ref\" data-start-ref=\"45012008\" data-end-ref=\"45012008\">Romans 12:8</data>; <data class=\"bible-ref\" data-start-ref=\"52005012\" data-end-ref=\"52005012\">1&nbsp;Thessalonians 5:12</data>).</p></li><li><p>Greek and Roman households were united by family bonds with shared responsibilities, roles, and management. The household included relatives by blood living together and other dependents, such as household servants.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003004",
+"start_ref_usfm": "1TI 3:4",
+"end_ref": "54003005",
+"end_ref_usfm": "1TI 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Church"
+}
+]
+}
+},
+{
+"content_id": "17332",
+"reference_id": 16500,
+"version": "1.0.4",
+"title": "1 Timothy 3:7",
+"media_type": "Text",
+"index_reference": "54003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul wanted Christians to live in a way that others outside the church could respect (see also <data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006001\">6:1</data>; <data class=\"bible-ref\" data-start-ref=\"56002005\" data-end-ref=\"56002010\">Titus 2:5–10</data>). </p></li><li><p><em>snare of the devil:</em> might relate to the false teachers (see <data class=\"bible-ref\" data-start-ref=\"54001020\" data-end-ref=\"54001020\">1&nbsp;Timothy 1:20</data>; <data class=\"bible-ref\" data-start-ref=\"54005014\" data-end-ref=\"54005015\">5:14–15</data>; <data class=\"bible-ref\" data-start-ref=\"54006009\" data-end-ref=\"54006009\">6:9</data>; <data class=\"bible-ref\" data-start-ref=\"55002026\" data-end-ref=\"55002026\">2&nbsp;Timothy 2:26</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003007",
+"start_ref_usfm": "1TI 3:7",
+"end_ref": "54003007",
+"end_ref_usfm": "1TI 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+}
+]
+}
+},
+{
+"content_id": "17334",
+"reference_id": 16502,
+"version": "1.0.4",
+"title": "1 Timothy 3:8",
+"media_type": "Text",
+"index_reference": "54003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>not … greedy for money</em> (<data class=\"bible-ref\" data-start-ref=\"54003003\" data-end-ref=\"54003003\">3:3</data>): Self-centered desire shows poor character (<data class=\"bible-ref\" data-start-ref=\"54006006\" data-end-ref=\"54006010\">6:6–10</data>, <data class=\"bible-ref\" data-start-ref=\"54006017\" data-end-ref=\"54006019\">17–19</data>; <data class=\"bible-ref\" data-start-ref=\"49005003\" data-end-ref=\"49005003\">Ephesians 5:3</data>; <data class=\"bible-ref\" data-start-ref=\"51003005\" data-end-ref=\"51003005\">Colossians 3:5</data>). This is especially true for church leaders (<data class=\"bible-ref\" data-start-ref=\"54003009\" data-end-ref=\"54003009\">1&nbsp;Timothy 3:9</data>; see <data class=\"bible-ref\" data-start-ref=\"56001007\" data-end-ref=\"56001007\">Titus 1:7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003008",
+"start_ref_usfm": "1TI 3:8",
+"end_ref": "54003008",
+"end_ref_usfm": "1TI 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:DoubleTongued",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Double, Tongued"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "17333",
+"reference_id": 16501,
+"version": "1.0.4",
+"title": "1 Timothy 3:8–13",
+"media_type": "Text",
+"index_reference": "54003008-54003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Greek word for deacon means &quot;servant, assistant, messenger, or agent.&quot; Its related words mean &quot;service&quot; or &quot;to serve&quot; and often refer to any kind of service (for example, <data class=\"bible-ref\" data-start-ref=\"54004006\" data-end-ref=\"54004006\">4:6</data>; <data class=\"bible-ref\" data-start-ref=\"40022013\" data-end-ref=\"40022013\">Matthew 22:13</data>; <data class=\"bible-ref\" data-start-ref=\"43002005\" data-end-ref=\"43002005\">John 2:5</data>; <data class=\"bible-ref\" data-start-ref=\"43012026\" data-end-ref=\"43012026\">12:26</data>; <data class=\"bible-ref\" data-start-ref=\"45013004\" data-end-ref=\"45013004\">Romans 13:4</data>; <data class=\"bible-ref\" data-start-ref=\"46003005\" data-end-ref=\"46003005\">1&nbsp;Corinthians 3:5</data>). When plainly referring to a church office, it appears only in <data class=\"bible-ref\" data-start-ref=\"54003008\" data-end-ref=\"54003013\">1&nbsp;Timothy 3:8–13</data>; <data class=\"bible-ref\" data-start-ref=\"50001001\" data-end-ref=\"50001001\">Philippians 1:1</data>; and possibly <data class=\"bible-ref\" data-start-ref=\"45016001\" data-end-ref=\"45016001\">Romans 16:1</data>. Here the passage focuses on character rather than activities. See also <data class=\"resource-ref\" data-content-id=\"9627\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Acts 6:2–6</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003008",
+"start_ref_usfm": "1TI 3:8",
+"end_ref": "54003013",
+"end_ref_usfm": "1TI 3:13"
+}
+],
+"resource": [
+{
+"reference_id": "8795",
+"content_id": "9627",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Acts 6:2–6",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:WithoutReproach",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Without Reproach"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:DoubleTongued",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Double, Tongued"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Clean",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Clean"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "17325",
+"reference_id": 16493,
+"version": "1.0.4",
+"title": "1 Timothy 3:11",
+"media_type": "Text",
+"index_reference": "54003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>the women</em> (or <em>the women deacons,</em> or <em>their wives</em>): The Greek word can mean women or wives<em>.</em> Supporting the interpretation of <em>their wives</em>, <data class=\"bible-ref\" data-start-ref=\"54003008\" data-end-ref=\"54003013\">3:8–13</data> discusses male deacons. Switching to &quot;women deacons&quot; here would change the context. However, there might have been women deacons in the early church (see <data class=\"bible-ref\" data-start-ref=\"45016001\" data-end-ref=\"45016001\">Romans 16:1</data>). If so, this verse might parallel <data class=\"bible-ref\" data-start-ref=\"54003008\" data-end-ref=\"54003008\">1&nbsp;Timothy 3:8</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003011",
+"start_ref_usfm": "1TI 3:11",
+"end_ref": "54003011",
+"end_ref_usfm": "1TI 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17326",
+"reference_id": 16494,
+"version": "1.0.4",
+"title": "1 Timothy 3:14–4.16",
+"media_type": "Text",
+"index_reference": "54003014-54004016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This section explains how Timothy should spend his time until Paul arrives (<data class=\"bible-ref\" data-start-ref=\"54003014\" data-end-ref=\"54003015\">3:14–15</data>; <data class=\"bible-ref\" data-start-ref=\"54004013\" data-end-ref=\"54004013\">4:13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003014",
+"start_ref_usfm": "1TI 3:14",
+"end_ref": "54004016",
+"end_ref_usfm": "1TI 4:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4684,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.3947,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.3947,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.3211,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.2474,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2474,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2474,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Behavior",
+"type": "keyterm",
+"confidence": 0.1842,
+"match_method": "canonical",
+"preferred_label": "Behavior"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Hypocrisy",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Hypocrisy"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Demons",
+"type": "deity",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Demons"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:WithoutMoralDefect",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Being Without Moral Defect"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Intercession",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Intercession"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.1737,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "realia:Capital",
+"type": "realia",
+"confidence": 0.1137,
+"match_method": "canonical",
+"preferred_label": "Capital"
+}
+]
+}
+},
+{
+"content_id": "17327",
+"reference_id": 16495,
+"version": "1.0.4",
+"title": "1 Timothy 3:15",
+"media_type": "Text",
+"index_reference": "54003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>God’s household</em></span>: The earliest churches were churches that met in homes (<data class=\"bible-ref\" data-start-ref=\"45016005\" data-end-ref=\"45016005\">Romans 16:5</data>; <data class=\"bible-ref\" data-start-ref=\"46016019\" data-end-ref=\"46016019\">1 Corinthians 16:19</data>; <data class=\"bible-ref\" data-start-ref=\"51004015\" data-end-ref=\"51004015\">Colossians 4:15</data>; <data class=\"bible-ref\" data-start-ref=\"57001002\" data-end-ref=\"57001002\">Philemon 1:2</data>). They followed similar rules of behavior to Greek and Roman households (see <data class=\"resource-ref\" data-content-id=\"17331\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1 Tim 3:4–5</data>). Breaking the rules brought shame to the whole household and its leader. The same applies to the church (compare <data class=\"bible-ref\" data-start-ref=\"49002019\" data-end-ref=\"49002022\">Ephesians 2:19–22</data>; <data class=\"bible-ref\" data-start-ref=\"58003006\" data-end-ref=\"58003006\">Hebrews 3:6</data>; <data class=\"bible-ref\" data-start-ref=\"58010021\" data-end-ref=\"58010021\">10:21</data>; <data class=\"bible-ref\" data-start-ref=\"60004017\" data-end-ref=\"60004017\">1 Peter 4:17</data>).</p></li><li><p><em>the pillar and foundation of the truth</em>: This idea may be looking forward to the change from the time of the apostles to the period after their deaths (compare <data class=\"bible-ref\" data-start-ref=\"48002009\" data-end-ref=\"48002009\">Galatians 2:9</data>; <data class=\"bible-ref\" data-start-ref=\"66003012\" data-end-ref=\"66003012\">Revelation 3:12</data>). The church must be more active, not just defensive, to uphold the truth in the world (compare <data class=\"bible-ref\" data-start-ref=\"47010003\" data-end-ref=\"47010006\">2 Corinthians 10:3–6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003015",
+"start_ref_usfm": "1TI 3:15",
+"end_ref": "54003015",
+"end_ref_usfm": "1TI 3:15"
+}
+],
+"resource": [
+{
+"reference_id": "16499",
+"content_id": "17331",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Tim 3:4-5",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Behavior",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Behavior"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "realia:Capital",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Capital"
+}
+]
+}
+},
+{
+"content_id": "17328",
+"reference_id": 16496,
+"version": "1.0.4",
+"title": "1 Timothy 3:16",
+"media_type": "Text",
+"index_reference": "54003016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>This verse contains a short song or statement of belief that emphasizes the profound religious teaching of early Christian worship.</p></li><li><p><em>the mystery of godliness:</em> Jesus Christ is the only source of godliness.</p></li><li><p><span><em>vindicated by the Spirit</em></span>: Christ’s resurrection reframes the story as an act of power, following his human life and death. The resurrection confirms his teachings (<data class=\"bible-ref\" data-start-ref=\"45001004\" data-end-ref=\"45001004\">Romans 1:4</data>).</p></li><li><p><em>seen by angels</em>: This emphasizes Jesus’s supreme rule in the realm of heaven (see also <data class=\"bible-ref\" data-start-ref=\"49001021\" data-end-ref=\"49001021\">Ephesians 1:21</data>; <data class=\"bible-ref\" data-start-ref=\"50002009\" data-end-ref=\"50002011\">Philippians 2:9–11</data>; <data class=\"bible-ref\" data-start-ref=\"58001003\" data-end-ref=\"58001004\">Hebrews 1:3–4</data>; <data class=\"bible-ref\" data-start-ref=\"60003022\" data-end-ref=\"60003022\">1 Peter 3:22</data>; <data class=\"bible-ref\" data-start-ref=\"66005008\" data-end-ref=\"66005014\">Revelation 5:8–14</data>).</p></li><li><p><span><em>proclaimed among the nations</em></span>: The church must announce Christ’s salvation and rule, and people on earth must accept it as well (compare <data class=\"bible-ref\" data-start-ref=\"54002001\" data-end-ref=\"54002007\">1 Timothy 2:1–7</data>).</p></li><li><p><span><em>believed in throughout the world</em></span>: The mission to spread the message is successful, but not everyone will accept it.</p></li><li><p><em>was taken up in glory: </em>Christ went up to heaven, and God glorified him (<data class=\"bible-ref\" data-start-ref=\"42024051\" data-end-ref=\"42024051\">Luke 24:51</data>; <data class=\"bible-ref\" data-start-ref=\"44001002\" data-end-ref=\"44001002\">Acts 1:2</data>, <data class=\"bible-ref\" data-start-ref=\"44001011\" data-end-ref=\"44001011\">11</data>, <data class=\"bible-ref\" data-start-ref=\"44001022\" data-end-ref=\"44001022\">22</data>; compare <data class=\"bible-ref\" data-start-ref=\"44007055\" data-end-ref=\"44007056\">Acts 7:55–56</data>). Christ’s work is successful on earth and glorified in heaven.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54003016",
+"start_ref_usfm": "1TI 3:16",
+"end_ref": "54003016",
+"end_ref_usfm": "1TI 3:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+}
+]
+}
+},
+{
+"content_id": "17338",
+"reference_id": 16506,
+"version": "1.0.4",
+"title": "1 Timothy 4:1",
+"media_type": "Text",
+"index_reference": "54004001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>later times: </em>The early church believed it was already living in the<em> </em>later times (see <data class=\"bible-ref\" data-start-ref=\"44002016\" data-end-ref=\"44002017\">Acts 2:16–17</data>; <data class=\"bible-ref\" data-start-ref=\"58001002\" data-end-ref=\"58001002\">Hebrews 1:2</data>; compare <data class=\"bible-ref\" data-start-ref=\"53002007\" data-end-ref=\"53002007\">2&nbsp;Thessalonians 2:7</data>; <data class=\"bible-ref\" data-start-ref=\"62002018\" data-end-ref=\"62002023\">1&nbsp;John 2:18–23</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004001",
+"start_ref_usfm": "1TI 4:1",
+"end_ref": "54004001",
+"end_ref_usfm": "1TI 4:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "deity:Demons",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Demons"
+}
+]
+}
+},
+{
+"content_id": "17335",
+"reference_id": 16503,
+"version": "1.0.4",
+"title": "1 Timothy 4:1–5",
+"media_type": "Text",
+"index_reference": "54004001-54004005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul’s plain teaching contrasts with the false teachings he criticizes (<data class=\"bible-ref\" data-start-ref=\"54003016\" data-end-ref=\"54003016\">3:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004001",
+"start_ref_usfm": "1TI 4:1",
+"end_ref": "54004005",
+"end_ref_usfm": "1TI 4:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.52,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Demons",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Demons"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Intercession",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Intercession"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Hypocrisy",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Hypocrisy"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17339",
+"reference_id": 16507,
+"version": "1.0.4",
+"title": "1 Timothy 4:2",
+"media_type": "Text",
+"index_reference": "54004002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>whose consciences are seared with a hot iron: </em>Dead consciences either do not work or work in harmful ways, making judgments that go against the truth of the good news about Jesus (see also <data class=\"bible-ref\" data-start-ref=\"56001015\" data-end-ref=\"56001015\">Titus 1:15</data>; <data class=\"bible-ref\" data-start-ref=\"45001028\" data-end-ref=\"45001032\">Romans 1:28–32</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004002",
+"start_ref_usfm": "1TI 4:2",
+"end_ref": "54004002",
+"end_ref_usfm": "1TI 4:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Hypocrisy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hypocrisy"
+}
+]
+}
+},
+{
+"content_id": "17341",
+"reference_id": 16509,
+"version": "1.0.4",
+"title": "1 Timothy 4:6",
+"media_type": "Text",
+"index_reference": "54004006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Brothers</em>: The Greek word <em>adelphoi</em> refers to family members, both male and female. </p></li><li><p><em>a good servant: </em>Training good servants involves a complete pattern of behavior. Paul modeled this and based it on sound teachings. <span>Good instruction</span> unifies words and actions, beliefs and behaviors (see <data class=\"bible-ref\" data-start-ref=\"54003010\" data-end-ref=\"54003010\">3:10</data>, <data class=\"bible-ref\" data-start-ref=\"54003014\" data-end-ref=\"54003015\">14–15</data>; <data class=\"bible-ref\" data-start-ref=\"50004009\" data-end-ref=\"50004009\">Philippians 4:9</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004006",
+"start_ref_usfm": "1TI 4:6",
+"end_ref": "54004006",
+"end_ref_usfm": "1TI 4:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17340",
+"reference_id": 16508,
+"version": "1.0.4",
+"title": "1 Timothy 4:6–16",
+"media_type": "Text",
+"index_reference": "54004006-54004016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Timothy needs to address the false teachers (see <data class=\"bible-ref\" data-start-ref=\"55003001\" data-end-ref=\"55004005\">2&nbsp;Timothy 3:1–4:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004006",
+"start_ref_usfm": "1TI 4:6",
+"end_ref": "54004016",
+"end_ref_usfm": "1TI 4:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.3727,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:WithoutMoralDefect",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Being Without Moral Defect"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Profane"
+}
+]
+}
+},
+{
+"content_id": "17342",
+"reference_id": 16510,
+"version": "1.0.4",
+"title": "1 Timothy 4:8–9",
+"media_type": "Text",
+"index_reference": "54004008-54004009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>physical exercise</em> … <em>godliness</em>: Compare with <data class=\"bible-ref\" data-start-ref=\"46009024\" data-end-ref=\"46009027\">1 Corinthians 9:24–27</data> and <data class=\"bible-ref\" data-start-ref=\"51002023\" data-end-ref=\"51002023\">Colossians 2:23</data>.</p></li><li><p><em>holding promise for the present life and for the one to come</em>: Compare with <data class=\"bible-ref\" data-start-ref=\"54004016\" data-end-ref=\"54004016\">1 Timothy 4:16</data>, <data class=\"bible-ref\" data-start-ref=\"54006006\" data-end-ref=\"54006008\">6:6–8</data>, <data class=\"bible-ref\" data-start-ref=\"41010029\" data-end-ref=\"41010030\">Mark 10:29–30</data>, and <data class=\"bible-ref\" data-start-ref=\"49006002\" data-end-ref=\"49006003\">Ephesians 6:2–3</data>. </p></li><li><p><em>trustworthy saying</em>: See <data class=\"resource-ref\" data-content-id=\"17296\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 1 Timothy 1:15</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004008",
+"start_ref_usfm": "1TI 4:8",
+"end_ref": "54004009",
+"end_ref_usfm": "1TI 4:9"
+}
+],
+"resource": [
+{
+"reference_id": "16464",
+"content_id": "17296",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 1 Timothy 1:15",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17336",
+"reference_id": 16504,
+"version": "1.0.4",
+"title": "1 Timothy 4:12",
+"media_type": "Text",
+"index_reference": "54004012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>set an example</em>: Only those whose lives are shaped by the good news about Jesus are worthy teachers of it (see <data class=\"bible-ref\" data-start-ref=\"55003010\" data-end-ref=\"55003011\">2&nbsp;Timothy 3:10–11</data>; <data class=\"bible-ref\" data-start-ref=\"56002007\" data-end-ref=\"56002007\">Titus 2:7</data>; <data class=\"bible-ref\" data-start-ref=\"58013007\" data-end-ref=\"58013007\">Hebrews 13:7</data>). The false teachers were not.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004012",
+"start_ref_usfm": "1TI 4:12",
+"end_ref": "54004012",
+"end_ref_usfm": "1TI 4:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:WithoutMoralDefect",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Being Without Moral Defect"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17337",
+"reference_id": 16505,
+"version": "1.0.4",
+"title": "1 Timothy 4:14",
+"media_type": "Text",
+"index_reference": "54004014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>the laying on of the hands</em></span>: This gesture showed recognition, validity, and blessing (see <data class=\"bible-ref\" data-start-ref=\"44013001\" data-end-ref=\"44013003\">Acts 13:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"44006006\" data-end-ref=\"44006006\">6:6</data>). This was likely the same event as in <data class=\"bible-ref\" data-start-ref=\"55001006\" data-end-ref=\"55001007\">2&nbsp;Timothy 1:6–7</data> (see <data class=\"bible-ref\" data-start-ref=\"54001018\" data-end-ref=\"54001018\">1&nbsp;Timothy 1:18</data>; compare <data class=\"bible-ref\" data-start-ref=\"45012006\" data-end-ref=\"45012008\">Romans 12:6–8</data>; <data class=\"bible-ref\" data-start-ref=\"46012007\" data-end-ref=\"46012011\">1&nbsp;Corinthians 12:7–11</data>; <data class=\"bible-ref\" data-start-ref=\"49004007\" data-end-ref=\"49004013\">Ephesians 4:7–13</data>). This is the way the church validated Paul’s ministry and that of his delegates.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54004014",
+"start_ref_usfm": "1TI 4:14",
+"end_ref": "54004014",
+"end_ref_usfm": "1TI 4:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "17343",
+"reference_id": 16511,
+"version": "1.0.4",
+"title": "1 Timothy 5:1–6.2",
+"media_type": "Text",
+"index_reference": "54005001-54006002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Proper behavior in God&apos;s spiritual household involves everyone, including:</p><ul><li><p>the old and young (<data class=\"bible-ref\" data-start-ref=\"54005001\" data-end-ref=\"54005002\">5:1–2</data>),</p></li><li><p>widows (<data class=\"bible-ref\" data-start-ref=\"54005003\" data-end-ref=\"54005016\">5:3–16</data>),</p></li><li><p>old people (<data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005025\">5:17–25</data>), and</p></li><li><p>slaves (<data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006002\">6:1–2a</data>). </p></li></ul><p>Showing respect within the household goes beyond social boundaries.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005001",
+"start_ref_usfm": "1TI 5:1",
+"end_ref": "54006002",
+"end_ref_usfm": "1TI 6:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2333,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2333,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2333,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.2333,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2333,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Idle",
+"type": "keyterm",
+"confidence": 0.1741,
+"match_method": "canonical",
+"preferred_label": "Useless"
+},
+{
+"id": "keyterm:Discrimination",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Discrimination"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Busybody",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Be a Busybody"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:WithoutMoralDefect",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Being Without Moral Defect"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Scripture",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Written"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Declare"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.1667,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1067,
+"match_method": "canonical",
+"preferred_label": "House"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.1067,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.1067,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+},
+{
+"id": "flora:Grain",
+"type": "flora",
+"confidence": 0.1067,
+"match_method": "canonical",
+"preferred_label": "Grain"
+},
+{
+"id": "realia:Yoke",
+"type": "realia",
+"confidence": 0.1067,
+"match_method": "canonical",
+"preferred_label": "Yoke"
+}
+]
+}
+},
+{
+"content_id": "17359",
+"reference_id": 16527,
+"version": "1.0.4",
+"title": "1 Timothy 5:3–16",
+"media_type": "Text",
+"index_reference": "54005003-54005016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>A widow without wealth or family was alone in a world that did not support her. The Christian community was expected to care for such widows among its members (see <data class=\"bible-ref\" data-start-ref=\"05010017\" data-end-ref=\"05010019\">Deuteronomy 10:17–19</data>; <data class=\"bible-ref\" data-start-ref=\"23001017\" data-end-ref=\"23001017\">Isaiah 1:17</data>; compare <data class=\"bible-ref\" data-start-ref=\"44006001\" data-end-ref=\"44006006\">Acts 6:1–6</data>; <data class=\"bible-ref\" data-start-ref=\"59001027\" data-end-ref=\"59001027\">James 1:27</data>). Some suggest this passage implies a religious order of widows in the first-century AD church at Ephesus. However, there is no obvious evidence of such an order, only of a ministry to help community members without financial means.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005003",
+"start_ref_usfm": "1TI 5:3",
+"end_ref": "54005016",
+"end_ref_usfm": "1TI 5:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2643,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2643,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Idle",
+"type": "keyterm",
+"confidence": 0.1964,
+"match_method": "canonical",
+"preferred_label": "Useless"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Busybody",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Be a Busybody"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1221,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "17360",
+"reference_id": 16528,
+"version": "1.0.4",
+"title": "1 Timothy 5:5",
+"media_type": "Text",
+"index_reference": "54005005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>The widow who is truly in need and left all alone:</em></span> Women in this situation could only rely on their hope in God (<data class=\"bible-ref\" data-start-ref=\"19068005\" data-end-ref=\"19068005\">Psalms 68:5</data>; <data class=\"bible-ref\" data-start-ref=\"19146009\" data-end-ref=\"19146009\">146:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005005",
+"start_ref_usfm": "1TI 5:5",
+"end_ref": "54005005",
+"end_ref_usfm": "1TI 5:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "17361",
+"reference_id": 16529,
+"version": "1.0.4",
+"title": "1 Timothy 5:6",
+"media_type": "Text",
+"index_reference": "54005006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>but she who lives for pleasure:</em> Some widows in Ephesus lived only for pleasure. They cared more about receiving than giving to others (see also <data class=\"bible-ref\" data-start-ref=\"54006017\" data-end-ref=\"54006019\">6:17–19</data>; <data class=\"bible-ref\" data-start-ref=\"59005005\" data-end-ref=\"59005005\">James 5:5</data>). They did not need support.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005006",
+"start_ref_usfm": "1TI 5:6",
+"end_ref": "54005006",
+"end_ref_usfm": "1TI 5:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+}
+]
+}
+},
+{
+"content_id": "17362",
+"reference_id": 16530,
+"version": "1.0.4",
+"title": "1 Timothy 5:8",
+"media_type": "Text",
+"index_reference": "54005008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The faith of the Christians was and is more than just belief. It is a complete way of living (see <data class=\"bible-ref\" data-start-ref=\"59002014\" data-end-ref=\"59002026\">James 2:14–26</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005008",
+"start_ref_usfm": "1TI 5:8",
+"end_ref": "54005008",
+"end_ref_usfm": "1TI 5:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Unfaithful",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Unfaithful"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17363",
+"reference_id": 16531,
+"version": "1.0.4",
+"title": "1 Timothy 5:9",
+"media_type": "Text",
+"index_reference": "54005009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>at least sixty</em>: Young widows needed a different approach (<data class=\"bible-ref\" data-start-ref=\"54005011\" data-end-ref=\"54005015\">5:11–15</data>). People were usually divided between young and old at around forty. Elderly people were probably those over fifty (see <data class=\"bible-ref\" data-start-ref=\"56002002\" data-end-ref=\"56002002\">Titus 2:2</data>). </p></li><li><p><em>the wife of one man</em>: The grammar is the same in <data class=\"bible-ref\" data-start-ref=\"54003002\" data-end-ref=\"54003002\">1&nbsp;Timothy 3:2</data>, <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">12</data>; <data class=\"bible-ref\" data-start-ref=\"56001006\" data-end-ref=\"56001006\">Titus 1:6</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005009",
+"start_ref_usfm": "1TI 5:9",
+"end_ref": "54005009",
+"end_ref_usfm": "1TI 5:9"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17344",
+"reference_id": 16512,
+"version": "1.0.4",
+"title": "1 Timothy 5:10",
+"media_type": "Text",
+"index_reference": "54005010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>washing the feet of the saints</em></span>: See <data class=\"bible-ref\" data-start-ref=\"01018004\" data-end-ref=\"01018004\">Genesis 18:4</data>; <data class=\"bible-ref\" data-start-ref=\"42007044\" data-end-ref=\"42007044\">Luke 7:44</data>; <data class=\"bible-ref\" data-start-ref=\"43013001\" data-end-ref=\"43013017\">John 13:1–17</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005010",
+"start_ref_usfm": "1TI 5:10",
+"end_ref": "54005010",
+"end_ref_usfm": "1TI 5:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "17345",
+"reference_id": 16513,
+"version": "1.0.4",
+"title": "1 Timothy 5:11–12",
+"media_type": "Text",
+"index_reference": "54005011-54005012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>their first faith:</em> If Paul was concerned about a second marriage to non-Christians, <span>this phrase</span> might refer to their Christian faith (see <data class=\"bible-ref\" data-start-ref=\"54005014\" data-end-ref=\"54005014\">5:14</data>). They would give up this faith by entering a marriage with a pagan (worshiper of false gods). This would probably separate them from Christ. It is also possible that Paul and the church recognized a special category of “sacred widowhood” (see <data class=\"bible-ref\" data-start-ref=\"54005005\" data-end-ref=\"54005005\">5:5</data>; compare <data class=\"bible-ref\" data-start-ref=\"44009036\" data-end-ref=\"44009037\">Acts 9:36–37</data>). These widows entered this category by making a vow.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005011",
+"start_ref_usfm": "1TI 5:11",
+"end_ref": "54005012",
+"end_ref_usfm": "1TI 5:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17346",
+"reference_id": 16514,
+"version": "1.0.4",
+"title": "1 Timothy 5:11–15",
+"media_type": "Text",
+"index_reference": "54005011-54005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Younger widows</em> who could still have children needed a different approach. Paul worried that false teachers were leading them into error.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005011",
+"start_ref_usfm": "1TI 5:11",
+"end_ref": "54005015",
+"end_ref_usfm": "1TI 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Idle",
+"type": "keyterm",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Useless"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Busybody",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be a Busybody"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "17347",
+"reference_id": 16515,
+"version": "1.0.4",
+"title": "1 Timothy 5:13",
+"media_type": "Text",
+"index_reference": "54005013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Those fully supported by the church rarely dedicate their lives to a true commitment (see <data class=\"bible-ref\" data-start-ref=\"54002009\" data-end-ref=\"54002010\">2:9–10</data>; <data class=\"bible-ref\" data-start-ref=\"54005010\" data-end-ref=\"54005010\">5:10</data>). Abusing the church’s support harms both them and the gospel (good news) (see <data class=\"bible-ref\" data-start-ref=\"54005014\" data-end-ref=\"54005014\">5:14</data>). </p></li><li><p><span><em>discussing things they should not mention</em></span>: This suggests involvement in false teachings (<data class=\"bible-ref\" data-start-ref=\"54005015\" data-end-ref=\"54005015\">5:15</data>; see <data class=\"bible-ref\" data-start-ref=\"53003011\" data-end-ref=\"53003013\">2 Thessalonians 3:11–13</data>; <data class=\"bible-ref\" data-start-ref=\"56001011\" data-end-ref=\"56001011\">Titus 1:11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005013",
+"start_ref_usfm": "1TI 5:13",
+"end_ref": "54005013",
+"end_ref_usfm": "1TI 5:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Idle",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Useless"
+},
+{
+"id": "keyterm:Busybody",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be a Busybody"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "17348",
+"reference_id": 16516,
+"version": "1.0.4",
+"title": "1 Timothy 5:14",
+"media_type": "Text",
+"index_reference": "54005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul advises <em>younger widows</em> to marry again and to marry Christians (<data class=\"bible-ref\" data-start-ref=\"54005011\" data-end-ref=\"54005012\">5:11–12</data>; see also <data class=\"bible-ref\" data-start-ref=\"54002015\" data-end-ref=\"54002015\">2:15</data>).</p></li><li><p><span><em>denying the adversary occasion for slander</em></span>: Their actions were harming their testimony for the good news about Jesus (see <data class=\"bible-ref\" data-start-ref=\"52004011\" data-end-ref=\"52004012\">1&nbsp;Thessalonians 4:11–12</data>; <data class=\"bible-ref\" data-start-ref=\"56002008\" data-end-ref=\"56002008\">Titus 2:8</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005014",
+"start_ref_usfm": "1TI 5:14",
+"end_ref": "54005014",
+"end_ref_usfm": "1TI 5:14"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17349",
+"reference_id": 16517,
+"version": "1.0.4",
+"title": "1 Timothy 5:15",
+"media_type": "Text",
+"index_reference": "54005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>already turned aside to follow Satan</em>:</span> They had turned away from Christ, probably because of false teachers and how they indulge themselves (<data class=\"bible-ref\" data-start-ref=\"54001006\" data-end-ref=\"54001007\">1:6–7</data>; compare <data class=\"bible-ref\" data-start-ref=\"54003006\" data-end-ref=\"54003007\">3:6–7</data>; <data class=\"bible-ref\" data-start-ref=\"58002001\" data-end-ref=\"58002001\">Hebrews 2:1</data>; <data class=\"bible-ref\" data-start-ref=\"54005006\" data-end-ref=\"54005006\">1&nbsp;Timothy 5:6</data>, <data class=\"bible-ref\" data-start-ref=\"54005013\" data-end-ref=\"54005013\">13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005015",
+"start_ref_usfm": "1TI 5:15",
+"end_ref": "54005015",
+"end_ref_usfm": "1TI 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Satan"
+}
+]
+}
+},
+{
+"content_id": "17350",
+"reference_id": 16518,
+"version": "1.0.4",
+"title": "1 Timothy 5:16",
+"media_type": "Text",
+"index_reference": "54005016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Individual Christian households kept their roles and identities within the church (see <data class=\"bible-ref\" data-start-ref=\"54002015\" data-end-ref=\"54002015\">2:15</data>; <data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003015\">3:15</data>). The church did not control them. However, the household of God is central to the identity of the Christian community (see <data class=\"bible-ref\" data-start-ref=\"41003031\" data-end-ref=\"41003035\">Mark 3:31–35</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005016",
+"start_ref_usfm": "1TI 5:16",
+"end_ref": "54005016",
+"end_ref_usfm": "1TI 5:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17351",
+"reference_id": 16519,
+"version": "1.0.4",
+"title": "1 Timothy 5:17–18",
+"media_type": "Text",
+"index_reference": "54005017-54005018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>are worthy of double honor</em></span>: Compare <data class=\"bible-ref\" data-start-ref=\"48006006\" data-end-ref=\"48006006\">Galatians 6:6</data>. There is no evidence of paid leadership at this time. The word used here never refers to a continuous salary. But it does imply more than just respect. The quotations from Scripture suggest gifts of money (<data class=\"bible-ref\" data-start-ref=\"05025004\" data-end-ref=\"05025004\">Deuteronomy 25:4</data>; <data class=\"bible-ref\" data-start-ref=\"42010007\" data-end-ref=\"42010007\">Luke 10:7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005017",
+"start_ref_usfm": "1TI 5:17",
+"end_ref": "54005018",
+"end_ref_usfm": "1TI 5:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Scripture",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Written"
+},
+{
+"id": "flora:Grain",
+"type": "flora",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Grain"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+}
+]
+}
+},
+{
+"content_id": "17352",
+"reference_id": 16520,
+"version": "1.0.4",
+"title": "1 Timothy 5:17–25",
+"media_type": "Text",
+"index_reference": "54005017-54005025",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Elders</em>: In Judaism, community leaders were usually older men who led the wider community. The letters to Timothy acknowledge an office of elders<em> </em>(Greek <em>presbuteroi</em>) called &quot;overseers&quot; (see also <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003007\">3:1–7</data>). Titus lists both offices (<data class=\"bible-ref\" data-start-ref=\"56001005\" data-end-ref=\"56001009\">Titus 1:5–9</data>). But the term also refers to older men in the community (as in <data class=\"bible-ref\" data-start-ref=\"54004014\" data-end-ref=\"54004014\">1&nbsp;Timothy 4:14</data>; <data class=\"bible-ref\" data-start-ref=\"56001005\" data-end-ref=\"56001005\">Titus 1:5</data>; <data class=\"bible-ref\" data-start-ref=\"54005001\" data-end-ref=\"54005001\">1&nbsp;Timothy 5:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005017",
+"start_ref_usfm": "1TI 5:17",
+"end_ref": "54005025",
+"end_ref_usfm": "1TI 5:25"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Discrimination",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Discrimination"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Declare"
+},
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Scripture",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Written"
+},
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Wine"
+},
+{
+"id": "flora:Grain",
+"type": "flora",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Grain"
+},
+{
+"id": "fauna:Bull",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Cattle"
+}
+]
+}
+},
+{
+"content_id": "17353",
+"reference_id": 16521,
+"version": "1.0.4",
+"title": "1 Timothy 5:19–21",
+"media_type": "Text",
+"index_reference": "54005019-54005021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The false teachers may have caused false accusations against Christian leaders. This passage follows the outline of <data class=\"bible-ref\" data-start-ref=\"05019015\" data-end-ref=\"05019021\">Deuteronomy 19:15–21</data>.</p></li><li><p><em>two or three witnesses</em>: See <data class=\"bible-ref\" data-start-ref=\"05017006\" data-end-ref=\"05017006\">Deuteronomy 17:6</data>; <data class=\"bible-ref\" data-start-ref=\"05019015\" data-end-ref=\"05019015\">19:15</data>; <data class=\"bible-ref\" data-start-ref=\"40018016\" data-end-ref=\"40018016\">Matthew 18:16</data>; <data class=\"bible-ref\" data-start-ref=\"47013001\" data-end-ref=\"47013001\">2 Corinthians 13:1</data>; <data class=\"bible-ref\" data-start-ref=\"58010028\" data-end-ref=\"58010028\">Hebrews 10:28</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005019",
+"start_ref_usfm": "1TI 5:19",
+"end_ref": "54005021",
+"end_ref_usfm": "1TI 5:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Discrimination",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Discrimination"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Declare"
+}
+]
+}
+},
+{
+"content_id": "17354",
+"reference_id": 16522,
+"version": "1.0.4",
+"title": "1 Timothy 5:20",
+"media_type": "Text",
+"index_reference": "54005020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>Those who persist in sin</em>: This refers to someone accused, whether the accusation is true or false (<data class=\"bible-ref\" data-start-ref=\"05019016\" data-end-ref=\"05019019\">Deuteronomy 19:16–19</data>).</p></li><li><p><em>the others</em>: This could mean the other elders or the rest of the church (compare <data class=\"bible-ref\" data-start-ref=\"05019020\" data-end-ref=\"05019020\">Deuteronomy 19:20</data>; <data class=\"bible-ref\" data-start-ref=\"44005001\" data-end-ref=\"44005011\">Acts 5:1–11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005020",
+"start_ref_usfm": "1TI 5:20",
+"end_ref": "54005020",
+"end_ref_usfm": "1TI 5:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "17355",
+"reference_id": 16523,
+"version": "1.0.4",
+"title": "1 Timothy 5:21",
+"media_type": "Text",
+"index_reference": "54005021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>God and Christ Jesus and the elect angels</em> serve as three witnesses (<data class=\"bible-ref\" data-start-ref=\"54005019\" data-end-ref=\"54005019\">5:19</data>). These witnesses confirm accusations against leaders who sin (<data class=\"bible-ref\" data-start-ref=\"54005020\" data-end-ref=\"54005020\">5:20</data>).</p></li><li><p><em>Angels</em> represent a connection to God&apos;s judgment (<data class=\"bible-ref\" data-start-ref=\"27007009\" data-end-ref=\"27007010\">Daniel 7:9–10</data>; <data class=\"bible-ref\" data-start-ref=\"40013049\" data-end-ref=\"40013049\">Matthew 13:49</data>; <data class=\"bible-ref\" data-start-ref=\"40025031\" data-end-ref=\"40025031\">25:31</data>, <data class=\"bible-ref\" data-start-ref=\"40025041\" data-end-ref=\"40025041\">41</data>; <data class=\"bible-ref\" data-start-ref=\"42009026\" data-end-ref=\"42009026\">Luke 9:26</data>; <data class=\"bible-ref\" data-start-ref=\"53001007\" data-end-ref=\"53001007\">2&nbsp;Thessalonians 1:7</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005021",
+"start_ref_usfm": "1TI 5:21",
+"end_ref": "54005021",
+"end_ref_usfm": "1TI 5:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Discrimination",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Discrimination"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Declare"
+}
+]
+}
+},
+{
+"content_id": "17356",
+"reference_id": 16524,
+"version": "1.0.4",
+"title": "1 Timothy 5:22",
+"media_type": "Text",
+"index_reference": "54005022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Do not … share in the sins of others</em>: </span>Those who ordain or appoint an elder are accountable for his actions.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005022",
+"start_ref_usfm": "1TI 5:22",
+"end_ref": "54005022",
+"end_ref_usfm": "1TI 5:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "17357",
+"reference_id": 16525,
+"version": "1.0.4",
+"title": "1 Timothy 5:23",
+"media_type": "Text",
+"index_reference": "54005023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The concern with being pure might have been excessive regarding wine or food (<data class=\"bible-ref\" data-start-ref=\"54005022\" data-end-ref=\"54005022\">5:22</data>; see <data class=\"bible-ref\" data-start-ref=\"54003003\" data-end-ref=\"54003003\">3:3</data>; <data class=\"bible-ref\" data-start-ref=\"04006001\" data-end-ref=\"04006021\">Numbers 6:1–21</data>; <data class=\"bible-ref\" data-start-ref=\"46010021\" data-end-ref=\"46010021\">1&nbsp;Corinthians 10:21</data>). People may have considered wine as medicine.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005023",
+"start_ref_usfm": "1TI 5:23",
+"end_ref": "54005023",
+"end_ref_usfm": "1TI 5:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Wine",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Wine"
+}
+]
+}
+},
+{
+"content_id": "17358",
+"reference_id": 16526,
+"version": "1.0.4",
+"title": "1 Timothy 5:24–25",
+"media_type": "Text",
+"index_reference": "54005024-54005025",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These two wise sayings summarize <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005023\">5:17–23</data> and emphasize God&apos;s judgment.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54005024",
+"start_ref_usfm": "1TI 5:24",
+"end_ref": "54005025",
+"end_ref_usfm": "1TI 5:25"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:CourtCase",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Court Case"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "17371",
+"reference_id": 16539,
+"version": "1.0.4",
+"title": "1 Timothy 6:1",
+"media_type": "Text",
+"index_reference": "54006001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul recommends that those who are slaves should treat both non-Christian and Christian masters with respect. This practice will honor God&apos;s name and give a good reputation to Christian teaching (see <data class=\"resource-ref\" data-content-id=\"17343\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 5:1–6:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006001",
+"start_ref_usfm": "1TI 6:1",
+"end_ref": "54006001",
+"end_ref_usfm": "1TI 6:1"
+}
+],
+"resource": [
+{
+"reference_id": "16511",
+"content_id": "17343",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 5:1–6:2",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "realia:Yoke",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Yoke"
+}
+]
+}
+},
+{
+"content_id": "17372",
+"reference_id": 16540,
+"version": "1.0.4",
+"title": "1 Timothy 6:2–10",
+"media_type": "Text",
+"index_reference": "54006002-54006010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This paragraph reveals that the true desire of false teachers is wealth, not God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006002",
+"start_ref_usfm": "1TI 6:2",
+"end_ref": "54006010",
+"end_ref_usfm": "1TI 6:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "keyterm:LoveOfMoney",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Love of Money"
+},
+{
+"id": "keyterm:PutToTheTest",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Put to the Test"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:BringIn",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Bring In"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17373",
+"reference_id": 16541,
+"version": "1.0.4",
+"title": "1 Timothy 6:2–21",
+"media_type": "Text",
+"index_reference": "54006002-54006021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The final major part of the letter focuses on Timothy&apos;s need to challenge the false teachers. This section mirrors the structure of <data class=\"bible-ref\" data-start-ref=\"54001003\" data-end-ref=\"54001020\">1:3–20</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006002",
+"start_ref_usfm": "1TI 6:2",
+"end_ref": "54006021",
+"end_ref_usfm": "1TI 6:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.39,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.39,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3175,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.3175,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Foolish",
+"type": "keyterm",
+"confidence": 0.1825,
+"match_method": "canonical",
+"preferred_label": "Foolish"
+},
+{
+"id": "keyterm:Alive",
+"type": "keyterm",
+"confidence": 0.1825,
+"match_method": "canonical",
+"preferred_label": "Make Alive"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.1825,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:BringIn",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Bring In"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:PutToTheTest",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Put to the Test"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:WillingToShare",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Willing to Share"
+},
+{
+"id": "person:Pilate",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Pilate"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:AboveCriticism",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Above Criticism"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:LoveOfMoney",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Love of Money"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "17377",
+"reference_id": 16545,
+"version": "1.0.4",
+"title": "1 Timothy 6:4",
+"media_type": "Text",
+"index_reference": "54006004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>he has an unhealthy interest in controversies and semantics</em>:</span> It is the same problem as in <data class=\"bible-ref\" data-start-ref=\"54001004\" data-end-ref=\"54001004\">1:4</data> (see also <data class=\"bible-ref\" data-start-ref=\"55002023\" data-end-ref=\"55002024\">2&nbsp;Timothy 2:23–24</data>; <data class=\"bible-ref\" data-start-ref=\"56003009\" data-end-ref=\"56003009\">Titus 3:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006004",
+"start_ref_usfm": "1TI 6:4",
+"end_ref": "54006004",
+"end_ref_usfm": "1TI 6:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+}
+]
+}
+},
+{
+"content_id": "17378",
+"reference_id": 16546,
+"version": "1.0.4",
+"title": "1 Timothy 6:5",
+"media_type": "Text",
+"index_reference": "54006005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>who are devoid of the truth:</em></span> Literally <em>have been robbed of the truth; </em>see <data class=\"bible-ref\" data-start-ref=\"55002018\" data-end-ref=\"55002018\">2&nbsp;Timothy 2:18</data>; <data class=\"bible-ref\" data-start-ref=\"55003007\" data-end-ref=\"55003007\">3:7</data>, <data class=\"bible-ref\" data-start-ref=\"55003008\" data-end-ref=\"55003008\">8</data>; <data class=\"bible-ref\" data-start-ref=\"55004004\" data-end-ref=\"55004004\">4:4</data>; <data class=\"bible-ref\" data-start-ref=\"56001014\" data-end-ref=\"56001014\">Titus 1:14</data>.</p></li><li><p><span><em>regard godliness as a means of gain</em>:</span> (see <data class=\"bible-ref\" data-start-ref=\"54002002\" data-end-ref=\"54002002\">1&nbsp;Timothy 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"54003008\" data-end-ref=\"54003008\">3:8</data>; <data class=\"bible-ref\" data-start-ref=\"54004008\" data-end-ref=\"54004008\">4:8</data>; <data class=\"bible-ref\" data-start-ref=\"54006003\" data-end-ref=\"54006003\">6:3</data>; see also <data class=\"bible-ref\" data-start-ref=\"55003002\" data-end-ref=\"55003002\">2&nbsp;Timothy 3:2</data>; <data class=\"bible-ref\" data-start-ref=\"44008009\" data-end-ref=\"44008025\">Acts 8:9–25</data>): It is uncertain how these false teachers thought they would profit. In the broader culture, many traveling teachers earned money through teaching. Abuse of this system was common, and people often accused them of teaching for &quot;gain and glory.&quot; Perhaps the false teachers in 1 Timothy brought this practice into the church or promoted a gospel marked by wealth or success. They seem to have influenced wealthy Christians and possibly women in particular (<data class=\"bible-ref\" data-start-ref=\"54006017\" data-end-ref=\"54006019\">1&nbsp;Timothy 6:17–19</data>; <data class=\"bible-ref\" data-start-ref=\"54002009\" data-end-ref=\"54002009\">2:9</data>; <data class=\"bible-ref\" data-start-ref=\"54005006\" data-end-ref=\"54005006\">5:6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006005",
+"start_ref_usfm": "1TI 6:5",
+"end_ref": "54006005",
+"end_ref_usfm": "1TI 6:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+}
+]
+}
+},
+{
+"content_id": "17379",
+"reference_id": 16547,
+"version": "1.0.4",
+"title": "1 Timothy 6:6",
+"media_type": "Text",
+"index_reference": "54006006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>with contentment</em>: This is not only a philosophical view but also a true reliance on Christ as all-sufficient. See <data class=\"bible-ref\" data-start-ref=\"54004008\" data-end-ref=\"54004008\">4:8</data>; <data class=\"bible-ref\" data-start-ref=\"47009008\" data-end-ref=\"47009008\">2 Corinthians 9:8</data>; <data class=\"bible-ref\" data-start-ref=\"47012007\" data-end-ref=\"47012010\">12:7–10</data>; <data class=\"bible-ref\" data-start-ref=\"50004010\" data-end-ref=\"50004013\">Philippians 4:10–13</data>; <data class=\"bible-ref\" data-start-ref=\"58013005\" data-end-ref=\"58013005\">Hebrews 13:5</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006006",
+"start_ref_usfm": "1TI 6:6",
+"end_ref": "54006006",
+"end_ref_usfm": "1TI 6:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17364",
+"reference_id": 16532,
+"version": "1.0.4",
+"title": "1 Timothy 6:11–16",
+"media_type": "Text",
+"index_reference": "54006011-54006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Before ending the discussion on wealth, Paul urges Timothy to live an innocent life. Paul encourages Timothy to flee the desire for wealth.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006011",
+"start_ref_usfm": "1TI 6:11",
+"end_ref": "54006016",
+"end_ref_usfm": "1TI 6:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Alive",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Make Alive"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "person:Pilate",
+"type": "person",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Pilate"
+},
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+},
+{
+"id": "keyterm:AboveCriticism",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Above Criticism"
+}
+]
+}
+},
+{
+"content_id": "17365",
+"reference_id": 16533,
+"version": "1.0.4",
+"title": "1 Timothy 6:12",
+"media_type": "Text",
+"index_reference": "54006012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The promise of eternal life reduces the attraction of wealth (see <data class=\"bible-ref\" data-start-ref=\"54006019\" data-end-ref=\"54006019\">6:19</data>).</p></li><li><p>Paul probably refers to when Timothy confessed his faith during baptism.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006012",
+"start_ref_usfm": "1TI 6:12",
+"end_ref": "54006012",
+"end_ref_usfm": "1TI 6:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17366",
+"reference_id": 16534,
+"version": "1.0.4",
+"title": "1 Timothy 6:13",
+"media_type": "Text",
+"index_reference": "54006013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul emphasizes the historical aspect of Christ&apos;s role as a mediator (see <data class=\"bible-ref\" data-start-ref=\"54002005\" data-end-ref=\"54002006\">2:5–6</data>). Paul holds up the way Christ Jesus testified during his trial before Pontius Pilate to set an example for Timothy to remain strong under pressure (<data class=\"bible-ref\" data-start-ref=\"40027011\" data-end-ref=\"40027014\">Matthew 27:11–14</data>; <data class=\"bible-ref\" data-start-ref=\"42023001\" data-end-ref=\"42023004\">Luke 23:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"43018033\" data-end-ref=\"43018038\">John 18:33–38</data>; <data class=\"bible-ref\" data-start-ref=\"43019009\" data-end-ref=\"43019011\">19:9–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006013",
+"start_ref_usfm": "1TI 6:13",
+"end_ref": "54006013",
+"end_ref_usfm": "1TI 6:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Alive",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Make Alive"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "person:Pilate",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pilate"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:BearWitness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bear Witness"
+}
+]
+}
+},
+{
+"content_id": "17367",
+"reference_id": 16535,
+"version": "1.0.4",
+"title": "1 Timothy 6:14",
+"media_type": "Text",
+"index_reference": "54006014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>until the appearance of our Lord Jesus Christ</em></span>: The letters to Timothy and Titus describe Christ&apos;s comings, both past and future, as “epiphanies” or “appearances” (<data class=\"bible-ref\" data-start-ref=\"55001010\" data-end-ref=\"55001010\">2&nbsp;Timothy 1:10</data>; <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002011\">Titus 2:11</data>; <data class=\"bible-ref\" data-start-ref=\"55004001\" data-end-ref=\"55004001\">2&nbsp;Timothy 4:1</data>, <data class=\"bible-ref\" data-start-ref=\"55004008\" data-end-ref=\"55004008\">8</data>; <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">Titus 2:13</data>). An epiphany is a divine intervention at a specific historical moment. The church exists between these past and future appearances of Christ. </p><p>Christ’s first saving epiphany allowed for a new life. His future epiphany will bring final salvation. Although the present is evil, our anticipation of Christ’s appearance encourages us to live a life pleasing to God now (the “later times,” <data class=\"bible-ref\" data-start-ref=\"54004001\" data-end-ref=\"54004003\">1&nbsp;Timothy 4:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"55003001\" data-end-ref=\"55003009\">2&nbsp;Timothy 3:1–9</data>). False teachers allowed sinful behaviors because they believed the resurrection had already happened (<data class=\"bible-ref\" data-start-ref=\"55002018\" data-end-ref=\"55002018\">2&nbsp;Timothy 2:18</data>). Paul clarifies that salvation has started but is not yet complete. Being part of God’s household requires responsible conduct in the light of Christ’s past, present, and future saving work (<data class=\"bible-ref\" data-start-ref=\"54003015\" data-end-ref=\"54003016\">1&nbsp;Timothy 3:15–16</data>; <data class=\"bible-ref\" data-start-ref=\"56002011\" data-end-ref=\"56002014\">Titus 2:11–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006014",
+"start_ref_usfm": "1TI 6:14",
+"end_ref": "54006014",
+"end_ref_usfm": "1TI 6:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:BeyondReproach",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beyond Reproach"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Commandment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Commandment"
+},
+{
+"id": "keyterm:AboveCriticism",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Above Criticism"
+}
+]
+}
+},
+{
+"content_id": "17368",
+"reference_id": 16536,
+"version": "1.0.4",
+"title": "1 Timothy 6:15–16",
+"media_type": "Text",
+"index_reference": "54006015-54006016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>in his own time:</em> At the right time, God will complete the salvation promised to us before the world began (compare <data class=\"bible-ref\" data-start-ref=\"54002006\" data-end-ref=\"54002006\">2:6</data>); <data class=\"bible-ref\" data-start-ref=\"55001009\" data-end-ref=\"55001009\">2&nbsp;Timothy 1:9</data>; <data class=\"bible-ref\" data-start-ref=\"56001002\" data-end-ref=\"56001002\">Titus 1:2</data>). Christ began this salvation in his first appearance (<data class=\"bible-ref\" data-start-ref=\"54002006\" data-end-ref=\"54002006\">1&nbsp;Timothy 2:6</data>; <data class=\"bible-ref\" data-start-ref=\"56001003\" data-end-ref=\"56001003\">Titus 1:3</data>). Christ&apos;s work of salvation fits within God&apos;s eternal plans. This knowledge naturally leads to worshiping God who saves us (see <data class=\"bible-ref\" data-start-ref=\"54001017\" data-end-ref=\"54001017\">1&nbsp;Timothy 1:17</data>). </p></li><li><p>This prayer might come from a confession saying for use at baptisms (see <data class=\"resource-ref\" data-content-id=\"17365\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 6:12</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006015",
+"start_ref_usfm": "1TI 6:15",
+"end_ref": "54006016",
+"end_ref_usfm": "1TI 6:16"
+}
+],
+"resource": [
+{
+"reference_id": "16533",
+"content_id": "17365",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 6:12",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+}
+]
+}
+},
+{
+"content_id": "17369",
+"reference_id": 16537,
+"version": "1.0.4",
+"title": "1 Timothy 6:17–18",
+"media_type": "Text",
+"index_reference": "54006017-54006018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>for us to enjoy</em></span>: Christian hope encourages us to manage resources responsibly (<data class=\"bible-ref\" data-start-ref=\"01001028\" data-end-ref=\"01001030\">Genesis 1:28–30</data>; <data class=\"bible-ref\" data-start-ref=\"01002015\" data-end-ref=\"01002015\">2:15</data>). We should use our resources for enjoyment and to share Christ’s love with others (see <data class=\"bible-ref\" data-start-ref=\"54004003\" data-end-ref=\"54004005\">1 Timothy 4:3–5</data>; <data class=\"bible-ref\" data-start-ref=\"19145016\" data-end-ref=\"19145016\">Psalm 145:16</data>; <data class=\"bible-ref\" data-start-ref=\"44014017\" data-end-ref=\"44014017\">Acts 14:17</data>; see <data class=\"bible-ref\" data-start-ref=\"42012016\" data-end-ref=\"42012034\">Luke 12:16–34</data>; <data class=\"bible-ref\" data-start-ref=\"47008001\" data-end-ref=\"47009015\">2 Corinthians 8:1–9:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006017",
+"start_ref_usfm": "1TI 6:17",
+"end_ref": "54006018",
+"end_ref_usfm": "1TI 6:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:WillingToShare",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Willing to Share"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "17370",
+"reference_id": 16538,
+"version": "1.0.4",
+"title": "1 Timothy 6:17–19",
+"media_type": "Text",
+"index_reference": "54006017-54006019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>According to <data class=\"bible-ref\" data-start-ref=\"54006011\" data-end-ref=\"54006016\">6:11–16</data>, it is unwise to value the temporary wealth of this age (<data class=\"bible-ref\" data-start-ref=\"59005003\" data-end-ref=\"59005003\">James 5:3</data>). It is wiser to gather treasure for the future age by trusting in God, doing good deeds, and showing generosity and love to others (see <data class=\"bible-ref\" data-start-ref=\"54001005\" data-end-ref=\"54001005\">1&nbsp;Timothy 1:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006017",
+"start_ref_usfm": "1TI 6:17",
+"end_ref": "54006019",
+"end_ref_usfm": "1TI 6:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:WillingToShare",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Willing to Share"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "17375",
+"reference_id": 16543,
+"version": "1.0.4",
+"title": "1 Timothy 6:20",
+"media_type": "Text",
+"index_reference": "54006020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>what has been entrusted to you</em></span><em> </em>(literally <em>the deposit</em>): The good news about Jesus is a deposit given to the church and its leaders to keep safe (<data class=\"bible-ref\" data-start-ref=\"54001015\" data-end-ref=\"54001015\">1:15</data>; <data class=\"bible-ref\" data-start-ref=\"54002005\" data-end-ref=\"54002006\">2:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"54003016\" data-end-ref=\"54003016\">3:16</data>). It includes an entire way of life (<data class=\"bible-ref\" data-start-ref=\"55001013\" data-end-ref=\"55001014\">2&nbsp;Timothy 1:13–14</data>; <data class=\"bible-ref\" data-start-ref=\"55003010\" data-end-ref=\"55003011\">3:10–11</data>). It strengthens and cleanses the church when confronted with false teachings in challenging times (<data class=\"bible-ref\" data-start-ref=\"55003001\" data-end-ref=\"55003001\">2&nbsp;Timothy 3:1</data>). The deposit is part of the church&apos;s tradition (see <data class=\"bible-ref\" data-start-ref=\"55002002\" data-end-ref=\"55002002\">2&nbsp;Timothy 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"46011023\" data-end-ref=\"46011025\">1&nbsp;Corinthians 11:23–25</data>; <data class=\"bible-ref\" data-start-ref=\"46015001\" data-end-ref=\"46015008\">15:1–8</data>; <data class=\"bible-ref\" data-start-ref=\"53002015\" data-end-ref=\"53002015\">2&nbsp;Thessalonians 2:15</data>; <data class=\"bible-ref\" data-start-ref=\"53003006\" data-end-ref=\"53003006\">3:6</data>). It needs creative and true interpretation to address changing situations and problems (see <data class=\"bible-ref\" data-start-ref=\"55001012\" data-end-ref=\"55001014\">2&nbsp;Timothy 1:12–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006020",
+"start_ref_usfm": "1TI 6:20",
+"end_ref": "54006020",
+"end_ref_usfm": "1TI 6:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Foolish",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Foolish"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Profane"
+}
+]
+}
+},
+{
+"content_id": "17374",
+"reference_id": 16542,
+"version": "1.0.4",
+"title": "1 Timothy 6:20–21",
+"media_type": "Text",
+"index_reference": "54006020-54006021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This short but pointed message emphasizes how important Timothy&apos;s task is in Ephesus (see <data class=\"bible-ref\" data-start-ref=\"54001018\" data-end-ref=\"54001020\">1:18–20</data>; <data class=\"bible-ref\" data-start-ref=\"55001013\" data-end-ref=\"55001014\">2 Timothy 1:13–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006020",
+"start_ref_usfm": "1TI 6:20",
+"end_ref": "54006021",
+"end_ref_usfm": "1TI 6:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Foolish",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Foolish"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Profane",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Profane"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "17376",
+"reference_id": 16544,
+"version": "1.0.4",
+"title": "1 Timothy 6:21",
+"media_type": "Text",
+"index_reference": "54006021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The letter ends suddenly. There was no need for mission directions (see <data class=\"bible-ref\" data-start-ref=\"56003012\" data-end-ref=\"56003014\">Titus 3:12–14</data>). Greetings were either not necessary or not appropriate (see <data class=\"bible-ref\" data-start-ref=\"56003015\" data-end-ref=\"56003015\">Titus 3:15</data>; <data class=\"bible-ref\" data-start-ref=\"45016003\" data-end-ref=\"45016016\">Romans 16:3–16</data>).</p></li><li><p><em>you all</em>: Paul sent the letter to Timothy. But Paul meant it to be read to the entire church (see 1&nbsp;Timothy Book Introduction, “Literary Genre”).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "54006021",
+"start_ref_usfm": "1TI 6:21",
+"end_ref": "54006021",
+"end_ref_usfm": "1TI 6:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Promise",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Promise"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+}
+]

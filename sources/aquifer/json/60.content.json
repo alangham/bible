@@ -1,0 +1,5514 @@
+[
+{
+"content_id": "15719",
+"reference_id": 14887,
+"version": "1.0.4",
+"title": "1 Peter 1:1",
+"media_type": "Text",
+"index_reference": "60001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>To the elect</em></span>: The apostle Peter begins his letter by reminding suffering Christians of their special status because of God’s action for them (<data class=\"bible-ref\" data-start-ref=\"60001002\" data-end-ref=\"60001002\">1:2</data>).</p></li><li><p><span><em>who are exiles of the Dispersion</em></span>: An exile is a person taken from his or her homeland to live in a foreign place. Peter uses this image to remind Christians that they live in a world shaped by values and ways of life that oppose Christ.</p></li><li><p><em>Pontus, Galatia, Cappadocia, Asia, and Bithynia</em>: These were Roman provinces in the region that is now Turkey. Peter may list them in the order that a messenger would follow when delivering the letter to the churches.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001001",
+"start_ref_usfm": "1PE 1:1",
+"end_ref": "60001001",
+"end_ref_usfm": "1PE 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Pontus",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Pontus"
+},
+{
+"id": "place:Cappadocia",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Cappadocia"
+},
+{
+"id": "place:Bithynia",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Bithynia"
+},
+{
+"id": "place:Galatia",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Galatia"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "place:Asia",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Asia"
+},
+{
+"id": "person:Peter",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Peter"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+}
+]
+}
+},
+{
+"content_id": "15723",
+"reference_id": 14891,
+"version": "1.0.4",
+"title": "1 Peter 1:2",
+"media_type": "Text",
+"index_reference": "60001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>according to the foreknowledge of God the Father</em></span>: In the Bible, God’s <em>foreknowledge</em> refers to his knowledge and loving purpose from the beginning. It means that God chose his people in advance and set his love on them before they knew him (compare <data class=\"bible-ref\" data-start-ref=\"45008029\" data-end-ref=\"45008029\">Romans 8:29</data>; <data class=\"bible-ref\" data-start-ref=\"45011002\" data-end-ref=\"45011002\">11:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001002",
+"start_ref_usfm": "1PE 1:2",
+"end_ref": "60001002",
+"end_ref_usfm": "1PE 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Blood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blood"
+}
+]
+}
+},
+{
+"content_id": "15725",
+"reference_id": 14893,
+"version": "1.0.4",
+"title": "1 Peter 1:3",
+"media_type": "Text",
+"index_reference": "60001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>new birth</em></span>: This is a way of describing Christian conversion (compare <data class=\"bible-ref\" data-start-ref=\"43003001\" data-end-ref=\"43003013\">John 3:1–13</data>; <data class=\"bible-ref\" data-start-ref=\"59001018\" data-end-ref=\"59001018\">James 1:18</data>; <data class=\"bible-ref\" data-start-ref=\"62002029\" data-end-ref=\"62002029\">1 John 2:29</data>; <data class=\"bible-ref\" data-start-ref=\"62003009\" data-end-ref=\"62003009\">3:9</data>; <data class=\"bible-ref\" data-start-ref=\"62004007\" data-end-ref=\"62004007\">4:7</data>; <data class=\"bible-ref\" data-start-ref=\"62005001\" data-end-ref=\"62005001\">5:1</data>, <data class=\"bible-ref\" data-start-ref=\"62005004\" data-end-ref=\"62005004\">4</data>, <data class=\"bible-ref\" data-start-ref=\"62005018\" data-end-ref=\"62005018\">18</data>). This Greek word, which occurs again in <data class=\"bible-ref\" data-start-ref=\"60001023\" data-end-ref=\"60001023\">1 Peter 1:23</data>, frames the message of <data class=\"bible-ref\" data-start-ref=\"60001001\" data-end-ref=\"60001025\">1:1–25</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001003",
+"start_ref_usfm": "1PE 1:3",
+"end_ref": "60001003",
+"end_ref_usfm": "1PE 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Bless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bless"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+}
+]
+}
+},
+{
+"content_id": "15724",
+"reference_id": 14892,
+"version": "1.0.4",
+"title": "1 Peter 1:3–9",
+"media_type": "Text",
+"index_reference": "60001003-60001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In most New Testament letters, a section of thanks or praise follows the greeting. Peter praises God because his mercy gives new spiritual life. This life creates hope for the future, even during difficult times.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001003",
+"start_ref_usfm": "1PE 1:3",
+"end_ref": "60001009",
+"end_ref_usfm": "1PE 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.5571,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Bless",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Bless"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Undefiled",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Undefiled"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Sky"
+}
+]
+}
+},
+{
+"content_id": "15726",
+"reference_id": 14894,
+"version": "1.0.4",
+"title": "1 Peter 1:4",
+"media_type": "Text",
+"index_reference": "60001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The language of inheritance often refers to what God has promised his people. It originally applied to the land of Israel (see <data class=\"bible-ref\" data-start-ref=\"05003028\" data-end-ref=\"05003028\">Deuteronomy 3:28</data>). Later, <em>inheritance</em> came to mean the people of God and God&apos;s presence with them (see <data class=\"bible-ref\" data-start-ref=\"19033012\" data-end-ref=\"19033012\">Psalm 33:12</data>; <data class=\"bible-ref\" data-start-ref=\"26044028\" data-end-ref=\"26044028\">Ezekiel 44:28</data>). In the New Testament, the inheritance is the spiritual benefits and eternal salvation that God promises to his people (see <data class=\"bible-ref\" data-start-ref=\"49001011\" data-end-ref=\"49001011\">Ephesians 1:11</data>; <data class=\"bible-ref\" data-start-ref=\"58009015\" data-end-ref=\"58009015\">Hebrews 9:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001004",
+"start_ref_usfm": "1PE 1:4",
+"end_ref": "60001004",
+"end_ref_usfm": "1PE 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Undefiled",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Undefiled"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+}
+]
+}
+},
+{
+"content_id": "15727",
+"reference_id": 14895,
+"version": "1.0.4",
+"title": "1 Peter 1:5",
+"media_type": "Text",
+"index_reference": "60001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>For the salvation</em></span>: In the New Testament, <em>salvation</em> often means the final rescue from sin and death when Christ returns. This hope encourages Christians to persevere until the end (see also <data class=\"bible-ref\" data-start-ref=\"60001009\" data-end-ref=\"60001009\">1:9</data>, <data class=\"bible-ref\" data-start-ref=\"60001010\" data-end-ref=\"60001010\">10</data>; <data class=\"bible-ref\" data-start-ref=\"60002002\" data-end-ref=\"60002002\">2:2</data>; <data class=\"bible-ref\" data-start-ref=\"60004018\" data-end-ref=\"60004018\">4:18</data>).</p></li><li><p><em>ready to be revealed</em>: The future revealing of God’s salvation stands in contrast to the present time, when God and his purposes are not fully seen (see also <data class=\"bible-ref\" data-start-ref=\"60001007\" data-end-ref=\"60001007\">1:7</data>, <data class=\"bible-ref\" data-start-ref=\"60001013\" data-end-ref=\"60001013\">13</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001005",
+"start_ref_usfm": "1PE 1:5",
+"end_ref": "60001005",
+"end_ref_usfm": "1PE 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "15728",
+"reference_id": 14896,
+"version": "1.0.4",
+"title": "1 Peter 1:7",
+"media_type": "Text",
+"index_reference": "60001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>proven character of your faith …  refined by fire</em>:</span> Faith, like gold, becomes purer when tested or refined by fire.</p></li><li><p><em>may result in praise, glory, and honor</em>: This could mean that God will give praise, glory, and honor to faithful Christians. It could also mean that their faithful lives will bring praise, glory, and honor to God.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001007",
+"start_ref_usfm": "1PE 1:7",
+"end_ref": "60001007",
+"end_ref_usfm": "1PE 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+}
+]
+}
+},
+{
+"content_id": "15729",
+"reference_id": 14897,
+"version": "1.0.4",
+"title": "1 Peter 1:9",
+"media_type": "Text",
+"index_reference": "60001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>salvation of your souls</em>: The Greek word translated <em>souls</em> often refers to the whole person and not just to some part or aspect of the person (<data class=\"bible-ref\" data-start-ref=\"40020028\" data-end-ref=\"40020028\">Matthew 20:28</data>; <data class=\"bible-ref\" data-start-ref=\"41008035\" data-end-ref=\"41008035\">Mark 8:35</data>). Salvation affects our whole person, not the inner person only.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001009",
+"start_ref_usfm": "1PE 1:9",
+"end_ref": "60001009",
+"end_ref_usfm": "1PE 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "15710",
+"reference_id": 14878,
+"version": "1.0.4",
+"title": "1 Peter 1:10–12",
+"media_type": "Text",
+"index_reference": "60001010-60001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>this salvation</em>: The prophets in the Old Testament spoke about this salvation long before it came. Even the angels desire to understand it more fully.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001010",
+"start_ref_usfm": "1PE 1:10",
+"end_ref": "60001012",
+"end_ref_usfm": "1PE 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Speak",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Speak as a Prophet"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "15711",
+"reference_id": 14879,
+"version": "1.0.4",
+"title": "1 Peter 1:11",
+"media_type": "Text",
+"index_reference": "60001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>trying to determine</em></span>: The prophets in the Old Testament received many messages about the future. But they did not know exactly when the promised salvation would come or how God would bring it.</p></li><li><p>The Greek phrase translated <em>the time</em> can also mean <em>what person</em>. The prophets understood that the Messiah would come and that he would suffer before he was glorified. But they did not know who the Messiah would be.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001011",
+"start_ref_usfm": "1PE 1:11",
+"end_ref": "60001011",
+"end_ref_usfm": "1PE 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+}
+]
+}
+},
+{
+"content_id": "15712",
+"reference_id": 14880,
+"version": "1.0.4",
+"title": "1 Peter 1:12",
+"media_type": "Text",
+"index_reference": "60001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>long to look</em></span>: The same Greek word is used of the disciples when they looked into the empty tomb of Jesus (<data class=\"bible-ref\" data-start-ref=\"42024012\" data-end-ref=\"42024012\">Luke 24:12</data>; <data class=\"bible-ref\" data-start-ref=\"43020005\" data-end-ref=\"43020005\">John 20:5</data>, <data class=\"bible-ref\" data-start-ref=\"43020011\" data-end-ref=\"43020011\">11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001012",
+"start_ref_usfm": "1PE 1:12",
+"end_ref": "60001012",
+"end_ref_usfm": "1PE 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "15714",
+"reference_id": 14882,
+"version": "1.0.4",
+"title": "1 Peter 1:13",
+"media_type": "Text",
+"index_reference": "60001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>prepare your minds for action</em></span> (literally <em>gird the loins of your mind</em>): In Peter’s time, a man had to tuck the hem of his long robe into his belt before he could work or run.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001013",
+"start_ref_usfm": "1PE 1:13",
+"end_ref": "60001013",
+"end_ref_usfm": "1PE 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Mind.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mind"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "15713",
+"reference_id": 14881,
+"version": "1.0.4",
+"title": "1 Peter 1:13–21",
+"media_type": "Text",
+"index_reference": "60001013-60001021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>New birth and the hope of salvation call Christians to live as God’s people. They must turn away from the values of the world and follow the holiness of God, who redeemed them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001013",
+"start_ref_usfm": "1PE 1:13",
+"end_ref": "60001021",
+"end_ref_usfm": "1PE 1:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.3222,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:CallUpon",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Call Upon"
+},
+{
+"id": "keyterm:Unblemished",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Unblemished"
+},
+{
+"id": "keyterm:Liberation",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Liberation"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Worthless",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Worthless"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "keyterm:Mind.2",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Mind"
+},
+{
+"id": "keyterm:AboveCriticism",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Above Criticism"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Blood",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Blood"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+}
+]
+}
+},
+{
+"content_id": "15715",
+"reference_id": 14883,
+"version": "1.0.4",
+"title": "1 Peter 1:15–16",
+"media_type": "Text",
+"index_reference": "60001015-60001016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>&quot;</em><span><em>Be holy, because I am holy</em></span><em>&quot;</em>: This phrase appears often in Scripture. It emphasizes that God&apos;s people must be holy like God (see <data class=\"bible-ref\" data-start-ref=\"03011044\" data-end-ref=\"03011045\">Leviticus 11:44–45</data>; <data class=\"bible-ref\" data-start-ref=\"03019002\" data-end-ref=\"03019002\">19:2</data>; <data class=\"bible-ref\" data-start-ref=\"03020007\" data-end-ref=\"03020007\">20:7</data>; also <data class=\"bible-ref\" data-start-ref=\"26020012\" data-end-ref=\"26020012\">Ezekiel 20:12</data>; <data class=\"bible-ref\" data-start-ref=\"49001004\" data-end-ref=\"49001004\">Ephesians 1:4</data>; <data class=\"bible-ref\" data-start-ref=\"52004003\" data-end-ref=\"52004003\">1&nbsp;Thessalonians 4:3</data>; <data class=\"bible-ref\" data-start-ref=\"66022011\" data-end-ref=\"66022011\">Revelation 22:11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001015",
+"start_ref_usfm": "1PE 1:15",
+"end_ref": "60001016",
+"end_ref_usfm": "1PE 1:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.75,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "15716",
+"reference_id": 14884,
+"version": "1.0.4",
+"title": "1 Peter 1:17",
+"media_type": "Text",
+"index_reference": "60001017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Christians belong to heaven. Because of this, they live in this world as <em>foreigners</em> with different values and with a clear purpose from God. Their heavenly identity calls them to live faithfully and responsibly in the places where God has put them, while looking forward to the fullness of life with God (<data class=\"bible-ref\" data-start-ref=\"60001001\" data-end-ref=\"60001001\">1:1</data>; see <data class=\"bible-ref\" data-start-ref=\"50003020\" data-end-ref=\"50003020\">Philippians 3:20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001017",
+"start_ref_usfm": "1PE 1:17",
+"end_ref": "60001017",
+"end_ref_usfm": "1PE 1:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:CallUpon",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Call Upon"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Decided"
+}
+]
+}
+},
+{
+"content_id": "15717",
+"reference_id": 14885,
+"version": "1.0.4",
+"title": "1 Peter 1:18",
+"media_type": "Text",
+"index_reference": "60001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>A ransom is a payment made to set a captive free. In the ancient world, slaves could sometimes pay a ransom and gain their freedom. Christ’s death is the ransom that God used to set people free from sin (<data class=\"bible-ref\" data-start-ref=\"60001019\" data-end-ref=\"60001019\">1:19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001018",
+"start_ref_usfm": "1PE 1:18",
+"end_ref": "60001018",
+"end_ref_usfm": "1PE 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Liberation",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Liberation"
+},
+{
+"id": "keyterm:Worthless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Worthless"
+}
+]
+}
+},
+{
+"content_id": "15718",
+"reference_id": 14886,
+"version": "1.0.4",
+"title": "1 Peter 1:19",
+"media_type": "Text",
+"index_reference": "60001019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>a lamb without blemish or spot</em></span>: The Jewish Passover <em>lamb</em> had to be without any defect <span> </span>(<data class=\"bible-ref\" data-start-ref=\"02012005\" data-end-ref=\"02012005\">Exodus 12:5</data>). Christ fulfills the meaning of the Passover. He was without defect or sin (compare <data class=\"bible-ref\" data-start-ref=\"58004014\" data-end-ref=\"58004016\">Hebrews 4:14–16</data>; <data class=\"bible-ref\" data-start-ref=\"58007026\" data-end-ref=\"58007028\">7:26–28</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001019",
+"start_ref_usfm": "1PE 1:19",
+"end_ref": "60001019",
+"end_ref_usfm": "1PE 1:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Unblemished",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Unblemished"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Blood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Blood"
+},
+{
+"id": "keyterm:AboveCriticism",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Above Criticism"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+}
+]
+}
+},
+{
+"content_id": "15720",
+"reference_id": 14888,
+"version": "1.0.4",
+"title": "1 Peter 1:20",
+"media_type": "Text",
+"index_reference": "60001020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>With Christ’s coming, God is fulfilling Old Testament promises of redemption, and the last days have begun.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001020",
+"start_ref_usfm": "1PE 1:20",
+"end_ref": "60001020",
+"end_ref_usfm": "1PE 1:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+}
+]
+}
+},
+{
+"content_id": "15722",
+"reference_id": 14890,
+"version": "1.0.4",
+"title": "1 Peter 1:22",
+"media_type": "Text",
+"index_reference": "60001022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>have a genuine love for your brothers </em>(</span>Literally, <em>must have brotherly love</em>): See <data class=\"resource-ref\" data-content-id=\"15789\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 5:9</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001022",
+"start_ref_usfm": "1PE 1:22",
+"end_ref": "60001022",
+"end_ref_usfm": "1PE 1:22"
+}
+],
+"resource": [
+{
+"reference_id": "14957",
+"content_id": "15789",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 5:9",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:LoveForOnesFellowBeliever",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Love for One's Fellow Believer"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Unhypocritical",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Unhypocritical"
+}
+]
+}
+},
+{
+"content_id": "15721",
+"reference_id": 14889,
+"version": "1.0.4",
+"title": "1 Peter 1:22–2.3",
+"media_type": "Text",
+"index_reference": "60001022-60002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After calling believers to live holy lives (<data class=\"bible-ref\" data-start-ref=\"60001013\" data-end-ref=\"60001021\">1:13–21</data>), Peter explains how they must show love to one another as fellow Christians.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001022",
+"start_ref_usfm": "1PE 1:22",
+"end_ref": "60002003",
+"end_ref_usfm": "1PE 2:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:LoveForOnesFellowBeliever",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Love for One's Fellow Believer"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Hypocrisy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Hypocrisy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Unadulterated",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Unadulterated"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:Unhypocritical",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Unhypocritical"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Long For"
+},
+{
+"id": "keyterm:Word",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Word"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Rational",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Rational"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "flora:Grass",
+"type": "flora",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Grass"
+},
+{
+"id": "flora:WildFlower",
+"type": "flora",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Wild Flower"
+}
+]
+}
+},
+{
+"content_id": "15741",
+"reference_id": 14909,
+"version": "1.0.4",
+"title": "1 Peter 2:2",
+"media_type": "Text",
+"index_reference": "60002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Christians have been &quot;born again&quot; and should be like newborn babies, who naturally and regularly crave pure spiritual milk (<data class=\"bible-ref\" data-start-ref=\"60001023\" data-end-ref=\"60001023\">1:23</data>). In other places in the New Testament, <em>milk</em> (in contrast to solid food) represents basic Christian teachings (<data class=\"bible-ref\" data-start-ref=\"46003002\" data-end-ref=\"46003002\">1&nbsp;Corinthians 3:2</data>; <data class=\"bible-ref\" data-start-ref=\"58005012\" data-end-ref=\"58005013\">Hebrews 5:12–13</data>). But this does not mean that the people Peter wrote to were new believers. Here, <em>milk</em> most likely refers to God’s word in general.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002002",
+"start_ref_usfm": "1PE 2:2",
+"end_ref": "60002002",
+"end_ref_usfm": "1PE 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Rational",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Rational"
+},
+{
+"id": "keyterm:Unadulterated",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Unadulterated"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Long For"
+}
+]
+}
+},
+{
+"content_id": "15742",
+"reference_id": 14910,
+"version": "1.0.4",
+"title": "1 Peter 2:3",
+"media_type": "Text",
+"index_reference": "60002003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>now that you have tasted that the Lord is good</em></span>: These words come from <data class=\"bible-ref\" data-start-ref=\"19034008\" data-end-ref=\"19034008\">Psalm 34:8</data>. Peter quotes this psalm again in <data class=\"bible-ref\" data-start-ref=\"60003010\" data-end-ref=\"60003012\">1&nbsp;Peter 3:10–12</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002003",
+"start_ref_usfm": "1PE 2:3",
+"end_ref": "60002003",
+"end_ref_usfm": "1PE 2:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "15744",
+"reference_id": 14912,
+"version": "1.0.4",
+"title": "1 Peter 2:4",
+"media_type": "Text",
+"index_reference": "60002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>rejected by men but chosen and precious in God’s sight</em>:</span> This refers to <data class=\"bible-ref\" data-start-ref=\"19118022\" data-end-ref=\"19118022\">Psalm 118:22</data>, which is quoted in <data class=\"bible-ref\" data-start-ref=\"60002007\" data-end-ref=\"60002007\">1 Peter 2:7</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002004",
+"start_ref_usfm": "1PE 2:4",
+"end_ref": "60002004",
+"end_ref_usfm": "1PE 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Reject",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Reject"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+}
+]
+}
+},
+{
+"content_id": "15743",
+"reference_id": 14911,
+"version": "1.0.4",
+"title": "1 Peter 2:4–10",
+"media_type": "Text",
+"index_reference": "60002004-60002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Throughout this letter, Peter encourages suffering believers by reminding them of the great honor they have from God. In this paragraph, he describes the Christian community as a new temple that is built on Christ. He also shows that they share in the blessings God promised to his covenant people.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002004",
+"start_ref_usfm": "1PE 2:4",
+"end_ref": "60002010",
+"end_ref_usfm": "1PE 2:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.4714,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4429,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.3571,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Reject",
+"type": "keyterm",
+"confidence": 0.3571,
+"match_method": "canonical",
+"preferred_label": "Reject"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "realia:Cornerstone",
+"type": "realia",
+"confidence": 0.2686,
+"match_method": "canonical",
+"preferred_label": "Cornerstone"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:StumblingBlock",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Stumbling Block"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Disbelieve",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Disbelieve"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Scripture",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Written"
+},
+{
+"id": "realia:Temple",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Temple"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "15745",
+"reference_id": 14913,
+"version": "1.0.4",
+"title": "1 Peter 2:5",
+"media_type": "Text",
+"index_reference": "60002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>God&apos;s people form the spiritual house or temple where God lives (<data class=\"bible-ref\" data-start-ref=\"46003016\" data-end-ref=\"46003016\">1&nbsp;Corinthians 3:16</data>). Jesus compared his body to a &quot;temple&quot; (<data class=\"bible-ref\" data-start-ref=\"43002019\" data-end-ref=\"43002022\">John 2:19–22</data>). The church is called &quot;the body of Christ&quot; (<data class=\"bible-ref\" data-start-ref=\"49004012\" data-end-ref=\"49004012\">Ephesians 4:12</data>). God no longer reveals himself in one place but in and among the people who belong to him and praise his goodness (see <data class=\"bible-ref\" data-start-ref=\"60002010\" data-end-ref=\"60002010\">1&nbsp;Peter 2:10</data>).</p></li><li><p>As God’s holy priests in the new covenant, Christians offer not animal sacrifices but spiritual sacrifices such as praising God, praying, and doing good (see <data class=\"bible-ref\" data-start-ref=\"45012001\" data-end-ref=\"45012001\">Romans 12:1</data>; <data class=\"bible-ref\" data-start-ref=\"58013015\" data-end-ref=\"58013016\">Hebrews 13:15–16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002005",
+"start_ref_usfm": "1PE 2:5",
+"end_ref": "60002005",
+"end_ref_usfm": "1PE 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "realia:Temple",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Temple"
+},
+{
+"id": "realia:House",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "House"
+}
+]
+}
+},
+{
+"content_id": "15746",
+"reference_id": 14914,
+"version": "1.0.4",
+"title": "1 Peter 2:6–8",
+"media_type": "Text",
+"index_reference": "60002006-60002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These verses include three quotations from the Old Testament. Each one describes Christ as a kind of stone:</p><ul><li><p>The first quotation calls him the cornerstone on which God builds the new temple (<data class=\"bible-ref\" data-start-ref=\"60002006\" data-end-ref=\"60002006\">2:6</data>). </p></li><li><p>The second quotation calls him the cornerstone that people rejected, but God raised up to become the most important stone in his plan to save the world (<data class=\"bible-ref\" data-start-ref=\"60002007\" data-end-ref=\"60002007\">2:7</data>). </p></li><li><p>The third quotation calls him the stone that makes people stumble when they refuse to believe (<data class=\"bible-ref\" data-start-ref=\"60002008\" data-end-ref=\"60002008\">2:8</data>). </p></li></ul><p>Jesus quotes <data class=\"bible-ref\" data-start-ref=\"19118022\" data-end-ref=\"19118022\">Psalm 118:22</data> in <data class=\"bible-ref\" data-start-ref=\"40021042\" data-end-ref=\"40021042\">Matthew 21:42</data>. Paul quotes both <data class=\"bible-ref\" data-start-ref=\"23008014\" data-end-ref=\"23008014\">Isaiah 8:14</data> and <data class=\"bible-ref\" data-start-ref=\"23028016\" data-end-ref=\"23028016\">28:16</data> in <data class=\"bible-ref\" data-start-ref=\"45009033\" data-end-ref=\"45009033\">Romans 9:33</data>. These three Old Testament passages were likely brought together very early in the church. Early believers probably used them as a combined witness to the identity and importance of Jesus the Messiah.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002006",
+"start_ref_usfm": "1PE 2:6",
+"end_ref": "60002008",
+"end_ref_usfm": "1PE 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "realia:Cornerstone",
+"type": "realia",
+"confidence": 0.44,
+"match_method": "canonical",
+"preferred_label": "Cornerstone"
+},
+{
+"id": "place:Jerusalem",
+"type": "place",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Jerusalem"
+},
+{
+"id": "keyterm:StumblingBlock",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Stumbling Block"
+},
+{
+"id": "keyterm:Disbelieve",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Disbelieve"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Scripture",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Written"
+},
+{
+"id": "keyterm:Reject",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Reject"
+}
+]
+}
+},
+{
+"content_id": "15747",
+"reference_id": 14915,
+"version": "1.0.4",
+"title": "1 Peter 2:8",
+"media_type": "Text",
+"index_reference": "60002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>to this they were appointed</em></span>: It is not clear whether God appointed these people to unbelief, or whether God appointed them to suffer condemnation because they refused to believe.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002008",
+"start_ref_usfm": "1PE 2:8",
+"end_ref": "60002008",
+"end_ref_usfm": "1PE 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:StumblingBlock",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Stumbling Block"
+}
+]
+}
+},
+{
+"content_id": "15748",
+"reference_id": 14916,
+"version": "1.0.4",
+"title": "1 Peter 2:9",
+"media_type": "Text",
+"index_reference": "60002009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter uses descriptions of the Israelites in the Old Testament to refer to his mainly non-Jewish (Gentile) audience (see, for example, <data class=\"bible-ref\" data-start-ref=\"02019005\" data-end-ref=\"02019006\">Exodus 19:5–6</data>). By doing this, he shows that they are truly God’s people in the time of the new covenant, just as all Christians are.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002009",
+"start_ref_usfm": "1PE 2:9",
+"end_ref": "60002009",
+"end_ref_usfm": "1PE 2:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "15731",
+"reference_id": 14899,
+"version": "1.0.4",
+"title": "1 Peter 2:11",
+"media_type": "Text",
+"index_reference": "60002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>foreigners and exiles</em></span>: Christians belong not to this world but to the kingdom of heaven (see <data class=\"bible-ref\" data-start-ref=\"60001001\" data-end-ref=\"60001001\">1:1</data>,&nbsp;<data class=\"bible-ref\" data-start-ref=\"60001017\" data-end-ref=\"60001017\">17</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60001017",
+"start_ref_usfm": "1PE 1:17",
+"end_ref": "60001017",
+"end_ref_usfm": "1PE 1:17"
+},
+{
+"start_ref": "60002011",
+"start_ref_usfm": "1PE 2:11",
+"end_ref": "60002011",
+"end_ref_usfm": "1PE 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Carnal",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Carnal"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "15730",
+"reference_id": 14898,
+"version": "1.0.4",
+"title": "1 Peter 2:11–12",
+"media_type": "Text",
+"index_reference": "60002011-60002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>These verses connect the first part of the letter with what comes next. They can be seen as the end of the first section or the beginning of the second section. In these verses, the writer states the main theme of the letter. Christians live among people who may not accept their faith, and they need to live out the message of the good news. When they do this, they can help lead other people to the Lord.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002011",
+"start_ref_usfm": "1PE 2:11",
+"end_ref": "60002012",
+"end_ref_usfm": "1PE 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Carnal",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Carnal"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "15732",
+"reference_id": 14900,
+"version": "1.0.4",
+"title": "1 Peter 2:12",
+"media_type": "Text",
+"index_reference": "60002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>on the day He visits us</em></span>: The Greek phrase behind this wording can also be translated “on the day of visitation.” In the Greek Old Testament, <em>day of visitation</em> refers to a time when God comes to act in judgment against his enemies (<data class=\"bible-ref\" data-start-ref=\"23010003\" data-end-ref=\"23010003\">Isaiah 10:3</data>; <data class=\"bible-ref\" data-start-ref=\"24006015\" data-end-ref=\"24006015\">Jeremiah 6:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002012",
+"start_ref_usfm": "1PE 2:12",
+"end_ref": "60002012",
+"end_ref_usfm": "1PE 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+}
+]
+}
+},
+{
+"content_id": "15734",
+"reference_id": 14902,
+"version": "1.0.4",
+"title": "1 Peter 2:13",
+"media_type": "Text",
+"index_reference": "60002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>During Peter&apos;s time, the Roman emperor was the king. Christians were suffering under the government and would soon face harsher persecution under Emperor Nero.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002013",
+"start_ref_usfm": "1PE 2:13",
+"end_ref": "60002013",
+"end_ref_usfm": "1PE 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "15733",
+"reference_id": 14901,
+"version": "1.0.4",
+"title": "1 Peter 2:13–3.7",
+"media_type": "Text",
+"index_reference": "60002013-60003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This section focuses on the key instruction to submit to all human authority. Peter applies this instruction to several relationships: </p><ul><li><p>Christians should accept the authority of those in government (<data class=\"bible-ref\" data-start-ref=\"60002013\" data-end-ref=\"60002017\">2:13–17</data>). </p></li><li><p>Christian slaves should accept the authority of their masters (<data class=\"bible-ref\" data-start-ref=\"60002018\" data-end-ref=\"60002025\">2:18–25</data>).</p></li><li><p>Christian wives should accept the authority of their husbands (<data class=\"bible-ref\" data-start-ref=\"60003001\" data-end-ref=\"60003006\">3:1–6</data>). </p></li></ul><p>Peter appears to follow an early Christian use of the traditional household code. This code gave a series of instructions for different members of a household. Similar examples appear in <data class=\"bible-ref\" data-start-ref=\"49005021\" data-end-ref=\"49006009\">Ephesians 5:21–6:9</data>, <data class=\"bible-ref\" data-start-ref=\"51003018\" data-end-ref=\"51004001\">Colossians 3:18–4:1</data>, <data class=\"bible-ref\" data-start-ref=\"54005001\" data-end-ref=\"54006002\">1&nbsp;Timothy 5:1–6:2</data>, and <data class=\"bible-ref\" data-start-ref=\"56002001\" data-end-ref=\"56002010\">Titus 2:1–10</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002013",
+"start_ref_usfm": "1PE 2:13",
+"end_ref": "60003007",
+"end_ref_usfm": "1PE 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.53,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.39,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.3275,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.3175,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.3175,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.245,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:GrantJustice",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Avenge"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Unjust",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Unjust"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "person:Sarah",
+"type": "person",
+"confidence": 0.1725,
+"match_method": "canonical",
+"preferred_label": "Sarah"
+},
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.1225,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.1125,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "15735",
+"reference_id": 14903,
+"version": "1.0.4",
+"title": "1 Peter 2:14",
+"media_type": "Text",
+"index_reference": "60002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>to punish those who do wrong and to praise those who do right</em></span>: Compare <data class=\"bible-ref\" data-start-ref=\"45013003\" data-end-ref=\"45013004\">Romans 13:3–4</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002014",
+"start_ref_usfm": "1PE 2:14",
+"end_ref": "60002014",
+"end_ref_usfm": "1PE 2:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GrantJustice",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Avenge"
+}
+]
+}
+},
+{
+"content_id": "15736",
+"reference_id": 14904,
+"version": "1.0.4",
+"title": "1 Peter 2:17",
+"media_type": "Text",
+"index_reference": "60002017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>The brotherhood</em>: See <data class=\"resource-ref\" data-content-id=\"15789\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 5:9</data>.</p></li><li><p><em>fear God, honor the king</em>: Peter might be thinking about the balanced statement that Jesus gave on a Christian’s duty to both God and the government (see <data class=\"bible-ref\" data-start-ref=\"40022021\" data-end-ref=\"40022021\">Matthew 22:21</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002017",
+"start_ref_usfm": "1PE 2:17",
+"end_ref": "60002017",
+"end_ref_usfm": "1PE 2:17"
+}
+],
+"resource": [
+{
+"reference_id": "14957",
+"content_id": "15789",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 5:9",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+}
+]
+}
+},
+{
+"content_id": "15738",
+"reference_id": 14906,
+"version": "1.0.4",
+"title": "1 Peter 2:18",
+"media_type": "Text",
+"index_reference": "60002018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Many slaves in the Roman Empire held responsible positions and earned a decent income. However, most slaves were treated harshly, and all slaves lacked legal status and basic rights.</p></li><li><p><em>with all respect</em> (literally <em>with all fear</em>): Peter might be urging slaves to fear God (see <data class=\"bible-ref\" data-start-ref=\"60002017\" data-end-ref=\"60002017\">2:17</data>; compare <data class=\"bible-ref\" data-start-ref=\"60001017\" data-end-ref=\"60001017\">1:17</data>) or fear the master&apos;s punishment. However, he often uses this kind of language to describe the respectful attitude that Christians should show toward others (<data class=\"bible-ref\" data-start-ref=\"60003016\" data-end-ref=\"60003016\">3:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002018",
+"start_ref_usfm": "1PE 2:18",
+"end_ref": "60002018",
+"end_ref_usfm": "1PE 2:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "15737",
+"reference_id": 14905,
+"version": "1.0.4",
+"title": "1 Peter 2:18–20",
+"media_type": "Text",
+"index_reference": "60002018-60002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>A slave was legally bound to a master and could not change his or her situation. In contrast, a modern employee has the right to stop working for an employer who is cruel. Some employees, however, may not be able to leave their jobs. In those cases, Peter’s advice to slaves can also apply to employees today.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002018",
+"start_ref_usfm": "1PE 2:18",
+"end_ref": "60002020",
+"end_ref_usfm": "1PE 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Unjust",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Unjust"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+}
+]
+}
+},
+{
+"content_id": "15739",
+"reference_id": 14907,
+"version": "1.0.4",
+"title": "1 Peter 2:21–25",
+"media_type": "Text",
+"index_reference": "60002021-60002025",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>There is no clear change in who Peter is addressing in this passage. However, the general tone of these verses shows that they apply to all Christians.</p></li><li><p>These verses might include an early Christian hymn or confession about Christ (<data class=\"bible-ref\" data-start-ref=\"60002022\" data-end-ref=\"60002025\">2:22–25</data>). They focus on the sufferings of Christ for human salvation or redemption, using language mainly from <data class=\"bible-ref\" data-start-ref=\"23052013\" data-end-ref=\"23053012\">Isaiah 52:13–53:12</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002021",
+"start_ref_usfm": "1PE 2:21",
+"end_ref": "60002025",
+"end_ref_usfm": "1PE 2:25"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Goat"
+}
+]
+}
+},
+{
+"content_id": "15740",
+"reference_id": 14908,
+"version": "1.0.4",
+"title": "1 Peter 2:24",
+"media_type": "Text",
+"index_reference": "60002024",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>He Himself bore our sins</em></span>: This phrase refers to <data class=\"bible-ref\" data-start-ref=\"23053004\" data-end-ref=\"23053004\">Isaiah 53:4</data>, <data class=\"bible-ref\" data-start-ref=\"23053011\" data-end-ref=\"23053012\">11–12</data>.</p></li><li><p><span><em>By His stripes you are healed</em></span>: The physical suffering of Christ has freed us from slavery to sin (compare <data class=\"bible-ref\" data-start-ref=\"23053005\" data-end-ref=\"23053005\">Isaiah 53:5</data>). The apostle Matthew uses similar language from <data class=\"bible-ref\" data-start-ref=\"23053004\" data-end-ref=\"23053004\">Isaiah 53:4</data> to describe the physical healings Jesus performed (<data class=\"bible-ref\" data-start-ref=\"40008017\" data-end-ref=\"40008017\">Matthew 8:17</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60002024",
+"start_ref_usfm": "1PE 2:24",
+"end_ref": "60002024",
+"end_ref_usfm": "1PE 2:24"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+}
+]
+}
+},
+{
+"content_id": "15757",
+"reference_id": 14925,
+"version": "1.0.4",
+"title": "1 Peter 3:1",
+"media_type": "Text",
+"index_reference": "60003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>Submit yourselves to</em></span>: Wives are instructed to recognize that God has appointed the husband as head of the relationship (see <data class=\"bible-ref\" data-start-ref=\"60002013\" data-end-ref=\"60002013\">2:13</data>; <data class=\"bible-ref\" data-start-ref=\"49005022\" data-end-ref=\"49005025\">Ephesians 5:22–25</data>). In the ancient world, submission often meant obedience (see <data class=\"bible-ref\" data-start-ref=\"60003006\" data-end-ref=\"60003006\">1&nbsp;Peter 3:6</data>). God also intends the husband to lead in a loving and respectful way (<data class=\"bible-ref\" data-start-ref=\"60003007\" data-end-ref=\"60003007\">3:7</data>; see <data class=\"bible-ref\" data-start-ref=\"49005025\" data-end-ref=\"49005030\">Ephesians 5:25–30</data>). Peter focuses especially on wives whose husbands do not believe in Christ and who may oppose their wives’ faith.</p></li><li><p><em>without words</em>: Peter encourages Christian wives to influence their husbands through respectful and appropriate behavior.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003001",
+"start_ref_usfm": "1PE 3:1",
+"end_ref": "60003001",
+"end_ref_usfm": "1PE 3:1"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "15749",
+"reference_id": 14917,
+"version": "1.0.4",
+"title": "1 Peter 3:1–7",
+"media_type": "Text",
+"index_reference": "60003001-60003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The last of Peter’s three teachings about accepting authority speaks to wives and husbands (<data class=\"bible-ref\" data-start-ref=\"60002013\" data-end-ref=\"60003007\">2:13–3:7</data>; compare <data class=\"bible-ref\" data-start-ref=\"49005021\" data-end-ref=\"49005033\">Ephesians 5:21–33</data>; <data class=\"bible-ref\" data-start-ref=\"51003018\" data-end-ref=\"51003019\">Colossians 3:18–19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003001",
+"start_ref_usfm": "1PE 3:1",
+"end_ref": "60003007",
+"end_ref_usfm": "1PE 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Sarah",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Sarah"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+},
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.1829,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.1543,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "15761",
+"reference_id": 14929,
+"version": "1.0.4",
+"title": "1 Peter 3:3–4",
+"media_type": "Text",
+"index_reference": "60003003-60003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>braided hair or gold jewelry or fine clothes</em></span>: Peter is not saying that Christian women must avoid all forms of decoration. Instead, he teaches that their beauty should not come from clothing or jewelry but from the inner beauty of a gentle and quiet spirit. See also <data class=\"bible-ref\" data-start-ref=\"54002009\" data-end-ref=\"54002010\">1&nbsp;Timothy 2:9–10</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003003",
+"start_ref_usfm": "1PE 3:3",
+"end_ref": "60003004",
+"end_ref_usfm": "1PE 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:GoldJewelry",
+"type": "realia",
+"confidence": 0.415,
+"match_method": "canonical",
+"preferred_label": "Gold Jewelry"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Imperishable",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Imperishable"
+},
+{
+"id": "realia:Clothing",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Clothing"
+}
+]
+}
+},
+{
+"content_id": "15762",
+"reference_id": 14930,
+"version": "1.0.4",
+"title": "1 Peter 3:6",
+"media_type": "Text",
+"index_reference": "60003006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>And called him lord</em>: See <data class=\"bible-ref\" data-start-ref=\"01018012\" data-end-ref=\"01018012\">Genesis 18:12</data>. Peter sees this way of speaking as a sign of Sarah’s general attitude of respect toward Abraham.</p></li><li><p><span><em>refuse to give way to fear</em></span>: Christian wives who were married to unbelieving husbands were often pressured, both subtly and openly, to give up Christian principles and values. Peter urges them to continue to do what is right.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003006",
+"start_ref_usfm": "1PE 3:6",
+"end_ref": "60003006",
+"end_ref_usfm": "1PE 3:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "person:Sarah",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sarah"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "person:Abraham",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Abraham"
+}
+]
+}
+},
+{
+"content_id": "15763",
+"reference_id": 14931,
+"version": "1.0.4",
+"title": "1 Peter 3:7",
+"media_type": "Text",
+"index_reference": "60003007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>In the same way</em>: Like slaves and wives, <em>husbands</em> also have specific responsibilities in the household (<data class=\"bible-ref\" data-start-ref=\"60002018\" data-end-ref=\"60003006\">2:18–3:6</data>).</p></li><li><p><span><em>as a delicate vessel</em></span>: Peter was likely referring to a woman’s physical strength and possibly her lower social status in that society. Because women were usually physically weaker than men and often had less power to protect themselves, the husband had the responsibility to care for and protect his wife.</p></li><li><p><span><em>fellow heirs of the gracious gift of life</em></span>: The husband’s role as head must be balanced by the truth that men and women have equal status before God (see also <data class=\"bible-ref\" data-start-ref=\"48003026\" data-end-ref=\"48003029\">Galatians 3:26–29</data>).</p></li><li><p>A husband’s prayers are hindered if he does not give special honor to his wife (compare <data class=\"bible-ref\" data-start-ref=\"59004003\" data-end-ref=\"59004003\">James 4:3</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003007",
+"start_ref_usfm": "1PE 3:7",
+"end_ref": "60003007",
+"end_ref_usfm": "1PE 3:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "15764",
+"reference_id": 14932,
+"version": "1.0.4",
+"title": "1 Peter 3:8–12",
+"media_type": "Text",
+"index_reference": "60003008-60003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Finally</em>: This is the last in a series of instructions to different groups (<data class=\"bible-ref\" data-start-ref=\"60002013\" data-end-ref=\"60003012\">2:13–3:12</data>). Here, all Christians should respond to other people with love, both believers and unbelievers (<data class=\"bible-ref\" data-start-ref=\"60003008\" data-end-ref=\"60003008\">3:8</data>; <data class=\"bible-ref\" data-start-ref=\"60003009\" data-end-ref=\"60003012\">3:9–12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003008",
+"start_ref_usfm": "1PE 3:8",
+"end_ref": "60003012",
+"end_ref_usfm": "1PE 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Sympathetic",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Sympathetic"
+},
+{
+"id": "keyterm:Bless",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Bless"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Tenderhearted",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Tenderhearted"
+}
+]
+}
+},
+{
+"content_id": "15765",
+"reference_id": 14933,
+"version": "1.0.4",
+"title": "1 Peter 3:9",
+"media_type": "Text",
+"index_reference": "60003009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>so that you may inherit a blessing</em></span>: By blessing others, we receive a blessing from God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003009",
+"start_ref_usfm": "1PE 3:9",
+"end_ref": "60003009",
+"end_ref_usfm": "1PE 3:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Bless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Bless"
+}
+]
+}
+},
+{
+"content_id": "15750",
+"reference_id": 14918,
+"version": "1.0.4",
+"title": "1 Peter 3:10–12",
+"media_type": "Text",
+"index_reference": "60003010-60003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter emphasizes the connection between a person’s conduct and the blessing that God gives by quoting <data class=\"bible-ref\" data-start-ref=\"19034012\" data-end-ref=\"19034016\">Psalm 34:12–16</data>. This psalm was important in early Christian teaching (see also <data class=\"bible-ref\" data-start-ref=\"60002003\" data-end-ref=\"60002003\">1 Peter 2:3</data>; <data class=\"bible-ref\" data-start-ref=\"58012014\" data-end-ref=\"58012014\">Hebrews 12:14</data>). The passage teaches believers to control their speech, resist evil, and do good. It also highlights God’s promise to bless those who obey him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003010",
+"start_ref_usfm": "1PE 3:10",
+"end_ref": "60003012",
+"end_ref_usfm": "1PE 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Love"
+}
+]
+}
+},
+{
+"content_id": "15752",
+"reference_id": 14920,
+"version": "1.0.4",
+"title": "1 Peter 3:13",
+"media_type": "Text",
+"index_reference": "60003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In general, people do not want to harm someone who is doing good. However, Christians sometimes suffer even when they do good (<data class=\"bible-ref\" data-start-ref=\"60003014\" data-end-ref=\"60003014\">3:14</data>; see <data class=\"bible-ref\" data-start-ref=\"60001006\" data-end-ref=\"60001006\">1:6</data>; <data class=\"bible-ref\" data-start-ref=\"60004012\" data-end-ref=\"60004019\">4:12–19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003013",
+"start_ref_usfm": "1PE 3:13",
+"end_ref": "60003013",
+"end_ref_usfm": "1PE 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "15751",
+"reference_id": 14919,
+"version": "1.0.4",
+"title": "1 Peter 3:13–17",
+"media_type": "Text",
+"index_reference": "60003013-60003017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This short paragraph emphasizes how Christians should respond to suffering by following Christ&apos;s example (see <data class=\"bible-ref\" data-start-ref=\"60003018\" data-end-ref=\"60003018\">3:18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003013",
+"start_ref_usfm": "1PE 3:13",
+"end_ref": "60003017",
+"end_ref_usfm": "1PE 3:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+}
+]
+}
+},
+{
+"content_id": "15753",
+"reference_id": 14921,
+"version": "1.0.4",
+"title": "1 Peter 3:14–15",
+"media_type": "Text",
+"index_reference": "60003014-60003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>&quot;Do not fear what they fear; do not be shaken“</em></span>: See <data class=\"bible-ref\" data-start-ref=\"23008013\" data-end-ref=\"23008013\">Isaiah 8:13</data>, where God urges the prophet to fear only the Lord.</p></li><li><p><span><em>sanctify Christ as Lord</em></span>: By showing deep respect and obedience to Christ, they will no longer fear the people who persecute them.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003014",
+"start_ref_usfm": "1PE 3:14",
+"end_ref": "60003015",
+"end_ref_usfm": "1PE 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Fear"
+}
+]
+}
+},
+{
+"content_id": "15755",
+"reference_id": 14923,
+"version": "1.0.4",
+"title": "1 Peter 3:18",
+"media_type": "Text",
+"index_reference": "60003018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>He suffered physical death<span> </span>(literally <em>death in the flesh</em>), but he was raised to life in the Spirit (or <em>in spirit</em>). Flesh and spirit are often contrasted in Scripture (for example, <data class=\"bible-ref\" data-start-ref=\"45007005\" data-end-ref=\"45007006\">Romans 7:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"45008002\" data-end-ref=\"45008011\">8:2–11</data>). In this passage, flesh refers to ordinary human life, and the Spirit refers to the new realm that began through Christ’s death and resurrection. Christ died in the old realm and was brought to life in the new realm.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003018",
+"start_ref_usfm": "1PE 3:18",
+"end_ref": "60003018",
+"end_ref_usfm": "1PE 3:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "15754",
+"reference_id": 14922,
+"version": "1.0.4",
+"title": "1 Peter 3:18–22",
+"media_type": "Text",
+"index_reference": "60003018-60003022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>As in <data class=\"bible-ref\" data-start-ref=\"60002021\" data-end-ref=\"60002025\">2:21–25</data>, Peter again points to Christ as an example for believers who suffer. Christ was righteous, yet he suffered (<data class=\"bible-ref\" data-start-ref=\"60003013\" data-end-ref=\"60003017\">3:13–17</data>). His unique work for us reminds suffering Christians that their hope and confidence rest on a secure foundation.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003018",
+"start_ref_usfm": "1PE 3:18",
+"end_ref": "60003022",
+"end_ref_usfm": "1PE 3:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.66,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Baptism",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Baptism"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "person:Noah",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Noah"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:Boat",
+"type": "realia",
+"confidence": 0.22,
+"match_method": "canonical",
+"preferred_label": "Boat"
+},
+{
+"id": "realia:Prison",
+"type": "realia",
+"confidence": 0.18,
+"match_method": "canonical",
+"preferred_label": "Prison"
+}
+]
+}
+},
+{
+"content_id": "15756",
+"reference_id": 14924,
+"version": "1.0.4",
+"title": "1 Peter 3:19–20",
+"media_type": "Text",
+"index_reference": "60003019-60003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This difficult passage has been widely interpreted in three ways:</p><ol><li><p>One interpretation says that these were the spirits of people who had died, and that Christ preached the good news to them after his resurrection. However, the New Testament does not support the idea that people can hear the good news or respond to it after death. Because of this, it is not likely that spirits in this passage refer to the spirits of dead people.</p></li><li><p>A second interpretation understands <data class=\"bible-ref\" data-start-ref=\"60003019\" data-end-ref=\"60003020\">3:19–20</data> as describing Christ preaching through Noah to the people who lived in Noah’s time. These people are now spirits in prison. This interpretation would explain the reference to people in the days of Noah in <data class=\"bible-ref\" data-start-ref=\"60003020\" data-end-ref=\"60003020\">3:20</data>. However, it does not fit well with the main discussion about Christ’s death and resurrection in <data class=\"bible-ref\" data-start-ref=\"60003018\" data-end-ref=\"60003018\">3:18</data>.</p></li><li><p>In the third interpretation, the spirits in prison are evil spiritual beings. Jewish tradition, based on <data class=\"bible-ref\" data-start-ref=\"01006001\" data-end-ref=\"01006004\">Genesis 6:1–4</data>, taught that many angels rebelled during the time of Noah (see also <data class=\"bible-ref\" data-start-ref=\"65001006\" data-end-ref=\"65001006\">Jude 1:6</data>; <em>1 Enoch</em> 6–10). In this view, Peter is saying that Christ announced his victory over these evil spiritual powers after his resurrection (compare <data class=\"bible-ref\" data-start-ref=\"60003022\" data-end-ref=\"60003022\">1 Peter 3:22</data>).</p></li></ol>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003019",
+"start_ref_usfm": "1PE 3:19",
+"end_ref": "60003020",
+"end_ref_usfm": "1PE 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Boat",
+"type": "realia",
+"confidence": 0.415,
+"match_method": "canonical",
+"preferred_label": "Boat"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "person:Noah",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Noah"
+},
+{
+"id": "realia:Prison",
+"type": "realia",
+"confidence": 0.315,
+"match_method": "canonical",
+"preferred_label": "Prison"
+}
+]
+}
+},
+{
+"content_id": "15758",
+"reference_id": 14926,
+"version": "1.0.4",
+"title": "1 Peter 3:20",
+"media_type": "Text",
+"index_reference": "60003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>only eight souls</em></span>: These were Noah, his wife, their three sons, and the sons’ wives (<data class=\"bible-ref\" data-start-ref=\"01006018\" data-end-ref=\"01006018\">Genesis 6:18</data>; <data class=\"bible-ref\" data-start-ref=\"01008018\" data-end-ref=\"01008018\">8:18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003020",
+"start_ref_usfm": "1PE 3:20",
+"end_ref": "60003020",
+"end_ref_usfm": "1PE 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Boat",
+"type": "realia",
+"confidence": 0.74,
+"match_method": "canonical",
+"preferred_label": "Boat"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Noah",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Noah"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "15759",
+"reference_id": 14927,
+"version": "1.0.4",
+"title": "1 Peter 3:21",
+"media_type": "Text",
+"index_reference": "60003021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>symbolizes the baptism</em></span>: Peter might mean that, just as the water lifted the boat that saved Noah and his family, <em>baptism</em> brings believers into salvation. Or he may mean that, just as Noah and his family passed through <em>water</em> to reach safety, Christians pass through the waters of <em>baptism</em> as part of their salvation. A third possibility is that, just as the water in Noah’s day judged sin, the water of <em>baptism</em> shows the washing away of sin for Christians.</p></li><li><p>Peter does not mean that water baptism saves a person regardless of that person&apos;s inner attitude. He explains that baptism saves only as a response to God from a clean conscience (or an appeal to God for a clean conscience). In this way, he makes clear that only people who exercise faith toward God will benefit from baptism.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003021",
+"start_ref_usfm": "1PE 3:21",
+"end_ref": "60003021",
+"end_ref_usfm": "1PE 3:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Baptism",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Baptism"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Conscience",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Conscience"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "15760",
+"reference_id": 14928,
+"version": "1.0.4",
+"title": "1 Peter 3:22",
+"media_type": "Text",
+"index_reference": "60003022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>All the angels, authorities, and powers accept his authority</em>: In the ancient world, many people believed that spiritual beings had a direct effect on life on earth. Christians needed to remember that Christ has already won his victory over these spiritual powers. This means that we do not need to fear anything in the spiritual world (compare <data class=\"bible-ref\" data-start-ref=\"60003014\" data-end-ref=\"60003014\">3:14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60003022",
+"start_ref_usfm": "1PE 3:22",
+"end_ref": "60003022",
+"end_ref_usfm": "1PE 3:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "deity:Angel",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "An Angel"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+}
+]
+}
+},
+{
+"content_id": "15775",
+"reference_id": 14943,
+"version": "1.0.4",
+"title": "1 Peter 4:1",
+"media_type": "Text",
+"index_reference": "60004001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>since Christ suffered in His body</em>: Peter introduced this idea in <data class=\"bible-ref\" data-start-ref=\"60003018\" data-end-ref=\"60003018\">3:18</data>. He now explains its importance in Christian life. In our own physical suffering, we should imitate Christ’s attitude (see <data class=\"bible-ref\" data-start-ref=\"60002021\" data-end-ref=\"60002024\">2:21–24</data>). Our suffering with Christ shows that we have identified with him (see <data class=\"bible-ref\" data-start-ref=\"45008017\" data-end-ref=\"45008017\">Romans 8:17</data>). Those who identify with Christ experience the victory over the power of sin that he won on the cross (<data class=\"bible-ref\" data-start-ref=\"45006001\" data-end-ref=\"45006010\">Romans 6:1–10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004001",
+"start_ref_usfm": "1PE 4:1",
+"end_ref": "60004001",
+"end_ref_usfm": "1PE 4:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+}
+]
+}
+},
+{
+"content_id": "15766",
+"reference_id": 14934,
+"version": "1.0.4",
+"title": "1 Peter 4:1–6",
+"media_type": "Text",
+"index_reference": "60004001-60004006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter urges Christians to make a definite separation from their former sinful way of life. Christ freed us from that way of life through his suffering.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004001",
+"start_ref_usfm": "1PE 4:1",
+"end_ref": "60004006",
+"end_ref_usfm": "1PE 4:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Idolatry",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Idolatry"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:DailyLife",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Daily Life"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Blaspheme",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Blaspheme"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Disgusting",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Disgusting"
+}
+]
+}
+},
+{
+"content_id": "15776",
+"reference_id": 14944,
+"version": "1.0.4",
+"title": "1 Peter 4:3",
+"media_type": "Text",
+"index_reference": "60004003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>the Gentiles</em>: Peter uses this term from his Jewish background to describe those non-Jews who do not have a relationship with God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004003",
+"start_ref_usfm": "1PE 4:3",
+"end_ref": "60004003",
+"end_ref_usfm": "1PE 4:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Idolatry",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Idolatry"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Disgusting",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Disgusting"
+}
+]
+}
+},
+{
+"content_id": "15777",
+"reference_id": 14945,
+"version": "1.0.4",
+"title": "1 Peter 4:6",
+"media_type": "Text",
+"index_reference": "60004006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter refers to people who are now dead but heard the good news about Jesus when they were alive. He is not teaching that people have a chance to repent after death. If these people responded with faith when they heard the message, they can trust God. Even though they had to die like all people, they will live forever with God in the Spirit.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004006",
+"start_ref_usfm": "1PE 4:6",
+"end_ref": "60004006",
+"end_ref_usfm": "1PE 4:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Decided",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Decided"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "15779",
+"reference_id": 14947,
+"version": "1.0.4",
+"title": "1 Peter 4:7",
+"media_type": "Text",
+"index_reference": "60004007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>The end of all things is nea</em>r: </span>With the coming of Christ, the &quot;last days&quot; predicted by the Old Testament prophets had begun (see <data class=\"bible-ref\" data-start-ref=\"60001010\" data-end-ref=\"60001012\">1:10–12</data>). The next event in God’s plan to save people is the second coming of Christ. His return will bring an end to the world as we know it. This end could come at any time. Therefore, Christians must always be ready for it (see also <data class=\"bible-ref\" data-start-ref=\"50004005\" data-end-ref=\"50004005\">Philippians 4:5</data>; <data class=\"bible-ref\" data-start-ref=\"59005008\" data-end-ref=\"59005008\">James 5:8</data>; <data class=\"bible-ref\" data-start-ref=\"66001003\" data-end-ref=\"66001003\">Revelation 1:3</data>; <data class=\"bible-ref\" data-start-ref=\"66022010\" data-end-ref=\"66022010\">22:10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004007",
+"start_ref_usfm": "1PE 4:7",
+"end_ref": "60004007",
+"end_ref_usfm": "1PE 4:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "15778",
+"reference_id": 14946,
+"version": "1.0.4",
+"title": "1 Peter 4:7–11",
+"media_type": "Text",
+"index_reference": "60004007-60004011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>With this paragraph of final instructions, Peter brings the third main part of the letter to a close (<data class=\"bible-ref\" data-start-ref=\"60003013\" data-end-ref=\"60004011\">3:13–4:11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004007",
+"start_ref_usfm": "1PE 4:7",
+"end_ref": "60004011",
+"end_ref_usfm": "1PE 4:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "15780",
+"reference_id": 14948,
+"version": "1.0.4",
+"title": "1 Peter 4:8",
+"media_type": "Text",
+"index_reference": "60004008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>By its nature, love chooses to overlook the sins that other people commit against us (see <data class=\"bible-ref\" data-start-ref=\"20010012\" data-end-ref=\"20010012\">Proverbs 10:12</data>; <data class=\"bible-ref\" data-start-ref=\"40018021\" data-end-ref=\"40018022\">Matthew 18:21–22</data>; <data class=\"bible-ref\" data-start-ref=\"46013004\" data-end-ref=\"46013007\">1&nbsp;Corinthians 13:4–7</data>). Peter might also mean that when we show love, we reveal our relationship with Christ. This loving attitude “covers” our own sins and leads to their forgiveness (see <data class=\"bible-ref\" data-start-ref=\"42007047\" data-end-ref=\"42007047\">Luke 7:47</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004008",
+"start_ref_usfm": "1PE 4:8",
+"end_ref": "60004008",
+"end_ref_usfm": "1PE 4:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "15767",
+"reference_id": 14935,
+"version": "1.0.4",
+"title": "1 Peter 4:10",
+"media_type": "Text",
+"index_reference": "60004010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>manifold grace of God</em></span>: This refers to the variety of spiritual gifts God has given to followers of Jesus. See <data class=\"bible-ref\" data-start-ref=\"45012006\" data-end-ref=\"45012008\">Romans 12:6–8</data>; <data class=\"bible-ref\" data-start-ref=\"46012001\" data-end-ref=\"46012031\">1 Corinthians 12:1–31</data>; <data class=\"bible-ref\" data-start-ref=\"49004007\" data-end-ref=\"49004016\">Ephesians 4:7–16</data>.</p></li><li><p><span><em>use </em>(literally <em>manage</em>)<em> whatever gift</em></span>: Christians are like managers. They have been trusted by God, their Master, with gifts to be used to bring glory to him.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004010",
+"start_ref_usfm": "1PE 4:10",
+"end_ref": "60004010",
+"end_ref_usfm": "1PE 4:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "15768",
+"reference_id": 14936,
+"version": "1.0.4",
+"title": "1 Peter 4:11",
+"media_type": "Text",
+"index_reference": "60004011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>so that in all things God may be glorified through Jesus Christ, to whom be the glory and the power forever and ever. Amen</em>:</span> This doxology (a short hymn of praise) has led some people to think that one original letter of Peter ended here and that another letter was later added to it. Doxologies in the New Testament do appear at the end of letters (<data class=\"bible-ref\" data-start-ref=\"45016025\" data-end-ref=\"45016027\">Romans 16:25–27</data>; <data class=\"bible-ref\" data-start-ref=\"50004020\" data-end-ref=\"50004020\">Philippians 4:20</data>; <data class=\"bible-ref\" data-start-ref=\"58013021\" data-end-ref=\"58013021\">Hebrews 13:21</data>; <data class=\"bible-ref\" data-start-ref=\"61003018\" data-end-ref=\"61003018\">2&nbsp;Peter 3:18</data>; <data class=\"bible-ref\" data-start-ref=\"65001024\" data-end-ref=\"65001025\">Jude 1:24–25</data>). Doxologies also appear at the end of major sections within letters (<data class=\"bible-ref\" data-start-ref=\"45011036\" data-end-ref=\"45011036\">Romans 11:36</data>; <data class=\"bible-ref\" data-start-ref=\"48001005\" data-end-ref=\"48001005\">Galatians 1:5</data>; <data class=\"bible-ref\" data-start-ref=\"49003021\" data-end-ref=\"49003021\">Ephesians 3:21</data>; <data class=\"bible-ref\" data-start-ref=\"54001017\" data-end-ref=\"54001017\">1&nbsp;Timothy 1:17</data>). </p><p>Since there is no textual evidence for two separate letters, it is better to understand this doxology as marking the end of a major section of the letter.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004011",
+"start_ref_usfm": "1PE 4:11",
+"end_ref": "60004011",
+"end_ref_usfm": "1PE 4:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "15770",
+"reference_id": 14938,
+"version": "1.0.4",
+"title": "1 Peter 4:12",
+"media_type": "Text",
+"index_reference": "60004012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>do not be surprised</em>: Christians, especially those trying to live in a way that pleases God, should expect hostility from this world that is full of sin (see <data class=\"bible-ref\" data-start-ref=\"43016033\" data-end-ref=\"43016033\">John 16:33</data>; <data class=\"bible-ref\" data-start-ref=\"44014022\" data-end-ref=\"44014022\">Acts 14:22</data>; <data class=\"bible-ref\" data-start-ref=\"45008017\" data-end-ref=\"45008017\">Romans 8:17</data>; <data class=\"bible-ref\" data-start-ref=\"50001029\" data-end-ref=\"50001029\">Philippians 1:29</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004012",
+"start_ref_usfm": "1PE 4:12",
+"end_ref": "60004012",
+"end_ref_usfm": "1PE 4:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "15769",
+"reference_id": 14937,
+"version": "1.0.4",
+"title": "1 Peter 4:12–19",
+"media_type": "Text",
+"index_reference": "60004012-60004019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter gives Christians one final instruction about how to face the trials that will surely come.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004012",
+"start_ref_usfm": "1PE 4:12",
+"end_ref": "60004019",
+"end_ref_usfm": "1PE 4:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.525,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.4187,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.4187,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "group:Christ",
+"type": "group",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Christians"
+},
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:DoGood",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Do Good"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "15771",
+"reference_id": 14939,
+"version": "1.0.4",
+"title": "1 Peter 4:13",
+"media_type": "Text",
+"index_reference": "60004013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Christians are called to suffer with Christ in order to be glorified with him (see also <data class=\"bible-ref\" data-start-ref=\"45008017\" data-end-ref=\"45008017\">Romans 8:17</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004013",
+"start_ref_usfm": "1PE 4:13",
+"end_ref": "60004013",
+"end_ref_usfm": "1PE 4:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "15772",
+"reference_id": 14940,
+"version": "1.0.4",
+"title": "1 Peter 4:14",
+"media_type": "Text",
+"index_reference": "60004014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>If you are insulted for the name of Christ, you are blessed</em></span><em> </em>(literally, <em>you are blessed when people criticize you</em>): This verse reflects the teaching of Jesus in <data class=\"bible-ref\" data-start-ref=\"40005011\" data-end-ref=\"40005012\">Matthew 5:11–12</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004014",
+"start_ref_usfm": "1PE 4:14",
+"end_ref": "60004014",
+"end_ref_usfm": "1PE 4:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Happy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Happy"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Name"
+}
+]
+}
+},
+{
+"content_id": "15773",
+"reference_id": 14941,
+"version": "1.0.4",
+"title": "1 Peter 4:16",
+"media_type": "Text",
+"index_reference": "60004016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Although the evidence is limited, it is likely that the name <em>Christian </em>(compare <data class=\"bible-ref\" data-start-ref=\"44011026\" data-end-ref=\"44011026\">Acts 11:26</data>) first served as a simple label used by those who did not follow Jesus. They used it to summarize what they believed were the strange religious practices and immoral behavior of those who followed Jesus.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004016",
+"start_ref_usfm": "1PE 4:16",
+"end_ref": "60004016",
+"end_ref_usfm": "1PE 4:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Christ",
+"type": "group",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Christians"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+}
+]
+}
+},
+{
+"content_id": "15774",
+"reference_id": 14942,
+"version": "1.0.4",
+"title": "1 Peter 4:17",
+"media_type": "Text",
+"index_reference": "60004017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God’s judgment is often described as beginning with God’s own household, meaning his people. This judgment serves to purify them (<data class=\"bible-ref\" data-start-ref=\"24025029\" data-end-ref=\"24025029\">Jeremiah 25:29</data>; <data class=\"bible-ref\" data-start-ref=\"26009005\" data-end-ref=\"26009006\">Ezekiel 9:5–6</data>; <data class=\"bible-ref\" data-start-ref=\"39003001\" data-end-ref=\"39003006\">Malachi 3:1–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60004017",
+"start_ref_usfm": "1PE 4:17",
+"end_ref": "60004017",
+"end_ref_usfm": "1PE 4:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Judgment",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judgment"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "15782",
+"reference_id": 14950,
+"version": "1.0.4",
+"title": "1 Peter 5:1–4",
+"media_type": "Text",
+"index_reference": "60005001-60005004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Elders were the spiritual leaders of the early churches (see also <data class=\"bible-ref\" data-start-ref=\"44014023\" data-end-ref=\"44014023\">Acts 14:23</data>; <data class=\"bible-ref\" data-start-ref=\"44020017\" data-end-ref=\"44020017\">20:17</data>; <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005019\">1&nbsp;Timothy 5:17–19</data>; <data class=\"bible-ref\" data-start-ref=\"56001005\" data-end-ref=\"56001005\">Titus 1:5</data>; <data class=\"bible-ref\" data-start-ref=\"59005014\" data-end-ref=\"59005014\">James 5:14</data>). By calling himself a fellow elder, Peter shows he shares their responsibilities and the guidance he offers them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005001",
+"start_ref_usfm": "1PE 5:1",
+"end_ref": "60005004",
+"end_ref_usfm": "1PE 5:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.5275,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.5275,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.365,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "realia:Crown",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Crown"
+},
+{
+"id": "realia:Crown.2",
+"type": "realia",
+"confidence": 0.2025,
+"match_method": "canonical",
+"preferred_label": "Crown"
+}
+]
+}
+},
+{
+"content_id": "15781",
+"reference_id": 14949,
+"version": "1.0.4",
+"title": "1 Peter 5:1–14",
+"media_type": "Text",
+"index_reference": "60005001-60005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Peter concludes the letter with directions to:</p><ul><li><p>elders (<data class=\"bible-ref\" data-start-ref=\"60005001\" data-end-ref=\"60005004\">5:1–4</data>),</p></li><li><p>younger people (<data class=\"bible-ref\" data-start-ref=\"60005005\" data-end-ref=\"60005005\">5:5</data>), and</p></li><li><p>the entire church (<data class=\"bible-ref\" data-start-ref=\"60005005\" data-end-ref=\"60005011\">5:5–11</data>). </p></li></ul><p>He then gives final greetings and ends the letter (<data class=\"bible-ref\" data-start-ref=\"60005012\" data-end-ref=\"60005014\">5:12–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005001",
+"start_ref_usfm": "1PE 5:1",
+"end_ref": "60005014",
+"end_ref_usfm": "1PE 5:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5107,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.3464,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.3464,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3464,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.2864,
+"match_method": "canonical",
+"preferred_label": "Flock"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.2864,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.2643,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.2643,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.2643,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.2043,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "place:Babylon",
+"type": "place",
+"confidence": 0.1964,
+"match_method": "canonical",
+"preferred_label": "Babylon"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "person:Silas",
+"type": "person",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Silas"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "person:Mark",
+"type": "person",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Mark"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.1821,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "fauna:Lion",
+"type": "fauna",
+"confidence": 0.1221,
+"match_method": "canonical",
+"preferred_label": "Lion"
+},
+{
+"id": "realia:Crown",
+"type": "realia",
+"confidence": 0.1221,
+"match_method": "canonical",
+"preferred_label": "Crown"
+},
+{
+"id": "realia:Crown.2",
+"type": "realia",
+"confidence": 0.1221,
+"match_method": "canonical",
+"preferred_label": "Crown"
+}
+]
+}
+},
+{
+"content_id": "15787",
+"reference_id": 14955,
+"version": "1.0.4",
+"title": "1 Peter 5:2",
+"media_type": "Text",
+"index_reference": "60005002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Be shepherds of God’s flock</em></span>: The word <em>pastor</em> comes from the New Testament image of a shepherd tending his flock.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005002",
+"start_ref_usfm": "1PE 5:2",
+"end_ref": "60005002",
+"end_ref_usfm": "1PE 5:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "fauna:Goat",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Goat"
+},
+{
+"id": "fauna:Lamb",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Sheep"
+},
+{
+"id": "fauna:Flock",
+"type": "fauna",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Flock"
+}
+]
+}
+},
+{
+"content_id": "15788",
+"reference_id": 14956,
+"version": "1.0.4",
+"title": "1 Peter 5:5",
+"media_type": "Text",
+"index_reference": "60005005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>young men</em>: This might refer to a group of ministers who were still learning or who helped the elders in different ways. However, it most likely refers simply to the younger people in the church (see, for example, <data class=\"bible-ref\" data-start-ref=\"62002012\" data-end-ref=\"62002014\">1&nbsp;John 2:12–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005005",
+"start_ref_usfm": "1PE 5:5",
+"end_ref": "60005005",
+"end_ref_usfm": "1PE 5:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "15789",
+"reference_id": 14957,
+"version": "1.0.4",
+"title": "1 Peter 5:9",
+"media_type": "Text",
+"index_reference": "60005009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>your brothers</em></span>: Here, the Greek word <em>adelphoi</em> refers to people, both male and female, who are members of the same family.</p></li><li><p><em>throughout the world</em>: Persecution was not limited to the churches in Asia Minor. Christians faced persecution in many places, in different ways and with different levels of intensity, wherever the good news about Jesus Christ was preached. Peter reminds his audience of this to comfort them and to encourage them to follow the example of those who had already endured suffering with faith.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005009",
+"start_ref_usfm": "1PE 5:9",
+"end_ref": "60005009",
+"end_ref_usfm": "1PE 5:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "15783",
+"reference_id": 14951,
+"version": "1.0.4",
+"title": "1 Peter 5:10",
+"media_type": "Text",
+"index_reference": "60005010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>a little while</em>: Sufferings in this life may seem to never end, but they last only a short time when compared with the eternal glory believers will share with God (compare <data class=\"bible-ref\" data-start-ref=\"60001006\" data-end-ref=\"60001006\">1:6</data>; <data class=\"bible-ref\" data-start-ref=\"45008018\" data-end-ref=\"45008018\">Romans 8:18</data>; <data class=\"bible-ref\" data-start-ref=\"47004016\" data-end-ref=\"47004018\">2&nbsp;Corinthians 4:16–18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005010",
+"start_ref_usfm": "1PE 5:10",
+"end_ref": "60005010",
+"end_ref_usfm": "1PE 5:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+}
+]
+}
+},
+{
+"content_id": "15784",
+"reference_id": 14952,
+"version": "1.0.4",
+"title": "1 Peter 5:12",
+"media_type": "Text",
+"index_reference": "60005012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>Through</em></span>: This word identifies <em>Silvanus</em> as the <em>amanuensis</em>. An amanuensis is a person who writes down words as another person speaks or directs.</p></li><li><p><em>Silvanus</em>: Silvanus is also known by the shorter name Silas. Both names refer to the same individual. He was a close colleague of Paul after the council in Jerusalem (<data class=\"bible-ref\" data-start-ref=\"44015040\" data-end-ref=\"44015040\">Acts 15:40</data>; <data class=\"bible-ref\" data-start-ref=\"44016019\" data-end-ref=\"44016019\">16:19</data>; <data class=\"bible-ref\" data-start-ref=\"44017010\" data-end-ref=\"44017010\">17:10</data>, <data class=\"bible-ref\" data-start-ref=\"44017014\" data-end-ref=\"44017015\">14–15</data>; <data class=\"bible-ref\" data-start-ref=\"44018005\" data-end-ref=\"44018005\">18:5</data>; <data class=\"bible-ref\" data-start-ref=\"47001019\" data-end-ref=\"47001019\">2&nbsp;Corinthians 1:19</data>; <data class=\"bible-ref\" data-start-ref=\"52001001\" data-end-ref=\"52001001\">1&nbsp;Thessalonians 1:1</data>; <data class=\"bible-ref\" data-start-ref=\"53001001\" data-end-ref=\"53001001\">2&nbsp;Thessalonians 1:1</data>). </p><p>We do not know how Silvanus later joined Peter in Rome. He may have traveled with Paul or followed him at a later time (<data class=\"bible-ref\" data-start-ref=\"44027001\" data-end-ref=\"44028031\">Acts 27:1–28:31</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005012",
+"start_ref_usfm": "1PE 5:12",
+"end_ref": "60005012",
+"end_ref_usfm": "1PE 5:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "person:Silas",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Silas"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "15785",
+"reference_id": 14953,
+"version": "1.0.4",
+"title": "1 Peter 5:13",
+"media_type": "Text",
+"index_reference": "60005013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Babylon was probably a symbolic name for Rome. Like Rome, Babylon was a great city and the capital of a large empire. In the 500s BC, Babylon ruled much of the ancient Near East.</p><p>Babylon was also the empire that burned Jerusalem and took many Israelites to live in Babylon as captives. Because of this history, many Jews saw Babylon as the center of a world that opposed God’s people. For this reason, the book of Revelation uses <em>Babylon</em> as a metaphor for Rome, or as a code word that pointed to Rome. Peter probably used the name in the same way.</p></li><li><p>Mark, also called John Mark, was another co-worker of the apostle Paul. He wrote the Gospel of Mark, which many people believe is based on Peter’s teachings.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005013",
+"start_ref_usfm": "1PE 5:13",
+"end_ref": "60005013",
+"end_ref_usfm": "1PE 5:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Babylon",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Babylon"
+},
+{
+"id": "person:Mark",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mark"
+}
+]
+}
+},
+{
+"content_id": "15786",
+"reference_id": 14954,
+"version": "1.0.4",
+"title": "1 Peter 5:14",
+"media_type": "Text",
+"index_reference": "60005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>a kiss of love</em>: See <data class=\"resource-ref\" data-content-id=\"25640\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Romans 16:16</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "60005014",
+"start_ref_usfm": "1PE 5:14",
+"end_ref": "60005014",
+"end_ref_usfm": "1PE 5:14"
+}
+],
+"resource": [
+{
+"reference_id": "24808",
+"content_id": "25640",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Romans 16:16",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+}
+]
+}
+}
+]

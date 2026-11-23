@@ -7,6 +7,7 @@
 // - From 1180 px wide, the links at verses are labels in the right margin, on the line of the verse.
 // - From Task 47, a chapter with a Biblica note has the control "About this chapter": on the line of
 //   "About this book" in the full heading, and alone on its line in a later chapter. docs/DESIGN.md section 19.6.
+// - From Task 48, the 132 psalms with no Biblica note have the control also, with one Aquifer note. Section 20.5.
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from 'react'
 import { arriveBookName } from '../bookMove.ts'
@@ -17,13 +18,14 @@ import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { loadBookLinks, marksOf, type BookLinks, type ChapterRef, type LinkEnd } from '../data/links.ts'
 import { loadBookNotes, notesOfChapter, type BookNotes } from '../data/notes.ts'
+import { loadAboutPsalms, type AboutPsalm } from '../data/studyNotes.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { passageName } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
 import { useTranslation, type Translation } from '../data/translation.ts'
 import { bandLabel } from '../wall/layout.ts'
 import { AboutBook } from './AboutBook.tsx'
-import { useAboutChapter } from './AboutChapter.tsx'
+import { useAboutChapter, type ChapterNotes } from './AboutChapter.tsx'
 import { headingWidthEm } from './heading.ts'
 
 /** The height of a margin label and the space between two labels, in px. Values of the prototype. */
@@ -59,6 +61,9 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   const [linksDone, setLinksDone] = useState(false)
   /** The Biblica notes of the book: undefined while the file loads, and null if it did not load. */
   const [bookNotes, setBookNotes] = useState<BookNotes | null | undefined>(undefined)
+  /** The 132 psalms of section 20.5, for the book Psalms only: undefined while the file loads, and null if it did not load. */
+  const [aboutPsalms, setAboutPsalms] = useState<AboutPsalm[] | null | undefined>(undefined)
+  const isPsalms = book.id === 'psalms'
   const nameRef = useRef<HTMLSpanElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const key = `${book.id}-${n}`
@@ -107,11 +112,17 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
       (notes) => live && setBookNotes(notes),
       () => live && setBookNotes(null),
     )
+    // The book Psalms gets the Aquifer notes of section 20.5 with its Biblica notes file.
+    if (book.id === 'psalms')
+      loadAboutPsalms().then(
+        (psalms) => live && setAboutPsalms(psalms),
+        () => live && setAboutPsalms(null),
+      )
     return () => {
       live = false
     }
   }, [book.id])
-  const notesDone = bookNotes !== undefined
+  const notesDone = bookNotes !== undefined && (!isPsalms || aboutPsalms !== undefined)
 
   // The chapter is loaded when its text, its links, and its notes are on the page: the read-with line, the
   // marks, and the control "About this chapter" change the height of the chapter. docs/DESIGN.md section 19.6.
@@ -119,10 +130,19 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
     if ((text && linksDone && notesDone) || error) onLoaded(key)
   }, [text, linksDone, notesDone, error, key, onLoaded])
 
-  // The Biblica notes of this chapter: section 19.5. Null if the notes file did not load.
-  const chapterNotes = useMemo(() => (bookNotes === null ? null : notesOfChapter(bookNotes?.notes ?? [], n)), [bookNotes, n])
-  const hasNotes = chapterNotes === null || chapterNotes.length > 0
-  const aboutChapter = useAboutChapter({ bookName: book.name, chapter: n, notes: chapterNotes })
+  // The notes of this chapter. The Biblica notes of section 19.5, or else, for a psalm, the Aquifer note of section
+  // 20.5. A panel never has the two kinds. Null if a file that the chapter needs did not load.
+  const chapterNotes = useMemo((): ChapterNotes | undefined => {
+    if (bookNotes === null) return null
+    const biblica = notesOfChapter(bookNotes?.notes ?? [], n)
+    if (biblica.length > 0) return { kind: 'biblica', notes: biblica }
+    if (!isPsalms) return undefined
+    if (aboutPsalms === null) return null
+    const note = aboutPsalms?.find((p) => p.psalm === n)
+    return note ? { kind: 'aquifer', note } : undefined
+  }, [bookNotes, aboutPsalms, isPsalms, n])
+  const hasNotes = chapterNotes !== undefined
+  const aboutChapter = useAboutChapter({ bookName: book.name, chapter: n, notes: chapterNotes === undefined ? { kind: 'biblica', notes: [] } : chapterNotes })
 
   // The book name that moves from the wall lands in this heading.
   useLayoutEffect(() => {

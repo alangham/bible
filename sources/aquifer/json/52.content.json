@@ -1,0 +1,4096 @@
+[
+{
+"content_id": "17213",
+"reference_id": 16381,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:1",
+"media_type": "Text",
+"index_reference": "52001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Ancient letters started with the author&apos;s name, the names of the recipients, and a greeting. </p></li><li><p>Paul, Silvanus, and Timothy started this church (<data class=\"bible-ref\" data-start-ref=\"44017001\" data-end-ref=\"44017009\">Acts 17:1–9</data>).</p></li><li><p><em>grace and peace: </em>The greeting summarizes the Christian&apos;s experience of the good news about Jesus.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001001",
+"start_ref_usfm": "1TH 1:1",
+"end_ref": "52001001",
+"end_ref_usfm": "1TH 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Thessalonica",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Thessalonica"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "person:Silas",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Silas"
+},
+{
+"id": "group:Thessalonica",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Thessalonians"
+}
+]
+}
+},
+{
+"content_id": "17215",
+"reference_id": 16383,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:2",
+"media_type": "Text",
+"index_reference": "52001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>We always thank God for all of you</em>: <span>This is the first of three times the apostle Paul gives thanks for the church</span> (see <data class=\"bible-ref\" data-start-ref=\"52002013\" data-end-ref=\"52002013\">2:13</data>; <data class=\"bible-ref\" data-start-ref=\"52003009\" data-end-ref=\"52003009\">3:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001002",
+"start_ref_usfm": "1TH 1:2",
+"end_ref": "52001002",
+"end_ref_usfm": "1TH 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "17214",
+"reference_id": 16382,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:2–10",
+"media_type": "Text",
+"index_reference": "52001002-52001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The apostle Paul first thanks God for the faith, love, and hope of the Thessalonian Christians (<data class=\"bible-ref\" data-start-ref=\"52001002\" data-end-ref=\"52001003\">1:2–3</data>). Then he recalls how they heard the good news about Jesus (<data class=\"bible-ref\" data-start-ref=\"52001004\" data-end-ref=\"52001005\">1:4–5</data>), and how they accepted its message (<data class=\"bible-ref\" data-start-ref=\"52001006\" data-end-ref=\"52001010\">1:6–10</data>). Paul mentions these themes again in <data class=\"bible-ref\" data-start-ref=\"52002001\" data-end-ref=\"52002012\">2:1–12</data> and <data class=\"bible-ref\" data-start-ref=\"52002013\" data-end-ref=\"52002016\">2:13–16</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001002",
+"start_ref_usfm": "1TH 1:2",
+"end_ref": "52001010",
+"end_ref_usfm": "1TH 1:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.3222,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "place:Achaia",
+"type": "place",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Achaia"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Deliver",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Deliver"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.14,
+"match_method": "canonical",
+"preferred_label": "Image"
+}
+]
+}
+},
+{
+"content_id": "17216",
+"reference_id": 16384,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:3",
+"media_type": "Text",
+"index_reference": "52001003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The apostle Paul was grateful because the Thessalonians showed loyal work, deeds of love, and steady hope (see <data class=\"bible-ref\" data-start-ref=\"52003006\" data-end-ref=\"52003006\">3:6</data>; <data class=\"bible-ref\" data-start-ref=\"52005008\" data-end-ref=\"52005008\">5:8</data>; <data class=\"bible-ref\" data-start-ref=\"53001003\" data-end-ref=\"53001004\">2&nbsp;Thessalonians 1:3–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001003",
+"start_ref_usfm": "1TH 1:3",
+"end_ref": "52001003",
+"end_ref_usfm": "1TH 1:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+}
+]
+}
+},
+{
+"content_id": "17217",
+"reference_id": 16385,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:4",
+"media_type": "Text",
+"index_reference": "52001004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Brothers</em>: The Greek word <em>adelphoi</em> is a general term for family members, including both males and females.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001004",
+"start_ref_usfm": "1TH 1:4",
+"end_ref": "52001004",
+"end_ref_usfm": "1TH 1:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Chosen",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Chosen"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+}
+]
+}
+},
+{
+"content_id": "17218",
+"reference_id": 16386,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:5",
+"media_type": "Text",
+"index_reference": "52001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God called the Thessalonians through the announcement of the good news about Jesus (<data class=\"bible-ref\" data-start-ref=\"53002013\" data-end-ref=\"53002014\">2&nbsp;Thessalonians 2:13–14</data>). The Holy Spirit convinced the listeners that the message was true (<data class=\"bible-ref\" data-start-ref=\"46002004\" data-end-ref=\"46002005\">1&nbsp;Corinthians 2:4–5</data>; <data class=\"bible-ref\" data-start-ref=\"60001012\" data-end-ref=\"60001012\">1&nbsp;Peter 1:12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001005",
+"start_ref_usfm": "1TH 1:5",
+"end_ref": "52001005",
+"end_ref_usfm": "1TH 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+}
+]
+}
+},
+{
+"content_id": "17219",
+"reference_id": 16387,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:6",
+"media_type": "Text",
+"index_reference": "52001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Thessalonians encountered great suffering from their peers because they accepted the good news about Jesus (<data class=\"bible-ref\" data-start-ref=\"52002014\" data-end-ref=\"52002014\">2:14</data>; <data class=\"bible-ref\" data-start-ref=\"52003003\" data-end-ref=\"52003004\">3:3–4</data>). However, by following the example of the apostles and the Lord himself, they found the joy of the Holy Spirit (<data class=\"bible-ref\" data-start-ref=\"40005011\" data-end-ref=\"40005012\">Matthew 5:11–12</data>; <data class=\"bible-ref\" data-start-ref=\"45008017\" data-end-ref=\"45008017\">Romans 8:17</data>; <data class=\"bible-ref\" data-start-ref=\"45012012\" data-end-ref=\"45012012\">12:12</data>; <data class=\"bible-ref\" data-start-ref=\"50002017\" data-end-ref=\"50002017\">Philippians 2:17</data>; <data class=\"bible-ref\" data-start-ref=\"60004013\" data-end-ref=\"60004014\">1&nbsp;Peter 4:13–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001006",
+"start_ref_usfm": "1TH 1:6",
+"end_ref": "52001006",
+"end_ref_usfm": "1TH 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+}
+]
+}
+},
+{
+"content_id": "17220",
+"reference_id": 16388,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:7–8",
+"media_type": "Text",
+"index_reference": "52001007-52001008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Thessalonians&apos; strong faith and proclamation of the good news about Jesus spread through Macedonia and Achaia.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001007",
+"start_ref_usfm": "1TH 1:7",
+"end_ref": "52001008",
+"end_ref_usfm": "1TH 1:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.75,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "place:Achaia",
+"type": "place",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Achaia"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "17221",
+"reference_id": 16389,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:9",
+"media_type": "Text",
+"index_reference": "52001009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Among the Gentiles (non-Jewish people), the apostles called people to turn away from false gods and worship the living and true God, who created all things (<data class=\"bible-ref\" data-start-ref=\"44014011\" data-end-ref=\"44014018\">Acts 14:11–18</data>; <data class=\"bible-ref\" data-start-ref=\"44017022\" data-end-ref=\"44017031\">17:22–31</data>; <data class=\"bible-ref\" data-start-ref=\"44019023\" data-end-ref=\"44019041\">19:23–41</data>). In a society where many religions existed side by side, it was unusual to ask people to abandon the gods worshiped by their families and communities (see <data class=\"bible-ref\" data-start-ref=\"24010008\" data-end-ref=\"24010010\">Jeremiah 10:8–10</data>; <data class=\"bible-ref\" data-start-ref=\"46008004\" data-end-ref=\"46008006\">1&nbsp;Corinthians 8:4–6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001009",
+"start_ref_usfm": "1TH 1:9",
+"end_ref": "52001009",
+"end_ref_usfm": "1TH 1:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "realia:Image",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Image"
+}
+]
+}
+},
+{
+"content_id": "17212",
+"reference_id": 16380,
+"version": "1.0.4",
+"title": "1 Thessalonians 1:10",
+"media_type": "Text",
+"index_reference": "52001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The resurrection of Jesus from the dead was central to the apostles’ preaching (<data class=\"bible-ref\" data-start-ref=\"52004014\" data-end-ref=\"52004014\">4:14</data>; <data class=\"bible-ref\" data-start-ref=\"44002032\" data-end-ref=\"44002032\">Acts 2:32</data>; <data class=\"bible-ref\" data-start-ref=\"44003015\" data-end-ref=\"44003015\">3:15</data>; <data class=\"bible-ref\" data-start-ref=\"44010040\" data-end-ref=\"44010040\">10:40</data>; <data class=\"bible-ref\" data-start-ref=\"44013029\" data-end-ref=\"44013030\">13:29–30</data>; <data class=\"bible-ref\" data-start-ref=\"46015003\" data-end-ref=\"46015008\">1&nbsp;Corinthians 15:3–8</data>). It formed the basis for confidence in the return of Jesus (see <data class=\"bible-ref\" data-start-ref=\"52005009\" data-end-ref=\"52005009\">1&nbsp;Thessalonians 5:9</data>; <data class=\"bible-ref\" data-start-ref=\"53001006\" data-end-ref=\"53001010\">2&nbsp;Thessalonians 1:6–10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52001010",
+"start_ref_usfm": "1TH 1:10",
+"end_ref": "52001010",
+"end_ref_usfm": "1TH 1:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Deliver",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Deliver"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+}
+]
+}
+},
+{
+"content_id": "17233",
+"reference_id": 16401,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:1",
+"media_type": "Text",
+"index_reference": "52002001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Greek word for <em>visit </em>often means the process of entering a city. Ancient speakers were famous for their grand entrances into cities. Paul&apos;s arrival in Thessalonica should be judged by its successful outcomes, not by its lack of display or ceremony.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002001",
+"start_ref_usfm": "1TH 2:1",
+"end_ref": "52002001",
+"end_ref_usfm": "1TH 2:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Empty"
+}
+]
+}
+},
+{
+"content_id": "17222",
+"reference_id": 16390,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:1–3.13",
+"media_type": "Text",
+"index_reference": "52002001-52003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The letter begins by discussing the character of Paul and his associates, as well as how the Thessalonians accepted the good news (<data class=\"bible-ref\" data-start-ref=\"52002001\" data-end-ref=\"52002012\">2:1–12</data>; <data class=\"bible-ref\" data-start-ref=\"52002013\" data-end-ref=\"52002016\">13–16</data>).</p><p>It emphasizes Paul’s genuine care for the church, mentioning: </p><ul><li><p>his efforts to visit them again (<data class=\"bible-ref\" data-start-ref=\"52002017\" data-end-ref=\"52002020\">2:17–20</data>), and</p></li><li><p>his choice to send Timothy when he could not go himself (<data class=\"bible-ref\" data-start-ref=\"52003001\" data-end-ref=\"52003005\">3:1–5</data>). </p></li></ul><p>It concludes with the apostle Paul’s happiness about Timothy’s positive report and his prayers to return to the church (<data class=\"bible-ref\" data-start-ref=\"52003006\" data-end-ref=\"52003009\">3:6–9</data>; <data class=\"bible-ref\" data-start-ref=\"52003010\" data-end-ref=\"52003013\">10–13</data>). This detailed defense addresses criticisms of Paul’s sudden departure and long absence.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002001",
+"start_ref_usfm": "1TH 2:1",
+"end_ref": "52003013",
+"end_ref_usfm": "1TH 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.5409,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.4591,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.4591,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.4318,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.4182,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2909,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2909,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2909,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Empty"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.2273,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "place:Athens",
+"type": "place",
+"confidence": 0.1697,
+"match_method": "canonical",
+"preferred_label": "Athens"
+},
+{
+"id": "place:Judea",
+"type": "place",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Judea"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Kingdom",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Kingdom"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Satan"
+},
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+},
+{
+"id": "group:Jews",
+"type": "group",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Jews"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:PutToTheTest",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Put to the Test"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Long For"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Declare"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.1636,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+},
+{
+"id": "realia:Crown",
+"type": "realia",
+"confidence": 0.1036,
+"match_method": "canonical",
+"preferred_label": "Crown"
+},
+{
+"id": "realia:Crown.2",
+"type": "realia",
+"confidence": 0.1036,
+"match_method": "canonical",
+"preferred_label": "Crown"
+}
+]
+}
+},
+{
+"content_id": "17235",
+"reference_id": 16403,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:2",
+"media_type": "Text",
+"index_reference": "52002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul and Silvanus encountered shame and pain in Philippi (<data class=\"bible-ref\" data-start-ref=\"44016019\" data-end-ref=\"44016040\">Acts 16:19–40</data>). Yet, they were brave and preached with confidence in Thessalonica.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002002",
+"start_ref_usfm": "1TH 2:2",
+"end_ref": "52002002",
+"end_ref_usfm": "1TH 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+}
+]
+}
+},
+{
+"content_id": "17236",
+"reference_id": 16404,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:4",
+"media_type": "Text",
+"index_reference": "52002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the ancient world, people in public office were publicly tested and approved for their work. The Thessalonians and God served as two witnesses to the purity of Paul’s motives. (<data class=\"bible-ref\" data-start-ref=\"52002003\" data-end-ref=\"52002003\">2:3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002004",
+"start_ref_usfm": "1TH 2:4",
+"end_ref": "52002004",
+"end_ref_usfm": "1TH 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "17237",
+"reference_id": 16405,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:5",
+"media_type": "Text",
+"index_reference": "52002005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Flattery was often used to gain money from others. Paul denies flattering the Thessalonians to receive money. He calls both the Thessalonians and God as witnesses (see <data class=\"bible-ref\" data-start-ref=\"52002010\" data-end-ref=\"52002010\">2:10</data>; <data class=\"bible-ref\" data-start-ref=\"05019015\" data-end-ref=\"05019015\">Deuteronomy 19:15</data>; <data class=\"bible-ref\" data-start-ref=\"47013001\" data-end-ref=\"47013001\">2 Corinthians 13:1</data>; <data class=\"bible-ref\" data-start-ref=\"54005019\" data-end-ref=\"54005019\">1 Timothy 5:19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002005",
+"start_ref_usfm": "1TH 2:5",
+"end_ref": "52002005",
+"end_ref_usfm": "1TH 2:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Witness"
+}
+]
+}
+},
+{
+"content_id": "17238",
+"reference_id": 16406,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:7",
+"media_type": "Text",
+"index_reference": "52002007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>we were gentle among you</em></span>: Some manuscripts say <em>we were like infants. </em>Paul and his associates did not use their authority as apostles to make demands (see <data class=\"bible-ref\" data-start-ref=\"40020025\" data-end-ref=\"40020028\">Matthew 20:25–28</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002007",
+"start_ref_usfm": "1TH 2:7",
+"end_ref": "52002007",
+"end_ref_usfm": "1TH 2:7"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17239",
+"reference_id": 16407,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:9",
+"media_type": "Text",
+"index_reference": "52002009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul and his associates worked with their hands to support themselves while in the city (see <data class=\"bible-ref\" data-start-ref=\"44018001\" data-end-ref=\"44018004\">Acts 18:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"46009012\" data-end-ref=\"46009018\">1&nbsp;Corinthians 9:12–18</data>). They did this to set an example for the Thessalonians (<data class=\"bible-ref\" data-start-ref=\"53003008\" data-end-ref=\"53003009\">2&nbsp;Thessalonians 3:8–9</data>). They also wanted to avoid being an economic burden to them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002009",
+"start_ref_usfm": "1TH 2:9",
+"end_ref": "52002009",
+"end_ref_usfm": "1TH 2:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "17223",
+"reference_id": 16391,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:10",
+"media_type": "Text",
+"index_reference": "52002010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Both God and the Thessalonians were witnesses that Paul behaved in a dedicated and honest way (see <data class=\"bible-ref\" data-start-ref=\"52002005\" data-end-ref=\"52002005\">2:5</data>). These qualities come from terms used in ancient literature to describe obedience to both divine and human laws.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002010",
+"start_ref_usfm": "1TH 2:10",
+"end_ref": "52002010",
+"end_ref_usfm": "1TH 2:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "17224",
+"reference_id": 16392,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:11",
+"media_type": "Text",
+"index_reference": "52002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the ancient world, fathers had a key role in teaching and modeling moral living to children. Roman fathers could be strict. But the historian Plutarch advised Greek fathers to use praise, reason, encouragement, and good advice to teach children to avoid bad behavior and practice good values. Paul describes himself as this type of father to the Thessalonians.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002011",
+"start_ref_usfm": "1TH 2:11",
+"end_ref": "52002011",
+"end_ref_usfm": "1TH 2:11"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17225",
+"reference_id": 16393,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:12",
+"media_type": "Text",
+"index_reference": "52002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God would consider a life worthy if it aligns with the high standards he expects from those called to share his own kingdom and glory (<data class=\"bible-ref\" data-start-ref=\"52004007\" data-end-ref=\"52004007\">4:7</data>; <data class=\"bible-ref\" data-start-ref=\"45008017\" data-end-ref=\"45008018\">Romans 8:17–18</data>; <data class=\"bible-ref\" data-start-ref=\"51001027\" data-end-ref=\"51001027\">Colossians 1:27</data>; <data class=\"bible-ref\" data-start-ref=\"53002014\" data-end-ref=\"53002014\">2&nbsp;Thessalonians 2:14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002012",
+"start_ref_usfm": "1TH 2:12",
+"end_ref": "52002012",
+"end_ref_usfm": "1TH 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Kingdom",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Kingdom"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Declare"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+}
+]
+}
+},
+{
+"content_id": "17226",
+"reference_id": 16394,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:13",
+"media_type": "Text",
+"index_reference": "52002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul thanks the Thessalonians again (see <data class=\"bible-ref\" data-start-ref=\"52001002\" data-end-ref=\"52001002\">1:2</data>; <data class=\"bible-ref\" data-start-ref=\"52003009\" data-end-ref=\"52003009\">3:9</data>). This was because they accepted the apostles&apos; message as more than human ideas. They understood it was<em> </em>the word of God (<data class=\"bible-ref\" data-start-ref=\"52001005\" data-end-ref=\"52001005\">1:5</data>; <data class=\"bible-ref\" data-start-ref=\"53002014\" data-end-ref=\"53002014\">2&nbsp;Thes 2:14</data>; <data class=\"bible-ref\" data-start-ref=\"47005020\" data-end-ref=\"47005020\">2&nbsp;Cor 5:20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002013",
+"start_ref_usfm": "1TH 2:13",
+"end_ref": "52002013",
+"end_ref_usfm": "1TH 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+}
+]
+}
+},
+{
+"content_id": "17227",
+"reference_id": 16395,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:14",
+"media_type": "Text",
+"index_reference": "52002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Thessalonian Christians suffered persecution. Their actions showed that they accepted the word of God (<data class=\"bible-ref\" data-start-ref=\"52001006\" data-end-ref=\"52001006\">1:6</data>). By suffering persecution, the Thessalonians followed the pattern of the apostles, the churches in Judea, and Christ himself (<data class=\"bible-ref\" data-start-ref=\"44008001\" data-end-ref=\"44008001\">Acts 8:1</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002014",
+"start_ref_usfm": "1TH 2:14",
+"end_ref": "52002014",
+"end_ref_usfm": "1TH 2:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Judea",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Judea"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "group:Jews",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jews"
+}
+]
+}
+},
+{
+"content_id": "17228",
+"reference_id": 16396,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:15",
+"media_type": "Text",
+"index_reference": "52002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul was not opposed to the Jewish people. Out of love for them, he prayed for their salvation (<data class=\"bible-ref\" data-start-ref=\"45009001\" data-end-ref=\"45009005\">Romans 9:1–5</data>; <data class=\"bible-ref\" data-start-ref=\"45010001\" data-end-ref=\"45010001\">10:1</data>). However, he knew some Jews had a role in the deaths of God’s messengers, including the Lord Jesus and some prophets<em> </em>(<data class=\"bible-ref\" data-start-ref=\"11019010\" data-end-ref=\"11019010\">1 Kings 19:10</data>; <data class=\"bible-ref\" data-start-ref=\"44007052\" data-end-ref=\"44007052\">Acts 7:52</data>). Some Jews had also persecuted the apostles in Thessalonica (<data class=\"bible-ref\" data-start-ref=\"44017010\" data-end-ref=\"44017010\">Acts 17:10</data>; <data class=\"bible-ref\" data-start-ref=\"47011026\" data-end-ref=\"47011026\">2 Corinthians 11:26</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002015",
+"start_ref_usfm": "1TH 2:15",
+"end_ref": "52002015",
+"end_ref_usfm": "1TH 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17229",
+"reference_id": 16397,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:16",
+"media_type": "Text",
+"index_reference": "52002016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The mission to the Gentiles was one of the most important issues in the early church (<data class=\"bible-ref\" data-start-ref=\"44011018\" data-end-ref=\"44011018\">Acts 11:18</data>; <data class=\"bible-ref\" data-start-ref=\"44013046\" data-end-ref=\"44013049\">13:46–49</data>; <data class=\"bible-ref\" data-start-ref=\"44028028\" data-end-ref=\"44028028\">28:28</data>; <data class=\"bible-ref\" data-start-ref=\"45001016\" data-end-ref=\"45001016\">Romans 1:16</data>). </p></li><li><p>Judgment comes when sins increase to full capacity<em> </em>(<data class=\"bible-ref\" data-start-ref=\"01015016\" data-end-ref=\"01015016\">Genesis 15:16</data>; <data class=\"bible-ref\" data-start-ref=\"27008023\" data-end-ref=\"27008023\">Daniel 8:23</data>; compare <data class=\"bible-ref\" data-start-ref=\"40023031\" data-end-ref=\"40023036\">Matthew 23:31–36</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002016",
+"start_ref_usfm": "1TH 2:16",
+"end_ref": "52002016",
+"end_ref_usfm": "1TH 2:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Sin",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "To Sin"
+}
+]
+}
+},
+{
+"content_id": "17230",
+"reference_id": 16398,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:17",
+"media_type": "Text",
+"index_reference": "52002017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>torn away</em>: Paul talks about his unexpected departure from Thessalonica as depriving the new Christians of their spiritual parents (see <data class=\"bible-ref\" data-start-ref=\"44017010\" data-end-ref=\"44017010\">Acts 17:10</data>). However, this absence was not neglect. Paul&apos;s attempts to return to the church show the separation was not on purpose (compare <data class=\"bible-ref\" data-start-ref=\"50001007\" data-end-ref=\"50001007\">Philippians 1:7</data>; <data class=\"bible-ref\" data-start-ref=\"51002005\" data-end-ref=\"51002005\">Colossians 2:5</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002017",
+"start_ref_usfm": "1TH 2:17",
+"end_ref": "52002017",
+"end_ref_usfm": "1TH 2:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+}
+]
+}
+},
+{
+"content_id": "17231",
+"reference_id": 16399,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:18",
+"media_type": "Text",
+"index_reference": "52002018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul tried to return to the Thessalonian church many times. Despite Satan&apos;s opposition, both Timothy and Paul eventually visited the church again (see <data class=\"bible-ref\" data-start-ref=\"45016020\" data-end-ref=\"45016020\">Romans 16:20</data>; <data class=\"bible-ref\" data-start-ref=\"47002011\" data-end-ref=\"47002011\">2 Corinthians 2:11</data>; <data class=\"bible-ref\" data-start-ref=\"49006010\" data-end-ref=\"49006012\">Ephesians 6:10–12</data>; <data class=\"bible-ref\" data-start-ref=\"52003002\" data-end-ref=\"52003002\">1 Thessalonians 3:2</data>, <data class=\"bible-ref\" data-start-ref=\"52003005\" data-end-ref=\"52003005\">5</data>; <data class=\"bible-ref\" data-start-ref=\"44020001\" data-end-ref=\"44020003\">Acts 20:1–3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002018",
+"start_ref_usfm": "1TH 2:18",
+"end_ref": "52002018",
+"end_ref_usfm": "1TH 2:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "deity:Satan",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Satan"
+}
+]
+}
+},
+{
+"content_id": "17232",
+"reference_id": 16400,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:19",
+"media_type": "Text",
+"index_reference": "52002019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In the Greek and Roman world, a crown was given to those who received great civic honor or who were victorious in athletic games.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002019",
+"start_ref_usfm": "1TH 2:19",
+"end_ref": "52002019",
+"end_ref_usfm": "1TH 2:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "realia:Crown",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Crown"
+},
+{
+"id": "realia:Crown.2",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Crown"
+}
+]
+}
+},
+{
+"content_id": "17234",
+"reference_id": 16402,
+"version": "1.0.4",
+"title": "1 Thessalonians 2:20",
+"media_type": "Text",
+"index_reference": "52002020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul regards the Thessalonian Christians, not his own achievements, as his source of glory<em> </em>and<em> </em>joy (<data class=\"bible-ref\" data-start-ref=\"52003009\" data-end-ref=\"52003009\">3:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52002020",
+"start_ref_usfm": "1TH 2:20",
+"end_ref": "52002020",
+"end_ref_usfm": "1TH 2:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+}
+]
+}
+},
+{
+"content_id": "17240",
+"reference_id": 16408,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:1–5",
+"media_type": "Text",
+"index_reference": "52003001-52003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After preaching in Berea, Paul left Macedonia and sailed to Athens. He instructed Silas and Timothy to join him soon (<data class=\"bible-ref\" data-start-ref=\"44017013\" data-end-ref=\"44017015\">Acts 17:13–15</data>). Timothy returned to Thessalonica because Paul had become more concerned about the Thessalonian church (<data class=\"bible-ref\" data-start-ref=\"52003002\" data-end-ref=\"52003002\">1&nbsp;Thessalonians 3:2</data>; <data class=\"bible-ref\" data-start-ref=\"52003001\" data-end-ref=\"52003001\">3:1</data>, <data class=\"bible-ref\" data-start-ref=\"52003005\" data-end-ref=\"52003005\">5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003001",
+"start_ref_usfm": "1TH 3:1",
+"end_ref": "52003005",
+"end_ref_usfm": "1TH 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.38,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "place:Athens",
+"type": "place",
+"confidence": 0.28,
+"match_method": "canonical",
+"preferred_label": "Athens"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Empty"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:PutToTheTest",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Put to the Test"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.24,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+}
+]
+}
+},
+{
+"content_id": "17244",
+"reference_id": 16412,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:3",
+"media_type": "Text",
+"index_reference": "52003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>we are destined for this</em></span>: Suffering for the faith is often part of a Christian&apos;s life (<data class=\"bible-ref\" data-start-ref=\"52001006\" data-end-ref=\"52001006\">1:6</data>; <data class=\"bible-ref\" data-start-ref=\"52002014\" data-end-ref=\"52002014\">2:14</data>; <data class=\"bible-ref\" data-start-ref=\"50001029\" data-end-ref=\"50001029\">Philippians 1:29</data>; <data class=\"bible-ref\" data-start-ref=\"60001006\" data-end-ref=\"60001006\">1&nbsp;Peter 1:6</data>; <data class=\"bible-ref\" data-start-ref=\"60002021\" data-end-ref=\"60002021\">2:21</data>; <data class=\"bible-ref\" data-start-ref=\"60003017\" data-end-ref=\"60003017\">3:17</data>; <data class=\"bible-ref\" data-start-ref=\"60004019\" data-end-ref=\"60004019\">4:19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003003",
+"start_ref_usfm": "1TH 3:3",
+"end_ref": "52003003",
+"end_ref_usfm": "1TH 3:3"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17245",
+"reference_id": 16413,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:5",
+"media_type": "Text",
+"index_reference": "52003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul had concern that Satan, the tempter, had weakened the Thessalonians’ faith (<data class=\"bible-ref\" data-start-ref=\"41001013\" data-end-ref=\"41001013\">Mark 1:13</data>; <data class=\"bible-ref\" data-start-ref=\"46007005\" data-end-ref=\"46007005\">1&nbsp;Corinthians 7:5</data>; <data class=\"bible-ref\" data-start-ref=\"52003002\" data-end-ref=\"52003002\">1&nbsp;Thessalonians 3:2</data>, <data class=\"bible-ref\" data-start-ref=\"52003006\" data-end-ref=\"52003006\">6</data>, <data class=\"bible-ref\" data-start-ref=\"52003008\" data-end-ref=\"52003008\">8</data>). He was checking to make sure his efforts among them were not useless (<data class=\"bible-ref\" data-start-ref=\"48002002\" data-end-ref=\"48002002\">Galatians 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"50002016\" data-end-ref=\"50002016\">Philippians 2:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003005",
+"start_ref_usfm": "1TH 3:5",
+"end_ref": "52003005",
+"end_ref_usfm": "1TH 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Empty"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:PutToTheTest",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Put to the Test"
+}
+]
+}
+},
+{
+"content_id": "17246",
+"reference_id": 16414,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:6",
+"media_type": "Text",
+"index_reference": "52003006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul wrote 1 Thessalonians from Corinth soon after Timothy came back from Thessalonica (<data class=\"bible-ref\" data-start-ref=\"52003002\" data-end-ref=\"52003002\">3:2</data>, <data class=\"bible-ref\" data-start-ref=\"52003005\" data-end-ref=\"52003005\">5</data>; <data class=\"bible-ref\" data-start-ref=\"44018005\" data-end-ref=\"44018005\">Acts 18:5</data>). Timothy&apos;s report brought good news about the Thessalonians&apos; faith, love, perseverance, and hope (<data class=\"bible-ref\" data-start-ref=\"52003008\" data-end-ref=\"52003008\">1 Thessalonians 3:8</data>; see also <data class=\"bible-ref\" data-start-ref=\"52005008\" data-end-ref=\"52005008\">5:8</data>; <data class=\"bible-ref\" data-start-ref=\"53001003\" data-end-ref=\"53001004\">2 Thessalonians 1:3–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003006",
+"start_ref_usfm": "1TH 3:6",
+"end_ref": "52003006",
+"end_ref_usfm": "1TH 3:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Long For"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "17247",
+"reference_id": 16415,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:8",
+"media_type": "Text",
+"index_reference": "52003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul felt troubled by his current situation (<data class=\"bible-ref\" data-start-ref=\"52003007\" data-end-ref=\"52003007\">3:7</data>) and deeply concerned for the church (<data class=\"bible-ref\" data-start-ref=\"52003001\" data-end-ref=\"52003001\">3:1</data>, <data class=\"bible-ref\" data-start-ref=\"52003005\" data-end-ref=\"52003005\">5</data>). He felt relieved to hear that the Thessalonians remained strong and firm in the Lord, even while suffering (<data class=\"bible-ref\" data-start-ref=\"52002014\" data-end-ref=\"52002014\">2:14</data>; <data class=\"bible-ref\" data-start-ref=\"52003003\" data-end-ref=\"52003004\">3:3–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003008",
+"start_ref_usfm": "1TH 3:8",
+"end_ref": "52003008",
+"end_ref_usfm": "1TH 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17241",
+"reference_id": 16409,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:11",
+"media_type": "Text",
+"index_reference": "52003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul prays to return to Thessalonica soon (<data class=\"bible-ref\" data-start-ref=\"52003010\" data-end-ref=\"52003010\">3:10</data>). He addresses both the Father and the Lord Jesus, which implies that Jesus is divine.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003011",
+"start_ref_usfm": "1TH 3:11",
+"end_ref": "52003011",
+"end_ref_usfm": "1TH 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17242",
+"reference_id": 16410,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:12",
+"media_type": "Text",
+"index_reference": "52003012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This church was known for their love for each other as members of God&apos;s family (<data class=\"bible-ref\" data-start-ref=\"52004009\" data-end-ref=\"52004009\">4:9</data>; <data class=\"bible-ref\" data-start-ref=\"53001003\" data-end-ref=\"53001004\">2&nbsp;Thessalonians 1:3–4</data>). Paul prays that their love will increase and reach those outside the Christian community even when they suffer persecution (see <data class=\"bible-ref\" data-start-ref=\"52005015\" data-end-ref=\"52005015\">1&nbsp;Thessalonians 5:15</data>; <data class=\"bible-ref\" data-start-ref=\"48006010\" data-end-ref=\"48006010\">Galatians 6:10</data>; <data class=\"bible-ref\" data-start-ref=\"55002024\" data-end-ref=\"55002024\">2&nbsp;Timothy 2:24</data>; <data class=\"bible-ref\" data-start-ref=\"56003002\" data-end-ref=\"56003002\">Titus 3:2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003012",
+"start_ref_usfm": "1TH 3:12",
+"end_ref": "52003012",
+"end_ref_usfm": "1TH 3:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17243",
+"reference_id": 16411,
+"version": "1.0.4",
+"title": "1 Thessalonians 3:13",
+"media_type": "Text",
+"index_reference": "52003013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>In the final part of this prayer, Paul prays that their hearts will be strong, innocent, and holy. Here, the word <em>hearts</em> means their behavior and moral strength (<data class=\"bible-ref\" data-start-ref=\"52003011\" data-end-ref=\"52003013\">3:11–13</data>; <data class=\"bible-ref\" data-start-ref=\"40005008\" data-end-ref=\"40005008\">Matthew 5:8</data>; <data class=\"bible-ref\" data-start-ref=\"44015009\" data-end-ref=\"44015009\">Acts 15:9</data>; <data class=\"bible-ref\" data-start-ref=\"58010022\" data-end-ref=\"58010022\">Hebrews 10:22</data>).</p></li><li><p>When Jesus comes, he will be with all his holy people. This may mean angels (<data class=\"bible-ref\" data-start-ref=\"05033002\" data-end-ref=\"05033002\">Deuteronomy 33:2</data>; <data class=\"bible-ref\" data-start-ref=\"19089005\" data-end-ref=\"19089005\">Psalm 89:5</data>, <data class=\"bible-ref\" data-start-ref=\"19089007\" data-end-ref=\"19089007\">7</data>; <data class=\"bible-ref\" data-start-ref=\"27004013\" data-end-ref=\"27004013\">Daniel 4:13</data>; <data class=\"bible-ref\" data-start-ref=\"27008013\" data-end-ref=\"27008013\">8:13</data>; <data class=\"bible-ref\" data-start-ref=\"40013041\" data-end-ref=\"40013041\">Matthew 13:41</data>; <data class=\"bible-ref\" data-start-ref=\"41008038\" data-end-ref=\"41008038\">Mark 8:38</data>; <data class=\"bible-ref\" data-start-ref=\"41013026\" data-end-ref=\"41013027\">13:26–27</data>; <data class=\"bible-ref\" data-start-ref=\"53001007\" data-end-ref=\"53001007\">2&nbsp;Thessalonians 1:7</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52003013",
+"start_ref_usfm": "1TH 3:13",
+"end_ref": "52003013",
+"end_ref_usfm": "1TH 3:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "17248",
+"reference_id": 16416,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:1–2",
+"media_type": "Text",
+"index_reference": "52004001-52004002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>we ask and encourage you</em>: Paul emphasizes the authority of his teaching by speaking in the name of the Lord Jesus.</p></li><li><p><span><em>For you know the instructions we gave</em></span>: Ancient letters often reminded recipients of what they already knew. Paul reminds the Thessalonians of matters requiring them to obey (<data class=\"bible-ref\" data-start-ref=\"52004011\" data-end-ref=\"52004011\">4:11</data>; <data class=\"bible-ref\" data-start-ref=\"53003004\" data-end-ref=\"53003004\">2 Thessalonians 3:4</data>, <data class=\"bible-ref\" data-start-ref=\"53003006\" data-end-ref=\"53003006\">6</data>, <data class=\"bible-ref\" data-start-ref=\"53003010\" data-end-ref=\"53003010\">10</data>, <data class=\"bible-ref\" data-start-ref=\"53003012\" data-end-ref=\"53003012\">12</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004001",
+"start_ref_usfm": "1TH 4:1",
+"end_ref": "52004002",
+"end_ref_usfm": "1TH 4:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Live"
+}
+]
+}
+},
+{
+"content_id": "17249",
+"reference_id": 16417,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:1–5.22",
+"media_type": "Text",
+"index_reference": "52004001-52005022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The second part of the letter discusses Timothy&apos;s news about the church and the questions the Christians had for Paul. </p><p>Paul addresses:</p><ul><li><p>the problem of sexual immorality (<data class=\"bible-ref\" data-start-ref=\"52004003\" data-end-ref=\"52004008\">4:3–8</data>) before responding to the Thessalonians’ questions about love for other Christians (<data class=\"bible-ref\" data-start-ref=\"52004009\" data-end-ref=\"52004012\">4:9–12</data>),</p></li><li><p> the fate of Christians who have died (<data class=\"bible-ref\" data-start-ref=\"52004013\" data-end-ref=\"52004018\">4:13–18</data>), and</p></li><li><p>the timing of &quot;the Day of the Lord&quot; (<data class=\"bible-ref\" data-start-ref=\"52005001\" data-end-ref=\"52005011\">5:1–11</data>). </p></li></ul><p>Paul offers advice on topics such as leadership and community relations, the relationship with the Lord, and prophecy (<data class=\"bible-ref\" data-start-ref=\"52005012\" data-end-ref=\"52005015\">5:12–</data><data class=\"bible-ref\" data-start-ref=\"52005019\" data-end-ref=\"52005022\">22</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004001",
+"start_ref_usfm": "1TH 4:1",
+"end_ref": "52005022",
+"end_ref_usfm": "1TH 5:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.4738,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4513,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.4175,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2838,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2838,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.2838,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.2275,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2225,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:LoveForOnesFellowBeliever",
+"type": "keyterm",
+"confidence": 0.1663,
+"match_method": "canonical",
+"preferred_label": "Love for One's Fellow Believer"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "keyterm:AtPeace",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Be at Peace"
+},
+{
+"id": "keyterm:Declare",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Declare"
+},
+{
+"id": "keyterm:Fornication",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Fornication"
+},
+{
+"id": "keyterm:TaughtByGod",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Taught by God"
+},
+{
+"id": "keyterm:FaintHearted",
+"type": "keyterm",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Faint-Hearted"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.1613,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+},
+{
+"id": "realia:Trumpet",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Trumpet"
+},
+{
+"id": "realia:Helmet",
+"type": "realia",
+"confidence": 0.1013,
+"match_method": "canonical",
+"preferred_label": "Helmet"
+}
+]
+}
+},
+{
+"content_id": "17259",
+"reference_id": 16427,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:3",
+"media_type": "Text",
+"index_reference": "52004003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>it is God’s will that you should be holy</em>:</span> Christian ethics focus on doing God&apos;s will, not on philosophical ideas about virtue (<data class=\"bible-ref\" data-start-ref=\"45012001\" data-end-ref=\"45012002\">Romans 12:1–2</data>; <data class=\"bible-ref\" data-start-ref=\"49006006\" data-end-ref=\"49006006\">Ephesians 6:6</data>; <data class=\"bible-ref\" data-start-ref=\"58010036\" data-end-ref=\"58010036\">Hebrews 10:36</data>; <data class=\"bible-ref\" data-start-ref=\"58013020\" data-end-ref=\"58013021\">13:20–21</data>). Holiness affects every part of a person&apos;s life (<data class=\"bible-ref\" data-start-ref=\"52004004\" data-end-ref=\"52004004\">1&nbsp;Thessalonians 4:4</data>, <data class=\"bible-ref\" data-start-ref=\"52004007\" data-end-ref=\"52004007\">7</data>; <data class=\"bible-ref\" data-start-ref=\"52005023\" data-end-ref=\"52005023\">5:23</data>). Here, it means restraint from sexual sin (Greek <em>porneia</em>, meaning any sexual union or activity outside marriage).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004003",
+"start_ref_usfm": "1TH 4:3",
+"end_ref": "52004003",
+"end_ref_usfm": "1TH 4:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Fornication",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fornication"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17260",
+"reference_id": 16428,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:4",
+"media_type": "Text",
+"index_reference": "52004004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>control his own body</em></span>: Self-control earns honor from others and from God (<data class=\"bible-ref\" data-start-ref=\"45012010\" data-end-ref=\"45012010\">Romans 12:10</data>; <data class=\"bible-ref\" data-start-ref=\"45002007\" data-end-ref=\"45002007\">Romans 2:7</data>; <data class=\"bible-ref\" data-start-ref=\"60005004\" data-end-ref=\"60005004\">1&nbsp;Peter 5:4</data>, <data class=\"bible-ref\" data-start-ref=\"60005006\" data-end-ref=\"60005006\">6</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004004",
+"start_ref_usfm": "1TH 4:4",
+"end_ref": "52004004",
+"end_ref_usfm": "1TH 4:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17261",
+"reference_id": 16429,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:5",
+"media_type": "Text",
+"index_reference": "52004005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Ignoring God and his teachings leads to moral corruption (<data class=\"bible-ref\" data-start-ref=\"45001018\" data-end-ref=\"45001032\">Romans 1:18–32</data>; <data class=\"bible-ref\" data-start-ref=\"49004017\" data-end-ref=\"49004018\">Ephesians 4:17–18</data>). </p></li><li><p><em>lustful passion</em>: In the ancient Mediterranean world, people often tolerated sexual immorality. Prostitution was legal, but having sexual relations with another man&apos;s wife was not. Roman marriage customs permitted men, but not women, to have sexual affairs. In contrast to Roman customs, Jewish and Christian writers forbade all sexual activity outside of marriage (<data class=\"bible-ref\" data-start-ref=\"44015020\" data-end-ref=\"44015020\">Acts 15:20</data>; <data class=\"bible-ref\" data-start-ref=\"46006012\" data-end-ref=\"46006020\">1&nbsp;Corinthians 6:12–20</data>; <data class=\"bible-ref\" data-start-ref=\"51003005\" data-end-ref=\"51003006\">Colossians 3:5–6</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004005",
+"start_ref_usfm": "1TH 4:5",
+"end_ref": "52004005",
+"end_ref_usfm": "1TH 4:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "group:Gentile",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Gentiles"
+}
+]
+}
+},
+{
+"content_id": "17262",
+"reference_id": 16430,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:7",
+"media_type": "Text",
+"index_reference": "52004007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>not … impurity … but … holiness</em>: Compare with <data class=\"bible-ref\" data-start-ref=\"52001004\" data-end-ref=\"52001004\">1:4</data>; <data class=\"bible-ref\" data-start-ref=\"52002012\" data-end-ref=\"52002012\">2:12</data>; <data class=\"bible-ref\" data-start-ref=\"52005023\" data-end-ref=\"52005024\">5:23–24</data>; <data class=\"bible-ref\" data-start-ref=\"53002013\" data-end-ref=\"53002014\">2&nbsp;Thessalonians 2:13–14</data>; <data class=\"bible-ref\" data-start-ref=\"60001015\" data-end-ref=\"60001016\">1&nbsp;Peter 1:15–16</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004007",
+"start_ref_usfm": "1TH 4:7",
+"end_ref": "52004007",
+"end_ref_usfm": "1TH 4:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Defilement",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Defilement"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17263",
+"reference_id": 16431,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:8",
+"media_type": "Text",
+"index_reference": "52004008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Rejecting Paul&apos;s teachings on these matters was the same as rejecting God.</p></li><li><p>The Holy Spirit helps Christians live according to God&apos;s will (<data class=\"bible-ref\" data-start-ref=\"26036027\" data-end-ref=\"26036027\">Ezekiel 36:27</data>; <data class=\"bible-ref\" data-start-ref=\"45008001\" data-end-ref=\"45008004\">Romans 8:1–4</data>; <data class=\"bible-ref\" data-start-ref=\"48005016\" data-end-ref=\"48005016\">Galatians 5:16</data>; <data class=\"bible-ref\" data-start-ref=\"62003024\" data-end-ref=\"62003024\">1&nbsp;John 3:24</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004008",
+"start_ref_usfm": "1TH 4:8",
+"end_ref": "52004008",
+"end_ref_usfm": "1TH 4:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+}
+]
+}
+},
+{
+"content_id": "17265",
+"reference_id": 16433,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:9",
+"media_type": "Text",
+"index_reference": "52004009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>you yourselves have been taught by God to love one another </em></span>(see <data class=\"bible-ref\" data-start-ref=\"23054013\" data-end-ref=\"23054013\">Isaiah 54:13</data>):</p><ul><li><p>through the teachings of Jesus (<data class=\"bible-ref\" data-start-ref=\"43013034\" data-end-ref=\"43013035\">John 13:34–35</data>),</p></li><li><p>through the death of Jesus on the cross (<data class=\"bible-ref\" data-start-ref=\"45005008\" data-end-ref=\"45005008\">Romans 5:8</data>; <data class=\"bible-ref\" data-start-ref=\"49005001\" data-end-ref=\"49005002\">Ephesians 5:1–2</data>), and</p></li><li><p>through the Holy Spirit (<data class=\"bible-ref\" data-start-ref=\"45005005\" data-end-ref=\"45005005\">Romans 5:5</data>; <data class=\"bible-ref\" data-start-ref=\"48005022\" data-end-ref=\"48005022\">Galatians 5:22</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004009",
+"start_ref_usfm": "1TH 4:9",
+"end_ref": "52004009",
+"end_ref_usfm": "1TH 4:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:LoveForOnesFellowBeliever",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Love for One's Fellow Believer"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:TaughtByGod",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Taught by God"
+}
+]
+}
+},
+{
+"content_id": "17264",
+"reference_id": 16432,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:9–5.11",
+"media_type": "Text",
+"index_reference": "52004009-52005011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul answers questions from the Thessalonians (see <data class=\"bible-ref\" data-start-ref=\"46007001\" data-end-ref=\"46007001\">1&nbsp;Corinthians 7:1</data>), questions about: </p><ul><li><p>loving each other (<data class=\"bible-ref\" data-start-ref=\"52004009\" data-end-ref=\"52004012\">1&nbsp;Thessalonians 4:9–12</data>)</p></li><li><p>the destiny of Christians who have died (<data class=\"bible-ref\" data-start-ref=\"52004013\" data-end-ref=\"52004018\">4:13–18</data>), and</p></li><li><p>the timing of the day the Lord will return (<data class=\"bible-ref\" data-start-ref=\"52005001\" data-end-ref=\"52005011\">5:1–11</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004009",
+"start_ref_usfm": "1TH 4:9",
+"end_ref": "52005011",
+"end_ref_usfm": "1TH 5:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.4786,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.3143,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3143,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.3143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.2524,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:LoveForOnesFellowBeliever",
+"type": "keyterm",
+"confidence": 0.181,
+"match_method": "canonical",
+"preferred_label": "Love for One's Fellow Believer"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:TaughtByGod",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Taught by God"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.1714,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "realia:Helmet",
+"type": "realia",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Helmet"
+},
+{
+"id": "realia:Trumpet",
+"type": "realia",
+"confidence": 0.1114,
+"match_method": "canonical",
+"preferred_label": "Trumpet"
+}
+]
+}
+},
+{
+"content_id": "17250",
+"reference_id": 16418,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:10",
+"media_type": "Text",
+"index_reference": "52004010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Thessalonian Christians showed love to all Christians in Macedonia, including Philippi and Berea, by providing financial help (see also <data class=\"bible-ref\" data-start-ref=\"52001007\" data-end-ref=\"52001008\">1:7–8</data> and <data class=\"bible-ref\" data-start-ref=\"47008001\" data-end-ref=\"47008005\">2&nbsp;Corinthians 8:1–5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004010",
+"start_ref_usfm": "1TH 4:10",
+"end_ref": "52004010",
+"end_ref_usfm": "1TH 4:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+}
+]
+}
+},
+{
+"content_id": "17251",
+"reference_id": 16419,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:11",
+"media_type": "Text",
+"index_reference": "52004011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>to live quietly</em></span> means being worthy of respect and not causing problems in the community.</p></li><li><p><em>work with your hands</em>: The apostle Paul had previously instructed through his teaching and personal example that they should earn their own living (see<data class=\"bible-ref\" data-start-ref=\"53003007\" data-end-ref=\"53003009\"> Thessalonians 3:7–9</data>; <data class=\"bible-ref\" data-start-ref=\"53003010\" data-end-ref=\"53003010\">10</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004011",
+"start_ref_usfm": "1TH 4:11",
+"end_ref": "52004011",
+"end_ref_usfm": "1TH 4:11"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17252",
+"reference_id": 16420,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:12",
+"media_type": "Text",
+"index_reference": "52004012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Not relying on non-Christians for financial help and behaving properly toward them will earn the respect of non-Christians (see <data class=\"bible-ref\" data-start-ref=\"45013013\" data-end-ref=\"45013013\">Romans 13:13</data>; <data class=\"bible-ref\" data-start-ref=\"46005012\" data-end-ref=\"46005013\">1&nbsp;Corinthians 5:12–13</data>; <data class=\"bible-ref\" data-start-ref=\"51004005\" data-end-ref=\"51004005\">Colossians 4:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004012",
+"start_ref_usfm": "1TH 4:12",
+"end_ref": "52004012",
+"end_ref_usfm": "1TH 4:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+}
+]
+}
+},
+{
+"content_id": "17253",
+"reference_id": 16421,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:13",
+"media_type": "Text",
+"index_reference": "52004013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>those who sleep in death </em></span>(literally <em>those who have fallen asleep;</em> also in <data class=\"bible-ref\" data-start-ref=\"52004014\" data-end-ref=\"52004014\">4:14</data>): In Greek, Jewish, and Christian literature, sleep often means death (<data class=\"bible-ref\" data-start-ref=\"27012002\" data-end-ref=\"27012002\">Daniel 12:2</data>; <data class=\"bible-ref\" data-start-ref=\"40027052\" data-end-ref=\"40027052\">Matthew 27:52</data>). Personal existence continues after death (<data class=\"bible-ref\" data-start-ref=\"42023040\" data-end-ref=\"42023043\">Luke 23:40–43</data>; <data class=\"bible-ref\" data-start-ref=\"44007055\" data-end-ref=\"44007060\">Acts 7:55–60</data>; <data class=\"bible-ref\" data-start-ref=\"47005006\" data-end-ref=\"47005010\">2&nbsp;Corinthians 5:6–10</data>; <data class=\"bible-ref\" data-start-ref=\"50001020\" data-end-ref=\"50001024\">Philippians 1:20–24</data>; <data class=\"bible-ref\" data-start-ref=\"66006009\" data-end-ref=\"66006011\">Revelation 6:9–11</data>). Those who have died await the resurrection (<data class=\"bible-ref\" data-start-ref=\"46015023\" data-end-ref=\"46015023\">1&nbsp;Corinthians 15:23</data>). </p></li><li><p><span><em>grieve like the rest, who are without hope</em></span>: Ancient letters of comfort advised those in grief not to become overwhelmed by grief, as they could not prevent death. Paul does not forbid grief but encourages Christians to avoid the kind of grief typical of those without hope in God (see <data class=\"bible-ref\" data-start-ref=\"43016006\" data-end-ref=\"43016006\">John 16:6</data>, <data class=\"bible-ref\" data-start-ref=\"43016020\" data-end-ref=\"43016020\">20</data>; <data class=\"bible-ref\" data-start-ref=\"50002027\" data-end-ref=\"50002027\">Philippians 2:27</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004013",
+"start_ref_usfm": "1TH 4:13",
+"end_ref": "52004013",
+"end_ref_usfm": "1TH 4:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+}
+]
+}
+},
+{
+"content_id": "17254",
+"reference_id": 16422,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:14",
+"media_type": "Text",
+"index_reference": "52004014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>died and rose again: </em>The death and resurrection of Jesus is the foundation for hope despite the reality of death, guaranteed by Christ&apos;s resurrection (<data class=\"bible-ref\" data-start-ref=\"46015001\" data-end-ref=\"46015058\">1&nbsp;Corinthians 15</data>).</p></li><li><p><em>God will bring with Jesus those: </em>Refers to the resurrection of Christians (<data class=\"bible-ref\" data-start-ref=\"52004016\" data-end-ref=\"52004016\">1&nbsp;Thessalonians 4:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004014",
+"start_ref_usfm": "1TH 4:14",
+"end_ref": "52004014",
+"end_ref_usfm": "1TH 4:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+}
+]
+}
+},
+{
+"content_id": "17255",
+"reference_id": 16423,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:15",
+"media_type": "Text",
+"index_reference": "52004015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>By the word of the Lord</em></span>: The teachings of Jesus gave Paul assurance for the Thessalonians (see <data class=\"bible-ref\" data-start-ref=\"40024029\" data-end-ref=\"40024031\">Matthew 24:29–31</data>, <data class=\"bible-ref\" data-start-ref=\"40024040\" data-end-ref=\"40024041\">40–41</data>).</p></li><li><p><em>will by no means precede</em>: Paul assures the Thessalonians that when the Lord returns, the dead will not be at a disadvantage. They will participate equally in the resurrection.</p></li><li><p>In talking about the return of Jesus, Paul uses a Greek term (<em>parousia</em>). It is often used to describe an emperor or king&apos;s grand arrival in a city (see <data class=\"bible-ref\" data-start-ref=\"52004017\" data-end-ref=\"52004017\">1 Thessalonians 4:17</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004015",
+"start_ref_usfm": "1TH 4:15",
+"end_ref": "52004015",
+"end_ref_usfm": "1TH 4:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17256",
+"reference_id": 16424,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:16",
+"media_type": "Text",
+"index_reference": "52004016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>with the trumpet of God</em></span>: God&apos;s trumpet will announce the resurrection, just as it once announced Israel&apos;s rescue (<data class=\"bible-ref\" data-start-ref=\"36001016\" data-end-ref=\"36001016\">Zephaniah 1:16</data>; <data class=\"bible-ref\" data-start-ref=\"38009014\" data-end-ref=\"38009014\">Zechariah 9:14</data>). In the future, it will announce the gathering of God&apos;s people from the farthest ends of the earth and heaven (<data class=\"bible-ref\" data-start-ref=\"40024031\" data-end-ref=\"40024031\">Matthew 24:31</data>; compare <data class=\"bible-ref\" data-start-ref=\"46015052\" data-end-ref=\"46015052\">1&nbsp;Corinthians 15:52</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004016",
+"start_ref_usfm": "1TH 4:16",
+"end_ref": "52004016",
+"end_ref_usfm": "1TH 4:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "realia:Trumpet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Trumpet"
+}
+]
+}
+},
+{
+"content_id": "17257",
+"reference_id": 16425,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:17",
+"media_type": "Text",
+"index_reference": "52004017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>to meet</em>: This implies the custom of sending an official delegation to welcome a visiting leader and accompany him into the city (<data class=\"bible-ref\" data-start-ref=\"40025006\" data-end-ref=\"40025006\">Matthew 25:6</data>, <data class=\"bible-ref\" data-start-ref=\"40025010\" data-end-ref=\"40025010\">10</data>; <data class=\"bible-ref\" data-start-ref=\"44028015\" data-end-ref=\"44028016\">Acts 28:15–16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004017",
+"start_ref_usfm": "1TH 4:17",
+"end_ref": "52004017",
+"end_ref_usfm": "1TH 4:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17258",
+"reference_id": 16426,
+"version": "1.0.4",
+"title": "1 Thessalonians 4:18",
+"media_type": "Text",
+"index_reference": "52004018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul teaches about the end of history to help Christians support each other when encountering death. He does not encourage guessing about the end of time.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52004018",
+"start_ref_usfm": "1TH 4:18",
+"end_ref": "52004018",
+"end_ref_usfm": "1TH 4:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+}
+]
+}
+},
+{
+"content_id": "17275",
+"reference_id": 16443,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:1",
+"media_type": "Text",
+"index_reference": "52005001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Questions about how and when these events will happen occupied the thoughts of both Jewish and Christian people (<data class=\"bible-ref\" data-start-ref=\"27012006\" data-end-ref=\"27012006\">Daniel 12:6</data>; <data class=\"bible-ref\" data-start-ref=\"40024003\" data-end-ref=\"40024003\">Matthew 24:3</data>; <data class=\"bible-ref\" data-start-ref=\"42017020\" data-end-ref=\"42017020\">Luke 17:20</data>; <data class=\"bible-ref\" data-start-ref=\"44001006\" data-end-ref=\"44001006\">Acts 1:6</data>; <data class=\"bible-ref\" data-start-ref=\"60001010\" data-end-ref=\"60001011\">1&nbsp;Peter 1:10–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005001",
+"start_ref_usfm": "1TH 5:1",
+"end_ref": "52005001",
+"end_ref_usfm": "1TH 5:1"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17284",
+"reference_id": 16452,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:2",
+"media_type": "Text",
+"index_reference": "52005002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul reminds them of the teachings they already received (<data class=\"bible-ref\" data-start-ref=\"52003003\" data-end-ref=\"52003004\">3:3–4</data>).</p></li><li><p><em>the Day of the Lord</em>: The day when God will judge humanity and save his people (<data class=\"bible-ref\" data-start-ref=\"23013006\" data-end-ref=\"23013006\">Isaiah 13:6</data>, <data class=\"bible-ref\" data-start-ref=\"23013009\" data-end-ref=\"23013009\">9</data>; <data class=\"bible-ref\" data-start-ref=\"26030003\" data-end-ref=\"26030003\">Ezekiel 30:3</data>; <data class=\"bible-ref\" data-start-ref=\"29002021\" data-end-ref=\"29002032\">Joel 2:21–32</data>; <data class=\"bible-ref\" data-start-ref=\"29003018\" data-end-ref=\"29003018\">3:18</data>; <data class=\"bible-ref\" data-start-ref=\"38014001\" data-end-ref=\"38014021\">Zechariah 14</data>).</p></li><li><p><em>like a thief in the night</em>: Compare <data class=\"bible-ref\" data-start-ref=\"40024043\" data-end-ref=\"40024044\">Matthew 24:43–44</data>; <data class=\"bible-ref\" data-start-ref=\"42012039\" data-end-ref=\"42012040\">Luke 12:39–40</data>; <data class=\"bible-ref\" data-start-ref=\"61003010\" data-end-ref=\"61003010\">2 Peter 3:10</data>; <data class=\"bible-ref\" data-start-ref=\"66003003\" data-end-ref=\"66003003\">Revelation 3:3</data>; <data class=\"bible-ref\" data-start-ref=\"66016015\" data-end-ref=\"66016015\">16:15</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005002",
+"start_ref_usfm": "1TH 5:2",
+"end_ref": "52005002",
+"end_ref_usfm": "1TH 5:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17285",
+"reference_id": 16453,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:3",
+"media_type": "Text",
+"index_reference": "52005003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>“Peace and security”</em></span>: This phrase was common during the time of the <em>pax Romana</em> (Roman peace). Despite this assumption of security, God&apos;s final judgment arrives suddenly<em> </em>and no one can avoid it.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005003",
+"start_ref_usfm": "1TH 5:3",
+"end_ref": "52005003",
+"end_ref_usfm": "1TH 5:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+}
+]
+}
+},
+{
+"content_id": "17286",
+"reference_id": 16454,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:4",
+"media_type": "Text",
+"index_reference": "52005004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The day of the Lord will not surprise Christians. This is not because they know exactly when Jesus will come again, but because they are spiritually ready.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005004",
+"start_ref_usfm": "1TH 5:4",
+"end_ref": "52005004",
+"end_ref_usfm": "1TH 5:4"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17287",
+"reference_id": 16455,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:5",
+"media_type": "Text",
+"index_reference": "52005005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>sons of the light:</em> God freed the Thessalonian Christians from spiritual darkness (<data class=\"bible-ref\" data-start-ref=\"43012036\" data-end-ref=\"43012036\">John 12:36</data>; <data class=\"bible-ref\" data-start-ref=\"44026018\" data-end-ref=\"44026018\">Acts 26:18</data>; <data class=\"bible-ref\" data-start-ref=\"49005008\" data-end-ref=\"49005008\">Ephesians 5:8</data>; <data class=\"bible-ref\" data-start-ref=\"60002009\" data-end-ref=\"60002009\">1&nbsp;Peter 2:9</data>).</p></li><li><p><em>sons of the day</em>: They belong to God&apos;s new order (<data class=\"bible-ref\" data-start-ref=\"45013012\" data-end-ref=\"45013012\">Romans 13:12</data>). </p></li><li><p><em>to the night or to the darkness</em>: These refer to living a life of sin (see <data class=\"bible-ref\" data-start-ref=\"52005006\" data-end-ref=\"52005008\">1&nbsp;Thessalonians 5:6–8</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005005",
+"start_ref_usfm": "1TH 5:5",
+"end_ref": "52005005",
+"end_ref_usfm": "1TH 5:5"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17288",
+"reference_id": 16456,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:6",
+"media_type": "Text",
+"index_reference": "52005006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>let us remain awake and sober</em></span>: Paul is echoing the way Jesus called his people to be alert and to prepare themselves with moral living. This is because no one will not know the exact day of his return (<data class=\"bible-ref\" data-start-ref=\"40024042\" data-end-ref=\"40024042\">Matthew 24:42</data>, <data class=\"bible-ref\" data-start-ref=\"40024044\" data-end-ref=\"40024044\">44</data>; <data class=\"bible-ref\" data-start-ref=\"40025013\" data-end-ref=\"40025013\">25:13</data>; compare <data class=\"bible-ref\" data-start-ref=\"60001013\" data-end-ref=\"60001013\">1&nbsp;Peter 1:13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005006",
+"start_ref_usfm": "1TH 5:6",
+"end_ref": "52005006",
+"end_ref_usfm": "1TH 5:6"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17289",
+"reference_id": 16457,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:7",
+"media_type": "Text",
+"index_reference": "52005007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Sleep means being lazy in morals (<data class=\"bible-ref\" data-start-ref=\"52005006\" data-end-ref=\"52005006\">5:6</data>). Being drunk is a metaphor for lacking self-control. The day of the Lord will surprise these people (<data class=\"bible-ref\" data-start-ref=\"52005004\" data-end-ref=\"52005004\">5:4</data>; <data class=\"bible-ref\" data-start-ref=\"40024048\" data-end-ref=\"40024051\">Matthew 24:48–51</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005007",
+"start_ref_usfm": "1TH 5:7",
+"end_ref": "52005007",
+"end_ref_usfm": "1TH 5:7"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17290",
+"reference_id": 16458,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:8",
+"media_type": "Text",
+"index_reference": "52005008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>breastplate … helmet:</em> (<data class=\"bible-ref\" data-start-ref=\"23059017\" data-end-ref=\"23059017\">Isaiah 59:17</data>; <data class=\"bible-ref\" data-start-ref=\"49006011\" data-end-ref=\"49006017\">Ephesians 6:11–17</data>): These pieces of armor represent living a moral life (<data class=\"bible-ref\" data-start-ref=\"45013012\" data-end-ref=\"45013012\">Romans 13:12</data>; <data class=\"bible-ref\" data-start-ref=\"47006007\" data-end-ref=\"47006007\">2 Corinthians 6:7</data>; <data class=\"bible-ref\" data-start-ref=\"47010003\" data-end-ref=\"47010005\">10:3–5</data>; <data class=\"bible-ref\" data-start-ref=\"55002003\" data-end-ref=\"55002004\">2 Timothy 2:3–4</data>). The Christian &quot;soldier&quot; uses the equipment of the virtues of faith, love, and hop<em>e</em> (see <data class=\"bible-ref\" data-start-ref=\"52001003\" data-end-ref=\"52001003\">1 Thessalonians 1:3</data>; <data class=\"bible-ref\" data-start-ref=\"52003006\" data-end-ref=\"52003006\">3:6</data>; <data class=\"bible-ref\" data-start-ref=\"46013013\" data-end-ref=\"46013013\">1 Corinthians 13:13</data>; <data class=\"bible-ref\" data-start-ref=\"53001003\" data-end-ref=\"53001004\">2 Thessalonians 1:3–4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005008",
+"start_ref_usfm": "1TH 5:8",
+"end_ref": "52005008",
+"end_ref_usfm": "1TH 5:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "realia:Helmet",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Helmet"
+}
+]
+}
+},
+{
+"content_id": "17291",
+"reference_id": 16459,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:9",
+"media_type": "Text",
+"index_reference": "52005009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God&apos;s wrath shows his judgment against evil (<data class=\"bible-ref\" data-start-ref=\"52001010\" data-end-ref=\"52001010\">1:10</data>; <data class=\"bible-ref\" data-start-ref=\"52002016\" data-end-ref=\"52002016\">2:16</data>; <data class=\"bible-ref\" data-start-ref=\"45005009\" data-end-ref=\"45005009\">Romans 5:9</data>; see <data class=\"bible-ref\" data-start-ref=\"53001006\" data-end-ref=\"53001010\">2&nbsp;Thessalonians 1:6–10</data>; <data class=\"bible-ref\" data-start-ref=\"53002008\" data-end-ref=\"53002008\">2:8</data>). However, God plans for Christians to receive salvation, not encounter his wrath (<data class=\"bible-ref\" data-start-ref=\"53002013\" data-end-ref=\"53002014\">2&nbsp;Thessalonians 2:13–14</data>). Christians will not suffer the terrors of the day of the Lord (<data class=\"bible-ref\" data-start-ref=\"52005001\" data-end-ref=\"52005003\">1&nbsp;Thessalonians 5:1–3</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005009",
+"start_ref_usfm": "1TH 5:9",
+"end_ref": "52005009",
+"end_ref_usfm": "1TH 5:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "17266",
+"reference_id": 16434,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:10",
+"media_type": "Text",
+"index_reference": "52005010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The promise that Christians will live with him forever is based on Christ’s resurrection (<data class=\"bible-ref\" data-start-ref=\"52004014\" data-end-ref=\"52004014\">4:14</data>).</p></li><li><p><em>awake or asleep</em>: This refers to living and dead Christians (<data class=\"bible-ref\" data-start-ref=\"52004013\" data-end-ref=\"52004015\">4:13–15</data>) rather than people’s moral condition (as in <data class=\"bible-ref\" data-start-ref=\"52005006\" data-end-ref=\"52005007\">5:6–7</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005010",
+"start_ref_usfm": "1TH 5:10",
+"end_ref": "52005010",
+"end_ref_usfm": "1TH 5:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+}
+]
+}
+},
+{
+"content_id": "17267",
+"reference_id": 16435,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:11",
+"media_type": "Text",
+"index_reference": "52005011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul wants the Thessalonians to use the teachings about the end of time to encourage and build up one another (see <data class=\"bible-ref\" data-start-ref=\"52004018\" data-end-ref=\"52004018\">4:18</data>). He does not want them to speculate about when the Lord will return.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005011",
+"start_ref_usfm": "1TH 5:11",
+"end_ref": "52005011",
+"end_ref_usfm": "1TH 5:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Encourage",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Encourage"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+}
+]
+}
+},
+{
+"content_id": "17268",
+"reference_id": 16436,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:12",
+"media_type": "Text",
+"index_reference": "52005012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>acknowledge</em>: This may refer to honoring church leaders or recognizing new leaders in the church (<data class=\"bible-ref\" data-start-ref=\"46016015\" data-end-ref=\"46016016\">1&nbsp;Corinthians 16:15–16</data>). True leaders <span>work diligently</span> and govern to serve (<data class=\"bible-ref\" data-start-ref=\"54004010\" data-end-ref=\"54004010\">1&nbsp;Timothy 4:10</data>; <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005017\">5:17</data>; <data class=\"bible-ref\" data-start-ref=\"40020025\" data-end-ref=\"40020028\">Matthew 20:25–28</data>). They lead, help, and protect the church (<data class=\"bible-ref\" data-start-ref=\"45016001\" data-end-ref=\"45016002\">Romans 16:1–2</data>; <data class=\"bible-ref\" data-start-ref=\"54003004\" data-end-ref=\"54003005\">1&nbsp;Timothy 3:4–5</data>, <data class=\"bible-ref\" data-start-ref=\"54003012\" data-end-ref=\"54003012\">12</data>). </p></li><li><p><span><em>who give you instruction</em></span>: Leaders correct moral errors and protect the church against false doctrine (<data class=\"bible-ref\" data-start-ref=\"44020031\" data-end-ref=\"44020031\">Acts 20:31</data>; <data class=\"bible-ref\" data-start-ref=\"46004014\" data-end-ref=\"46004014\">1&nbsp;Corinthians 4:14</data>; <data class=\"bible-ref\" data-start-ref=\"51001028\" data-end-ref=\"51001028\">Colossians 1:28</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005012",
+"start_ref_usfm": "1TH 5:12",
+"end_ref": "52005012",
+"end_ref_usfm": "1TH 5:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17269",
+"reference_id": 16437,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:13",
+"media_type": "Text",
+"index_reference": "52005013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Leaders should receive honor and love for what they do, not just their rank. </p></li><li><p><em>Live in peace</em>: Teaching about community peace and harmony was common in ancient moral lessons. Harmony between Christians and leaders was crucial because of the persecution the church experienced (<data class=\"bible-ref\" data-start-ref=\"52002014\" data-end-ref=\"52002014\">2:14</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005013",
+"start_ref_usfm": "1TH 5:13",
+"end_ref": "52005013",
+"end_ref_usfm": "1TH 5:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:AtPeace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be at Peace"
+}
+]
+}
+},
+{
+"content_id": "17270",
+"reference_id": 16438,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:14",
+"media_type": "Text",
+"index_reference": "52005014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The leaders are not the only ones responsible for the congregation&apos;s moral progress (<data class=\"bible-ref\" data-start-ref=\"52004018\" data-end-ref=\"52004018\">4:18</data>; <data class=\"bible-ref\" data-start-ref=\"52005011\" data-end-ref=\"52005011\">5:11</data>). Paul urged the church to warn those who are lazy (unruly), and those who did not follow the apostles’ instructions (see <data class=\"bible-ref\" data-start-ref=\"53003006\" data-end-ref=\"53003015\">2&nbsp;Thessalonians 3:6–15</data>).</p></li><li><p><span><em>encourage the fainthearted, help the weak</em>: </span>Greek society thought poorly of people perceived as weak in some way.</p></li><li><p>Instead of being annoyed, Christians should be patient in their relationships (<data class=\"bible-ref\" data-start-ref=\"48005023\" data-end-ref=\"48005023\">Galatians 5:23</data>; <data class=\"bible-ref\" data-start-ref=\"49004002\" data-end-ref=\"49004002\">Ephesians 4:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005014",
+"start_ref_usfm": "1TH 5:14",
+"end_ref": "52005014",
+"end_ref_usfm": "1TH 5:14"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:FaintHearted",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faint-Hearted"
+}
+]
+}
+},
+{
+"content_id": "17271",
+"reference_id": 16439,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:15",
+"media_type": "Text",
+"index_reference": "52005015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Jesus and the apostles advised against revenge (<data class=\"bible-ref\" data-start-ref=\"40005038\" data-end-ref=\"40005048\">Matthew 5:38–48</data>; <data class=\"bible-ref\" data-start-ref=\"42006027\" data-end-ref=\"42006036\">Luke 6:27–36</data>; <data class=\"bible-ref\" data-start-ref=\"45012017\" data-end-ref=\"45012021\">Romans 12:17–21</data>; <data class=\"bible-ref\" data-start-ref=\"60003009\" data-end-ref=\"60003009\">1&nbsp;Peter 3:9</data>). In contrast, the Roman author Seneca believed revenge was necessary to restore lost social honor. Paul urged Christians to do good to everyone, including church members and those outside the Christian community, even those who persecuted them (<data class=\"bible-ref\" data-start-ref=\"52002014\" data-end-ref=\"52002014\">1&nbsp;Thessalonians 2:14</data>; see <data class=\"bible-ref\" data-start-ref=\"52003012\" data-end-ref=\"52003012\">3:12</data>; <data class=\"bible-ref\" data-start-ref=\"48006010\" data-end-ref=\"48006010\">Galatians 6:10</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005015",
+"start_ref_usfm": "1TH 5:15",
+"end_ref": "52005015",
+"end_ref_usfm": "1TH 5:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+}
+]
+}
+},
+{
+"content_id": "17272",
+"reference_id": 16440,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:17",
+"media_type": "Text",
+"index_reference": "52005017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Pray without ceasing</em></span> means to be spiritually alert and persist in prayer (<data class=\"bible-ref\" data-start-ref=\"52001002\" data-end-ref=\"52001002\">1:2</data>; <data class=\"bible-ref\" data-start-ref=\"42018001\" data-end-ref=\"42018001\">Luke 18:1</data>; <data class=\"bible-ref\" data-start-ref=\"45012012\" data-end-ref=\"45012012\">Romans 12:12</data>; <data class=\"bible-ref\" data-start-ref=\"49006018\" data-end-ref=\"49006018\">Ephesians 6:18</data>). Christians don&apos;t need to speak words of prayer every moment, but they should cultivate an attitude of prayer at all times.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005017",
+"start_ref_usfm": "1TH 5:17",
+"end_ref": "52005017",
+"end_ref_usfm": "1TH 5:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "17273",
+"reference_id": 16441,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:18",
+"media_type": "Text",
+"index_reference": "52005018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Give thanks</em>: God is in total control and can redeem any situation (<data class=\"bible-ref\" data-start-ref=\"45008028\" data-end-ref=\"45008028\">Romans 8:28</data>). Paul is reminding the Thessalonians to be grateful in all circumstances, good or bad. Being grateful in all circumstances is submission to God&apos;s will. </p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005018",
+"start_ref_usfm": "1TH 5:18",
+"end_ref": "52005018",
+"end_ref_usfm": "1TH 5:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17274",
+"reference_id": 16442,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:19",
+"media_type": "Text",
+"index_reference": "52005019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Do not extinguish the Spirit</em></span>: Paul commands the Thessalonian Christians to keep the Spirit&apos;s presence active among them by allowing prophecy in the church (<data class=\"bible-ref\" data-start-ref=\"40003011\" data-end-ref=\"40003011\">Matthew 3:11</data>; <data class=\"bible-ref\" data-start-ref=\"44002003\" data-end-ref=\"44002003\">Acts 2:3</data>; <data class=\"bible-ref\" data-start-ref=\"55001006\" data-end-ref=\"55001006\">2&nbsp;Timothy 1:6</data>; <data class=\"bible-ref\" data-start-ref=\"24020009\" data-end-ref=\"24020009\">Jeremiah 20:9</data>; <data class=\"bible-ref\" data-start-ref=\"62004001\" data-end-ref=\"62004002\">1&nbsp;John 4:1–2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005019",
+"start_ref_usfm": "1TH 5:19",
+"end_ref": "52005019",
+"end_ref_usfm": "1TH 5:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+}
+]
+}
+},
+{
+"content_id": "17276",
+"reference_id": 16444,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:20–21",
+"media_type": "Text",
+"index_reference": "52005020-52005021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Do not treat prophecies with contempt:</em> No one should dismiss prophecy intended to spiritually strengthen the church (<data class=\"bible-ref\" data-start-ref=\"46014001\" data-end-ref=\"46014004\">1&nbsp;Corinthians 14:1–4</data>). Instead, the Thessalonians should evaluate the prophecies to understand where they come from. Paul says they should make sure any prophecies align with the apostles&apos; teachings (<data class=\"bible-ref\" data-start-ref=\"46012010\" data-end-ref=\"46012010\">1&nbsp;Corinthians 12:10</data>; <data class=\"bible-ref\" data-start-ref=\"46014029\" data-end-ref=\"46014029\">14:29</data>; <data class=\"bible-ref\" data-start-ref=\"53002002\" data-end-ref=\"53002002\">2&nbsp;Thessalonians 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"62004001\" data-end-ref=\"62004003\">1&nbsp;John 4:1–3</data>). The church should also assess the character of those who deliver the prophecies (<data class=\"bible-ref\" data-start-ref=\"40007015\" data-end-ref=\"40007020\">Matthew 7:15–20</data>). </p><p>Early Christian teaching stated, “Not everyone who speaks about spiritual things is a prophet, but only if the person’s behavior is like the Lord” (<em>Didache</em>&nbsp;11:8). Paul encourages the Thessalonians to hold fast to what is good. Specifically, this means to test prophecies to see if they prove true.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005020",
+"start_ref_usfm": "1TH 5:20",
+"end_ref": "52005021",
+"end_ref_usfm": "1TH 5:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+}
+]
+}
+},
+{
+"content_id": "17277",
+"reference_id": 16445,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:22",
+"media_type": "Text",
+"index_reference": "52005022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>They should reject every form of evil, especially false prophecies (<data class=\"bible-ref\" data-start-ref=\"52005019\" data-end-ref=\"52005021\">5:19–21</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005022",
+"start_ref_usfm": "1TH 5:22",
+"end_ref": "52005022",
+"end_ref_usfm": "1TH 5:22"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "17279",
+"reference_id": 16447,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:23",
+"media_type": "Text",
+"index_reference": "52005023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>God helps Christians become holy (<data class=\"bible-ref\" data-start-ref=\"52003011\" data-end-ref=\"52003013\">3:11–13</data>). His work to sanctify extends to the spirit, soul, and body, which means all parts of human life (see also <data class=\"bible-ref\" data-start-ref=\"40010028\" data-end-ref=\"40010028\">Matthew 10:28</data>; <data class=\"bible-ref\" data-start-ref=\"41012030\" data-end-ref=\"41012030\">Mark 12:30</data>; <data class=\"bible-ref\" data-start-ref=\"46007034\" data-end-ref=\"46007034\">1&nbsp;Corinthians 7:34</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005023",
+"start_ref_usfm": "1TH 5:23",
+"end_ref": "52005023",
+"end_ref_usfm": "1TH 5:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17278",
+"reference_id": 16446,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:23–28",
+"media_type": "Text",
+"index_reference": "52005023-52005028",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Greek and Roman letters ended with a wish for the recipient&apos;s good health. Jewish letters concluded with a blessing of peace. Paul ends his letter with a Christian version of these practices.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005023",
+"start_ref_usfm": "1TH 5:23",
+"end_ref": "52005028",
+"end_ref_usfm": "1TH 5:28"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+},
+{
+"id": "keyterm:Consecration.2",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Consecration"
+}
+]
+}
+},
+{
+"content_id": "17280",
+"reference_id": 16448,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:24",
+"media_type": "Text",
+"index_reference": "52005024",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>He will do it</em>:</span> Paul places complete trust in God&apos;s faithful character (<data class=\"bible-ref\" data-start-ref=\"46001009\" data-end-ref=\"46001009\">1&nbsp;Corinthians 1:9</data>; <data class=\"bible-ref\" data-start-ref=\"53003003\" data-end-ref=\"53003003\">2&nbsp;Thessalonians 3:3</data>; <data class=\"bible-ref\" data-start-ref=\"55002013\" data-end-ref=\"55002013\">2&nbsp;Timothy 2:13</data>; <data class=\"bible-ref\" data-start-ref=\"62001009\" data-end-ref=\"62001009\">1&nbsp;John 1:9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005024",
+"start_ref_usfm": "1TH 5:24",
+"end_ref": "52005024",
+"end_ref_usfm": "1TH 5:24"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Faithfulness",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Faithfulness"
+}
+]
+}
+},
+{
+"content_id": "17281",
+"reference_id": 16449,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:26",
+"media_type": "Text",
+"index_reference": "52005026",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>a holy kiss</em> (see also <data class=\"bible-ref\" data-start-ref=\"45016016\" data-end-ref=\"45016016\">Romans 16:16</data>; <data class=\"bible-ref\" data-start-ref=\"46016020\" data-end-ref=\"46016020\">1 Corinthians 16:20</data>; <data class=\"bible-ref\" data-start-ref=\"47013012\" data-end-ref=\"47013012\">2 Corinthians 13:12</data>; <data class=\"bible-ref\" data-start-ref=\"60005014\" data-end-ref=\"60005014\">1 Peter 5:14</data>): People often greeted each other by kissing on the cheek or forehead. This showed honor, friendship, and love among family members (<data class=\"bible-ref\" data-start-ref=\"41014044\" data-end-ref=\"41014045\">Mark 14:44–45</data>; <data class=\"bible-ref\" data-start-ref=\"42007036\" data-end-ref=\"42007047\">Luke 7:36–47</data>; <data class=\"bible-ref\" data-start-ref=\"42015020\" data-end-ref=\"42015020\">15:20</data>; <data class=\"bible-ref\" data-start-ref=\"44020037\" data-end-ref=\"44020037\">Acts 20:37</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005026",
+"start_ref_usfm": "1TH 5:26",
+"end_ref": "52005026",
+"end_ref_usfm": "1TH 5:26"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "17282",
+"reference_id": 16450,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:27",
+"media_type": "Text",
+"index_reference": "52005027",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>have this letter read</em></span>: People read Scripture out loud in synagogues (local Jewish places of worship) and churches (<data class=\"bible-ref\" data-start-ref=\"42004016\" data-end-ref=\"42004016\">Luke 4:16</data>; <data class=\"bible-ref\" data-start-ref=\"44013015\" data-end-ref=\"44013015\">Acts 13:15</data>; <data class=\"bible-ref\" data-start-ref=\"54004013\" data-end-ref=\"54004013\">1&nbsp;Timothy 4:13</data>). Paul encouraged the practice of reading his letters out loud to the entire congregation (<data class=\"bible-ref\" data-start-ref=\"51004016\" data-end-ref=\"51004016\">Colossians 4:16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005027",
+"start_ref_usfm": "1TH 5:27",
+"end_ref": "52005027",
+"end_ref_usfm": "1TH 5:27"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "17283",
+"reference_id": 16451,
+"version": "1.0.4",
+"title": "1 Thessalonians 5:28",
+"media_type": "Text",
+"index_reference": "52005028",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul adds to the usual greeting by including a blessing of grace at the end of his letters (<data class=\"bible-ref\" data-start-ref=\"45016020\" data-end-ref=\"45016020\">Romans 16:20</data>; <data class=\"bible-ref\" data-start-ref=\"46016023\" data-end-ref=\"46016023\">1 Corinthians 16:23</data>; <data class=\"bible-ref\" data-start-ref=\"48006018\" data-end-ref=\"48006018\">Galatians 6:18</data>; <data class=\"bible-ref\" data-start-ref=\"49006024\" data-end-ref=\"49006024\">Ephesians 6:24</data>; <data class=\"bible-ref\" data-start-ref=\"53003018\" data-end-ref=\"53003018\">2 Thessalonians 3:18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "52005028",
+"start_ref_usfm": "1TH 5:28",
+"end_ref": "52005028",
+"end_ref_usfm": "1TH 5:28"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+}
+]

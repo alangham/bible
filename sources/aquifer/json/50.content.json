@@ -1,0 +1,5117 @@
+[
+{
+"content_id": "23060",
+"reference_id": 22228,
+"version": "1.0.4",
+"title": "Philippians 1:1",
+"media_type": "Text",
+"index_reference": "50001001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Timothy was one of Paul&apos;s most trusted co-workers and messengers. Paul lists Timothy as a co-sender for five other letters: </p><ul><li><p>2 Corinthians,</p></li><li><p>Colossians,</p></li><li><p>1 Thessalonians,</p></li><li><p>2 Thessalonians, and</p></li><li><p>Philemon.</p></li></ul></li><li><p><em>servants of Christ Jesus</em>: Paul and Timothy belonged entirely to Christ and were fully devoted to his service (see <data class=\"bible-ref\" data-start-ref=\"50002020\" data-end-ref=\"50002021\">Philippians 2:20–21</data>). </p></li><li><p>God&apos;s holy people are made holy in God&apos;s sight by Christ&apos;s redeeming work (see <data class=\"bible-ref\" data-start-ref=\"49001004\" data-end-ref=\"49001004\">Ephesians 1:4</data>, <data class=\"bible-ref\" data-start-ref=\"49001007\" data-end-ref=\"49001007\">7</data>; <data class=\"bible-ref\" data-start-ref=\"49005025\" data-end-ref=\"49005027\">5:25–27</data>; <data class=\"bible-ref\" data-start-ref=\"51001022\" data-end-ref=\"51001022\">Colossians 1:22</data>). They are being made holy by the transforming work of the Holy Spirit in their lives (compare <data class=\"bible-ref\" data-start-ref=\"50004021\" data-end-ref=\"50004021\">Philippians 4:21</data>). </p></li><li><p>Philippi was a Roman colony in the province of Macedonia. The church in Philippi was the first Christian community in Greece (see <data class=\"bible-ref\" data-start-ref=\"44016011\" data-end-ref=\"44016040\">Acts 16:11–40</data>). </p></li><li><p>In the early church, church leaders provided spiritual guidance, while deacons attended to practical matters (see <data class=\"bible-ref\" data-start-ref=\"54003001\" data-end-ref=\"54003013\">1 Timothy 3:1–13</data>). There were no pastors or priests who did this work as their regular paid job, as some do today (compare <data class=\"bible-ref\" data-start-ref=\"46014026\" data-end-ref=\"46014031\">1 Corinthians 14:26–31</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001001",
+"start_ref_usfm": "PHP 1:1",
+"end_ref": "50001001",
+"end_ref_usfm": "PHP 1:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "23052",
+"reference_id": 22220,
+"version": "1.0.4",
+"title": "Philippians 1:1–2",
+"media_type": "Text",
+"index_reference": "50001001-50001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul begins his letter by listing the senders and recipients. He then offers a blessing of grace and peace.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001001",
+"start_ref_usfm": "PHP 1:1",
+"end_ref": "50001002",
+"end_ref_usfm": "PHP 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Paul",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Paul"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Holy"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+}
+]
+}
+},
+{
+"content_id": "23068",
+"reference_id": 22236,
+"version": "1.0.4",
+"title": "Philippians 1:2",
+"media_type": "Text",
+"index_reference": "50001002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Grace is the kindness and blessing God gives, even though people do not deserve it. Peace means deep well-being and calmness that come from the good news about Jesus and are produced by the Holy Spirit (see <data class=\"bible-ref\" data-start-ref=\"48005022\" data-end-ref=\"48005022\">Galatians 5:22</data>). Both grace and peace are gifts from God our Father and the Lord Jesus Christ (see <data class=\"bible-ref\" data-start-ref=\"45005001\" data-end-ref=\"45005002\">Romans 5:1–2</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001002",
+"start_ref_usfm": "PHP 1:2",
+"end_ref": "50001002",
+"end_ref_usfm": "PHP 1:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+},
+{
+"content_id": "23069",
+"reference_id": 22237,
+"version": "1.0.4",
+"title": "Philippians 1:3–11",
+"media_type": "Text",
+"index_reference": "50001003-50001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul thanks God for the recipients and prays for them. This is Paul&apos;s usual practice when writing letters.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001003",
+"start_ref_usfm": "PHP 1:3",
+"end_ref": "50001011",
+"end_ref_usfm": "PHP 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Long For"
+},
+{
+"id": "keyterm:Affection",
+"type": "keyterm",
+"confidence": 0.2222,
+"match_method": "canonical",
+"preferred_label": "Affection"
+},
+{
+"id": "keyterm:Witness",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Witness"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.2,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23071",
+"reference_id": 22239,
+"version": "1.0.4",
+"title": "Philippians 1:4–6",
+"media_type": "Text",
+"index_reference": "50001004-50001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul felt joy because the Philippians partnered with him to spread the good news about Jesus. Paul was confident that God would continue his good work in them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001004",
+"start_ref_usfm": "PHP 1:4",
+"end_ref": "50001006",
+"end_ref_usfm": "PHP 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23072",
+"reference_id": 22240,
+"version": "1.0.4",
+"title": "Philippians 1:5",
+"media_type": "Text",
+"index_reference": "50001005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Their partnership also included giving money to help Paul in his work (refer to <data class=\"bible-ref\" data-start-ref=\"50004010\" data-end-ref=\"50004020\">Philippians 4:10–20</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001005",
+"start_ref_usfm": "PHP 1:5",
+"end_ref": "50001005",
+"end_ref_usfm": "PHP 1:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+}
+]
+}
+},
+{
+"content_id": "23073",
+"reference_id": 22241,
+"version": "1.0.4",
+"title": "Philippians 1:6",
+"media_type": "Text",
+"index_reference": "50001006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>He who began a good work in you</em>: It is God who starts his saving work in people (see <data class=\"bible-ref\" data-start-ref=\"45009016\" data-end-ref=\"45009016\">Romans 9:16</data>; <data class=\"bible-ref\" data-start-ref=\"49001003\" data-end-ref=\"49001008\">Ephesians 1:3–8</data>, <data class=\"bible-ref\" data-start-ref=\"49001011\" data-end-ref=\"49001011\">11</data>; <data class=\"bible-ref\" data-start-ref=\"49002004\" data-end-ref=\"49002010\">2:4–10</data>). Because God is the one who began it, we can trust that God will continue changing believers to become more like his Son (see <data class=\"bible-ref\" data-start-ref=\"45008029\" data-end-ref=\"45008029\">Romans 8:29</data>; <data class=\"bible-ref\" data-start-ref=\"49004013\" data-end-ref=\"49004013\">Ephesians 4:13</data>, <data class=\"bible-ref\" data-start-ref=\"49004015\" data-end-ref=\"49004015\">15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001006",
+"start_ref_usfm": "PHP 1:6",
+"end_ref": "50001006",
+"end_ref_usfm": "PHP 1:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Good",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+}
+]
+}
+},
+{
+"content_id": "23074",
+"reference_id": 22242,
+"version": "1.0.4",
+"title": "Philippians 1:7",
+"media_type": "Text",
+"index_reference": "50001007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>you are all partners in grace with me</em>:</span> Perhaps their lives were blessed because of Paul’s suffering and witness. Perhaps they had suffered together with him (see <data class=\"bible-ref\" data-start-ref=\"50001029\" data-end-ref=\"50001029\">Philippians 1:29</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001007",
+"start_ref_usfm": "PHP 1:7",
+"end_ref": "50001007",
+"end_ref_usfm": "PHP 1:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Think"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23075",
+"reference_id": 22243,
+"version": "1.0.4",
+"title": "Philippians 1:9–10",
+"media_type": "Text",
+"index_reference": "50001009-50001010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Love is the result of Christ’s Spirit within believers (<data class=\"bible-ref\" data-start-ref=\"45005005\" data-end-ref=\"45005005\">Romans 5:5</data>; <data class=\"bible-ref\" data-start-ref=\"48005022\" data-end-ref=\"48005022\">Galatians 5:22</data>). Love is part of the fruit of the Spirit. The fruit of the Spirit is the evidence that Christ is working in believers.</p></li><li><p><span><em>abound more and more in knowledge and depth of insight</em>: Growing in understanding</span> helps believers know what truly matters (see <data class=\"bible-ref\" data-start-ref=\"45012002\" data-end-ref=\"45012002\">Romans 12:2</data>). It helps them live pure and blameless lives until Christ returns (compare <data class=\"bible-ref\" data-start-ref=\"52003012\" data-end-ref=\"52003013\">1&nbsp;Thessalonians 3:12–13</data>; <data class=\"bible-ref\" data-start-ref=\"52005023\" data-end-ref=\"52005023\">5:23</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001009",
+"start_ref_usfm": "PHP 1:9",
+"end_ref": "50001010",
+"end_ref_usfm": "PHP 1:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Interpret",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Interpret"
+}
+]
+}
+},
+{
+"content_id": "23053",
+"reference_id": 22221,
+"version": "1.0.4",
+"title": "Philippians 1:11",
+"media_type": "Text",
+"index_reference": "50001011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>People cannot create righteous character on their own (<span>a character and way of living that please God)</span>. This character only comes through the Spirit of Christ working in their hearts. </p></li><li><p>The ultimate purpose for God&apos;s people is to give glory and praise to God (see <data class=\"bible-ref\" data-start-ref=\"49001006\" data-end-ref=\"49001006\">Ephesians 1:6</data>, <data class=\"bible-ref\" data-start-ref=\"49001012\" data-end-ref=\"49001012\">12</data>, <data class=\"bible-ref\" data-start-ref=\"49001014\" data-end-ref=\"49001014\">14</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001011",
+"start_ref_usfm": "PHP 1:11",
+"end_ref": "50001011",
+"end_ref_usfm": "PHP 1:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+}
+]
+}
+},
+{
+"content_id": "23055",
+"reference_id": 22223,
+"version": "1.0.4",
+"title": "Philippians 1:12",
+"media_type": "Text",
+"index_reference": "50001012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>brothers: </em><span>Paul uses the Greek word <em>adelphoi</em>, meaning “brothers.” Here it refers to fellow believers, both men and women, as members of God’s family.</span></p></li><li><p><span><em>my circumstances</em>:</span> This refers to Paul&apos;s imprisonment.</p></li><li><p><span><em>have actually served to advance the gospel</em>:</span> See <data class=\"bible-ref\" data-start-ref=\"44028017\" data-end-ref=\"44028031\">Acts 28:17–31</data> for an example of this.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001012",
+"start_ref_usfm": "PHP 1:12",
+"end_ref": "50001012",
+"end_ref_usfm": "PHP 1:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23054",
+"reference_id": 22222,
+"version": "1.0.4",
+"title": "Philippians 1:12–19",
+"media_type": "Text",
+"index_reference": "50001012-50001019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul was happy that his time in prison helped spread the good news about Jesus.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001012",
+"start_ref_usfm": "PHP 1:12",
+"end_ref": "50001019",
+"end_ref_usfm": "PHP 1:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6875,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Truth"
+}
+]
+}
+},
+{
+"content_id": "23056",
+"reference_id": 22224,
+"version": "1.0.4",
+"title": "Philippians 1:13",
+"media_type": "Text",
+"index_reference": "50001013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>the whole palace guard</em>: These were soldiers who worked in the official residence of the emperor or a Roman governor (see <data class=\"bible-ref\" data-start-ref=\"50004022\" data-end-ref=\"50004022\">Philippians 4:22</data>). </p></li><li><p>Paul was in prison for preaching the good news of Christ (compare <data class=\"bible-ref\" data-start-ref=\"44021026\" data-end-ref=\"44028031\">Acts 21:26–28:31</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001013",
+"start_ref_usfm": "PHP 1:13",
+"end_ref": "50001013",
+"end_ref_usfm": "PHP 1:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23057",
+"reference_id": 22225,
+"version": "1.0.4",
+"title": "Philippians 1:14",
+"media_type": "Text",
+"index_reference": "50001014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul’s courage while in prison helped most of the <em>brothers</em> (fellow believers; see <data class=\"resource-ref\" data-content-id=\"23055\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on Philippians 1:12</data>) trust in the Lord. They became more courageous and spoke God’s message without fear.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001014",
+"start_ref_usfm": "PHP 1:14",
+"end_ref": "50001014",
+"end_ref_usfm": "PHP 1:14"
+}
+],
+"resource": [
+{
+"reference_id": "22223",
+"content_id": "23055",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on Philippians 1:12",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+}
+]
+}
+},
+{
+"content_id": "23058",
+"reference_id": 22226,
+"version": "1.0.4",
+"title": "Philippians 1:15–18",
+"media_type": "Text",
+"index_reference": "50001015-50001018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>some preach Christ out of envy and rivalry</em>: These people were likely other believers who did not like Paul and criticized him (see <data class=\"bible-ref\" data-start-ref=\"47010001\" data-end-ref=\"47013014\">2&nbsp;Corinthians 10–13</data>; <data class=\"bible-ref\" data-start-ref=\"48004012\" data-end-ref=\"48004020\">Galatians 4:12–20</data>; <data class=\"bible-ref\" data-start-ref=\"48005007\" data-end-ref=\"48005012\">5:7–12</data>). Even so, the message about Christ was being preached, so Paul rejoiced.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001015",
+"start_ref_usfm": "PHP 1:15",
+"end_ref": "50001018",
+"end_ref_usfm": "PHP 1:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.5875,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Proclaim",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Proclaim"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Truth",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Truth"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23059",
+"reference_id": 22227,
+"version": "1.0.4",
+"title": "Philippians 1:19",
+"media_type": "Text",
+"index_reference": "50001019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>will turn out for my deliverance</em></span>: Paul expected to be released from prison soon (see <data class=\"bible-ref\" data-start-ref=\"50001025\" data-end-ref=\"50001026\">Philippians 1:25–26</data>; <data class=\"bible-ref\" data-start-ref=\"50002024\" data-end-ref=\"50002024\">2:24</data>). This is different from what Paul wrote later in <data class=\"bible-ref\" data-start-ref=\"55004006\" data-end-ref=\"55004006\">2&nbsp;Timothy 4:6</data>, when he was in prison again and expected to die.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001019",
+"start_ref_usfm": "PHP 1:19",
+"end_ref": "50001019",
+"end_ref_usfm": "PHP 1:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "23061",
+"reference_id": 22229,
+"version": "1.0.4",
+"title": "Philippians 1:21",
+"media_type": "Text",
+"index_reference": "50001021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>to die is gain</em>: For believers, death is not something to fear. It means going to be with Christ (see <data class=\"bible-ref\" data-start-ref=\"50001023\" data-end-ref=\"50001023\">Philippians 1:23</data>; compare <data class=\"bible-ref\" data-start-ref=\"43005024\" data-end-ref=\"43005024\">John 5:24</data>; <data class=\"bible-ref\" data-start-ref=\"43011025\" data-end-ref=\"43011026\">11:25–26</data>; <data class=\"bible-ref\" data-start-ref=\"45008038\" data-end-ref=\"45008039\">Romans 8:38–39</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001021",
+"start_ref_usfm": "PHP 1:21",
+"end_ref": "50001021",
+"end_ref_usfm": "PHP 1:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23062",
+"reference_id": 22230,
+"version": "1.0.4",
+"title": "Philippians 1:23",
+"media_type": "Text",
+"index_reference": "50001023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>I desire to depart and be with Christ:</em></span> Death leads believers immediately into the Lord’s presence (see <data class=\"bible-ref\" data-start-ref=\"50003020\" data-end-ref=\"50003021\">Philippians 3:20–21</data>; <data class=\"bible-ref\" data-start-ref=\"46015020\" data-end-ref=\"46015023\">1 Corinthians 15:20–23</data>, <data class=\"bible-ref\" data-start-ref=\"46015051\" data-end-ref=\"46015052\">51–52</data>; <data class=\"bible-ref\" data-start-ref=\"47005001\" data-end-ref=\"47005008\">2 Corinthians 5:1–8</data>; <data class=\"bible-ref\" data-start-ref=\"52004013\" data-end-ref=\"52004017\">1 Thessalonians 4:13–17</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001023",
+"start_ref_usfm": "PHP 1:23",
+"end_ref": "50001023",
+"end_ref_usfm": "PHP 1:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23063",
+"reference_id": 22231,
+"version": "1.0.4",
+"title": "Philippians 1:25",
+"media_type": "Text",
+"index_reference": "50001025",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>The well-being of the church is more important to Paul than his own desire to be with Christ. </p></li><li><p><span><em>for your progress and joy in the faith</em></span>: Christians should find joy even during tough times (see <data class=\"bible-ref\" data-start-ref=\"50004004\" data-end-ref=\"50004004\">Philippians 4:4</data>; <data class=\"bible-ref\" data-start-ref=\"43015011\" data-end-ref=\"43015011\">John 15:11</data>, <data class=\"bible-ref\" data-start-ref=\"43015020\" data-end-ref=\"43015020\">20</data>; <data class=\"bible-ref\" data-start-ref=\"43016020\" data-end-ref=\"43016024\">16:20–24</data>; <data class=\"bible-ref\" data-start-ref=\"52005016\" data-end-ref=\"52005016\">1&nbsp;Thessalonians 5:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001025",
+"start_ref_usfm": "PHP 1:25",
+"end_ref": "50001025",
+"end_ref_usfm": "PHP 1:25"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+}
+]
+}
+},
+{
+"content_id": "23065",
+"reference_id": 22233,
+"version": "1.0.4",
+"title": "Philippians 1:27",
+"media_type": "Text",
+"index_reference": "50001027",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul urges the Philippian believers to live in a way that honors the good news about Christ. They belong to God’s kingdom, and their actions should show this (compare <data class=\"bible-ref\" data-start-ref=\"50003020\" data-end-ref=\"50003020\">Philippians 3:20</data>; <data class=\"bible-ref\" data-start-ref=\"60002009\" data-end-ref=\"60002011\">1&nbsp;Peter 2:9–11</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001027",
+"start_ref_usfm": "PHP 1:27",
+"end_ref": "50001027",
+"end_ref_usfm": "PHP 1:27"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23064",
+"reference_id": 22232,
+"version": "1.0.4",
+"title": "Philippians 1:27–30",
+"media_type": "Text",
+"index_reference": "50001027-50001030",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul encourages the Christians in Philippi to live in a way that honors the gospel (see <data class=\"bible-ref\" data-start-ref=\"49004001\" data-end-ref=\"49004001\">Ephesians 4:1</data>; <data class=\"bible-ref\" data-start-ref=\"51001010\" data-end-ref=\"51001010\">Colossians 1:10</data>; <data class=\"bible-ref\" data-start-ref=\"52002012\" data-end-ref=\"52002012\">1 Thessalonians 2:12</data>). He especially encourages them to <span>continue to trust Christ and live faithfully, even when people mistreat them because of their faith.</span></p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001027",
+"start_ref_usfm": "PHP 1:27",
+"end_ref": "50001030",
+"end_ref_usfm": "PHP 1:30"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.425,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2625,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23066",
+"reference_id": 22234,
+"version": "1.0.4",
+"title": "Philippians 1:28",
+"media_type": "Text",
+"index_reference": "50001028",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>This is a clear sign of their destruction but of your salvation</em>:</span> The Philippians’ courage is a sign that their opponents will be destroyed and that the Philippians themselves will be saved. The same Greek phrase could also mean <em>a sign to them that you are going to be destroyed, but a sign to you that you are going to be saved.</em> According to that interpretation, those who persecute the believers would still not recognize the truth (compare <data class=\"bible-ref\" data-start-ref=\"47002015\" data-end-ref=\"47002016\">2&nbsp;Corinthians 2:15–16</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001028",
+"start_ref_usfm": "PHP 1:28",
+"end_ref": "50001028",
+"end_ref_usfm": "PHP 1:28"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+}
+]
+}
+},
+{
+"content_id": "23067",
+"reference_id": 22235,
+"version": "1.0.4",
+"title": "Philippians 1:29",
+"media_type": "Text",
+"index_reference": "50001029",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>For it has been granted to you … to suffer for Him</em></span>: <span>Other people may consider suffering for Christ shameful. Christians can regard it as an honor because it honors Christ</span>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001029",
+"start_ref_usfm": "PHP 1:29",
+"end_ref": "50001029",
+"end_ref_usfm": "PHP 1:29"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+}
+]
+}
+},
+{
+"content_id": "23070",
+"reference_id": 22238,
+"version": "1.0.4",
+"title": "Philippians 1:30",
+"media_type": "Text",
+"index_reference": "50001030",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>you are encountering the same struggle</em>:</span> Both Paul and the Philippians faced strong opposition. Paul was in prison, and the Philippians were being persecuted. </p></li><li><p><span><em>the same struggle you saw I had:</em></span> See <data class=\"bible-ref\" data-start-ref=\"44016011\" data-end-ref=\"44016040\">Acts 16:11–40</data>; compare <data class=\"bible-ref\" data-start-ref=\"52002002\" data-end-ref=\"52002002\">1 Thessalonians 2:2</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50001030",
+"start_ref_usfm": "PHP 1:30",
+"end_ref": "50001030",
+"end_ref_usfm": "PHP 1:30"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23077",
+"reference_id": 22245,
+"version": "1.0.4",
+"title": "Philippians 2:1–2",
+"media_type": "Text",
+"index_reference": "50002001-50002002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>If any … </em><span>Paul lists several conditions that he expects to be true of the Philippian believers. Because they have experienced these things in Christ, they should live together with love, unity, and care for one another</span>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002001",
+"start_ref_usfm": "PHP 2:1",
+"end_ref": "50002002",
+"end_ref_usfm": "PHP 2:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:JoinedInSoul",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Joined in Soul"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Affection",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Affection"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23076",
+"reference_id": 22244,
+"version": "1.0.4",
+"title": "Philippians 2:1–11",
+"media_type": "Text",
+"index_reference": "50002001-50002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>During their persecution, Paul urges the Philippians to be united and live a humble life like Christ.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002001",
+"start_ref_usfm": "PHP 2:1",
+"end_ref": "50002011",
+"end_ref_usfm": "PHP 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.4636,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3727,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Think"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Love",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Love"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:JoinedInSoul",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Joined in Soul"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:GiveUpOrLayAsideWhatOnePossesses",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Give Up or Lay Aside What One Possesses"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+},
+{
+"id": "keyterm:Conceit",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Empty Conceit"
+},
+{
+"id": "keyterm:Heavenly",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Heavenly"
+},
+{
+"id": "keyterm:Affection",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Affection"
+},
+{
+"id": "realia:Cross",
+"type": "realia",
+"confidence": 0.1309,
+"match_method": "canonical",
+"preferred_label": "Cross"
+}
+]
+}
+},
+{
+"content_id": "23092",
+"reference_id": 22260,
+"version": "1.0.4",
+"title": "Philippians 2:3–4",
+"media_type": "Text",
+"index_reference": "50002003-50002004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Do nothing out of selfish ambition</em></span>: Thinking only about yourself is the opposite of truly caring for others (compare <data class=\"bible-ref\" data-start-ref=\"50002020\" data-end-ref=\"50002021\">2:20–21</data>; <data class=\"bible-ref\" data-start-ref=\"46010024\" data-end-ref=\"46010024\">1&nbsp;Corinthians 10:24</data>; <data class=\"bible-ref\" data-start-ref=\"48005026\" data-end-ref=\"48005026\">Galatians 5:26</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002003",
+"start_ref_usfm": "PHP 2:3",
+"end_ref": "50002004",
+"end_ref_usfm": "PHP 2:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Conceit",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Empty Conceit"
+}
+]
+}
+},
+{
+"content_id": "23094",
+"reference_id": 22262,
+"version": "1.0.4",
+"title": "Philippians 2:6",
+"media_type": "Text",
+"index_reference": "50002006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>existing in the form of God</em></span>: Jesus has the same nature as God and has existed with him from the beginning (see <data class=\"bible-ref\" data-start-ref=\"43001001\" data-end-ref=\"43001003\">John 1:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"43017005\" data-end-ref=\"43017005\">17:5</data>; <data class=\"bible-ref\" data-start-ref=\"51001015\" data-end-ref=\"51001015\">Colossians 1:15</data>). </p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002006",
+"start_ref_usfm": "PHP 2:6",
+"end_ref": "50002006",
+"end_ref_usfm": "PHP 2:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "23093",
+"reference_id": 22261,
+"version": "1.0.4",
+"title": "Philippians 2:6–11",
+"media_type": "Text",
+"index_reference": "50002006-50002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>This early Christian hymn is about:</p><ul><li><p>Christ’s divine nature and existence before the world began, </p></li><li><p>Christ&apos;s coming to earth as a human and dying, and</p></li><li><p>Christ&apos;s exaltation and role as Lord over all.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002006",
+"start_ref_usfm": "PHP 2:6",
+"end_ref": "50002011",
+"end_ref_usfm": "PHP 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:GiveUpOrLayAsideWhatOnePossesses",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Give Up or Lay Aside What One Possesses"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Heavenly",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Heavenly"
+},
+{
+"id": "realia:Cross",
+"type": "realia",
+"confidence": 0.165,
+"match_method": "canonical",
+"preferred_label": "Cross"
+}
+]
+}
+},
+{
+"content_id": "23095",
+"reference_id": 22263,
+"version": "1.0.4",
+"title": "Philippians 2:7",
+"media_type": "Text",
+"index_reference": "50002007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>he emptied himself</em>: He gave up his divine privileges and chose to live as a human. The rest of verses <data class=\"bible-ref\" data-start-ref=\"50002007\" data-end-ref=\"50002008\">7–8</data> explains this ultimate act of godly self-giving love (compare <data class=\"bible-ref\" data-start-ref=\"47008009\" data-end-ref=\"47008009\">2&nbsp;Corinthians 8:9</data>). </p></li><li><p><span><em>taking the form of a servant</em></span>: Paul might have been thinking of <data class=\"bible-ref\" data-start-ref=\"23052013\" data-end-ref=\"23053012\">Isaiah 52:13–53:12</data>. </p></li><li><p><span><em>being made in human likeness</em></span>: Jesus became truly human while still being God (see <data class=\"bible-ref\" data-start-ref=\"43001014\" data-end-ref=\"43001014\">John 1:14</data>; <data class=\"bible-ref\" data-start-ref=\"54003016\" data-end-ref=\"54003016\">1&nbsp;Timothy 3:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002007",
+"start_ref_usfm": "PHP 2:7",
+"end_ref": "50002007",
+"end_ref_usfm": "PHP 2:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:GiveUpOrLayAsideWhatOnePossesses",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Give Up or Lay Aside What One Possesses"
+}
+]
+}
+},
+{
+"content_id": "23096",
+"reference_id": 22264,
+"version": "1.0.4",
+"title": "Philippians 2:8",
+"media_type": "Text",
+"index_reference": "50002008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>He humbled Himself and became obedient to death</em>: Jesus obeyed God’s will by dying for the sins of humanity (see <data class=\"bible-ref\" data-start-ref=\"23053007\" data-end-ref=\"23053007\">Isaiah 53:7</data>; <data class=\"bible-ref\" data-start-ref=\"40026039\" data-end-ref=\"40026039\">Matthew 26:39</data>; <data class=\"bible-ref\" data-start-ref=\"43003016\" data-end-ref=\"43003016\">John 3:16</data>; <data class=\"bible-ref\" data-start-ref=\"43010017\" data-end-ref=\"43010018\">10:17–18</data>; <data class=\"bible-ref\" data-start-ref=\"45005008\" data-end-ref=\"45005008\">Romans 5:8</data>, <data class=\"bible-ref\" data-start-ref=\"45005019\" data-end-ref=\"45005019\">19</data>; <data class=\"bible-ref\" data-start-ref=\"45008003\" data-end-ref=\"45008003\">8:3</data>; <data class=\"bible-ref\" data-start-ref=\"58005008\" data-end-ref=\"58005008\">Hebrews 5:8</data>; <data class=\"bible-ref\" data-start-ref=\"62004009\" data-end-ref=\"62004010\">1&nbsp;John 4:9–10</data>, <data class=\"bible-ref\" data-start-ref=\"62004014\" data-end-ref=\"62004014\">14</data>). </p></li><li><p><span><em>even death on a cross</em>: In the Roman Empire, crucifixion was a cruel and humiliating form of execution. The Romans especially used crucifixion for enslaved people, rebels, and people convicted of serious crimes</span></p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002008",
+"start_ref_usfm": "PHP 2:8",
+"end_ref": "50002008",
+"end_ref_usfm": "PHP 2:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "realia:Cross",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Cross"
+}
+]
+}
+},
+{
+"content_id": "23097",
+"reference_id": 22265,
+"version": "1.0.4",
+"title": "Philippians 2:9",
+"media_type": "Text",
+"index_reference": "50002009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>Therefore</em>: </span>Because of Christ&apos;s humble obedience, God raised him to the place of highest honor (see <data class=\"bible-ref\" data-start-ref=\"44001009\" data-end-ref=\"44001010\">Acts 1:9–10</data>; compare <data class=\"bible-ref\" data-start-ref=\"44002032\" data-end-ref=\"44002033\">Acts 2:32–33</data>; <data class=\"bible-ref\" data-start-ref=\"44007055\" data-end-ref=\"44007056\">7:55–56</data>). </p></li><li><p><span><em>gave Him the name above all names</em></span>: Jesus has supreme authority and power (<data class=\"bible-ref\" data-start-ref=\"50002010\" data-end-ref=\"50002011\">Philippians 2:10–11</data>; compare <data class=\"bible-ref\" data-start-ref=\"40028018\" data-end-ref=\"40028018\">Matthew 28:18</data>; <data class=\"bible-ref\" data-start-ref=\"43017005\" data-end-ref=\"43017005\">John 17:5</data>; <data class=\"bible-ref\" data-start-ref=\"44002033\" data-end-ref=\"44002036\">Acts 2:33–36</data>; <data class=\"bible-ref\" data-start-ref=\"58002009\" data-end-ref=\"58002009\">Hebrews 2:9</data>; <data class=\"bible-ref\" data-start-ref=\"58012002\" data-end-ref=\"58012002\">12:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002009",
+"start_ref_usfm": "PHP 2:9",
+"end_ref": "50002009",
+"end_ref_usfm": "PHP 2:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Forgive",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Forgive"
+}
+]
+}
+},
+{
+"content_id": "23078",
+"reference_id": 22246,
+"version": "1.0.4",
+"title": "Philippians 2:10–11",
+"media_type": "Text",
+"index_reference": "50002010-50002011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>in heaven and on earth and under the earth</em>: </span>All of creation, including spiritual powers, angels, humans on earth, and those who have died, will one day acknowledge Jesus Christ&apos;s authority as Lord (see <data class=\"bible-ref\" data-start-ref=\"49001009\" data-end-ref=\"49001010\">Ephesians 1:9–10</data>, <data class=\"bible-ref\" data-start-ref=\"49001021\" data-end-ref=\"49001021\">21</data>; <data class=\"bible-ref\" data-start-ref=\"51001020\" data-end-ref=\"51001025\">Colossians 1:20–25</data>; <data class=\"bible-ref\" data-start-ref=\"60003022\" data-end-ref=\"60003022\">1 Peter 3:22</data>). </p></li><li><p><span><em>every tongue confess</em></span> (compare <data class=\"bible-ref\" data-start-ref=\"23045023\" data-end-ref=\"23045023\">Isaiah 45:23</data>; <data class=\"bible-ref\" data-start-ref=\"45014011\" data-end-ref=\"45014011\">Romans 14:11</data>): This does not mean everyone will be saved. Not everyone will confess Jesus as Lord willingly out of love and devotion. </p></li><li><p><span><em>Jesus Christ is Lord</em>: </span>God&apos;s personal name in the Old Testament, <em>Yahweh</em>, was considered too holy to say aloud. So Jewish people would say <em>Adonai</em> (which means “Lord”) instead. When the Old Testament was translated into Greek, <em>Yahweh</em> was represented by the Greek word <em>kurios</em> (“Lord”). This same title is often used for Jesus in the New Testament.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002010",
+"start_ref_usfm": "PHP 2:10",
+"end_ref": "50002011",
+"end_ref_usfm": "PHP 2:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Heavenly",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Heavenly"
+}
+]
+}
+},
+{
+"content_id": "23080",
+"reference_id": 22248,
+"version": "1.0.4",
+"title": "Philippians 2:12",
+"media_type": "Text",
+"index_reference": "50002012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>as you have always obeyed</em></span> (see <data class=\"bible-ref\" data-start-ref=\"43003036\" data-end-ref=\"43003036\">John 3:36</data>; <data class=\"bible-ref\" data-start-ref=\"45001005\" data-end-ref=\"45001005\">Romans 1:5</data>): Believers must consider God&apos;s judgment like everyone else (compare <data class=\"bible-ref\" data-start-ref=\"46003010\" data-end-ref=\"46003013\">1&nbsp;Corinthians 3:10–13</data>). Therefore, they should live obediently before God, with deep respect and fear.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002012",
+"start_ref_usfm": "PHP 2:12",
+"end_ref": "50002012",
+"end_ref_usfm": "PHP 2:12"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fear"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "23079",
+"reference_id": 22247,
+"version": "1.0.4",
+"title": "Philippians 2:12–18",
+"media_type": "Text",
+"index_reference": "50002012-50002018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul encourages believers to stay strong in their faith and live lives of obedience and purity, following Christ&apos;s example.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002012",
+"start_ref_usfm": "PHP 2:12",
+"end_ref": "50002018",
+"end_ref_usfm": "PHP 2:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3286,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.2429,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Unblemished",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Unblemished"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Empty"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Salvation",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Salvation"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:PouredOut",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Be Poured Out"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Fear",
+"type": "keyterm",
+"confidence": 0.2143,
+"match_method": "canonical",
+"preferred_label": "Fear"
+}
+]
+}
+},
+{
+"content_id": "23081",
+"reference_id": 22249,
+"version": "1.0.4",
+"title": "Philippians 2:13",
+"media_type": "Text",
+"index_reference": "50002013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>For it is God who works in you</em>:</span> God gives believers the strength and energy to live their lives (see <data class=\"bible-ref\" data-start-ref=\"43015005\" data-end-ref=\"43015005\">John 15:5</data>; <data class=\"bible-ref\" data-start-ref=\"46012006\" data-end-ref=\"46012006\">1&nbsp;Corinthians 12:6</data>; <data class=\"bible-ref\" data-start-ref=\"46015010\" data-end-ref=\"46015010\">15:10</data>; <data class=\"bible-ref\" data-start-ref=\"47003005\" data-end-ref=\"47003005\">2&nbsp;Corinthians 3:5</data>; <data class=\"bible-ref\" data-start-ref=\"52002013\" data-end-ref=\"52002013\">1&nbsp;Thessalonians 2:13</data>). The desire and ability to do what pleases God come from God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002013",
+"start_ref_usfm": "PHP 2:13",
+"end_ref": "50002013",
+"end_ref_usfm": "PHP 2:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "23082",
+"reference_id": 22250,
+"version": "1.0.4",
+"title": "Philippians 2:14",
+"media_type": "Text",
+"index_reference": "50002014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Complaining and arguing come from thinking only about yourself (see <data class=\"bible-ref\" data-start-ref=\"46010010\" data-end-ref=\"46010010\">1&nbsp;Corinthians 10:10</data>; <data class=\"bible-ref\" data-start-ref=\"60004009\" data-end-ref=\"60004009\">1&nbsp;Peter 4:9</data>; <data class=\"bible-ref\" data-start-ref=\"65001016\" data-end-ref=\"65001016\">Jude 1:16</data>).  God calls believers to love others in a way that puts their needs first (<data class=\"bible-ref\" data-start-ref=\"50002004\" data-end-ref=\"50002004\">Philippians 2:4</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002014",
+"start_ref_usfm": "PHP 2:14",
+"end_ref": "50002014",
+"end_ref_usfm": "PHP 2:14"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23083",
+"reference_id": 22251,
+"version": "1.0.4",
+"title": "Philippians 2:15",
+"media_type": "Text",
+"index_reference": "50002015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>you shine as lights in the world</em></span>: Believers should attract others to God through their actions (see <data class=\"bible-ref\" data-start-ref=\"40005013\" data-end-ref=\"40005016\">Matthew 5:13–16</data>). </p></li><li><p><span><em>in a crooked and perverse generation</em></span>: See <data class=\"bible-ref\" data-start-ref=\"05032005\" data-end-ref=\"05032005\">Deuteronomy 32:5</data>; <data class=\"bible-ref\" data-start-ref=\"45001018\" data-end-ref=\"45001032\">Romans 1:18–32</data>; <data class=\"bible-ref\" data-start-ref=\"45003010\" data-end-ref=\"45003023\">3:10–23</data>.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002015",
+"start_ref_usfm": "PHP 2:15",
+"end_ref": "50002015",
+"end_ref_usfm": "PHP 2:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Unblemished",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Unblemished"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+}
+]
+}
+},
+{
+"content_id": "23084",
+"reference_id": 22252,
+"version": "1.0.4",
+"title": "Philippians 2:16",
+"media_type": "Text",
+"index_reference": "50002016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>hold forth the word of life</em></span>: Believers should share the good news about Jesus, which brings life. The Greek phrase can also mean “hold firmly to the word of life.” In that reading, Paul urges believers to keep trusting in the good news. God is faithful, and believers must also remain faithful (<data class=\"bible-ref\" data-start-ref=\"50001006\" data-end-ref=\"50001006\">Philippians 1:6</data>; <data class=\"bible-ref\" data-start-ref=\"50002012\" data-end-ref=\"50002013\">2:12–13</data>). </p></li><li><p><span><em>that I did not run or labor in vain</em></span>: Paul often compares the Christian life to running a race or training for a competition (see <data class=\"bible-ref\" data-start-ref=\"50003012\" data-end-ref=\"50003014\">Philippians 3:12–14</data>; <data class=\"bible-ref\" data-start-ref=\"46009024\" data-end-ref=\"46009024\">1&nbsp;Corinthians 9:24</data>, <data class=\"bible-ref\" data-start-ref=\"46009026\" data-end-ref=\"46009026\">26</data>; <data class=\"bible-ref\" data-start-ref=\"48002002\" data-end-ref=\"48002002\">Galatians 2:2</data>; <data class=\"bible-ref\" data-start-ref=\"48005007\" data-end-ref=\"48005007\">5:7</data>; <data class=\"bible-ref\" data-start-ref=\"55004007\" data-end-ref=\"55004007\">2&nbsp;Timothy 4:7</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002016",
+"start_ref_usfm": "PHP 2:16",
+"end_ref": "50002016",
+"end_ref_usfm": "PHP 2:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Empty",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Empty"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23085",
+"reference_id": 22253,
+"version": "1.0.4",
+"title": "Philippians 2:17–18",
+"media_type": "Text",
+"index_reference": "50002017-50002018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>even if I am being poured out like a drink offering … I am glad and rejoice</em>:</span> In both Jewish and pagan traditions, people would pour out wine on a sacrifice or at the altar to honor their god. Paul uses this image to say that his whole life is like an offering to God (compare <data class=\"bible-ref\" data-start-ref=\"45012001\" data-end-ref=\"45012001\">Romans 12:1</data>; <data class=\"bible-ref\" data-start-ref=\"45015016\" data-end-ref=\"45015016\">15:16</data>). </p></li><li><p>Faithful service brings joy because nothing done for God is wasted (see <data class=\"bible-ref\" data-start-ref=\"46015058\" data-end-ref=\"46015058\">1 Corinthians 15:58</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002017",
+"start_ref_usfm": "PHP 2:17",
+"end_ref": "50002018",
+"end_ref_usfm": "PHP 2:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:PouredOut",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Be Poured Out"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Offering"
+}
+]
+}
+},
+{
+"content_id": "23086",
+"reference_id": 22254,
+"version": "1.0.4",
+"title": "Philippians 2:19–24",
+"media_type": "Text",
+"index_reference": "50002019-50002024",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul praises Timothy, whom he hopes to send to the Philippians in the near future. Timothy traveled with Paul on his first trip to Philippi (see <data class=\"bible-ref\" data-start-ref=\"44016001\" data-end-ref=\"44016003\">Acts 16:1–3</data>, <data class=\"bible-ref\" data-start-ref=\"44016012\" data-end-ref=\"44016012\">12</data>; <data class=\"bible-ref\" data-start-ref=\"44017015\" data-end-ref=\"44017015\">17:15</data>; <data class=\"bible-ref\" data-start-ref=\"44018005\" data-end-ref=\"44018005\">18:5</data>; compare <data class=\"bible-ref\" data-start-ref=\"44019022\" data-end-ref=\"44019022\">Acts 19:22</data>). Timothy was known for dedicating his life to Jesus Christ and caring for others.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002019",
+"start_ref_usfm": "PHP 2:19",
+"end_ref": "50002024",
+"end_ref_usfm": "PHP 2:24"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Hope"
+},
+{
+"id": "person:Timothy",
+"type": "person",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Timothy"
+},
+{
+"id": "keyterm:Serve.2",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Be Enslaved"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Likeminded",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Likeminded"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Genuinely",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Genuinely"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23087",
+"reference_id": 22255,
+"version": "1.0.4",
+"title": "Philippians 2:23",
+"media_type": "Text",
+"index_reference": "50002023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>what happens with me</em>:</span> This might refer to the result of Paul&apos;s trial.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002023",
+"start_ref_usfm": "PHP 2:23",
+"end_ref": "50002023",
+"end_ref_usfm": "PHP 2:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Hope",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Hope"
+}
+]
+}
+},
+{
+"content_id": "23088",
+"reference_id": 22256,
+"version": "1.0.4",
+"title": "Philippians 2:24",
+"media_type": "Text",
+"index_reference": "50002024",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul was confident that he would soon be released from prison and visit the Philippians (see <data class=\"bible-ref\" data-start-ref=\"50001019\" data-end-ref=\"50001019\">Philippians 1:19</data>, <data class=\"bible-ref\" data-start-ref=\"50001025\" data-end-ref=\"50001026\">25–26</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002024",
+"start_ref_usfm": "PHP 2:24",
+"end_ref": "50002024",
+"end_ref_usfm": "PHP 2:24"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+}
+]
+}
+},
+{
+"content_id": "23089",
+"reference_id": 22257,
+"version": "1.0.4",
+"title": "Philippians 2:25–30",
+"media_type": "Text",
+"index_reference": "50002025-50002030",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul praises Epaphroditus, a messenger from the church at Philippi (see also <data class=\"bible-ref\" data-start-ref=\"50004018\" data-end-ref=\"50004018\">4:18</data>). Paul is now sending Epaphroditus back to Philippi, perhaps with this letter. </p></li><li><p>Paul describes Epaphroditus as his <em>fellow soldier</em>. This suggests the challenges, opposition, and dangers faced in Christ&apos;s work.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002025",
+"start_ref_usfm": "PHP 2:25",
+"end_ref": "50002030",
+"end_ref_usfm": "PHP 2:30"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.35,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "person:Epaphroditus",
+"type": "person",
+"confidence": 0.2583,
+"match_method": "canonical",
+"preferred_label": "Epaphroditus"
+},
+{
+"id": "keyterm:Servant",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Minister"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+},
+{
+"id": "keyterm:LongFor",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Long For"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.225,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+}
+]
+}
+},
+{
+"content_id": "23090",
+"reference_id": 22258,
+"version": "1.0.4",
+"title": "Philippians 2:27",
+"media_type": "Text",
+"index_reference": "50002027",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul believed God showed mercy by helping Epaphroditus recover from a serious illness. This mercy also helped Paul, who was already suffering in prison.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002027",
+"start_ref_usfm": "PHP 2:27",
+"end_ref": "50002027",
+"end_ref_usfm": "PHP 2:27"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Mercy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Mercy"
+}
+]
+}
+},
+{
+"content_id": "23091",
+"reference_id": 22259,
+"version": "1.0.4",
+"title": "Philippians 2:29–30",
+"media_type": "Text",
+"index_reference": "50002029-50002030",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Epaphroditus deserved their honor because he risked his life for Christ on their behalf (for the importance of showing honor, compare <data class=\"bible-ref\" data-start-ref=\"45010012\" data-end-ref=\"45010012\">Romans 10:12</data>; <data class=\"bible-ref\" data-start-ref=\"45013007\" data-end-ref=\"45013007\">13:7</data>; <data class=\"bible-ref\" data-start-ref=\"49005033\" data-end-ref=\"49005033\">Ephesians 5:33</data>; <data class=\"bible-ref\" data-start-ref=\"49006002\" data-end-ref=\"49006002\">6:2</data>; <data class=\"bible-ref\" data-start-ref=\"54005017\" data-end-ref=\"54005017\">1&nbsp;Timothy 5:17</data>; <data class=\"bible-ref\" data-start-ref=\"54006001\" data-end-ref=\"54006001\">6:1</data>; <data class=\"bible-ref\" data-start-ref=\"60002017\" data-end-ref=\"60002017\">1&nbsp;Peter 2:17</data>; <data class=\"bible-ref\" data-start-ref=\"60003007\" data-end-ref=\"60003007\">3:7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50002029",
+"start_ref_usfm": "PHP 2:29",
+"end_ref": "50002030",
+"end_ref_usfm": "PHP 2:30"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+}
+]
+}
+},
+{
+"content_id": "23107",
+"reference_id": 22275,
+"version": "1.0.4",
+"title": "Philippians 3:1",
+"media_type": "Text",
+"index_reference": "50003001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>rejoice in the Lord</em>: This theme appears again in <data class=\"bible-ref\" data-start-ref=\"50004004\" data-end-ref=\"50004004\">Philippians 4:4</data> (see also <data class=\"bible-ref\" data-start-ref=\"50001018\" data-end-ref=\"50001018\">1:18</data>; <data class=\"bible-ref\" data-start-ref=\"50002017\" data-end-ref=\"50002018\">2:17–18</data>, <data class=\"bible-ref\" data-start-ref=\"50002028\" data-end-ref=\"50002028\">28</data>; <data class=\"bible-ref\" data-start-ref=\"50004010\" data-end-ref=\"50004010\">4:10</data>). </p></li><li><p><em>the same things: </em>The meaning here is unclear. It might refer to:</p><ol><li><p>the recent encouragement to rejoice in the Lord;</p></li><li><p>the earlier advice to follow Christ’s example (<data class=\"bible-ref\" data-start-ref=\"50002001\" data-end-ref=\"50002018\">2:1–18</data>);</p></li><li><p>Paul’s encouragement in general; or</p></li><li><p>the upcoming warning about threats to their faith.</p></li></ol></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003001",
+"start_ref_usfm": "PHP 3:1",
+"end_ref": "50003001",
+"end_ref_usfm": "PHP 3:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23111",
+"reference_id": 22279,
+"version": "1.0.4",
+"title": "Philippians 3:2",
+"media_type": "Text",
+"index_reference": "50003002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>those dogs, those workers of evil</em></span>: Here, Paul reverses the traditional Jewish practice of calling non-Jewish people <em>dogs</em> (see <data class=\"bible-ref\" data-start-ref=\"41007027\" data-end-ref=\"41007028\">Mark 7:27–28</data>). Paul directs his strongest insults at Jews who taught that non-Jewish people must be circumcised to be saved (see <data class=\"bible-ref\" data-start-ref=\"47011013\" data-end-ref=\"47011015\">2&nbsp;Corinthians 11:13–15</data>; <data class=\"bible-ref\" data-start-ref=\"48001006\" data-end-ref=\"48001009\">Galatians 1:6–9</data>; <data class=\"bible-ref\" data-start-ref=\"48005001\" data-end-ref=\"48005006\">5:1–6</data>, <data class=\"bible-ref\" data-start-ref=\"48005012\" data-end-ref=\"48005012\">12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003002",
+"start_ref_usfm": "PHP 3:2",
+"end_ref": "50003002",
+"end_ref_usfm": "PHP 3:2"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23108",
+"reference_id": 22276,
+"version": "1.0.4",
+"title": "Philippians 3:2–11",
+"media_type": "Text",
+"index_reference": "50003002-50003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Paul warns believers not to be influenced by Jewish Christians who say circumcision is necessary for salvation. <span>Paul then describes how he stopped relying on his Jewish status and obedience to the law and instead placed his confidence in Christ</span></p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003002",
+"start_ref_usfm": "PHP 3:2",
+"end_ref": "50003011",
+"end_ref_usfm": "PHP 3:11"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.48,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.385,
+"match_method": "canonical",
+"preferred_label": "Law"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.29,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "group:Hebrews",
+"type": "group",
+"confidence": 0.215,
+"match_method": "canonical",
+"preferred_label": "Hebrews"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "person:Benjamin",
+"type": "person",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Benjamin"
+},
+{
+"id": "keyterm:Extremely",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Extremely"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Pharisee",
+"type": "group",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Pharisees"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "group:Benjamin",
+"type": "group",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Tribe of Benjamin"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.195,
+"match_method": "canonical",
+"preferred_label": "Serve"
+}
+]
+}
+},
+{
+"content_id": "23112",
+"reference_id": 22280,
+"version": "1.0.4",
+"title": "Philippians 3:3",
+"media_type": "Text",
+"index_reference": "50003003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Circumcision was a sign that someone belonged to God’s people (see <data class=\"bible-ref\" data-start-ref=\"01017010\" data-end-ref=\"01017014\">Gen 17:10–14</data>). But the Bible teaches that those who trust in Christ are the ones who are truly circumcised in their hearts (see <data class=\"bible-ref\" data-start-ref=\"45002028\" data-end-ref=\"45002029\">Romans 2:28–29</data>; compare <data class=\"bible-ref\" data-start-ref=\"24004004\" data-end-ref=\"24004004\">Jeremiah 4:4</data>; <data class=\"bible-ref\" data-start-ref=\"49002011\" data-end-ref=\"49002011\">Ephesians 2:11</data>; <data class=\"bible-ref\" data-start-ref=\"51002011\" data-end-ref=\"51002013\">Colossians 2:11–13</data>). Being circumcised in heart means we are changed on the inside. Our hearts are made new by God so they can love and obey him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003003",
+"start_ref_usfm": "PHP 3:3",
+"end_ref": "50003003",
+"end_ref_usfm": "PHP 3:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Priesthood",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Priesthood"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "deity:HolySpirit",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy Spirit"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:Serve",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Serve"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+}
+]
+}
+},
+{
+"content_id": "23113",
+"reference_id": 22281,
+"version": "1.0.4",
+"title": "Philippians 3:4",
+"media_type": "Text",
+"index_reference": "50003004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>in the flesh</em>: Paul uses <em>flesh</em> to mean relying on yourself and human effort. This is different than relying on Christ and the power given by the Spirit.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003004",
+"start_ref_usfm": "PHP 3:4",
+"end_ref": "50003004",
+"end_ref_usfm": "PHP 3:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:Persuade",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Persuade"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+}
+]
+}
+},
+{
+"content_id": "23115",
+"reference_id": 22283,
+"version": "1.0.4",
+"title": "Philippians 3:5",
+"media_type": "Text",
+"index_reference": "50003005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>circumcised on the eighth day</em>:</span> This followed Jewish law, which required boys to be circumcised on the eighth day (See <data class=\"bible-ref\" data-start-ref=\"01017012\" data-end-ref=\"01017012\">Genesis 17:12</data>; <data class=\"bible-ref\" data-start-ref=\"03012003\" data-end-ref=\"03012003\">Leviticus 12:3</data>; <data class=\"bible-ref\" data-start-ref=\"42001059\" data-end-ref=\"42001059\">Luke 1:59</data>; <data class=\"bible-ref\" data-start-ref=\"42002021\" data-end-ref=\"42002021\">Luke 2:21</data>).</p></li><li><p>Paul belonged to the Pharisees, a Jewish group known for strictly following the law (see <data class=\"bible-ref\" data-start-ref=\"44023006\" data-end-ref=\"44023006\">Acts 23:6</data>; <data class=\"bible-ref\" data-start-ref=\"44026005\" data-end-ref=\"44026005\">Acts 26:5</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003005",
+"start_ref_usfm": "PHP 3:5",
+"end_ref": "50003005",
+"end_ref_usfm": "PHP 3:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Hebrews",
+"type": "group",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Hebrews"
+},
+{
+"id": "person:Benjamin",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Benjamin"
+},
+{
+"id": "group:Benjamin",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Tribe of Benjamin"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Pharisee",
+"type": "group",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pharisees"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Law"
+}
+]
+}
+},
+{
+"content_id": "23114",
+"reference_id": 22282,
+"version": "1.0.4",
+"title": "Philippians 3:5–6",
+"media_type": "Text",
+"index_reference": "50003005-50003006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>If anyone had reason to trust in their religious status as a Jew, Paul did. He strictly followed Jewish law and was very passionate about the Jewish religion.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003005",
+"start_ref_usfm": "PHP 3:5",
+"end_ref": "50003006",
+"end_ref_usfm": "PHP 3:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Law"
+},
+{
+"id": "group:Hebrews",
+"type": "group",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Hebrews"
+},
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.475,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "person:Benjamin",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Benjamin"
+},
+{
+"id": "keyterm:Extremely",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Extremely"
+},
+{
+"id": "group:Benjamin",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Tribe of Benjamin"
+},
+{
+"id": "person:Israel",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Israel"
+},
+{
+"id": "group:Pharisee",
+"type": "group",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Pharisees"
+},
+{
+"id": "keyterm:Circumcision",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Circumcision"
+}
+]
+}
+},
+{
+"content_id": "23116",
+"reference_id": 22284,
+"version": "1.0.4",
+"title": "Philippians 3:6",
+"media_type": "Text",
+"index_reference": "50003006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>as to zeal, persecuting the church</em></span> (see <data class=\"bible-ref\" data-start-ref=\"44008001\" data-end-ref=\"44008003\">Acts 8:1–3</data>; <data class=\"bible-ref\" data-start-ref=\"44009001\" data-end-ref=\"44009002\">9:1–2</data>, <data class=\"bible-ref\" data-start-ref=\"44009021\" data-end-ref=\"44009021\">21</data>; <data class=\"bible-ref\" data-start-ref=\"48001013\" data-end-ref=\"48001013\">Galatians 1:13</data>): <span>Paul&apos;s persecution of the church showed how strongly he opposed the good news about Jesus at that time</span>. </p></li><li><p>Paul’s righteousness, as judged by human standards, also showed his dedication to the law (see also <data class=\"bible-ref\" data-start-ref=\"48001014\" data-end-ref=\"48001014\">Galatians 1:14</data>; for Paul’s later Christian view, compare <data class=\"bible-ref\" data-start-ref=\"45003023\" data-end-ref=\"45003023\">Romans 3:23</data>; <data class=\"bible-ref\" data-start-ref=\"45007014\" data-end-ref=\"45007025\">7:14–25</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003006",
+"start_ref_usfm": "PHP 3:6",
+"end_ref": "50003006",
+"end_ref_usfm": "PHP 3:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Blameless",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Be Blameless"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Extremely",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Extremely"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Law"
+}
+]
+}
+},
+{
+"content_id": "23117",
+"reference_id": 22285,
+"version": "1.0.4",
+"title": "Philippians 3:7–8",
+"media_type": "Text",
+"index_reference": "50003007-50003008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>As a Christian, Paul now considered these things (<data class=\"bible-ref\" data-start-ref=\"50003005\" data-end-ref=\"50003006\">3:5–6</data>) worthless because of what Christ has done. A believer’s relationship with God is defined by knowing Christ and nothing else (compare <data class=\"bible-ref\" data-start-ref=\"50003010\" data-end-ref=\"50003010\">3:10</data>; <data class=\"bible-ref\" data-start-ref=\"43017003\" data-end-ref=\"43017003\">John 17:3</data>). The only important thing is to gain Christ, thus receiving the gift of eternal salvation (see <data class=\"bible-ref\" data-start-ref=\"43003016\" data-end-ref=\"43003016\">John 3:16</data>; <data class=\"bible-ref\" data-start-ref=\"62005011\" data-end-ref=\"62005013\">1&nbsp;John 5:11–13</data>). In comparison, all other things are meaningless garbage (or <em>rubbish</em>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003007",
+"start_ref_usfm": "PHP 3:7",
+"end_ref": "50003008",
+"end_ref_usfm": "PHP 3:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.65,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23118",
+"reference_id": 22286,
+"version": "1.0.4",
+"title": "Philippians 3:9",
+"media_type": "Text",
+"index_reference": "50003009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Paul explains the difference between his view of salvation and that of his opponents (<data class=\"bible-ref\" data-start-ref=\"50003002\" data-end-ref=\"50003002\">3:2</data>). </p></li><li><p>Believers unite with Christ by trusting him for salvation and sharing in his life (see <data class=\"bible-ref\" data-start-ref=\"43015001\" data-end-ref=\"43015005\">John 15:1–5</data>). </p></li><li><p>God makes us right with him through faith in Christ, not by our obedience to the law of Moses. The Greek phrase translated <em>through faith in Christ</em> can also mean “through Christ’s faithfulness,” emphasizing Christ’s faithful obedience to God. Salvation is a free gift from God, not something we can earn (see <data class=\"bible-ref\" data-start-ref=\"45001017\" data-end-ref=\"45001017\">Romans 1:17</data>; <data class=\"bible-ref\" data-start-ref=\"45003021\" data-end-ref=\"45003026\">3:21–26</data>; <data class=\"bible-ref\" data-start-ref=\"45004005\" data-end-ref=\"45004008\">4:5–8</data>; <data class=\"bible-ref\" data-start-ref=\"48002016\" data-end-ref=\"48002016\">Galatians 2:16</data>; <data class=\"bible-ref\" data-start-ref=\"49002008\" data-end-ref=\"49002009\">Ephesians 2:8–9</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003009",
+"start_ref_usfm": "PHP 3:9",
+"end_ref": "50003009",
+"end_ref_usfm": "PHP 3:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Believe",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Believe"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Law",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Law"
+}
+]
+}
+},
+{
+"content_id": "23098",
+"reference_id": 22266,
+"version": "1.0.4",
+"title": "Philippians 3:10",
+"media_type": "Text",
+"index_reference": "50003010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>to know Christ</em></span>: By knowing Jesus Christ, a person knows and is accepted by God (compare <data class=\"bible-ref\" data-start-ref=\"50003007\" data-end-ref=\"50003008\">3:7–8</data>; <data class=\"bible-ref\" data-start-ref=\"43001012\" data-end-ref=\"43001013\">John 1:12–13</data>; <data class=\"bible-ref\" data-start-ref=\"43017003\" data-end-ref=\"43017003\">17:3</data>). </p></li><li><p>Believers experience the mighty power that raised Christ from the dead, both now and in eternity (see <data class=\"bible-ref\" data-start-ref=\"45006004\" data-end-ref=\"45006014\">Romans 6:4–14</data>; <data class=\"bible-ref\" data-start-ref=\"45008010\" data-end-ref=\"45008011\">8:10–11</data>; <data class=\"bible-ref\" data-start-ref=\"51003001\" data-end-ref=\"51003004\">Colossians 3:1–4</data>). </p></li><li><p><span><em>the fellowship of His sufferings, being conformed to Him in His death</em></span>: United with Christ, a believer has the privilege of experiencing his life and death (see <data class=\"bible-ref\" data-start-ref=\"50001029\" data-end-ref=\"50001029\">Philippians 1:29</data>; <data class=\"bible-ref\" data-start-ref=\"47004010\" data-end-ref=\"47004012\">2 Corinthians 4:10–12</data>; <data class=\"bible-ref\" data-start-ref=\"51001024\" data-end-ref=\"51001024\">Colossians 1:24</data>; <data class=\"bible-ref\" data-start-ref=\"60004013\" data-end-ref=\"60004016\">1 Peter 4:13–16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003010",
+"start_ref_usfm": "PHP 3:10",
+"end_ref": "50003010",
+"end_ref_usfm": "PHP 3:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Ability",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ability"
+},
+{
+"id": "keyterm:Resurrection",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Resurrection"
+},
+{
+"id": "keyterm:Fellowship",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Fellowship"
+}
+]
+}
+},
+{
+"content_id": "23099",
+"reference_id": 22267,
+"version": "1.0.4",
+"title": "Philippians 3:11",
+"media_type": "Text",
+"index_reference": "50003011",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Experiencing resurrection from the dead means being saved from judgment and receiving eternal life (see <data class=\"bible-ref\" data-start-ref=\"66020004\" data-end-ref=\"66020006\">Revelation 20:4–6</data>). Paul understood God&apos;s holiness and the seriousness of the final judgment (<data class=\"bible-ref\" data-start-ref=\"66020011\" data-end-ref=\"66020015\">Revelation 20:11–15</data>). <span>Paul knew that he had not yet reached the final goal. He continued to pursue Christ and looked forward to the resurrection from the dead </span>(compare <data class=\"bible-ref\" data-start-ref=\"48005005\" data-end-ref=\"48005005\">Galatians 5:5</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003011",
+"start_ref_usfm": "PHP 3:11",
+"end_ref": "50003011",
+"end_ref_usfm": "PHP 3:11"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23100",
+"reference_id": 22268,
+"version": "1.0.4",
+"title": "Philippians 3:12–4.1",
+"media_type": "Text",
+"index_reference": "50003012-50004001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Using himself as an example, Paul encourages the Philippians to pursue Christ and the hope of heaven with determination and strength.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003012",
+"start_ref_usfm": "PHP 3:12",
+"end_ref": "50004001",
+"end_ref_usfm": "PHP 4:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.5545,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Think"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "keyterm:Destroy",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Destroy"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Body"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Sky"
+},
+{
+"id": "realia:Cross",
+"type": "realia",
+"confidence": 0.1309,
+"match_method": "canonical",
+"preferred_label": "Cross"
+}
+]
+}
+},
+{
+"content_id": "23101",
+"reference_id": 22269,
+"version": "1.0.4",
+"title": "Philippians 3:13–14",
+"media_type": "Text",
+"index_reference": "50003013-50003014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>I press on toward the goal</em></span>: Paul compares the Christian life to a race. Just as a runner keeps going to reach the finish line, Paul keeps following Christ with hope of the final reward (see <data class=\"resource-ref\" data-content-id=\"23084\" data-resource-code=\"AquiferOpenStudyNotes\" data-language=\"eng\">study note on 2:16</data>). </p></li><li><p>Paul was ready to give up everything for the ultimate goal, the heavenly prize of eternal life.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003013",
+"start_ref_usfm": "PHP 3:13",
+"end_ref": "50003014",
+"end_ref_usfm": "PHP 3:14"
+}
+],
+"resource": [
+{
+"reference_id": "22252",
+"content_id": "23084",
+"resource_code": "AquiferOpenStudyNotes",
+"label": "study note on 2:16",
+"language": "eng"
+}
+],
+"acai": [
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.375,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23102",
+"reference_id": 22270,
+"version": "1.0.4",
+"title": "Philippians 3:15",
+"media_type": "Text",
+"index_reference": "50003015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Spiritually mature people (see <data class=\"bible-ref\" data-start-ref=\"46002006\" data-end-ref=\"46002006\">1&nbsp;Corinthians 2:6</data>; <data class=\"bible-ref\" data-start-ref=\"46003001\" data-end-ref=\"46003001\">3:1</data>) agree with Paul that eternal things matter most in life (<data class=\"bible-ref\" data-start-ref=\"50003012\" data-end-ref=\"50003014\">Philippians 3:12–14</data>; compare <data class=\"bible-ref\" data-start-ref=\"47004016\" data-end-ref=\"47004018\">2&nbsp;Corinthians 4:16–18</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003015",
+"start_ref_usfm": "PHP 3:15",
+"end_ref": "50003015",
+"end_ref_usfm": "PHP 3:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23103",
+"reference_id": 22271,
+"version": "1.0.4",
+"title": "Philippians 3:16",
+"media_type": "Text",
+"index_reference": "50003016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>we must live up to what we have already attained</em>:</span> Believers should not go backward in their faith. Their way of life should match what they have already learned about Christ.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003016",
+"start_ref_usfm": "PHP 3:16",
+"end_ref": "50003016",
+"end_ref_usfm": "PHP 3:16"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23104",
+"reference_id": 22272,
+"version": "1.0.4",
+"title": "Philippians 3:17",
+"media_type": "Text",
+"index_reference": "50003017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Join one another in following my example</em></span>: Paul seriously pursued Christ and the life God called him to (<data class=\"bible-ref\" data-start-ref=\"50003007\" data-end-ref=\"50003014\">3:7–14</data>; <data class=\"bible-ref\" data-start-ref=\"50004009\" data-end-ref=\"50004009\">4:9</data>; <data class=\"bible-ref\" data-start-ref=\"46004006\" data-end-ref=\"46004006\">1&nbsp;Corinthians 4:6</data>, <data class=\"bible-ref\" data-start-ref=\"46004016\" data-end-ref=\"46004017\">16–17</data>; <data class=\"bible-ref\" data-start-ref=\"46011001\" data-end-ref=\"46011001\">11:1</data>; <data class=\"bible-ref\" data-start-ref=\"53003007\" data-end-ref=\"53003009\">2&nbsp;Thessalonians 3:7–9</data>). This is very different from the enemies of Christ who are described next (<data class=\"bible-ref\" data-start-ref=\"50003018\" data-end-ref=\"50003019\">Philippians 3:18–19</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003017",
+"start_ref_usfm": "PHP 3:17",
+"end_ref": "50003017",
+"end_ref_usfm": "PHP 3:17"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+}
+]
+}
+},
+{
+"content_id": "23105",
+"reference_id": 22273,
+"version": "1.0.4",
+"title": "Philippians 3:18",
+"media_type": "Text",
+"index_reference": "50003018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Many live as enemies of the cross of Christ</em>: </span>The identity of the enemies is not certain. They may have been: </p><ol><li><p>Jews or Jewish Christians who were proud of their circumcision (as in <data class=\"bible-ref\" data-start-ref=\"50003002\" data-end-ref=\"50003002\">3:2</data>) and who emphasized Judaism in a way that did not agree with the message of the cross of Christ;</p></li><li><p>false believers living in a worldly and immoral way (see <data class=\"bible-ref\" data-start-ref=\"50003019\" data-end-ref=\"50003019\">3:19</data>); or</p></li><li><p>people who claimed to believe but rejected Paul’s teaching that the good news centers on Christ’s death on the cross (see <data class=\"bible-ref\" data-start-ref=\"46001023\" data-end-ref=\"46001023\">1&nbsp;Corinthians 1:23</data>; compare <data class=\"bible-ref\" data-start-ref=\"45009033\" data-end-ref=\"45009033\">Romans 9:33</data>; <data class=\"bible-ref\" data-start-ref=\"60002008\" data-end-ref=\"60002008\">1&nbsp;Peter 2:8</data>).</p></li></ol>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003018",
+"start_ref_usfm": "PHP 3:18",
+"end_ref": "50003018",
+"end_ref_usfm": "PHP 3:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Live.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Live"
+},
+{
+"id": "realia:Cross",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Cross"
+}
+]
+}
+},
+{
+"content_id": "23106",
+"reference_id": 22274,
+"version": "1.0.4",
+"title": "Philippians 3:19",
+"media_type": "Text",
+"index_reference": "50003019",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>their god is their belly:</em> </span>This phrase may refer to their greed, sexual desires, or self-interest (compare <data class=\"bible-ref\" data-start-ref=\"45016018\" data-end-ref=\"45016018\">Romans 16:18</data>). </p></li><li><p><span><em>their glory is in their shame</em></span>: This most likely refers to immoral behavior, not to pride in circumcision.</p></li><li><p>Eternal destruction is God&apos;s ultimate judgment for those who reject Christ and live selfish, sinful lives (see <data class=\"bible-ref\" data-start-ref=\"53001008\" data-end-ref=\"53001009\">2 Thessalonians 1:8–9</data>; compare <data class=\"bible-ref\" data-start-ref=\"50001028\" data-end-ref=\"50001028\">Philippians 1:28</data>; <data class=\"bible-ref\" data-start-ref=\"40007013\" data-end-ref=\"40007013\">Matthew 7:13</data>; <data class=\"bible-ref\" data-start-ref=\"45009022\" data-end-ref=\"45009022\">Romans 9:22</data>; <data class=\"bible-ref\" data-start-ref=\"46001018\" data-end-ref=\"46001018\">1 Corinthians 1:18</data>; <data class=\"bible-ref\" data-start-ref=\"53002010\" data-end-ref=\"53002010\">2 Thessalonians 2:10</data>; <data class=\"bible-ref\" data-start-ref=\"54006009\" data-end-ref=\"54006009\">1 Timothy 6:9</data>; <data class=\"bible-ref\" data-start-ref=\"61002003\" data-end-ref=\"61002003\">2 Peter 2:3</data>, <data class=\"bible-ref\" data-start-ref=\"61002013\" data-end-ref=\"61002013\">13</data>; <data class=\"bible-ref\" data-start-ref=\"65001010\" data-end-ref=\"65001010\">Jude 1:10</data>; <data class=\"bible-ref\" data-start-ref=\"66011018\" data-end-ref=\"66011018\">Revelation 11:18</data>). </p></li><li><p><em>their minds are set on earthly things</em>: They cannot see beyond this life (compare <data class=\"bible-ref\" data-start-ref=\"43012025\" data-end-ref=\"43012025\">John 12:25</data>; <data class=\"bible-ref\" data-start-ref=\"62002015\" data-end-ref=\"62002017\">1 John 2:15–17</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003019",
+"start_ref_usfm": "PHP 3:19",
+"end_ref": "50003019",
+"end_ref_usfm": "PHP 3:19"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Destroy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Destroy"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23109",
+"reference_id": 22277,
+"version": "1.0.4",
+"title": "Philippians 3:20",
+"media_type": "Text",
+"index_reference": "50003020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>In contrast, believers know that their true home is in heaven with the Lord Jesus Christ (see <data class=\"bible-ref\" data-start-ref=\"49002019\" data-end-ref=\"49002019\">Ephesians 2:19</data>). So they focus their thoughts on heavenly things (see <data class=\"bible-ref\" data-start-ref=\"51003001\" data-end-ref=\"51003002\">Colossians 3:1–2</data>; compare <data class=\"bible-ref\" data-start-ref=\"46015019\" data-end-ref=\"46015019\">1&nbsp;Corinthians 15:19</data>; <data class=\"bible-ref\" data-start-ref=\"60002011\" data-end-ref=\"60002011\">1&nbsp;Peter 2:11</data>). They also focus their thoughts on Christ’s return (see <data class=\"bible-ref\" data-start-ref=\"46001007\" data-end-ref=\"46001007\">1&nbsp;Corinthians 1:7</data>; <data class=\"bible-ref\" data-start-ref=\"56002013\" data-end-ref=\"56002013\">Titus 2:13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003020",
+"start_ref_usfm": "PHP 3:20",
+"end_ref": "50003020",
+"end_ref_usfm": "PHP 3:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Savior",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Savior"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Heaven",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Sky"
+}
+]
+}
+},
+{
+"content_id": "23110",
+"reference_id": 22278,
+"version": "1.0.4",
+"title": "Philippians 3:21",
+"media_type": "Text",
+"index_reference": "50003021",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>will transform our lowly bodies to be like His glorious body</em></span>: When Jesus returns, he will transform believers&apos; physical bodies. Instead of weak, aging bodies that die, they will have perfect, eternal bodies (see <data class=\"bible-ref\" data-start-ref=\"46015042\" data-end-ref=\"46015054\">1&nbsp;Corinthians 15:42–54</data>; compare <data class=\"bible-ref\" data-start-ref=\"45008023\" data-end-ref=\"45008023\">Romans 8:23</data>). </p></li><li><p><span><em>enables Him to subject all things to Himself</em></span>: This means that Jesus will have complete authority over all things. Everything in creation will be subject to his rule (see <data class=\"bible-ref\" data-start-ref=\"46015024\" data-end-ref=\"46015027\">1&nbsp;Corinthians 15:24–27</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50003021",
+"start_ref_usfm": "PHP 3:21",
+"end_ref": "50003021",
+"end_ref_usfm": "PHP 3:21"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "keyterm:Body.3",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Body"
+}
+]
+}
+},
+{
+"content_id": "23128",
+"reference_id": 22296,
+"version": "1.0.4",
+"title": "Philippians 4:1",
+"media_type": "Text",
+"index_reference": "50004001",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><em>stand firm in the Lord</em>: This means to remain faithful and committed to Jesus Christ (compare <data class=\"bible-ref\" data-start-ref=\"50001027\" data-end-ref=\"50001027\">1:27</data>). </p></li><li><p>Their ongoing faithfulness to Christ brought Paul great joy and was the reward for his hard work (see <data class=\"bible-ref\" data-start-ref=\"52002019\" data-end-ref=\"52002020\">1&nbsp;Thessalonians 2:19–20</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004001",
+"start_ref_usfm": "PHP 4:1",
+"end_ref": "50004001",
+"end_ref_usfm": "PHP 4:1"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:CauseOfJoy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Cause of Joy"
+},
+{
+"id": "keyterm:Beloved",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Beloved"
+}
+]
+}
+},
+{
+"content_id": "23133",
+"reference_id": 22301,
+"version": "1.0.4",
+"title": "Philippians 4:2",
+"media_type": "Text",
+"index_reference": "50004002",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>agree with each other in the Lord</em>:</span> The Lord&apos;s people should live in peace with one another (see <data class=\"bible-ref\" data-start-ref=\"50002002\" data-end-ref=\"50002002\">2:2</data>; <data class=\"bible-ref\" data-start-ref=\"46001010\" data-end-ref=\"46001010\">1&nbsp;Corinthians 1:10</data>; <data class=\"bible-ref\" data-start-ref=\"49004001\" data-end-ref=\"49004003\">Ephesians 4:1–3</data>, <data class=\"bible-ref\" data-start-ref=\"49004031\" data-end-ref=\"49004032\">31–32</data>; <data class=\"bible-ref\" data-start-ref=\"51003012\" data-end-ref=\"51003015\">Colossians 3:12–15</data>). We do not know what the disagreement between Euodia and Syntyche was about.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004002",
+"start_ref_usfm": "PHP 4:2",
+"end_ref": "50004002",
+"end_ref_usfm": "PHP 4:2"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Euodia",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Euodia"
+},
+{
+"id": "person:Syntyche",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Syntyche"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23129",
+"reference_id": 22297,
+"version": "1.0.4",
+"title": "Philippians 4:2–9",
+"media_type": "Text",
+"index_reference": "50004002-50004009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Before ending the letter, Paul discusses a conflict in the church and writes a few words of encouragement.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004002",
+"start_ref_usfm": "PHP 4:2",
+"end_ref": "50004009",
+"end_ref_usfm": "PHP 4:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.525,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.4187,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.3125,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "person:Clement",
+"type": "person",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Clement"
+},
+{
+"id": "person:Euodia",
+"type": "person",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Euodia"
+},
+{
+"id": "person:Syntyche",
+"type": "person",
+"confidence": 0.2313,
+"match_method": "canonical",
+"preferred_label": "Syntyche"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Pray"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "True"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Lovely",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Lovely"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.2063,
+"match_method": "canonical",
+"preferred_label": "Think"
+},
+{
+"id": "realia:Scroll",
+"type": "realia",
+"confidence": 0.1463,
+"match_method": "canonical",
+"preferred_label": "Scroll"
+}
+]
+}
+},
+{
+"content_id": "23134",
+"reference_id": 22302,
+"version": "1.0.4",
+"title": "Philippians 4:3",
+"media_type": "Text",
+"index_reference": "50004003",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>my true yokefellow </em>(or</span> <em>loyal Syzygus)</em>: The Greek word <em>suzuge</em> is either a personal name or a description. We do not know exactly who this person was. </p></li><li><p>Nothing more is known about Clement. </p></li><li><p><span><em>whose names are in the Book of Life</em>: </span>Those whose names are written in the Book of Life are true believers. God will give them eternal life (see <data class=\"bible-ref\" data-start-ref=\"42010020\" data-end-ref=\"42010020\">Luke 10:20</data>; <data class=\"bible-ref\" data-start-ref=\"66003005\" data-end-ref=\"66003005\">Revelation 3:5</data>; <data class=\"bible-ref\" data-start-ref=\"66013008\" data-end-ref=\"66013008\">13:8</data>; <data class=\"bible-ref\" data-start-ref=\"66017008\" data-end-ref=\"66017008\">17:8</data>; <data class=\"bible-ref\" data-start-ref=\"66020012\" data-end-ref=\"66020012\">20:12</data>, <data class=\"bible-ref\" data-start-ref=\"66020015\" data-end-ref=\"66020015\">15</data>; <data class=\"bible-ref\" data-start-ref=\"66021027\" data-end-ref=\"66021027\">21:27</data>; compare <data class=\"bible-ref\" data-start-ref=\"02032032\" data-end-ref=\"02032032\">Exodus 32:32</data>; <data class=\"bible-ref\" data-start-ref=\"19069028\" data-end-ref=\"19069028\">Psalm 69:28</data>; <data class=\"bible-ref\" data-start-ref=\"27012001\" data-end-ref=\"27012001\">Daniel 12:1</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004003",
+"start_ref_usfm": "PHP 4:3",
+"end_ref": "50004003",
+"end_ref_usfm": "PHP 4:3"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Clement",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Clement"
+},
+{
+"id": "keyterm:AskFor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Ask for"
+},
+{
+"id": "keyterm:Life",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Life"
+},
+{
+"id": "keyterm:Name",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Name"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "realia:Scroll",
+"type": "realia",
+"confidence": 0.54,
+"match_method": "canonical",
+"preferred_label": "Scroll"
+}
+]
+}
+},
+{
+"content_id": "23136",
+"reference_id": 22304,
+"version": "1.0.4",
+"title": "Philippians 4:4",
+"media_type": "Text",
+"index_reference": "50004004",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>In Paul’s letters, joy and rejoicing are a response to hearing the good news about Jesus (see <data class=\"bible-ref\" data-start-ref=\"49005019\" data-end-ref=\"49005020\">Ephesians 5:19–20</data>). Joy does not depend on circumstances. Instead, believers can have joy even when life is difficult.</p></li><li><p><em>Rejoice!</em> This is a command Paul often gives to Christians (see <data class=\"bible-ref\" data-start-ref=\"50002018\" data-end-ref=\"50002018\">Philippians 2:18</data>; <data class=\"bible-ref\" data-start-ref=\"50003001\" data-end-ref=\"50003001\">3:1</data>; <data class=\"bible-ref\" data-start-ref=\"45012012\" data-end-ref=\"45012012\">Romans 12:12</data>, <data class=\"bible-ref\" data-start-ref=\"45012015\" data-end-ref=\"45012015\">15</data>; <data class=\"bible-ref\" data-start-ref=\"52005016\" data-end-ref=\"52005016\">1 Thessalonians 5:16</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004004",
+"start_ref_usfm": "PHP 4:4",
+"end_ref": "50004004",
+"end_ref_usfm": "PHP 4:4"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23135",
+"reference_id": 22303,
+"version": "1.0.4",
+"title": "Philippians 4:4–6",
+"media_type": "Text",
+"index_reference": "50004004-50004006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>Rejoice … by prayer and petition … with thanksgiving</em>: Compare with <data class=\"bible-ref\" data-start-ref=\"52005016\" data-end-ref=\"52005018\">1 Thessalonians 5:16–18</data>. Both passages were written to churches facing persecution (see also <data class=\"bible-ref\" data-start-ref=\"45012012\" data-end-ref=\"45012012\">Romans 12:12</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004004",
+"start_ref_usfm": "PHP 4:4",
+"end_ref": "50004006",
+"end_ref_usfm": "PHP 4:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.5,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.3667,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.3,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "23137",
+"reference_id": 22305,
+"version": "1.0.4",
+"title": "Philippians 4:5",
+"media_type": "Text",
+"index_reference": "50004005",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Believers should treat others with kindness and thoughtfulness when those people are treating them badly or causing them to suffer for their faith. Believers do not need to seek revenge or try to get back at people who hurt them. Instead, believers can trust God to bring justice rather than seeking revenge.  </p><p>Some early Christians understood the phrase <em>The Lord is near</em> to mean that Jesus would return soon (see <data class=\"bible-ref\" data-start-ref=\"59005008\" data-end-ref=\"59005009\">James 5:8–9</data>). The phrase may also mean that Jesus is spiritually present with his people to help them. Both meanings encourage believers to be gentle and patient, even when others treat them badly.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004005",
+"start_ref_usfm": "PHP 4:5",
+"end_ref": "50004005",
+"end_ref_usfm": "PHP 4:5"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Gentle",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Gentle"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+}
+]
+}
+},
+{
+"content_id": "23138",
+"reference_id": 22306,
+"version": "1.0.4",
+"title": "Philippians 4:6",
+"media_type": "Text",
+"index_reference": "50004006",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Believers do not need to worry, because their Father in heaven loves them and takes care of their needs. He invites them to pray about everything (see <data class=\"bible-ref\" data-start-ref=\"40006025\" data-end-ref=\"40006034\">Matthew 6:25–34</data>; <data class=\"bible-ref\" data-start-ref=\"40007009\" data-end-ref=\"40007011\">7:9–11</data>; <data class=\"bible-ref\" data-start-ref=\"45012012\" data-end-ref=\"45012012\">Romans 12:12</data>; <data class=\"bible-ref\" data-start-ref=\"49006018\" data-end-ref=\"49006018\">Ephesians 6:18</data>; <data class=\"bible-ref\" data-start-ref=\"52005017\" data-end-ref=\"52005017\">1&nbsp;Thessalonians 5:17</data>; <data class=\"bible-ref\" data-start-ref=\"60005007\" data-end-ref=\"60005007\">1&nbsp;Peter 5:7</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004006",
+"start_ref_usfm": "PHP 4:6",
+"end_ref": "50004006",
+"end_ref_usfm": "PHP 4:6"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Pray",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pray"
+}
+]
+}
+},
+{
+"content_id": "23139",
+"reference_id": 22307,
+"version": "1.0.4",
+"title": "Philippians 4:7",
+"media_type": "Text",
+"index_reference": "50004007",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>Those who trust God (see <data class=\"bible-ref\" data-start-ref=\"50004006\" data-end-ref=\"50004006\">4:6</data>) will experience God&apos;s peace (see also <data class=\"bible-ref\" data-start-ref=\"23026003\" data-end-ref=\"23026003\">Isaiah 26:3</data>; <data class=\"bible-ref\" data-start-ref=\"43014027\" data-end-ref=\"43014027\">John 14:27</data>; <data class=\"bible-ref\" data-start-ref=\"51003015\" data-end-ref=\"51003015\">Colossians 3:15</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004007",
+"start_ref_usfm": "PHP 4:7",
+"end_ref": "50004007",
+"end_ref_usfm": "PHP 4:7"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+},
+{
+"id": "keyterm:Heart",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Heart"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+}
+]
+}
+},
+{
+"content_id": "23140",
+"reference_id": 22308,
+"version": "1.0.4",
+"title": "Philippians 4:8",
+"media_type": "Text",
+"index_reference": "50004008",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span>Paul urges the Philippians to focus their thoughts on things that are <em>true, honorable, right, pure, lovely, admirable, excellent</em>, and <em>worthy of praise</em>. </span>Then, even when they suffer and are treated badly by others, they can live in a way that honors God and have peace in their hearts and mind (<data class=\"bible-ref\" data-start-ref=\"50004007\" data-end-ref=\"50004007\">Philippians 4:7</data>, <data class=\"bible-ref\" data-start-ref=\"50004009\" data-end-ref=\"50004009\">9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004008",
+"start_ref_usfm": "PHP 4:8",
+"end_ref": "50004008",
+"end_ref_usfm": "PHP 4:8"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Lovely",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Lovely"
+},
+{
+"id": "keyterm:Just",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Be (Or Show Oneself) Just"
+},
+{
+"id": "keyterm:Pure",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Pure"
+},
+{
+"id": "keyterm:True",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "True"
+}
+]
+}
+},
+{
+"content_id": "23141",
+"reference_id": 22309,
+"version": "1.0.4",
+"title": "Philippians 4:9",
+"media_type": "Text",
+"index_reference": "50004009",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span><em>Whatever you have learned or received or heard from me</em></span>: This refers to everything Paul had taught them by word and example about the kind of life God wants us to live (see <data class=\"bible-ref\" data-start-ref=\"50003017\" data-end-ref=\"50003017\">3:17</data>; <data class=\"bible-ref\" data-start-ref=\"46004006\" data-end-ref=\"46004006\">1&nbsp;Corinthians 4:6</data>, <data class=\"bible-ref\" data-start-ref=\"46004016\" data-end-ref=\"46004017\">16–17</data>; <data class=\"bible-ref\" data-start-ref=\"53003007\" data-end-ref=\"53003009\">2&nbsp;Thessalonians 3:7–9</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004009",
+"start_ref_usfm": "PHP 4:9",
+"end_ref": "50004009",
+"end_ref_usfm": "PHP 4:9"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Peace",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Make Peace"
+}
+]
+}
+},
+{
+"content_id": "23120",
+"reference_id": 22288,
+"version": "1.0.4",
+"title": "Philippians 4:10",
+"media_type": "Text",
+"index_reference": "50004010",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>It is not clear why they were not able to help him earlier.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004010",
+"start_ref_usfm": "PHP 4:10",
+"end_ref": "50004010",
+"end_ref_usfm": "PHP 4:10"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Think"
+}
+]
+}
+},
+{
+"content_id": "23119",
+"reference_id": 22287,
+"version": "1.0.4",
+"title": "Philippians 4:10–20",
+"media_type": "Text",
+"index_reference": "50004010-50004020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>At the end of the letter, Paul thanks the Philippians for the gift they sent him through Epaphroditus.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004010",
+"start_ref_usfm": "PHP 4:10",
+"end_ref": "50004020",
+"end_ref_usfm": "PHP 4:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.3727,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.2818,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "person:Epaphroditus",
+"type": "person",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Epaphroditus"
+},
+{
+"id": "group:Philippi",
+"type": "group",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Philippians"
+},
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.2091,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Authority"
+},
+{
+"id": "keyterm:InChrist",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "In Christ"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Offering"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+},
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+},
+{
+"id": "keyterm:Think",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Think"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Good News"
+},
+{
+"id": "place:Thessalonica",
+"type": "place",
+"confidence": 0.1909,
+"match_method": "canonical",
+"preferred_label": "Thessalonica"
+}
+]
+}
+},
+{
+"content_id": "23121",
+"reference_id": 22289,
+"version": "1.0.4",
+"title": "Philippians 4:11–12",
+"media_type": "Text",
+"index_reference": "50004011-50004012",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>As a servant of Christ, Paul has learned to be content with every situation, whether he had plenty or little. His life was filled with the joy that comes from doing the will of God whatever the cost.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004011",
+"start_ref_usfm": "PHP 4:11",
+"end_ref": "50004012",
+"end_ref_usfm": "PHP 4:12"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23122",
+"reference_id": 22290,
+"version": "1.0.4",
+"title": "Philippians 4:13",
+"media_type": "Text",
+"index_reference": "50004013",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><em>through Christ</em>: With Christ&apos;s help, Paul had the strength <span>to remain faithful and content in every situation</span>. In all situations, Paul relied on the strength of Christ, who lived in him and worked through him. This was especially true during times of suffering (see <data class=\"bible-ref\" data-start-ref=\"47001008\" data-end-ref=\"47001010\">2&nbsp;Corinthians 1:8–10</data>; <data class=\"bible-ref\" data-start-ref=\"47004007\" data-end-ref=\"47004012\">4:7–12</data>; <data class=\"bible-ref\" data-start-ref=\"47012008\" data-end-ref=\"47012010\">12:8–10</data>; <data class=\"bible-ref\" data-start-ref=\"48002020\" data-end-ref=\"48002020\">Galatians 2:20</data>; <data class=\"bible-ref\" data-start-ref=\"51001027\" data-end-ref=\"51001027\">Colossians 1:27</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004013",
+"start_ref_usfm": "PHP 4:13",
+"end_ref": "50004013",
+"end_ref_usfm": "PHP 4:13"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Authority.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Authority"
+}
+]
+}
+},
+{
+"content_id": "23123",
+"reference_id": 22291,
+"version": "1.0.4",
+"title": "Philippians 4:14",
+"media_type": "Text",
+"index_reference": "50004014",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>The Philippians showed kindness and generosity, which was especially meaningful because Paul was suffering in prison.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004014",
+"start_ref_usfm": "PHP 4:14",
+"end_ref": "50004014",
+"end_ref_usfm": "PHP 4:14"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23124",
+"reference_id": 22292,
+"version": "1.0.4",
+"title": "Philippians 4:15",
+"media_type": "Text",
+"index_reference": "50004015",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>no church but you partnered with me in the matter of giving</em></span><em>:</em> Paul chose not to accept money from the Corinthians because he was concerned it might harm how they understood the good news about Jesus (<data class=\"bible-ref\" data-start-ref=\"46009011\" data-end-ref=\"46009018\">1&nbsp;Corinthians 9:11–18</data>; <data class=\"bible-ref\" data-start-ref=\"47011007\" data-end-ref=\"47011012\">2&nbsp;Corinthians 11:7–12</data>). But he had no such concern with the Philippians. </p></li><li><p><span><em>in the early days of the gospel</em></span><em>:</em> This refers to when Paul first preached the good news in Philippi (See <data class=\"bible-ref\" data-start-ref=\"44016011\" data-end-ref=\"44016040\">Acts 16:11–40</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004015",
+"start_ref_usfm": "PHP 4:15",
+"end_ref": "50004015",
+"end_ref_usfm": "PHP 4:15"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "group:Philippi",
+"type": "group",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Philippians"
+},
+{
+"id": "keyterm:Share",
+"type": "keyterm",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Share"
+},
+{
+"id": "keyterm:Church",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Church"
+},
+{
+"id": "place:Macedonia",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Macedonia"
+},
+{
+"id": "place:Philippi",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Philippi"
+},
+{
+"id": "keyterm:GoodNews",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Good News"
+}
+]
+}
+},
+{
+"content_id": "23125",
+"reference_id": 22293,
+"version": "1.0.4",
+"title": "Philippians 4:16",
+"media_type": "Text",
+"index_reference": "50004016",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After Paul left Philippi (see <data class=\"bible-ref\" data-start-ref=\"50004015\" data-end-ref=\"50004015\">4:15</data>), he traveled to Thessalonica (see <data class=\"bible-ref\" data-start-ref=\"44017001\" data-end-ref=\"44017008\">Acts 17:1–8</data>; compare <data class=\"bible-ref\" data-start-ref=\"52002001\" data-end-ref=\"52002014\">1&nbsp;Thessalonians 2:1–14</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004016",
+"start_ref_usfm": "PHP 4:16",
+"end_ref": "50004016",
+"end_ref_usfm": "PHP 4:16"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "place:Thessalonica",
+"type": "place",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Thessalonica"
+}
+]
+}
+},
+{
+"content_id": "23126",
+"reference_id": 22294,
+"version": "1.0.4",
+"title": "Philippians 4:17",
+"media_type": "Text",
+"index_reference": "50004017",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p><span><em>Not that I am seeking a gift:</em></span> Paul preferred to support himself financially (see <data class=\"bible-ref\" data-start-ref=\"44018003\" data-end-ref=\"44018003\">Acts 18:3</data>; <data class=\"bible-ref\" data-start-ref=\"46004012\" data-end-ref=\"46004012\">1&nbsp;Corinthians 4:12</data>; <data class=\"bible-ref\" data-start-ref=\"46009003\" data-end-ref=\"46009018\">9:3–18</data>; <data class=\"bible-ref\" data-start-ref=\"47011007\" data-end-ref=\"47011011\">2&nbsp;Corinthians 11:7–11</data>; <data class=\"bible-ref\" data-start-ref=\"47012014\" data-end-ref=\"47012015\">12:14–15</data>). </p></li><li><p>Paul was not seeking a gift for himself. Instead, he wanted their generosity to produce spiritual fruit, a reward from God credited to their account.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004017",
+"start_ref_usfm": "PHP 4:17",
+"end_ref": "50004017",
+"end_ref_usfm": "PHP 4:17"
+}
+],
+"resource": [],
+"acai": []
+}
+},
+{
+"content_id": "23127",
+"reference_id": 22295,
+"version": "1.0.4",
+"title": "Philippians 4:18",
+"media_type": "Text",
+"index_reference": "50004018",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>Epaphroditus had carried the gifts from Philippi (see also <data class=\"bible-ref\" data-start-ref=\"50002025\" data-end-ref=\"50002030\">2:25–30</data>).</p></li><li><p><span><em>They are a fragrant offering</em></span>: In the Old Testament, acceptable offerings were a pleasing fragrance to God (see <data class=\"bible-ref\" data-start-ref=\"03001009\" data-end-ref=\"03001009\">Leviticus 1:9</data>, <data class=\"bible-ref\" data-start-ref=\"03001013\" data-end-ref=\"03001013\">13</data>, <data class=\"bible-ref\" data-start-ref=\"03001017\" data-end-ref=\"03001017\">17</data>; <data class=\"bible-ref\" data-start-ref=\"03002002\" data-end-ref=\"03002002\">2:2</data>, <data class=\"bible-ref\" data-start-ref=\"03002009\" data-end-ref=\"03002009\">9</data>; <data class=\"bible-ref\" data-start-ref=\"03003005\" data-end-ref=\"03003005\">3:5</data>, <data class=\"bible-ref\" data-start-ref=\"03003016\" data-end-ref=\"03003016\">16</data>; compare <data class=\"bible-ref\" data-start-ref=\"45012001\" data-end-ref=\"45012001\">Romans 12:1</data>; <data class=\"bible-ref\" data-start-ref=\"49005002\" data-end-ref=\"49005002\">Ephesians 5:2</data>).</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004018",
+"start_ref_usfm": "PHP 4:18",
+"end_ref": "50004018",
+"end_ref_usfm": "PHP 4:18"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Epaphroditus",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Epaphroditus"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Offering",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Offering"
+}
+]
+}
+},
+{
+"content_id": "23130",
+"reference_id": 22298,
+"version": "1.0.4",
+"title": "Philippians 4:20",
+"media_type": "Text",
+"index_reference": "50004020",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p>After thinking about God&apos;s wonderful blessings, Paul ends the letter with words of praise to God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004020",
+"start_ref_usfm": "PHP 4:20",
+"end_ref": "50004020",
+"end_ref_usfm": "PHP 4:20"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "keyterm:Glory",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Glory"
+},
+{
+"id": "deity:Lord",
+"type": "deity",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "LORD"
+},
+{
+"id": "keyterm:Always",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Always"
+},
+{
+"id": "keyterm:Surely",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Surely!"
+}
+]
+}
+},
+{
+"content_id": "23131",
+"reference_id": 22299,
+"version": "1.0.4",
+"title": "Philippians 4:22",
+"media_type": "Text",
+"index_reference": "50004022",
+"language": "eng",
+"review_level": "Professional",
+"content": "<p><span>Some believers were members or servants of Caesar’s household, the larger group of people connected with the emperor’s household and administration.</span> Paul might have shared the good news about Jesus with them while he was in prison. They might have been especially close to Paul and worried about him in prison (see <data class=\"bible-ref\" data-start-ref=\"50001013\" data-end-ref=\"50001013\">1:13</data>).</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004022",
+"start_ref_usfm": "PHP 4:22",
+"end_ref": "50004022",
+"end_ref_usfm": "PHP 4:22"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Nero",
+"type": "person",
+"confidence": 0.8,
+"match_method": "canonical",
+"preferred_label": "Nero"
+},
+{
+"id": "keyterm:Holy",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Holy"
+}
+]
+}
+},
+{
+"content_id": "23132",
+"reference_id": 22300,
+"version": "1.0.4",
+"title": "Philippians 4:23",
+"media_type": "Text",
+"index_reference": "50004023",
+"language": "eng",
+"review_level": "Professional",
+"content": "<ul><li><p>At the end of his letters, Paul often asks that the grace of the Lord Jesus Christ be with the people he is writing to (see also <data class=\"bible-ref\" data-start-ref=\"50001002\" data-end-ref=\"50001002\">1:2</data>). Believers need Christ’s grace for both salvation and daily life. </p></li><li><p>Here, <em>your spirit </em>likely refers to the deepest part of the believers&apos; inner being. The spirit is the part of the person that relates most directly to God. Paul is praying that Christ’s grace would strengthen and sustain them at the core of who they are.</p></li></ul>",
+"associations": {
+"passage": [
+{
+"start_ref": "50004023",
+"start_ref_usfm": "PHP 4:23",
+"end_ref": "50004023",
+"end_ref_usfm": "PHP 4:23"
+}
+],
+"resource": [],
+"acai": [
+{
+"id": "person:Jesus.2",
+"type": "person",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Jesus"
+},
+{
+"id": "keyterm:Spirit.2",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Spirit"
+},
+{
+"id": "keyterm:Favor",
+"type": "keyterm",
+"confidence": 0.6,
+"match_method": "canonical",
+"preferred_label": "Favor"
+}
+]
+}
+}
+]

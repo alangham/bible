@@ -11,6 +11,7 @@
 import { Fragment, useEffect } from 'react'
 import { SAMPLE_PARTS } from './data/sampleVerse.ts'
 import { NOTE_CREDIT } from './data/notes.ts'
+import { AQUIFER_CREDIT } from './data/studyNotes.ts'
 import { TRANSLATIONS } from './data/translation.ts'
 import { SUMMARY_VIDEOS, videoHref } from './data/videos.ts'
 import { VideoCredit } from './reading/AboutBook.tsx'
@@ -175,7 +176,17 @@ export function SourcesPage() {
             The site got the files from the repository <a href={NOTE_CREDIT.source.href}>BibleAquifer/BiblicaStudyNotes</a> on GitHub, version 1.1.2. The
             site shows the words of the notes with no change. It does not show the links to the key terms of the files.
           </p>
-          <p>The notes have no text for 132 psalms. Biblica has no connection with this site.</p>
+          {/* The Aquifer notes of 132 psalms: docs/DESIGN.md section 20.9, docs/TASKS.md Task 48 step 8. */}
+          <p>
+            The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of “About this chapter” is from the{' '}
+            <a href={AQUIFER_CREDIT.source.href}>Aquifer Open Study Notes</a>, © 2026 Mission Mutual. They are an adaptation of the Tyndale Open Study
+            Notes, © 2023 Tyndale House Publishers. The license of both is <a href={AQUIFER_CREDIT.license.href}>CC BY-SA 4.0</a>.
+          </p>
+          <p>
+            The site got the files from the repository <a href={AQUIFER_CREDIT.source.href}>BibleAquifer/AquiferOpenStudyNotes</a> on GitHub, version
+            1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.
+          </p>
+          <p>Biblica, Mission Mutual, and Tyndale House Publishers have no connection with this site.</p>
         </section>
 
         {/* The map data: docs/DESIGN.md section 15.9 "The credit", docs/TASKS.md Task 37 step 8. The licences are in

@@ -79,6 +79,8 @@ Added: 2026-11-23, by Arthur and the designer.
 
 Idea: the second step of "About this chapter". Section 19.12 of `docs/DESIGN.md` has the direction that Arthur decided on 2026-11-23.
 
+From 2026-11-23, this idea is in work: section 20 of `docs/DESIGN.md` has the design and the answers to the open questions, and Tasks 48 and 49 build it. Task 49 removes this item.
+
 The facts on 2026-11-23, from a check by the designer:
 
 - The source is `https://github.com/BibleAquifer/AquiferOpenStudyNotes`. Its `README.md` says: an adaptation of the Tyndale Open Study Notes © 2023 Tyndale House Publishers, made by Mission Mutual, with the license CC BY-SA 4.0.

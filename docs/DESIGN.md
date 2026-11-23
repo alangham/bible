@@ -2510,3 +2510,64 @@ The groups: changes 1 to 16 give plain words for a term that a new reader does n
 - No person and no agent looked for a dispute that the site does not show, in the entries with no "Scholars differ".
 - The designer did not check each new word of section 21.4 against its source. Task 50 does this.
 - The pages of the ESV Global Study Bible have no fixed revision. They can differ from the pages of 2026-11-13.
+
+### 21.7 Task 50 as built, checked on 2026-11-23
+
+Claude Code built Task 50 in the commit `91d8b73`. It made 19 of the 23 changes. Four statements kept their old words, by step 2 of the task or by the rule against a copied run:
+
+- Change 4, Nehemiah: the new words put the acts of chapter 13 at the arrival in 445 BC. Nehemiah 13:6 to 7 puts them after a later return.
+- Change 16, Jude: the new words had a run of 7 words of the fixed Wikipedia page of Jude.
+- Change 19, Isaiah: "until after 681 BC" says more than the ESV page, and "Isaiah's work" does not say clearly that it is the time of the prophet.
+- Change 22, 2 Peter: the new words had no "probably", and the ESV page has it.
+
+The designer wrote the new words of these four changes. The accuracy reviewer and Claude Code found the faults. The proposal of ChatGPT for Nehemiah had the same fault.
+
+The designer checked these points on 2026-11-23:
+
+- `public/data/intros.json` against the commit before it: 19 statements changed. Each one has the exact new words of section 21.4. The four statements above did not change. Each of the 66 entries has `review: "draft"`.
+- Three pages of the ESV Global Study Bible, in a browser. Nehemiah: he arrived in 445 BC and returned for a second visit between 433 and 423 BC. Isaiah: he lived long enough to record a death in 681. 2 Peter: the page has "probably" for the writing shortly before the death of Peter, in AD 64 to 67.
+
+From the report of Claude Code, not checked by the designer: the copy check found 0 runs of 6 words in the 19 new statements. Each of the 377 statements has a record with its exact words. 324 unit tests and 555 tests in the full run pass. The accuracy reviewer did not run again after the last corrections.
+
+Two notes of the accuracy reviewer, with no change: the new words of Leviticus say "God speaks from the Tent of Meeting" with no "mostly", and the ESV page says "primarily". The new words of Jeremiah say "credit Jeremiah and Baruch" and do not say with what.
+
+Not verified, from the accuracy reviewer: no approved source gives the meaning of "rhetoric" that change 13 uses for 1 Peter. The pages of the ESV Global Study Bible and of Wikipedia were read as text copies.
+
+### 21.8 The five changes of Task 51
+
+Arthur accepted the findings behind changes 4, 16, 19, and 22 on 2026-11-23. The designer wrote new words for them. Change D is new: Arthur did not decide it. Remove it from the task if Arthur says so.
+
+**A. Nehemiah, `whatItIs`.**
+
+- Old: Much of the book is in Nehemiah's own voice. He rebuilds the wall of Jerusalem after he arrives in 445 BC, then reforms the temple, the Sabbath, and marriage.
+- New: Much of the book is in Nehemiah's own voice. He rebuilds Jerusalem's wall after he arrives in 445 BC, and later restores temple worship, stops Sabbath trade, and opposes marriages to foreign women.
+- Check the new words against: Nehemiah 13:6 to 30. ESV page, "Author and Date".
+- Reason: Change 4 of section 21.4 put the acts of chapter 13 at the arrival in 445 BC. The word "later" keeps them apart.
+
+**B. Jude, `whatItIs`.**
+
+- Old: A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved, and kept.
+- New: A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved by God, and kept in Jesus Christ.
+- Check the new words against: Jude 1.
+- Reason: Change 16 of section 21.4 had a run of 7 words of the Wikipedia page. The first sentence now keeps its old words, and only the second sentence changes.
+
+**C. Isaiah, `writtenDetail.conservative`.**
+
+- Old: Conservative scholars read chapters 40 to 55 as prophecies for the 500s BC, when God's people were captives in Babylon.
+- New: Conservative scholars place the prophet Isaiah from about 740 BC until 681 BC or later. They read chapters 40 to 55 as prophecies for the 500s BC, when God's people were captives in Babylon.
+- Check the new words against: ESV page, "Author and Date" and the overview table.
+- Reason: Change 19 of section 21.4 said "until after 681 BC" and "Isaiah's work". The ESV page says that Isaiah lived long enough to record a death in 681. The new words name the prophet.
+
+**D. Isaiah, `authorDetail.conservative`.**
+
+- Old: Conservative scholars treat the prophet Isaiah as the writer, from about 740 BC until after 681 BC. They read chapters 40 to 55 as his prophecies for the captivity in Babylon, 586 to 538 BC.
+- New: Conservative scholars treat the prophet Isaiah as the writer, from about 740 BC until 681 BC or later. They read chapters 40 to 55 as his prophecies for the captivity in Babylon, 586 to 538 BC.
+- Check the new words against: ESV page, "Author and Date".
+- Reason: This statement was not in section 21.4. It has the words "until after 681 BC", which the accuracy reviewer did not accept in change 19. The designer added this change so that the two parts of Isaiah agree.
+
+**E. 2 Peter, `writtenDetail.conservative`.**
+
+- Old: The writer says his death is near, so the letter comes from late in the life of Peter.
+- New: Conservative scholars hold that Peter probably wrote it shortly before his death, which came between AD 64 and 67. The writer says that his death is near.
+- Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:12 to 15.
+- Reason: Change 22 of section 21.4 had no "probably". The ESV page has it.

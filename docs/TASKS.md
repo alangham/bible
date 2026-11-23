@@ -3504,3 +3504,40 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, and the file `docs/reviews/intros-review-chatgpt.md`, with this task.
+
+---
+
+## Task 51. The introductions: the five changes after Task 50
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the four statements that Task 50 did not change have new words that their sources support, and the two conservative parts of Isaiah agree.
+
+Read sections 21.7 and 21.8 of `docs/DESIGN.md` first. Section 21.8 has the five changes, each with the old words, the new words, the source to check, and the reason.
+
+This task shows on the site: the words of "About this book" change in Nehemiah, Jude, Isaiah, and 2 Peter.
+
+WARNING: Change only the five statements of section 21.8. Do not change a `review` value.
+
+WARNING: Do not write a fact from memory, and do not copy a sentence from a source. The rules of Task 50 apply.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Do steps 1 to 6 of Task 50 for the five changes of section 21.8. Use the text copies of the source pages of Task 50, or get the pages again.
+2. If a source does not support the new words of a change, or if the copy check finds a run of 6 words, do not make that change. Keep the old words, and give the change and the cause in the report. Do not write different words.
+3. For change B, the Bible text is a source, and words of the Bible text are permitted. The copy check applies to the page of the ESV Global Study Bible and to the Wikipedia page, as in Task 50.
+4. Run the reviewer agent and the accuracy reviewer agent. Ask the accuracy reviewer to check each of the five changes against its sources, and to check that no other statement of `public/data/intros.json` changed. If you correct something after its report, run it again.
+5. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- Each of the five changes is made, or the report gives the cause that it is not made.
+- `git diff` of `public/data/intros.json` shows only statements of section 21.8.
+- Each of the 66 entries has `review: "draft"`.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

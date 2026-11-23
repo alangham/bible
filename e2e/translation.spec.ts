@@ -600,9 +600,10 @@ for (const vp of VIEWPORTS) {
 }
 
 // docs/TASKS.md Task 43 step 4: the line of the control "About this book" has the control only. The translation
-// control of the top bar names the translation. docs/DESIGN.md section 5.
+// control of the top bar names the translation. docs/DESIGN.md section 5. From Task 47, the line has the control
+// "About this chapter" also, and still no name of a translation.
 for (const vp of VIEWPORTS) {
-  test(`Genesis 1, at ${vp.name}: the line of "About this book" has no text other than the control, with each translation`, async ({ context }) => {
+  test(`Genesis 1, at ${vp.name}: the line of "About this book" has no text other than the controls, with each translation`, async ({ context }) => {
     // A new page for each translation: a second goto to the same address changes only the hash, and does not load the page again.
     for (const [id, name] of [
       ['bsb', 'Translation: Berean Standard Bible, BSB'],
@@ -618,7 +619,12 @@ for (const vp of VIEWPORTS) {
         text: e.textContent!.replace(/\s+/g, ' ').trim(),
         control: e.querySelector('.rd-about-control')!.textContent!.replace(/\s+/g, ' ').trim(),
       }))
-      expect(content).toEqual({ children: ['BUTTON rd-about-control'], text: 'About this book ›', control: 'About this book ›' })
+      // From Task 47, the control "About this chapter" of Genesis 1 is on the same line: docs/DESIGN.md section 19.6.
+      expect(content).toEqual({
+        children: ['BUTTON rd-about-control', 'BUTTON rd-about-control rd-chapter-control'],
+        text: 'About this book ›About this chapter ›',
+        control: 'About this book ›',
+      })
       await expect(page.locator('.rd-translation')).toHaveCount(0)
       await expect(translationControl(page)).toHaveAccessibleName(name)
       await page.close()

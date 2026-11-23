@@ -1187,6 +1187,48 @@ html:has(.reading) {
   text-decoration: underline;
 }
 
+/*
+  "About this chapter": the panel with the Biblica notes and the note credit. docs/DESIGN.md section 19.7, Task 47.
+  The line on the left side and the note credit show that the text has a different owner. The rules have two
+  classes, so that the margin of the rule .rd-column p does not apply. The margin below a paragraph and the margin
+  above a range label or the note credit meet, so the space there is 14 px.
+*/
+.rd-about .rd-notes {
+  margin: 8px 0 16px;
+  padding-left: 14px;
+  border-left: 2px solid var(--credit-line);
+  color: var(--ink);
+  font: 400 15px/1.5 Inrond, system-ui, sans-serif;
+}
+
+.rd-notes .rd-note p,
+.rd-notes p[role='alert'] {
+  margin: 0 0 8px;
+}
+
+.rd-notes .rd-range-label {
+  margin: 14px 0 4px;
+  color: var(--ink-secondary);
+  font: 600 13px/20px Inrond, system-ui, sans-serif;
+}
+
+.rd-notes .rd-note:first-child .rd-range-label {
+  margin-top: 0;
+}
+
+.rd-notes .rd-note-credit {
+  margin: 14px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--credit-line);
+  color: var(--ink-secondary);
+  font: 400 14px/21px Inrond, system-ui, sans-serif;
+}
+
+.rd-note-credit a {
+  color: var(--c);
+  text-decoration: underline;
+}
+
 .rd-scholars-detail {
   margin: 6px 0 4px;
   padding: 12px 14px;

@@ -3247,3 +3247,74 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 47. "About this chapter": the Biblica Study Notes
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader can open a short text about the passage in each chapter that has a Biblica note. The text is from the Biblica Study Notes, with no change to a word, and with the note credit.
+
+Arthur decided this on 2026-11-23. Read section 19 of `docs/DESIGN.md` first. It has the license, the data, the rule, the values, and the words of the note credit. The pictures of the design are in `docs/screenshots/about-chapter-design/`.
+
+This task shows on the site: 1,057 chapters get the control "About this chapter". The 132 psalms with no note do not change.
+
+The accuracy review is "no", because this task writes no fact about the Bible. The words come from the source files, and the number of section 19.4 shows that they have no change.
+
+WARNING: Do not change a word of a Biblica note. Do not trim a paragraph, do not join or cut a paragraph, and do not change a quotation mark, a dash, or a spelling. Section 19.4 has the three changes of the format that are permitted.
+
+WARNING: Do not write a note, and do not add a note for a chapter that has none.
+
+WARNING: Do not show a note without the note credit. Do not change a word of the note credit. Section 19.8.
+
+WARNING: Do not add a logo or a picture of Biblica, and do not add words that say that Biblica approves the site.
+
+WARNING: Do not get a file from a different server when the site runs. The notes are files in `public/data/notes/`.
+
+WARNING: Do not put a color value in a component or in a CSS rule. The panel uses the color names of section 19.7.
+
+WARNING: Do not build a part of section 19.12. The Aquifer Open Study Notes are not in this task.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Before you change a file, make screenshots in a folder outside the repository, at 1440 by 900 px and at 390 by 844 px, in the light mode: Psalms 3, and Genesis 22 with "About this book" closed. These are the "before" screenshots.
+2. Read `README.md` and `eng/metadata.json` of `https://github.com/BibleAquifer/BiblicaStudyNotes` at the commit `1a4501d9571f021bc99d07efb14c7bac79e5e13f`. Compare the copyright line and the license with section 19.3. If they differ, stop and report.
+3. Copy the files of section 19.3 from that commit into `sources/biblica/`, as section 19.4 says. Do not change them.
+4. Add a section "14. Biblica Study Notes" to `docs/DATA-SOURCES.md`, with the facts of section 19.3. Say for each fact if you verified it or if it is from the designer.
+5. Write `scripts/build-notes.mjs`. It makes the 66 files `public/data/notes/<book id>.json` of section 19.4. It checks each fact of the list "Facts about the 66 files" of section 19.4, and it stops with an error if one does not fit. It prints the numbers of sections 19.4 and 19.5 and the SHA-256.
+6. Run the script. Compare each number and the SHA-256 with sections 19.4 and 19.5. If one differs, stop and report. Do not change a number in `docs/DESIGN.md`.
+7. Build the control and the panel of sections 19.6, 19.7, and 19.8 on the reading page.
+8. Add the section "Notes on the chapters" to the Sources page, with the words of section 19.9.
+9. Unit tests:
+   - The rule of section 19.5: Genesis 22 shows the one note Genesis 21:1–22:24. Romans 8 shows three notes, in the order of section 19.2. Job 10 shows the note Job 4:1–31:40. Psalms 3 shows no note. Matthew 26 shows six notes.
+   - The numbers of section 19.5, from the files in `public/data/notes/`: 1,057 chapters with a note, and the counts 817, 160, 65, 9, 5, and 1.
+   - The SHA-256 of section 19.4, from the files in `public/data/notes/`.
+   - The range label of section 19.7 for a range in one chapter and for a range of more than one chapter.
+10. End-to-end tests, at 1440 by 900 px and at 390 by 844 px:
+    - Genesis 22: the control is on the line of "About this book". The panel is closed at the load. A click opens it. It has the label "Genesis 21:1–22:24", three paragraphs, and the note credit with its exact words and its two addresses. A second click closes it.
+    - Romans 8: the open panel has three labels, in the order of the Bible.
+    - Psalms 3: the page has no control "About this chapter".
+    - Open Genesis 21, and scroll until Genesis 22 is on the page. Genesis 22 has the control and no "About this book". The control opens the panel of Genesis 22, and the panel of Genesis 21 stays closed.
+    - The open panel of Genesis 22 has the same words in the three translations.
+    - Romans 8 with the panel open at 390 px: the page has no horizontal scroll.
+    - At 1440 px, after the panel of Romans 8 opens, each margin label is on the line of its verse.
+    - The request for the notes file of Genesis is stopped: the control shows, and the open panel says "The notes did not load."
+    - The Sources page has the section "Notes on the chapters" with its three links.
+    - The axe check of Genesis 22 with the panel open, in the light mode and in the dark mode.
+11. Make the screenshots of step 1 again. Compare each pair. The two pairs of Psalms 3 must have 0 different pixels. In the two pairs of Genesis 22, the only difference is the control "About this chapter". If a pair differs in a different place, find the cause and correct it.
+12. Make screenshots in `docs/screenshots/task-47/`, at 1440 by 900 px and at 390 by 844 px: Genesis 22 with the panel open in the light mode and in the dark mode, Romans 8 with the panel open, and a later chapter with the control closed. Compare them with the pictures of the design. Give each difference in the report.
+13. Run the reviewer agents of a page task. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The numbers and the SHA-256 of step 6 are those of `docs/DESIGN.md`.
+- The tests of steps 9 and 10 pass.
+- The two pairs of Psalms 3 of step 11 have 0 different pixels.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give in the report the size of the 66 files in `public/data/notes/`, and when the page gets the notes file of a book. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, `docs/BACKLOG.md`, `CLAUDE.md`, and `docs/screenshots/about-chapter-design/` with this task.

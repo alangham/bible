@@ -70,3 +70,38 @@ What a task for this item must do:
 2. Change no link by hand. Arthur's rule of 2026-11-14 stays: links come only from the three approved sources.
 3. Where the cause is a fault of the build script, propose a correction of the script. Stop for Arthur's approval before the link data changes.
 4. Run the accuracy reviewer on the result.
+
+---
+
+## 7. The Aquifer Open Study Notes: the psalms and the notes at the verses
+
+Added: 2026-11-23, by Arthur and the designer.
+
+Idea: the second step of "About this chapter". Section 19.12 of `docs/DESIGN.md` has the direction that Arthur decided on 2026-11-23.
+
+The facts on 2026-11-23, from a check by the designer:
+
+- The source is `https://github.com/BibleAquifer/AquiferOpenStudyNotes`. Its `README.md` says: an adaptation of the Tyndale Open Study Notes © 2023 Tyndale House Publishers, made by Mission Mutual, with the license CC BY-SA 4.0.
+- The English files have 16,923 notes and about 751,000 words. The Markdown files have about 9.5 MB.
+- Each of the 150 psalms has a note. 148 psalms have a note for exactly the psalm. The last verse of a psalm in this count is the largest verse number that a note names. The designer did not compare it with the Bible text.
+- 378 of the 1,189 chapters have a note for exactly the chapter.
+- In three chapters, 10 of 13 phrases that the notes quote are word for word in the Berean Standard Bible. The source does not say which translation it follows.
+- The notes explain the word "flesh" at Romans 6:19 and Romans 8:4. The Biblica notes of Romans 8 do not use the word.
+
+Two parts:
+
+1. For a psalm with no Biblica note, the panel "About this chapter" shows the Aquifer note for that psalm, with a credit for that source.
+2. The other notes show at their verses, as a separate layer, with one switch in the top bar.
+
+Open questions:
+
+1. How does a note show at its verse? Item 3 of this file, the footnotes, has the same question. The marks of the links must not be confused with it.
+2. Which two psalms have no note for exactly the psalm, and what does the panel show for them?
+3. What does the site do with a note whose range has many chapters, for example Romans 5:1 to 8:39?
+4. The notes quote the Bible. What does a page of the King James Version or of the World English Bible show?
+5. What are the words of the credit? The source is an adaptation, so the credit names Tyndale House Publishers and Mission Mutual.
+
+Other sources that the designer found on 2026-11-23. They are not decided:
+
+- `https://github.com/BibleAquifer/BiblicaStudyNotesKeyTerms`: the Biblica notes have links to this list of key terms. The designer did not read it.
+- `https://github.com/BibleAquifer/AquiferOpenBibleDictionary`: an adaptation of the Tyndale Open Bible Dictionary, with the license CC BY-SA 4.0. It has an entry "Flesh".

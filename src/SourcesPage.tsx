@@ -10,6 +10,7 @@
 
 import { Fragment, useEffect } from 'react'
 import { SAMPLE_PARTS } from './data/sampleVerse.ts'
+import { NOTE_CREDIT } from './data/notes.ts'
 import { TRANSLATIONS } from './data/translation.ts'
 import { SUMMARY_VIDEOS, videoHref } from './data/videos.ts'
 import { VideoCredit } from './reading/AboutBook.tsx'
@@ -160,6 +161,21 @@ export function SourcesPage() {
             The source of each fact is in the file{' '}
             <a href="https://github.com/alangham/bible/blob/main/docs/CONTENT-SOURCES.md">CONTENT-SOURCES.md</a> of this site.
           </p>
+        </section>
+
+        {/* The Biblica notes of "About this chapter": docs/DESIGN.md section 19.9, docs/TASKS.md Task 47 step 8. The
+            license is in section 14 of docs/DATA-SOURCES.md. */}
+        <section aria-labelledby="sources-notes">
+          <h2 id="sources-notes">Notes on the chapters</h2>
+          <p>
+            The text of “About this chapter” is from the <a href={NOTE_CREDIT.source.href}>Biblica Study Notes</a>, © 2023 Biblica Inc. The license is the
+            Creative Commons Attribution-ShareAlike 4.0 International license (<a href={NOTE_CREDIT.license.href}>CC BY-SA 4.0</a>).
+          </p>
+          <p>
+            The site got the files from the repository <a href={NOTE_CREDIT.source.href}>BibleAquifer/BiblicaStudyNotes</a> on GitHub, version 1.1.2. The
+            site shows the words of the notes with no change. It does not show the links to the key terms of the files.
+          </p>
+          <p>The notes have no text for 132 psalms. Biblica has no connection with this site.</p>
         </section>
 
         {/* The map data: docs/DESIGN.md section 15.9 "The credit", docs/TASKS.md Task 37 step 8. The licences are in

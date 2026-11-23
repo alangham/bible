@@ -1,0 +1,646 @@
+[
+{
+"content_id": "133114",
+"reference_id": 109168,
+"version": "1.0.4",
+"title": "Judges 1:1–3:6",
+"media_type": "Text",
+"index_reference": "07001001-07003006",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The book of Judges continues the story of <data class=\"resource-ref\" data-content-id=\"132226\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Israel</data> recorded in the book of Joshua.</p><p><data class=\"resource-ref\" data-content-id=\"132145\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God</data> had done many <data class=\"resource-ref\" data-content-id=\"132251\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">miracles</data> when he gave <data class=\"resource-ref\" data-content-id=\"132192\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Canaan</data> to the Israelites. That is the main point of the book of Joshua.</p><p>Along with God’s amazing deeds, the Israelites were supposed to <data class=\"resource-ref\" data-content-id=\"132154\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">work</data> hard to possess the land. They were also supposed to stay faithful to God. But they didn’t work as hard as they should have. And they weren’t faithful. That is the main point of the book of Judges.</p><p>The <data class=\"resource-ref\" data-content-id=\"132374\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">angel of the Lord</data> told the Israelites the evil things they had done. The people were sad about the evil things they had done. But they didn’t stop doing them.</p><p>Judges describes the pattern of how the Israelites acted and what happened to them. This was the pattern of sin, suffering and salvation. First they <data class=\"resource-ref\" data-content-id=\"132141\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sinned</data> by turning away from God. This included worshipping <data class=\"resource-ref\" data-content-id=\"132230\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">false gods</data> called <data class=\"resource-ref\" data-content-id=\"132347\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Baal</data> and <data class=\"resource-ref\" data-content-id=\"132375\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ashtoreth</data>.</p><p>It also included <data class=\"resource-ref\" data-content-id=\"132152\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">marrying</data> into Canaanite families and living as a community with them. This meant that the Israelites no longer lived as a <data class=\"resource-ref\" data-content-id=\"132283\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">kingdom of priests</data>. They no longer lived as a <data class=\"resource-ref\" data-content-id=\"132307\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">holy</data> nation.</p><p>Next the Israelites suffered. God brought <data class=\"resource-ref\" data-content-id=\"132179\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">judgement</data> against them for breaking the <data class=\"resource-ref\" data-content-id=\"132274\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Mount Sinai covenant</data>. He allowed them to experience some of the <data class=\"resource-ref\" data-content-id=\"132326\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">covenant curses</data>.</p><p>When this happened the Israelites <data class=\"resource-ref\" data-content-id=\"132292\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">repented</data> and turned back to God. Then God brought <data class=\"resource-ref\" data-content-id=\"132142\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">salvation</data> to his people (<data class=\"resource-ref\" data-content-id=\"132248\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s people</data>) through certain leaders. These leaders were the <data class=\"resource-ref\" data-content-id=\"132376\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">12 judges</data>. The judges freed the Israelites from the power of their enemies.</p><p>Once they were saved, the Israelites sinned again by turning away from God. The book of Judges records the stories of this pattern happening again and again.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07001001",
+"start_ref_usfm": "JDG 1:1",
+"end_ref": "07003006",
+"end_ref_usfm": "JDG 3:6"
+}
+],
+"resource": [
+{
+"reference_id": "108280",
+"content_id": "132226",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Israel",
+"language": "eng"
+},
+{
+"reference_id": "108199",
+"content_id": "132145",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God",
+"language": "eng"
+},
+{
+"reference_id": "108305",
+"content_id": "132251",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "miracles",
+"language": "eng"
+},
+{
+"reference_id": "108246",
+"content_id": "132192",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Canaan",
+"language": "eng"
+},
+{
+"reference_id": "108208",
+"content_id": "132154",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "work",
+"language": "eng"
+},
+{
+"reference_id": "108428",
+"content_id": "132374",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "angel of the Lord",
+"language": "eng"
+},
+{
+"reference_id": "108195",
+"content_id": "132141",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sinned",
+"language": "eng"
+},
+{
+"reference_id": "108284",
+"content_id": "132230",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "false gods",
+"language": "eng"
+},
+{
+"reference_id": "108401",
+"content_id": "132347",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Baal",
+"language": "eng"
+},
+{
+"reference_id": "108429",
+"content_id": "132375",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ashtoreth",
+"language": "eng"
+},
+{
+"reference_id": "108206",
+"content_id": "132152",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "marrying",
+"language": "eng"
+},
+{
+"reference_id": "108337",
+"content_id": "132283",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "kingdom of priests",
+"language": "eng"
+},
+{
+"reference_id": "108361",
+"content_id": "132307",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "holy",
+"language": "eng"
+},
+{
+"reference_id": "108233",
+"content_id": "132179",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "judgement",
+"language": "eng"
+},
+{
+"reference_id": "108328",
+"content_id": "132274",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Mount Sinai covenant",
+"language": "eng"
+},
+{
+"reference_id": "108380",
+"content_id": "132326",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "covenant curses",
+"language": "eng"
+},
+{
+"reference_id": "108346",
+"content_id": "132292",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "repented",
+"language": "eng"
+},
+{
+"reference_id": "108196",
+"content_id": "132142",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "salvation",
+"language": "eng"
+},
+{
+"reference_id": "108302",
+"content_id": "132248",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s people",
+"language": "eng"
+},
+{
+"reference_id": "108430",
+"content_id": "132376",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "12 judges",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133115",
+"reference_id": 109169,
+"version": "1.0.4",
+"title": "Judges 3:7–5:31",
+"media_type": "Text",
+"index_reference": "07003007-07005031",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In Judges, the pattern of sin, suffering and salvation begins with certain words. These words state that the Israelites did what was evil in the sight of the <data class=\"resource-ref\" data-content-id=\"132172\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Lord</data>. These words are found six times in the book of Judges.</p><p>The first three times are in the stories of the judges <data class=\"resource-ref\" data-content-id=\"132377\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Othniel</data>, <data class=\"resource-ref\" data-content-id=\"132378\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ehud</data> and <data class=\"resource-ref\" data-content-id=\"132379\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Deborah</data>. Their stories show something about how God works through people. Often <data class=\"resource-ref\" data-content-id=\"132175\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God chooses</data> leaders that people wouldn’t expect him to choose. Each of these leaders was willing for God to work through them.</p><p>God used Othniel to save the Israelites from the king of <data class=\"resource-ref\" data-content-id=\"132380\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Aram</data>. God used Ehud to bring victory for the Israelites over <data class=\"resource-ref\" data-content-id=\"132343\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Moab</data>. Deborah was a <data class=\"resource-ref\" data-content-id=\"132362\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prophet</data>. She was full of <data class=\"resource-ref\" data-content-id=\"132271\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">wisdom</data> and was faithful to God. God used Deborah, <data class=\"resource-ref\" data-content-id=\"132381\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Barak</data> and <data class=\"resource-ref\" data-content-id=\"132382\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jael</data> to save the Israelites from a Canaanite king.</p><p>Some of the 12 judges led at the same time. This was the case for Shamgar. It isn’t clear if he was an Israelite but he killed many <data class=\"resource-ref\" data-content-id=\"132213\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Philistines</data>. After the judges won victories in battle, the tribes in their area lived in <data class=\"resource-ref\" data-content-id=\"132157\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">peace</data>. This happened for periods of <data class=\"resource-ref\" data-content-id=\"132338\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">40 years</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07003007",
+"start_ref_usfm": "JDG 3:7",
+"end_ref": "07005031",
+"end_ref_usfm": "JDG 5:31"
+}
+],
+"resource": [
+{
+"reference_id": "108226",
+"content_id": "132172",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Lord",
+"language": "eng"
+},
+{
+"reference_id": "108431",
+"content_id": "132377",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Othniel",
+"language": "eng"
+},
+{
+"reference_id": "108432",
+"content_id": "132378",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ehud",
+"language": "eng"
+},
+{
+"reference_id": "108433",
+"content_id": "132379",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Deborah",
+"language": "eng"
+},
+{
+"reference_id": "108229",
+"content_id": "132175",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God chooses",
+"language": "eng"
+},
+{
+"reference_id": "108434",
+"content_id": "132380",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Aram",
+"language": "eng"
+},
+{
+"reference_id": "108397",
+"content_id": "132343",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Moab",
+"language": "eng"
+},
+{
+"reference_id": "108416",
+"content_id": "132362",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prophet",
+"language": "eng"
+},
+{
+"reference_id": "108325",
+"content_id": "132271",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "wisdom",
+"language": "eng"
+},
+{
+"reference_id": "108435",
+"content_id": "132381",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Barak",
+"language": "eng"
+},
+{
+"reference_id": "108436",
+"content_id": "132382",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jael",
+"language": "eng"
+},
+{
+"reference_id": "108267",
+"content_id": "132213",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Philistines",
+"language": "eng"
+},
+{
+"reference_id": "108211",
+"content_id": "132157",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "peace",
+"language": "eng"
+},
+{
+"reference_id": "108392",
+"content_id": "132338",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "40 years",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133116",
+"reference_id": 109170,
+"version": "1.0.4",
+"title": "Judges 6:1–9:57",
+"media_type": "Text",
+"index_reference": "07006001-07009057",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The Israelites did what was evil in the sight of the Lord. These words are also found in the stories about the judges <data class=\"resource-ref\" data-content-id=\"132383\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Gideon</data>, <data class=\"resource-ref\" data-content-id=\"132384\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jephthah</data> and <data class=\"resource-ref\" data-content-id=\"132385\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Samson</data>. Their stories show something about the people God works through.</p><p>Gideon, Jephthah and Samson didn’t know God well or serve him faithfully. Yet God still worked through them to save his people from their suffering. A prophet had explained why the Israelites were being treated badly by the <data class=\"resource-ref\" data-content-id=\"132249\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Midianites</data>. It was because the Israelites had stopped <data class=\"resource-ref\" data-content-id=\"132278\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">worshipping only God</data>. Yet Gideon blamed God for their suffering.</p><p>The <data class=\"resource-ref\" data-content-id=\"132334\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Holy Spirit</data> made Gideon able to lead a small army to destroy the Midianites. Gideon recognised that God is Lord and King. Yet Gideon led the Israelites to worship a gold object instead of God. Gideon recognised that God should be the only ruler in Israel. Yet his sons ruled over <data class=\"resource-ref\" data-content-id=\"132228\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Shechem</data>.</p><p><data class=\"resource-ref\" data-content-id=\"132386\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Abimelek</data> even made himself <data class=\"resource-ref\" data-content-id=\"132276\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">king</data> over the people of Shechem. Shechem was where the Israelites had committed themselves to the <data class=\"resource-ref\" data-content-id=\"132273\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Mount Sinai</data> covenant. That was in Joshua’s time. But they were worshipping a god named Baal-Berith or El-Berith at Shechem instead.</p><p>In the Hebrew language the name of the god means lord of the <data class=\"resource-ref\" data-content-id=\"132183\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">covenant</data>. This shows how the Israelites mixed their worship of God with worshipping Canaanite false gods. Both Abimelek and the people of Shechem were destroyed for their violent and evil deeds.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07006001",
+"start_ref_usfm": "JDG 6:1",
+"end_ref": "07009057",
+"end_ref_usfm": "JDG 9:57"
+}
+],
+"resource": [
+{
+"reference_id": "108437",
+"content_id": "132383",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Gideon",
+"language": "eng"
+},
+{
+"reference_id": "108438",
+"content_id": "132384",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jephthah",
+"language": "eng"
+},
+{
+"reference_id": "108439",
+"content_id": "132385",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Samson",
+"language": "eng"
+},
+{
+"reference_id": "108303",
+"content_id": "132249",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Midianites",
+"language": "eng"
+},
+{
+"reference_id": "108332",
+"content_id": "132278",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "worshipping only God",
+"language": "eng"
+},
+{
+"reference_id": "108388",
+"content_id": "132334",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Holy Spirit",
+"language": "eng"
+},
+{
+"reference_id": "108282",
+"content_id": "132228",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Shechem",
+"language": "eng"
+},
+{
+"reference_id": "108440",
+"content_id": "132386",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Abimelek",
+"language": "eng"
+},
+{
+"reference_id": "108330",
+"content_id": "132276",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "king",
+"language": "eng"
+},
+{
+"reference_id": "108327",
+"content_id": "132273",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Mount Sinai",
+"language": "eng"
+},
+{
+"reference_id": "108237",
+"content_id": "132183",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "covenant",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133117",
+"reference_id": 109171,
+"version": "1.0.4",
+"title": "Judges 10:1–12:15",
+"media_type": "Text",
+"index_reference": "07010001-07012015",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The judge Tola led in <data class=\"resource-ref\" data-content-id=\"132244\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ephraim</data>. The judge Jair led in <data class=\"resource-ref\" data-content-id=\"132387\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Gilead</data>.</p><p>God wanted his people to live as a kingdom of priests and a holy nation. But they weren’t doing that. The Israelites continued to worship the gods of the people groups around them. Because of this, the covenant curses came on them. The Philistines and the <data class=\"resource-ref\" data-content-id=\"132358\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ammonites</data> treated them badly. God said he would no longer save the Israelites from their enemies. Yet he didn’t want Israel to keep suffering. So he <data class=\"resource-ref\" data-content-id=\"132227\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">forgave</data> them when they stopped worshipping false gods.</p><p>God saved the tribes east of the <data class=\"resource-ref\" data-content-id=\"132352\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">River Jordan</data> from the Ammonites. The story of Jephthah shows how this happened. It also shows how the Israelites used Canaanite worship practices to worship God. Jephthah made a promise to God that he shouldn’t have made. In Leviticus 5:4–6 and Leviticus 27:1–8 the <data class=\"resource-ref\" data-content-id=\"132281\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Law of Moses</data> explained how to stop such promises. But Jephthah kept his promise and killed his daughter.</p><p><data class=\"resource-ref\" data-content-id=\"132210\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Sacrificing children</data> was one way that the Canaanites worshipped their false gods. Jepthah tried to use this evil practice to serve the true God. This story also shows the troubles between the tribes east and west of the River Jordan. There was war between the tribe of Ephraim and the tribes living in the Gilead area.</p><p>After Jephthah’s time there were other judges. Ibzan was a judge in <data class=\"resource-ref\" data-content-id=\"132388\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Bethlehem</data>. Elon was a judge in the <data class=\"resource-ref\" data-content-id=\"132389\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Zebulun</data> area. And the judge Abdon led the Israelites in the hill country of Ephraim.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07010001",
+"start_ref_usfm": "JDG 10:1",
+"end_ref": "07012015",
+"end_ref_usfm": "JDG 12:15"
+}
+],
+"resource": [
+{
+"reference_id": "108298",
+"content_id": "132244",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ephraim",
+"language": "eng"
+},
+{
+"reference_id": "108441",
+"content_id": "132387",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Gilead",
+"language": "eng"
+},
+{
+"reference_id": "108412",
+"content_id": "132358",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ammonites",
+"language": "eng"
+},
+{
+"reference_id": "108281",
+"content_id": "132227",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "forgave",
+"language": "eng"
+},
+{
+"reference_id": "108406",
+"content_id": "132352",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "River Jordan",
+"language": "eng"
+},
+{
+"reference_id": "108335",
+"content_id": "132281",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Law of Moses",
+"language": "eng"
+},
+{
+"reference_id": "108264",
+"content_id": "132210",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Sacrificing children",
+"language": "eng"
+},
+{
+"reference_id": "108442",
+"content_id": "132388",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Bethlehem",
+"language": "eng"
+},
+{
+"reference_id": "108443",
+"content_id": "132389",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Zebulun",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133118",
+"reference_id": 109172,
+"version": "1.0.4",
+"title": "Judges 13:1–16:31",
+"media_type": "Text",
+"index_reference": "07013001-07016031",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The Philistines treated the Israelites west of the River Jordan badly. The story of Samson shows how God saved the Israelites from them.</p><p>God chose a woman from the tribe of <data class=\"resource-ref\" data-content-id=\"132390\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Dan</data> who couldn’t have children. He made her able to have a son. God had done something like this with <data class=\"resource-ref\" data-content-id=\"132193\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Sarah</data>, <data class=\"resource-ref\" data-content-id=\"132212\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Rebekah</data> and <data class=\"resource-ref\" data-content-id=\"132222\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Rachel</data>.</p><p>Samson was to be <data class=\"resource-ref\" data-content-id=\"132304\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">set apart</data> for the Lord by his parents. He was to be a <data class=\"resource-ref\" data-content-id=\"132330\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Nazirite</data> for his entire life. God’s Spirit gave Samson amazing strength. He was able to destroy many Philistines.</p><p>Yet Samson did many things that went against God and the Law of Moses. He didn’t live the way Nazirites were supposed to live. And the way he treated women caused many problems. It even led to him losing his amazing strength.</p><p>When a Nazirite cut their hair, it showed that their promise to serve God was over. When <data class=\"resource-ref\" data-content-id=\"132391\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Delilah</data> cut Samson’s hair, Samson was no longer set apart from other men. He didn’t have his amazing strength anymore. The Philistines believed that this change was a mighty work of their god <data class=\"resource-ref\" data-content-id=\"132392\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Dagon</data>.</p><p>In his <data class=\"resource-ref\" data-content-id=\"132173\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prayer</data> Samson recognised that God is Lord and King. Then one last time God gave Samson his amazing strength back. This showed God’s power and authority over the false god Dagon.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07013001",
+"start_ref_usfm": "JDG 13:1",
+"end_ref": "07016031",
+"end_ref_usfm": "JDG 16:31"
+}
+],
+"resource": [
+{
+"reference_id": "108444",
+"content_id": "132390",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Dan",
+"language": "eng"
+},
+{
+"reference_id": "108247",
+"content_id": "132193",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Sarah",
+"language": "eng"
+},
+{
+"reference_id": "108266",
+"content_id": "132212",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Rebekah",
+"language": "eng"
+},
+{
+"reference_id": "108276",
+"content_id": "132222",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Rachel",
+"language": "eng"
+},
+{
+"reference_id": "108358",
+"content_id": "132304",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "set apart",
+"language": "eng"
+},
+{
+"reference_id": "108384",
+"content_id": "132330",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Nazirite",
+"language": "eng"
+},
+{
+"reference_id": "108445",
+"content_id": "132391",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Delilah",
+"language": "eng"
+},
+{
+"reference_id": "108446",
+"content_id": "132392",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Dagon",
+"language": "eng"
+},
+{
+"reference_id": "108227",
+"content_id": "132173",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prayer",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133119",
+"reference_id": 109173,
+"version": "1.0.4",
+"title": "Judges 17:1–18:31",
+"media_type": "Text",
+"index_reference": "07017001-07018031",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The story about Micah and the people of Dan shows something about Israel. Families and tribes in Israel weren’t living as a kingdom of priests and a holy nation. They made statues from things they had set apart to God. Then they worshipped these statues as gods.</p><p>Micah, his family and a <data class=\"resource-ref\" data-content-id=\"132289\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Levite</data> from the <data class=\"resource-ref\" data-content-id=\"132166\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">family line</data> of <data class=\"resource-ref\" data-content-id=\"132246\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Moses</data> did this. So did the entire tribe of Dan.</p><p>The tribe of Dan didn’t obey God’s instructions about the land God gave them. They didn’t drive out the Philistines. Instead the tribe moved away and attacked people who had done them no harm.</p><p>The book of Judges says that in those days Israel didn’t have a king. The hope was that a king who served God faithfully could help the families and tribes. They needed leaders who helped them stay faithful to God’s covenant.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07017001",
+"start_ref_usfm": "JDG 17:1",
+"end_ref": "07018031",
+"end_ref_usfm": "JDG 18:31"
+}
+],
+"resource": [
+{
+"reference_id": "108343",
+"content_id": "132289",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Levite",
+"language": "eng"
+},
+{
+"reference_id": "108220",
+"content_id": "132166",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "family line",
+"language": "eng"
+},
+{
+"reference_id": "108300",
+"content_id": "132246",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Moses",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133120",
+"reference_id": 109174,
+"version": "1.0.4",
+"title": "Judges 19:1–21:25",
+"media_type": "Text",
+"index_reference": "07019001-07021025",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The story about the Levite’s <data class=\"resource-ref\" data-content-id=\"132211\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">concubine</data> shows something about the <data class=\"resource-ref\" data-content-id=\"132232\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">12 tribes</data> of Israel.</p><p>They weren’t living as a holy nation. Judges recorded that the people did anything they thought was right. This led to treating women in terrible ways. It led to making promises and decisions that caused harm. It led to protecting people who did evil things.</p><p>The Israelites weren’t following God’s ways. They were living like the Canaanites. They were supposed to destroy the Canaanites. Instead, they destroyed one another in civil war.</p><p>Twice more the book of Judges recorded that in those days Israel didn’t have a king. The hope was that a king who <data class=\"resource-ref\" data-content-id=\"132301\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">loved God</data> and obeyed him could help the tribes. The Israelites needed leaders who helped them do what God taught them was right.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "07019001",
+"start_ref_usfm": "JDG 19:1",
+"end_ref": "07021025",
+"end_ref_usfm": "JDG 21:25"
+}
+],
+"resource": [
+{
+"reference_id": "108265",
+"content_id": "132211",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "concubine",
+"language": "eng"
+},
+{
+"reference_id": "108286",
+"content_id": "132232",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "12 tribes",
+"language": "eng"
+},
+{
+"reference_id": "108355",
+"content_id": "132301",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "loved God",
+"language": "eng"
+}
+]
+}
+}
+]

@@ -1,0 +1,276 @@
+[
+{
+"content_id": "132956",
+"reference_id": 109010,
+"version": "1.0.4",
+"title": "2 Timothy 1:1–18",
+"media_type": "Text",
+"index_reference": "55001001-55001018",
+"language": "eng",
+"review_level": "None",
+"content": "<p><data class=\"resource-ref\" data-content-id=\"132048\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Paul</data> and <data class=\"resource-ref\" data-content-id=\"132070\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Timothy</data> were very close friends. Paul loved Timothy like a son.</p><p>Paul <data class=\"resource-ref\" data-content-id=\"132173\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prayed</data> for Timothy every day and longed to see him again. Timothy had learnt about <data class=\"resource-ref\" data-content-id=\"132178\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">faith</data> in <data class=\"resource-ref\" data-content-id=\"132145\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God</data> from his mother and grandmother.</p><p>He had received a <data class=\"resource-ref\" data-content-id=\"132095\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">gift of the Spirit</data> when Paul <data class=\"resource-ref\" data-content-id=\"132052\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">placed hands</data> on him. Paul wanted Timothy to use his gift faithfully to serve the <data class=\"resource-ref\" data-content-id=\"132042\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church</data>. He could do this by teaching the truth about <data class=\"resource-ref\" data-content-id=\"132165\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus</data>.</p><p>Paul had taught Timothy how to teach the truth. The <data class=\"resource-ref\" data-content-id=\"132334\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Holy Spirit</data> would give him the power and love he needed to do it. The truth of the <data class=\"resource-ref\" data-content-id=\"131989\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">good news</data> is that <data class=\"resource-ref\" data-content-id=\"132044\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Christ</data> has broken the power of death.</p><p>Upon <data class=\"resource-ref\" data-content-id=\"132011\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus’ return</data> to earth he will judge all things on <data class=\"resource-ref\" data-content-id=\"132001\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">judgement day</data>. He gives <data class=\"resource-ref\" data-content-id=\"132515\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">eternal life</data> to those who trust in him.</p><p>Paul had been put in prison for spreading that message. Many people who had been Paul’s friends were ashamed that he was in prison. They deserted him when he was <data class=\"resource-ref\" data-content-id=\"132000\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">treated badly</data>. But God’s Spirit gave Paul strength to face these troubles. The faith and friendship of <data class=\"resource-ref\" data-content-id=\"132023\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">believers</data> like Onesiphorus and Timothy encouraged Paul.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "55001001",
+"start_ref_usfm": "2TI 1:1",
+"end_ref": "55001018",
+"end_ref_usfm": "2TI 1:18"
+}
+],
+"resource": [
+{
+"reference_id": "108102",
+"content_id": "132048",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Paul",
+"language": "eng"
+},
+{
+"reference_id": "108124",
+"content_id": "132070",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Timothy",
+"language": "eng"
+},
+{
+"reference_id": "108227",
+"content_id": "132173",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prayed",
+"language": "eng"
+},
+{
+"reference_id": "108232",
+"content_id": "132178",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "faith",
+"language": "eng"
+},
+{
+"reference_id": "108199",
+"content_id": "132145",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God",
+"language": "eng"
+},
+{
+"reference_id": "108149",
+"content_id": "132095",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "gift of the Spirit",
+"language": "eng"
+},
+{
+"reference_id": "108106",
+"content_id": "132052",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "placed hands",
+"language": "eng"
+},
+{
+"reference_id": "108096",
+"content_id": "132042",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "church",
+"language": "eng"
+},
+{
+"reference_id": "108219",
+"content_id": "132165",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus",
+"language": "eng"
+},
+{
+"reference_id": "108388",
+"content_id": "132334",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Holy Spirit",
+"language": "eng"
+},
+{
+"reference_id": "108043",
+"content_id": "131989",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "good news",
+"language": "eng"
+},
+{
+"reference_id": "108098",
+"content_id": "132044",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Christ",
+"language": "eng"
+},
+{
+"reference_id": "108065",
+"content_id": "132011",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus’ return",
+"language": "eng"
+},
+{
+"reference_id": "108055",
+"content_id": "132001",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "judgement day",
+"language": "eng"
+},
+{
+"reference_id": "108569",
+"content_id": "132515",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "eternal life",
+"language": "eng"
+},
+{
+"reference_id": "108054",
+"content_id": "132000",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "treated badly",
+"language": "eng"
+},
+{
+"reference_id": "108077",
+"content_id": "132023",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "believers",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "132957",
+"reference_id": 109011,
+"version": "1.0.4",
+"title": "2 Timothy 2:1–26",
+"media_type": "Text",
+"index_reference": "55002001-55002026",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Paul made it clear that Timothy needed God’s <data class=\"resource-ref\" data-content-id=\"132181\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">grace</data> to follow Jesus faithfully. He also needed to work hard. The effort required was like the hard <data class=\"resource-ref\" data-content-id=\"132154\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">work</data> done by soldiers, sports players and farmers.</p><p>Many people oppose the message about Jesus. Paul had been put in prison by people who wanted him to stop preaching it. Other people accept the message but argue about it. Fights about the faith lead people to stop believing what is true about Jesus. Paul mentioned two believers who had done that. He hoped that they would turn back to the truth.</p><p>Paul encouraged Timothy not to hold onto anger against people like that. Instead, he should continue to preach the truth gently. Timothy was a young man. Paul urged him to say no to evil things that tempt young people. Instead, he should do <data class=\"resource-ref\" data-content-id=\"132006\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">good works</data> and be full of faith, love and <data class=\"resource-ref\" data-content-id=\"132157\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">peace</data>.</p><p>Paul reminded Timothy of something important about God’s grace. Even when believers fail to follow Jesus faithfully, Jesus will always be faithful to them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "55002001",
+"start_ref_usfm": "2TI 2:1",
+"end_ref": "55002026",
+"end_ref_usfm": "2TI 2:26"
+}
+],
+"resource": [
+{
+"reference_id": "108235",
+"content_id": "132181",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "grace",
+"language": "eng"
+},
+{
+"reference_id": "108208",
+"content_id": "132154",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "work",
+"language": "eng"
+},
+{
+"reference_id": "108060",
+"content_id": "132006",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "good works",
+"language": "eng"
+},
+{
+"reference_id": "108211",
+"content_id": "132157",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "peace",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "132958",
+"reference_id": 109012,
+"version": "1.0.4",
+"title": "2 Timothy 3:1–4:5",
+"media_type": "Text",
+"index_reference": "55003001-55004005",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the <data class=\"resource-ref\" data-content-id=\"132482\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">last days</data> people will treat each other badly. They will act the opposite of how Jesus taught <data class=\"resource-ref\" data-content-id=\"132148\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">human beings</data> to live. They will follow their own desires instead of being controlled by God’s Spirit. They will teach lies about God. Certain people will try to trick others on purpose.</p><p>Timothy must stay away from people like that. Instead, he should follow Paul’s example. Paul was full of faith and love. He was patient and didn’t give up. He trusted in God to save him when he was treated badly. Timothy must also continue to be patient and careful as he taught about Jesus.</p><p>Paul called the good news about Jesus the Word. The message about Jesus is made clear in <data class=\"resource-ref\" data-content-id=\"132146\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s word</data>. Paul explained that God had breathed life into all Scripture. Breathing life into something is also what God did when he created human beings in Genesis 2:7. Paul meant that the Bible is more than a collection of words that humans wrote. God’s Spirit can use Scripture to teach believers and to heal wounds in their <data class=\"resource-ref\" data-content-id=\"132365\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">heart</data>. Studying Scripture can train believers to do the good works God wants them to do.</p><p>Paul warned Timothy that he would be treated badly if he followed Jesus faithfully. People wouldn’t want to hear the message of truth. But he must keep doing the work God had given him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "55003001",
+"start_ref_usfm": "2TI 3:1",
+"end_ref": "55004005",
+"end_ref_usfm": "2TI 4:5"
+}
+],
+"resource": [
+{
+"reference_id": "108536",
+"content_id": "132482",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "last days",
+"language": "eng"
+},
+{
+"reference_id": "108202",
+"content_id": "132148",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "human beings",
+"language": "eng"
+},
+{
+"reference_id": "108200",
+"content_id": "132146",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s word",
+"language": "eng"
+},
+{
+"reference_id": "108419",
+"content_id": "132365",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "heart",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "132959",
+"reference_id": 109013,
+"version": "1.0.4",
+"title": "2 Timothy 4:6–22",
+"media_type": "Text",
+"index_reference": "55004006-55004022",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Paul believed that he was near the end of his life. He was like a soldier who had obeyed his officer and fought well. He was like a runner who had obeyed the rules and won the race. These were ways that Paul described how he had followed Jesus faithfully.</p><p>So God would reward him with the crown like runners received after a race. The crown or prize was that he would live for ever with Jesus. Paul longed for when that would happen.</p><p>While Paul was still alive on earth, he was suffering in prison. Many of his companions had left him. Paul didn’t have some of his important belongings. Through it all Paul was very aware of God’s presence with him. Paul described this as Jesus standing at his side. That is how near Jesus felt to Paul.</p><p>Paul suffered in his body. But he knew that he was safe in the <data class=\"resource-ref\" data-content-id=\"132507\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">kingdom of God</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "55004006",
+"start_ref_usfm": "2TI 4:6",
+"end_ref": "55004022",
+"end_ref_usfm": "2TI 4:22"
+}
+],
+"resource": [
+{
+"reference_id": "108561",
+"content_id": "132507",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "kingdom of God",
+"language": "eng"
+}
+]
+}
+}
+]

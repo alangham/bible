@@ -7,8 +7,10 @@
 // docs/DESIGN.md section 17. The video list is in the code, so the line does not wait for a file.
 // From Task 43, the line of the control has the control only: the translation control of the top bar shows the
 // translation. docs/DESIGN.md section 5.
+// From Task 47, the line of the control can have the control "About this chapter" also, and its panel is below the
+// panel of "About this book". docs/DESIGN.md sections 19.6 and 19.7.
 
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId, useState, type ReactNode } from 'react'
 import type { Intro } from '../data/intros.ts'
 import { loadMapIndex } from '../map/mapData.ts'
 import { BOOK_VIDEOS, VIDEO_CREDIT, videoHref } from '../data/videos.ts'
@@ -36,9 +38,11 @@ interface AboutBookProps {
   bookId: string
   /** Undefined while the introductions load. Null if they did not load. */
   intro: Intro | null | undefined
+  /** The control and the panel of "About this chapter", for a chapter with a Biblica note. */
+  chapter?: { control: ReactNode; panel: ReactNode }
 }
 
-export function AboutBook({ bookId, intro }: AboutBookProps) {
+export function AboutBook({ bookId, intro, chapter }: AboutBookProps) {
   const [open, setOpen] = useState(false)
   const hasMap = useHasMap(bookId)
   const panelId = useId()
@@ -49,6 +53,7 @@ export function AboutBook({ bookId, intro }: AboutBookProps) {
         <button type="button" className="rd-about-control" aria-expanded={open} aria-controls={panelId} onClick={() => setOpen((o) => !o)}>
           About this book <span aria-hidden="true">›</span>
         </button>
+        {chapter?.control}
       </div>
       <div id={panelId} className="rd-about-panel" role="region" aria-label="About this book" hidden={!open}>
         {intro === null && <p role="alert">The introduction did not load.</p>}
@@ -78,6 +83,7 @@ export function AboutBook({ bookId, intro }: AboutBookProps) {
           </>
         )}
       </div>
+      {chapter?.panel}
     </div>
   )
 }

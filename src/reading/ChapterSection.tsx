@@ -5,6 +5,8 @@
 // - A later chapter of the same book has a smaller heading with no band.
 // - The read-with list is one line below the heading.
 // - From 1180 px wide, the links at verses are labels in the right margin, on the line of the verse.
+// - From Task 47, a chapter with a Biblica note has the control "About this chapter": on the line of
+//   "About this book" in the full heading, and alone on its line in a later chapter. docs/DESIGN.md section 19.6.
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from 'react'
 import { arriveBookName } from '../bookMove.ts'
@@ -14,12 +16,14 @@ import { ReadWith } from '../book/ReadWith.tsx'
 import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { loadBookLinks, marksOf, type BookLinks, type ChapterRef, type LinkEnd } from '../data/links.ts'
+import { loadBookNotes, notesOfChapter, type BookNotes } from '../data/notes.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { passageName } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
 import { useTranslation, type Translation } from '../data/translation.ts'
 import { bandLabel } from '../wall/layout.ts'
 import { AboutBook } from './AboutBook.tsx'
+import { useAboutChapter } from './AboutChapter.tsx'
 import { headingWidthEm } from './heading.ts'
 
 /** The height of a margin label and the space between two labels, in px. Values of the prototype. */
@@ -53,6 +57,8 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   const [links, setLinks] = useState<BookLinks | null>(null)
   /** True when the links loaded or did not load. Then the height of the chapter is final. */
   const [linksDone, setLinksDone] = useState(false)
+  /** The Biblica notes of the book: undefined while the file loads, and null if it did not load. */
+  const [bookNotes, setBookNotes] = useState<BookNotes | null | undefined>(undefined)
   const nameRef = useRef<HTMLSpanElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const key = `${book.id}-${n}`
@@ -94,11 +100,29 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
     }
   }, [book.id])
 
-  // The chapter is loaded when its text and its links are on the page: the read-with line and the
-  // marks change the height of the chapter.
   useEffect(() => {
-    if ((text && linksDone) || error) onLoaded(key)
-  }, [text, linksDone, error, key, onLoaded])
+    let live = true
+    // The notes file of the book. Without it, the control shows, and its panel says that the notes did not load.
+    loadBookNotes(book.id).then(
+      (notes) => live && setBookNotes(notes),
+      () => live && setBookNotes(null),
+    )
+    return () => {
+      live = false
+    }
+  }, [book.id])
+  const notesDone = bookNotes !== undefined
+
+  // The chapter is loaded when its text, its links, and its notes are on the page: the read-with line, the
+  // marks, and the control "About this chapter" change the height of the chapter. docs/DESIGN.md section 19.6.
+  useEffect(() => {
+    if ((text && linksDone && notesDone) || error) onLoaded(key)
+  }, [text, linksDone, notesDone, error, key, onLoaded])
+
+  // The Biblica notes of this chapter: section 19.5. Null if the notes file did not load.
+  const chapterNotes = useMemo(() => (bookNotes === null ? null : notesOfChapter(bookNotes?.notes ?? [], n)), [bookNotes, n])
+  const hasNotes = chapterNotes === null || chapterNotes.length > 0
+  const aboutChapter = useAboutChapter({ bookName: book.name, chapter: n, notes: chapterNotes })
 
   // The book name that moves from the wall lands in this heading.
   useLayoutEffect(() => {
@@ -159,7 +183,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
       data-book={book.id}
       data-chapter={n}
       data-full={full}
-      data-loaded={(chapter !== undefined && linksDone) || error !== null}
+      data-loaded={(chapter !== undefined && linksDone && notesDone) || error !== null}
       data-translation={shown?.translation ?? error?.translation}
       data-labels-ready={labelEnds.length > 0 ? labelTops !== null : undefined}
       style={style}
@@ -172,9 +196,16 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
         </span>{' '}
         <span className="rd-number">{n}</span>
       </h2>
-      {(full || readWith.length > 0) && (
+      {(full || readWith.length > 0 || hasNotes) && (
         <div className="rd-meta" data-full={full}>
-          {full && <AboutBook bookId={book.id} intro={intro} />}
+          {full && <AboutBook bookId={book.id} intro={intro} chapter={hasNotes ? aboutChapter : undefined} />}
+          {!full && hasNotes && (
+            // A later chapter of the book: the control alone on its line, below the heading. docs/DESIGN.md section 19.6.
+            <div className="rd-about">
+              <div className="rd-about-line">{aboutChapter.control}</div>
+              {aboutChapter.panel}
+            </div>
+          )}
           <ReadWith books={books} list={readWith} onTravel={(to) => onReadWith({ book: book.id, c: n }, to)} />
         </div>
       )}

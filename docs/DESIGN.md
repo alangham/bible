@@ -1770,3 +1770,226 @@ Arthur approved the dark pages on 2026-11-18. He kept these points as built:
 A known limit: `public/manifest.webmanifest` has `#ffffff` for `theme_color` and `background_color`. A browser uses them when a reader adds the site to the home screen. A manifest has one value, not one for each mode. No change.
 
 From the reports of Claude Code, not checked by the designer: 261 unit tests and 459 browser tests pass. The axe check of the 13 dark views has 0 failures. Claude Code looked at 16 parts that the 13 views do not show, and each one is correct. It did not see the hover of the map switch, the hover of the link dot in the narrow layout, and each focus outline on the map page and on the Sources page.
+
+## 19. "About this chapter", of 2026-11-23
+
+Arthur decided this on 2026-11-23. Each chapter on the reading page gets one more control, "About this chapter". It opens a short text about the passage, from the Biblica Study Notes. Task 47 builds it.
+
+The pictures of the design are in `docs/screenshots/about-chapter-design/`. The designer made them on the build of Task 46, with a script that put the control and the panel into the page.
+
+### 19.1 Reason
+
+Arthur wanted an explanation of a chapter for a lay reader, at a high level: what to get out of the chapter. From 2026-11-18 to 2026-11-20 the designer tested a process that writes such a text for each chapter, with agents and reviews. Arthur stopped that process on 2026-11-23, because it took too long. The Biblica Study Notes are a text of this kind that is complete now, with an open license.
+
+### 19.2 Decided by Arthur on 2026-11-23
+
+- The site shows the Biblica Study Notes.
+- The Biblica Study Notes come first. The Aquifer Open Study Notes come in a second step. Section 19.12.
+- The place is one control "About this chapter" below the heading of the chapter. A control at each passage in the text was the other option. The picture `B-romans8-1440-tall.png` shows the option that Arthur did not select.
+- The reader gets no setting that selects the source of "About this chapter".
+
+Arthur saw these notes in the pictures before the decision: Genesis 21:1–22:24, Romans 8:1–17, Romans 8:18–25, and Romans 8:26–39. Arthur approved the source. He did not read the other 747 notes.
+
+### 19.3 The source and its license
+
+| | |
+|---|---|
+| Name | Biblica Study Notes |
+| Copyright line | Biblica Study Notes © 2023 Biblica Inc. |
+| License | Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) |
+| Address of the license | `https://creativecommons.org/licenses/by-sa/4.0/`. The page of the license gives this address as its canonical address. The two files of the repository give `https://creativecommons.org/licenses/by-sa/4.0/legalcode.en`, the legal text of the same license. The site uses the canonical address. |
+| Address of the files | `https://github.com/BibleAquifer/BiblicaStudyNotes` |
+| Commit | `1a4501d9571f021bc99d07efb14c7bac79e5e13f`, of 2026-11-02 |
+| Version in `eng/metadata.json` | 1.1.2 |
+| Files that the site uses | `eng/json/01.content.json` to `eng/json/66.content.json`, `eng/metadata.json`, and `README.md` |
+
+The copyright line and the license are in `README.md` and in `eng/metadata.json` of the repository. The designer read these two files on 2026-11-23.
+
+The designer read sections 2 and 3 of the legal text of the license in a browser on 2026-11-23, at `https://creativecommons.org/licenses/by-sa/4.0/legalcode.en`. The designer is not a lawyer. What the license says, in the words of the designer:
+
+1. A person can copy and share the material, in whole or in part, in each format.
+2. With the material, the person must keep the name of the creator, the copyright notice, a notice that refers to the license, and a link to the material, if the licensor supplied them.
+3. The person must say if the material was changed.
+4. The person must say that the material has this license, with the text of the license or a link to it.
+5. A reasonable manner is sufficient for points 2 to 4. A link to a page that has the information can be sufficient.
+6. A change of the format is not a change of the material. Section 2(a)(4) of the license.
+7. The ShareAlike condition applies to a person who shares changed material.
+8. The license gives no permission to say or to suggest that the licensor approves the person or the use.
+9. The license gives no rights to a trademark.
+
+How the site meets each point:
+
+- Points 2 to 5: the note credit of section 19.8 is in each panel, below the notes. The Sources page has the same information with more detail. Section 19.9.
+- Points 3, 6, and 7: the site changes no word of a note. The site changes only the format: it removes the tags of the files. Section 19.4.
+- Points 8 and 9: the site uses the name "Biblica" as a reference only, with no logo. The Sources page says that Biblica has no connection with the site.
+
+### 19.4 The data
+
+The source files go into `sources/biblica/`, with no change: `json/01.content.json` to `json/66.content.json`, `metadata.json`, and `README.md`. The number in a file name is the place of the book in the Bible: `01` is Genesis, and `66` is Revelation.
+
+Each source file is a list of notes. The site uses three fields of a note:
+
+| Field | Example | Meaning |
+|---|---|---|
+| `content_id` | `"132839"` | The number of the note |
+| `index_reference` | `"45008001-45008017"` | The range. Each end has 2 digits for the book, 3 digits for the chapter, and 3 digits for the verse |
+| `content` | `"<p>...</p><p>...</p>"` | The words, as HTML |
+
+Facts about the 66 files, from a check by the designer on 2026-11-23:
+
+- 751 notes, 3,228 paragraphs, and 131,406 words.
+- Each `content` is a row of `<p>` elements, with no text between them.
+- The tags are `<p>`, `<data ...>`, and `<span>`, and no other tag. The `<data>` tags are links to a list of key terms. There are 2 `<span>` tags and 2 `</span>` tags, in 2 notes.
+- The character references are `&apos;` and `&shy;`, and no other one.
+- In each file, the notes are in the order of the Bible, and each note is in the book of its file.
+- The field `title` of each of the 751 notes is equal to the range label of section 19.7.
+
+The text of a paragraph is the characters between `<p>` and `</p>`, with these changes of the format and no other change:
+
+1. Each `<data ...>`, `</data>`, `<span>`, and `</span>` tag is removed. The words between the tags stay.
+2. `&apos;` becomes the character `'`.
+3. `&shy;` becomes the character U+00AD, the soft hyphen.
+
+WARNING: Do not trim a paragraph, do not join two paragraphs, and do not change a quotation mark, a dash, or a spelling. The spelling of the notes is British.
+
+The script `scripts/build-notes.mjs` makes one file for each book, `public/data/notes/<book id>.json`:
+
+```
+{
+  "book": "romans",
+  "notes": [
+    { "id": "132839", "from": [8, 1], "to": [8, 17], "p": ["Paul described two kinds of laws. ...", "..."] }
+  ]
+}
+```
+
+`from` and `to` are the chapter and the verse of the two ends of the range. `p` is the list of the paragraphs. The notes are in the order of the source file. The script stops with an error when a rule of this section does not fit the data. It does not guess.
+
+The number that shows that the words have no change: make a list of lines. For each of the 66 files in the order of the file names, and for each note in the order of the file, the list has one line with the `content_id`, then one line for each paragraph, then one empty line. Put the line feed character after each line, also after each empty line. Encode the result as UTF-8. The SHA-256 of the result is:
+
+`7571b4834420f4b4f1b67c89e13d11e43010f2c3275f507a0cdd847770c6cdf7`
+
+The result has 748,783 bytes.
+
+### 19.5 Which Biblica notes a chapter shows
+
+A chapter shows each note whose range has a verse of the chapter: the chapter number is not less than the chapter of `from` and not more than the chapter of `to`. The notes are in the order of the file.
+
+Numbers for the tests:
+
+- 1,057 of the 1,189 chapters have a note.
+- The 132 chapters with no note are psalms. The psalms with a note are 1, 2, 8, 22, 23, 51, 73, 105, 106, 110, 116, 119, 137, and 146 to 150.
+- 817 chapters have 1 note, 160 have 2 notes, 65 have 3 notes, 9 have 4 notes, 5 have 5 notes, and 1 chapter has 6 notes. That chapter is Matthew 26.
+- A note with a range of more than one chapter shows in each chapter of its range. Example: the note Job 4:1–31:40 shows in 28 chapters. 19 notes have a range of 9 chapters or more.
+- The longest panels are those of 1 Chronicles 9 and of Isaiah 8, with 745 words each. The median panel has 285 words. The words of a panel are the words of each paragraph of each note of the chapter, counted by the spaces. No test uses these two numbers.
+
+### 19.6 The control
+
+- The words are "About this chapter", with the caret of "About this book".
+- The control has the look and the behavior of the control "About this book": the same font, the same color of the group, and the caret that turns when the panel is open.
+- In a chapter with the full heading, the control is on the line of "About this book", to the right of it, with the space of 16 px that the line has. If the line is too narrow, the control goes to a second line.
+- In a later chapter of the same book, the control is alone on its line, below the heading and above the read-with list.
+- A chapter with no note has no control. Its page does not change.
+- A chapter with a note and with no read-with list has the control also.
+- The panel is closed when the chapter loads. The site does not store the state.
+- Each chapter has its own state. More than one panel can be open on the page.
+- The panel is the same in the three translations. The notes quote no translation.
+- The control must not move the text after the chapter shows as loaded: the attribute `data-loaded` of the chapter waits for the notes file, as it waits for the links.
+- If the notes file did not load, the control shows, and the panel says "The notes did not load." with the role `alert`.
+
+For a screen reader: the control has `aria-expanded` and `aria-controls`. The panel has the role `region` and the name "About" with the name of the book and the number of the chapter, for example "About Genesis 22". The page can have many chapters, so the name of the panel has the chapter.
+
+### 19.7 The panel
+
+The panel is below the line of the controls. If the two panels of a chapter are open, the panel of "About this book" is first.
+
+For each note, the panel has the range label and then the paragraphs of the note. After the last note, it has the note credit.
+
+The range label is the name of the book as the site has it, a space, and the range:
+
+- `<chapter>:<verse>–<verse>` for a range in one chapter. Example: "Romans 8:1–17".
+- `<chapter>:<verse>–<chapter>:<verse>` for a range of more than one chapter. Example: "Genesis 21:1–22:24".
+
+The dash is the en dash, U+2013.
+
+The values, from the pictures:
+
+| Part | Value |
+|---|---|
+| Panel | Margin 8 px above and 16 px below. A line on the left side: 2 px, solid, the color name `--credit-line`. 14 px from the line to the text. |
+| Text of a note | Inrond, weight 400, 15 px, line height 1.5, the color name `--ink`. |
+| Paragraph | 8 px below each paragraph. |
+| Range label | Inrond, weight 600, 13 px, line height 20 px, the color name `--ink-secondary`. 14 px above and 4 px below. The first label has 0 px above. |
+| Note credit | Inrond, weight 400, 14 px, line height 21 px, the color name `--ink-secondary`. 14 px above, then a line of 1 px in the color name `--credit-line`, then 10 px to the text. |
+| Links of the note credit | The color of the group, with an underline. |
+
+The panel uses only color names that the site has. It needs no new color, and the dark mode needs no new value.
+
+The line on the left side and the note credit tell the reader that the text has a different owner. Arthur's rule of 2026-11-18 for the credit of BibleProject applies: a notice of a different owner must not look like the text of the site.
+
+### 19.8 The note credit
+
+The words:
+
+> From the Biblica Study Notes, © 2023 Biblica Inc., licensed under CC BY-SA 4.0. The words have no changes.
+
+- "Biblica Study Notes" is a link to `https://github.com/BibleAquifer/BiblicaStudyNotes`.
+- "CC BY-SA 4.0" is a link to `https://creativecommons.org/licenses/by-sa/4.0/`.
+- Each link opens in a new tab. The name of each link for a screen reader adds ", in a new tab", as the credit of BibleProject does.
+
+The designer wrote these words. Biblica did not supply them. WARNING: Do not change a word of the note credit, and do not show a note without it.
+
+### 19.9 The Sources page
+
+The Sources page gets a section "Notes on the chapters", after the section "Book introductions". Its words:
+
+> The text of "About this chapter" is from the Biblica Study Notes, © 2023 Biblica Inc. The license is the Creative Commons Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0).
+>
+> The site got the files from the repository BibleAquifer/BiblicaStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links to the key terms of the files.
+>
+> The notes have no text for 132 psalms. Biblica has no connection with this site.
+
+- "Biblica Study Notes" and "BibleAquifer/BiblicaStudyNotes" are links to `https://github.com/BibleAquifer/BiblicaStudyNotes`.
+- "CC BY-SA 4.0" is a link to `https://creativecommons.org/licenses/by-sa/4.0/`.
+
+`docs/DATA-SOURCES.md` gets a section for this source, with the facts of section 19.3.
+
+### 19.10 What does not change
+
+- The Bible text, the links, the marks, the margin labels, the read-with list, and "About this book".
+- The page of a chapter with no note.
+- The Biblica notes are not in the trail, not in the pop-up, and not on the wall.
+
+### 19.11 Selected by the designer, without a decision by Arthur
+
+1. The words of the note credit, and the words of the section on the Sources page.
+2. The sentence "Biblica has no connection with this site."
+3. The values of section 19.7.
+4. The panel is closed at the load, and the site does not store its state.
+5. A note with a range of many chapters shows in each chapter of its range.
+6. The name of the control in a later chapter is also "About this chapter".
+7. The source files are in the repository, in `sources/biblica/`.
+
+### 19.12 The second step: the Aquifer Open Study Notes
+
+Not in Task 47. Arthur decided the direction on 2026-11-23. The design is not made.
+
+- The source is the Aquifer Open Study Notes, an adaptation of the Tyndale Open Study Notes, with the license CC BY-SA 4.0: `https://github.com/BibleAquifer/AquiferOpenStudyNotes`. It has 16,923 notes and about 751,000 words.
+- For a psalm with no Biblica note, the panel "About this chapter" shows the Aquifer note for that psalm, with a credit for that source. The reader sees one control and one panel.
+- The other Aquifer notes are a separate layer at their verses, with one switch in the top bar. This layer needs a design and pictures on the built page.
+- The reader gets no setting that selects a publisher.
+
+Item 7 of `docs/BACKLOG.md` has the facts and the open questions.
+
+### 19.13 Weak points, not decided, and not checked
+
+- The designer read the notes of three chapters. No person checked the teaching of the other notes.
+- The notes are in simple English with British spelling: "judgement", "for ever". The Bible text of the site has American spelling.
+- The notes and the 66 introductions of the site have different writers. The two can differ on a point. The designer did not compare them.
+- A long note shows in many chapters. A reader who opens the panel in Job 5 and in Job 6 gets the same text.
+- In a chapter with three notes or more, the open panel is longer than one screen.
+- Not checked: that the English files of the repository have the words of Biblica with no change. The file `eng/metadata.json` shows no notice of an adaptation for English.
+- Not checked: the website of Biblica. The designer read only the repository and the license.
+- Not checked: the dark mode and a real phone. The designer made no picture of them.
+- Corrected on 2026-11-23, after the report of step 6 of Task 47: section 19.5 had 738 words for the longest panels and 281 words for the median panel. The designer had removed the tags before the count, so the last word of a paragraph and the first word of the next paragraph were one word. Claude Code found the difference. The correct numbers are 745 and 285.
+- The designer told Arthur 159,016 words on 2026-11-23. That number had the headings and the lists of concepts of the Markdown files. The correct number is 131,406.

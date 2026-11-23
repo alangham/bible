@@ -1,0 +1,130 @@
+[
+{
+"content_id": "133016",
+"reference_id": 109070,
+"version": "1.0.4",
+"title": "2 John 1:1–13",
+"media_type": "Text",
+"index_reference": "63001001-63001013",
+"language": "eng",
+"review_level": "None",
+"content": "<p><data class=\"resource-ref\" data-content-id=\"132488\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">John</data> called himself the elder. He may have been talking about his age or about being a <data class=\"resource-ref\" data-content-id=\"132064\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church elder</data>. He said he was writing to a lady and her children whom <data class=\"resource-ref\" data-content-id=\"132175\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God chose</data>. This was a way to talk about the <data class=\"resource-ref\" data-content-id=\"132042\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church</data>.</p><p>It was common for churches to meet in someone’s home. It was also common for <data class=\"resource-ref\" data-content-id=\"132023\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">believers</data> in <data class=\"resource-ref\" data-content-id=\"131993\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Roman</data> lands to be <data class=\"resource-ref\" data-content-id=\"132000\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">treated badly</data> for following <data class=\"resource-ref\" data-content-id=\"132165\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus</data>. John may have avoided using any names to protect the believers.</p><p>John wrote that the truth is that Jesus <data class=\"resource-ref\" data-content-id=\"132044\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Christ</data> is the <data class=\"resource-ref\" data-content-id=\"132472\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Son of God</data>. He lived on earth as a <data class=\"resource-ref\" data-content-id=\"132148\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">human being</data> with a human body. While Jesus was on earth he taught people how to live. People who follow Jesus’ teachings belong to <data class=\"resource-ref\" data-content-id=\"132145\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God</data>. They are part of <data class=\"resource-ref\" data-content-id=\"131991\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s family</data> together with everyone else who follows Jesus. That is why God’s children call one another brother and sister. They obey God’s commands. They lead a life of love like Jesus did.</p><p>John also wrote about the danger of lies and false teachings about Jesus. In John’s time, some people taught that Jesus didn’t ever have a human body. This teaching was based on a way of thinking called <data class=\"resource-ref\" data-content-id=\"132113\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Docetism</data>. These people thought that they knew many things and were proud of what they knew. John made it clear that people teaching these things didn’t follow Jesus’ teachings. They made themselves enemies of Christ. They didn’t lead a life of love. Instead, they did evil <data class=\"resource-ref\" data-content-id=\"132154\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">work</data>. John warned the believers not to welcome such people. He meant that they weren&apos;t to be allowed to teach. John looked forward to visiting the believers and sharing his love and joy with them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "63001001",
+"start_ref_usfm": "2JN 1:1",
+"end_ref": "63001013",
+"end_ref_usfm": "2JN 1:13"
+}
+],
+"resource": [
+{
+"reference_id": "108542",
+"content_id": "132488",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "John",
+"language": "eng"
+},
+{
+"reference_id": "108118",
+"content_id": "132064",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "church elder",
+"language": "eng"
+},
+{
+"reference_id": "108229",
+"content_id": "132175",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God chose",
+"language": "eng"
+},
+{
+"reference_id": "108096",
+"content_id": "132042",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "church",
+"language": "eng"
+},
+{
+"reference_id": "108077",
+"content_id": "132023",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "believers",
+"language": "eng"
+},
+{
+"reference_id": "108047",
+"content_id": "131993",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Roman",
+"language": "eng"
+},
+{
+"reference_id": "108054",
+"content_id": "132000",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "treated badly",
+"language": "eng"
+},
+{
+"reference_id": "108219",
+"content_id": "132165",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus",
+"language": "eng"
+},
+{
+"reference_id": "108098",
+"content_id": "132044",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Christ",
+"language": "eng"
+},
+{
+"reference_id": "108526",
+"content_id": "132472",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Son of God",
+"language": "eng"
+},
+{
+"reference_id": "108202",
+"content_id": "132148",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "human being",
+"language": "eng"
+},
+{
+"reference_id": "108199",
+"content_id": "132145",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God",
+"language": "eng"
+},
+{
+"reference_id": "108045",
+"content_id": "131991",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s family",
+"language": "eng"
+},
+{
+"reference_id": "108167",
+"content_id": "132113",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Docetism",
+"language": "eng"
+},
+{
+"reference_id": "108208",
+"content_id": "132154",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "work",
+"language": "eng"
+}
+]
+}
+}
+]

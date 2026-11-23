@@ -1,0 +1,95 @@
+[
+{
+"content_id": "133017",
+"reference_id": 109071,
+"version": "1.0.4",
+"title": "3 John 1:1–15",
+"media_type": "Text",
+"index_reference": "64001001-64001015",
+"language": "eng",
+"review_level": "None",
+"content": "<p><data class=\"resource-ref\" data-content-id=\"132488\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">John</data> called himself the elder. He may have been talking about his age or about being a <data class=\"resource-ref\" data-content-id=\"132042\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church elder</data>.</p><p>He was full of joy because his friend Gaius’ <data class=\"resource-ref\" data-content-id=\"132408\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">spiritual</data> life was going well. This meant that Gaius was following <data class=\"resource-ref\" data-content-id=\"132165\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus</data> faithfully.</p><p>In 1 John 3:18 John wrote about <data class=\"resource-ref\" data-content-id=\"132023\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">believers</data> putting their <data class=\"resource-ref\" data-content-id=\"132178\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">faith</data> and love into action. Gaius did that by welcoming and helping believers who were traveling. In this way he supported people who spread the <data class=\"resource-ref\" data-content-id=\"131989\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">good news</data> about Jesus.</p><p>This was very different from what a man named Diotrephes did. Diotrephes ruled over others in the <data class=\"resource-ref\" data-content-id=\"132042\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church</data>. This went against <data class=\"resource-ref\" data-content-id=\"132518\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Peter’s</data> instructions for church leaders (1 Peter 5:3).</p><p>Diotrephes told lies about John. John planned to speak to Diotrephes about what he was doing wrong. His plan agreed with what <data class=\"resource-ref\" data-content-id=\"132048\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Paul</data> taught about correcting <data class=\"resource-ref\" data-content-id=\"132064\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">church elders</data> in 1 Timothy 5:20.</p><p>John wanted Gaius to avoid doing evil and instead to do good. Demetrius was an example of a believer who did good. He was faithful to the truth about Jesus.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "64001001",
+"start_ref_usfm": "3JN 1:1",
+"end_ref": "64001015",
+"end_ref_usfm": "3JN 1:15"
+}
+],
+"resource": [
+{
+"reference_id": "108542",
+"content_id": "132488",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "John",
+"language": "eng"
+},
+{
+"reference_id": "108096",
+"content_id": "132042",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "church elder",
+"language": "eng"
+},
+{
+"reference_id": "108462",
+"content_id": "132408",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "spiritual",
+"language": "eng"
+},
+{
+"reference_id": "108219",
+"content_id": "132165",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus",
+"language": "eng"
+},
+{
+"reference_id": "108077",
+"content_id": "132023",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "believers",
+"language": "eng"
+},
+{
+"reference_id": "108232",
+"content_id": "132178",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "faith",
+"language": "eng"
+},
+{
+"reference_id": "108043",
+"content_id": "131989",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "good news",
+"language": "eng"
+},
+{
+"reference_id": "108572",
+"content_id": "132518",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Peter’s",
+"language": "eng"
+},
+{
+"reference_id": "108102",
+"content_id": "132048",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Paul",
+"language": "eng"
+},
+{
+"reference_id": "108118",
+"content_id": "132064",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "church elders",
+"language": "eng"
+}
+]
+}
+}
+]

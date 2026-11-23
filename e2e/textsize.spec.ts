@@ -126,7 +126,9 @@ for (const vp of VIEWPORTS) {
         page.locator('header.rd-bar .rd-where b'),
         page.locator('header.rd-bar .rd-tr'),
         john3.locator('.rd-heading'),
-        john3.locator('.rd-about-control'),
+        // "About this book", and from Task 47 "About this chapter" on its line: docs/DESIGN.md section 19.6.
+        john3.locator('.rd-about-control:not(.rd-chapter-control)'),
+        john3.locator('.rd-chapter-control'),
         john3.getByRole('navigation', { name: 'Read with' }).getByRole('link').first(),
         ...(layout === 'wide' ? [page.locator('header.rd-bar .rd-echo'), page.locator('header.rd-bar .rd-size'), john3.locator('.rd-label').first()] : []),
       ]

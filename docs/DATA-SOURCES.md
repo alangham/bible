@@ -508,3 +508,47 @@ How the site meets each point:
 - `https://help.bibleproject.com/hc/en-us/articles/22547623073687`, the help page for app creators: NOT VERIFIED by Claude Code. The designer read this page through a fetch tool on 2026-11-18. By section 17.10 of `docs/DESIGN.md`, the page asks for a credit to BibleProject at each place that has one of its resources, and the words of the credit of the site are the words of that page.
 
 Not checked: whether BibleProject accepts the credit for a text link. Only BibleProject can say.
+
+## 14. Biblica Study Notes: the text of "About this chapter"
+
+From Task 47, the panel "About this chapter" of the reading page shows the Biblica Study Notes, with no change to a word. Section 19 of `docs/DESIGN.md` has the design. Arthur approved this source on 2026-11-23.
+
+| Fact | Value | Verified by Claude Code? |
+|---|---|---|
+| Name | Biblica Study Notes | Verified on 2026-11-23: the title in `README.md` and the field `title` in `eng/metadata.json`. |
+| Copyright line | Biblica Study Notes © 2023 Biblica Inc. | Verified on 2026-11-23: `README.md`, and the fields `copyright.dates` "2023" and `copyright.holder.name` "Biblica Inc." in `eng/metadata.json`. |
+| License | Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) | Verified on 2026-11-23: `README.md`, and the field `licenses` in `eng/metadata.json`, with the name "CC BY-SA 4.0 license". |
+| Address of the license | `https://creativecommons.org/licenses/by-sa/4.0/` | Verified on 2026-11-23. The two files of the repository give `https://creativecommons.org/licenses/by-sa/4.0/legalcode.en`. The page of the license gives `https://creativecommons.org/licenses/by-sa/4.0/` as its canonical address. The site uses the canonical address. |
+| Address of the files | `https://github.com/BibleAquifer/BiblicaStudyNotes` | Verified on 2026-11-23. |
+| Commit | `1a4501d9571f021bc99d07efb14c7bac79e5e13f`, of 2026-11-02 | Verified on 2026-11-23: the GitHub API gives the date 2026-11-02T18:45:41Z for this commit. |
+| Version | 1.1.2, the field `version` of `eng/metadata.json` | Verified on 2026-11-23. |
+| Files in the repository of the site | `sources/biblica/json/01.content.json` to `66.content.json`, `sources/biblica/metadata.json`, and `sources/biblica/README.md`, from `eng/json/`, `eng/metadata.json`, and `README.md` of the commit | Verified on 2026-11-23: the git blob hash of each of the 68 files is the hash in the tree of the commit. 0 files differ. |
+| An adaptation notice for English | `eng/metadata.json` has `showAdaptationNoticeForEnglish: false` | Verified on 2026-11-23. Not verified: that the English files have the words of Biblica with no change. Section 19.13 of `docs/DESIGN.md`. |
+| A notice of the disclaimer of warranties | `README.md` and `eng/metadata.json` have none | Verified on 2026-11-23. Section 3(a)(1)(A) of the license asks to keep such a notice only if the licensor supplied one. |
+
+### The license
+
+Claude Code read the legal text at `https://creativecommons.org/licenses/by-sa/4.0/legalcode.en` on 2026-11-23, with a fetch tool. The page has the title "Attribution-ShareAlike 4.0 International".
+
+This is a summary in my own words. It is not the text of the license, and it is not legal advice.
+
+- Section 2(a)(1): a person can copy and share the material, in whole or in part.
+- Section 2(a)(4): the right is for each medium and format. A technical change for a different format does not make changed material.
+- Section 3(a)(1)(A): with the material, the person keeps the name of the creator, the copyright notice, a notice that refers to the license, a notice of the disclaimer of warranties, and a link to the material, if the licensor supplied them. The link is to the extent reasonably practicable.
+- Section 3(a)(1)(B): the person says if the material was changed.
+- Section 3(a)(1)(C): the person says that the material has this license, with the text of the license or a link to it.
+- Section 3(a)(2): a reasonable manner is sufficient. A link to a page that has the information can be reasonable.
+- Section 3(b): the ShareAlike conditions apply to a person who shares changed material.
+- Section 2(a)(6): the license gives no permission to say that the licensor approves or sponsors the person or the use.
+- Section 2(b)(2): the license gives no rights to a trademark.
+
+How the site meets each point:
+
+- The site changes only the format of a note, by the three rules of section 19.4 of `docs/DESIGN.md`: it removes the tags `<data>` and `<span>`, and it changes two character references to their characters. It changes no word. The SHA-256 of section 19.4 shows this, and `scripts/build-notes.mjs` and a unit test check it.
+- The note credit of section 19.8 of `docs/DESIGN.md` is in each panel, below the notes. It has the copyright line, the name of the license with a link to it, a link to the files, and the sentence "The words have no changes."
+- The Sources page has the section "Notes on the chapters", with the same facts and the version.
+- The site uses the name "Biblica" as a reference only, with no logo. The Sources page says that Biblica has no connection with this site.
+
+### The data on the site
+
+`scripts/build-notes.mjs` makes `public/data/notes/<book id>.json`, 66 files, 787,420 bytes. The script checks the facts of section 19.4 of `docs/DESIGN.md` and the numbers of section 19.5, and it stops with an error if one does not fit. The site shows no link to the key terms of the files.

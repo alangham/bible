@@ -1,0 +1,776 @@
+[
+{
+"content_id": "133090",
+"reference_id": 109144,
+"version": "1.0.4",
+"title": "Numbers 1:1–5:4",
+"media_type": "Text",
+"index_reference": "04001001-04005004",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The people of <data class=\"resource-ref\" data-content-id=\"132226\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Israel</data> camped at <data class=\"resource-ref\" data-content-id=\"132273\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Mount Sinai</data> for two years. <data class=\"resource-ref\" data-content-id=\"132145\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God</data>’s instructions to them while they were there are recorded in Exodus and Leviticus.</p><p>God’s instructions that are recorded in Numbers were about preparing to leave Mount Sinai. <data class=\"resource-ref\" data-content-id=\"132246\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Moses</data>, <data class=\"resource-ref\" data-content-id=\"132252\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Aaron</data> and the leaders of the <data class=\"resource-ref\" data-content-id=\"132232\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">12 tribes</data> of Israel counted the people.</p><p>First they counted the men 20 years old or older. These were men who could fight in battles. Moses counted the <data class=\"resource-ref\" data-content-id=\"132289\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Levite</data> males who were 30 to 50 years old. Moses also counted the males one month old or older in <data class=\"resource-ref\" data-content-id=\"132329\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Levi</data>’s tribe.</p><p>Then he counted the eldest sons in the other tribes. All Israelite males who were born first in their family belonged to God. The reason for this was explained in Exodus 11:1 – 13:16. This didn’t mean that God wanted the Israelites to <data class=\"resource-ref\" data-content-id=\"132210\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sacrifice children</data>. Instead, the Levite males took the place of the eldest sons from other tribes. They did this by being <data class=\"resource-ref\" data-content-id=\"132304\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">set apart</data> to serve God.</p><p>Levite males from Aaron’s <data class=\"resource-ref\" data-content-id=\"132166\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">family line</data> were set apart to serve God as <data class=\"resource-ref\" data-content-id=\"132279\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">priests</data>. Others were responsible for taking care of the different parts of the <data class=\"resource-ref\" data-content-id=\"132280\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">holy tent</data>.</p><p>The holy tent was in the centre of the Israelite camp. The tribes were arranged in order around it. First were the Levites who camped closest to the holy tent. Then came the tribe of <data class=\"resource-ref\" data-content-id=\"132237\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Judah</data>. They were the lead tribe and had the most soldiers. After that were the other Israelite tribes.</p><p>People who were considered <data class=\"resource-ref\" data-content-id=\"132309\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">unclean</data> couldn’t be near the tent. They couldn’t even stay in the camp. This reminded the Israelites that God is <data class=\"resource-ref\" data-content-id=\"132307\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">holy</data> and was present with them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04001001",
+"start_ref_usfm": "NUM 1:1",
+"end_ref": "04005004",
+"end_ref_usfm": "NUM 5:4"
+}
+],
+"resource": [
+{
+"reference_id": "108280",
+"content_id": "132226",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Israel",
+"language": "eng"
+},
+{
+"reference_id": "108327",
+"content_id": "132273",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Mount Sinai",
+"language": "eng"
+},
+{
+"reference_id": "108199",
+"content_id": "132145",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God",
+"language": "eng"
+},
+{
+"reference_id": "108300",
+"content_id": "132246",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Moses",
+"language": "eng"
+},
+{
+"reference_id": "108306",
+"content_id": "132252",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Aaron",
+"language": "eng"
+},
+{
+"reference_id": "108286",
+"content_id": "132232",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "12 tribes",
+"language": "eng"
+},
+{
+"reference_id": "108343",
+"content_id": "132289",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Levite",
+"language": "eng"
+},
+{
+"reference_id": "108383",
+"content_id": "132329",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Levi",
+"language": "eng"
+},
+{
+"reference_id": "108264",
+"content_id": "132210",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sacrifice children",
+"language": "eng"
+},
+{
+"reference_id": "108358",
+"content_id": "132304",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "set apart",
+"language": "eng"
+},
+{
+"reference_id": "108220",
+"content_id": "132166",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "family line",
+"language": "eng"
+},
+{
+"reference_id": "108333",
+"content_id": "132279",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "priests",
+"language": "eng"
+},
+{
+"reference_id": "108334",
+"content_id": "132280",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "holy tent",
+"language": "eng"
+},
+{
+"reference_id": "108291",
+"content_id": "132237",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Judah",
+"language": "eng"
+},
+{
+"reference_id": "108363",
+"content_id": "132309",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "unclean",
+"language": "eng"
+},
+{
+"reference_id": "108361",
+"content_id": "132307",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "holy",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133091",
+"reference_id": 109145,
+"version": "1.0.4",
+"title": "Numbers 5:5–6:27",
+"media_type": "Text",
+"index_reference": "04005005-04006027",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The Israelites were to be held responsible for their actions and their words. It was a serious matter when someone did something wrong to someone else. They had to pay the person they <data class=\"resource-ref\" data-content-id=\"132141\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sinned</data> against back and pay extra.</p><p>God explained that sinning against others hurt the relationship between the person who sinned and God. It showed that the person wasn’t being faithful to God. Their relationship with God was healed when they <data class=\"resource-ref\" data-content-id=\"132292\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">repented</data> and turned away from their sin. They <data class=\"resource-ref\" data-content-id=\"132202\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sacrificed</data> a ram to show that they had repented. The death of the ram <data class=\"resource-ref\" data-content-id=\"132313\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">atoned</data> for their sin. This means that it paid for the person’s sin.</p><p>Another serious matter was when husbands and wives weren’t faithful to one another. It was as important for men to be faithful as it was for women to be faithful. There were times when it was hard to know if someone had been unfaithful. Women were often falsely accused of being unfaithful. So God provided a way for women to show that they weren’t guilty. This practice wasn’t <data class=\"resource-ref\" data-content-id=\"132256\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">magic</data>. It showed that God would bring judgement against those who weren’t faithful in <data class=\"resource-ref\" data-content-id=\"132152\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">marriage</data>.</p><p>It was also a serious matter when people made a promise to God. This was clear in the instructions about being a <data class=\"resource-ref\" data-content-id=\"132330\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Nazirite</data>. The words of the priests to the people were another serious matter. God commanded them to speak words of blessing. The priests’ words would help the Israelites trust that God was with them. God wanted them to trust that he cared for them and provided <data class=\"resource-ref\" data-content-id=\"132157\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">peace</data> for them.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04005005",
+"start_ref_usfm": "NUM 5:5",
+"end_ref": "04006027",
+"end_ref_usfm": "NUM 6:27"
+}
+],
+"resource": [
+{
+"reference_id": "108195",
+"content_id": "132141",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sinned",
+"language": "eng"
+},
+{
+"reference_id": "108346",
+"content_id": "132292",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "repented",
+"language": "eng"
+},
+{
+"reference_id": "108256",
+"content_id": "132202",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sacrificed",
+"language": "eng"
+},
+{
+"reference_id": "108367",
+"content_id": "132313",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "atoned",
+"language": "eng"
+},
+{
+"reference_id": "108310",
+"content_id": "132256",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "magic",
+"language": "eng"
+},
+{
+"reference_id": "108206",
+"content_id": "132152",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "marriage",
+"language": "eng"
+},
+{
+"reference_id": "108384",
+"content_id": "132330",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Nazirite",
+"language": "eng"
+},
+{
+"reference_id": "108211",
+"content_id": "132157",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "peace",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133092",
+"reference_id": 109146,
+"version": "1.0.4",
+"title": "Numbers 7:1–8:26",
+"media_type": "Text",
+"index_reference": "04007001-04008026",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Exodus chapters 35 to 39 described how the Israelites built the holy tent. They obeyed God’s instructions about the tent completely.</p><p>But before the tent could be used to worship God, many supplies were needed. Numbers recorded how the Israelites obeyed God completely in gathering these supplies.</p><p>Leaders from all the tribes except Levi brought the same amount of supplies. This showed that all the tribes were important no matter how big or small they were.</p><p>The Levites didn’t bring supplies. The Levites themselves were an offering to God. Levite males had <data class=\"resource-ref\" data-content-id=\"132154\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">work</data> to do in the holy tent. They did this work from the age of 25 until 50.</p><p>Once the holy tent was set up, God started speaking to Moses there. Moses heard God’s voice from above the <data class=\"resource-ref\" data-content-id=\"132331\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">ark of the covenant</data>. The <data class=\"resource-ref\" data-content-id=\"132267\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">cloud</data> that covered the tent showed that God was present there.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04007001",
+"start_ref_usfm": "NUM 7:1",
+"end_ref": "04008026",
+"end_ref_usfm": "NUM 8:26"
+}
+],
+"resource": [
+{
+"reference_id": "108208",
+"content_id": "132154",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "work",
+"language": "eng"
+},
+{
+"reference_id": "108385",
+"content_id": "132331",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "ark of the covenant",
+"language": "eng"
+},
+{
+"reference_id": "108321",
+"content_id": "132267",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "cloud",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133093",
+"reference_id": 109147,
+"version": "1.0.4",
+"title": "Numbers 9:1–10:36",
+"media_type": "Text",
+"index_reference": "04009001-04010036",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Priests were to blow the silver <data class=\"resource-ref\" data-content-id=\"132332\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">trumpets</data> to give messages to the Israelites.</p><p>God said that the sound would remind him of the Israelites. This didn’t mean that God sometimes forgot about them. This was a way of describing how much attention God pays to his people (<data class=\"resource-ref\" data-content-id=\"132248\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s people</data>). He always takes care of them. He even listens to the noises they make.</p><p>Before leaving the desert around Mount Sinai, the Israelites celebrated the <data class=\"resource-ref\" data-content-id=\"132263\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Passover Feast</data> again.</p><p><data class=\"resource-ref\" data-content-id=\"132315\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Outsiders</data> like <data class=\"resource-ref\" data-content-id=\"132333\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Hobab</data> could participate in the feast (<data class=\"resource-ref\" data-content-id=\"132318\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">feasts</data>) if they wanted to.</p><p>Then the tribes marched away from Sinai. They obeyed God completely by leaving the camp in the order God had told them to. The sign to do this was when the cloud over the holy tent moved.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04009001",
+"start_ref_usfm": "NUM 9:1",
+"end_ref": "04010036",
+"end_ref_usfm": "NUM 10:36"
+}
+],
+"resource": [
+{
+"reference_id": "108386",
+"content_id": "132332",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "trumpets",
+"language": "eng"
+},
+{
+"reference_id": "108302",
+"content_id": "132248",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s people",
+"language": "eng"
+},
+{
+"reference_id": "108317",
+"content_id": "132263",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Passover Feast",
+"language": "eng"
+},
+{
+"reference_id": "108369",
+"content_id": "132315",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Outsiders",
+"language": "eng"
+},
+{
+"reference_id": "108387",
+"content_id": "132333",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Hobab",
+"language": "eng"
+},
+{
+"reference_id": "108372",
+"content_id": "132318",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "feasts",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133094",
+"reference_id": 109148,
+"version": "1.0.4",
+"title": "Numbers 11:1–14:45",
+"media_type": "Text",
+"index_reference": "04011001-04014045",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Many of the Israelites spoke against God and didn’t obey him. They complained about how hard life was and about their food. They complained about Moses as their leader. Even <data class=\"resource-ref\" data-content-id=\"132268\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Miriam</data> and Aaron spoke against Moses.</p><p>The complaining showed that God’s people didn’t want God to be their God. They wished that God hadn’t saved them from being <data class=\"resource-ref\" data-content-id=\"132204\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">slaves</data> in <data class=\"resource-ref\" data-content-id=\"132197\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Egypt</data>. They didn’t accept the ways that God had saved them and provided for them.</p><p>God brought <data class=\"resource-ref\" data-content-id=\"132179\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">judgement</data> against them for refusing to accept him. He sent a fire, plague and disease among the Israelites. Yet God didn’t destroy all of them. He was patient with his people and <data class=\"resource-ref\" data-content-id=\"132227\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">forgave</data> them.</p><p>God shared the power of the <data class=\"resource-ref\" data-content-id=\"132334\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Holy Spirit</data> with 70 leaders. He did this so that they could help Moses. But God made something clear about Moses. Moses was close to him like no other <data class=\"resource-ref\" data-content-id=\"132148\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">human being</data> was.</p><p>Moses sent 12 spies to look at the land of <data class=\"resource-ref\" data-content-id=\"132192\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Canaan</data>. Of the 12, only <data class=\"resource-ref\" data-content-id=\"132335\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Joshua</data> and <data class=\"resource-ref\" data-content-id=\"132336\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Caleb</data> urged the people to obey God. But the Israelites refused to enter Canaan. That happened at <data class=\"resource-ref\" data-content-id=\"132337\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Kadesh Barnea</data>.</p><p>This meant that they were saying no to who God is. They were saying no to God’s <data class=\"resource-ref\" data-content-id=\"132199\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">covenant with Abraham</data>, <data class=\"resource-ref\" data-content-id=\"132207\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Isaac</data> and <data class=\"resource-ref\" data-content-id=\"132214\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jacob</data>.</p><p>As a result the Israelites would wander for <data class=\"resource-ref\" data-content-id=\"132338\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">40 years</data> in the desert. They would wander until those who had refused to enter Canaan died. After that, their children would receive the <data class=\"resource-ref\" data-content-id=\"132325\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">covenant blessing</data> of the land.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04011001",
+"start_ref_usfm": "NUM 11:1",
+"end_ref": "04014045",
+"end_ref_usfm": "NUM 14:45"
+}
+],
+"resource": [
+{
+"reference_id": "108322",
+"content_id": "132268",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Miriam",
+"language": "eng"
+},
+{
+"reference_id": "108258",
+"content_id": "132204",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "slaves",
+"language": "eng"
+},
+{
+"reference_id": "108251",
+"content_id": "132197",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Egypt",
+"language": "eng"
+},
+{
+"reference_id": "108233",
+"content_id": "132179",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "judgement",
+"language": "eng"
+},
+{
+"reference_id": "108281",
+"content_id": "132227",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "forgave",
+"language": "eng"
+},
+{
+"reference_id": "108388",
+"content_id": "132334",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Holy Spirit",
+"language": "eng"
+},
+{
+"reference_id": "108202",
+"content_id": "132148",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "human being",
+"language": "eng"
+},
+{
+"reference_id": "108246",
+"content_id": "132192",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Canaan",
+"language": "eng"
+},
+{
+"reference_id": "108389",
+"content_id": "132335",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Joshua",
+"language": "eng"
+},
+{
+"reference_id": "108390",
+"content_id": "132336",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Caleb",
+"language": "eng"
+},
+{
+"reference_id": "108391",
+"content_id": "132337",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Kadesh Barnea",
+"language": "eng"
+},
+{
+"reference_id": "108253",
+"content_id": "132199",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "covenant with Abraham",
+"language": "eng"
+},
+{
+"reference_id": "108261",
+"content_id": "132207",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Isaac",
+"language": "eng"
+},
+{
+"reference_id": "108268",
+"content_id": "132214",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jacob",
+"language": "eng"
+},
+{
+"reference_id": "108392",
+"content_id": "132338",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "40 years",
+"language": "eng"
+},
+{
+"reference_id": "108379",
+"content_id": "132325",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "covenant blessing",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133095",
+"reference_id": 109149,
+"version": "1.0.4",
+"title": "Numbers 15:1–19:22",
+"media_type": "Text",
+"index_reference": "04015001-04019022",
+"language": "eng",
+"review_level": "None",
+"content": "<p>God had made it very clear that the Levites were set apart to serve him. They were to take care of everything that had to do with the holy tent.</p><p>He had also made it very clear that males from Aaron’s family line were to be priests. They were responsible for everything that had to do with sacrifices and the <data class=\"resource-ref\" data-content-id=\"132231\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">altar</data>. This included the <data class=\"resource-ref\" data-content-id=\"132305\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">special water</data> that made people and things clean.</p><p>The Levites and priests wouldn’t receive land or get paid with money. Instead, God provided for them from the offerings given by the other Israelites.</p><p>Yet <data class=\"resource-ref\" data-content-id=\"132339\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Korah</data> and other Levites who weren’t from Aaron’s family line didn’t like God’s rules. They wanted to be priests. When they spoke against Aaron, they opposed the way that God led his people. God put them to death for this.</p><p>Other Israelites blamed Moses and Aaron for the deaths. Yet Moses and Aaron remained faithful to serving the Israelites. Again and again, they prayed for God to have <data class=\"resource-ref\" data-content-id=\"132288\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">mercy</data> on the Israelites. As a result over and over again God decided not to destroy his people.</p><p>God made <data class=\"resource-ref\" data-content-id=\"132255\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Aaron’s walking stick</data> produce buds and flowers. This was a sign that the Israelites must respect Aaron and his sons as priests.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04015001",
+"start_ref_usfm": "NUM 15:1",
+"end_ref": "04019022",
+"end_ref_usfm": "NUM 19:22"
+}
+],
+"resource": [
+{
+"reference_id": "108285",
+"content_id": "132231",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "altar",
+"language": "eng"
+},
+{
+"reference_id": "108359",
+"content_id": "132305",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "special water",
+"language": "eng"
+},
+{
+"reference_id": "108393",
+"content_id": "132339",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Korah",
+"language": "eng"
+},
+{
+"reference_id": "108342",
+"content_id": "132288",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "mercy",
+"language": "eng"
+},
+{
+"reference_id": "108309",
+"content_id": "132255",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Aaron’s walking stick",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133096",
+"reference_id": 109150,
+"version": "1.0.4",
+"title": "Numbers 20:1–24:25",
+"media_type": "Text",
+"index_reference": "04020001-04024025",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The people of Israel continued to complain and argue as they wandered in the desert. They said it would have been better to remain slaves or to be dead. That is how unhappy they were.</p><p>The people needed water. At <data class=\"resource-ref\" data-content-id=\"132340\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Meribah</data> Moses and Aaron didn’t completely trust God to provide water. They made water come out of the rock by using force. Because of this, Moses and Aaron wouldn’t be allowed to enter Canaan.</p><p>Another time when the people needed water, they once again complained instead of trusting God. So God allowed some of the <data class=\"resource-ref\" data-content-id=\"132326\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">covenant curses</data> to come upon them. This included sickness that wouldn’t heal like Deuteronomy 28:59–60 talked about. The sickness was from poisonous snakes. As a result of this many people died. Yet those who looked at the bronze snake on the pole were saved. God used that snake to provide healing for his people. It was a picture of <data class=\"resource-ref\" data-content-id=\"132142\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">salvation</data>.</p><p>Hundreds of years later, <data class=\"resource-ref\" data-content-id=\"132165\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus</data> compared himself to the snake that had been lifted up (John 3:14). Even though the Israelites spoke against God, God continued to bless them. He gave them victory over the Canaanites who attacked them. He gave them victory over the kings <data class=\"resource-ref\" data-content-id=\"132341\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Sihon and Og</data>. He protected them from <data class=\"resource-ref\" data-content-id=\"132342\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Balak</data> the king of <data class=\"resource-ref\" data-content-id=\"132343\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Moab</data>. God didn’t allow <data class=\"resource-ref\" data-content-id=\"132344\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Balaam</data> to put a curse on the Israelites. Instead, Balaam spoke words of blessing.</p><p>Balaam’s <data class=\"resource-ref\" data-content-id=\"132345\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prophecy</data> was also about someone called a star, a <data class=\"resource-ref\" data-content-id=\"132276\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">king</data> and a ruler. Many years later people understood that this was a <data class=\"resource-ref\" data-content-id=\"132346\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prophecy about Jesus</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04020001",
+"start_ref_usfm": "NUM 20:1",
+"end_ref": "04024025",
+"end_ref_usfm": "NUM 24:25"
+}
+],
+"resource": [
+{
+"reference_id": "108394",
+"content_id": "132340",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Meribah",
+"language": "eng"
+},
+{
+"reference_id": "108380",
+"content_id": "132326",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "covenant curses",
+"language": "eng"
+},
+{
+"reference_id": "108196",
+"content_id": "132142",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "salvation",
+"language": "eng"
+},
+{
+"reference_id": "108219",
+"content_id": "132165",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus",
+"language": "eng"
+},
+{
+"reference_id": "108395",
+"content_id": "132341",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Sihon and Og",
+"language": "eng"
+},
+{
+"reference_id": "108396",
+"content_id": "132342",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Balak",
+"language": "eng"
+},
+{
+"reference_id": "108397",
+"content_id": "132343",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Moab",
+"language": "eng"
+},
+{
+"reference_id": "108398",
+"content_id": "132344",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Balaam",
+"language": "eng"
+},
+{
+"reference_id": "108399",
+"content_id": "132345",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prophecy",
+"language": "eng"
+},
+{
+"reference_id": "108330",
+"content_id": "132276",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "king",
+"language": "eng"
+},
+{
+"reference_id": "108400",
+"content_id": "132346",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prophecy about Jesus",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133097",
+"reference_id": 109151,
+"version": "1.0.4",
+"title": "Numbers 25:1–31:54",
+"media_type": "Text",
+"index_reference": "04025001-04031054",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Balak had worked together with the <data class=\"resource-ref\" data-content-id=\"132249\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Midianites</data> to try to stop the people of Israel. Their plan of having Balaam put a curse on the Israelites didn’t work. So Balaam gave them advice about how to trick the Israelites.</p><p>Israelite men committed sexual sins with women from Moab and Midian. Then they started worshipping a <data class=\"resource-ref\" data-content-id=\"132230\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">false god</data> named <data class=\"resource-ref\" data-content-id=\"132347\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Baal</data> with these women. These things were wrong and God brought judgement against his people for doing them. God sent a plague against them at the place called <data class=\"resource-ref\" data-content-id=\"132348\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Baal Peor</data>.</p><p><data class=\"resource-ref\" data-content-id=\"132349\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Phinehas</data> showed how committed he was to making sure that the Israelites honoured God. Later God brought judgement against the Midianites for tricking God’s people. The Israelite army attacked them and destroyed their towns. Balaam was killed.</p><p>The plague at Baal Peor marked an important time. It was when all the Israelites who had refused to enter Canaan had died. After this the people were counted for a second time. They also received more instructions from God about making offerings and special promises. Joshua was set apart and recognised as the leader after Moses. He and <data class=\"resource-ref\" data-content-id=\"132303\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Eleazar</data> would lead the people like Moses and Aaron had.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04025001",
+"start_ref_usfm": "NUM 25:1",
+"end_ref": "04031054",
+"end_ref_usfm": "NUM 31:54"
+}
+],
+"resource": [
+{
+"reference_id": "108303",
+"content_id": "132249",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Midianites",
+"language": "eng"
+},
+{
+"reference_id": "108284",
+"content_id": "132230",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "false god",
+"language": "eng"
+},
+{
+"reference_id": "108401",
+"content_id": "132347",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Baal",
+"language": "eng"
+},
+{
+"reference_id": "108402",
+"content_id": "132348",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Baal Peor",
+"language": "eng"
+},
+{
+"reference_id": "108403",
+"content_id": "132349",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Phinehas",
+"language": "eng"
+},
+{
+"reference_id": "108357",
+"content_id": "132303",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Eleazar",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133098",
+"reference_id": 109152,
+"version": "1.0.4",
+"title": "Numbers 32:1–36:13",
+"media_type": "Text",
+"index_reference": "04032001-04036013",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Moses recorded a list of all the places where the Israelites had travelled. Then God described the borders of the land he was giving them. It was to be divided among the tribes by <data class=\"resource-ref\" data-content-id=\"132350\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">casting lots</data>.</p><p>Each family group would receive land based on how many people were in the family. Land would be given to daughters if there were no sons in the family. This was the case with <data class=\"resource-ref\" data-content-id=\"132351\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Zelophehad’s daughters</data>. Daughters who received land would marry men in their own tribe. That way the land wouldn’t be lost to the tribe.</p><p>The borders God described didn’t include the lands the Israelites had taken from Sihon and Og. Yet some Israelites were allowed to stay east of the <data class=\"resource-ref\" data-content-id=\"132352\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">River Jordan</data>. This included the tribes of <data class=\"resource-ref\" data-content-id=\"132353\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Reuben</data> and <data class=\"resource-ref\" data-content-id=\"132354\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Gad</data> and half of the tribe of <data class=\"resource-ref\" data-content-id=\"132245\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Manasseh</data>.</p><p>The men of these tribes would go into Canaan with the other tribes. They would help them <data class=\"resource-ref\" data-content-id=\"132355\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">drive out</data> the people already living there. Then they would return to their homes east of the River Jordan.</p><p>Canaan would be divided among all the other tribes except the tribe of Levi. The Levites would receive towns and fields throughout the other tribes’ territories. Six of their towns would be <data class=\"resource-ref\" data-content-id=\"132356\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">safe cities</data>.</p><p>The Israelites’ land was to be considered pure and clean. This was because the holy God wanted to live among them. But the land would be polluted and impure if people committed <data class=\"resource-ref\" data-content-id=\"132169\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">murder</data>. It would also be impure if the Israelites worshipped false gods and didn’t <data class=\"resource-ref\" data-content-id=\"132278\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">worship only God</data>. That would happen if they didn’t drive out the Canaanites who lived there already.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "04032001",
+"start_ref_usfm": "NUM 32:1",
+"end_ref": "04036013",
+"end_ref_usfm": "NUM 36:13"
+}
+],
+"resource": [
+{
+"reference_id": "108404",
+"content_id": "132350",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "casting lots",
+"language": "eng"
+},
+{
+"reference_id": "108405",
+"content_id": "132351",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Zelophehad’s daughters",
+"language": "eng"
+},
+{
+"reference_id": "108406",
+"content_id": "132352",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "River Jordan",
+"language": "eng"
+},
+{
+"reference_id": "108407",
+"content_id": "132353",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Reuben",
+"language": "eng"
+},
+{
+"reference_id": "108408",
+"content_id": "132354",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Gad",
+"language": "eng"
+},
+{
+"reference_id": "108299",
+"content_id": "132245",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Manasseh",
+"language": "eng"
+},
+{
+"reference_id": "108409",
+"content_id": "132355",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "drive out",
+"language": "eng"
+},
+{
+"reference_id": "108410",
+"content_id": "132356",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "safe cities",
+"language": "eng"
+},
+{
+"reference_id": "108223",
+"content_id": "132169",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "murder",
+"language": "eng"
+},
+{
+"reference_id": "108332",
+"content_id": "132278",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "worship only God",
+"language": "eng"
+}
+]
+}
+}
+]

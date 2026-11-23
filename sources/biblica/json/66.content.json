@@ -1,0 +1,1745 @@
+[
+{
+"content_id": "133021",
+"reference_id": 109075,
+"version": "1.0.4",
+"title": "Revelation 1:1–8",
+"media_type": "Text",
+"index_reference": "66001001-66001008",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Revelation is a letter to the <data class=\"resource-ref\" data-content-id=\"132023\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">believers</data> in seven <data class=\"resource-ref\" data-content-id=\"132042\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">churches</data> in <data class=\"resource-ref\" data-content-id=\"132059\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Asia Minor</data>. The letter is full of <data class=\"resource-ref\" data-content-id=\"132345\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prophecy</data>. It’s known as <data class=\"resource-ref\" data-content-id=\"132487\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">apocalyptic writing</data>.</p><p><data class=\"resource-ref\" data-content-id=\"132488\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">John</data> began the letter by praising <data class=\"resource-ref\" data-content-id=\"132145\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God</data> the <data class=\"resource-ref\" data-content-id=\"132258\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Father</data>. He also praised <data class=\"resource-ref\" data-content-id=\"132165\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus Christ</data> the <data class=\"resource-ref\" data-content-id=\"132473\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Messiah</data>. Jesus has authority over all rulers on earth.</p><p>John reminded the believers of many things that were true about them. They served the King who has all <data class=\"resource-ref\" data-content-id=\"132294\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">glory</data> and power. The believers were loved by Jesus. They were part of the <data class=\"resource-ref\" data-content-id=\"132507\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">kingdom of God</data> and part of <data class=\"resource-ref\" data-content-id=\"131991\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s family</data>. Because of this they were royal and were <data class=\"resource-ref\" data-content-id=\"132279\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">priests</data>.</p><p>This was like what God called <data class=\"resource-ref\" data-content-id=\"132248\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">his people</data> from the nation of <data class=\"resource-ref\" data-content-id=\"132226\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Israel</data>. Long ago God called them a <data class=\"resource-ref\" data-content-id=\"132283\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">kingdom of priests</data>.</p><p><data class=\"resource-ref\" data-content-id=\"132362\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">John</data> used words from <data class=\"resource-ref\" data-content-id=\"132138\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prophets</data> in the <data class=\"resource-ref\" data-content-id=\"132138\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Old Testament</data>. He used them to talk about <data class=\"resource-ref\" data-content-id=\"132011\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jesus’ return</data> in the future. Jesus described himself as the <data class=\"resource-ref\" data-content-id=\"132116\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Alpha and the Omega</data>. He promised to come back to earth.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66001001",
+"start_ref_usfm": "REV 1:1",
+"end_ref": "66001008",
+"end_ref_usfm": "REV 1:8"
+}
+],
+"resource": [
+{
+"reference_id": "108077",
+"content_id": "132023",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "believers",
+"language": "eng"
+},
+{
+"reference_id": "108096",
+"content_id": "132042",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "churches",
+"language": "eng"
+},
+{
+"reference_id": "108113",
+"content_id": "132059",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Asia Minor",
+"language": "eng"
+},
+{
+"reference_id": "108399",
+"content_id": "132345",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prophecy",
+"language": "eng"
+},
+{
+"reference_id": "108541",
+"content_id": "132487",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "apocalyptic writing",
+"language": "eng"
+},
+{
+"reference_id": "108542",
+"content_id": "132488",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "John",
+"language": "eng"
+},
+{
+"reference_id": "108199",
+"content_id": "132145",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God",
+"language": "eng"
+},
+{
+"reference_id": "108312",
+"content_id": "132258",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Father",
+"language": "eng"
+},
+{
+"reference_id": "108219",
+"content_id": "132165",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus Christ",
+"language": "eng"
+},
+{
+"reference_id": "108527",
+"content_id": "132473",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Messiah",
+"language": "eng"
+},
+{
+"reference_id": "108348",
+"content_id": "132294",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "glory",
+"language": "eng"
+},
+{
+"reference_id": "108561",
+"content_id": "132507",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "kingdom of God",
+"language": "eng"
+},
+{
+"reference_id": "108045",
+"content_id": "131991",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s family",
+"language": "eng"
+},
+{
+"reference_id": "108333",
+"content_id": "132279",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "priests",
+"language": "eng"
+},
+{
+"reference_id": "108302",
+"content_id": "132248",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "his people",
+"language": "eng"
+},
+{
+"reference_id": "108280",
+"content_id": "132226",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Israel",
+"language": "eng"
+},
+{
+"reference_id": "108337",
+"content_id": "132283",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "kingdom of priests",
+"language": "eng"
+},
+{
+"reference_id": "108416",
+"content_id": "132362",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "John",
+"language": "eng"
+},
+{
+"reference_id": "108192",
+"content_id": "132138",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prophets",
+"language": "eng"
+},
+{
+"reference_id": "108065",
+"content_id": "132011",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jesus’ return",
+"language": "eng"
+},
+{
+"reference_id": "108170",
+"content_id": "132116",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Alpha and the Omega",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133022",
+"reference_id": 109076,
+"version": "1.0.4",
+"title": "Revelation 1:9–20",
+"media_type": "Text",
+"index_reference": "66001009-66001020",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Both John and the believers he wrote to were suffering. They were being <data class=\"resource-ref\" data-content-id=\"132000\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">treated badly</data> for following Jesus as <data class=\"resource-ref\" data-content-id=\"132275\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Lord</data>.</p><p>The first <data class=\"resource-ref\" data-content-id=\"132242\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">vision</data> John wrote about occurred on <data class=\"resource-ref\" data-content-id=\"132117\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Patmos</data> on the <data class=\"resource-ref\" data-content-id=\"132118\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Lord’s day</data>. The vision was of Jesus after his <data class=\"resource-ref\" data-content-id=\"132514\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">resurrection</data> from the dead.</p><p>Jesus looked to John like the <data class=\"resource-ref\" data-content-id=\"132503\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">son of man</data> and the <data class=\"resource-ref\" data-content-id=\"132513\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Eternal God</data>. The prophet <data class=\"resource-ref\" data-content-id=\"132506\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Daniel</data> had talked about them in a vision recorded in Daniel 7:9–22.</p><p>The words that Jesus spoke looked to John like a <data class=\"resource-ref\" data-content-id=\"132494\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sword</data>. In the book of <data class=\"resource-ref\" data-content-id=\"132443\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Isaiah</data> the words of <data class=\"resource-ref\" data-content-id=\"132490\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s servant</data> were also like a sword (Isaiah 49:2).</p><p>The vision of Jesus was so powerful that John felt as if he had died. But Jesus comforted John. He wanted John to share his message with the churches. The <data class=\"resource-ref\" data-content-id=\"132160\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">seven</data> lampstands were a sign of the churches.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66001009",
+"start_ref_usfm": "REV 1:9",
+"end_ref": "66001020",
+"end_ref_usfm": "REV 1:20"
+}
+],
+"resource": [
+{
+"reference_id": "108054",
+"content_id": "132000",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "treated badly",
+"language": "eng"
+},
+{
+"reference_id": "108329",
+"content_id": "132275",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Lord",
+"language": "eng"
+},
+{
+"reference_id": "108296",
+"content_id": "132242",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "vision",
+"language": "eng"
+},
+{
+"reference_id": "108171",
+"content_id": "132117",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Patmos",
+"language": "eng"
+},
+{
+"reference_id": "108172",
+"content_id": "132118",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Lord’s day",
+"language": "eng"
+},
+{
+"reference_id": "108568",
+"content_id": "132514",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "resurrection",
+"language": "eng"
+},
+{
+"reference_id": "108557",
+"content_id": "132503",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "son of man",
+"language": "eng"
+},
+{
+"reference_id": "108567",
+"content_id": "132513",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Eternal God",
+"language": "eng"
+},
+{
+"reference_id": "108560",
+"content_id": "132506",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Daniel",
+"language": "eng"
+},
+{
+"reference_id": "108548",
+"content_id": "132494",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sword",
+"language": "eng"
+},
+{
+"reference_id": "108497",
+"content_id": "132443",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Isaiah",
+"language": "eng"
+},
+{
+"reference_id": "108544",
+"content_id": "132490",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s servant",
+"language": "eng"
+},
+{
+"reference_id": "108214",
+"content_id": "132160",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "seven",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133023",
+"reference_id": 109077,
+"version": "1.0.4",
+"title": "Revelation 2:1–17",
+"media_type": "Text",
+"index_reference": "66002001-66002017",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John wrote down Jesus’ messages as <data class=\"resource-ref\" data-content-id=\"132119\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">letters to the churches</data>.</p><p>In the letter to the church in <data class=\"resource-ref\" data-content-id=\"132081\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ephesus</data> Jesus recognised that the believers were suffering. They were staying faithful to Jesus. Yet he wanted them to love him and one another more deeply. Their love should be as strong as it was when they first <data class=\"resource-ref\" data-content-id=\"132201\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">believed in</data> Jesus.</p><p>Jesus comforted the church in <data class=\"resource-ref\" data-content-id=\"132120\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Smyrna</data>. They were going to face hard times in the future. Some of those believers would be put to death for following Jesus. But Jesus promised to give them life that the <data class=\"resource-ref\" data-content-id=\"132121\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">second death</data> couldn’t destroy.</p><p>Some in the church of <data class=\"resource-ref\" data-content-id=\"132122\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Pergamum</data> weren’t staying faithful to Jesus. They were following teachings about Jesus that weren’t true. Some of these teachings were like what the prophet <data class=\"resource-ref\" data-content-id=\"132344\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Balaam</data> taught long ago. Other teachings were from the Nicolaitans. It isn’t known exactly who the Nicolaitans were. But their teachings went against Jesus’ teachings and way of living. Jesus urged the believers in Pergamum to turn away from <data class=\"resource-ref\" data-content-id=\"132141\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sin</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66002001",
+"start_ref_usfm": "REV 2:1",
+"end_ref": "66002017",
+"end_ref_usfm": "REV 2:17"
+}
+],
+"resource": [
+{
+"reference_id": "108173",
+"content_id": "132119",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "letters to the churches",
+"language": "eng"
+},
+{
+"reference_id": "108135",
+"content_id": "132081",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ephesus",
+"language": "eng"
+},
+{
+"reference_id": "108255",
+"content_id": "132201",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "believed in",
+"language": "eng"
+},
+{
+"reference_id": "108174",
+"content_id": "132120",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Smyrna",
+"language": "eng"
+},
+{
+"reference_id": "108175",
+"content_id": "132121",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "second death",
+"language": "eng"
+},
+{
+"reference_id": "108176",
+"content_id": "132122",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Pergamum",
+"language": "eng"
+},
+{
+"reference_id": "108398",
+"content_id": "132344",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Balaam",
+"language": "eng"
+},
+{
+"reference_id": "108195",
+"content_id": "132141",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sin",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133024",
+"reference_id": 109078,
+"version": "1.0.4",
+"title": "Revelation 2:18–3:6",
+"media_type": "Text",
+"index_reference": "66002018-66003006",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Jesus’ letter to the church in <data class=\"resource-ref\" data-content-id=\"132123\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Thyatira</data> shows how well he knows his followers. He knows how hard they <data class=\"resource-ref\" data-content-id=\"132154\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">work</data> and how deeply they love him.</p><p>He also knows all the ways they aren’t faithful to him. Some believers in Thyatira were committing sexual sins and sins with food. This showed that they weren’t obeying Jesus as Lord. Instead they were following a <data class=\"resource-ref\" data-content-id=\"132496\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">false prophet</data> that Jesus called <data class=\"resource-ref\" data-content-id=\"132431\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jezebel</data>.</p><p>Many believers in the church in <data class=\"resource-ref\" data-content-id=\"132124\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Sardis</data> had dead <data class=\"resource-ref\" data-content-id=\"132178\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">faith</data>. <data class=\"resource-ref\" data-content-id=\"132065\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">James</data> had talked about dead faith in James 2:14–26. Jesus wanted them to wake up and obey God.</p><p>Other believers in Sardis were faithfully obeying Jesus. Jesus talked about this like being <data class=\"resource-ref\" data-content-id=\"132125\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">dressed in white</data> clothing.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66002018",
+"start_ref_usfm": "REV 2:18",
+"end_ref": "66003006",
+"end_ref_usfm": "REV 3:6"
+}
+],
+"resource": [
+{
+"reference_id": "108177",
+"content_id": "132123",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Thyatira",
+"language": "eng"
+},
+{
+"reference_id": "108208",
+"content_id": "132154",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "work",
+"language": "eng"
+},
+{
+"reference_id": "108550",
+"content_id": "132496",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "false prophet",
+"language": "eng"
+},
+{
+"reference_id": "108485",
+"content_id": "132431",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jezebel",
+"language": "eng"
+},
+{
+"reference_id": "108178",
+"content_id": "132124",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Sardis",
+"language": "eng"
+},
+{
+"reference_id": "108232",
+"content_id": "132178",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "faith",
+"language": "eng"
+},
+{
+"reference_id": "108119",
+"content_id": "132065",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "James",
+"language": "eng"
+},
+{
+"reference_id": "108179",
+"content_id": "132125",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "dressed in white",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133025",
+"reference_id": 109079,
+"version": "1.0.4",
+"title": "Revelation 3:7–22",
+"media_type": "Text",
+"index_reference": "66003007-66003022",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The church in <data class=\"resource-ref\" data-content-id=\"132126\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Philadelphia</data> had an opportunity to share the <data class=\"resource-ref\" data-content-id=\"131989\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">good news</data> with others. This is what Jesus meant about the door he had opened for them.</p><p>In 1 Corinthians 16:9 and 2 Corinthians 2:12, <data class=\"resource-ref\" data-content-id=\"132048\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Paul</data> had also written about doors like that being opened. The believers in Philadelphia didn’t have enough strength on their own. Jesus would give them the strength to do what he wanted them to do. He would make them as strong as pillars in God’s <data class=\"resource-ref\" data-content-id=\"132363\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">temple</data>.</p><p><data class=\"resource-ref\" data-content-id=\"132449\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Jews</data> who didn’t follow Jesus opposed them. Jesus promised that even those Jews would one day recognise that Jesus loves his followers.</p><p>The believers in <data class=\"resource-ref\" data-content-id=\"132108\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Laodicea</data> had become proud. They no longer recognised how much they needed Jesus. Jesus corrected them because he loved them. He was like the master returning home in the story he told in Luke 12:35–38. He wanted the believers in Laodicea to be ready to receive him when he returned. He promised to share a meal with those who received him. This showed how deeply Jesus loved them and wanted them to be joined to him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66003007",
+"start_ref_usfm": "REV 3:7",
+"end_ref": "66003022",
+"end_ref_usfm": "REV 3:22"
+}
+],
+"resource": [
+{
+"reference_id": "108180",
+"content_id": "132126",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Philadelphia",
+"language": "eng"
+},
+{
+"reference_id": "108043",
+"content_id": "131989",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "good news",
+"language": "eng"
+},
+{
+"reference_id": "108102",
+"content_id": "132048",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Paul",
+"language": "eng"
+},
+{
+"reference_id": "108417",
+"content_id": "132363",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "temple",
+"language": "eng"
+},
+{
+"reference_id": "108503",
+"content_id": "132449",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Jews",
+"language": "eng"
+},
+{
+"reference_id": "108162",
+"content_id": "132108",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Laodicea",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133026",
+"reference_id": 109080,
+"version": "1.0.4",
+"title": "Revelation 4:1–11",
+"media_type": "Text",
+"index_reference": "66004001-66004011",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The second vision John wrote about occurred in <data class=\"resource-ref\" data-content-id=\"132147\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">heaven</data>. The vision was of an area in heaven where God’s throne is. Everything that John recorded until Revelation chapter 17 happened in this vision.</p><p>What John saw first was like what other prophets had seen in visions of God’s throne. Those visions are recorded in 1 Kings 22:19, Isaiah chapter 6, Ezekiel 1:26–28 and Daniel 7:9–10. The things John saw were signs of God’s complete power and glory.</p><p>The rainbow showed God’s splendour and glory. In the Bible the rainbow is a sign of God’s <data class=\"resource-ref\" data-content-id=\"132288\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">mercy</data>.</p><p>John heard and saw the <data class=\"resource-ref\" data-content-id=\"132127\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">24 elders</data> and the <data class=\"resource-ref\" data-content-id=\"132502\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">four living creatures</data> worshipping God. Together they are a picture of God being praised for ever by all of <data class=\"resource-ref\" data-content-id=\"132143\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">creation</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66004001",
+"start_ref_usfm": "REV 4:1",
+"end_ref": "66004011",
+"end_ref_usfm": "REV 4:11"
+}
+],
+"resource": [
+{
+"reference_id": "108201",
+"content_id": "132147",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "heaven",
+"language": "eng"
+},
+{
+"reference_id": "108342",
+"content_id": "132288",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "mercy",
+"language": "eng"
+},
+{
+"reference_id": "108181",
+"content_id": "132127",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "24 elders",
+"language": "eng"
+},
+{
+"reference_id": "108556",
+"content_id": "132502",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "four living creatures",
+"language": "eng"
+},
+{
+"reference_id": "108197",
+"content_id": "132143",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "creation",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133027",
+"reference_id": 109081,
+"version": "1.0.4",
+"title": "Revelation 5:1–14",
+"media_type": "Text",
+"index_reference": "66005001-66005014",
+"language": "eng",
+"review_level": "None",
+"content": "<p>What was written on the scroll were <data class=\"resource-ref\" data-content-id=\"132146\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s words</data> about what was going to happen. They were about his plan for heaven and earth. The one who opened the scroll would put God’s plan into effect. No one could do this but Jesus.</p><p>Jesus was described as the Root of <data class=\"resource-ref\" data-content-id=\"132395\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">David</data>. This was a way to talk about Jesus being the Messiah from David’s <data class=\"resource-ref\" data-content-id=\"132166\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">family line</data>. He was described as the Lion of <data class=\"resource-ref\" data-content-id=\"132237\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Judah</data>. This was a way to talk about Jesus being from Judah’s family line. It meant that he was the <data class=\"resource-ref\" data-content-id=\"132276\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">king</data> God had promised to send. It also described Jesus’ strength and power.</p><p>Jesus is also the <data class=\"resource-ref\" data-content-id=\"132032\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Lamb of God</data>. This name described how Jesus wins his victory through being weak and humble. He wins through the power of love that <data class=\"resource-ref\" data-content-id=\"132202\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sacrifices</data> everything for others. The Lamb looked as if he had been put to death. This is because Jesus had died on the <data class=\"resource-ref\" data-content-id=\"132476\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">cross</data> but had been raised from the dead.</p><p>The elders and the living creatures praised him for being worthy to open the scroll. Jesus was worthy because of what he had done. He had rescued people from the power of sin, death and evil. He had made them God’s people. People from every tribe, people group and nation believe in him. He makes them one in God’s royal family. Because he does this, the Lamb is worthy of honour.</p><p>The <data class=\"resource-ref\" data-content-id=\"132259\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">angels</data> sang about this. All of creation worshipped the Lamb and God. In Philippians 2:10 the <data class=\"resource-ref\" data-content-id=\"131999\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">apostle</data> Paul wrote about this happening.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66005001",
+"start_ref_usfm": "REV 5:1",
+"end_ref": "66005014",
+"end_ref_usfm": "REV 5:14"
+}
+],
+"resource": [
+{
+"reference_id": "108200",
+"content_id": "132146",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s words",
+"language": "eng"
+},
+{
+"reference_id": "108449",
+"content_id": "132395",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "David",
+"language": "eng"
+},
+{
+"reference_id": "108220",
+"content_id": "132166",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "family line",
+"language": "eng"
+},
+{
+"reference_id": "108291",
+"content_id": "132237",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Judah",
+"language": "eng"
+},
+{
+"reference_id": "108330",
+"content_id": "132276",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "king",
+"language": "eng"
+},
+{
+"reference_id": "108086",
+"content_id": "132032",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Lamb of God",
+"language": "eng"
+},
+{
+"reference_id": "108256",
+"content_id": "132202",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sacrifices",
+"language": "eng"
+},
+{
+"reference_id": "108530",
+"content_id": "132476",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "cross",
+"language": "eng"
+},
+{
+"reference_id": "108313",
+"content_id": "132259",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "angels",
+"language": "eng"
+},
+{
+"reference_id": "108053",
+"content_id": "131999",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "apostle",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133028",
+"reference_id": 109082,
+"version": "1.0.4",
+"title": "Revelation 6:1–8",
+"media_type": "Text",
+"index_reference": "66006001-66006008",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Seven <data class=\"resource-ref\" data-content-id=\"132468\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">seals</data> kept the scroll shut. They had to be opened to show God’s plan for heaven and earth.</p><p>This was the first set of seven things that prepared the <data class=\"resource-ref\" data-content-id=\"132161\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">world</data> for God’s plan. What John saw in the vision in heaven led to things that happened on earth.</p><p>When the Lamb opened the first four seals, John saw horses with their riders. These were signs of evil things that happen and that <data class=\"resource-ref\" data-content-id=\"132148\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">human beings</data> do to one another.</p><p>Humans seek to have victory over one another like the rider on the white horse. Like the rider on the red horse, they destroy <data class=\"resource-ref\" data-content-id=\"132157\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">peace</data>. Like the rider on the black horse, they deal with money unfairly. Like the rider on the pale horse, they destroy and <data class=\"resource-ref\" data-content-id=\"132169\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">murder</data> one another.</p><p>The Lamb didn’t send these troubles to the earth. The opened seals revealed or uncovered how evil things already were on earth. Yet the Lamb and the four living creatures made something clear. God has authority over the world no matter how evil it is.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66006001",
+"start_ref_usfm": "REV 6:1",
+"end_ref": "66006008",
+"end_ref_usfm": "REV 6:8"
+}
+],
+"resource": [
+{
+"reference_id": "108522",
+"content_id": "132468",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "seals",
+"language": "eng"
+},
+{
+"reference_id": "108215",
+"content_id": "132161",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "world",
+"language": "eng"
+},
+{
+"reference_id": "108202",
+"content_id": "132148",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "human beings",
+"language": "eng"
+},
+{
+"reference_id": "108211",
+"content_id": "132157",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "peace",
+"language": "eng"
+},
+{
+"reference_id": "108223",
+"content_id": "132169",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "murder",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133029",
+"reference_id": 109083,
+"version": "1.0.4",
+"title": "Revelation 6:9–17",
+"media_type": "Text",
+"index_reference": "66006009-66006017",
+"language": "eng",
+"review_level": "None",
+"content": "<p>When the fifth seal was opened, John saw souls who were begging God for justice. The soul is the <data class=\"resource-ref\" data-content-id=\"132408\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">spiritual</data> part of a human being. These were people who had been killed for following Jesus. They waited under the <data class=\"resource-ref\" data-content-id=\"132128\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">golden altar</data>. They were waiting for God to bring <data class=\"resource-ref\" data-content-id=\"132179\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">judgement</data> against the people who had killed them.</p><p>When the sixth seal was opened, things happened on earth that scared people. The things that John described were common signs in apocalyptic writings. They were signs of important events that brought about big changes in people’s lives. Everyone on earth was afraid and trying to hide. They realised that <data class=\"resource-ref\" data-content-id=\"132446\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God’s anger</data> isn’t like the anger of human beings. The Lamb’s anger is against everything that opposes God. His anger doesn’t harm people who trust in him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66006009",
+"start_ref_usfm": "REV 6:9",
+"end_ref": "66006017",
+"end_ref_usfm": "REV 6:17"
+}
+],
+"resource": [
+{
+"reference_id": "108462",
+"content_id": "132408",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "spiritual",
+"language": "eng"
+},
+{
+"reference_id": "108182",
+"content_id": "132128",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "golden altar",
+"language": "eng"
+},
+{
+"reference_id": "108233",
+"content_id": "132179",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "judgement",
+"language": "eng"
+},
+{
+"reference_id": "108500",
+"content_id": "132446",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God’s anger",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133030",
+"reference_id": 109084,
+"version": "1.0.4",
+"title": "Revelation 7:1–17",
+"media_type": "Text",
+"index_reference": "66007001-66007017",
+"language": "eng",
+"review_level": "None",
+"content": "<p>Before the Lamb opened the seventh seal on the scroll, John saw a different seal. It was God’s official seal. Whatever was marked with this seal belonged to God.</p><p>With his ears John heard the <data class=\"resource-ref\" data-content-id=\"132129\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">number</data> of people that the angels marked with God’s seal. It was <data class=\"resource-ref\" data-content-id=\"132130\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">144,000</data> and the people were from the <data class=\"resource-ref\" data-content-id=\"132232\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">12 tribes</data> of Israel.</p><p>Then with his eyes John saw the huge crowd of God’s people. They were from all times and places and there were too many to count. The Lamb’s <data class=\"resource-ref\" data-content-id=\"132261\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">blood</data> was the seal of God that they had been marked with. This meant that these people believed the good news about Jesus’ sacrifice on the cross. Having this mark meant that God would bring them safely through suffering.</p><p>The elder was talking about the suffering that would come on <data class=\"resource-ref\" data-content-id=\"132001\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">judgement day</data>. The four angels holding back the winds were a picture of that judgement. Being sealed as God’s people doesn’t mean that believers won’t suffer. It doesn’t mean that they won’t be killed for following Jesus. But it means that the Lamb will guide them as their <data class=\"resource-ref\" data-content-id=\"132224\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">shepherd</data>. It means that God will comfort them and provide everything that they need. It means that they will be part of the crowd that worships God for ever.</p><p>John saw God’s people standing around the Lamb and around God’s throne. Together with the angels, the elders and the living creatures, they were praising God. This was a picture of what would happen after God had judged all things. It was a picture of heaven and earth after God had made all things new. It was a picture of the <data class=\"resource-ref\" data-content-id=\"132489\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">new creation</data>. This vision would bring hope and strength to the churches John was writing to.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66007001",
+"start_ref_usfm": "REV 7:1",
+"end_ref": "66007017",
+"end_ref_usfm": "REV 7:17"
+}
+],
+"resource": [
+{
+"reference_id": "108183",
+"content_id": "132129",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "number",
+"language": "eng"
+},
+{
+"reference_id": "108184",
+"content_id": "132130",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "144,000",
+"language": "eng"
+},
+{
+"reference_id": "108286",
+"content_id": "132232",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "12 tribes",
+"language": "eng"
+},
+{
+"reference_id": "108315",
+"content_id": "132261",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "blood",
+"language": "eng"
+},
+{
+"reference_id": "108055",
+"content_id": "132001",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "judgement day",
+"language": "eng"
+},
+{
+"reference_id": "108278",
+"content_id": "132224",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "shepherd",
+"language": "eng"
+},
+{
+"reference_id": "108543",
+"content_id": "132489",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "new creation",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133031",
+"reference_id": 109085,
+"version": "1.0.4",
+"title": "Revelation 8:1–5",
+"media_type": "Text",
+"index_reference": "66008001-66008005",
+"language": "eng",
+"review_level": "None",
+"content": "<p>When the seventh seal was opened, there was a time of silence in John’s vision. During this quiet, the <data class=\"resource-ref\" data-content-id=\"132173\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prayers</data> of God’s people were heard in heaven.</p><p>The prayers looked to John like an offering made with <data class=\"resource-ref\" data-content-id=\"132317\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">incense</data> by an angel. The answer to the prayers looked like fire from the golden altar. The angel threw the fire to earth.</p><p>The incense and fire were a sign of how prayer is powerful and important. In James 5:16 James had written about the power of believers’ prayers. The incense and fire were also a sign of how God answers his people’s prayers. Their prayers are part of how God’s plans for the world move forward.</p><p>When the seventh seal was opened, a group of angels received seven trumpets. John’s visions were based on <data class=\"resource-ref\" data-content-id=\"132131\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">groups of sevens</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66008001",
+"start_ref_usfm": "REV 8:1",
+"end_ref": "66008005",
+"end_ref_usfm": "REV 8:5"
+}
+],
+"resource": [
+{
+"reference_id": "108227",
+"content_id": "132173",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prayers",
+"language": "eng"
+},
+{
+"reference_id": "108371",
+"content_id": "132317",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "incense",
+"language": "eng"
+},
+{
+"reference_id": "108185",
+"content_id": "132131",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "groups of sevens",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133032",
+"reference_id": 109086,
+"version": "1.0.4",
+"title": "Revelation 8:6–13",
+"media_type": "Text",
+"index_reference": "66008006-66008013",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John recorded the first four <data class=\"resource-ref\" data-content-id=\"132332\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">trumpets</data> being blown one after the other.</p><p>The things that happened when the trumpets were blown were like the <data class=\"resource-ref\" data-content-id=\"132254\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">plagues</data> in <data class=\"resource-ref\" data-content-id=\"132197\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Egypt</data>.</p><p>Yet the judgement that John saw after each trumpet reached far beyond only one country.</p><p>John saw that one third of different things in the world were destroyed.</p><p>These numbers were signs. They meant that huge troubles came and much of God’s creation was destroyed.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66008006",
+"start_ref_usfm": "REV 8:6",
+"end_ref": "66008013",
+"end_ref_usfm": "REV 8:13"
+}
+],
+"resource": [
+{
+"reference_id": "108386",
+"content_id": "132332",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "trumpets",
+"language": "eng"
+},
+{
+"reference_id": "108308",
+"content_id": "132254",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "plagues",
+"language": "eng"
+},
+{
+"reference_id": "108251",
+"content_id": "132197",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Egypt",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133033",
+"reference_id": 109087,
+"version": "1.0.4",
+"title": "Revelation 9:1–12",
+"media_type": "Text",
+"index_reference": "66009001-66009012",
+"language": "eng",
+"review_level": "None",
+"content": "<p>After the fifth trumpet was blown, a pit called the <data class=\"resource-ref\" data-content-id=\"132132\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Abyss</data> was opened.</p><p>Monsters like locusts came out of the Abyss and hurt people. The monsters obeyed an angel named the Destroyer.</p><p>John wasn’t talking about a real hole deep in the ground. He wasn’t talking about real locusts that looked like monsters. The monsters and the deep pit were signs about evil and <data class=\"resource-ref\" data-content-id=\"132164\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">evil spiritual beings</data>.</p><p>They showed the terrible things that evil would do when God allowed it to. In John’s visions recorded in Revelation, God didn’t cause the harm. He allowed what was evil to do what it wanted to do.</p><p>John’s visions showed what would happen when God doesn’t hold evil back.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66009001",
+"start_ref_usfm": "REV 9:1",
+"end_ref": "66009012",
+"end_ref_usfm": "REV 9:12"
+}
+],
+"resource": [
+{
+"reference_id": "108186",
+"content_id": "132132",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Abyss",
+"language": "eng"
+},
+{
+"reference_id": "108218",
+"content_id": "132164",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "evil spiritual beings",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133034",
+"reference_id": 109088,
+"version": "1.0.4",
+"title": "Revelation 9:13–21",
+"media_type": "Text",
+"index_reference": "66009013-66009021",
+"language": "eng",
+"review_level": "None",
+"content": "<p>After the sixth trumpet was blown, a huge army attacked people. Monsters like horses killed one third of all people. The monsters and their riders came from across the <data class=\"resource-ref\" data-content-id=\"132500\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">river Euphrates</data>.</p><p>John wasn’t talking about real horses and riders attacking in that area of the world. The army of monsters and riders were pictures of things that nations fear. They fear being attacked by powerful enemies from other countries. They were also pictures of evil and evil spiritual beings. These were more signs of what happens when God doesn’t hold evil back.</p><p>Then John explained what the plagues were meant to accomplish. The plagues were warnings to get people’s attention so that they would stop sinning. People worshipped demons and statues instead of the true God. They did sinful things against other people. God wants people to turn away from their sin and to follow Jesus. But in John’s vision people didn’t <data class=\"resource-ref\" data-content-id=\"132292\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">repent</data> even after the terrible plagues.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66009013",
+"start_ref_usfm": "REV 9:13",
+"end_ref": "66009021",
+"end_ref_usfm": "REV 9:21"
+}
+],
+"resource": [
+{
+"reference_id": "108554",
+"content_id": "132500",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "river Euphrates",
+"language": "eng"
+},
+{
+"reference_id": "108346",
+"content_id": "132292",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "repent",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133035",
+"reference_id": 109089,
+"version": "1.0.4",
+"title": "Revelation 10:1–11",
+"media_type": "Text",
+"index_reference": "66010001-66010011",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John wasn’t supposed to share with others everything he saw in the visions God gave him. That was the case with what he heard when the seven thunders spoke.</p><p>Yet God did want John to share what was written on the little scroll. This was a message that one of God’s angels gave to John. In the vision, John ate the scroll. This was like when the prophet <data class=\"resource-ref\" data-content-id=\"132501\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Ezekiel</data> ate a scroll many years before (Ezekiel 3:1–4).</p><p>The scroll John ate tasted sweet but then hurt his stomach. This was a picture of how John needed to have God’s words inside of him. Then he could share them with others. John shared them in the rest of the book of Revelation.</p><p>The sweet part of the message was that God was going to save his people. The bitter part was that many people would refuse God’s <data class=\"resource-ref\" data-content-id=\"132142\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">salvation</data> and would be destroyed.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66010001",
+"start_ref_usfm": "REV 10:1",
+"end_ref": "66010011",
+"end_ref_usfm": "REV 10:11"
+}
+],
+"resource": [
+{
+"reference_id": "108555",
+"content_id": "132501",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Ezekiel",
+"language": "eng"
+},
+{
+"reference_id": "108196",
+"content_id": "132142",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "salvation",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133036",
+"reference_id": 109090,
+"version": "1.0.4",
+"title": "Revelation 11:1–14",
+"media_type": "Text",
+"index_reference": "66011001-66011014",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the vision, John shared God’s message through an <data class=\"resource-ref\" data-content-id=\"132483\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">action of prophecy</data>. He measured the temple and the <data class=\"resource-ref\" data-content-id=\"132231\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">altar</data>. This was like what happened in Ezekiel’s vision recorded in Ezekiel chapter 40. It’s also like what happened in <data class=\"resource-ref\" data-content-id=\"132457\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Zechariah</data>’s vision recorded in Zechariah 2:1–2.</p><p>Then John told a story like the <data class=\"resource-ref\" data-content-id=\"132002\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">parables</data> Jesus often told. John told it to show what God would do in the future. Two people were witnesses to God in a city where many evil things happened. Like <data class=\"resource-ref\" data-content-id=\"132246\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Moses</data>, the witnesses had power to send plagues. Like <data class=\"resource-ref\" data-content-id=\"132432\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Elijah,</data> they had power to keep rain from falling.</p><p>John also described the witnesses as lampstands. In Revelation 1:20 lampstands were a sign for the church. Like Jesus, God’s witnesses suffered and were killed for being faithful to God. Then God raised them from the dead. Just like at Jesus’ <data class=\"resource-ref\" data-content-id=\"132514\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">resurrection</data>, there was an earthquake when this happened. This led the people in the city to give glory to God. This meant that they were humble and recognised God’s authority. It meant that they turned away from worshipping <data class=\"resource-ref\" data-content-id=\"132230\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">false gods</data>. That hadn’t happened after the plagues from the first four trumpets.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66011001",
+"start_ref_usfm": "REV 11:1",
+"end_ref": "66011014",
+"end_ref_usfm": "REV 11:14"
+}
+],
+"resource": [
+{
+"reference_id": "108537",
+"content_id": "132483",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "action of prophecy",
+"language": "eng"
+},
+{
+"reference_id": "108285",
+"content_id": "132231",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "altar",
+"language": "eng"
+},
+{
+"reference_id": "108511",
+"content_id": "132457",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Zechariah",
+"language": "eng"
+},
+{
+"reference_id": "108056",
+"content_id": "132002",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "parables",
+"language": "eng"
+},
+{
+"reference_id": "108300",
+"content_id": "132246",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Moses",
+"language": "eng"
+},
+{
+"reference_id": "108486",
+"content_id": "132432",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Elijah,",
+"language": "eng"
+},
+{
+"reference_id": "108568",
+"content_id": "132514",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "resurrection",
+"language": "eng"
+},
+{
+"reference_id": "108284",
+"content_id": "132230",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "false gods",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133037",
+"reference_id": 109091,
+"version": "1.0.4",
+"title": "Revelation 11:15–19",
+"media_type": "Text",
+"index_reference": "66011015-66011019",
+"language": "eng",
+"review_level": "None",
+"content": "<p>When the seventh trumpet was blown, John once again saw heaven and God’s throne.</p><p>In Revelation 4:8, the four living creatures worshipped God. They worshipped by saying that God was, and he is, and he will come.</p><p>In Revelation 11:17, the elders worshipped God as the one who is and who was. This showed that God had already come. Jesus the Messiah had already come to earth to rule completely.</p><p>John was a witness to how this was celebrated in heaven. The temple was opened and the <data class=\"resource-ref\" data-content-id=\"132331\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">ark of the covenant</data> could be seen. This meant that creation was no longer separated from God. God’s kingdom in heaven had been made one with his rule on earth.</p><p>Next John would be shown how God would destroy those who destroy the earth. These were all who refused to accept God’s rule on earth.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66011015",
+"start_ref_usfm": "REV 11:15",
+"end_ref": "66011019",
+"end_ref_usfm": "REV 11:19"
+}
+],
+"resource": [
+{
+"reference_id": "108385",
+"content_id": "132331",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "ark of the covenant",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133038",
+"reference_id": 109092,
+"version": "1.0.4",
+"title": "Revelation 12:1–17",
+"media_type": "Text",
+"index_reference": "66012001-66012017",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John recorded a story about a woman, her child and a dragon. He made it clear that they were signs.</p><p>The woman was a sign for the people of Israel. Jesus came from the people of Israel. He was the son that John saw born in the vision.</p><p>The woman was also a sign for the church. Jesus’ followers were the rest of her children.</p><p>The dragon was the <data class=\"resource-ref\" data-content-id=\"132162\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">devil</data>. The dragon tried to kill Jesus to stop God’s plan. But Jesus was taken up to God and to his throne.</p><p>Then in heaven <data class=\"resource-ref\" data-content-id=\"132511\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Michael</data> and other angels fought against the dragon and his angels. The dragon was thrown out of heaven down to earth. He chased the woman and tried to harm her children.</p><p>This story was a way to talk about victory over sin, death and evil. Jesus was raised from the dead and returned to heaven. That was how he won this victory. It showed that Jesus had power over the devil in heaven and on earth.</p><p>Jesus’ followers share in Jesus’ victory over sin, death and evil. They have victory by believing in Jesus and sharing the good news with others. They face suffering for following Jesus faithfully. That is what was meant by the dragon chasing the woman’s children. But God provides the help they need.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66012001",
+"start_ref_usfm": "REV 12:1",
+"end_ref": "66012017",
+"end_ref_usfm": "REV 12:17"
+}
+],
+"resource": [
+{
+"reference_id": "108216",
+"content_id": "132162",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "devil",
+"language": "eng"
+},
+{
+"reference_id": "108565",
+"content_id": "132511",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Michael",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133039",
+"reference_id": 109093,
+"version": "1.0.4",
+"title": "Revelation 13:1–18",
+"media_type": "Text",
+"index_reference": "66013001-66013018",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the vision, John saw a beast come out of the <data class=\"resource-ref\" data-content-id=\"132018\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">sea</data>. He saw another beast come out of the earth. They were like the four animals Daniel saw in a vision recorded in Daniel chapter 7.</p><p>In Daniel’s vision, beasts were signs of human governments. Thrones were signs of authority and horns were signs of power. This was true for John’s vision as well. The first beast was a sign of a powerful ruler or government. The second beast was a sign of a person or group that supported them.</p><p>In Revelation 16:13 the second beast was also called a false prophet. The devil was the dragon who gave these beasts power over people. The first beast was allowed to rule for <data class=\"resource-ref\" data-content-id=\"132133\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">42 months</data>. The second beast made people worship the first beast and be marked in a certain way.</p><p>This was the opposite of when God’s servants were marked by God’s seal. The mark of the beast from the sea was the number <data class=\"resource-ref\" data-content-id=\"132134\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">666</data>. All of this was like something happening in John’s time in the lands controlled by Rome.</p><p>Authorities and rulers made people obey and worship <data class=\"resource-ref\" data-content-id=\"131993\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Rome</data> and the emperor. Those who refused to worship the Roman ruler <data class=\"resource-ref\" data-content-id=\"131980\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Caesar</data> were treated badly or killed.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66013001",
+"start_ref_usfm": "REV 13:1",
+"end_ref": "66013018",
+"end_ref_usfm": "REV 13:18"
+}
+],
+"resource": [
+{
+"reference_id": "108072",
+"content_id": "132018",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "sea",
+"language": "eng"
+},
+{
+"reference_id": "108187",
+"content_id": "132133",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "42 months",
+"language": "eng"
+},
+{
+"reference_id": "108188",
+"content_id": "132134",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "666",
+"language": "eng"
+},
+{
+"reference_id": "108047",
+"content_id": "131993",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Rome",
+"language": "eng"
+},
+{
+"reference_id": "108034",
+"content_id": "131980",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Caesar",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133040",
+"reference_id": 109094,
+"version": "1.0.4",
+"title": "Revelation 14:1–5",
+"media_type": "Text",
+"index_reference": "66014001-66014005",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John described the Lamb in ways that Psalm 2 described a certain king. This was the king that <data class=\"resource-ref\" data-content-id=\"132175\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">God chose</data> to be the <data class=\"resource-ref\" data-content-id=\"132472\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">son of God</data>.</p><p>Other kings, nations and rulers on earth tried to be more powerful than God. But God’s son ruled from Mount Zion as king over all other rulers. Mount Zion was another name for <data class=\"resource-ref\" data-content-id=\"132451\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Mount Moriah</data>.</p><p>The Lamb that John saw standing on Mount Zion was this king from Psalm 2. The two beasts in Revelation chapter 13 were like the rulers that opposed God in Psalm 2. The Lamb was joined by his faithful followers. They worshipped him with a <data class=\"resource-ref\" data-content-id=\"618264\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">new song</data>. This was a way to celebrate Jesus’ work of rescuing them from evil.</p><p>Being marked with Jesus’ name and the Father’s name showed that they belonged to Jesus. John had seen the crowd of 144,000 people before. They were a sign of all the people throughout history who are God’s faithful people. That’s what it meant that they were a first offering.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66014001",
+"start_ref_usfm": "REV 14:1",
+"end_ref": "66014005",
+"end_ref_usfm": "REV 14:5"
+}
+],
+"resource": [
+{
+"reference_id": "108229",
+"content_id": "132175",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "God chose",
+"language": "eng"
+},
+{
+"reference_id": "108526",
+"content_id": "132472",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "son of God",
+"language": "eng"
+},
+{
+"reference_id": "108505",
+"content_id": "132451",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Mount Moriah",
+"language": "eng"
+},
+{
+"reference_id": "209393",
+"content_id": "618264",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "new song",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133041",
+"reference_id": 109095,
+"version": "1.0.4",
+"title": "Revelation 14:6–13",
+"media_type": "Text",
+"index_reference": "66014006-66014013",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The first angel John saw made an announcement to everyone on earth. God is the Creator and is the only one who should be worshipped. He is going to judge the world. That message was good news for people.</p><p>The second angel announced that <data class=\"resource-ref\" data-content-id=\"132444\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Babylon</data> had fallen. This meant that Babylon had lost all its power. God judged Babylon for not accepting the good news that the first angel announced. He also judged Babylon for causing other nations to sin.</p><p>The third angel warned about judgement against all who followed and worshipped the beast. This was the beast that came out of the sea in Revelation chapter 13. Both the beast and Babylon were signs for human governments that seek complete power. These governments treat those who are faithful to Jesus badly. In John’s time, that government was Rome. John’s vision offered comfort to God’s people who were being treated unfairly. They would be blessed even if they were put to death. The Holy Spirit would give them <data class=\"resource-ref\" data-content-id=\"132158\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">rest</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66014006",
+"start_ref_usfm": "REV 14:6",
+"end_ref": "66014013",
+"end_ref_usfm": "REV 14:13"
+}
+],
+"resource": [
+{
+"reference_id": "108498",
+"content_id": "132444",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Babylon",
+"language": "eng"
+},
+{
+"reference_id": "108212",
+"content_id": "132158",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "rest",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133042",
+"reference_id": 109096,
+"version": "1.0.4",
+"title": "Revelation 14:14–20",
+"media_type": "Text",
+"index_reference": "66014014-66014020",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In Matthew 9:37–38 and John 4:35–38 Jesus had talked about the world as a harvest field. This meant that people were ready to believe in him and follow him.</p><p>In John’s vision, John saw Jesus harvest the earth’s corn. This was a picture of Jesus saving those who belong to him. John also saw an angel harvest the earth’s grapes. This could be a picture of God’s anger and judgement against those who do evil. It could also be a picture of God’s people who were put to death. Their blood was spilled as they laboured to follow Jesus faithfully.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66014014",
+"start_ref_usfm": "REV 14:14",
+"end_ref": "66014020",
+"end_ref_usfm": "REV 14:20"
+}
+],
+"resource": []
+}
+},
+{
+"content_id": "133043",
+"reference_id": 109097,
+"version": "1.0.4",
+"title": "Revelation 15:1–8",
+"media_type": "Text",
+"index_reference": "66015001-66015008",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In Revelation 14:12, John had described God’s people. They obeyed God, were faithful to Jesus and were patient.</p><p>In Revelation chapter 15, John saw them celebrating what they had been waiting for. They had been patiently waiting for God to rule completely over all things. God had freed them from the power of the beast. They sang praises to God for being the fair ruler who does what is right.</p><p>Their song was like Moses’ song in Exodus chapter 15. Moses had praised God for freeing the Israelites from slavery in <data class=\"resource-ref\" data-content-id=\"132197\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Egypt</data>. In Moses’ song, other nations were afraid when they saw what God did. In the song of God’s people, other nations worshipped God. They worshipped him because they saw that he did what was right. Doing what was right included stopping everything that was wrong, sinful and evil.</p><p>This song was sung as the angels prepared the last seven plagues. These plagues were a sign of how God would finish judging the world.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66015001",
+"start_ref_usfm": "REV 15:1",
+"end_ref": "66015008",
+"end_ref_usfm": "REV 15:8"
+}
+],
+"resource": [
+{
+"reference_id": "108251",
+"content_id": "132197",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Egypt",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133044",
+"reference_id": 109098,
+"version": "1.0.4",
+"title": "Revelation 16:1–21",
+"media_type": "Text",
+"index_reference": "66016001-66016021",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The seven bowls of God’s anger were signs of God’s final judgements. The first four bowls brought judgement against people who refused to give God glory. An angel praised God for judging fairly. God was finally punishing those who put his people to death. This is what the souls under the altar in Revelation 6:9–11 had been waiting for.</p><p>The last three bowls brought judgement against the beast and the nations that followed it. As John described these things, he recorded a message from Jesus. Jesus reminded believers to pay attention and to be ready for him to come. He didn’t want his followers to be tricked by evil spirits into following the beast. These evil spiritual beings looked like frogs to John.</p><p>The judgement against the beast came through splitting its kingdom apart. Those who followed the beast didn’t repent and turn to God. They continued to speak evil things against God. The nations gathered for a war. John didn’t record a battle. Instead, God declared that his plan had been accomplished with the seventh bowl.</p><p>The bowls were the third set of sevens in John’s visions. God’s judgements had started with the seven seals. They had continued with the seven trumpets. With the seven bowls an angel announced that God’s judgement was done.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66016001",
+"start_ref_usfm": "REV 16:1",
+"end_ref": "66016021",
+"end_ref_usfm": "REV 16:21"
+}
+],
+"resource": []
+}
+},
+{
+"content_id": "133045",
+"reference_id": 109099,
+"version": "1.0.4",
+"title": "Revelation 17:1–18",
+"media_type": "Text",
+"index_reference": "66017001-66017018",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The third vision John wrote about occurred in a desert. The vision was of a woman sitting on a beast. This vision described more about what happened before God’s judgement was finished in Revelation 16:17.</p><p>The woman was a <data class=\"resource-ref\" data-content-id=\"132481\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">prostitute</data> and was a sign for the city of Babylon. Babylon was a sign for the government of Rome. The power behind Babylon came from the beast. This was the same beast that John saw come out of the sea in Revelation chapter 13.</p><p>This vision uncovered the evil practices of powerful groups and governments like Babylon. They appear fancy, rich and successful. They have a lot of authority on earth. Yet their power is based on doing evil deeds. They put to death those who oppose them. This includes Jesus’ followers.</p><p>The angel explained to John that Babylon’s power wouldn’t last for ever. Rulers who used to support Babylon would destroy it.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66017001",
+"start_ref_usfm": "REV 17:1",
+"end_ref": "66017018",
+"end_ref_usfm": "REV 17:18"
+}
+],
+"resource": [
+{
+"reference_id": "108535",
+"content_id": "132481",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "prostitute",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133046",
+"reference_id": 109100,
+"version": "1.0.4",
+"title": "Revelation 18:1–24",
+"media_type": "Text",
+"index_reference": "66018001-66018024",
+"language": "eng",
+"review_level": "None",
+"content": "<p>An angel announced that Babylon had fallen. This meant that Babylon’s power was destroyed for ever.</p><p>God called his people out of Babylon. He didn’t want them to suffer when that place was destroyed. They were set free from a place where sin and evil were celebrated.</p><p>John recorded the songs of people who were sad about Babylon being destroyed. This included the groups who had benefited from Babylon. Kings, traders, merchants, sea captains and sailors had all become rich because of Babylon. Yet Babylon’s wealth and power were based on evil practices.</p><p>These included taking over other nations, stealing from them and selling human beings as <data class=\"resource-ref\" data-content-id=\"132204\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">slaves</data>. It included using more goods than they needed. It included killing people and serving false gods.</p><p>God’s people were very glad that God destroyed Babylon’s power. An angel threw a millstone into the sea. This action was a sign. It showed that in God’s kingdom there would never be groups or governments like Babylon.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66018001",
+"start_ref_usfm": "REV 18:1",
+"end_ref": "66018024",
+"end_ref_usfm": "REV 18:24"
+}
+],
+"resource": [
+{
+"reference_id": "108258",
+"content_id": "132204",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "slaves",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133047",
+"reference_id": 109101,
+"version": "1.0.4",
+"title": "Revelation 19:1–10",
+"media_type": "Text",
+"index_reference": "66019001-66019010",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In John’s vision, everyone in heaven celebrated that God had judged Babylon and destroyed it. The crowd that John had seen in Revelation chapter 7 shouted Hallelujah! In the Hebrew language hallelujah means praise the Lord.</p><p>The smoke that rose from Babylon being burnt never stopped. This was a picture of complete and final judgement. After that, people never had to be afraid of any power like Babylon ever again. This was because God had begun to rule as King over everything.</p><p>The crowd sang about the <data class=\"resource-ref\" data-content-id=\"132152\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">marriage</data> between the Lamb and his bride. The wedding feast was a sign of God’s kingdom coming to earth. In Matthew 22:1–14 Jesus had described himself as the groom in that feast. The bride is a sign for Jesus’ followers and the church.</p><p>The Lamb’s bride was the opposite of how John had described Babylon. The bride’s <data class=\"resource-ref\" data-content-id=\"132006\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">good works</data> and <data class=\"resource-ref\" data-content-id=\"131990\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">holy living</data> were seen by all.</p><p>John was so excited about the wedding feast that he worshipped the angel who announced it. But the angel was a faithful servant of God. He reminded John to <data class=\"resource-ref\" data-content-id=\"132278\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">worship only God</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66019001",
+"start_ref_usfm": "REV 19:1",
+"end_ref": "66019010",
+"end_ref_usfm": "REV 19:10"
+}
+],
+"resource": [
+{
+"reference_id": "108206",
+"content_id": "132152",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "marriage",
+"language": "eng"
+},
+{
+"reference_id": "108060",
+"content_id": "132006",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "good works",
+"language": "eng"
+},
+{
+"reference_id": "108044",
+"content_id": "131990",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "holy living",
+"language": "eng"
+},
+{
+"reference_id": "108332",
+"content_id": "132278",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "worship only God",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133048",
+"reference_id": 109102,
+"version": "1.0.4",
+"title": "Revelation 19:11–21",
+"media_type": "Text",
+"index_reference": "66019011-66019021",
+"language": "eng",
+"review_level": "None",
+"content": "<p>John continued seeing more about what had happened before God’s judgement was finished in Revelation 16:17.</p><p>Jesus stopped the power of the beast, the false prophet and all who followed them. John described this like a battle. The battle was different from how wars were usually fought in John’s time.</p><p>Before the battle, Jesus’ robe was already dipped in blood. This was a sign of how his victory came through his sacrifice on the cross.</p><p>Jesus’ army wore clean and fine linen like the Lamb’s bride did in Revelation 19:8. This showed that they shared in Jesus’ victory by following his example for living.</p><p>Jesus’ only weapon was the sword from his mouth. Speaking the truth about God was how he stopped his enemies. Everyone who opposed Jesus was destroyed.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66019011",
+"start_ref_usfm": "REV 19:11",
+"end_ref": "66019021",
+"end_ref_usfm": "REV 19:21"
+}
+],
+"resource": []
+}
+},
+{
+"content_id": "133049",
+"reference_id": 109103,
+"version": "1.0.4",
+"title": "Revelation 20:1–15",
+"media_type": "Text",
+"index_reference": "66020001-66020015",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the vision, John saw the end of Satan and of all evil. Satan is another name for the devil.</p><p>First, an angel locked the devil in the Abyss for <data class=\"resource-ref\" data-content-id=\"132135\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">1,000 years</data>. Then the devil tried again to oppose God. John saw this take place as a battle that the devil organised. He told lies everywhere on earth and convinced the nations to oppose God and God’s people.</p><p>John didn’t record a battle. Instead, God sent fire. This stopped those who wanted to destroy God’s plans and his people. Then the devil was thrown into the lake of fire. This was the judgement of second death. That’s how John described the way that God destroyed the devil’s power for ever.</p><p>The same thing happened to <data class=\"resource-ref\" data-content-id=\"132136\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Death and Hell</data>. After God’s judgement against the devil was completed, God judged all human beings. This was judgement day and the <data class=\"resource-ref\" data-content-id=\"132517\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">day of the Lord</data>. God’s people had been waiting for it for a very long time.</p><p>John saw that every person who had ever lived was judged. Some people had refused to worship the true God and instead worshipped the beast. They weren’t recorded in the <data class=\"resource-ref\" data-content-id=\"132290\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">book of life</data>. Instead of enjoying God’s kingdom they joined the beast in the lake of fire.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66020001",
+"start_ref_usfm": "REV 20:1",
+"end_ref": "66020015",
+"end_ref_usfm": "REV 20:15"
+}
+],
+"resource": [
+{
+"reference_id": "108189",
+"content_id": "132135",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "1,000 years",
+"language": "eng"
+},
+{
+"reference_id": "108190",
+"content_id": "132136",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Death and Hell",
+"language": "eng"
+},
+{
+"reference_id": "108571",
+"content_id": "132517",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "day of the Lord",
+"language": "eng"
+},
+{
+"reference_id": "108344",
+"content_id": "132290",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "book of life",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133050",
+"reference_id": 109104,
+"version": "1.0.4",
+"title": "Revelation 21:1–8",
+"media_type": "Text",
+"index_reference": "66021001-66021008",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the vision, John saw things that Isaiah and other writers in the Bible had talked about. He saw God make heaven and earth new. The world was no longer the way it had been before. There was no sadness, pain or death. This was because God had destroyed sin, death and all evil.</p><p>God lived fully with people in what John called the Holy City. John also called it the <data class=\"resource-ref\" data-content-id=\"132495\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">new Jerusalem</data>. John had seen it come down from heaven. This showed that heaven and earth were made one.</p><p>God the Father was the one sitting on the throne. He spoke to John. This hadn’t happened before in the visions. It showed that John could boldly approach God’s throne. The writer of Hebrews had talked about this in Hebrews 4:16. God’s words and promises to his people were tender. His children were safe from all those who had caused harm by their evil deeds.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66021001",
+"start_ref_usfm": "REV 21:1",
+"end_ref": "66021008",
+"end_ref_usfm": "REV 21:8"
+}
+],
+"resource": [
+{
+"reference_id": "108549",
+"content_id": "132495",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "new Jerusalem",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133051",
+"reference_id": 109105,
+"version": "1.0.4",
+"title": "Revelation 21:9–21",
+"media_type": "Text",
+"index_reference": "66021009-66021021",
+"language": "eng",
+"review_level": "None",
+"content": "<p>The fourth vision that John wrote about occurred on a huge and high mountain. The vision was of the Holy City of the new heaven and the new earth.</p><p>John called this city by several names. He called it Jerusalem and the new Jerusalem. He called it the bride and wife of the Lamb.</p><p>This was the city that the writer of Hebrews talked about in Hebrews 11:10 and 16. God had prepared it for those who had faith in him. It was the opposite of the city of Babylon that God had destroyed.</p><p>The Holy City was full of God’s glory. John saw this glory through the way the city shone with valuable jewels and gold.</p><p>The city was as long as it was high and wide. It had the same shape as the <data class=\"resource-ref\" data-content-id=\"132311\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Most Holy Room</data> of the temple. This was a sign of how people could now fully live together with God.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66021009",
+"start_ref_usfm": "REV 21:9",
+"end_ref": "66021021",
+"end_ref_usfm": "REV 21:21"
+}
+],
+"resource": [
+{
+"reference_id": "108365",
+"content_id": "132311",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Most Holy Room",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133052",
+"reference_id": 109106,
+"version": "1.0.4",
+"title": "Revelation 21:22–22:5",
+"media_type": "Text",
+"index_reference": "66021022-66022005",
+"language": "eng",
+"review_level": "None",
+"content": "<p>In the vision, nothing separated God and the Lamb from God’s people anymore. There was no need for a temple because the entire city was <data class=\"resource-ref\" data-content-id=\"132307\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">holy</data>.</p><p>The purpose of the city’s gates wasn’t to protect the city against attacks. The gates welcomed the kings and nations who came to worship God and the Lamb.</p><p>The river John saw was like the river Ezekiel had seen. Ezekiel’s vision was recorded in Ezekiel 47:1–12. The river was the water of life. That is another name for <data class=\"resource-ref\" data-content-id=\"132505\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">living water</data>. God had offered this water in Revelation 21:6. He would give it for free to anyone who asked for it.</p><p>The <data class=\"resource-ref\" data-content-id=\"132163\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">tree of life</data> grew on both sides of the river. This showed that the city was also a new <data class=\"resource-ref\" data-content-id=\"132153\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Garden of Eden</data>. All nations could always eat from the tree of life’s fruit. Eating it brought healing.</p><p>The curse was no more. This was the curse talked about in Genesis chapter 3. It was the way that all of creation suffered after human beings sinned. In the new creation, human beings served God and were <data class=\"resource-ref\" data-content-id=\"132155\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">rulers</data> together with him.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66021022",
+"start_ref_usfm": "REV 21:22",
+"end_ref": "66022005",
+"end_ref_usfm": "REV 22:5"
+}
+],
+"resource": [
+{
+"reference_id": "108361",
+"content_id": "132307",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "holy",
+"language": "eng"
+},
+{
+"reference_id": "108559",
+"content_id": "132505",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "living water",
+"language": "eng"
+},
+{
+"reference_id": "108217",
+"content_id": "132163",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "tree of life",
+"language": "eng"
+},
+{
+"reference_id": "108207",
+"content_id": "132153",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Garden of Eden",
+"language": "eng"
+},
+{
+"reference_id": "108209",
+"content_id": "132155",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "rulers",
+"language": "eng"
+}
+]
+}
+},
+{
+"content_id": "133053",
+"reference_id": 109107,
+"version": "1.0.4",
+"title": "Revelation 22:6–21",
+"media_type": "Text",
+"index_reference": "66022006-66022021",
+"language": "eng",
+"review_level": "None",
+"content": "<p>An angel made it clear that the visions John had seen were from God. This filled John with so much wonder that he tried to worship the angel. But the angel reminded John that only God was to be worshipped.</p><p>He also told John to share the words of the prophecy he had been given. Three times John recorded Jesus’ promises about his return. Jesus also invited everyone to wash their robes. This was a way of talking about people no longer living in their old ways. Instead they were to follow Jesus’ example for living.</p><p>When people trust in Jesus, they can eat freely from the tree of life. The Holy Spirit and the church invite everyone to come to Jesus. Then people can drink freely of the water of life.</p><p>John urged the believers to pay attention to the prophecy he had written down. Hearing it and turning to God would bring blessing. John said <data class=\"resource-ref\" data-content-id=\"132137\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">Amen</data> to Jesus’ promise to come back to earth. John closed his letter to the churches in Asia with a blessing about Jesus’ <data class=\"resource-ref\" data-content-id=\"132181\" data-resource-code=\"BiblicaStudyNotesKeyTerms\" data-language=\"eng\">grace</data>.</p>",
+"associations": {
+"passage": [
+{
+"start_ref": "66022006",
+"start_ref_usfm": "REV 22:6",
+"end_ref": "66022021",
+"end_ref_usfm": "REV 22:21"
+}
+],
+"resource": [
+{
+"reference_id": "108191",
+"content_id": "132137",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "Amen",
+"language": "eng"
+},
+{
+"reference_id": "108235",
+"content_id": "132181",
+"resource_code": "BiblicaStudyNotesKeyTerms",
+"label": "grace",
+"language": "eng"
+}
+]
+}
+}
+]

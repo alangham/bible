@@ -2306,6 +2306,15 @@ As built, and accepted by the designer:
 - `scripts/build-study-notes.mjs` imports a TypeScript file. It needs Node 22.18 or newer.
 - The largest study file is `psalms.json`: 411,838 bytes, and 118,895 bytes with gzip.
 
-From the report of Claude Code, not checked by the designer: 324 unit tests and 555 tests in the full run pass. 54 of the 58 pairs of screenshots have 0 different pixels, and the 4 other pairs differ only in the new row or in the new sentence of the Sources page. The verse at the top stays at its place when the reader sets the switch. The margin labels stay on their lines.
+From the report of Claude Code, not checked by the designer: 324 unit tests and 555 tests in the full run pass. 50 of the 58 pairs of screenshots have 0 different pixels, and the 8 other pairs differ only in the new row or in the new sentence of the Sources page. The first report of Claude Code said 54 and 4, and its second report corrected the numbers. The verse at the top stays at its place when the reader sets the switch. The margin labels stay on their lines.
 
-Not checked: the study notes on the public site, a real phone, and the pages of the King James Version and of the World English Bible in a browser.
+Claude Code committed Task 49 as `60f5dc0` and pushed it. After the push, the designer checked the public site in a browser on 2026-11-23, with the stored value "on":
+
+- The site serves `index-DlaclPfU.js`.
+- World English Bible, Romans 16: the last verse is 24, the chapter has 11 notes controls, and no control is for the verses 25 to 27.
+- World English Bible, Romans 14: the control "Notes on verses 22 to 23" is before the verses 24 to 26.
+- King James Version, Romans 8: the ten notes controls of section 20.8, and the first block of notes has the note labels "Verse 1" to "Verse 4".
+
+The designer removed the two stored values from the browser after the check.
+
+Not checked: a real phone.

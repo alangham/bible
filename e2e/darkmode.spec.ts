@@ -360,18 +360,19 @@ for (const vp of VIEWPORTS) {
 }
 
 test.describe('the dark mode switch, its place in the two lists', () => {
-  test('the text list: "Red letters", a thin line, and "Dark mode" as the last row', async ({ page }) => {
+  test('the text list: "Red letters", a thin line, and "Dark mode", with "Study notes" below it from Task 49', async ({ page }) => {
     await openChapter(page, WIDE, 'john', 3)
     await openSwitch(page)
     // The first child is the group of the three sizes: the first name in it is "Standard".
     const order = await textList(page).evaluate((el) => [...el.children].map((c) => (c.classList.contains('ts-rule') ? 'line' : c.querySelector('.tr-name')?.textContent)))
-    expect(order).toEqual(['Standard', 'line', 'Red letters', 'line', 'Dark mode'])
+    expect(order).toEqual(['Standard', 'line', 'Red letters', 'line', 'Dark mode', 'Study notes'])
   })
 
   test('the menu panel: "Dark mode" is the row below "Red letters", with no line between', async ({ page }) => {
     await openChapter(page, NARROW, 'john', 3)
     await openSwitch(page)
-    const order = await menuPanel(page).evaluate((el) => [...el.children].slice(0, 5).map((c) => (c.classList.contains('menu-rule') ? 'line' : c.textContent?.slice(0, 11))))
-    expect(order).toEqual(['Echo linksO', 'Text sizeSt', 'Red letters', 'Dark modeOf', 'line'])
+    // From Task 49, the row "Study notes" is below "Dark mode".
+    const order = await menuPanel(page).evaluate((el) => [...el.children].slice(0, 6).map((c) => (c.classList.contains('menu-rule') ? 'line' : c.textContent?.slice(0, 11))))
+    expect(order).toEqual(['Echo linksO', 'Text sizeSt', 'Red letters', 'Dark modeOf', 'Study notes', 'line'])
   })
 })

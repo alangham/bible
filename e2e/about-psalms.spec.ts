@@ -160,14 +160,14 @@ for (const vp of VIEWPORTS) {
       await expect(region.locator('.rd-note, .rd-note-credit')).toHaveCount(0)
     })
 
-    test('the Sources page has the words of section 20.9 and their links', async ({ page }) => {
+    test('the Sources page has the words of section 20.9, with the sentence of Task 49, and their links', async ({ page }) => {
       await page.setViewportSize(vp.size)
       await page.goto('./#/sources')
       const section = page.locator('section[aria-labelledby="sources-notes"]')
       const paragraphs = section.locator('p')
       await expect(paragraphs).toHaveCount(5)
       await expect(paragraphs.nth(2)).toHaveText(
-        'The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of “About this chapter” is from the Aquifer Open Study Notes, © 2026 Mission Mutual. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The license of both is CC BY-SA 4.0.',
+        'The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of “About this chapter” is from the Aquifer Open Study Notes, © 2026 Mission Mutual. The study notes at the verses are from the same source. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The license of both is CC BY-SA 4.0.',
       )
       await expect(paragraphs.nth(3)).toHaveText(
         'The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.',
@@ -176,8 +176,6 @@ for (const vp of VIEWPORTS) {
       const links = section.locator('p:nth-of-type(n+3) a')
       await expect(links).toHaveText(['Aquifer Open Study Notes', 'CC BY-SA 4.0', 'BibleAquifer/AquiferOpenStudyNotes'])
       expect(await links.evaluateAll((els) => els.map((e) => e.getAttribute('href')))).toEqual([SOURCE, LICENSE, SOURCE])
-      // The sentence of Task 49 is not on the page.
-      await expect(section).not.toContainText('The study notes at the verses')
     })
 
     for (const mode of ['light', 'dark'] as const) {

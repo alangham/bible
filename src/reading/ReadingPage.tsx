@@ -23,6 +23,7 @@ import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { setRedLetters, useRedLetters } from '../data/redLetters.ts'
 import { setDarkMode, useDarkMode } from '../data/darkMode.ts'
+import { setStudyNotes, useStudyNotes } from '../data/studySwitch.ts'
 import { setTextSize, TEXT_SIZES, useTextSize, type TextSize } from '../data/textSize.ts'
 import { getTranslation, setTranslation, TRANSLATIONS, useTranslation, type Translation } from '../data/translation.ts'
 import { usePageTitle } from '../pageTitle.ts'
@@ -249,6 +250,35 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
     if (place && column) restorePlace(column, place)
   }, [textSize])
 
+  // The switch "Study notes": the verse at the top of the page stays at the same place. TopBar takes the place before
+  // the change. Each chapter calls onStudyShown when its notes controls change: at once for the change to off, and
+  // after the study file loads for the change to on. The place is kept for KEEP_MS, or until the reader scrolls or
+  // reads on. docs/DESIGN.md section 20.7.
+  const studyPlace = useRef<KeptPlace | null>(null)
+  const stopStudyWatch = useRef<(() => void) | null>(null)
+  const dropStudyPlace = useCallback(() => {
+    studyPlace.current = null
+    stopStudyWatch.current?.()
+    stopStudyWatch.current = null
+  }, [])
+  const keepStudyPlace = useCallback(() => {
+    dropStudyPlace()
+    const place = topVerse(getTranslation())
+    if (!place) return
+    studyPlace.current = place
+    for (const e of READER_EVENTS) window.addEventListener(e, dropStudyPlace, { capture: true, passive: true })
+    stopStudyWatch.current = () => {
+      for (const e of READER_EVENTS) window.removeEventListener(e, dropStudyPlace, { capture: true })
+    }
+  }, [dropStudyPlace])
+  useEffect(() => dropStudyPlace, [dropStudyPlace])
+  const onStudyShown = useCallback(() => {
+    const place = studyPlace.current
+    const column = document.querySelector<HTMLElement>('.rd-column')
+    if (!place || !column) return
+    if (Date.now() - place.at > KEEP_MS || !restorePlace(column, place)) dropStudyPlace()
+  }, [dropStudyPlace])
+
   // A chapter shows new text. After a change of the translation, the kept verse goes back to its place,
   // before the browser paints. When each chapter that was on the page shows the new translation, the
   // place is not kept.
@@ -290,11 +320,12 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
           onTranslation={(t) => keepPlace(topVerse(t))}
           // A change of the text size does not use the translation field of the place. topVerse needs one.
           onTextSize={() => (sizePlace.current = topVerse(getTranslation()))}
+          onStudyNotes={keepStudyPlace}
         />
       )}
       <TrailBar books={books} onGo={open} />
       {start && (
-        <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onTextShown={onTextShown} onLink={onLink} onReadWith={onReadWith} />
+        <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onTextShown={onTextShown} onStudyShown={onStudyShown} onLink={onLink} onReadWith={onReadWith} />
       )}
       {popup && <LinkPopup key={popup.anchor.dataset.link} books={books} end={popup.end} reference={popup.reference} anchor={popup.anchor} layout={layout} onGo={onGo} onClose={closePopup} />}
     </div>
@@ -310,6 +341,8 @@ interface TopBarProps {
   onTranslation: (t: Translation) => void
   /** The reader selected a different text size. The page still shows the old size. */
   onTextSize: () => void
+  /** The reader uses the switch "Study notes". The page still shows the old state. */
+  onStudyNotes: () => void
 }
 
 /**
@@ -349,13 +382,14 @@ function Check({ on }: { on: boolean }) {
   )
 }
 
-function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: TopBarProps) {
+function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize, onStudyNotes }: TopBarProps) {
   const [panel, setPanel] = useState<Panel | null>(null)
   const [listLeft, setListLeft] = useState<number | null>(null)
   const reducedMotion = useReducedMotion()
   const echoOn = useEchoLinks()
   const redOn = useRedLetters()
   const darkOn = useDarkMode()
+  const studyOn = useStudyNotes()
   const translation = useTranslation()
   const textSize = useTextSize()
   const whereRef = useRef<HTMLButtonElement>(null)
@@ -433,6 +467,11 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
     setPanel(null)
     sizeRef.current?.focus()
     changeTextSize(size)
+  }
+  // The switch "Study notes": the place of the top verse is taken first. The list or the panel stays open.
+  const changeStudyNotes = () => {
+    onStudyNotes()
+    setStudyNotes(!studyOn)
   }
   // A size in the menu panel: the text has the new size, and the panel stays open.
   const changeTextSize = (size: TextSize) => {
@@ -608,6 +647,15 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
               {darkOn ? 'On' : 'Off'}
             </span>
           </button>
+          {/* The switch "Study notes", the row below "Dark mode", in the form of the dark mode switch. A click changes
+              the state, and the list stays open. docs/DESIGN.md section 20.7. */}
+          <button type="button" className="tr-row ts-study" aria-pressed={studyOn} onClick={changeStudyNotes}>
+            <Check on={false} />
+            <span className="tr-name">Study notes</span>
+            <span className="ts-state" aria-hidden="true">
+              {studyOn ? 'On' : 'Off'}
+            </span>
+          </button>
         </div>
       )}
       {layout === 'narrow' && (
@@ -646,6 +694,14 @@ function TopBar({ place, layout, onOpenChapter, onTranslation, onTextSize }: Top
               {darkOn ? 'On' : 'Off'}
             </span>
           </button>
+          {/* The switch "Study notes", the row below "Dark mode". A tap changes the state, and the panel stays open.
+              docs/DESIGN.md section 20.7. */}
+          <button type="button" className="menu-row" aria-pressed={studyOn} onClick={changeStudyNotes}>
+            Study notes
+            <span className="menu-state" aria-hidden="true">
+              {studyOn ? 'On' : 'Off'}
+            </span>
+          </button>
           <div className="menu-rule" aria-hidden="true" />
         </MenuPanel>
       )}
@@ -660,11 +716,13 @@ interface ReadingScrollProps {
   onCurrent: (place: ChapterPlace, first: boolean) => void
   /** A chapter shows new text. */
   onTextShown: () => void
+  /** The notes controls of a chapter changed. */
+  onStudyShown: () => void
   onLink: (end: LinkEnd, control: HTMLElement, reference?: LineReference) => void
   onReadWith: (from: ChapterRef, to: ChapterRef) => void
 }
 
-function ReadingScroll({ books, intros, start, onCurrent, onTextShown, onLink, onReadWith }: ReadingScrollProps) {
+function ReadingScroll({ books, intros, start, onCurrent, onTextShown, onStudyShown, onLink, onReadWith }: ReadingScrollProps) {
   const [chapters, setChapters] = useState<ChapterPlace[]>(() => [{ book: start.book, n: start.n }])
   const [loaded, setLoaded] = useState<ReadonlySet<string>>(() => new Set())
   const echoOn = useEchoLinks()
@@ -801,6 +859,7 @@ function ReadingScroll({ books, intros, start, onCurrent, onTextShown, onLink, o
           marginLabels={marginLabels}
           onLoaded={onLoaded}
           onTextShown={onTextShown}
+          onStudyShown={onStudyShown}
           onLink={onLink}
           onReadWith={onReadWith}
         />

@@ -34,6 +34,11 @@ interface ChapterBodyProps {
    * the publisher gives it, for a control in that line.
    */
   onLink?: (end: LinkEnd, control: HTMLElement, reference?: LineReference) => void
+  /**
+   * The content after a block, by the index of the block: the notes control of a group of blocks, with the switch
+   * "Study notes" on. docs/DESIGN.md section 20.8. A control is never inside a line of the Bible text.
+   */
+  afterBlock?: (index: number) => ReactNode
 }
 
 function Note({ runs }: { runs: NoteRun[] }) {
@@ -46,7 +51,7 @@ function Note({ runs }: { runs: NoteRun[] }) {
   )
 }
 
-export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels, onLink }: ChapterBodyProps) {
+export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels, onLink, afterBlock }: ChapterBodyProps) {
   const visible = (ends: LinkEnd[] | undefined) => (ends ? ends.filter((e) => echoOn || e.link.type === 'quotation') : [])
   const name = (end: LinkEnd) => (books ? passageName(books, end.there) : end.there.book)
   // The first verse after each block, for the links of section headings.
@@ -210,5 +215,15 @@ export function ChapterBody({ chapter, books, marks, echoOn = true, verseLabels,
     }
   }
 
-  return <div className="chapter-body">{chapter.blocks.map(renderBlock)}</div>
+  // A fragment for each block makes no element, so the page with no content after a block is the page before Task 49.
+  return (
+    <div className="chapter-body">
+      {chapter.blocks.map((block, i) => (
+        <Fragment key={i}>
+          {renderBlock(block, i)}
+          {afterBlock?.(i)}
+        </Fragment>
+      ))}
+    </div>
+  )
 }

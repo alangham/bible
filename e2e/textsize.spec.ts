@@ -343,9 +343,10 @@ test.describe('the row "Text size" of the menu panel, narrow layout', () => {
     await menu(page).click()
     const panel = menuPanel(page)
     await expect(panel.locator('.menu-size')).toContainText('Text size')
-    // The order: "Echo links", "Text size", "Red letters" from Task 27, "Dark mode" from Task 45, the line, the links.
+    // The order: "Echo links", "Text size", "Red letters" from Task 27, "Dark mode" from Task 45, "Study notes" from
+    // Task 49, the line, the links.
     const order = await panel.evaluate((el) => [...el.children].map((c) => c.className))
-    expect(order.slice(0, 5)).toEqual(['menu-row', 'menu-size', 'menu-row', 'menu-row', 'menu-rule'])
+    expect(order.slice(0, 6)).toEqual(['menu-row', 'menu-size', 'menu-row', 'menu-row', 'menu-row', 'menu-rule'])
     const sizes = menuSizes(page).getByRole('button')
     await expect(sizes).toHaveText(['Standard', 'Large', 'Largest'])
     await expect(sizes.nth(0)).toHaveAttribute('aria-pressed', 'true')

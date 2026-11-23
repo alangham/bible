@@ -1979,7 +1979,7 @@ Not in Task 47. Arthur decided the direction on 2026-11-23. The design is not ma
 - The other Aquifer notes are a separate layer at their verses, with one switch in the top bar. This layer needs a design and pictures on the built page.
 - The reader gets no setting that selects a publisher.
 
-Item 7 of `docs/BACKLOG.md` has the facts and the open questions. From 2026-11-23, section 20 has the design of this step, and Tasks 48 and 49 build it.
+From 2026-11-23, section 20 has the design of this step, and Tasks 48 and 49 build it. Task 49 removed item 7 of `docs/BACKLOG.md`, which had the facts and the open questions. Item 8 of that file has the ideas for later.
 
 ### 19.13 Weak points, not decided, and not checked
 
@@ -2068,7 +2068,7 @@ Facts about the 66 files, from a check by the designer on 2026-11-23. The script
 - For 7 of the 8 notes, the `title` ends with ":title". These are the title notes: Psalms 7, 9, 30, 51, 57, 73, and 89.
 - The eighth note is a fault of the source: `content_id` `24105` has the `title` "Psalms 142:7" and the range from verse 1 to verse 999. The site uses verse 7 for it. This is the one exception.
 - The elements are `p`, `ul`, `ol`, `li`, `em`, `strong`, `sup`, `br`, `h3`, `a`, `data`, and `span`, and no other element.
-- The 6 `h3` elements are empty. There is 1 `a` element. 20 `p` elements are empty.
+- The 6 `h3` elements are empty. There is 1 `a` element. 20 `p` elements are empty, and 2 more `p` elements have only a `br` element.
 - The character references are `&apos;`, `&quot;`, and `&nbsp;`, and no other one.
 - No `content` has a line feed or a tab.
 
@@ -2205,9 +2205,9 @@ The values. The pictures have a smaller space above a note label, because the sc
 |---|---|
 | Control | Inrond, weight 600, 13 px, line height 20 px, the color of the group. It is at the left side of the text column. About 8 px from the last line of the group to the control, and the usual space of a paragraph below a closed control. |
 | Block | A line on the left side: 2 px, solid, the color name `--credit-line`. 14 px from the line to the text. 2 px above and 26 px below. |
-| Text of a note | Inrond, weight 400, 15 px, line height 1.5, the color name `--ink`. Words in italics are in the italic style of Inrond. |
+| Text of a note | Inrond, weight 400, 15 px, line height 1.5, the color name `--ink`. Words in italics are slanted by the browser, because Inrond has no italic file. |
 | Paragraph | 8 px below each paragraph, also in a list item. |
-| List | 20 px from the left side of the block to the text of an item. 6 px below each item. The marks of a list are those of the browser. |
+| List | 20 px from the left side of the block to the text of an item. 8 px between two items: the margin of 8 px of the paragraph in an item and the margin of 6 px of the item join, and the larger one stays. The marks of a list are those of the browser. |
 | Note label | The values of the range label of section 19.7. |
 | Short credit | The values of the note credit of section 19.7. |
 
@@ -2256,3 +2256,56 @@ Task 49 adds one sentence after "© 2026 Mission Mutual.": "The study notes at t
 - The spelling of the Aquifer notes is American. The spelling of the Biblica notes is British.
 - Not made: a picture of the switch, a picture of the study notes in a psalm, a picture of the dark mode, and a check on a real phone. Tasks 48 and 49 make screenshots of them.
 - Not checked: that the English files have the words of the adaptation with no change by a third person.
+
+### 20.12 Task 48 as built, checked on 2026-11-23
+
+Claude Code built Task 48 in the commit `f6064a3`. The designer checked these points on 2026-11-23:
+
+- The SHA-256 of section 20.3, computed by the designer from the 66 files in `public/data/study/` and from the 66 files in `dist/data/study/`: both are the number of section 20.3, with 16,923 notes and 4,584,237 bytes.
+- The SHA-256 of section 20.5, computed by the designer from `about-psalms.json`: the number of section 20.5, with 132 psalms. Psalms 9 has the range 9:1 to 10:18, and Psalms 42 and 43 have the range 42:1 to 43:5.
+- The elements in the 66 files are `ul`, `li`, `p`, `em`, `ol`, `strong`, `br`, and `sup`, and no other element. The content is a tree, not a string of HTML.
+- The public site, in a browser: it serves `index-DMgdoikL.js`. The open panel of Psalms 3 has the range label "Psalms 3:1–8", one paragraph, and the Aquifer credit with its exact words and its two addresses. The open panel of Psalms 4 has four list items.
+- The screenshot `docs/screenshots/task-48/psalms-4-list-390.png`.
+
+As built, and accepted by the designer:
+
+- The site removes 22 `p` elements with no text: the 20 of section 20.3, and 2 that have only a `br` element.
+- The space between two list items is 8 px. The margin of the paragraph in an item and the margin of the item join, and the larger one stays. The table of section 20.8 says this from 2026-11-23.
+- Inrond has no italic file. The browser slants the upright letters, as in the pictures of the design.
+- The pictures of the design of Psalms 3 have no read-with list and no link in the line of the reference. The cause is the workspace of the designer: it did not have the link files of Psalms. The site is correct.
+- The Sources page has typographic quotation marks, as in section 19.14.
+- `public/data/study/` has 5,788,414 bytes, and 1,914,911 bytes with gzip. `dist` has 26,632,430 bytes.
+
+From the report of Claude Code, not checked by the designer: 303 unit tests and 526 tests in the full run pass. The pairs of Psalms 23 and of Genesis 22 have 0 different pixels. The reviewer agent compared the 16,923 notes with the source files and found 0 differences.
+
+Not tested: the case where the Biblica notes file of Psalms does not load.
+
+### 20.13 Task 49 as built, checked on 2026-11-23 before the commit
+
+Claude Code built Task 49 and stopped before the commit, with one question. The designer checked these points on 2026-11-23, in the files of the working folder and on the build in `dist`:
+
+- From the 66 files in `public/data/study/`: 10,562 groups with a note, 3,663 of them with one verse, 16,792 notes in the groups with no note two times, 1,186 chapters, the median 8, and Mark 14, Matthew 26, and Luke 22 with 35, 32, and 31. The ten groups of Romans 8 have the verses of section 20.8. The SHA-256 of section 20.3 is still correct.
+- On the build, at 1440 by 900 px and at 390 by 844 px, with no stored value: Romans 8 has no notes control, and the page makes no request for a study file.
+- On the build, with the stored value "on": Romans 8 has the ten notes controls with their words, and the page gets `romans.json` one time. The first block of notes has the note labels "Verse 1" to "Verse 4", the words "the flesh" in italics, and the short credit with its exact words and its three addresses. The name of the block for a screen reader is "Notes on verses 1 to 4 of Romans 8". The page has no horizontal scroll at 390 px. Psalms 3 has the three notes controls of section 20.8. Exodus 36 has none.
+- The screenshots `switch-1440.png`, `switch-390.png`, and `psalms-3-second-block-390.png` of `docs/screenshots/task-49/`.
+
+The answer to the question of Claude Code, selected by the designer:
+
+- The World English Bible has the words of Romans 16:25–27 as Romans 14:24–26. So the group of Romans 16, verses 25 to 27, has no block on a page of the World English Bible. That page shows no notes control for this group, and its 3 notes do not show there. This follows the rule of section 13.4 for the links. The pages of the two other translations show the control. This is the only group with no block in a translation.
+
+As built, and accepted by the designer:
+
+- The place of a notes control in the King James Version and in the World English Bible: each block of the page goes with its Berean block, and the control is after the last block of the group. The verses 24 to 26 of Romans 14 of the World English Bible are in no group, so the control of the verses 22 to 23 is before them.
+- The rules of section 20.8 are in `src/data/studyGroups.ts`. The script runs them, and each study file has the field `groups`. The page does not run them.
+- In a block of notes, the notes are in the order of the source file. So the first block of Psalms 7 has "Verse 1" before "Title of the psalm".
+- The row "Study notes" has no thin line above it. It is in one part of the list with the row "Dark mode".
+- A note label is a paragraph, not a heading, because the section headings of the Bible text are headings.
+- The notes control is 8 px below the last line of its group, as the table says. In the pictures of the design it is 6 px lower.
+- The space of 26 px below an open block joins with the space above a section heading, and the larger one stays.
+- Six older tests changed for the new row: in `e2e/about-translations.spec.ts`, `e2e/darkmode.spec.ts`, `e2e/redletters.spec.ts`, and `e2e/textsize.spec.ts`.
+- `scripts/build-study-notes.mjs` imports a TypeScript file. It needs Node 22.18 or newer.
+- The largest study file is `psalms.json`: 411,838 bytes, and 118,895 bytes with gzip.
+
+From the report of Claude Code, not checked by the designer: 324 unit tests and 555 tests in the full run pass. 54 of the 58 pairs of screenshots have 0 different pixels, and the 4 other pairs differ only in the new row or in the new sentence of the Sources page. The verse at the top stays at its place when the reader sets the switch. The margin labels stay on their lines.
+
+Not checked: the study notes on the public site, a real phone, and the pages of the King James Version and of the World English Bible in a browser.

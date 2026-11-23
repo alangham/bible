@@ -7,7 +7,8 @@
 
 import { useId, useState, type ReactNode } from 'react'
 import { NOTE_CREDIT, rangeLabel, type BiblicaNote } from '../data/notes.ts'
-import { AQUIFER_CREDIT, type AquiferNote, type StudyNode } from '../data/studyNotes.ts'
+import { AQUIFER_CREDIT, type AquiferNote } from '../data/studyNotes.ts'
+import { StudyContent } from './StudyContent.tsx'
 
 /** The notes of a chapter: its Biblica notes, or the Aquifer note of a psalm of section 20.5. Null if a file did not load. */
 export type ChapterNotes = { kind: 'biblica'; notes: BiblicaNote[] } | { kind: 'aquifer'; note: AquiferNote } | null
@@ -52,7 +53,7 @@ export function useAboutChapter({ bookName, chapter, notes }: AboutChapterProps)
       <>
         <div className="rd-note rd-aquifer" data-note={notes.note.id}>
           <h3 className="rd-range-label">{rangeLabel(bookName, notes.note)}</h3>
-          {studyContent(notes.note.c)}
+          <StudyContent nodes={notes.note.c} />
         </div>
         {credit(AQUIFER_CREDIT)}
       </>
@@ -91,35 +92,4 @@ function credit(c: Credit) {
       {c.after}
     </p>
   )
-}
-
-/**
- * The elements of a content, with no attribute: point 1 of section 20.3. React puts each string into the page as
- * text. A name that is not of point 1 makes no element.
- */
-function studyContent(nodes: readonly StudyNode[]): ReactNode[] {
-  return nodes.map((node, i) => {
-    if (typeof node === 'string') return node
-    const [name, ...children] = node
-    switch (name) {
-      case 'p':
-        return <p key={i}>{studyContent(children)}</p>
-      case 'ul':
-        return <ul key={i}>{studyContent(children)}</ul>
-      case 'ol':
-        return <ol key={i}>{studyContent(children)}</ol>
-      case 'li':
-        return <li key={i}>{studyContent(children)}</li>
-      case 'em':
-        return <em key={i}>{studyContent(children)}</em>
-      case 'strong':
-        return <strong key={i}>{studyContent(children)}</strong>
-      case 'sup':
-        return <sup key={i}>{studyContent(children)}</sup>
-      case 'br':
-        return <br key={i} />
-      default:
-        return null
-    }
-  })
 }

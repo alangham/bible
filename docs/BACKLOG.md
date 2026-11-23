@@ -4,7 +4,7 @@ This file is the list of ideas for later. An idea here is not a task. Claude Cod
 
 Design fixes for pages that exist are in `docs/POLISH.md`, not here.
 
-When an idea is built, its item is removed from this file. The other items keep their numbers, because other files refer to them by number. Removed on 2026-11-18: item 1, a map for each book (Tasks 36 to 40); item 2, a scene of its own for some books (obsolete: the redesign of 2026-11-14 removed the paper-cut scenes); and item 6, the King James Version (Tasks 19 to 21b).
+When an idea is built, its item is removed from this file. The other items keep their numbers, because other files refer to them by number. Removed on 2026-11-18: item 1, a map for each book (Tasks 36 to 40); item 2, a scene of its own for some books (obsolete: the redesign of 2026-11-14 removed the paper-cut scenes); and item 6, the King James Version (Tasks 19 to 21b). Removed on 2026-11-23: item 7, the Aquifer Open Study Notes (Tasks 48 and 49). Its two lines "Other sources" are in item 8.
 
 ---
 
@@ -73,35 +73,13 @@ What a task for this item must do:
 
 ---
 
-## 7. The Aquifer Open Study Notes: the psalms and the notes at the verses
+## 8. More from the Aquifer sources: links in the study notes, key terms, and a dictionary
 
-Added: 2026-11-23, by Arthur and the designer.
+Added: 2026-11-23, by Task 49, from item 7 and from section 20.11 of `docs/DESIGN.md`.
 
-Idea: the second step of "About this chapter". Section 19.12 of `docs/DESIGN.md` has the direction that Arthur decided on 2026-11-23.
+Idea: links in the study notes of Tasks 48 and 49, and two more sources. These are not decided.
 
-From 2026-11-23, this idea is in work: section 20 of `docs/DESIGN.md` has the design and the answers to the open questions, and Tasks 48 and 49 build it. Task 49 removes this item.
-
-The facts on 2026-11-23, from a check by the designer:
-
-- The source is `https://github.com/BibleAquifer/AquiferOpenStudyNotes`. Its `README.md` says: an adaptation of the Tyndale Open Study Notes © 2023 Tyndale House Publishers, made by Mission Mutual, with the license CC BY-SA 4.0.
-- The English files have 16,923 notes and about 751,000 words. The Markdown files have about 9.5 MB.
-- Each of the 150 psalms has a note. 148 psalms have a note for exactly the psalm. The last verse of a psalm in this count is the largest verse number that a note names. The designer did not compare it with the Bible text.
-- 378 of the 1,189 chapters have a note for exactly the chapter.
-- In three chapters, 10 of 13 phrases that the notes quote are word for word in the Berean Standard Bible. The source does not say which translation it follows.
-- The notes explain the word "flesh" at Romans 6:19 and Romans 8:4. The Biblica notes of Romans 8 do not use the word.
-
-Two parts:
-
-1. For a psalm with no Biblica note, the panel "About this chapter" shows the Aquifer note for that psalm, with a credit for that source.
-2. The other notes show at their verses, as a separate layer, with one switch in the top bar.
-
-Open questions:
-
-1. How does a note show at its verse? Item 3 of this file, the footnotes, has the same question. The marks of the links must not be confused with it.
-2. Which two psalms have no note for exactly the psalm, and what does the panel show for them?
-3. What does the site do with a note whose range has many chapters, for example Romans 5:1 to 8:39?
-4. The notes quote the Bible. What does a page of the King James Version or of the World English Bible show?
-5. What are the words of the credit? The source is an adaptation, so the credit names Tyndale House Publishers and Mission Mutual.
+- From section 20.11 of `docs/DESIGN.md`: a reader cannot follow "See study note on 6:19" with a tap. The files have 39,112 references to a passage and 1,244 references to a different resource. Links for them are an idea for later.
 
 Other sources that the designer found on 2026-11-23. They are not decided:
 

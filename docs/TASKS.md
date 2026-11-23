@@ -3393,7 +3393,7 @@ Stop and report. Give in the report the size of the files in `public/data/study/
 
 ## Task 49. Study notes, part 2: the switch "Study notes" and the notes at the verses
 
-Status: TODO
+Status: DONE
 
 Accuracy review: no
 

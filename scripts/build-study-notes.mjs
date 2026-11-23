@@ -3,12 +3,16 @@
 //
 // Usage: node scripts/build-study-notes.mjs
 //
+// Node 22.18 or newer: the script imports the TypeScript file src/data/studyGroups.ts, and Node removes its types
+// from version 22.18. An older Node stops at the import with an error. The build of Task 49 used Node 22.20.0.
+//
 // The script reads the source files in sources/aquifer/json/, with no change: 01.content.json is Genesis, and
 // 66.content.json is Revelation. It checks each fact of section 20.3 and each number of section 20.5, and it stops
 // with an error when one does not fit. It does not guess.
 //
 // The script writes:
-//   public/data/study/<book id>.json: all the notes of the book, in the order of the source file.
+//   public/data/study/<book id>.json: all the notes of the book, in the order of the source file, and the groups of
+//   blocks with a note: section 20.8, Task 49. The two rules of section 20.8 are in src/data/studyGroups.ts.
 //   public/data/study/about-psalms.json: the 132 psalms with no Biblica note, each with its note. Section 20.5.
 //
 // The form of a note in the files:
@@ -31,6 +35,7 @@ import { createHash } from 'node:crypto'
 import { mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { gzipSync } from 'node:zlib'
+import { alignBlocks, groupOfNote, groupsOfChapter } from '../src/data/studyGroups.ts'
 
 const ROOT = join(import.meta.dirname, '..')
 const SOURCE = join(ROOT, 'sources', 'aquifer', 'json')
@@ -271,6 +276,74 @@ const facts205 = [
   ['words of the longest note', noteWords.at(-1), 151],
 ]
 
+// ---- section 20.8: the groups of blocks, and the group of blocks of each note ----
+
+const TRANSLATIONS = [
+  ['bsb', 'text'],
+  ['kjv', 'text-kjv'],
+  ['web', 'text-web'],
+]
+const aboutOf = new Map(about.map((a) => [a.psalm, a.id]))
+const groupStats = { notes: 0, onlyAbout: 0, groups: 0, oneVerse: 0, perChapter: new Map(), most: [], missing: [] }
+for (const [i, r] of result.entries()) {
+  const book = books[i]
+  const texts = TRANSLATIONS.map(([, folder]) => JSON.parse(readFileSync(join(ROOT, 'public', 'data', folder, `${book.id}.json`), 'utf8')))
+  const groups = []
+  for (const chapter of texts[0].chapters) {
+    const blocks = chapter.blocks
+    const chapterGroups = groupsOfChapter(blocks)
+    // The Berean block of each block of the two other translations: src/data/studyGroups.ts alignBlocks.
+    const aligned = texts.slice(1).map((t) => alignBlocks(t.chapters.find((c) => c.n === chapter.n).blocks, blocks))
+    const notesOf = new Map()
+    for (const note of r.notes) {
+      if (note.from[0] !== chapter.n) continue
+      const aboutHere = book.id === 'psalms' && aboutOf.get(chapter.n) === note.id
+      const g = groupOfNote(note, chapterGroups, aboutHere)
+      if (g === null) {
+        groupStats.onlyAbout++
+        continue
+      }
+      groupStats.notes++
+      if (!notesOf.has(g)) notesOf.set(g, [])
+      notesOf.get(g).push(note.id)
+    }
+    for (const [g, ids] of [...notesOf].sort((a, b) => a[0] - b[0])) {
+      const { start, end, verses } = chapterGroups[g]
+      // The last block of the group of blocks on the page of each translation. Null when the page of a translation
+      // has no block of the group: the rule of section 13.4 for links, applied to the notes. This is Romans 16:25 to
+      // 16:27 on the World English Bible pages only. The script checks that no other group of blocks has null.
+      const ends = aligned.map((map, t) => {
+        const last = map.findLastIndex((j) => j >= start && j <= end)
+        if (last < 0) groupStats.missing.push(`${TRANSLATIONS[t + 1][0]} ${book.name} ${chapter.n}:${verses[0]}-${verses.at(-1)} (${ids.length} notes)`)
+        return last < 0 ? null : last
+      })
+      groups.push({ c: chapter.n, v: [verses[0], verses.at(-1)], end: { bsb: end, kjv: ends[0], web: ends[1] }, notes: ids })
+      groupStats.groups++
+      if (new Set(verses).size === 1) groupStats.oneVerse++
+      groupStats.most.push([`${book.name} ${chapter.n}:${verses[0]}-${verses.at(-1)}`, ids.length])
+      const key = `${book.name} ${chapter.n}`
+      groupStats.perChapter.set(key, (groupStats.perChapter.get(key) ?? 0) + 1)
+    }
+  }
+  r.groups = groups
+}
+const chapterCounts = [...groupStats.perChapter.values()].sort((a, b) => a - b)
+const allChapters = books.flatMap((b) => Array.from({ length: b.chapters }, (_, i) => `${b.name} ${i + 1}`))
+const most = groupStats.most.sort((a, b) => b[1] - a[1])
+const facts208 = [
+  ['notes in the groups of blocks', groupStats.notes, 16792],
+  ['notes only in "About this chapter"', groupStats.onlyAbout, 131],
+  ['groups of blocks with a note', groupStats.groups, 10562],
+  ['groups of blocks with a note and one verse', groupStats.oneVerse, 3663],
+  ['chapters with a group of blocks with a note', groupStats.perChapter.size, 1186],
+  ['chapters with none', allChapters.filter((k) => !groupStats.perChapter.has(k)).join(', '), 'Exodus 36, Psalms 108, Psalms 123'],
+  ['median of the 1,186 chapters', median(chapterCounts), 8],
+  ['Mark 14, Matthew 26, Luke 22', ['Mark 14', 'Matthew 26', 'Luke 22'].map((k) => groupStats.perChapter.get(k)).join(' '), '35 32 31'],
+  ['groups of blocks that the page of a translation does not have', groupStats.missing.join('; '), 'web Romans 16:25-27 (3 notes)'],
+  ['the group of blocks with the most notes', `${most[0][0]} ${most[0][1]}, then ${most[1][1]}`, 'Exodus 20:3-17 15, then 10'],
+]
+for (const [name, got, want] of facts208) if (got !== want) fail(`${name}: ${got}, and section 20.8 says ${want}`)
+
 // ---- write the files ----
 
 rmSync(OUT, { recursive: true, force: true })
@@ -298,6 +371,8 @@ console.log('SHA-256 of the notes', studySha)
 console.log('==== Section 20.5')
 for (const [name, got] of facts205) console.log(name, got)
 console.log('median words: of the 132 psalms', median(psalmWords), '; of the 131 notes', median(noteWords))
+console.log('==== Section 20.8')
+for (const [name, got] of facts208) console.log(name, got)
 console.log('==== Output')
 console.log('files', result.length + 1, 'in public/data/study, bytes', bytes, ', with gzip', gzipBytes)
 
@@ -312,4 +387,4 @@ const medianOk = median(noteWords) === 41
 for (const [name, got, want] of differ) console.log(`DIFFERENT: ${name}: ${got}, and docs/DESIGN.md says ${want}`)
 if (!medianOk) console.log('DIFFERENT: median words of the 131 notes, and section 20.5 says 41')
 if (differ.length || !medianOk) fail('a number differs from docs/DESIGN.md')
-console.log('Each number of sections 20.3 and 20.5 is that of docs/DESIGN.md.')
+console.log('Each number of sections 20.3, 20.5, and 20.8 is that of docs/DESIGN.md.')

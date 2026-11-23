@@ -428,8 +428,9 @@ test.describe('the text control and the text list, wide layout', () => {
     const list = textList(page)
     await expect(list).toBeVisible()
     // The three sizes, a thin line, and the row "Red letters". From Task 45, a second thin line and the row "Dark mode".
+    // From Task 49, the row "Study notes".
     const order = await list.evaluate((el) => [...el.children].map((c) => c.className))
-    expect(order).toEqual(['', 'menu-rule ts-rule', 'tr-row ts-red', 'menu-rule ts-rule', 'tr-row ts-dark'])
+    expect(order).toEqual(['', 'menu-rule ts-rule', 'tr-row ts-red', 'menu-rule ts-rule', 'tr-row ts-dark', 'tr-row ts-study'])
     await expect(list.getByRole('group', { name: 'Text size' }).getByRole('button')).toHaveText(['Standard', 'Large', 'Largest'])
     const row = redRow(page)
     await expect(row).toHaveAttribute('aria-pressed', 'true')

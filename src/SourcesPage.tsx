@@ -176,10 +176,11 @@ export function SourcesPage() {
             The site got the files from the repository <a href={NOTE_CREDIT.source.href}>BibleAquifer/BiblicaStudyNotes</a> on GitHub, version 1.1.2. The
             site shows the words of the notes with no change. It does not show the links to the key terms of the files.
           </p>
-          {/* The Aquifer notes of 132 psalms: docs/DESIGN.md section 20.9, docs/TASKS.md Task 48 step 8. */}
+          {/* The Aquifer notes of 132 psalms and the study notes: docs/DESIGN.md section 20.9, Task 48 step 8 and Task 49 step 6. */}
           <p>
             The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of “About this chapter” is from the{' '}
-            <a href={AQUIFER_CREDIT.source.href}>Aquifer Open Study Notes</a>, © 2026 Mission Mutual. They are an adaptation of the Tyndale Open Study
+            <a href={AQUIFER_CREDIT.source.href}>Aquifer Open Study Notes</a>, © 2026 Mission Mutual. The study notes at the verses are from the same
+            source. They are an adaptation of the Tyndale Open Study
             Notes, © 2023 Tyndale House Publishers. The license of both is <a href={AQUIFER_CREDIT.license.href}>CC BY-SA 4.0</a>.
           </p>
           <p>

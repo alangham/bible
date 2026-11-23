@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { rangeLabel } from './notes.ts'
-import { AQUIFER_CREDIT, STUDY_ELEMENTS, textOfNodes, type AboutPsalm, type AquiferNote } from './studyNotes.ts'
+import { AQUIFER_CREDIT, controlWords, noteLabel, SHORT_CREDIT, STUDY_ELEMENTS, textOfNodes, type AboutPsalm, type AquiferNote } from './studyNotes.ts'
 
 interface BookRow {
   id: string
@@ -120,6 +120,34 @@ describe('the Aquifer credit: docs/DESIGN.md section 20.6', () => {
     expect(`${c.before}${c.source.text}${c.middle}${c.license.text}${c.after}`).toBe(
       'From the Aquifer Open Study Notes, © 2026 Mission Mutual, licensed under CC BY-SA 4.0. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The words have no changes.',
     )
+    expect(c.source.href).toBe('https://github.com/BibleAquifer/AquiferOpenStudyNotes')
+    expect(c.license.href).toBe('https://creativecommons.org/licenses/by-sa/4.0/')
+  })
+})
+
+describe('the note label and the words of a notes control: docs/DESIGN.md section 20.8, Task 49 step 7', () => {
+  const psalms = (read('study/psalms.json') as { notes: AquiferNote[] }).notes
+  it('"Verse 3" for one verse, and "Verses 19–21" for a range in one chapter', () => {
+    expect(noteLabel('Romans', { from: [8, 3], to: [8, 3] })).toBe('Verse 3')
+    expect(noteLabel('Romans', { from: [8, 19], to: [8, 21] })).toBe('Verses 19–21')
+  })
+  it('"Romans 5:1–8:39" for a range of more than one chapter', () => {
+    expect(noteLabel('Romans', { from: [5, 1], to: [8, 39] })).toBe('Romans 5:1–8:39')
+  })
+  it('"Title of the psalm" for a title note, and "Verse 7" for the note 24105', () => {
+    expect(noteLabel('Psalms', psalms.find((n) => n.title && n.from[0] === 7)!)).toBe('Title of the psalm')
+    expect(noteLabel('Psalms', psalms.find((n) => n.id === '24105')!)).toBe('Verse 7')
+  })
+  it('"Notes on verses 1 to 4", and "Notes on verse 5" for one verse', () => {
+    expect(controlWords([1, 4])).toBe('Notes on verses 1 to 4')
+    expect(controlWords([5, 5])).toBe('Notes on verse 5')
+  })
+})
+
+describe('the short credit: docs/DESIGN.md section 20.6', () => {
+  it('has the words of section 20.6, with no change, and the two addresses of a different site', () => {
+    const c = SHORT_CREDIT
+    expect(`${c.before}${c.source.text}${c.middle}${c.license.text}${c.after}${c.full}`).toBe('From the Aquifer Open Study Notes, licensed under CC BY-SA 4.0. Full credit')
     expect(c.source.href).toBe('https://github.com/BibleAquifer/AquiferOpenStudyNotes')
     expect(c.license.href).toBe('https://creativecommons.org/licenses/by-sa/4.0/')
   })

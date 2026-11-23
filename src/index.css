@@ -802,10 +802,11 @@ html:has(.reading) {
   margin: 6px 8px;
 }
 
-/* The rows "Red letters" and "Dark mode" of the text list: the weight of a row that is not selected, and "On" or
+/* The rows "Red letters", "Dark mode", and "Study notes" (Task 49) of the text list: the weight of a row that is not selected, and "On" or
    "Off" at the right. docs/DESIGN.md section 18.3. */
 .ts-list .tr-row.ts-red,
-.ts-list .tr-row.ts-dark {
+.ts-list .tr-row.ts-dark,
+.ts-list .tr-row.ts-study {
   font-weight: 500;
 }
 
@@ -1080,14 +1081,16 @@ html:has(.reading) {
 }
 
 .rd-about-control span,
-.rd-scholars-control span {
+.rd-scholars-control span,
+.rd-study-control span {
   display: inline-block;
   margin-left: 4px;
   transition: transform 0.2s;
 }
 
 .rd-about-control[aria-expanded='true'] span,
-.rd-scholars-control[aria-expanded='true'] span {
+.rd-scholars-control[aria-expanded='true'] span,
+.rd-study-control[aria-expanded='true'] span {
   transform: rotate(90deg);
 }
 
@@ -1269,6 +1272,87 @@ html:has(.reading) {
 /* The chapter text. src/book/ChapterBody.tsx keeps the built rules. Only the look is new. */
 .rd-column p {
   margin: 0 0 0.9em;
+}
+
+/*
+  The study notes at the verses: the notes control after a group of blocks, and the block of notes. docs/DESIGN.md
+  section 20.8, Task 49. With the switch "Study notes" off, the page has no element .rd-study, so no rule here applies.
+  - The control is about 8 px below the last line of its group of blocks. The block before the control has no margin
+    below it, and the control has the margin that the block had: the usual space of a paragraph, 0.9em of the text.
+  - The control is 24 px high with 2 px above and below its line of 20 px, so its words are 8 px below the text.
+  - The block: 2 px above and 26 px below, a line on the left side, and the values of "About this chapter".
+  The rules have two classes or more, so that the margin of the rule .rd-column p does not apply.
+*/
+.rd-column .chapter-body > :has(+ .rd-study) {
+  margin-bottom: 0;
+}
+
+.rd-column .rd-study {
+  margin: 6px 0 0.9em;
+}
+
+.rd-column .rd-study[data-open='true'] {
+  margin-bottom: 0;
+}
+
+.rd-study-control {
+  display: block;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--c);
+  font: 600 13px/20px Inrond, system-ui, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rd-column .rd-study-block {
+  margin: 2px 0 26px;
+  padding-left: 14px;
+  border-left: 2px solid var(--credit-line);
+  color: var(--ink);
+  font: 400 15px/1.5 Inrond, system-ui, sans-serif;
+}
+
+.rd-study-block[hidden] {
+  display: none;
+}
+
+.rd-study-block .rd-study-note p {
+  margin: 0 0 8px;
+}
+
+.rd-study-block .rd-study-note ul,
+.rd-study-block .rd-study-note ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.rd-study-block .rd-study-note li {
+  margin: 0 0 6px;
+}
+
+.rd-study-block .rd-study-note .rd-note-label {
+  margin: 14px 0 4px;
+  color: var(--ink-secondary);
+  font: 600 13px/20px Inrond, system-ui, sans-serif;
+}
+
+.rd-study-block .rd-study-note:first-child .rd-note-label {
+  margin-top: 0;
+}
+
+.rd-study-block .rd-short-credit {
+  margin: 14px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--credit-line);
+  color: var(--ink-secondary);
+  font: 400 14px/21px Inrond, system-ui, sans-serif;
+}
+
+.rd-short-credit a {
+  color: var(--c);
+  text-decoration: underline;
 }
 
 .rd-column .sh-s1,
@@ -1485,7 +1569,8 @@ html:has(.reading) {
 @media (prefers-reduced-motion: reduce) {
   .rd-caret,
   .rd-about-control span,
-  .rd-scholars-control span {
+  .rd-scholars-control span,
+  .rd-study-control span {
     transition: none;
   }
 

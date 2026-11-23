@@ -8,6 +8,8 @@
 // - From Task 47, a chapter with a Biblica note has the control "About this chapter": on the line of
 //   "About this book" in the full heading, and alone on its line in a later chapter. docs/DESIGN.md section 19.6.
 // - From Task 48, the 132 psalms with no Biblica note have the control also, with one Aquifer note. Section 20.5.
+// - From Task 49, with the switch "Study notes" on, each group of blocks with a note has a notes control after its
+//   last block. The page gets the study file of the book only with the switch on. Sections 20.7 and 20.8.
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type RefObject } from 'react'
 import { arriveBookName } from '../bookMove.ts'
@@ -18,7 +20,8 @@ import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { Intro } from '../data/intros.ts'
 import { loadBookLinks, marksOf, type BookLinks, type ChapterRef, type LinkEnd } from '../data/links.ts'
 import { loadBookNotes, notesOfChapter, type BookNotes } from '../data/notes.ts'
-import { loadAboutPsalms, type AboutPsalm } from '../data/studyNotes.ts'
+import { loadAboutPsalms, loadStudyFile, type AboutPsalm, type AquiferNote, type StudyFile, type StudyGroupData } from '../data/studyNotes.ts'
+import { useStudyNotes } from '../data/studySwitch.ts'
 import type { LineReference } from '../data/xrefs.ts'
 import { passageName } from '../data/passage.ts'
 import { loadBookText, type BookText } from '../data/text.ts'
@@ -27,6 +30,7 @@ import { bandLabel } from '../wall/layout.ts'
 import { AboutBook } from './AboutBook.tsx'
 import { useAboutChapter, type ChapterNotes } from './AboutChapter.tsx'
 import { headingWidthEm } from './heading.ts'
+import { StudyBlock } from './StudyNotes.tsx'
 
 /** The height of a margin label and the space between two labels, in px. Values of the prototype. */
 const LABEL_PX = 25
@@ -45,11 +49,13 @@ interface ChapterSectionProps {
   onLoaded: (key: string) => void
   /** The text on the page changed: the first text, or the text of a new translation. */
   onTextShown: () => void
+  /** The notes controls of the chapter changed: the switch "Study notes", or the study file loaded. */
+  onStudyShown: () => void
   onLink: (end: LinkEnd, control: HTMLElement, reference?: LineReference) => void
   onReadWith: (from: ChapterRef, to: ChapterRef) => void
 }
 
-export function ChapterSection({ books, book, n, full, intro, first, echoOn, marginLabels, onLoaded, onTextShown, onLink, onReadWith }: ChapterSectionProps) {
+export function ChapterSection({ books, book, n, full, intro, first, echoOn, marginLabels, onLoaded, onTextShown, onStudyShown, onLink, onReadWith }: ChapterSectionProps) {
   const translation = useTranslation()
   // The text on the page and its translation. When the reader selects a different translation, the
   // old text stays on the page until the new text loads, so the height of the page does not jump.
@@ -64,6 +70,9 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   /** The 132 psalms of section 20.5, for the book Psalms only: undefined while the file loads, and null if it did not load. */
   const [aboutPsalms, setAboutPsalms] = useState<AboutPsalm[] | null | undefined>(undefined)
   const isPsalms = book.id === 'psalms'
+  /** The switch "Study notes", and the study file of the book: undefined while it loads, and null if it did not load. */
+  const studyOn = useStudyNotes()
+  const [study, setStudy] = useState<StudyFile | null | undefined>(undefined)
   const nameRef = useRef<HTMLSpanElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
   const key = `${book.id}-${n}`
@@ -124,11 +133,26 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   }, [book.id])
   const notesDone = bookNotes !== undefined && (!isPsalms || aboutPsalms !== undefined)
 
+  // The study file of the book, only with the switch on: section 20.7. The file loads one time for each book. With
+  // the switch on, the chapter is loaded only after its study file loads or does not load.
+  useEffect(() => {
+    if (!studyOn) return
+    let live = true
+    loadStudyFile(book.id).then(
+      (file) => live && setStudy(file),
+      () => live && setStudy((s) => s ?? null),
+    )
+    return () => {
+      live = false
+    }
+  }, [book.id, studyOn])
+  const studyDone = !studyOn || study !== undefined
+
   // The chapter is loaded when its text, its links, and its notes are on the page: the read-with line, the
   // marks, and the control "About this chapter" change the height of the chapter. docs/DESIGN.md section 19.6.
   useEffect(() => {
-    if ((text && linksDone && notesDone) || error) onLoaded(key)
-  }, [text, linksDone, notesDone, error, key, onLoaded])
+    if ((text && linksDone && notesDone && studyDone) || error) onLoaded(key)
+  }, [text, linksDone, notesDone, studyDone, error, key, onLoaded])
 
   // The notes of this chapter. The Biblica notes of section 19.5, or else, for a psalm, the Aquifer note of section
   // 20.5. A panel never has the two kinds. Null if a file that the chapter needs did not load.
@@ -153,6 +177,31 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   // The marks go with the text on the page: until the text of a new translation loads, the marks of the old one.
   const shownTranslation = shown?.translation ?? translation
   const marks = useMemo(() => (links ? marksOf(links, book.id, n, shownTranslation) : undefined), [links, book.id, n, shownTranslation])
+
+  // The notes controls of this chapter, by the index of the last block of their group of blocks on the page of the
+  // translation that shows. Section 20.8. A group of blocks that the page of a translation does not have, has no
+  // control there: Romans 16:25 to 16:27 of the World English Bible.
+  const studyAfter = useMemo(() => {
+    if (!studyOn || !study) return null
+    const byId = new Map(study.notes.map((note) => [note.id, note]))
+    const byEnd = new Map<number, { group: StudyGroupData; notes: AquiferNote[] }[]>()
+    for (const group of study.groups) {
+      if (group.c !== n) continue
+      const end = group.end[shownTranslation]
+      if (end === null) continue
+      byEnd.set(end, [...(byEnd.get(end) ?? []), { group, notes: group.notes.map((id) => byId.get(id)!) }])
+    }
+    return byEnd
+  }, [studyOn, study, n, shownTranslation])
+  const afterBlock = useCallback(
+    (i: number) =>
+      studyAfter?.get(i)?.map(({ group, notes }) => <StudyBlock key={`${group.v[0]}-${group.v[1]}`} bookName={book.name} chapter={n} group={group} notes={notes} />),
+    [studyAfter, book.name, n],
+  )
+  // The controls changed the height of the chapter: the page keeps the verse at the top in its place. Section 20.7.
+  useLayoutEffect(() => {
+    if (chapter) onStudyShown()
+  }, [studyAfter, chapter, onStudyShown])
   const readWith = links?.readWith[n] ?? []
   const style = { '--c': groupVar(groupOf(book)), '--heading-em': headingWidthEm(book.name, n) } as CSSProperties
   const headingId = `chapter-${key}`
@@ -203,7 +252,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
       data-book={book.id}
       data-chapter={n}
       data-full={full}
-      data-loaded={(chapter !== undefined && linksDone && notesDone) || error !== null}
+      data-loaded={(chapter !== undefined && linksDone && notesDone && studyDone) || error !== null}
       data-translation={shown?.translation ?? error?.translation}
       data-labels-ready={labelEnds.length > 0 ? labelTops !== null : undefined}
       style={style}
@@ -230,7 +279,7 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
         </div>
       )}
       {error && <p role="alert">The text did not load. {error.message}</p>}
-      {chapter && <ChapterBody chapter={chapter} books={books} marks={marks} echoOn={echoOn} verseLabels={marginLabels ? renderLabels : undefined} onLink={onLink} />}
+      {chapter && <ChapterBody chapter={chapter} books={books} marks={marks} echoOn={echoOn} verseLabels={marginLabels ? renderLabels : undefined} onLink={onLink} afterBlock={studyAfter ? afterBlock : undefined} />}
     </section>
   )
 }

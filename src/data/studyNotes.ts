@@ -1,7 +1,8 @@
 // The Aquifer notes of the site. docs/DESIGN.md section 20, docs/TASKS.md Task 48.
 // The files public/data/study/ come from scripts/build-study-notes.mjs, with the words of the Aquifer Open Study Notes
-// and no change. Task 48 uses only about-psalms.json: the 132 psalms with no Biblica note, each with one Aquifer note
-// in "About this chapter". Section 20.5.
+// and no change. Task 48 uses about-psalms.json: the 132 psalms with no Biblica note, each with one Aquifer note in
+// "About this chapter", section 20.5. Task 49 uses the study file of each book, with the switch "Study notes" on:
+// sections 20.7 and 20.8.
 
 /**
  * The content of a note: a list of nodes. A node is a string of text, or an element: a list with the name of the
@@ -62,4 +63,73 @@ export const AQUIFER_CREDIT = {
   middle: ', © 2026 Mission Mutual, licensed under ',
   license: { text: 'CC BY-SA 4.0', href: 'https://creativecommons.org/licenses/by-sa/4.0/' },
   after: '. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The words have no changes.',
+} as const
+
+// ---- Task 49: the study notes at the verses. docs/DESIGN.md sections 20.6, 20.7, and 20.8 ----
+
+/**
+ * One group of blocks with a note, as scripts/build-study-notes.mjs writes it: the chapter, the first verse and the
+ * last verse of the group of blocks, the index of its last block on the page of each translation, and the ids of its
+ * notes in the order of the source file. The rules are in src/data/studyGroups.ts. An index is null when the page of
+ * that translation has no block of the group of blocks: Romans 16:25 to 16:27 of the World English Bible only.
+ */
+export interface StudyGroupData {
+  c: number
+  v: [number, number]
+  end: { bsb: number; kjv: number | null; web: number | null }
+  notes: string[]
+}
+
+/** The study file of a book: public/data/study/<book id>.json. */
+export interface StudyFile {
+  book: string
+  notes: AquiferNote[]
+  groups: StudyGroupData[]
+}
+
+const fileCache = new Map<string, Promise<StudyFile>>()
+
+/** The study file of a book. The page gets it only with the switch "Study notes" on, one time for each book. */
+export function loadStudyFile(id: string): Promise<StudyFile> {
+  let p = fileCache.get(id)
+  if (!p) {
+    p = fetch(`${import.meta.env.BASE_URL}data/study/${id}.json`).then((res) => {
+      if (!res.ok) throw new Error(`study ${id}.json: HTTP ${res.status}`)
+      return res.json() as Promise<StudyFile>
+    })
+    p.catch(() => fileCache.delete(id))
+    fileCache.set(id, p)
+  }
+  return p
+}
+
+/** The words of a notes control: "Notes on verses 1 to 4", or "Notes on verse 5" for a group of blocks with one verse. */
+export function controlWords([first, last]: readonly [number, number]): string {
+  return first === last ? `Notes on verse ${first}` : `Notes on verses ${first} to ${last}`
+}
+
+/**
+ * The note label of section 20.8: "Verse 3" for one verse, "Verses 19–21" for a range in one chapter, with the en
+ * dash, the range label of section 19.7 for a range of more than one chapter, and "Title of the psalm" for a title note.
+ */
+export function noteLabel(bookName: string, note: Pick<AquiferNote, 'from' | 'to' | 'title'>): string {
+  if (note.title) return 'Title of the psalm'
+  const [fc, fv] = note.from
+  const [tc, tv] = note.to
+  if (fc !== tc) return `${bookName} ${fc}:${fv}–${tc}:${tv}`
+  return fv === tv ? `Verse ${fv}` : `Verses ${fv}–${tv}`
+}
+
+/**
+ * The short credit of section 20.6, at the end of each block of notes. Do not change a word of it. The whole text:
+ * "From the Aquifer Open Study Notes, licensed under CC BY-SA 4.0. Full credit". "Full credit" is a link to the Sources
+ * page of the site, in the same tab.
+ */
+export const SHORT_CREDIT = {
+  before: 'From the ',
+  source: AQUIFER_CREDIT.source,
+  middle: ', licensed under ',
+  license: AQUIFER_CREDIT.license,
+  after: '. ',
+  full: 'Full credit',
 } as const

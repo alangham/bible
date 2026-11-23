@@ -3541,3 +3541,34 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 52. The introductions: the date detail of 2 Peter
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: the conservative part of the date detail of 2 Peter gives the years of the ESV page, inside the word "probably".
+
+Read section 21.9 of `docs/DESIGN.md` first. It has the one change: the old words, the new words, and the source to check. The accuracy reviewer of Task 51 gave the new words.
+
+This task shows on the site: one sentence of "Scholars differ" in 2 Peter changes.
+
+WARNING: Change only this one statement. Do not change a `review` value. The rules of Task 50 apply.
+
+Steps:
+
+1. Do steps 1 to 6 of Task 50 for this one change.
+2. If the source does not support the new words, or if the copy check finds a run of 6 words, do not make the change. Keep the old words, and give the cause in the report.
+3. Run the reviewer agent and the accuracy reviewer agent on the change.
+4. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- The change is made, or the report gives the cause that it is not made.
+- `git diff` of `public/data/intros.json` shows only this statement.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

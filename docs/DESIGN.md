@@ -2571,3 +2571,17 @@ Arthur accepted the findings behind changes 4, 16, 19, and 22 on 2026-11-23. The
 - New: Conservative scholars hold that Peter probably wrote it shortly before his death, which came between AD 64 and 67. The writer says that his death is near.
 - Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:12 to 15.
 - Reason: Change 22 of section 21.4 had no "probably". The ESV page has it.
+
+### 21.9 Task 51 as built, and the one change of Task 52
+
+Claude Code built Task 51 in the commit `94b9ed1`. It made changes A, B, C, and D of section 21.8. The designer checked on 2026-11-23: `public/data/intros.json` against the commit before it has four changed statements, each with the exact new words of section 21.8, and each of the 66 entries has `review: "draft"`.
+
+Change E, 2 Peter, kept its old words. The new words of the designer said that the death of Peter "came between AD 64 and 67". The ESV page has the years in one sentence with "probably", and it does not show if the years are those of the letter or of the death. So the new words put the years outside "probably". The accuracy reviewer found this, and it gave words that keep the years inside "probably". Task 52 uses those words, with no change:
+
+**2 Peter, `writtenDetail.conservative`.**
+
+- Old: The writer says his death is near, so the letter comes from late in the life of Peter.
+- New: Conservative scholars hold that Peter probably wrote it shortly before his death, in AD 64 to 67. The writer says that his death is near.
+- Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:12 to 15.
+
+From the report of Claude Code, not checked by the designer: the accuracy reviewer passed Task 51 in its second run. The copy check found 0 runs of 6 words. 324 unit tests and 555 tests in the full run pass.

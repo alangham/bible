@@ -29,6 +29,8 @@ The five rules of Task 4b, decided by Arthur on 2026-11-13:
 4. The strength word matches the source.
 5. No line rests on the view of one scholar. A standard reference work counts as a source. A general view that the article states with one citation stays (Task 4c rule 3).
 
+Arthur made two decisions on 2026-11-23, after the review of the introductions by ChatGPT. Section 21.2 of `docs/DESIGN.md` has them: the conservative part on the time of a prophet, and no "probably" from the ESV page in a main line.
+
 ## Task 4c rules
 
 Arthur decided these on 2026-11-13:
@@ -104,9 +106,10 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Exodus&oldid=1383653829, section "Lead". States: Says modern scholars date the first composition to the exile in Babylon, 6th century BCE, and the last revisions to the 5th century BCE. The article cites: William D. Johnstone, Exodus, in Eerdmans Bible Commentary, 2003, p. 72; Israel Finkelstein and Neil Asher Silberman, The Bible Unearthed, 2002, p. 68.
 - Written, conservative scholars: Conservative scholars hold that Moses wrote most of it, in his lifetime. A common view dates Israel's exit from Egypt to about 1446 BC, but some prefer about 1260 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-exodus/, section "Author and Date". States: Moses wrote most of it. No consensus on the date of the exodus. A common view gives about 1446 BC from 1 Kings 6:1. Some prefer about 1260 BC.
-- What it is: A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.
+- What it is: A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle, a tent for worship.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FExodus%2C_Book_of&oldid=721436. States: Lists the contents: Israel's growth in Egypt, the departure, the journey to Sinai, the giving of the law, and the setting up of the tabernacle.
   - Berean Standard Bible. States: Chapter 1 tells how a new king of Egypt forced the Israelites into hard labor. In chapter 40 Moses sets up the tabernacle, and the LORD fills it.
+  - Berean Standard Bible. States: Exodus 40:2 calls the tabernacle the Tent of Meeting. In 40:29 Moses offers the burnt offering and the grain offering on the altar at its entrance. Task 50.
 
 ### Leviticus (`leviticus`)
 
@@ -128,9 +131,12 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written, conservative scholars: Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. The Lord gave its laws at Mount Sinai, which a common view dates to about 1446 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-leviticus/, section "Author; The Setting of Leviticus". States: Moses is its source and main writer. The book records what the Lord told Moses from the tabernacle at Mount Sinai, set about 1446 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-exodus/, section "Author and Date". States: The introduction to Exodus, to which the Leviticus page refers for the date, calls about 1446 BC a common view, with about 1260 BC preferred by some.
-- What it is: A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.
+- What it is: Laws that God gives to Moses on sacrifices, priests, feasts, and who can take part in worship. God speaks from the Tent of Meeting, Israel's tent for worship, at Mount Sinai.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FLeviticus&oldid=736142. States: Lists laws on sacrifices, priestly duties, purity, separation from other nations, festivals, and vows.
   - Berean Standard Bible. States: In chapter 1 the LORD calls Moses and speaks about burnt offerings at the Tent of Meeting. Chapter 27 ends with the commandments given to Moses on Mount Sinai.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-leviticus/, section "Problems in Understanding Leviticus". States: In Leviticus, clean and unclean are not about hygiene. They tell what a person may do and where a person may go. The page gives 7:20 as an example: a person who is unclean must not eat a peace offering. Task 50.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-leviticus/, section "The Setting of Leviticus". States: Exodus ends with the tabernacle set up at the foot of Mount Sinai. Leviticus mostly gives what the Lord says to Moses at the tent of meeting. Task 50.
+  - Berean Standard Bible. States: Leviticus 1:1: the LORD calls Moses and speaks to him from the Tent of Meeting. 27:34: the LORD gave these commandments to Moses on Mount Sinai. Task 50.
 
 ### Numbers (`numbers`)
 
@@ -396,10 +402,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written: The date of writing is not known. The events in the book end in the 5th century BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ezra/. States: The contents make the date of writing hard to fix. Ezra 1 to 6 covers 538 to 515 BC, and Ezra 7 to Nehemiah 13 covers 458 to 433 BC.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FEzra%2C_Book_of&oldid=735496. States: Gives no date of writing. The events run from the decree of Cyrus to the reform under Ezra, which Easton puts in the 5th century BC.
-- What it is: A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.
+- What it is: A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the priest leads more home and deals with marriages to foreign women.
   - Berean Standard Bible. States: Ezra 1:3 lets the people go to Jerusalem to build the temple. Ezra 7:6 tells that Ezra the scribe came from Babylon. Ezra 10 treats foreign wives.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FEzra%2C_Book_of&oldid=735496. States: Chapters 1 to 6 tell of the first return and the new temple. Chapters 7 to 10 tell of the second return, under Ezra, and what followed in Jerusalem.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ezra/. States: Ezra 1 to 6 covers 538 to 515 BC, from the first return to the finished temple.
+  - Berean Standard Bible. States: Ezra 7:11 and 7:12 name him Ezra the priest and scribe. Task 50.
 - Accepted by Arthur on 2026-11-13, so not on the Not verified list:
   - Ezra, written: neither Easton nor the ESV Global Study Bible states a traditional date of writing. The cover says only that the date is not known and that the events end in the 5th century BC.
 
@@ -459,9 +466,10 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Job&oldid=1385369652, section "Lead, and Composition: Authorship, language, texts". States: Hebrew of the time after the Babylonian exile, with Aramaic influence, shows that the book was composed in the Persian period, 540 to 330 BC. The article cites: Edward L. Greenstein, Job: A New Translation (2019), p. xxvii.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Job&oldid=1385369652, section "Composition, the quotation in the Greenstein citation". States: The quotation adds the many Aramaic words and grammar forms, and says Aramaic became a main language of the region only under Persian rule. The article cites: Edward L. Greenstein, Job: A New Translation (2019), p. xxvii.
 - Written, conservative scholars: none. The page says the author is an unknown Israelite and the events seem set in the time of the patriarchs. It gives no date for the writing.
-- What it is: A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.
+- What it is: A story told mostly through speeches in poetry, with a short narrated opening and close. Job, an upright man who loses his children and wealth, argues with three friends, and then God answers him.
   - Berean Standard Bible. States: Job 1:1 introduces a blameless man in Uz. Job 1:19 tells of his children killed. Job 2:11 brings three friends. At 38:1 the LORD answers him.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJob%2C_Book_of&oldid=7352541. States: A prose opening in chapters 1 and 2, a debate in poetry from chapter 3 to 42:6, and a prose close.
+  - Berean Standard Bible. States: Job 1:1 calls Job blameless and upright. In the bundled text, chapters 1 and 2 are prose, apart from the words of Job in 1:21, and 42:7 to 42:17 is prose. From chapter 3 to 42:6 the speeches are poetry. Short prose lines name each speaker, and 32:1 to 32:5 is a prose passage that brings in Elihu. Task 50.
 - Decided by Arthur on 2026-11-14:
   - The time of a person is not a period and needs no years, unless the table of periods has an entry for it. The Written fact names "the time of Moses or of David and Solomon" without years.
 
@@ -579,15 +587,17 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 
 Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-study-bible/introduction-to-jeremiah/ . Wikipedia https://en.wikipedia.org/w/index.php?title=Book_of_Jeremiah&oldid=1376288136 .
 
-- Author: Jeremiah son of Hilkiah, a priest of Anathoth, by tradition, with his scribe Baruch.
+- Author: By tradition, Jeremiah son of Hilkiah, a priest from Anathoth, with Baruch, who wrote down his words.
   - Berean Standard Bible. States: Jeremiah 1:1 names Jeremiah son of Hilkiah, one of the priests in Anathoth.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-jeremiah/. States: Jeremiah and Baruch, his scribe, together left the record of their times and of God's message.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJeremiah&oldid=736090. States: Son of Hilkiah, a priest of Anathoth. Baruch read his written predictions, and after the king burned the roll Jeremiah wrote a new one.
+  - Berean Standard Bible. States: Jeremiah 36:4 and 45:1: Baruch son of Neriah wrote the words on a scroll at the dictation of Jeremiah. Task 50.
 - Author, critical scholars: Scholars generally agree that the book mixes material from different groups of writers. His own messages are probably the poems in chapters 1 to 25, and followers and later editors added much.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Jeremiah&oldid=1376288136, section "Composition history". States: General agreement that the poetry, the narrative, and the life material come from separate circles. The article cites: Robert Davidson, 1993.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Jeremiah&oldid=1376288136, section "Lead; Composition history". States: His genuine oracles are probably in the poetry of chapters 1 to 25. Followers, perhaps with Baruch, and later Deuteronomists edited and expanded the whole. The article cites: Michael D. Coogan, A Brief Introduction to the Old Testament, 2008.
-- Author, conservative scholars: Conservative scholars hold that Jeremiah and his scribe Baruch left the record. The book names Baruch as his scribe in several places.
+- Author, conservative scholars: Conservative scholars credit Jeremiah and Baruch, who wrote down his words. The book names Baruch in that role in several places.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-jeremiah/. States: Names Baruch as the scribe of Jeremiah, citing 32:12, 36:1 to 4, and 45:1 to 5, and says the two of them left the record.
+  - Berean Standard Bible. States: Jeremiah 36:4, 36:18, 36:27, 36:32, and 45:1 each say that Baruch wrote the words at the dictation of Jeremiah. Task 50.
 - Written: By tradition, the late 7th and early 6th centuries BC. Jeremiah is thought to have added some chapters later, in Egypt.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-jeremiah/. States: Called about 627 BC and active for over 40 years. Taken to Egypt after Jerusalem fell, he probably died there.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJeremiah&oldid=736090. States: Jeremiah lived in Jerusalem, wrote the new roll in the reign of Jehoiakim, and stayed in the city until it fell.
@@ -653,8 +663,9 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written, critical scholars: A consensus of modern scholars dates the book to about 165 BC, under the Greek king Antiochus IV. They read its predictions as written after the events.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Daniel&oldid=1366297531, section "Lead; Historical background". States: The consensus of modern scholarship dates the book to 167 to 163 BC, in the crisis under Antiochus IV Epiphanes, the Seleucid king. The article cites: C. L. Seow, Daniel, 2003; Ryken and Longman, 2010; John J. Collins, 1998.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Daniel&oldid=1366297531, section "Lead". States: The book is regarded as prophecy after the event. The article cites: James D. Tabor, in The Oxford Handbook of Millennialism, 2016; Lawrence M. Wills, in The Jewish Study Bible, 2014.
-- Written, conservative scholars: Conservative scholars read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple.
+- Written, conservative scholars: Conservative scholars date the book to the 500s BC. They read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-daniel/. States: Key themes treat chapters 8, 9, and 12 as foretelling later sin in Israel and enemies who would harm the temple in Jerusalem.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-daniel/, section "Author and Date". States: Daniel wrote the book in the 500s BC. It covers his life and visions from his exile in 605 BC to 536 BC. Task 50.
 - What it is: Stories of Daniel at the court in Babylon, then visions of kingdoms to come and the time of the end. The stories are set under Babylonian and Persian kings.
   - Berean Standard Bible. States: 1:1 tells how Nebuchadnezzar besieged Jerusalem. 10:1 names the third year of Cyrus king of Persia. 12:1 foretells distress, and 12:4 the time of the end.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FDaniel%2C_Book_of&oldid=734493. States: The first six chapters are mainly history and the last six mainly prophecy.
@@ -736,8 +747,9 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written, critical scholars: The majority of scholars date it soon after Jerusalem fell to Babylon, in the 6th century BC. Some scholars think it took shape over time, amid conflicts with Edom in the 5th and 4th centuries BC.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Obadiah&oldid=1385495705, section "Lead". States: Most scholars place the book soon after Jerusalem fell in 587 BC. The article cites: Charles Bruce Riding, Dating Obadiah to 801 BC, Reformed Theological Review 80 (2021), pp. 189 to 217.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Obadiah&oldid=1385495705, section "Lead". States: Other scholars hold that conflicts between Judah under Persia and Edom in the 5th and 4th centuries BC shaped the book over time. The article cites: Ehud Ben Zvi (1996). Bob Becking, The Oxford Handbook of the Minor Prophets (2021), pp. 437 to 448.
-- Written, conservative scholars: Conservative scholars place it early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC.
+- Written, conservative scholars: Conservative scholars place it probably early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-obadiah/. States: Dates the book to the first half of the captivity, after Babylon destroyed Jerusalem in 586 BC and before it attacked Edom in 553 BC.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-obadiah/, section "Author and Date". States: Places the writing, with the word "probably", early in the captivity: after Babylon took Jerusalem in 586 BC, and before it attacked Edom in 553 BC. Task 50.
 - What it is: A short prophecy against Edom, which sided with the enemies of Jerusalem. It ends with a promise of rescue on Mount Zion and of a kingdom that belongs to the LORD.
   - Berean Standard Bible. States: 1:10 condemns Edom for violence against his brother Jacob. 1:17 promises deliverance on Mount Zion. 1:21 ends with the kingdom belonging to the LORD.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-obadiah/. States: The Edomites took the side of the foreign invaders of Jerusalem.
@@ -767,10 +779,12 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 
 Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-study-bible/introduction-to-micah/ . Wikipedia https://en.wikipedia.org/w/index.php?title=Book_of_Micah&oldid=1338589698 .
 
-- Author: Micah the Moreshite, by tradition.
+- Author: The prophet Micah, by tradition.
   - Berean Standard Bible. States: Micah 1:1 gives the word of the LORD to Micah the Moreshite under Jotham, Ahaz, and Hezekiah.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-micah/. States: Micah writes to bring the lawsuit of God against his people.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FMicah%2C_Book_of&oldid=759890. States: The heading says the prophet served under Jotham, Ahaz, and Hezekiah.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-micah/, section "Author and Date". States: Micah prophesied under the kings Jotham, Ahaz, and Hezekiah of Judah. Task 50.
+  - Berean Standard Bible. States: Micah 1:1 names Micah the Moreshite as the one who got the message of the LORD, under Jotham, Ahaz, and Hezekiah. Task 50.
 - Author, critical scholars: Some scholars, though not all, hold that only chapters 1 to 3 go back to Micah himself.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Micah&oldid=1338589698, section "Composition". States: Some scholars, not all, accept that the material of the 8th century prophet is only in chapters 1 to 3. The article cites: John W. Rogerson, Micah, in Eerdmans Commentary on the Bible, 2003.
 - Author, conservative scholars: Conservative scholars hold that the prophet Micah wrote the book. They credit passages from chapters 1 to 7 to him.
@@ -791,7 +805,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 
 Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-study-bible/introduction-to-nahum/ . Wikipedia https://en.wikipedia.org/w/index.php?title=Book_of_Nahum&oldid=1382362641 .
 
-- Author: The prophet Nahum, by tradition. The book names him as Nahum the Elkoshite.
+- Author: The prophet Nahum, by tradition. The book names him in its first verse.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-nahum/. States: Under Author and Date, it names the prophet Nahum as the one God sent to announce that Nineveh would fall.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FNahum%2C_Book_of&oldid=759948. States: Treats the book as the prophecy of Nahum, whose subject is the coming ruin of Nineveh.
   - Berean Standard Bible. States: Nahum 1:1 names the prophet as Nahum the Elkoshite.
@@ -857,9 +871,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Berean Standard Bible. States: Haggai 1:1 says the word of the LORD came through Haggai the prophet.
 - Written: By tradition, about 520 BC, after the Jews returned from Babylon in 538 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-haggai/. States: The second year of Darius in 1:1 puts the book in 520 BC. Cyrus let the Jews return from Babylon in 538 BC.
-- What it is: Dated messages from the second year of King Darius that urge the people to rebuild the house of the Lord. They speak to Zerubbabel the governor, Joshua the high priest, and the people.
+- What it is: Dated messages from the second year of King Darius that urge the people to rebuild the temple. They speak to Zerubbabel the governor, Joshua the high priest, and the people.
   - Berean Standard Bible. States: Haggai 1:1 dates the first message to the second year of Darius and names Zerubbabel the governor and Joshua the high priest. Verse 14 adds the people.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FHaggai%2C_Book_of&oldid=735502. States: The prophet urged the people to go on with rebuilding the temple, in four addresses.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-haggai/, sections "Historical Background" and "Theme". States: The work on the temple had stopped, and Haggai spoke to stir the people to take up the restoring of the temple again. Task 50.
+  - Berean Standard Bible. States: Haggai 1:2: the people say the time has not come to rebuild the house of the LORD. 1:8 and 1:9: build the house, because My house lies in ruins. Task 50.
 - No detail. Written: the article says most scholars take the king as Darius I and some as Darius II, so the view of some scholars is not shown, as the designer asked. Author: the article doubts that Haggai wrote the book, but it cites only a website, which Task 4 condition 1 does not accept.
 
 ### Zechariah (`zechariah`)
@@ -1085,9 +1101,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written: By tradition, about AD 48, probably from Antioch in Syria. An older view places it in Corinth in the late 50s AD.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-galatians/. States: Written about AD 48. Paul probably wrote from Antioch in Syria, his home church, before the Jerusalem council.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FGalatians%2C_Epistle_to_the&oldid=6960740. States: Written after the Jerusalem council, in the winter of AD 57 to 58, while Paul stayed in Corinth.
-- What it is: A letter in which Paul argues that non-Jewish believers do not need circumcision or the law of Moses. He wrote it to the churches of Galatia.
+- What it is: A letter to the churches of Galatia. Paul argues that people are made right with God through faith in Christ, not through circumcision or the law of Moses.
   - Berean Standard Bible. States: 1:2 is to the churches of Galatia. 1:6 rebukes a turn to another gospel. 5:2 warns against circumcision. 6:15 says neither counts.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FGalatians%2C_Epistle_to_the&oldid=6960740. States: The main question is whether the Jewish law bound Christians. Paul also defends his authority as an apostle.
+  - Berean Standard Bible. States: Galatians 2:16: a man is not justified by works of the law, but by faith in Jesus Christ. 5:2 to 5:6: in Christ, circumcision has no value, and faith is what matters. Task 50.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-galatians/, section "Theme". States: Believers need not become Jews or keep the outward ceremonies of the law of Moses. At the heart of the gospel, God justifies a person by faith alone, without the works of the law. Task 50.
 - No detail: the sources show no dispute for the Author fact or the Written fact.
 
 ### Ephesians (`ephesians`)
@@ -1111,9 +1129,10 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Epistle_to_the_Ephesians&oldid=1383596087, section "Place, date, and purpose of the writing of the letter". States: Scholars who reject Paul as writer put the letter in AD 70 to 80. The article cites: Markus Barth, Ephesians: Introduction, Translation, and Commentary on Chapters 1-3 (1974), pp. 50-51.
 - Written, conservative scholars: Conservative scholars keep the traditional date of about AD 62. They place it during the house arrest of Paul in Rome, told in Acts 28.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ephesians/, section "Author, Date, and Recipients". States: Paul wrote it about AD 62 as a prisoner in Rome, at the time of Colossians and Philemon. Tychicus and Onesimus carried the three letters.
-- What it is: A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.
+- What it is: A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the believers in Ephesus.
   - Berean Standard Bible. States: 1:1 greets the saints in Ephesus. 4:4 speaks of one body. 6:20 calls the writer an ambassador in chains.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FEphesians%2C_Epistle_to_the&oldid=735484. States: Contents: blessings of the gospel, unity in the church in 4:1 to 16, and commands for ordinary life in 4:17 to 6:10.
+  - Berean Standard Bible. States: Ephesians 1:1 is to the saints in Ephesus, the faithful in Christ Jesus. Task 50.
 
 ### Philippians (`philippians`)
 
@@ -1261,9 +1280,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Epistle_to_Titus&oldid=1380618954, section "Opposition to Pauline authenticity". States: A Church of England lectionary commentary agrees and places these letters in the late 1st or early 2nd century. The article cites: Houlden and Rogerson, Common Worship Lectionary: a Scriptures Commentary, 2001.
 - Written, conservative scholars: Conservative scholars keep the view that Paul probably wrote it in the 60s AD. That was after his first imprisonment in Rome, told in Acts 28, and before his second.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-titus/, section "Author, Date, and Recipient". States: Probably the mid 60s AD, between the Roman imprisonment of Acts 28 and a later one that Acts does not tell. The Setting section gives AD 62 to 64.
-- What it is: A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.
+- What it is: A letter from Paul to Titus, whom he left in Crete to appoint elders, the leaders of a church, in each town. It also warns against false teachers and urges good works.
   - Berean Standard Bible. States: Titus 1:5: Paul left Titus in Crete to appoint elders. 1:10: deceivers of the circumcision. 3:14: devote themselves to good works. 3:15: greetings.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-titus/. States: Paul left Titus in Crete. False teachers were a problem, and the letter deals with elders and Christian living.
+  - Berean Standard Bible. States: Titus 1:5 to 1:9: Titus is to appoint elders in every town. 1:7 calls the overseer God's steward. He must hold to sound teaching and refute those who contradict it. Task 50.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-titus/, sections "Theme" and "Purpose". States: The letter sets standards for the leaders of the church. The elders of 1:5 to 1:9 are its picture of proper leadership. Task 50.
 
 ### Philemon (`philemon`)
 
@@ -1275,9 +1296,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written: By tradition, about AD 62, while Paul was a prisoner, probably in Rome.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-philemon/. States: Probably written about AD 62, during the imprisonment of Paul that followed his voyage to Rome.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPhilemon%2C_Epistle_to&oldid=759921. States: Written from Rome at the same time as Colossians and Ephesians.
-- What it is: A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to receive Onesimus back as a dear brother, not as a slave.
+- What it is: A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to welcome Onesimus back as more than a slave, as a dear brother.
   - Berean Standard Bible. States: Philemon 1:1-2: Paul, a prisoner, writes to Philemon and his house church. 1:16: Onesimus, no longer a slave but a beloved brother. 1:25: blessing.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPhilemon%2C_Epistle_to&oldid=759921. States: A private letter that intercedes for Onesimus, who had left his master Philemon.
+  - Berean Standard Bible. States: Philemon 1:15 to 1:17: Paul asks Philemon to have Onesimus back as a beloved brother, better than a slave, and to receive him as he would receive Paul. Task 50.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-philemon/, section "Purpose". States: Paul asks Philemon to take Onesimus back as a beloved brother, and not only as a bondservant. Task 50.
 - No detail. Written: the article gives Caesarea Maritima or Rome as the place, but cites no source for it. Task 4 condition 1 needs a citation.
 
 ### Hebrews (`hebrews`)
@@ -1331,7 +1354,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Author: The apostle Peter, by tradition.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-peter/. States: Peter the apostle is the author of this letter.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPeter%2C_First_Epistle_of&oldid=759911. States: Treats the letter as written by Peter, the apostle of hope.
-- Author, critical scholars: Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, rhetoric, and philosophy, unlike a fisherman from Galilee.
+- Author, critical scholars: Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, in the skill of persuasive speech, and in philosophy, unlike a fisherman from Galilee.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=First_Epistle_of_Peter&oldid=1371626542, section "Authorship". States: Most scholars judge the letter to come from Christian tradition at Rome tied to Peter, not from Peter in person. The article cites: Steve Moyise, The Old Testament in the New, 2004. Stephen L. Harris, Understanding the Bible, 1992. Adela Collins, Mark, 2007. David G. Horrell and Travis B. Williams, 1 Peter, 2023..
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=First_Epistle_of_Peter&oldid=1371626542, section "Authorship". States: Many scholars reject Peter as author because the writer shows schooling in rhetoric, philosophy, and advanced Greek, which a Galilean fisherman would not usually have. The article cites: Paul Achtemeier, 1 Peter, Hermeneia, 1996.
 - Author, conservative scholars: Conservative scholars keep the traditional view that the apostle Peter wrote it. The letter names Peter as its writer, and the writer calls himself a witness of Christ's sufferings.
@@ -1361,8 +1384,10 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Author, critical scholars: Most critical scholars think one or more followers of Peter wrote it in his name. They cite its differences from 1 Peter, its use of Jude, and little support from early church writers.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Second_Epistle_of_Peter&oldid=1376928962, section "Lead, and Authorship and date". States: Most critical scholars regard the letter as pseudepigraphal, written by one or more followers of Peter under his name. The article cites: Raymond E. Brown, Introduction to the New Testament, 1997. Bart Ehrman, Misquoting Jesus, 2005..
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Second_Epistle_of_Peter&oldid=1376928962, section "Authorship and date". States: Reasons given include language unlike 1 Peter, apparent use of Jude, possible hints of 2nd century gnosticism, a delayed second coming, and weak support from outside the letter. The article cites: Robert M. Grant, A Historical Introduction to the New Testament, chapter 14. The article gives no year for this work..
-- Author, conservative scholars: The letter names Peter as an apostle. The writer says he was with Jesus on the mountain and saw him in glory, at 1:16 to 18.
+- Author, conservative scholars: Conservative scholars hold that the apostle Peter wrote it. The letter names him, and the writer says he saw Jesus in glory on the mountain, at 1:16 to 18.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-2-peter/. States: Peter calls himself an apostle in 1:1, and in 1:16 to 1:18 claims to have seen the transfiguration with his own eyes.
+  - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-2-peter/, section "Author, Date, and Recipients". States: Takes Peter as the writer. It says Peter probably wrote from prison in Rome, not long before he was put to death. Task 50.
+  - Berean Standard Bible. States: 2 Peter 1:1 names Simon Peter, a servant and apostle. 1:16 to 1:18: the writer saw His majesty and heard the voice from heaven on the holy mountain. Task 50.
 - Written: By tradition, the mid 60s AD, shortly before Peter died, probably from a prison in Rome.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-2-peter/. States: Probably written from prison in Rome, not long before his execution, during AD 64 to 67.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPeter%2C_Second_Epistle_of&oldid=759912. States: Written a short time before the apostle died, from 1:14.
@@ -1394,9 +1419,10 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=First_Epistle_of_John&oldid=1380152678, section "Lead". States: The article puts the letter in Ephesus, probably, between AD 95 and 110, and cites one textbook. The article cites: Stephen L. Harris, Understanding the Bible, 1985.
 - Written, conservative scholars: Conservative scholars date it to about AD 85, and no later than the 90s AD. John likely wrote it from Ephesus, where he had apparently moved about AD 70.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-3-john/, section "Author, Date, and Recipients; The Setting of 1 John". States: The three letters date from no later than the 90s AD, from Ephesus. The Setting section gives about AD 85 and says John apparently moved to Ephesus near AD 70.
-- What it is: A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.
+- What it is: A letter about living truthfully before God, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.
   - Berean Standard Bible. States: 1 John 1:1: no greeting. 1:7: walk in the light. 2:22: one who denies the Son. 4:7: love one another. 5:13: believers in the Son.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-3-john/. States: First John calls its readers to return to true doctrine, obedient living, and devotion, and speaks of the antichrist and assurance of eternal life.
+  - Berean Standard Bible. States: 1 John 1:6: one who claims fellowship with Him but walks in the darkness lies and does not practice the truth. 2:4 to 2:6: one who knows Him keeps His commandments and walks as Jesus walked. Task 50.
 
 ### 2 John (`2-john`)
 
@@ -1412,9 +1438,11 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written: By tradition, in Ephesus, no later than the 90s AD.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-3-john/. States: Written from Ephesus no later than the 90s AD.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJohn%2C_Third_Epistle_of&oldid=736108. States: In the entry for the Third Epistle: the Second and Third Epistles were probably written soon after the First, and from Ephesus.
-- What it is: A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.
+- What it is: A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came as a real human being.
   - Berean Standard Bible. States: 2 John 1:1: the elder to the chosen lady. 1:5: love one another. 1:7: deceivers deny Jesus came in the flesh. 1:13: greetings.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJohn%2C_Second_Epistle_of&oldid=736106. States: Addressed to the elect lady, who is commended and warned against false teachers.
+  - Berean Standard Bible. States: 2 John 1:7: the deceivers refuse to confess the coming of Jesus Christ in the flesh. Task 50: "as a real human being" gives the words "in the flesh" in plain words.
+  - Wikipedia, https://en.wikipedia.org/w/index.php?title=Second_Epistle_of_John&oldid=1380152630, section "Composition". States: The letter warns against people who denied that Jesus had a real body of flesh and blood, and held that the human Jesus was only spirit. The article cites: Bart D. Ehrman, Lost Christianities, 2003. Task 50.
 
 ### 3 John (`3-john`)
 

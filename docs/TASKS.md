@@ -3456,3 +3456,51 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Give in the report the largest study file that a page gets, with and without gzip, and the time from the click on the switch to the controls on Romans 8.
+
+---
+
+## Task 50. The introductions: the 23 changes from the review by ChatGPT
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: 23 statements of the introductions have clearer or more exact words. No other statement changes, and each introduction stays a draft.
+
+Arthur decided this on 2026-11-23. Read section 21 of `docs/DESIGN.md` first. Section 21.4 has the 23 changes, each with the old words, the new words, and the source to check. The report of ChatGPT is `docs/reviews/intros-review-chatgpt.md`.
+
+This task shows on the site: the words of "About this book" change in 21 books.
+
+WARNING: Change only the 23 statements of section 21.4. Do not change a statement because the report of ChatGPT has a finding for it. Section 21.5 lists the findings with no change.
+
+WARNING: Do not change a `review` value. Each introduction keeps `review: "draft"`.
+
+WARNING: Do not write a fact from memory. Each new fact must be in the source that section 21.4 names for it, or in a source of the record of the statement in `docs/CONTENT-SOURCES.md`.
+
+WARNING: Do not copy a sentence from a source. The rule of "How the introductions were written" in `docs/CONTENT-SOURCES.md` applies: no run of 6 words that is the same as a run in the source text.
+
+WARNING: Do not remove a conservative part, and do not add the word "probably" to a main line. Section 21.2 has the decisions.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. For each of the 23 changes, open each source that section 21.4 names. The Bible text is in `public/data/text/`. Make sure that the source states each fact that the new words add or change. Make sure that the new words say no more than the source.
+2. If a source does not support the new words of a change, do not make that change. Keep the old words, and give the change, the source, and the difference in the report. Do not write different words.
+3. Make sure that the old words of each change are the words in `public/data/intros.json` now. If they differ, stop and report.
+4. Make the changes in `public/data/intros.json`.
+5. For each change, correct the record of the statement in `docs/CONTENT-SOURCES.md`: the words of the statement, and a line for each new fact with its source and what the source states.
+6. Run the check for copied runs of 6 words on the 23 new statements, against the text of the ESV Global Study Bible page and of the Wikipedia page of each book. Say in the report how you ran it.
+7. Add one line to the section "The authorship rule and the five rules" of `docs/CONTENT-SOURCES.md`: it points to section 21.2 of `docs/DESIGN.md` for the two decisions of 2026-11-23.
+8. If a test has the old words of a changed statement, change the test to the new words, and give the test in the report. The rule of the facts does not change: two sentences and 35 words at most.
+9. Run the reviewer agent and the accuracy reviewer agent. Ask the accuracy reviewer to check each of the 23 changes against its sources, and to check that no other statement of `public/data/intros.json` changed.
+10. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- Each of the 23 changes is made, or the report gives the reason that it is not made.
+- `git diff` of `public/data/intros.json` shows only statements of section 21.4.
+- Each of the 66 entries has `review: "draft"`.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md`, and the file `docs/reviews/intros-review-chatgpt.md`, with this task.

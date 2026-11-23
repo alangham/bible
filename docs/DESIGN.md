@@ -2318,3 +2318,195 @@ Claude Code committed Task 49 as `60f5dc0` and pushed it. After the push, the de
 The designer removed the two stored values from the browser after the check.
 
 Not checked: a real phone.
+
+## 21. The review of the introductions by ChatGPT, of 2026-11-23
+
+Arthur asked for a second review of the 66 introductions by a model of a different maker. ChatGPT made it on 2026-11-23, from a prompt of the designer. Its report is `docs/reviews/intros-review-chatgpt.md`. Task 50 makes the changes that Arthur decided.
+
+Each introduction keeps `review: "draft"`. This review does not approve an introduction.
+
+### 21.1 What the review did, and what it did not do
+
+- It examined all 377 statements of `public/data/intros.json`. Each one agrees with its record in `docs/CONTENT-SOURCES.md`.
+- It opened the 61 pages of the ESV Global Study Bible.
+- The 132 fixed pages of Wikipedia and of Wikisource did not load. So it did not check a `critical` part against Wikipedia, it did not check an older view against Easton's Bible Dictionary, and it did not look for a dispute that the site does not show.
+- It gave 47 findings: 6 "MUST FIX", 40 "SHOULD FIX", and 1 "NOTE". It found no false statement about the Bible.
+
+The designer compared the findings with the records in `docs/CONTENT-SOURCES.md`, and opened 8 pages of the ESV Global Study Bible in a browser on 2026-11-23: Revelation, Daniel, Jonah, Matthew, Zephaniah, 1 to 3 John, Hebrews, and Malachi. Each claim of ChatGPT that the designer tested is correct.
+
+### 21.2 Decided by Arthur on 2026-11-23
+
+Arthur selected option A of the designer:
+
+1. The changes of section 21.4 go into Task 50.
+2. The six conservative parts that give the time of a prophet stay: Deuteronomy, Amos, Jonah, Zephaniah, Zechariah, and Malachi, each in `writtenDetail.conservative`. ChatGPT gave each one as "MUST FIX" and proposed to remove the part, because the ESV page gives the time of the preaching and no date of writing. The reason to keep them: each part says that it is the time of the preaching or of the prophet, so it claims nothing that the source does not say. Without the part, the reader gets only the critical view of the date.
+3. A main line gets no "probably" from the ESV page. The words "By tradition" and "about" tell the reader that the line is a view and that the date is not exact.
+
+The rule that follows from point 2, for a later task: where the ESV page gives no date of writing, the conservative part of a `writtenDetail` can give the time of the prophet or of the events, if its words say that it is that time. It must not say that the book was written then.
+
+A known difference, not decided: Nehemiah, Esther, and Job have no conservative part in `writtenDetail`, because the ESV page gives no date. The six books of point 2 have one. A person can see this as not consistent.
+
+### 21.3 A correction of the designer
+
+The designer told Arthur 27 changes. The correct number is 23.
+
+The designer had a group "the word probably is in the detail and not in the main line of the same book", with five findings: Obadiah, Malachi, and 1, 2, and 3 John. The designer then checked all 66 entries. 17 main lines are without a hedge word that their conservative part has, among them Matthew, 1 Timothy, 2 Timothy, Titus, and James, which the designer had put into the group with no change. So four of the five findings are the same case as point 3 of section 21.2: Malachi `written`, and the `author` of 1, 2, and 3 John. They get no change.
+
+Obadiah is different, and it stays in the list: its conservative part lost the word "probably", which its source and its main line have.
+
+### 21.4 The 23 changes
+
+The designer wrote the new words, from the proposals of ChatGPT. Where the two differ, the reason is one of these: a fact has two sentences and 35 words at most, the new words keep the form of the other entries, or the new words stay nearer to the Bible text.
+
+The groups: changes 1 to 16 give plain words for a term that a new reader does not know. Changes 17 and 18 correct a summary that can mislead. Changes 19 to 22 add the date of the ESV page to a conservative part. Change 23 gives back a "probably".
+
+**1. Exodus, `whatItIs`.** Finding F01.
+
+- Old: A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.
+- New: A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle, a tent for worship.
+- Check the new words against: Exodus 40.
+
+**2. Leviticus, `whatItIs`.** Finding F02.
+
+- Old: A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.
+- New: Laws that God gives to Moses on sacrifices, priests, feasts, and who can take part in worship. God speaks from the Tent of Meeting, Israel's tent for worship, at Mount Sinai.
+- Check the new words against: ESV page, "Problems in Understanding Leviticus". Leviticus 1:1 and 27:34.
+
+**3. Ezra, `whatItIs`.** Finding F05.
+
+- Old: A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.
+- New: A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the priest leads more home and deals with marriages to foreign women.
+- Check the new words against: Ezra 7:11 to 12.
+
+**4. Nehemiah, `whatItIs`.** Finding F06.
+
+- Old: Much of the book is in Nehemiah's own voice. He rebuilds the wall of Jerusalem after he arrives in 445 BC, then reforms the temple, the Sabbath, and marriage.
+- New: Much is told in Nehemiah's own voice. Arriving in 445 BC, he rebuilds Jerusalem's wall, restores temple worship, stops trade on the Sabbath rest day, and challenges marriages to foreign women.
+- Check the new words against: Nehemiah 13:8 to 30. ESV page, "Author and Date".
+
+**5. Job, `whatItIs`.** Finding F07.
+
+- Old: A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.
+- New: A story told mostly through speeches in poetry, with a short narrated opening and close. Job, an upright man who loses his children and wealth, argues with three friends, and then God answers him.
+- Check the new words against: Job 1 and 42.
+
+**6. Jeremiah, `author`.** Finding F10.
+
+- Old: Jeremiah son of Hilkiah, a priest of Anathoth, by tradition, with his scribe Baruch.
+- New: By tradition, Jeremiah son of Hilkiah, a priest from Anathoth, with Baruch, who wrote down his words.
+- Check the new words against: Jeremiah 1:1, 36:4, and 45:1.
+
+**7. Jeremiah, `authorDetail.conservative`.** Finding F09.
+
+- Old: Conservative scholars hold that Jeremiah and his scribe Baruch left the record. The book names Baruch as his scribe in several places.
+- New: Conservative scholars credit Jeremiah and Baruch, who wrote down his words. The book names Baruch in that role in several places.
+- Check the new words against: ESV page, "Author and Date".
+
+**8. Micah, `author`.** Finding F15.
+
+- Old: Micah the Moreshite, by tradition.
+- New: The prophet Micah, by tradition.
+- Check the new words against: Micah 1:1. ESV page, "Author and Date".
+
+**9. Nahum, `author`.** Finding F16.
+
+- Old: The prophet Nahum, by tradition. The book names him as Nahum the Elkoshite.
+- New: The prophet Nahum, by tradition. The book names him in its first verse.
+- Check the new words against: Nahum 1:1.
+
+**10. Haggai, `whatItIs`.** Finding F18.
+
+- Old: Dated messages from the second year of King Darius that urge the people to rebuild the house of the Lord. They speak to Zerubbabel the governor, Joshua the high priest, and the people.
+- New: Dated messages from the second year of King Darius that urge the people to rebuild the temple. They speak to Zerubbabel the governor, Joshua the high priest, and the people.
+- Check the new words against: Haggai 1:1 to 9. ESV page, "Theme".
+
+**11. Ephesians, `whatItIs`.** Finding F26.
+
+- Old: A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.
+- New: A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the believers in Ephesus.
+- Check the new words against: Ephesians 1:1.
+
+**12. Titus, `whatItIs`.** Finding F32.
+
+- Old: A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.
+- New: A letter from Paul to Titus, whom he left in Crete to appoint elders, the leaders of a church, in each town. It also warns against false teachers and urges good works.
+- Check the new words against: Titus 1:5 to 9.
+
+**13. 1 Peter, `authorDetail.critical`.** Finding F37.
+
+- Old: Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, rhetoric, and philosophy, unlike a fisherman from Galilee.
+- New: Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, in the skill of persuasive speech, and in philosophy, unlike a fisherman from Galilee.
+- Check the new words against: The record of the statement. The fact does not change.
+
+**14. 1 John, `whatItIs`.** Finding F41.
+
+- Old: A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.
+- New: A letter about living truthfully before God, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.
+- Check the new words against: 1 John 1:5 to 10 and 2:3 to 6.
+
+**15. 2 John, `whatItIs`.** Finding F43.
+
+- Old: A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.
+- New: A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came as a real human being.
+- Check the new words against: 2 John 7.
+
+**16. Jude, `whatItIs`.** Finding F46.
+
+- Old: A short letter that calls believers to stand firm for the faith against ungodly men who crept in. It is addressed to those who are called, loved, and kept.
+- New: A short letter that urges believers to defend the faith against ungodly people among them who excuse immoral behavior. It is addressed to those called, loved by God, and kept in Jesus Christ.
+- Check the new words against: Jude 1, 3, and 4.
+
+**17. Galatians, `whatItIs`.** Finding F25.
+
+- Old: A letter in which Paul argues that non-Jewish believers do not need circumcision or the law of Moses. He wrote it to the churches of Galatia.
+- New: A letter to the churches of Galatia. Paul argues that people are made right with God through faith in Christ, not through circumcision or the law of Moses.
+- Check the new words against: Galatians 2:15 to 21 and 5:1 to 6. ESV page, "Theme".
+
+**18. Philemon, `whatItIs`.** Finding F34.
+
+- Old: A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to receive Onesimus back as a dear brother, not as a slave.
+- New: A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to welcome Onesimus back as more than a slave, as a dear brother.
+- Check the new words against: Philemon 15 to 17. ESV page, "Purpose".
+
+**19. Isaiah, `writtenDetail.conservative`.** Finding F08.
+
+- Old: Conservative scholars read chapters 40 to 55 as prophecies for the 500s BC, when God's people were captives in Babylon.
+- New: Conservative scholars date Isaiah's work from about 740 BC until after 681 BC. They read chapters 40 to 55 as prophecies for the 500s BC, when God's people were captives in Babylon.
+- Check the new words against: ESV page, "Author and Date" and the overview table.
+
+**20. Daniel, `writtenDetail.conservative`.** Finding F11.
+
+- Old: Conservative scholars read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple.
+- New: Conservative scholars date the book to the 500s BC. They read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple.
+- Check the new words against: ESV page, "Author and Date" and "Key Themes".
+
+**21. 2 Peter, `authorDetail.conservative`.** Finding F38.
+
+- Old: The letter names Peter as an apostle. The writer says he was with Jesus on the mountain and saw him in glory, at 1:16 to 18.
+- New: Conservative scholars hold that the apostle Peter wrote it. The letter names him, and the writer says he saw Jesus in glory on the mountain, at 1:16 to 18.
+- Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:1 and 1:16 to 18.
+
+**22. 2 Peter, `writtenDetail.conservative`.** Finding F39.
+
+- Old: The writer says his death is near, so the letter comes from late in the life of Peter.
+- New: Conservative scholars date it shortly before the death of Peter, between AD 64 and 67. The writer says that his death is near.
+- Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:12 to 15.
+
+**23. Obadiah, `writtenDetail.conservative`.** Finding F13.
+
+- Old: Conservative scholars place it early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC.
+- New: Conservative scholars place it probably early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC.
+- Check the new words against: ESV page, "Author and Date".
+
+### 21.5 The findings with no change
+
+- F03, F12, F14, F17, F19, and F20: point 2 of section 21.2.
+- F21 to F24, F27 to F31, F33, F35, F36, F40, F42, F44, F45, and F47: point 3 of section 21.2. Some of these proposals also remove an older view from Easton's Bible Dictionary. ChatGPT did this because it was not able to open Easton. An older view stays.
+- F04, Joshua: a note, with no proposal. The main line gives the older tradition, and the conservative part gives the view of the ESV page. Section 4.2 names Joshua as the example for this.
+
+### 21.6 Not checked
+
+- No person and no agent checked the 91 `critical` parts against Wikipedia in this review, or the older views against Easton's Bible Dictionary. The accuracy reviewer checked them in Tasks 4, 4b, and 4c.
+- No person and no agent looked for a dispute that the site does not show, in the entries with no "Scholars differ".
+- The designer did not check each new word of section 21.4 against its source. Task 50 does this.
+- The pages of the ESV Global Study Bible have no fixed revision. They can differ from the pages of 2026-11-13.

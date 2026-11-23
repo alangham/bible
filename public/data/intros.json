@@ -26,7 +26,7 @@
       "critical": "Modern scholars think it was first composed in the captivity in Babylon, 586 to 538 BC. They date its final revisions to the 5th century BC.",
       "conservative": "Conservative scholars hold that Moses wrote most of it, in his lifetime. A common view dates Israel's exit from Egypt to about 1446 BC, but some prefer about 1260 BC."
     },
-    "whatItIs": "A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle.",
+    "whatItIs": "A narrative of Israel's escape from slavery in Egypt and its journey to Mount Sinai. There God gives the law, and Moses sets up the tabernacle, a tent for worship.",
     "review": "draft"
   },
   {
@@ -41,7 +41,7 @@
       "critical": "Most scholars place the final form of the five books of Moses under Persian rule, 539 to 332 BC. Leviticus grew over a long time before that.",
       "conservative": "Conservative scholars hold that Moses was its source and main writer, so it comes from his lifetime. The Lord gave its laws at Mount Sinai, which a common view dates to about 1446 BC."
     },
-    "whatItIs": "A book of laws on offerings, priests, purity, and feasts, given by God to Moses. The setting is the Tent of Meeting at Mount Sinai.",
+    "whatItIs": "Laws that God gives to Moses on sacrifices, priests, feasts, and who can take part in worship. God speaks from the Tent of Meeting, Israel's tent for worship, at Mount Sinai.",
     "review": "draft"
   },
   {
@@ -197,7 +197,7 @@
       "conservative": "The first person part, 7:27 to 9:15, comes from Ezra himself. Many scholars hold that one writer produced Ezra, Nehemiah, and 1 and 2 Chronicles."
     },
     "written": "The date of writing is not known. The events in the book end in the 5th century BC.",
-    "whatItIs": "A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the scribe leads more home and deals with marriages to foreign women.",
+    "whatItIs": "A history of the Jews who returned from the captivity in Babylon, 586 to 538 BC, and rebuilt the temple. Then Ezra the priest leads more home and deals with marriages to foreign women.",
     "review": "draft"
   },
   {
@@ -235,7 +235,7 @@
     "writtenDetail": {
       "critical": "Its Hebrew is from after the captivity in Babylon, 586 to 538 BC, with words and forms from Aramaic. Aramaic grew into a main language under Persian rule, 539 to 332 BC, which points to that time."
     },
-    "whatItIs": "A long poem in dialogue, set between a prose opening and close. Job, a righteous man who loses his children and wealth, argues with three friends, and then God answers him.",
+    "whatItIs": "A story told mostly through speeches in poetry, with a short narrated opening and close. Job, an upright man who loses his children and wealth, argues with three friends, and then God answers him.",
     "review": "draft"
   },
   {
@@ -309,10 +309,10 @@
   },
   {
     "id": "jeremiah",
-    "author": "Jeremiah son of Hilkiah, a priest of Anathoth, by tradition, with his scribe Baruch.",
+    "author": "By tradition, Jeremiah son of Hilkiah, a priest from Anathoth, with Baruch, who wrote down his words.",
     "authorDetail": {
       "critical": "Scholars generally agree that the book mixes material from different groups of writers. His own messages are probably the poems in chapters 1 to 25, and followers and later editors added much.",
-      "conservative": "Conservative scholars hold that Jeremiah and his scribe Baruch left the record. The book names Baruch as his scribe in several places."
+      "conservative": "Conservative scholars credit Jeremiah and Baruch, who wrote down his words. The book names Baruch in that role in several places."
     },
     "written": "By tradition, the late 7th and early 6th centuries BC. Jeremiah is thought to have added some chapters later, in Egypt.",
     "whatItIs": "Prophecies of judgment and hope that Jeremiah spoke to Judah and the nations, with stories from his life. Its last chapter tells how Babylon burned Jerusalem and took its people captive.",
@@ -346,7 +346,7 @@
     "written": "By tradition, the 6th century BC. The book covers Daniel's life from when he was taken to Babylon about 605 BC to about 536 BC.",
     "writtenDetail": {
       "critical": "A consensus of modern scholars dates the book to about 165 BC, under the Greek king Antiochus IV. They read its predictions as written after the events.",
-      "conservative": "Conservative scholars read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple."
+      "conservative": "Conservative scholars date the book to the 500s BC. They read chapters 8, 9, and 12 as prophecy of later troubles, such as harm to the temple."
     },
     "whatItIs": "Stories of Daniel at the court in Babylon, then visions of kingdoms to come and the time of the end. The stories are set under Babylonian and Persian kings.",
     "review": "draft"
@@ -394,7 +394,7 @@
     "written": "Probably the 6th century BC, soon after Babylon destroyed Jerusalem about 586 BC.",
     "writtenDetail": {
       "critical": "The majority of scholars date it soon after Jerusalem fell to Babylon, in the 6th century BC. Some scholars think it took shape over time, amid conflicts with Edom in the 5th and 4th centuries BC.",
-      "conservative": "Conservative scholars place it early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC."
+      "conservative": "Conservative scholars place it probably early in the captivity in Babylon, 586 to 538 BC. That is before Babylon attacked Edom in 553 BC."
     },
     "whatItIs": "A short prophecy against Edom, which sided with the enemies of Jerusalem. It ends with a promise of rescue on Mount Zion and of a kingdom that belongs to the LORD.",
     "review": "draft"
@@ -412,7 +412,7 @@
   },
   {
     "id": "micah",
-    "author": "Micah the Moreshite, by tradition.",
+    "author": "The prophet Micah, by tradition.",
     "authorDetail": {
       "critical": "Some scholars, though not all, hold that only chapters 1 to 3 go back to Micah himself.",
       "conservative": "Conservative scholars hold that the prophet Micah wrote the book. They credit passages from chapters 1 to 7 to him."
@@ -427,7 +427,7 @@
   },
   {
     "id": "nahum",
-    "author": "The prophet Nahum, by tradition. The book names him as Nahum the Elkoshite.",
+    "author": "The prophet Nahum, by tradition. The book names him in its first verse.",
     "written": "By tradition, the 7th century BC, after Thebes in Egypt fell and before Nineveh fell. An older view dates it to the 8th century BC, probably in Jerusalem.",
     "writtenDetail": {
       "critical": "Scholars debate when the book took shape. Proposals run from soon after 663 BC to about 175 to 165 BC.",
@@ -462,7 +462,7 @@
     "id": "haggai",
     "author": "The prophet Haggai, by tradition.",
     "written": "By tradition, about 520 BC, after the Jews returned from Babylon in 538 BC.",
-    "whatItIs": "Dated messages from the second year of King Darius that urge the people to rebuild the house of the Lord. They speak to Zerubbabel the governor, Joshua the high priest, and the people.",
+    "whatItIs": "Dated messages from the second year of King Darius that urge the people to rebuild the temple. They speak to Zerubbabel the governor, Joshua the high priest, and the people.",
     "review": "draft"
   },
   {
@@ -591,7 +591,7 @@
     "id": "galatians",
     "author": "Paul, by tradition.",
     "written": "By tradition, about AD 48, probably from Antioch in Syria. An older view places it in Corinth in the late 50s AD.",
-    "whatItIs": "A letter in which Paul argues that non-Jewish believers do not need circumcision or the law of Moses. He wrote it to the churches of Galatia.",
+    "whatItIs": "A letter to the churches of Galatia. Paul argues that people are made right with God through faith in Christ, not through circumcision or the law of Moses.",
     "review": "draft"
   },
   {
@@ -606,7 +606,7 @@
       "critical": "Many scholars who doubt that Paul wrote it date it to about AD 70 to 100.",
       "conservative": "Conservative scholars keep the traditional date of about AD 62. They place it during the house arrest of Paul in Rome, told in Acts 28."
     },
-    "whatItIs": "A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the saints in Ephesus.",
+    "whatItIs": "A letter about God's plan in Christ, the church as one body, and how believers should live day to day. It opens with a greeting to the believers in Ephesus.",
     "review": "draft"
   },
   {
@@ -695,14 +695,14 @@
       "critical": "Scholars who doubt Paul wrote it date it from the 80s AD to the late 2nd century AD. Most of them place it between about AD 80 and 100.",
       "conservative": "Conservative scholars keep the view that Paul probably wrote it in the 60s AD. That was after his first imprisonment in Rome, told in Acts 28, and before his second."
     },
-    "whatItIs": "A letter from Paul to Titus, whom he left in Crete to appoint elders in each town. It also warns against false teachers and urges good works.",
+    "whatItIs": "A letter from Paul to Titus, whom he left in Crete to appoint elders, the leaders of a church, in each town. It also warns against false teachers and urges good works.",
     "review": "draft"
   },
   {
     "id": "philemon",
     "author": "The apostle Paul, by tradition.",
     "written": "By tradition, about AD 62, while Paul was a prisoner, probably in Rome.",
-    "whatItIs": "A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to receive Onesimus back as a dear brother, not as a slave.",
+    "whatItIs": "A short personal letter from Paul, a prisoner, to Philemon and the church in his house. Paul asks him to welcome Onesimus back as more than a slave, as a dear brother.",
     "review": "draft"
   },
   {
@@ -735,7 +735,7 @@
     "id": "1-peter",
     "author": "The apostle Peter, by tradition.",
     "authorDetail": {
-      "critical": "Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, rhetoric, and philosophy, unlike a fisherman from Galilee.",
+      "critical": "Most scholars think it comes from a Christian circle in Rome linked to Peter, not from the apostle himself. Many note that the writer seems trained in Greek, in the skill of persuasive speech, and in philosophy, unlike a fisherman from Galilee.",
       "conservative": "Conservative scholars keep the traditional view that the apostle Peter wrote it. The letter names Peter as its writer, and the writer calls himself a witness of Christ's sufferings."
     },
     "written": "By tradition, the early 60s AD, probably in Rome. An older view places it in Babylon on the Euphrates.",
@@ -751,7 +751,7 @@
     "author": "The apostle Peter, by tradition.",
     "authorDetail": {
       "critical": "Most critical scholars think one or more followers of Peter wrote it in his name. They cite its differences from 1 Peter, its use of Jude, and little support from early church writers.",
-      "conservative": "The letter names Peter as an apostle. The writer says he was with Jesus on the mountain and saw him in glory, at 1:16 to 18."
+      "conservative": "Conservative scholars hold that the apostle Peter wrote it. The letter names him, and the writer says he saw Jesus in glory on the mountain, at 1:16 to 18."
     },
     "written": "By tradition, the mid 60s AD, shortly before Peter died, probably from a prison in Rome.",
     "writtenDetail": {
@@ -773,7 +773,7 @@
       "critical": "A standard textbook dates it between about AD 95 and 110, probably in Ephesus.",
       "conservative": "Conservative scholars date it to about AD 85, and no later than the 90s AD. John likely wrote it from Ephesus, where he had apparently moved about AD 70."
     },
-    "whatItIs": "A letter about walking in the light, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.",
+    "whatItIs": "A letter about living truthfully before God, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.",
     "review": "draft"
   },
   {
@@ -784,7 +784,7 @@
       "conservative": "Conservative scholars hold that all three letters of John are probably by John, the son of Zebedee."
     },
     "written": "By tradition, in Ephesus, no later than the 90s AD.",
-    "whatItIs": "A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came in the flesh.",
+    "whatItIs": "A short letter from the elder to the chosen lady and her children. It urges love and warns against deceivers who deny that Jesus came as a real human being.",
     "review": "draft"
   },
   {

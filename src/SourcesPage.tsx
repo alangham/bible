@@ -185,7 +185,8 @@ export function SourcesPage() {
           </p>
           <p>
             The site got the files from the repository <a href={AQUIFER_CREDIT.source.href}>BibleAquifer/AquiferOpenStudyNotes</a> on GitHub, version
-            1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.
+            1.1.2. The site shows the words of the notes with no change. The references of the notes to passages and to other notes are links on this
+            site. The site does not show the other links of the files.
           </p>
           <p>Biblica, Mission Mutual, and Tyndale House Publishers have no connection with this site.</p>
         </section>

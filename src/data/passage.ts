@@ -94,3 +94,21 @@ export function passageVerses(text: BookText, p: PassageRange): PassageVerse[] {
   }
   return out
 }
+
+/**
+ * The last verse of a chapter in a text: the largest verse number, also of a verse that is not in the main text.
+ * docs/DESIGN.md section 22.4 uses it with the Berean text for the rule of whole chapters. Undefined for no chapter.
+ */
+export function lastVerseOf(text: BookText, c: number): number | undefined {
+  const ch = text.chapters[c - 1]
+  if (!ch) return undefined
+  let last: number | undefined
+  for (const block of ch.blocks) {
+    if (block.k !== 'p') continue
+    for (const item of block.c) {
+      const v = isVerseMark(item) ? item.v : isOmitted(item) ? item.o : undefined
+      if (v !== undefined && (last === undefined || v > last)) last = v
+    }
+  }
+  return last
+}

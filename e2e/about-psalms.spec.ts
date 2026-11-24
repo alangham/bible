@@ -24,15 +24,16 @@ const LICENSE = 'https://creativecommons.org/licenses/by-sa/4.0/'
 /** The note credit of section 19.8. */
 const BIBLICA_CREDIT = 'From the Biblica Study Notes, © 2023 Biblica Inc., licensed under CC BY-SA 4.0. The words have no changes.'
 
-type Node = string | [string, ...Node[]]
+// From Task 55, a link has an object after its name: docs/DESIGN.md section 22.5. The object has no text.
+type Node = string | [string, ...Node[]] | Record<string, unknown>
 const data = (path: string) => JSON.parse(readFileSync(new URL(`../public/data/${path}`, import.meta.url), 'utf8')) as unknown
 const about = (data('study/about-psalms.json') as { psalms: { psalm: number; id: string; c: Node[] }[] }).psalms
 const biblica = (data('notes/psalms.json') as { notes: { from: [number, number]; to: [number, number] }[] }).notes
 
 /** The text of each list item of a content, in the order of the content. */
 function items(nodes: readonly Node[]): string[] {
-  const text = (n: Node): string => (typeof n === 'string' ? n : n.slice(1).map((c) => text(c as Node)).join(''))
-  return nodes.flatMap((n) => (typeof n === 'string' ? [] : n[0] === 'li' ? [text(n)] : items(n.slice(1) as Node[])))
+  const text = (n: Node): string => (typeof n === 'string' ? n : Array.isArray(n) ? n.slice(1).map((c) => text(c as Node)).join('') : '')
+  return nodes.flatMap((n) => (typeof n === 'string' || !Array.isArray(n) ? [] : n[0] === 'li' ? [text(n)] : items(n.slice(1) as Node[])))
 }
 
 /** The first psalm whose note has a list. Step 10 selects it from the data. */
@@ -104,11 +105,13 @@ for (const vp of VIEWPORTS) {
       await control(page, LIST_PSALM.psalm).click()
       const list = panel(page, LIST_PSALM.psalm).locator('.rd-note li')
       await expect(list).toHaveText(items(LIST_PSALM.c))
-      // The elements have no attribute.
+      // The elements have no attribute. From Task 55, the one exception is a link of docs/DESIGN.md section 22.6.
       const attributes = await panel(page, LIST_PSALM.psalm)
         .locator('.rd-note *')
-        .evaluateAll((els) => els.filter((e) => e.tagName !== 'H3' && e.attributes.length > 0).map((e) => e.tagName))
+        .evaluateAll((els) => els.filter((e) => e.tagName !== 'H3' && !e.classList.contains('rd-study-ref') && e.attributes.length > 0).map((e) => e.tagName))
       expect(attributes).toEqual([])
+      // Psalms 4 has four passage links: Psalm 4:1, 4:2–3, 4:4–5, and 4:6–8.
+      await expect(panel(page, LIST_PSALM.psalm).locator('.rd-note a.rd-study-ref')).toHaveCount(4)
     })
 
     test('Psalms 23: the open panel has the Biblica note and the note credit, and no Aquifer credit', async ({ page }) => {
@@ -170,7 +173,7 @@ for (const vp of VIEWPORTS) {
         'The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of “About this chapter” is from the Aquifer Open Study Notes, © 2026 Mission Mutual. The study notes at the verses are from the same source. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The license of both is CC BY-SA 4.0.',
       )
       await expect(paragraphs.nth(3)).toHaveText(
-        'The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.',
+        'The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. The references of the notes to passages and to other notes are links on this site. The site does not show the other links of the files.',
       )
       await expect(paragraphs.nth(4)).toHaveText('Biblica, Mission Mutual, and Tyndale House Publishers have no connection with this site.')
       const links = section.locator('p:nth-of-type(n+3) a')

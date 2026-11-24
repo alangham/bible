@@ -2197,7 +2197,7 @@ The block, below its control:
 - For each note: a note label, and then the content.
 - The note label is "Verse 3" for one verse and "Verses 19–21" for a range in one chapter, with the en dash. For a range of more than one chapter, it is the range label of section 19.7, for example "Romans 5:1–8:39". For a title note, it is "Title of the psalm".
 - After the last note: the short credit of section 20.6.
-- The words of a note that refer to a different note or to a passage are plain text. Example: "See study note on 6:19".
+- The words of a note that refer to a different note or to a passage are plain text. Example: "See study note on 6:19". Section 22 replaces this.
 
 The values. The pictures have a smaller space above a note label, because the script of the designer had the fault of section 19.14. The table is correct:
 
@@ -2221,7 +2221,7 @@ Task 48 changes the last paragraph of the section "Notes on the chapters" and ad
 
 > The Biblica Study Notes have no text for 132 psalms. For these psalms, the text of "About this chapter" is from the Aquifer Open Study Notes, © 2026 Mission Mutual. They are an adaptation of the Tyndale Open Study Notes, © 2023 Tyndale House Publishers. The license of both is CC BY-SA 4.0.
 >
-> The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. It does not show the links of the files.
+> The site got the files from the repository BibleAquifer/AquiferOpenStudyNotes on GitHub, version 1.1.2. The site shows the words of the notes with no change. The references of the notes to passages and to other notes are links on this site. The site does not show the other links of the files.
 >
 > Biblica, Mission Mutual, and Tyndale House Publishers have no connection with this site.
 
@@ -2240,7 +2240,7 @@ Task 49 adds one sentence after "© 2026 Mission Mutual.": "The study notes at t
 4. The name "Study notes", the place of the switch, and the state "off" at the first visit.
 5. The rule of the groups in section 20.8, and the words of the control and of the note label.
 6. The study notes show with each of the three translations. The next section has the cost.
-7. A reference to a different note or to a passage is plain text.
+7. A reference to a different note or to a passage is plain text. Section 22 replaces this.
 8. A note of "About this chapter" is not also at the verses of that psalm.
 9. The source files are in the repository. They have about 27 MB.
 10. Two tasks, not one.
@@ -2667,3 +2667,121 @@ The records of Lamentations, Galatians, and Philippians have the line "No detail
 The designer added rules 2 and 3 to make the record complete. Arthur did not decide them one by one. They change no word of the site.
 
 No change: the other findings of check 1 (F01, F03 to F06), findings F13 and F20, the findings of check 3 that the record already answers (F36, F39, F40, F43) or that are not confirmed (F38, F45), and the part "Other points of the readers" of the report. No person and no agent gave the "Other points" a second reading.
+
+---
+
+## 22. Links in the study notes, of 2026-11-23
+
+This section adds links to the Aquifer notes of section 20. A reference to a passage or to a different note becomes a link. A tap on it opens the link pop-up of section 7.7. Task 55 builds it.
+
+This section replaces the line of section 20.8 that says that these words are plain text, and point 7 of section 20.10.
+
+### 22.1 Decided by Arthur on 2026-11-23
+
+- The references in the study notes are links.
+- A link has the color of the group of its book, the same as a reference in the cross-reference line of section 7.7. Arthur selected this from two pictures. The other picture had an underline and the text color.
+- The pictures are in `docs/screenshots/study-links-design/`. They are a mock-up that a script made on the built page of Task 49. The pop-up frame in them is the real pop-up.
+
+### 22.2 What the source gives
+
+The numbers are from a count by the designer in the source files of commit `d903df3d9bdbd6399fe83fc3d7046ea29e024962`, against the Berean data of the site.
+
+- 39,112 `<data class="bible-ref">` tags. Each one has `data-start-ref` and `data-end-ref`, 8 digits each: 2 for the book, 3 for the chapter, 3 for the verse. Example: `45007023` is Romans 7:23.
+- 1,244 `<data class="resource-ref">` tags. 1,123 have `data-resource-code="AquiferOpenStudyNotes"` and a `data-content-id` that is the number of a note of the source. 121 have a different code: 92 themes, 25 profiles, and 4 book introductions. The site does not have these texts.
+- 6 `bible-ref` tags have a tag inside: `em`, `span`, or `sup`.
+
+A link comes only from one of these tags. The site does not make a link from the words of a note.
+
+### 22.3 The rule: which reference is a link
+
+1. A `bible-ref` tag is a passage link when its two ends are in one book, each end is a verse of the Berean data, and the end is not before the start. 39,103 tags are passage links. A verse that the Berean data has only as a note of the publisher is a verse of the Berean data. Example: Mark 9:44.
+2. The 9 other `bible-ref` tags are plain text: 5 have their ends in two books, 3 have an end verse that is not in the Berean data, and 1 has a start verse that is not in the Berean data.
+3. A `resource-ref` tag with the code `AquiferOpenStudyNotes` is a note link when its number is a note of the site. 1,123 tags are note links: 918 to a note of the same book, and 205 to a note of a different book.
+4. The 121 other `resource-ref` tags are plain text.
+5. The words of a link are the words between the tags, with no change. The check of the words of section 20.3 must give the same SHA-256 values as before.
+6. A tag inside a link stays by the rules of section 20.3: `em` and `sup` stay, and `span` goes.
+
+### 22.4 The rule: which text the pop-up shows
+
+1. All verses: a passage link whose two ends are in one chapter, when the passage is not the whole chapter. 37,132 links. A long passage scrolls in the text area, as built.
+2. The first verse, with the label "First verse": a passage link that is one whole chapter or more (1,614 links), or whose ends are in two chapters (357 links). This is the rule of 2026-11-14 for the cross-reference line, section 7.7. A whole chapter starts at verse 1 and ends at the last verse of the chapter in the Berean data.
+3. The text is in the selected translation, as built for all pop-ups.
+
+### 22.5 The data
+
+A content gets two new elements. Each one has one object after its name, then its nodes.
+
+- A passage link: `["ref", {"b": "romans", "c": 7, "v": 23}, "7:23"]`. A passage of more than one verse has `"c2"` and `"v2"` also. A link of rule 2 of section 22.4 has `"first": true` also.
+- A note link: `["note", {"b": "romans", "id": "25719", "c": 6, "v": 19}, "study note on 6:19"]`. `b` is the book of the note, and `id` is the number of the note. `c` and `v` are the chapter and the verse of the start of the range of the note. Section 22.11 added `c` and `v`.
+
+No other element has an object. The build stops on an object with a different key. `scripts/build-study-notes.mjs` writes the two elements into the files of `public/data/study/`, also into `about-psalms.json`.
+
+### 22.6 The link on the page
+
+- The element is `<a class="rd-study-ref">` with `href` to the first verse of the passage, or to the first verse of the range of the note. It has `aria-haspopup="dialog"`. It is not a `<button>`, because a button does not break across two lines.
+- A plain click or the Enter key opens the pop-up. A click with a modifier key follows the `href`, as built for "Go there".
+- The look: weight 600, the color of the group of the book of the link, no underline, and an underline with the pointer on it. The font, the size, and the line height are those of the note. The link has no padding. The color is a color name of the group, as in the cross-reference line. No color value in a component.
+- The link has no `aria-label`. Its name is its words.
+- The links show in each place that shows an Aquifer note: the blocks of notes of section 20.8, and the Aquifer notes of "About this chapter" in the 132 psalms of section 20.5.
+- The switch "Echo links" does not change these links.
+
+### 22.7 The pop-up of a passage link
+
+The pop-up is the link pop-up of section 7.7, with these lines:
+
+- The band: the group of the book of the passage.
+- The title: the name of the passage, for example "Hebrews 10:6" or "Romans 8:5-9". For whole chapters: the book and the chapters, for example "Romans 5–7".
+- The kind line: "Reference in the study note on Romans 8:3". The passage name in it is the range of the note that has the link. For a title note: "Reference in the study note on the title of Psalm 51".
+- The label "First verse", if rule 2 of section 22.4 applies.
+- The text of the passage.
+- The source line: "The reference is from the Aquifer Open Study Notes."
+- "Go there" and "Stay here". "Go there" goes to the first verse of the passage, and the trail gets a step, as built.
+
+### 22.8 The pop-up of a note link
+
+- The band: the group of the book of the note.
+- The title: the name of the range of the note, for example "Romans 6:19".
+- The kind line: "Study note, from the notes on Romans 8:3".
+- The text of the range of the note, by the rule of section 22.4.
+- The note: a rule on the left as in a block of notes, the note label of section 20.8, the content, and the short credit of section 20.6. A note never shows without a credit.
+- The references in a note in a pop-up are plain text. A pop-up does not open a second pop-up.
+- If the note does not fit, the note area scrolls and takes the keyboard focus, as the text area does. A reader must be able to read each word of the note. The longest note of a note link has 402 words: "study note on Daniel 9:27", in the note on Daniel 11:22.
+- "Go there" goes to the first verse of the range of the note. It does not open the block of notes there.
+- The page gets the study file of the book of the note when the pop-up opens. If the file does not load, the pop-up says "The note did not load."
+
+### 22.9 Selected by the designer, without a decision by Arthur
+
+1. The first-verse rule of section 22.4 for a passage in two chapters.
+2. The words of the kind lines and of the source line. The pictures showed them.
+3. The pop-up of a note link shows the text of the passage above the note.
+4. No link in a pop-up.
+5. "Go there" of a note link does not open the block of notes.
+6. No `aria-label` on a link.
+7. The 9 `bible-ref` tags of rule 2 of section 22.3 are plain text. Some are faults of the source, for example "2 Chronicles 17:1–21:1" with the end 2 Chronicles 17:21.
+
+### 22.10 Weak points, and not checked
+
+- A note with many references has many colors. One note of the source has 56 references.
+- The files of `public/data/study/` become larger. They had 6,593,568 bytes before Task 55, and 2,051,543 bytes with gzip. The first build of Task 55 gives 8,616,728 bytes, and 2,367,960 bytes with gzip. The designer gave 6,594,592 bytes at first. That number was not correct.
+- Not checked: dark mode, the King James Version, the World English Bible, a keyboard, a screen reader, a real phone.
+- Not checked: the contrast of each group color at the size of a note on the background of a block of notes. The automatic accessibility tests of Task 55 check it.
+
+### 22.11 After the first build of Task 55: the answer of the designer, of 2026-11-23
+
+Claude Code built Task 55 and stopped before the commit with one question: sections 22.5 and 22.6 did not agree on the `href` of a note link. This was a fault of the design. The designer checked the 67 built files: they have 39,103 passage links and 1,123 note links, and each note link points to a note of its book file.
+
+The answer is (b). Do these steps, then commit and push Task 55:
+
+1. Add `c` and `v` to each note link, as section 22.5 says now. The `href` of a note link is the first verse of the range of the note from the start. Remove the code that changes the `href` when the study file loads. The 1,123 note links add about 16,000 bytes.
+2. Change one sentence of the Sources page, in the paragraph on the Aquifer Open Study Notes. Old: "It does not show the links of the files." New: "The references of the notes to passages and to other notes are links on this site. The site does not show the other links of the files." Change section 20.9 and each test that has the old words.
+3. Correct the line of section 15 of `docs/DATA-SOURCES.md` that has the size 5,788,414 bytes: give the size after this build.
+4. Add one browser test for one of the three links to a verse that the Berean data has only as a note: Mark 9:44, Mark 9:46, or Mark 11:26. Test the pop-up in the Berean Standard Bible and in the King James Version.
+5. Run the build of the notes. The numbers of sections 22.3 and 22.4 and the SHA-256 values of the words must be the same as in the first build. Record the new size.
+6. Run the reviewer agent, `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`. With the switch "Study notes" off, the only permitted pixel change is the new sentence of the Sources page.
+
+Accepted as built, with no change:
+
+- A verse that the Berean data has only as a note is a verse of the Berean data. Rule 1 of section 22.3 says so now.
+- The title "Study note" while a note loads and if it does not load, and the title "…" of a passage link with "First verse" until the text loads.
+- `src/book/LinkPopup.tsx` is in two parts, a frame and the content of a link.
+- The two older tests that changed for the links.

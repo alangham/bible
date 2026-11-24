@@ -1355,6 +1355,24 @@ html:has(.reading) {
   text-decoration: underline;
 }
 
+/*
+  A link in a study note: a passage link or a note link. docs/DESIGN.md section 22.6, Task 55. Weight 600, the color
+  of the group of the book of the link, and no underline, but an underline with the pointer on it. The font, the size,
+  and the line height are those of the note, and the link has no padding. The element is an a, not a button, so it
+  breaks across two lines. The color name is in --d on the element, as in the cross-reference line.
+*/
+.rd-study-ref {
+  color: var(--d);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .reading .rd-study-ref:hover {
+    text-decoration: underline;
+  }
+}
+
 .rd-column .sh-s1,
 .rd-column .sh-s2 {
   font-family: Inrond, system-ui, sans-serif;
@@ -2131,6 +2149,59 @@ html:has(.reading) {
 .pop-text:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 4px;
+}
+
+/*
+  The note in the pop-up of a note link: docs/DESIGN.md section 22.8, Task 55. A rule on the left as in a block of
+  notes, the note label, the content, and the short credit, with the values of section 20.8. A long note scrolls inside
+  the area, as the text area does, and then the area takes the keyboard focus.
+*/
+.pop-note {
+  max-height: 36vh;
+  overflow: auto;
+  margin: 12px 0 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--credit-line);
+  color: var(--ink);
+  font: 400 15px/1.5 Inrond, system-ui, sans-serif;
+}
+
+.pop-note:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.pop-note p {
+  margin: 0 0 8px;
+}
+
+.pop-note ul,
+.pop-note ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.pop-note li {
+  margin: 0 0 6px;
+}
+
+.pop-note .rd-note-label {
+  margin: 0 0 4px;
+  color: var(--ink-secondary);
+  font: 600 13px/20px Inrond, system-ui, sans-serif;
+}
+
+.pop-note .rd-short-credit {
+  margin: 14px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--credit-line);
+  color: var(--ink-secondary);
+  font: 400 14px/21px Inrond, system-ui, sans-serif;
+}
+
+.pop-note-failed {
+  margin: 12px 0 0;
+  font-size: 15px;
 }
 
 /* ---- Reference section: docs/DESIGN.md section 7.8, docs/TASKS.md Task 15. ---- */

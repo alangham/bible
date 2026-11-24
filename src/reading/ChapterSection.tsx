@@ -195,8 +195,8 @@ export function ChapterSection({ books, book, n, full, intro, first, echoOn, mar
   }, [studyOn, study, n, shownTranslation])
   const afterBlock = useCallback(
     (i: number) =>
-      studyAfter?.get(i)?.map(({ group, notes }) => <StudyBlock key={`${group.v[0]}-${group.v[1]}`} bookName={book.name} chapter={n} group={group} notes={notes} />),
-    [studyAfter, book.name, n],
+      studyAfter?.get(i)?.map(({ group, notes }) => <StudyBlock key={`${group.v[0]}-${group.v[1]}`} bookId={book.id} bookName={book.name} chapter={n} group={group} notes={notes} />),
+    [studyAfter, book.id, book.name, n],
   )
   // The controls changed the height of the chapter: the page keeps the verse at the top in its place. Section 20.7.
   useLayoutEffect(() => {

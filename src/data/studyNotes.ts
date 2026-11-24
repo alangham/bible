@@ -2,18 +2,53 @@
 // The files public/data/study/ come from scripts/build-study-notes.mjs, with the words of the Aquifer Open Study Notes
 // and no change. Task 48 uses about-psalms.json: the 132 psalms with no Biblica note, each with one Aquifer note in
 // "About this chapter", section 20.5. Task 49 uses the study file of each book, with the switch "Study notes" on:
-// sections 20.7 and 20.8.
+// sections 20.7 and 20.8. Task 55 adds the links of section 22: a passage link and a note link in a content.
 
 /**
  * The content of a note: a list of nodes. A node is a string of text, or an element: a list with the name of the
  * element first and its nodes after it, for example ["p", "The ", ["em", "LORD"]]. An element has no attribute.
  * The page makes each element itself, and it puts no string of a file into the page as HTML.
+ *
+ * The two links of section 22.5 have one object after the name, and then their nodes: the words between the tags of
+ * the source, with no change. No other element has an object.
  */
-export type StudyNode = string | [StudyElement, ...StudyNode[]]
+export type StudyNode = string | [StudyElement, ...StudyNode[]] | ['ref', StudyRef, ...StudyNode[]] | ['note', StudyNoteRef, ...StudyNode[]]
 
 /** The elements of point 1 of section 20.3. The page makes no other element. */
 export const STUDY_ELEMENTS = ['p', 'ul', 'ol', 'li', 'em', 'strong', 'sup', 'br'] as const
 export type StudyElement = (typeof STUDY_ELEMENTS)[number]
+
+/** The two links of section 22.5. */
+export const STUDY_LINKS = ['ref', 'note'] as const
+
+/**
+ * A passage link: the book, the chapter and the verse of the start, and of the end for a passage of more than one
+ * verse. `first`: the pop-up shows the first verse, with the label "First verse": rule 2 of section 22.4.
+ */
+export interface StudyRef {
+  b: string
+  c: number
+  v: number
+  c2?: number
+  v2?: number
+  first?: true
+}
+
+/**
+ * A note link: the book of the note, the number of the note, and the chapter and the verse of the start of the range of
+ * the note. The href of the link is that verse: docs/DESIGN.md section 22.11.
+ */
+export interface StudyNoteRef {
+  b: string
+  id: string
+  c: number
+  v: number
+}
+
+/** The nodes of an element after its name, and after the object of a link. */
+export function childNodes(node: Exclude<StudyNode, string>): StudyNode[] {
+  return (node[0] === 'ref' || node[0] === 'note' ? node.slice(2) : node.slice(1)) as StudyNode[]
+}
 
 /** One Aquifer note: its number, the chapter and the verse of the two ends of its range, and its content. */
 export interface AquiferNote {
@@ -47,9 +82,9 @@ export function loadAboutPsalms(): Promise<AboutPsalm[]> {
   return cache
 }
 
-/** The text of a content: each string, with no tag. */
+/** The text of a content: each string, with no tag. The object of a link has no text. */
 export function textOfNodes(nodes: readonly StudyNode[]): string {
-  return nodes.map((n) => (typeof n === 'string' ? n : textOfNodes(n.slice(1) as StudyNode[]))).join('')
+  return nodes.map((n) => (typeof n === 'string' ? n : textOfNodes(childNodes(n)))).join('')
 }
 
 /**
@@ -103,6 +138,17 @@ export function loadStudyFile(id: string): Promise<StudyFile> {
   return p
 }
 
+const indexes = new WeakMap<StudyFile, Map<string, AquiferNote>>()
+/** The note of a study file with this number. */
+export function noteById(file: StudyFile, id: string): AquiferNote | undefined {
+  let index = indexes.get(file)
+  if (!index) {
+    index = new Map(file.notes.map((n) => [n.id, n]))
+    indexes.set(file, index)
+  }
+  return index.get(id)
+}
+
 /** The words of a notes control: "Notes on verses 1 to 4", or "Notes on verse 5" for a group of blocks with one verse. */
 export function controlWords([first, last]: readonly [number, number]): string {
   return first === last ? `Notes on verse ${first}` : `Notes on verses ${first} to ${last}`
@@ -118,6 +164,46 @@ export function noteLabel(bookName: string, note: Pick<AquiferNote, 'from' | 'to
   const [tc, tv] = note.to
   if (fc !== tc) return `${bookName} ${fc}:${fv}–${tc}:${tv}`
   return fv === tv ? `Verse ${fv}` : `Verses ${fv}–${tv}`
+}
+
+/**
+ * The name of the range of a note, as in the pop-ups of section 22: "Romans 6:19", "Romans 8:1-4", "Psalms 42:1-43:5",
+ * and "the title of Psalm 51" for a title note. The form of the hyphen is that of the other pop-ups.
+ */
+export function noteRangeName(bookName: string, note: Pick<AquiferNote, 'from' | 'to' | 'title'>): string {
+  if (note.title) return `the title of Psalm ${note.from[0]}`
+  const [fc, fv] = note.from
+  const [tc, tv] = note.to
+  if (fc !== tc) return `${bookName} ${fc}:${fv}-${tc}:${tv}`
+  return fv === tv ? `${bookName} ${fc}:${fv}` : `${bookName} ${fc}:${fv}-${tv}`
+}
+
+/**
+ * Rule 2 of section 22.4 for a range: one whole chapter or more, or two ends in two chapters. A whole chapter starts at
+ * verse 1 and ends at the last verse of the chapter in the Berean data. `lastVerse` gives that last verse.
+ */
+export function wholeChapters(range: { c: number; v: number; c2?: number; v2?: number }, lastVerse: (c: number) => number | undefined): boolean {
+  const c2 = range.c2 ?? range.c
+  const v2 = range.v2 ?? range.v
+  return range.v === 1 && v2 === lastVerse(c2)
+}
+
+/** True when the pop-up of a range shows the first verse only: rule 2 of section 22.4. */
+export function firstVerseOnly(range: { c: number; v: number; c2?: number; v2?: number }, lastVerse: (c: number) => number | undefined): boolean {
+  return (range.c2 ?? range.c) !== range.c || wholeChapters(range, lastVerse)
+}
+
+/**
+ * The title of the pop-up of a passage link, section 22.7: the name of the passage, for example "Hebrews 10:6" or
+ * "Romans 8:5-9". For whole chapters: the book and the chapters, for example "Romans 5–7" with the en dash, or
+ * "Romans 5" for one chapter. `whole` comes from the rule of section 22.4.
+ */
+export function refTitle(bookName: string, ref: StudyRef, whole: boolean): string {
+  const c2 = ref.c2 ?? ref.c
+  const v2 = ref.v2 ?? ref.v
+  if (whole) return c2 === ref.c ? `${bookName} ${ref.c}` : `${bookName} ${ref.c}–${c2}`
+  if (c2 !== ref.c) return `${bookName} ${ref.c}:${ref.v}-${c2}:${v2}`
+  return v2 === ref.v ? `${bookName} ${ref.c}:${ref.v}` : `${bookName} ${ref.c}:${ref.v}-${v2}`
 }
 
 /**

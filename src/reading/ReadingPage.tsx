@@ -14,9 +14,10 @@
 // - The top bar has three panels: the chapter grid, the translation list, and, in the narrow layout,
 //   the menu panel. docs/DESIGN.md sections 9.4 to 9.7, Task 22 steps 7 to 12.
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type MouseEvent } from 'react'
 import { BookNotFound } from '../book/BookNotFound.tsx'
 import { LinkPopup } from '../book/LinkPopup.tsx'
+import { StudyPopup } from '../book/StudyPopup.tsx'
 import { plainClick } from '../book/links.ts'
 import { canMoveBookName, moveBookName } from '../bookMove.ts'
 import { groupOf, groupVar, type Book } from '../data/books.ts'
@@ -40,6 +41,7 @@ import { useReducedMotion } from '../useReducedMotion.ts'
 import { ChapterSection } from './ChapterSection.tsx'
 import { lastRead, setLastRead } from './lastRead.ts'
 import { nextChapter, previousChapter, type ChapterPlace } from './order.ts'
+import { StudyLinkContext, type StudyLinkTarget, type StudyLinks } from './studyLinks.ts'
 
 /** The height of the top bar, in px. A chapter is in view when its top is above this line. */
 const BAR_PX = 52
@@ -149,7 +151,9 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   // It follows the chapter of the top bar during a scroll and after travel. docs/DESIGN.md section 12.2.
   const titlePlace = valid ? (current ?? start) : null
   usePageTitle(titlePlace ? `${titlePlace.book.name} ${titlePlace.n}` : undefined)
+  // The pop-up of a link, or of a link in the study notes: docs/DESIGN.md section 22. One pop-up at a time.
   const [popup, setPopup] = useState<{ end: LinkEnd; anchor: HTMLElement; reference?: LineReference } | null>(null)
+  const [studyPopup, setStudyPopup] = useState<{ target: StudyLinkTarget; anchor: HTMLElement; seq: number } | null>(null)
   const trail = useTrail()
   const kept = useRef<KeptPlace | null>(null)
   /** Removes the listeners for the actions of the reader that end the kept place. */
@@ -188,6 +192,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
     setStart((s) => ({ book, n, verse, seq: (s?.seq ?? 0) + 1 }))
     setCurrent({ book, n })
     setPopup(null)
+    setStudyPopup(null)
   }, [book, valid, id, chapter, verse])
 
   // The chapter in view changed: the top bar, the address, and the last-read chapter follow it.
@@ -208,6 +213,7 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
       if (!target) return
       const hash = chapterHref(to.book, to.c, to.v)
       setPopup(null)
+      setStudyPopup(null)
       if (window.location.hash === hash) {
         written.current = hash
         setStart((s) => ({ book: target, n: to.c, verse: to.v, seq: (s?.seq ?? 0) + 1 }))
@@ -229,11 +235,23 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
   )
   const onGo = useCallback((end: LinkEnd) => travel({ book: end.here.book, c: end.here.c, v: end.here.v }, { book: end.there.book, c: end.there.c, v: end.there.v }), [travel])
   const onReadWith = useCallback((from: ChapterRef, to: ChapterRef) => travel({ book: from.book, c: from.c }, { book: to.book, c: to.c }), [travel])
-  const onLink = useCallback(
-    (end: LinkEnd, anchor: HTMLElement, reference?: LineReference) => setPopup((p) => (p?.anchor === anchor ? null : { end, anchor, reference })),
-    [],
-  )
+  const onLink = useCallback((end: LinkEnd, anchor: HTMLElement, reference?: LineReference) => {
+    setStudyPopup(null)
+    setPopup((p) => (p?.anchor === anchor ? null : { end, anchor, reference }))
+  }, [])
   const closePopup = useCallback(() => setPopup(null), [])
+  // A link in the study notes. A second tap on the same link closes its pop-up, as for the other links.
+  const studyLinks = useMemo<StudyLinks>(
+    () => ({
+      books,
+      open: (target, anchor) => {
+        setPopup(null)
+        setStudyPopup((p) => (p?.anchor === anchor ? null : { target, anchor, seq: (p?.seq ?? 0) + 1 }))
+      },
+    }),
+    [books],
+  )
+  const closeStudyPopup = useCallback(() => setStudyPopup(null), [])
 
   // A change of the text size: the verse at the top of the page stays at the same place. TopBar takes the
   // place before the change, and the page restores it after the new size is in the page, before the
@@ -324,10 +342,13 @@ export function ReadingPage({ books, intros, id, chapter, verse, layout }: Readi
         />
       )}
       <TrailBar books={books} onGo={open} />
-      {start && (
-        <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onTextShown={onTextShown} onStudyShown={onStudyShown} onLink={onLink} onReadWith={onReadWith} />
-      )}
+      <StudyLinkContext.Provider value={studyLinks}>
+        {start && (
+          <ReadingScroll key={start.seq} books={books} intros={intros} start={start} onCurrent={onCurrent} onTextShown={onTextShown} onStudyShown={onStudyShown} onLink={onLink} onReadWith={onReadWith} />
+        )}
+      </StudyLinkContext.Provider>
       {popup && <LinkPopup key={popup.anchor.dataset.link} books={books} end={popup.end} reference={popup.reference} anchor={popup.anchor} layout={layout} onGo={onGo} onClose={closePopup} />}
+      {studyPopup && <StudyPopup key={studyPopup.seq} books={books} target={studyPopup.target} anchor={studyPopup.anchor} layout={layout} onGo={travel} onClose={closeStudyPopup} />}
     </div>
   )
 }

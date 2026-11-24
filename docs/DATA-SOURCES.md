@@ -585,4 +585,17 @@ How the site meets each point:
 
 ### The data on the site
 
-`scripts/build-study-notes.mjs` makes `public/data/study/<book id>.json`, 66 files, and `public/data/study/about-psalms.json`. The 67 files have 5,788,414 bytes, and 1,914,911 bytes with gzip. The script checks the facts of section 20.3 of `docs/DESIGN.md` and the numbers of section 20.5, and it stops with an error if one does not fit. The site shows no link of the files. Until Task 49, the page uses only `about-psalms.json`.
+`scripts/build-study-notes.mjs` makes `public/data/study/<book id>.json`, 66 files, and `public/data/study/about-psalms.json`. After the build of Task 55, the 67 files have 8,631,317 bytes, and 2,371,130 bytes with gzip at level 9. Task 48 gave 5,788,414 bytes, and 1,914,911 bytes with gzip. The script checks the facts of section 20.3 of `docs/DESIGN.md` and the numbers of section 20.5, and it stops with an error if one does not fit. Until Task 55, the site showed no link of the files. Until Task 49, the page uses only `about-psalms.json`.
+
+### The links in the notes, from Task 55
+
+From Task 55, a reference in a note is a link: section 22 of `docs/DESIGN.md`. This replaces the rule of Task 48 that the site shows no link of the files.
+
+- A link comes only from a `<data class="bible-ref">` tag or a `<data class="resource-ref">` tag of the source files. The site makes no link from the words of a note. The 1 `<a>` element of the files is still removed, and its words stay.
+- A `bible-ref` tag is a passage link by rule 1 of section 22.3. A verse that the Berean data has only as a note, an item `o`, is a verse of the Berean data. Three references end at such a verse: Mark 9:44, Mark 9:46, and Mark 11:26.
+- A `resource-ref` tag with the code `AquiferOpenStudyNotes` and the number of a note of the site is a note link. The 121 tags with a different code are plain text: the site does not have the themes, the profiles, and the book introductions of Aquifer.
+- A note link has the chapter and the verse of the start of the range of its note, for its address: section 22.11 of `docs/DESIGN.md`.
+- The words of a link are the words between the tags, with no change. The SHA-256 of section 20.3 is the same as before.
+- The numbers of the build of Task 55: 39,103 passage links and 9 plain `bible-ref` tags, 1,123 note links and 121 plain `resource-ref` tags, 37,132 links with all verses, and 1,971 with the first verse. These are the numbers of sections 22.3 and 22.4.
+- The 67 files have 8,631,317 bytes, and 2,371,130 bytes with gzip at level 9. Before Task 55, they had 6,593,568 bytes, and 2,051,543 bytes with gzip at level 9. The first build of Task 55, with no chapter and no verse in a note link, had 8,616,728 bytes.
+- The Sources page says from Task 55: "The references of the notes to passages and to other notes are links on this site. The site does not show the other links of the files."

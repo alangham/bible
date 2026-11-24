@@ -3680,3 +3680,67 @@ Done when:
 - `npm run build` has no errors, and all tests pass.
 
 Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 55. Links in the study notes
+
+Status: DONE
+
+Accuracy review: no
+
+Goal: a reader can tap a reference in a study note. A reference to a passage shows the passage, and a reference to a different note shows that note.
+
+Arthur decided this on 2026-11-23. Read section 22 of `docs/DESIGN.md` first, and sections 20.3, 20.6, 20.8, and 7.7. The pictures of the design are in `docs/screenshots/study-links-design/`.
+
+This task shows on the site: with the switch "Study notes" on, the references in the blocks of notes are links in the color of their group. The same in the Aquifer notes of "About this chapter" in the 132 psalms.
+
+WARNING: Do not change a word of a note. A link has the words between the tags of the source, with no change. The SHA-256 values of the check of section 20.3 must stay the same.
+
+WARNING: A link comes only from a `bible-ref` tag or a `resource-ref` tag of the source. Do not make a link from the words of a note.
+
+WARNING: A note never shows without a credit. The pop-up of a note link has the short credit of section 20.6.
+
+WARNING: Do not put a string of a notes file into the page as HTML. The page makes each element itself.
+
+WARNING: No color value in a component. Use the color name of the group.
+
+WARNING: If a number of section 22.2, 22.3, or 22.4 is not the number that your build gives, stop and report. Do not change a rule to get the number.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Change `scripts/build-study-notes.mjs` to keep the two tags as the elements of section 22.5, by the rules of sections 22.3 and 22.4. The script prints the number of passage links, of note links, of links with `"first": true`, and of each kind of plain reference.
+2. Compare the numbers with sections 22.3 and 22.4: 39,103 passage links, 9 plain `bible-ref` tags, 1,123 note links, 121 plain `resource-ref` tags, 37,132 links with all verses, and 1,971 with the first verse. The file `about-psalms.json` has copies of notes. Count each note of the source one time.
+3. Run the build of the notes. Make sure that the check of the words of section 20.3 gives the same SHA-256 values as before. Record the new size of `public/data/study/` in bytes and with gzip.
+4. Change the type of a content in `src/data/studyNotes.ts` and its tests for the two new elements. `textOfNodes` gives the same text as before.
+5. Change `src/reading/StudyContent.tsx` to make the link of section 22.6. Give it an option that makes the references plain text, for a note in a pop-up.
+6. Add the style of section 22.6 to `src/index.css`. Make sure that a link breaks across two lines in the narrow layout.
+7. Make the pop-up of a passage link, section 22.7. Use the link pop-up of `src/book/LinkPopup.tsx`. Do not change the pop-up of an echo link or of a quotation link.
+8. Make the pop-up of a note link, section 22.8.
+9. Correct the line of section 20.8 of `docs/DESIGN.md` and point 7 of section 20.10: add "Section 22 replaces this." Add the links to section 15 of `docs/DATA-SOURCES.md`.
+10. Add unit tests: the rules of sections 22.3 and 22.4, with one example of each kind of plain reference.
+11. Add browser tests, at 1440 by 900 and at 390 by 844:
+    - Romans 8, the block "Notes on verses 1 to 4": 12 links, 11 passage links and 1 note link.
+    - "7:23" opens a pop-up with the title "Romans 7:23" and the text of the verse.
+    - "5–7" opens a pop-up with the label "First verse".
+    - "study note on 6:19" opens a pop-up with the note on Romans 6:19 and the short credit. The references in that pop-up are not links.
+    - Daniel 11, "study note on Daniel 9:27": each word of the note can be read, with the keyboard also.
+    - A note link to a note of a different book.
+    - A psalm of section 20.5: a link in the Aquifer note of "About this chapter".
+    - Escape closes the pop-up, and the focus goes back to the link. "Go there" goes to the passage, and the trail gets a step.
+    - The King James Version and the World English Bible: the pop-up of "7:23" has the text of the selected translation.
+    - The automatic accessibility tests on Romans 8 with a block of notes open and with a pop-up open, in light mode and in dark mode.
+12. Compare the pictures of the page before and after, with the switch "Study notes" off. No pixel changes.
+13. Run the reviewer agent. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+14. Save pictures in `docs/screenshots/task-55/`, at the two sizes, in light mode and in dark mode: Romans 8 with the first block of notes open, the pop-up of "Hebrews 10:6", and the pop-up of "study note on 6:19".
+
+Done when:
+
+- The numbers of step 2 agree, or the report gives each difference.
+- The SHA-256 values of the words are the same as before.
+- With the switch "Study notes" off, no pixel of the page changes.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Give the new size of the study files. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, `docs/BACKLOG.md`, and `CLAUDE.md`, and the pictures in `docs/screenshots/study-links-design/`, with this task.

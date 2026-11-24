@@ -53,7 +53,7 @@ export function useAboutChapter({ bookName, chapter, notes }: AboutChapterProps)
       <>
         <div className="rd-note rd-aquifer" data-note={notes.note.id}>
           <h3 className="rd-range-label">{rangeLabel(bookName, notes.note)}</h3>
-          <StudyContent nodes={notes.note.c} />
+          <StudyContent nodes={notes.note.c} from={{ book: 'psalms', from: notes.note.from, to: notes.note.to }} />
         </div>
         {credit(AQUIFER_CREDIT)}
       </>

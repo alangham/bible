@@ -136,8 +136,9 @@ for (const vp of VIEWPORTS) {
         await expect(full).toHaveAttribute('href', SOURCES_PAGE)
         for (const link of [source, license]) await expect(link).toHaveAttribute('target', '_blank')
         expect(await full.getAttribute('target')).toBeNull()
-        // The words of a note are plain text: the block has no link other than the three of the credit.
-        await expect(region.locator('a')).toHaveCount(3)
+        // The block has the three links of the credit, and, from Task 55, the 12 links of docs/DESIGN.md section 22.6.
+        await expect(region.locator('a:not(.rd-study-ref)')).toHaveCount(3)
+        await expect(region.locator('a.rd-study-ref')).toHaveCount(12)
 
         await button.click()
         await expect(button).toHaveAttribute('aria-expanded', 'false')

@@ -3,8 +3,12 @@
 // linked passage, the reason line of a quotation link, the source, and "Go there" and "Stay here".
 // In the wide layout it opens near the control. In the narrow layout it opens from the bottom.
 // The text of the linked passage is in the selected translation. docs/DESIGN.md section 8.4.
+//
+// Task 55 splits the file in two parts with no change to the pop-up of a link: PopupFrame has the place, the focus,
+// the keys, the band, the title, and the actions, and LinkPopup puts the lines of a link into it. The pop-ups of the
+// links in the study notes, docs/DESIGN.md sections 22.7 and 22.8, use the same frame: src/book/StudyPopup.tsx.
 
-import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
+import { Fragment, useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { groupOf, groupVar, type Book } from '../data/books.ts'
 import type { LinkEnd } from '../data/links.ts'
 import { passageName, passageVerses, type PassageRange } from '../data/passage.ts'
@@ -15,6 +19,7 @@ import { chapterHref } from '../router.ts'
 import type { ScreenLayout } from '../screenLayout.ts'
 import { bandLabel } from '../wall/layout.ts'
 import { plainClick } from './links.ts'
+import { useScrolls } from './useScrolls.ts'
 
 const SOURCE_LINE: Record<string, string> = {
   'Bible Quotation Database': 'From the Bible Quotation Database.',
@@ -45,12 +50,12 @@ interface LinkPopupProps {
  * in the main text. The text area has a maximum height. A long passage scrolls inside it, and then the
  * area takes the keyboard focus, so that the keyboard can scroll it.
  */
-function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageRange; name: string }) {
+export function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageRange; name: string }) {
   const translation = useTranslation()
   const [text, setText] = useState<BookText | null>(null)
   const [failed, setFailed] = useState(false)
-  const [scrolls, setScrolls] = useState(false)
   const area = useRef<HTMLParagraphElement>(null)
+  const scrolls = useScrolls(area, text)
   useEffect(() => {
     let live = true
     loadBookText(passage.book, translation).then(
@@ -61,20 +66,6 @@ function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageR
       live = false
     }
   }, [passage.book, translation])
-  useLayoutEffect(() => {
-    const el = area.current
-    if (!el) return
-    const measure = () => setScrolls(el.scrollHeight > el.clientHeight + 1)
-    measure()
-    // Measured again when the size changes, for example when the fonts load.
-    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure)
-    observer?.observe(el)
-    window.addEventListener('resize', measure)
-    return () => {
-      observer?.disconnect()
-      window.removeEventListener('resize', measure)
-    }
-  }, [text])
   if (failed) return <p className="pop-text">The text did not load.</p>
   if (!text) return <p className="pop-text">…</p>
   const verses = passageVerses(text, passage)
@@ -108,12 +99,59 @@ function LinkedText({ books, passage, name }: { books: Book[]; passage: PassageR
 }
 
 export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose }: LinkPopupProps) {
+  const quotation = end.link.type === 'quotation'
+  const translation = useTranslation()
+  return (
+    <PopupFrame
+      books={books}
+      book={end.there.book}
+      title={reference?.shown ?? passageName(books, end.there)}
+      goHref={chapterHref(end.there.book, end.there.c, end.there.v)}
+      onGo={() => onGo(end)}
+      anchor={anchor}
+      layout={layout}
+      onClose={onClose}
+    >
+      <p className="pop-kind">
+        {quotation ? 'Quotation link' : 'Echo link'} from {passageName(books, end.here)}
+      </p>
+      {end.there.heading && <p className="pop-heading">{end.there.heading}</p>}
+      {reference?.firstVerse && <p className="pop-first">First verse</p>}
+      <LinkedText books={books} passage={reference?.passage ?? end.there} name={reference?.shown ?? passageName(books, end.there)} />
+      {end.link.reason && <p className="pop-reason">{end.link.reason}</p>}
+      {/* The reason line quotes the Berean Standard Bible. docs/DESIGN.md section 8.4. */}
+      {quotation && translation !== 'bsb' && <p className="pop-quoted-from">The quoted words are from the Berean Standard Bible.</p>}
+      <p className="pop-source">{SOURCE_LINE[end.link.source]}</p>
+    </PopupFrame>
+  )
+}
+
+interface PopupFrameProps {
+  books: Book[]
+  /** The book of the band and of the color: the book that the link goes to. */
+  book: string
+  title: ReactNode
+  /** The address of "Go there". */
+  goHref: string
+  /** A plain click on "Go there". With no function, the click follows the address. */
+  onGo?: () => void
+  /** The control that opened the pop-up, to place it and to give the focus back. */
+  anchor: HTMLElement
+  layout: ScreenLayout
+  onClose: () => void
+  /** The lines between the title and the actions. */
+  children: ReactNode
+}
+
+/**
+ * The frame of a pop-up: the place, the focus, the keys, the shade, the band, the title, and the actions "Go there"
+ * and "Stay here". docs/DESIGN.md section 7.7.
+ */
+export function PopupFrame({ books, book, title, goHref, onGo, anchor, layout, onClose, children }: PopupFrameProps) {
   const box = useRef<HTMLDivElement>(null)
   const titleId = useId()
   const [pos, setPos] = useState<{ left: number; top: number; maxHeight: number } | null>(null)
-  const there = books.find((b) => b.id === end.there.book)
-  const quotation = end.link.type === 'quotation'
-  const translation = useTranslation()
+  const there = books.find((b) => b.id === book)
 
   // Wide layout: below the control when all of the content fits there. If it does not fit below, and the
   // space above is larger, above the control. docs/DESIGN.md section 7.7, Task 21b. It follows the control.
@@ -207,26 +245,17 @@ export function LinkPopup({ books, end, reference, anchor, layout, onGo, onClose
       <div ref={box} className="pop" data-layout={layout} role="dialog" aria-modal={layout === 'narrow' ? true : undefined} aria-labelledby={titleId} style={style}>
         {there && <p className="pop-band">{bandLabel(there.group)}</p>}
         <h2 className="pop-ref" id={titleId}>
-          {reference?.shown ?? passageName(books, end.there)}
+          {title}
         </h2>
-        <p className="pop-kind">
-          {quotation ? 'Quotation link' : 'Echo link'} from {passageName(books, end.here)}
-        </p>
-        {end.there.heading && <p className="pop-heading">{end.there.heading}</p>}
-        {reference?.firstVerse && <p className="pop-first">First verse</p>}
-        <LinkedText books={books} passage={reference?.passage ?? end.there} name={reference?.shown ?? passageName(books, end.there)} />
-        {end.link.reason && <p className="pop-reason">{end.link.reason}</p>}
-        {/* The reason line quotes the Berean Standard Bible. docs/DESIGN.md section 8.4. */}
-        {quotation && translation !== 'bsb' && <p className="pop-quoted-from">The quoted words are from the Berean Standard Bible.</p>}
-        <p className="pop-source">{SOURCE_LINE[end.link.source]}</p>
+        {children}
         <div className="pop-actions">
           <a
             className="pop-go"
-            href={chapterHref(end.there.book, end.there.c, end.there.v)}
+            href={goHref}
             onClick={(e) => {
-              if (!plainClick(e)) return
+              if (!onGo || !plainClick(e)) return
               e.preventDefault()
-              onGo(end)
+              onGo()
             }}
           >
             Go there

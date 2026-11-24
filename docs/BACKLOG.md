@@ -75,6 +75,8 @@ What a task for this item must do:
 
 ## 8. More from the Aquifer sources: links in the study notes, key terms, and a dictionary
 
+The links in the study notes are not a backlog item from 2026-11-23: Arthur decided them. Section 22 of `docs/DESIGN.md`, Task 55. The key terms and the dictionary stay in this item.
+
 Added: 2026-11-23, by Task 49, from item 7 and from section 20.11 of `docs/DESIGN.md`.
 
 Idea: links in the study notes of Tasks 48 and 49, and two more sources. These are not decided.

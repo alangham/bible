@@ -1,11 +1,32 @@
 // The Aquifer notes. docs/TASKS.md Task 48 step 9, docs/DESIGN.md sections 20.3, 20.4, 20.5, and 20.6. The tests read
-// the files in public/data/study/, which scripts/build-study-notes.mjs makes.
+// the files in public/data/study/, which scripts/build-study-notes.mjs makes. Task 55 step 10 adds the tests of the
+// links of section 22.
 
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { rangeLabel } from './notes.ts'
-import { AQUIFER_CREDIT, controlWords, noteLabel, SHORT_CREDIT, STUDY_ELEMENTS, textOfNodes, type AboutPsalm, type AquiferNote } from './studyNotes.ts'
+import { lastVerseOf } from './passage.ts'
+import {
+  AQUIFER_CREDIT,
+  childNodes,
+  controlWords,
+  firstVerseOnly,
+  noteLabel,
+  noteRangeName,
+  refTitle,
+  SHORT_CREDIT,
+  STUDY_ELEMENTS,
+  STUDY_LINKS,
+  textOfNodes,
+  wholeChapters,
+  type AboutPsalm,
+  type AquiferNote,
+  type StudyNode,
+  type StudyNoteRef,
+  type StudyRef,
+} from './studyNotes.ts'
+import type { BookText } from './text.ts'
 
 interface BookRow {
   id: string
@@ -26,14 +47,26 @@ const psalmSource = new Map(
 const ENTITIES: Record<string, string> = { '&apos;': "'", '&quot;': '"', '&nbsp;': ' ' }
 const words = (id: string) => psalmSource.get(id)!.replace(/<[^>]*>/g, ' ').replace(/&[a-z]+;/g, (e) => ENTITIES[e]).split(/\s+/).filter(Boolean).length
 
-/** Each fault of a content: a name that is not of point 1 of section 20.3, an attribute, or a node of a different kind. */
+/** The keys of the object of each link of section 22.5. */
+const LINK_KEYS: Record<string, string[]> = { ref: ['b', 'c', 'v', 'c2', 'v2', 'first'], note: ['b', 'id', 'c', 'v'] }
+
+/**
+ * Each fault of a content: a name that is not of point 1 of section 20.3 or of section 22.5, an attribute, an object
+ * that is not the object of a link, a key of an object that section 22.5 does not give, or a node of a different kind.
+ */
 function faults(nodes: unknown, where: string): string[] {
   if (!Array.isArray(nodes)) return [`${where}: not a list`]
   return nodes.flatMap((n): string[] => {
     if (typeof n === 'string') return []
     if (!Array.isArray(n)) return [`${where}: a node that is not a string and not an element`]
-    const [name, ...children] = n as unknown[]
-    if (typeof name !== 'string' || !(STUDY_ELEMENTS as readonly string[]).includes(name)) return [`${where}: the element ${String(name)}`]
+    let [name, ...children] = n as unknown[]
+    if (typeof name === 'string' && (STUDY_LINKS as readonly string[]).includes(name)) {
+      const object = children[0]
+      if (object === null || typeof object !== 'object' || Array.isArray(object)) return [`${where}: the link ${name} has no object`]
+      const bad = Object.keys(object).filter((k) => !LINK_KEYS[name as string].includes(k))
+      if (bad.length) return [`${where}: the keys ${bad.join(', ')} in the object of ${name}`]
+      children = children.slice(1)
+    } else if (typeof name !== 'string' || !(STUDY_ELEMENTS as readonly string[]).includes(name)) return [`${where}: the element ${String(name)}`]
     if (name === 'br' && children.length) return [`${where}: a br with content`]
     return faults(children, where)
   })
@@ -150,5 +183,154 @@ describe('the short credit: docs/DESIGN.md section 20.6', () => {
     expect(`${c.before}${c.source.text}${c.middle}${c.license.text}${c.after}${c.full}`).toBe('From the Aquifer Open Study Notes, licensed under CC BY-SA 4.0. Full credit')
     expect(c.source.href).toBe('https://github.com/BibleAquifer/AquiferOpenStudyNotes')
     expect(c.license.href).toBe('https://creativecommons.org/licenses/by-sa/4.0/')
+  })
+})
+
+// ---- Task 55 step 10: the links of section 22 ----
+
+type LinkElement = ['ref', StudyRef, ...StudyNode[]] | ['note', StudyNoteRef, ...StudyNode[]]
+
+/** Each link of a content, in order, also a link in a list or in italics. */
+function linksOf(nodes: readonly StudyNode[]): LinkElement[] {
+  return nodes.flatMap((n): LinkElement[] => {
+    if (typeof n === 'string') return []
+    if (n[0] === 'ref' || n[0] === 'note') return [n as LinkElement, ...linksOf(childNodes(n))]
+    return linksOf(childNodes(n))
+  })
+}
+
+describe('the links in the study notes: docs/DESIGN.md sections 22.3, 22.4, and 22.5', () => {
+  // Each note of the source one time: the 66 files. about-psalms.json has copies of notes.
+  const notes = files.flatMap((f) => f.notes.map((n) => ({ ...n, book: f.book })))
+  const byId = new Map(notes.map((n) => [n.id, n]))
+  const all = notes.flatMap((n) => linksOf(n.c).map((link) => ({ link, note: n })))
+  const refs = all.filter((x): x is { link: ['ref', StudyRef, ...StudyNode[]]; note: (typeof notes)[number] } => x.link[0] === 'ref')
+  const noteLinks = all.filter((x): x is { link: ['note', StudyNoteRef, ...StudyNode[]]; note: (typeof notes)[number] } => x.link[0] === 'note')
+  const berean = new Map<string, BookText>()
+  const bereanOf = (id: string) => {
+    if (!berean.has(id)) berean.set(id, read(`text/${id}.json`) as BookText)
+    return berean.get(id)!
+  }
+  const isVerse = (book: string, c: number, v: number) => {
+    const text = bereanOf(book)
+    const last = lastVerseOf(text, c)
+    if (last === undefined || v > last) return false
+    // A verse of a text block, or a verse that the data has only as a note.
+    return text.chapters[c - 1].blocks.some((b) => b.k === 'p' && b.c.some((item) => typeof item === 'object' && ((item as { v?: number }).v === v || (item as { o?: number }).o === v)))
+  }
+  const plainWords = (id: string, words: string) => {
+    const note = byId.get(id)!
+    return { inText: textOfNodes(note.c).includes(words), inLink: linksOf(note.c).some((l) => textOfNodes(childNodes(l)).includes(words)) }
+  }
+
+  it('39,103 passage links and 1,123 note links, with no link inside a link', () => {
+    expect(refs).toHaveLength(39103)
+    expect(noteLinks).toHaveLength(1123)
+    expect(all.filter((x) => linksOf(childNodes(x.link)).length > 0)).toEqual([])
+  })
+
+  it('rule 1: each passage link is in one book, its two ends are verses of the Berean data, and the end is not before the start', () => {
+    const bad = refs.filter(({ link: [, r] }) => {
+      const c2 = r.c2 ?? r.c
+      const v2 = r.v2 ?? r.v
+      return !books.some((b) => b.id === r.b) || !isVerse(r.b, r.c, r.v) || !isVerse(r.b, c2, v2) || c2 < r.c || (c2 === r.c && v2 < r.v)
+    })
+    expect(bad).toEqual([])
+    // A passage of one verse has no c2 and no v2.
+    expect(refs.filter(({ link: [, r] }) => r.c2 === r.c && r.v2 === r.v)).toEqual([])
+  })
+
+  it('rule 3: each note link goes to a note of the site in its book, 918 in the same book and 205 in a different book', () => {
+    expect(noteLinks.filter(({ link: [, n] }) => byId.get(n.id)?.book !== n.b)).toEqual([])
+    expect(noteLinks.filter(({ link: [, n], note }) => n.b === note.book)).toHaveLength(918)
+    expect(noteLinks.filter(({ link: [, n], note }) => n.b !== note.book)).toHaveLength(205)
+  })
+
+  it('section 22.11: "c" and "v" of each note link are the start of the range of the note', () => {
+    expect(noteLinks.filter(({ link: [, n] }) => byId.get(n.id)!.from[0] !== n.c || byId.get(n.id)!.from[1] !== n.v)).toEqual([])
+  })
+
+  it('rule 2: a reference across two books is plain text, Leviticus 4:3 "1 Samuel 1:1—2 Kings 25:30"', () => {
+    expect(plainWords('20348', '1 Samuel 1:1—2 Kings 25:30')).toEqual({ inText: true, inLink: false })
+  })
+
+  it('rule 2: a reference with an end verse that is not in the Berean data is plain text, 1 Kings 22:41–50 "2 Chronicles 17:1–21:1"', () => {
+    expect(plainWords('15605', '2\u00a0Chronicles 17:1–21:1')).toEqual({ inText: true, inLink: false })
+    expect(isVerse('2-chronicles', 17, 21)).toBe(false)
+  })
+
+  it('rule 2: a reference with a start verse that is not in the Berean data is plain text, John 20:19 "3 John 1:15"', () => {
+    expect(plainWords('19068', '3\u00a0John 1:15')).toEqual({ inText: true, inLink: false })
+    expect(isVerse('3-john', 1, 15)).toBe(false)
+  })
+
+  it('a verse that the Berean data has only as a note is a verse of the Berean data: Mark 9:44 and Mark 11:12–26 are links', () => {
+    const mark = refs.filter(({ link: [, r] }) => r.b === 'mark').map(({ link: [, r] }) => r)
+    expect(mark).toContainEqual({ b: 'mark', c: 9, v: 44 })
+    expect(mark).toContainEqual({ b: 'mark', c: 11, v: 12, c2: 11, v2: 26 })
+  })
+
+  it('rule 4: a theme, a profile, and a book introduction are plain text', () => {
+    expect(plainWords('12231', 'Blessing')).toEqual({ inText: true, inLink: false })
+    expect(plainWords('12273', 'Lot')).toEqual({ inText: true, inLink: false })
+    expect(plainWords('17466', 'Jeremiah Book Introduction')).toEqual({ inText: true, inLink: false })
+  })
+
+  it('rule 3: a note link to the same book and a note link to a different book', () => {
+    expect(linksOf(byId.get('25759')!.c).filter((l) => l[0] === 'note')).toEqual([['note', { b: 'romans', id: '25719', c: 6, v: 19 }, 'study note on 6:19']])
+    expect(linksOf(byId.get('12261')!.c).filter((l) => l[0] === 'note')).toContainEqual(['note', { b: 'jonah', id: '19284', c: 1, v: 3 }, 'study note on Jonah 1:3'])
+  })
+
+  it('rules 5 and 6: the words of a link have no change; em and sup stay in a link', () => {
+    expect(linksOf(byId.get('16826')!.c)).toContainEqual(['ref', { b: '1-samuel', c: 8, v: 11, c2: 8, v2: 16 }, '1 Samuel 8:11', ['em', '–'], '16'])
+    expect(linksOf(byId.get('10843')!.c)).toContainEqual(['ref', { b: 'john', c: 14, v: 13, c2: 14, v2: 14 }, 'John 14:13', ['sup', '–'], '14'])
+  })
+
+  it('section 22.4: 37,132 links with all verses, and 1,971 with "first": true, 1,614 of whole chapters and 357 in two chapters', () => {
+    const last = (r: StudyRef) => (c: number) => lastVerseOf(bereanOf(r.b), c)
+    const first = refs.filter(({ link: [, r] }) => r.first)
+    expect(refs.length - first.length).toBe(37132)
+    expect(first).toHaveLength(1971)
+    expect(first.filter(({ link: [, r] }) => wholeChapters(r, last(r)))).toHaveLength(1614)
+    expect(first.filter(({ link: [, r] }) => !wholeChapters(r, last(r)) && r.c2 !== r.c)).toHaveLength(357)
+    // "first" is the rule of the page also.
+    expect(refs.filter(({ link: [, r] }) => firstVerseOnly(r, last(r)) !== (r.first === true))).toEqual([])
+  })
+
+  it('section 22.4: examples of each rule', () => {
+    const genesis = (c: number) => lastVerseOf(bereanOf('genesis'), c)
+    // "7:23" in the note on Romans 8:2: all verses.
+    expect(firstVerseOnly({ c: 7, v: 23 }, (c) => lastVerseOf(bereanOf('romans'), c))).toBe(false)
+    // Genesis 1:1–31 is one whole chapter, and Genesis 1:3–2:3 has its ends in two chapters.
+    expect(linksOf(byId.get('12239')!.c)).toContainEqual(['ref', { b: 'genesis', c: 1, v: 1, c2: 1, v2: 31, first: true }, '1 '])
+    expect(wholeChapters({ c: 1, v: 1, c2: 1, v2: 31 }, genesis)).toBe(true)
+    expect(linksOf(byId.get('12229')!.c)).toContainEqual(['ref', { b: 'genesis', c: 1, v: 3, c2: 2, v2: 3, first: true }, '1:3–2:3'])
+    expect(wholeChapters({ c: 1, v: 3, c2: 2, v2: 3 }, genesis)).toBe(false)
+    expect(firstVerseOnly({ c: 1, v: 3, c2: 2, v2: 3 }, genesis)).toBe(true)
+    // Romans 8:5–9 in one chapter: all verses.
+    expect(firstVerseOnly({ c: 8, v: 5, c2: 8, v2: 9 }, (c) => lastVerseOf(bereanOf('romans'), c))).toBe(false)
+  })
+
+  it('about-psalms.json has the links of psalms.json', () => {
+    const psalms = files.find((f) => f.book === 'psalms')!.notes
+    const withLinks = about.filter((a) => linksOf(a.c).length > 0)
+    expect(withLinks.length).toBeGreaterThan(0)
+    for (const a of withLinks) expect(a.c).toEqual(psalms.find((n) => n.id === a.id)!.c)
+  })
+})
+
+describe('the words of the pop-ups of the links: docs/DESIGN.md sections 22.7 and 22.8', () => {
+  it('the title of a passage: "Hebrews 10:6", "Romans 8:5-9", "Romans 5–7", "Romans 5", and "Genesis 1:3-2:3"', () => {
+    expect(refTitle('Hebrews', { b: 'hebrews', c: 10, v: 6 }, false)).toBe('Hebrews 10:6')
+    expect(refTitle('Romans', { b: 'romans', c: 8, v: 5, c2: 8, v2: 9 }, false)).toBe('Romans 8:5-9')
+    expect(refTitle('Romans', { b: 'romans', c: 5, v: 1, c2: 7, v2: 25, first: true }, true)).toBe('Romans 5–7')
+    expect(refTitle('Romans', { b: 'romans', c: 5, v: 1, c2: 5, v2: 21, first: true }, true)).toBe('Romans 5')
+    expect(refTitle('Genesis', { b: 'genesis', c: 1, v: 3, c2: 2, v2: 3, first: true }, false)).toBe('Genesis 1:3-2:3')
+  })
+  it('the range of the note in a kind line: "Romans 8:3", "Romans 8:1-4", "Psalms 42:1-43:5", and "the title of Psalm 51"', () => {
+    expect(noteRangeName('Romans', { from: [8, 3], to: [8, 3] })).toBe('Romans 8:3')
+    expect(noteRangeName('Romans', { from: [8, 1], to: [8, 4] })).toBe('Romans 8:1-4')
+    expect(noteRangeName('Psalms', { from: [42, 1], to: [43, 5] })).toBe('Psalms 42:1-43:5')
+    expect(noteRangeName('Psalms', { from: [51, 1], to: [51, 999], title: true })).toBe('the title of Psalm 51')
   })
 })

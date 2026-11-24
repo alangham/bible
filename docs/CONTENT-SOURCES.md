@@ -31,6 +31,12 @@ The five rules of Task 4b, decided by Arthur on 2026-11-13:
 
 Arthur made two decisions on 2026-11-23, after the review of the introductions by ChatGPT. Section 21.2 of `docs/DESIGN.md` has them: the conservative part on the time of a prophet, and no "probably" from the ESV page in a main line.
 
+Arthur decided on 2026-11-23, after the report of Task 53, that the record follows three more rules. Section 21.12 of `docs/DESIGN.md` has them. The designer added rules 2 and 3 to make the record complete.
+
+1. The words "An older view names ..." and "An older view gives ..." report that the view is there. They do not say that the view is correct. Thus they do not carry the hedge word of Easton's Bible Dictionary, and rule 4 of the five rules does not apply to them.
+2. Where the ESV Global Study Bible leads a main line by rule 3 of the five rules and the record also names Easton, the strength of the main line follows the ESV page and the decision of section 21.2 of `docs/DESIGN.md`. A different strength word in Easton is not a fault.
+3. A `critical` part is a short summary. It does not have each common view of the Wikipedia page.
+
 ## Task 4c rules
 
 Arthur decided these on 2026-11-13:
@@ -201,6 +207,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: A narrative of how Israel, led by Joshua, takes Canaan and divides the land among the tribes. It ends with Joshua's farewell and death.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJoshua%2C_Book_of&oldid=809141. States: Says the book covers the conquest, the allotment of the land to the tribes, and the farewell speeches and death of Joshua.
   - Berean Standard Bible. States: Chapter 1 tells how the LORD sends Joshua to cross the Jordan into the land. Chapter 24 tells of the covenant at Shechem and the death of Joshua.
+- No Author detail: the Wikipedia page calls the book anonymous, and says that Calvin rejected the view of the Talmud that Joshua wrote it. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
 
 ### Judges (`judges`)
 
@@ -219,6 +226,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: A narrative of Israel after the death of Joshua, when leaders called judges rescued the tribes from enemies. It ends in civil war, in days when Israel had no king.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJudges%2C_Book_of&oldid=736128. States: Says the book tells how men called judges delivered and governed Israel, with an appendix on Dan and on the war against Benjamin.
   - Berean Standard Bible. States: Chapter 1 begins after the death of Joshua. Chapter 21 tells how the tribes found wives for Benjamin after the war. Its last verse says Israel had no king then.
+- No Written detail: the page gives each date of the history from Deuteronomy to Kings as the view of one named scholar. Rule 5 does not permit a line on the view of one scholar.
 
 ### Ruth (`ruth`)
 
@@ -241,6 +249,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-ruth/. States: The story is set while judges ruled, after Israel conquered Canaan and before about 1050 BC.
 - Accepted by Arthur on 2026-11-13, so not on the Not verified list:
   - The ESV GSB gives only a lower limit for the date: after David became king. The Persian date of the critical part is inside that limit. I gave the detail because the article sets the Persian date against the tradition that Samuel wrote it. Arthur decides whether this counts as a dispute.
+- No Author detail: the Wikipedia page says that tradition gives the book to Samuel, but that its open attitude to foreigners suggests the 5th century BCE. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
 
 ### 1 Samuel (`1-samuel`)
 
@@ -261,6 +270,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Berean Standard Bible. States: Chapter 1 tells of Hannah and the birth of Samuel. Chapter 31 tells of the death of Saul and his sons on Mount Gilboa.
 - Decided by Arthur on 2026-11-14:
   - The time of King David ends about 970 BC, as in public/data/periods.json. The Written detail gives about 970 BC. Its source, the ESV Global Study Bible page, gives 971 BC; the record keeps that year.
+- No Author detail: the Wikipedia page says that the Talmud gives the book to Samuel, Gad, and Nathan, and that critical scholars have rejected this since the 19th century. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
 
 ### 2 Samuel (`2-samuel`)
 
@@ -282,6 +292,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Decided by Arthur on 2026-11-14:
   - The time of King David ends about 970 BC, as in public/data/periods.json. The Written detail gives about 970 BC. Its source, the ESV Global Study Bible page, gives 971 BC; the record keeps that year.
   - The time of King David ends about 970 BC, as in public/data/periods.json. "What it is" gives the years of the period (Task 4c rule 1).
+- No Author detail: the Wikipedia page says that the Talmud gives the part after the death of Samuel to Gad and Nathan, and that critical scholars have rejected this since the 19th century. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
 
 ### 1 Kings (`1-kings`)
 
@@ -558,6 +569,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-the-song-of-solomon/. States: Love poetry in which a young woman and a young man speak in turn, with others joining in like a chorus.
 - Decided by Arthur on 2026-11-14:
   - Arthur asked on 2026-11-14 that the years of writing not read as the years of Solomon's reign. The time of a person is not a period and needs no years, unless the table of periods has an entry for it. The time of Solomon has no entry, so the site gives no years for his reign here.
+- No Author detail: the Wikipedia page says that the authorship of the song is uncertain, and that its language clearly points to a time centuries after Solomon. The cover already shows the doubt: the Author statement says that Solomon was probably not the writer.
 
 ### Isaiah (`isaiah`)
 
@@ -567,8 +579,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Berean Standard Bible. States: Isaiah 1:1 calls the book the vision that Isaiah son of Amoz saw under four kings of Judah.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FIsaiah%2C_Book_of&oldid=735519. States: Tradition has always given the whole book to one writer, the prophet named in its title. The Isaiah entry names his father as Amoz.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-isaiah/. States: Under Author and Date it names only Isaiah, called about 740 BC.
-- Author, critical scholars: Scholars widely accept that the prophet Isaiah did not write the whole book. Few scholars today credit one person with all of it, or even most of it.
-  - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Isaiah&oldid=1385341420, section "Composition: Authorship". States: Wide agreement that the 8th century prophet is the root of the book, and wide agreement that he did not write all of it. The article cites: Walter Brueggemann, An Introduction to the Old Testament, 2003; Jake Stromberg, An Introduction to the Study of Isaiah, 2011.
+- Author, critical scholars: Scholars widely accept that the book has its roots in the prophet Isaiah, and that he did not write all of it. Few scholars today credit one person with most of it.
+  - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Isaiah&oldid=1385341420, section "Composition: Authorship". States: Wide agreement that the 8th century prophet is the root of the book, and wide agreement that he did not write all of it. The same strength word covers both parts. The article cites: Walter Brueggemann, An Introduction to the Old Testament, 2003; Jake Stromberg, An Introduction to the Study of Isaiah, 2011. Task 54.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Isaiah&oldid=1385341420, section "Lead". States: Few scholars now give the entire book, or most of it, to a single person. The article cites: David L. Petersen, The Prophetic Literature: An Introduction, 2002.
 - Author, conservative scholars: Conservative scholars treat the prophet Isaiah as the writer, from about 740 BC until 681 BC or later. They read chapters 40 to 55 as his prophecies for the captivity in Babylon, 586 to 538 BC.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-isaiah/, section "Author and Date; Simplified Overview of Isaiah". States: Isaiah was called about 740 BC and lived to see Sennacherib die in 681 BC. A table calls chapters 40 to 55 prophecies for the 500s BC.
@@ -625,7 +637,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: Five poems that mourn the fall of Jerusalem and its temple and confess the sin of its people. The last poem is a prayer that God will restore his people.
   - Berean Standard Bible. States: 1:1 mourns the lonely city that has become a widow. 5:21 asks the LORD to restore his people to himself.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FLamentations%2C_Book_of&oldid=736134. States: Five separate poems on the miseries of the ruined city and the sins behind them. Chapter 5 is a prayer for the recovery of the people.
-- No detail: the sources show no dispute for the Author fact or the Written fact.
+- No Author detail: the Wikipedia page gives as the modern consensus that the book is not by Jeremiah, and that its writer or writers are unknown. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
+- No Written detail: the sources show no dispute for the Written fact.
 
 ### Ezekiel (`ezekiel`)
 
@@ -889,9 +902,9 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Author: The prophet Zechariah, a priest, by tradition.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-zechariah/. States: Under Author and Date, it says Zechariah was both a prophet and a priest.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FZechariah&oldid=740119. States: A prophet of Judah from a priestly family, the son of Berechiah.
-- Author, critical scholars: Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet wrote or edited chapters 9 to 14.
+- Author, critical scholars: Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet may have written or edited chapters 9 to 14.
   - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Zechariah&oldid=1336450203, section "Authorship". States: Most modern scholars hold that two or more people wrote the book. The article cites: Michael D. Coogan, A Brief Introduction to the Old Testament, 2009, p. 346.
-  - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Zechariah&oldid=1336450203, section "Authorship". States: Some think the writer or editor of chapters 9 to 14 was a follower of Zechariah. The article cites: Eric Meyers, Zechariah Introduction, The New Interpreter's Study Bible, 2003, p. 1338.
+  - Wikipedia, https://en.wikipedia.org/w/index.php?title=Book_of_Zechariah&oldid=1336450203, section "Authorship". States: Some think the writer or editor of chapters 9 to 14 may have been a follower of Zechariah. The article cites: Eric Meyers, Zechariah Introduction, The New Interpreter's Study Bible, 2003, p. 1338. Task 54.
 - Author, conservative scholars: Conservative scholars treat the prophet Zechariah, who was also a priest, as the writer of the book.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-zechariah/, section "Author and Date; Key Themes". States: He was both a prophet and a priest. It names no other writer and lists themes from chapters 9 to 14 with the rest.
 - Written: By tradition, from about 520 BC, after the people of Judah returned from Babylon in 538 BC.
@@ -1110,7 +1123,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FGalatians%2C_Epistle_to_the&oldid=6960740. States: The main question is whether the Jewish law bound Christians. Paul also defends his authority as an apostle.
   - Berean Standard Bible. States: Galatians 2:16: a man is not justified by works of the law, but by faith in Jesus Christ. 5:2 to 5:6: in Christ, circumcision has no value, and faith is what matters. Task 50.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-galatians/, section "Theme". States: Believers need not become Jews or keep the outward ceremonies of the law of Moses. At the heart of the gospel, God justifies a person by faith alone, without the works of the law. Task 50.
-- No detail: the sources show no dispute for the Author fact or the Written fact.
+- No Written detail: the Wikipedia page says that a majority of scholars date the letter from the late 40s to the early 50s AD, and that some date it about AD 50 to 60. The cover already gives an early date and a late date: about AD 48, and the late 50s AD as an older view.
+- No Author detail: the sources show no dispute for the Author fact.
 
 ### Ephesians (`ephesians`)
 
@@ -1151,7 +1165,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: A letter that thanks the church for its gifts and urges unity and joy in the Lord. Paul wrote it to the believers at Philippi while he was in chains.
   - Berean Standard Bible. States: 1:1 is to Philippi. 1:7 tells of Paul's chains. 4:2 urges unity. 4:4 urges joy. 4:18 thanks them for gifts.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FPhilippians%2C_Epistle_to_the&oldid=759916. States: The church sent Epaphroditus with gifts for Paul, and Paul sent this letter back with him.
-- No detail: the sources show no dispute for the Author fact or the Written fact.
+- No Written detail: the Wikipedia page says that the place of Paul at the time of writing is not certain, names Ephesus and Caesarea Maritima as possible places, and calls Rome, about AD 62, the most likely. The strength word of the cover agrees with the page: the cover has "probably in Rome". The other places of the page get no detail.
+- No Author detail: the sources show no dispute for the Author fact.
 
 ### Colossians (`colossians`)
 
@@ -1326,6 +1341,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
   - Berean Standard Bible. States: Hebrews 1:4: the Son is superior to the angels. 13:22: the writer calls it a word of exhortation. 13:24: greetings.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-hebrews/. States: Hebrews urges endurance and shows Christ above angels, Moses, and the OT priesthood. Its title reflects the ancient view that it was for Jewish Christians and Gentiles drawn to Judaism.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FHebrews%2C_Epistle_to_the&oldid=735504. States: Intended for Jewish converts to the gospel.
+- No Author detail: the Wikipedia page says that modern scholars take the writer as unknown and mostly reject Paul. The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view.
 
 ### James (`james`)
 
@@ -1421,8 +1437,8 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - Written: By tradition, about AD 85, in Ephesus, late in the life of John.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-3-john/. States: Written from Ephesus no later than the 90s AD. The Setting section gives about AD 85.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJohn%2C_First_Epistle_of&oldid=736103. States: Probably written at Ephesus, late in the life of the writer.
-- Written, critical scholars: A standard textbook dates it between about AD 95 and 110, probably in Ephesus.
-  - Wikipedia, https://en.wikipedia.org/w/index.php?title=First_Epistle_of_John&oldid=1380152678, section "Lead". States: The article puts the letter in Ephesus, probably, between AD 95 and 110, and cites one textbook. The article cites: Stephen L. Harris, Understanding the Bible, 1985.
+- Written, critical scholars: A standard textbook says it probably comes from Ephesus, between AD 95 and 110.
+  - Wikipedia, https://en.wikipedia.org/w/index.php?title=First_Epistle_of_John&oldid=1380152678, section "Lead". States: The article puts the letter in Ephesus, probably, between AD 95 and 110, and cites one textbook. The hedge covers the place and the years. The article gives no "about". The article cites: Stephen L. Harris, Understanding the Bible, 1985. Task 54.
 - Written, conservative scholars: Conservative scholars date it to about AD 85, and no later than the 90s AD. John likely wrote it from Ephesus, where he had apparently moved about AD 70.
   - ESV Global Study Bible, https://www.esv.org/resources/esv-global-study-bible/introduction-to-1-3-john/, section "Author, Date, and Recipients; The Setting of 1 John". States: The three letters date from no later than the 90s AD, from Ephesus. The Setting section gives about AD 85 and says John apparently moved to Ephesus near AD 70.
 - What it is: A letter about living truthfully before God, loving one another, and faith in Jesus as God's Son. It has no greeting, and it warns its readers against those who deny the Son.
@@ -1467,6 +1483,7 @@ Review: draft. Fixed source pages: ESV https://www.esv.org/resources/esv-global-
 - What it is: A short personal letter from the elder to Gaius. It praises his help for traveling believers and warns about Diotrephes, who refuses to welcome them.
   - Berean Standard Bible. States: 3 John 1:1: the elder to Gaius. 1:5: help for traveling brothers. 1:10: Diotrephes refuses to welcome them. 1:14: closing.
   - Easton's Bible Dictionary, https://en.wikisource.org/w/index.php?title=Easton's_Bible_Dictionary_(1897)%2FJohn%2C_Third_Epistle_of&oldid=736108. States: Addressed to Gaius, to commend Christians who had come to him as preachers of the gospel.
+- No Written detail: the Wikipedia page places the three letters of John in the later half of the 1st century AD, and gives other dates of named scholars, such as AD 96 to 110 by Dodd and AD 100 to 110 by Brown. Each different date of the page is the view of one named scholar. Rule 5 does not permit a line on the view of one scholar.
 
 ### Jude (`jude`)
 

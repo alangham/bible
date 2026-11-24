@@ -3629,3 +3629,54 @@ Done when:
 - `git status` shows no change in `public/` and no change in `docs/CONTENT-SOURCES.md`.
 
 Stop and report. Commit the report and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 54. The introductions: the changes after the report of Task 53
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: four introductions agree better with their sources, and the record gives the reason for each of ten missing details.
+
+Arthur decided this on 2026-11-23. Read section 21.12 of `docs/DESIGN.md` first. It has changes A to D, each with the old words, the new words, the source to check, and the reason. It has the table of the ten record lines and the three rules for the record. The report of Task 53 is `docs/reviews/task-53-intros-sources-report.md`.
+
+This task shows on the site: the words of "About this book" change in Zechariah, Judges, Isaiah, and 1 John. Judges gets a "Scholars differ" control for the Written fact.
+
+WARNING: Change only the statements of changes A to D. Do not change a statement because the report of Task 53 has a finding for it. Do not change a `review` value.
+
+WARNING: Do not write a fact from memory. Each fact of the new words, and each first sentence of a record line, must be in the fixed page that the record names. Use the fixed revision, with its `oldid`, and read the text of the page, not a summary of a fetch tool.
+
+WARNING: Do not copy a sentence from a source. No run of 6 words is the same as a run in the source text.
+
+WARNING: Do not add the word "probably" to a main line or to an older view. Sections 21.2 and 21.12 of `docs/DESIGN.md` have the decisions.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Get the fixed pages that changes A to D and the ten record lines name, or use the text copies of Task 53 if you have them. Compare the revision number of each page with the `oldid` of the record.
+2. Make sure that the old words of changes A, C, and D, and the old `authorDetail.conservative` of change B, are the words in `public/data/intros.json` now. If they differ, stop and report.
+3. Ask the accuracy reviewer agent to check the new words of each of changes A to D against the sources that section 21.12 names. Ask it three questions for each change: does the source state each fact, do the new words have the strength word of the source, and do the new words obey rule 5. For change B, ask it also if the two dates of the page are the views of one named scholar each.
+4. If the accuracy reviewer gives different words for a change, use its words. Give the words of the designer and the words of the accuracy reviewer in the report.
+5. If the accuracy reviewer says that the source does not support a change and gives no words, do not make that change. Keep the old words, and give the change and the cause in the report. For change B, obey the condition of section 21.12.
+6. Make the changes in `public/data/intros.json`.
+7. For each change, correct the record of the statement in `docs/CONTENT-SOURCES.md`: the words of the statement, and a line for each new fact with its source, what the source states, and the works that the article cites.
+8. Write the ten record lines of the table of section 21.12 in `docs/CONTENT-SOURCES.md`. For Lamentations, Galatians, and Philippians, replace the old line as section 21.12 says.
+9. Add the three rules of section 21.12 to the section "The authorship rule and the five rules" of `docs/CONTENT-SOURCES.md`.
+10. Run the check for copied runs of 6 words on each new statement, against the text of the ESV Global Study Bible page and of the Wikipedia page of its book. Say in the report how you ran it.
+11. If a test has the old words of a changed statement, or the number of details, change the test, and give the test in the report. The rule of the facts does not change: two sentences and 35 words at most.
+12. Run the reviewer agent and the accuracy reviewer agent on the result. Ask the accuracy reviewer to check each changed statement and each of the ten record lines against its source, and to check that no other statement of `public/data/intros.json` changed. If you correct something after its report, run it again.
+13. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+14. Look at Judges on the built page at 1440 by 900 and at 390 by 844: open the two "Scholars differ" controls. Save one picture of each size in `docs/screenshots/task-54/`.
+
+Done when:
+
+- Each of changes A to D is made, or the report gives the cause that it is not made.
+- `git diff` of `public/data/intros.json` shows only statements of section 21.12.
+- Each of the 66 entries has `review: "draft"`.
+- The record has the ten lines, or the report gives the cause for each line that it does not have.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

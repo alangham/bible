@@ -2601,3 +2601,69 @@ Not done in this review, and not planned: a check of the 92 `critical` parts aga
 The number of `critical` parts is 92: 45 in `authorDetail` and 47 in `writtenDetail`. Sections 21.6 and 21.10 said 91, and the designer told Arthur 91. The two sections have the correct number from 2026-11-23.
 
 Arthur decided on 2026-11-23 that Claude Code makes the checks that the review of ChatGPT did not do. Task 53 is a report only. It changes no introduction. Arthur decides from the report if a later task changes a statement.
+
+### 21.12 The decision after the report of Task 53, and the changes of Task 54
+
+The report of Task 53 is `docs/reviews/task-53-intros-sources-report.md`. It has 74 findings, F01 to F74. The accuracy reviewer confirmed 45 of them. No confirmed finding says that a fact of a statement is false.
+
+Arthur decided on 2026-11-23: four changes of statements, a reason in the record for each of ten missing details, and no "probably" in the older views. Task 54 makes these changes.
+
+The designer wrote the new words of changes A to D. The designer did not read the source pages. The accuracy reviewer checks each change against its source. If the accuracy reviewer gives different words for a change, Task 54 uses the words of the accuracy reviewer. This is the lesson of section 21.10.
+
+**A. Zechariah, `authorDetail.critical`. Finding F02.**
+
+- Old: Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet wrote or edited chapters 9 to 14.
+- New: Most modern scholars think at least two writers produced the book. Some think a disciple of the prophet may have written or edited chapters 9 to 14.
+- Check the new words against: the fixed Wikipedia page of the record, section "Authorship".
+- Reason: the page has a hedge for the disciple, and the old words do not.
+
+**B. Judges, a new `writtenDetail`, and a shorter `authorDetail.conservative`. Finding F31.**
+
+- New `writtenDetail.critical`: Most scholars see Judges as part of one history from Deuteronomy to Kings. Proposals date that history to the 6th century BC, or its first edition to the late 7th century BC.
+- New `writtenDetail.conservative`: Conservative scholars hold that the book was probably mostly complete by the reign of King David, 1010 to 970 BC.
+- Old `authorDetail.conservative`: Conservative scholars note that Scripture names no writer. They hold that the book was probably mostly complete by the reign of King David, 1010 to 970 BC.
+- New `authorDetail.conservative`: Conservative scholars note that Scripture names no writer.
+- Check the new words against: the fixed Wikipedia page of the record, section "Composition: The Deuteronomistic History", and the ESV page, "Author and Date".
+- Reason: the cover gives the time of King David and no other date. The page says that most scholars put the history from Deuteronomy to Kings much later. The sentence on the time of David moves from the Author detail to the Written detail, because it is about the date. Task 4c step 6 moved the old Written detail to the Author detail because it had no date.
+- A condition: the page gives the two dates as the views of two named scholars, Noth and Cross. If the accuracy reviewer says that the new `critical` part is against rule 5, Task 54 does not make change B. It makes no part of it. It writes this line in the record of Judges as an alternative: "No Written detail: the page gives each date of the history from Deuteronomy to Kings as the view of one named scholar. Rule 5 does not permit a line on the view of one scholar."
+
+**C. Isaiah, `authorDetail.critical`. Finding F54.**
+
+- Old: Scholars widely accept that the prophet Isaiah did not write the whole book. Few scholars today credit one person with all of it, or even most of it.
+- New: Scholars widely accept that the book has its roots in the prophet Isaiah, and that he did not write all of it. Few scholars today credit one person with most of it.
+- Check the new words against: the fixed Wikipedia page of the record, section "Composition: Authorship" and the lead.
+- Reason: the page gives two halves of one view with the same strength word. The old words have only the half that says what Isaiah did not write.
+
+**D. 1 John, `writtenDetail.critical`. Finding F07.**
+
+- Old: A standard textbook dates it between about AD 95 and 110, probably in Ephesus.
+- New: A standard textbook says it probably comes from Ephesus, between about AD 95 and 110.
+- Check the new words against: the fixed Wikipedia page of the record, the lead.
+- Reason: the hedge of the page applies to the place and to the date. In the old words it applies to the place only.
+
+**The record lines for the ten missing details.** Each line goes into the record of its book in `docs/CONTENT-SOURCES.md`. It starts with "No Author detail:" or "No Written detail:". Its first sentence says what the page says, from the finding and the text copy of the page. Then it gives the reason:
+
+| Finding | Book | Fact | The reason |
+|---|---|---|---|
+| F30 | Joshua | Author | The cover already shows the doubt: the Author statement does not give the traditional name as the author, and gives that name only as an older view. |
+| F32 | Ruth | Author | The same reason as for Joshua. |
+| F33 | 1 Samuel | Author | The same reason as for Joshua. |
+| F34 | 2 Samuel | Author | The same reason as for Joshua. |
+| F37 | Lamentations | Author | The same reason as for Joshua. |
+| F44 | Hebrews | Author | The same reason as for Joshua. |
+| F35 | Song of Solomon | Author | The cover already shows the doubt: the Author statement says that Solomon was probably not the writer. |
+| F41 | Galatians | Written | The cover already gives an early date and a late date: about AD 48, and the late 50s AD as an older view. |
+| F42 | Philippians | Written | The strength word of the cover agrees with the page: the cover has "probably in Rome". The other places of the page get no detail. |
+| F46 | 3 John | Written | Each different date of the page is the view of one named scholar. Rule 5 does not permit a line on the view of one scholar. |
+
+The records of Lamentations, Galatians, and Philippians have the line "No detail: the sources show no dispute for the Author fact or the Written fact." This line is not correct for the fact of the finding. Task 54 replaces it with two lines: the new line for the fact of the finding, and a line with the old reason for the other fact.
+
+**Three rules for the record.** Task 54 adds them to the section "The authorship rule and the five rules" of `docs/CONTENT-SOURCES.md`, with the date 2026-11-23:
+
+1. The words "An older view names ..." and "An older view gives ..." report that the view is there. They do not say that the view is correct. Thus they do not carry the hedge word of Easton's Bible Dictionary, and rule 4 does not apply to them. This settles findings F08, F09, F10, F11, F12, F14, F15, F19, F21, F22, F23, F25, and F28.
+2. Where the ESV Global Study Bible leads a main line by rule 3 and the record also names Easton, the strength of the main line follows the ESV page and the decision of section 21.2 of `docs/DESIGN.md`. A different strength word in Easton is not a fault. This settles findings F16, F17, F18, F24, F26, F27, and F29.
+3. A `critical` part is a short summary. It does not have each common view of the Wikipedia page. The report of Task 53 lists the views that the parts do not have, findings F47 to F74. Only finding F54 causes a change.
+
+The designer added rules 2 and 3 to make the record complete. Arthur did not decide them one by one. They change no word of the site.
+
+No change: the other findings of check 1 (F01, F03 to F06), findings F13 and F20, the findings of check 3 that the record already answers (F36, F39, F40, F43) or that are not confirmed (F38, F45), and the part "Other points of the readers" of the report. No person and no agent gave the "Other points" a second reading.

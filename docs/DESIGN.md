@@ -2506,7 +2506,7 @@ The groups: changes 1 to 16 give plain words for a term that a new reader does n
 
 ### 21.6 Not checked
 
-- No person and no agent checked the 91 `critical` parts against Wikipedia in this review, or the older views against Easton's Bible Dictionary. The accuracy reviewer checked them in Tasks 4, 4b, and 4c.
+- No person and no agent checked the 92 `critical` parts against Wikipedia in this review, or the older views against Easton's Bible Dictionary. The accuracy reviewer checked them in Tasks 4, 4b, and 4c.
 - No person and no agent looked for a dispute that the site does not show, in the entries with no "Scholars differ".
 - The designer did not check each new word of section 21.4 against its source. Task 50 does this.
 - The pages of the ESV Global Study Bible have no fixed revision. They can differ from the pages of 2026-11-13.
@@ -2594,4 +2594,10 @@ The result of the review of section 21: 24 statements changed, in Tasks 50, 51, 
 
 One open point of Task 52, decided by the designer: the record of the main "Written" fact of 2 Peter in `docs/CONTENT-SOURCES.md` has an older line, "Probably written from prison in Rome, not long before his execution, during AD 64 to 67". The two reviewers read it as a date of the letter. The line stays. It has the order of the words of the ESV page, and the page itself does not show if the years are those of the letter or of the death. No words of the site come from this point: the "Written" fact says "the mid 60s AD".
 
-Not done in this review, and not planned: a check of the 91 `critical` parts against Wikipedia, a check of the older views against Easton's Bible Dictionary, and a search for a dispute that the site does not show.
+Not done in this review, and not planned: a check of the 92 `critical` parts against Wikipedia, a check of the older views against Easton's Bible Dictionary, and a search for a dispute that the site does not show.
+
+### 21.11 A correction, and the report of Task 53
+
+The number of `critical` parts is 92: 45 in `authorDetail` and 47 in `writtenDetail`. Sections 21.6 and 21.10 said 91, and the designer told Arthur 91. The two sections have the correct number from 2026-11-23.
+
+Arthur decided on 2026-11-23 that Claude Code makes the checks that the review of ChatGPT did not do. Task 53 is a report only. It changes no introduction. Arthur decides from the report if a later task changes a statement.

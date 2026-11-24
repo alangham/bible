@@ -2785,3 +2785,39 @@ Accepted as built, with no change:
 - The title "Study note" while a note loads and if it does not load, and the title "…" of a passage link with "First verse" until the text loads.
 - `src/book/LinkPopup.tsx` is in two parts, a frame and the content of a link.
 - The two older tests that changed for the links.
+
+---
+
+## 23. The third review of the introductions, by a model, of 2026-11-24
+
+### 23.1 What it is
+
+Arthur selected on 2026-11-24 to give his approval of the 66 introductions. The designer made a review page for him, with "Approve" and "Needs a change" for each book. The page is an artifact in Arthur's Claude account, not a part of the site.
+
+The page then got 66 decisions in 11 minutes: 24 with "Approve" and 42 with "Needs a change" and a note. The notes give new words and web sources. Arthur decided on 2026-11-24 that this is a review by a model. It approves no introduction. Each of the 66 introductions stays `review: "draft"`.
+
+The text of the review is `docs/reviews/intros-review-model-2026-11-24.md`.
+
+### 23.2 What the designer found
+
+- The notes quote the introductions correctly.
+- The designer compared 16 statements that the notes call wrong or not supported with their records in `docs/CONTENT-SOURCES.md`. In all 16, the site says what its approved source says. The notes disagree with the approved sources, or with the rule that the cover gives the traditional view. The designer did not open the source pages again.
+- 36 of the 42 notes cite a source that is not approved. 18 notes cite the wiki of the Society for Old Testament Study, and 9 cite the Bible site of the United States Conference of Catholic Bishops.
+- 22 notes ask for a weaker count word, for example "Many critical scholars" for "Most scholars". Task 53 found that the count words of the site agree with Wikipedia in 85 of 92 `critical` parts.
+- About 8 notes ask that the cover says that a date or an author is disputed. Section 4.2 says that the cover gives the traditional view.
+- Five small changes fit the rules as they are: Lamentations "by an eyewitness", the survey of 2011 in Ephesians, Colossians, and 2 Thessalonians, and "the year" in Ecclesiastes. They are not decided. They wait for the decision after the report of Task 56.
+
+### 23.3 Decided by Arthur on 2026-11-24
+
+Arthur selected the option "Open the sources": a report on the wiki of the Society for Old Testament Study as a possible new source. Task 56 is that report. It changes no introduction and no rule. Arthur decides from the report.
+
+### 23.4 What the designer read of the wiki, on 2026-11-24
+
+The designer read these pages with a fetch tool. The tool gives a summary, not the text of a page. Task 56 must check each point on the pages.
+
+- The Society for Old Testament Study is a learned society in Great Britain, from 1917. Its home page calls the wiki an A to Z reference on the Hebrew Bible and its world, written and maintained by members of the Society. The address is `https://www.sots.ac.uk/wiki/`.
+- The wiki page says that its articles are signed, and that the wiki is not an encyclopaedia of record. The article on Numbers showed no author and no date to the tool.
+- The foot of each page has "© 2026 The Society for Old Testament Study". The page of policies has no policy on the use of the content by a different site.
+- A news line of 1 September 2026 says that the website of the Society was built again. An address or a text can thus be new.
+- The article on Numbers has about 1,800 words, a section "Date and authorship", and a list "Further reading" with three commentaries. It says that scholars have no consensus now on how the first five books were formed. The `critical` part of the site for the Written fact of Numbers says "Most modern scholars think", from Wikipedia.
+- The wiki is on the Old Testament only. It cannot be a source for the 27 books of the New Testament.

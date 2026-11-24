@@ -2585,3 +2585,13 @@ Change E, 2 Peter, kept its old words. The new words of the designer said that t
 - Check the new words against: ESV page, "Author, Date, and Recipients". 2 Peter 1:12 to 15.
 
 From the report of Claude Code, not checked by the designer: the accuracy reviewer passed Task 51 in its second run. The copy check found 0 runs of 6 words. 324 unit tests and 555 tests in the full run pass.
+
+### 21.10 Task 52 as built, and the end of the review
+
+Claude Code built Task 52 in the commit `46686c9`. The designer checked on 2026-11-23: the conservative part of the date detail of 2 Peter in `public/data/intros.json` has the exact new words of section 21.9.
+
+The result of the review of section 21: 24 statements changed, in Tasks 50, 51, and 52. They are the 23 changes that Arthur decided, and the change of the author detail of Isaiah that the designer added. Each of the 66 introductions has `review: "draft"`.
+
+One open point of Task 52, decided by the designer: the record of the main "Written" fact of 2 Peter in `docs/CONTENT-SOURCES.md` has an older line, "Probably written from prison in Rome, not long before his execution, during AD 64 to 67". The two reviewers read it as a date of the letter. The line stays. It has the order of the words of the ESV page, and the page itself does not show if the years are those of the letter or of the death. No words of the site come from this point: the "Written" fact says "the mid 60s AD".
+
+Not done in this review, and not planned: a check of the 91 `critical` parts against Wikipedia, a check of the older views against Easton's Bible Dictionary, and a search for a dispute that the site does not show.

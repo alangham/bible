@@ -3809,3 +3809,53 @@ Done when:
 - `git status` shows no change in `public/` and no change in `docs/CONTENT-SOURCES.md`.
 
 Stop and report. Commit the report, the file `docs/reviews/intros-review-model-2026-11-24.md`, and the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.
+
+---
+
+## Task 57. The introductions: eleven changes after the third review
+
+Status: DONE
+
+Accuracy review: yes
+
+Goal: eleven statements of the introductions are more exact, and six of them no longer give as agreed a point that a second scholarly reference contradicts.
+
+Arthur decided this on 2026-11-24. Read sections 23.5, 23.6, and 23.7 of `docs/DESIGN.md` first. Section 23.6 has changes A to K, each with the old words, the new words, the source to check, and the reason. The report of Task 56 is `docs/reviews/task-56-sots-wiki-report.md`.
+
+This task shows on the site: the words of "About this book" change in Lamentations, Ephesians, Colossians, 2 Thessalonians, Ecclesiastes, Nehemiah, Psalms, Ezekiel, Zechariah, and Malachi.
+
+WARNING: Change only the statements of changes A to K. Do not change a statement because the review of the model or the report of Task 56 has a finding for it. Do not change a `review` value.
+
+WARNING: Take no word, no fact, and no count word from the wiki of the Society for Old Testament Study. Each fact of the new words must be in the fixed Wikipedia page of the record, or in the ESV page for change A. Use the fixed revision, with its `oldid`, and read the text of the page, not a summary of a fetch tool.
+
+WARNING: Do not write a fact from memory. Do not copy a sentence from a source: no run of 6 words is the same as a run in the source text.
+
+WARNING: Do not add the word "probably" to a main line or to an older view. Sections 21.2 and 21.12 of `docs/DESIGN.md` have the decisions.
+
+WARNING: If a test fails in a full run, record the name of the test and its error before you run the tests again. Give them in the report.
+
+Steps:
+
+1. Get the fixed pages that changes A to K name, or use the text copies of Task 53 if you have them. Compare the revision number of each page with the `oldid` of the record.
+2. Make sure that the old words of each change are the words in `public/data/intros.json` now. If they differ, stop and report.
+3. Ask the accuracy reviewer agent to check the new words of each change against its source. Ask it four questions for each change: does the page state each fact, do the new words have the strength word of the page, do the new words name correctly the kind of work that the page cites, and do the new words obey rule 5 of the five rules.
+4. For changes F to K, ask the accuracy reviewer also: do the new words still give as agreed the point that section 23.6 names? The answer must be no.
+5. If the accuracy reviewer gives different words for a change, use its words. Give the words of the designer and the words of the accuracy reviewer in the report.
+6. If the accuracy reviewer says that no words agree with the page and with rule 2 of section 23.5, do not make that change. Keep the old words, and give the change and the cause in the report.
+7. Make the changes in `public/data/intros.json`. A new part has two sentences and 42 words at most. 42 is the number of words of the longest part now.
+8. For each change, correct the record of the statement in `docs/CONTENT-SOURCES.md`: the words of the statement, and a line for each new fact with its source, what the source states, and the works that the article cites.
+9. For changes F to K, add the line "Check:" of rule 4 of section 23.5 to the record of the part.
+10. Add the rule of section 23.5 to the section "The authorship rule and the five rules" of `docs/CONTENT-SOURCES.md`, with the date 2026-11-24. Do not add the wiki to the table of approved sources.
+11. Run the check for copied runs of 6 words on each new statement, against the text of the ESV Global Study Bible page and of the Wikipedia page of its book, and against the text copy of the wiki article for changes F to K. Say in the report how you ran it.
+12. If a test has the old words of a changed statement, change the test, and give the test in the report.
+13. Run the reviewer agent and the accuracy reviewer agent on the result. Ask the accuracy reviewer to check each changed statement and each new record line against its source, and to check that no other statement of `public/data/intros.json` changed. If you correct something after its report, run it again.
+14. Run `npm run lint`, `npm run build`, `npm test`, and `npm run test:e2e`.
+
+Done when:
+
+- Each of changes A to K is made, or the report gives the cause that it is not made.
+- `git diff` of `public/data/intros.json` shows only statements of section 23.6.
+- Each of the 66 entries has `review: "draft"`.
+- `npm run build` has no errors, and all tests pass.
+
+Stop and report. Include the "Not verified" list of the accuracy reviewer without changes. Commit the changes of the designer in `docs/DESIGN.md`, `docs/TASKS.md`, and `CLAUDE.md` with this task.

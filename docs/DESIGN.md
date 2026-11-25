@@ -2821,3 +2821,105 @@ The designer read these pages with a fetch tool. The tool gives a summary, not t
 - A news line of 1 September 2026 says that the website of the Society was built again. An address or a text can thus be new.
 - The article on Numbers has about 1,800 words, a section "Date and authorship", and a list "Further reading" with three commentaries. It says that scholars have no consensus now on how the first five books were formed. The `critical` part of the site for the Written fact of Numbers says "Most modern scholars think", from Wikipedia.
 - The wiki is on the Old Testament only. It cannot be a source for the 27 books of the New Testament.
+
+### 23.5 Decided by Arthur on 2026-11-24, after the report of Task 56
+
+The report of Task 56 is `docs/reviews/task-56-sots-wiki-report.md`. Arthur selected: the wiki of the Society for Old Testament Study is a check, not a source.
+
+The rule:
+
+1. The site takes no word, no fact, and no count word from the wiki. The wiki is not in the table of approved sources.
+2. Where an article of the wiki contradicts a `critical` part, and the two readings of Task 56 agree, the part must not give the point as agreed. The part then does one of three things: it names the kind of work that the Wikipedia page cites for the point, it adds the other common view that the same Wikipedia page gives, or it leaves the point out.
+3. Each word of the new part comes from the fixed Wikipedia page of the record, as before.
+4. The record of such a part gets one line that starts with "Check:". It names the article of the wiki, the address of its copy in the Internet Archive from the report of Task 56, and the point that the article contradicts.
+
+Why the wiki is not a source: its articles show no author, no date, and no version. The report found five faults that a reader can see, and two articles of the wiki that disagree. The wiki has the Old Testament only. Of 78 claims and new sentences that the review of the model credits to the wiki, 44 are not in the article and 2 are against it. Thus the notes of the review do not go onto the site as written.
+
+### 23.6 The eleven changes of Task 57
+
+The designer wrote the new words. The designer did not read the Wikipedia pages. The accuracy reviewer checks each change against its source. If the accuracy reviewer gives different words, Task 57 uses its words. If no words agree with the source and with rule 2 of section 23.5, the part keeps its old words, and the report says so.
+
+Changes A to E fit the rules as they were. Changes F to K come from the rule of section 23.5.
+
+**A. Lamentations, `written`.**
+
+- Old: Probably soon after Babylon destroyed Jerusalem about 586 BC, by an eyewitness. An old tradition places the writing in a cave outside Jerusalem.
+- New: Probably soon after Babylon destroyed Jerusalem about 586 BC. An old tradition places the writing in a cave outside Jerusalem.
+- Check against: the ESV page and the fixed Wikipedia page of the record.
+- Reason: the ESV page says "eyewitness", and the Wikipedia page says in one place that the writers did not necessarily see the events. Rule 2 of the five rules permits a fact from one approved source only when no approved source contradicts it. Three reviews named this line.
+
+**B. Ephesians, `authorDetail.critical`.**
+
+- Old: Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A survey in 2011 found 39 of 109 scholars for Paul, 42 against, and 28 unsure.
+- New: Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A 2011 survey at a British New Testament conference found 39 of 109 scholars for Paul, 42 against, and 28 unsure.
+- Check against: the fixed Wikipedia page of the record, section "Composition: Authorship".
+- Reason: the page says what the survey was. The old words do not, and a reader can take it for a survey of all scholars.
+
+**C. Colossians, `authorDetail.critical`.**
+
+- Old: Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A survey in 2011 found 56 of 109 scholars for Paul, 17 against, and 36 unsure.
+- New: Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A 2011 survey at a British New Testament conference found 56 of 109 scholars for Paul, 17 against, and 36 unsure.
+- Check against and reason: as for change B.
+
+**D. 2 Thessalonians, `authorDetail.critical`.**
+
+- Old: Critical commentators are about evenly split on whether Paul wrote it. A wider survey of 111 scholars in 2011 found 63 for Paul, 13 against, and 35 unsure.
+- New: Critical commentators are about evenly split on whether Paul wrote it. A 2011 survey of 111 scholars at a British New Testament conference found 63 for Paul, 13 against, and 35 unsure.
+- Check against and reason: as for change B. The word "wider" goes, because a survey at one conference is not shown to be wider.
+
+**E. Ecclesiastes, `writtenDetail.critical`.**
+
+- Old: Critical scholars date it between about 450 BC and 180 BC, the year Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC.
+- New: Critical scholars date it between about 450 BC and 180 BC, when Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC.
+- Check against: the fixed Wikipedia page of the record, section "Composition: Title, date and author".
+- Reason: the record says that the page has "when". The words "the year" say more than the page.
+
+**F. Nehemiah, `authorDetail.critical`. Finding W05 of Task 56.**
+
+- Old: Whether Nehemiah's account in his own voice is genuine is now very controversial. Minimalists, scholars who accept little of the story as history, doubt that he existed.
+- New: A recent history of Israel says that it is now very controversial whether Nehemiah's account in his own voice is genuine. Minimalists, scholars who accept little of the story as history, doubt that he existed.
+- Check against: the fixed Wikipedia page of the record, the lead. The record says that the page cites one work for this, a history of ancient Israel of 2023.
+- The point that the wiki contradicts: the article says that most scholars see the account as more or less authentic.
+
+**G. Nehemiah, `writtenDetail.critical`. Finding W06.**
+
+- Old: Ezra and Nehemiah as one book may have had a first edition early in the 4th century BC.
+- New: Ezra and Nehemiah as one book may have had a first edition early in the 4th century BC. Editing continued for centuries after that.
+- Check against: the fixed Wikipedia page of the record, section "Composition and date". Finding F51 of Task 53 says that the page has the later editing.
+- The point that the wiki contradicts: the article puts the work that joined Nehemiah to Ezra later, in the 3rd or early 2nd century BC.
+
+**H. Psalms, `writtenDetail.critical`. Finding W11.**
+
+- Old: The psalms were written over at least five centuries, from the 10th to the 5th century BC or later. Scholars of the Septuagint, the early Greek translation, argue that the collection stayed open until the 1st century AD.
+- New: The psalms were written over five centuries or more, from the 10th century BC on. Many scholars think they became one collection in the second temple period, though scholars of the Greek translation argue it stayed open until the 1st century AD.
+- Check against: the fixed Wikipedia page of the record, sections "Composition: Origins" and "Composition: Editorial agenda". Finding F53 of Task 53 says that the page has the view of many scholars. The new words have no years for the second temple period. If the page gives years and the part stays at 42 words or fewer, add them.
+- The point that the wiki contradicts: the article says that the book was probably compiled by the 2nd century BC at the latest.
+
+**I. Ezekiel, `authorDetail.critical`. Finding W18.**
+
+- Old: The book took shape through a long, complex process and may not keep the prophet's exact words. Scholars do agree that Ezekiel himself wrote the prophecy down.
+- New: The book shows much unity and likely reflects the prophet himself, but it took shape through a long process and may not keep his exact words. Two commentaries say that Ezekiel wrote the prophecy down himself.
+- Check against: the fixed Wikipedia page of the record, the lead, "Life and times of Ezekiel", and "Textual history". The record says that the page cites two commentaries for the last point.
+- The point that the wiki contradicts: the article says that other persons likely did the writing after the death of Ezekiel.
+
+**J. Zechariah, `writtenDetail.critical`. Finding W25.**
+
+- Old: Most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated.
+- New: An introduction to the Old Testament says that most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated.
+- Check against: the fixed Wikipedia page of the record, sections "Authorship" and "Historical context". The record says that the page cites one introduction for the count word.
+- The point that the wiki contradicts: the article gives a wider range for these chapters, from the late 6th to the late 3rd century BC.
+
+**K. Malachi, `writtenDetail.critical`. Finding W27, and finding F04 of Task 53.**
+
+- Old: Most scholars think editors added to the book in several stages. Its oldest parts date to about 500 BC, and it was almost complete by about 180 BC.
+- New: A recent commentary says that most scholars think editors added to the book in several stages, with the oldest parts from about 500 BC. A handbook on the prophets says that it was almost complete by about 180 BC.
+- Check against: the fixed Wikipedia page of the record, the lead with its footnote. The record says that the page cites a commentary of 2011 and a handbook of 2021.
+- The point that the wiki contradicts: the article says that all agree on the time of Persian rule, and that the book seems to come from one writer.
+
+### 23.7 No change, and not decided
+
+- The other 31 notes of the review get no change. The review stays in `docs/reviews/` as a record.
+- The other 21 `critical` parts of the 18 books keep their words. For 12 of them the two readings of Task 56 agree on WEAKER, STRONGER, or DIFFERENT with a different count word only. Rule 1 of section 23.5 gives the wiki no count word.
+- The four cover statements with a finding of step 6 of Task 56 keep their words: Psalms, Proverbs, Ecclesiastes, and Song of Solomon. The cover gives the traditional view. Three of them do not have the words "By tradition". Arthur did not decide on this.
+- The notes on the 27 books of the New Testament cite other sources. No task checked those sources.
+- No introduction is approved. Arthur's own reading is the step after Task 57.

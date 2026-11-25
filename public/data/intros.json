@@ -204,12 +204,12 @@
     "id": "nehemiah",
     "author": "The book uses Nehemiah's own records, but he did not write all of it. An older view names Nehemiah as the author of nearly all of it.",
     "authorDetail": {
-      "critical": "Whether Nehemiah's account in his own voice is genuine is now very controversial. Minimalists, scholars who accept little of the story as history, doubt that he existed.",
+      "critical": "A recent history of ancient Israel says that it is now very controversial whether Nehemiah's account in his own voice is genuine. Minimalists, scholars who accept little of the story as history, doubt that he existed.",
       "conservative": "Conservative scholars hold that the book uses some of Nehemiah's own records, but he did not write all of it. The same writer probably wrote parts of Ezra also."
     },
     "written": "By tradition, the 5th century BC, probably after Nehemiah's second visit to Jerusalem.",
     "writtenDetail": {
-      "critical": "Ezra and Nehemiah as one book may have had a first edition early in the 4th century BC."
+      "critical": "Ezra and Nehemiah as one book may have had a first edition early in the 4th century BC. Editing probably continued into the time of Greek rule, from 332 BC."
     },
     "whatItIs": "Much of the book is in Nehemiah's own voice. He rebuilds Jerusalem's wall after he arrives in 445 BC, and later restores temple worship, stops Sabbath trade, and opposes marriages to foreign women.",
     "review": "draft"
@@ -247,7 +247,7 @@
     },
     "written": "By tradition, over many centuries, from the time of Moses to the time of Ezra.",
     "writtenDetail": {
-      "critical": "The psalms were written over at least five centuries, from the 10th to the 5th century BC or later. Scholars of the Septuagint, the early Greek translation, argue that the collection stayed open until the 1st century AD.",
+      "critical": "The psalms were written over five centuries or more, from the 10th century BC. Many scholars think they became one collection in the second temple period, and scholars of the early Greek translation argue it stayed open until the 1st century AD.",
       "conservative": "Conservative scholars hold that the psalms come from many periods of Israel's history. The heading of Psalm 90 names Moses, long before David."
     },
     "whatItIs": "A collection of 150 songs and prayers in five books, with praise, laments, and thanks. Israel sang them in worship.",
@@ -276,7 +276,7 @@
     },
     "written": "By tradition, in the time of Solomon.",
     "writtenDetail": {
-      "critical": "Critical scholars date it between about 450 BC and 180 BC, the year Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC."
+      "critical": "Critical scholars date it between about 450 BC and 180 BC, when Ben Sira, a Jewish writer, quotes it. They differ over whether it shows Greek thought, which would point to Greek rule, from 332 BC."
     },
     "whatItIs": "A book in which the Teacher, a king in Jerusalem, searches for meaning and finds everything futile. It closes by telling the reader to fear God and obey his commands.",
     "review": "draft"
@@ -321,7 +321,7 @@
   {
     "id": "lamentations",
     "author": "The author is not known. An older view names Jeremiah.",
-    "written": "Probably soon after Babylon destroyed Jerusalem about 586 BC, by an eyewitness. An old tradition places the writing in a cave outside Jerusalem.",
+    "written": "Probably soon after Babylon destroyed Jerusalem about 586 BC. An old tradition places the writing in a cave outside Jerusalem.",
     "whatItIs": "Five poems that mourn the fall of Jerusalem and its temple and confess the sin of its people. The last poem is a prayer that God will restore his people.",
     "review": "draft"
   },
@@ -329,7 +329,7 @@
     "id": "ezekiel",
     "author": "Ezekiel the priest, son of Buzi, by tradition. He was among the people of Judah taken captive to Babylon.",
     "authorDetail": {
-      "critical": "The book took shape through a long, complex process and may not keep the prophet's exact words. Scholars do agree that Ezekiel himself wrote the prophecy down.",
+      "critical": "The book shows much unity and likely reflects much of the prophet himself, but it took shape through a long process and may not keep his exact words. Two commentaries say that Ezekiel wrote most of the prophecy down himself.",
       "conservative": "The book dates its messages over about 22 years, from about 593 BC. Ezekiel wrote down what he saw and heard while he lived as a captive near Babylon."
     },
     "written": "By tradition, the early 6th century BC, near Babylon, where Ezekiel lived as a captive.",
@@ -474,7 +474,7 @@
     },
     "written": "By tradition, from about 520 BC, after the people of Judah returned from Babylon in 538 BC.",
     "writtenDetail": {
-      "critical": "Most scholars date chapters 9 to 14 to the 5th century BC, well after chapters 1 to 8. Those later chapters name no event that can be dated.",
+      "critical": "An introduction to the Old Testament says that most scholars date chapters 9 to 14 to the 5th century BC, after chapters 1 to 8. Those later chapters name no event that can be dated.",
       "conservative": "Conservative scholars date the start of his work to 520 BC, soon after Haggai began to prophesy. Judah's people had come home from Babylon in 538 BC."
     },
     "whatItIs": "Night visions and messages that call the people back to the Lord, then two prophecies about Jerusalem and the nations. The book opens in the second year of King Darius.",
@@ -489,7 +489,7 @@
     },
     "written": "By tradition, about 460 BC, when Ezra and Nehemiah lived.",
     "writtenDetail": {
-      "critical": "Most scholars think editors added to the book in several stages. Its oldest parts date to about 500 BC, and it was almost complete by about 180 BC.",
+      "critical": "A handbook on the prophets says that most commentators think editors added to the book in several stages. It says the oldest parts are likely from about 500 BC, and that the book must have been almost complete by about 180 BC.",
       "conservative": "Conservative scholars date Malachi probably to about 460 BC, when Ezra and Nehemiah lived. He worked decades after the exiles came home from Babylon and rebuilt the temple."
     },
     "whatItIs": "A set of disputes between the Lord and Israel about worship, marriage, and offerings. It ends with a call to remember the law of Moses and a promise of Elijah.",
@@ -598,7 +598,7 @@
     "id": "ephesians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A survey in 2011 found 39 of 109 scholars for Paul, 42 against, and 28 unsure.",
+      "critical": "Many scholars doubt that Paul wrote it, because its style, words, and view of the end times differ from his. A 2011 survey at a British New Testament conference found 39 of 109 scholars for Paul, 42 against, and 28 unsure.",
       "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 62, while Paul was in prison in Rome.",
@@ -620,7 +620,7 @@
     "id": "colossians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A survey in 2011 found 56 of 109 scholars for Paul, 17 against, and 36 unsure.",
+      "critical": "Many scholars think an early follower of Paul wrote it, because of its words, style, and teaching. A 2011 survey at a British New Testament conference counted 56 of 109 scholars for Paul, 17 against, and 36 unsure.",
       "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 62, during Paul's imprisonment, probably in Rome.",
@@ -642,7 +642,7 @@
     "id": "2-thessalonians",
     "author": "Paul, by tradition.",
     "authorDetail": {
-      "critical": "Critical commentators are about evenly split on whether Paul wrote it. A wider survey of 111 scholars in 2011 found 63 for Paul, 13 against, and 35 unsure.",
+      "critical": "Critical commentators are about evenly split on whether Paul wrote it. A 2011 survey of 111 scholars at a British New Testament conference found 63 for Paul, 13 against, and 35 unsure.",
       "conservative": "Conservative scholars keep the traditional view that Paul wrote it."
     },
     "written": "By tradition, about AD 50, soon after 1 Thessalonians. Paul was probably in Corinth.",
